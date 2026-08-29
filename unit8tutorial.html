@@ -1,0 +1,762 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Unit 8: Information &amp; Communication Technology — Full Notes | GS Net Academy</title>
+<meta name="description" content="Complete Unit 8 tutorial: ICT basics, abbreviations, internet &amp; networking, e-mail, SWAYAM/MOOCs, digital governance, cybersecurity, cloud, AI &amp; PYQs.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@700;800&display=swap" rel="stylesheet">
+<style>
+:root{--navy-950:#0b1330;--navy-900:#101a3d;--navy-700:#33406b;--navy-500:#5b6690;--navy-100:#e7eaf5;--navy-50:#f4f6fc;--gold-400:#e8b74b;--gold-500:#d9a53a;--gold-600:#b9852a;--gold-50:#fdf6e7;--cream:#f8f5ee;--green:#1a7a4c;}
+*{box-sizing:border-box;}
+body{margin:0;font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:var(--cream);color:var(--navy-900);}
+.h-display{font-family:'Poppins',system-ui,sans-serif;font-weight:800;letter-spacing:-.01em;}
+a{text-decoration:none;color:inherit;}
+.container-x{max-width:1360px;margin:0 auto;padding:0 20px;}
+.hero{position:relative;background:var(--navy-950);color:#fff;overflow:hidden;}
+.hero:before{content:"";position:absolute;right:-120px;top:-140px;width:380px;height:380px;border-radius:50%;background:radial-gradient(circle,rgba(232,183,75,.25),transparent 70%);}
+.hero-inner{position:relative;padding:38px 0 30px;}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);padding:6px 14px;border-radius:999px;font-size:12.5px;font-weight:700;color:var(--gold-400);}
+.hero h1{font-size:clamp(28px,4.2vw,46px);margin:16px 0 8px;}
+.hero p{color:rgba(255,255,255,.78);max-width:680px;font-size:15px;line-height:1.6;margin:0;}
+
+.layout{display:grid;grid-template-columns:290px 1fr;gap:28px;padding:28px 0 60px;align-items:start;}
+@media (max-width:980px){.layout{grid-template-columns:1fr;}}
+
+.sidebar{position:sticky;top:16px;max-height:calc(100vh - 32px);overflow-y:auto;background:#fff;border:1px solid rgba(16,26,61,.08);border-radius:16px;padding:18px 14px;box-shadow:0 6px 24px rgba(16,26,61,.05);}
+.sidebar::-webkit-scrollbar{width:6px;}
+.sidebar::-webkit-scrollbar-thumb{background:#e2e6f2;border-radius:6px;}
+.sidebar-title{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.14em;color:var(--gold-600);padding:6px 10px 12px;}
+.nav-link{display:flex;align-items:flex-start;gap:10px;padding:9px 10px;border-radius:10px;font-size:13.3px;font-weight:600;color:var(--navy-700);line-height:1.35;}
+.nav-link:hover{background:var(--navy-50);color:var(--navy-900);}
+.nav-link.active{background:var(--gold-50);color:var(--navy-900);}
+.nav-num{flex:none;width:22px;height:22px;border-radius:7px;background:var(--navy-50);color:var(--navy-500);font-size:11px;font-weight:800;display:grid;place-items:center;}
+.nav-link.active .nav-num{background:var(--gold-400);color:var(--navy-950);}
+
+#sidebar-toggle{display:none;}
+.mobile-bar{display:none;}
+@media (max-width:980px){
+  .mobile-bar{display:flex;align-items:center;justify-content:space-between;gap:10px;background:#fff;border:1px solid rgba(16,26,61,.1);border-radius:12px;padding:12px 14px;margin-bottom:6px;font-weight:800;font-size:13.5px;color:var(--navy-900);}
+  .sidebar{position:static;max-height:none;display:none;}
+  #sidebar-toggle:checked ~ .layout .sidebar{display:block;}
+}
+
+.content{min-width:0;}
+.topic-section{background:#fff;border:1px solid rgba(16,26,61,.08);border-radius:16px;padding:22px 22px 20px;margin-bottom:18px;scroll-margin-top:18px;}
+.sec-head{display:flex;align-items:center;gap:12px;margin-bottom:12px;}
+.sec-num{flex:none;width:34px;height:34px;border-radius:10px;background:var(--navy-950);color:var(--gold-400);font-weight:800;font-size:14px;display:grid;place-items:center;}
+.sec-head h2{margin:0;font-size:19px;font-weight:800;color:var(--navy-900);}
+.topic-section p{font-size:14.5px;line-height:1.75;color:var(--navy-700);margin:6px 0;}
+.bullet-list{margin:8px 0;padding:0;list-style:none;display:grid;gap:6px;}
+.bullet-list li{position:relative;padding-left:20px;font-size:14.3px;line-height:1.6;color:var(--navy-700);}
+.bullet-list li:before{content:"";position:absolute;left:2px;top:9px;width:6px;height:6px;border-radius:50%;background:var(--gold-500);}
+.formula{background:var(--navy-950);color:#fdeec2;font-weight:700;font-size:13.6px;padding:12px 16px;border-radius:10px;margin:10px 0;overflow-x:auto;white-space:nowrap;}
+.pyq-tag{display:inline-block;background:var(--gold-50);color:var(--gold-600);font-weight:800;font-size:12px;letter-spacing:.03em;padding:6px 12px;border-radius:8px;margin:14px 0 6px;}
+.answer-box{background:#eefaf2;border:1px solid #bfe8cc;color:var(--green);font-weight:700;font-size:13.6px;padding:8px 14px;border-radius:9px;margin:6px 0;}
+.explain{background:var(--navy-50);border-radius:9px;padding:8px 14px;font-size:13.6px;color:var(--navy-700);}
+
+.table-wrap{overflow-x:auto;margin:12px 0;border:1px solid rgba(16,26,61,.08);border-radius:12px;}
+.data-table{width:100%;border-collapse:collapse;font-size:13.3px;min-width:420px;}
+.data-table th{background:var(--navy-950);color:var(--gold-400);text-align:left;padding:9px 12px;font-weight:700;white-space:nowrap;}
+.data-table td{padding:9px 12px;border-top:1px solid rgba(16,26,61,.07);color:var(--navy-700);}
+.data-table tr:nth-child(even) td{background:var(--navy-50);}
+
+.enroll-cta{position:relative;overflow:hidden;background:var(--navy-950);color:#fff;border-radius:16px;padding:26px 26px;margin-top:20px;display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between;}
+.enroll-cta:before{content:"";position:absolute;right:-60px;top:-60px;width:200px;height:200px;border-radius:50%;background:radial-gradient(circle,rgba(232,183,75,.25),transparent 70%);}
+.enroll-cta h3{margin:0 0 4px;font-size:20px;}
+.enroll-cta p{margin:0;color:rgba(255,255,255,.75);font-size:13.5px;max-width:480px;}
+.btn-gold{position:relative;background:var(--gold-400);color:var(--navy-950);font-weight:800;padding:11px 22px;border-radius:10px;font-size:13.5px;white-space:nowrap;}
+</style>
+</head>
+<body>
+
+<!-- ================= NAVBAR PLACEHOLDER : apna existing header/nav yahan paste karein ================= -->
+
+<section class="hero">
+  <div class="container-x hero-inner">
+    <span class="eyebrow">★ UGC NET Paper-I · Unit 8</span>
+    <h1 class="h-display">Information &amp; Communication Technology</h1>
+    <p>Complete Unit 8 notes: ICT basics, abbreviations, internet &amp; networking, e-mail, video conferencing, digital learning, SWAYAM/MOOCs, digital governance, cybersecurity, cloud computing, AI in education, exam traps &amp; verified PYQs.</p>
+  </div>
+</section>
+
+<main class="container-x">
+  <input type="checkbox" id="sidebar-toggle">
+  <label for="sidebar-toggle" class="mobile-bar">
+    <span>📑 On this page</span>
+    <span>☰ Menu</span>
+  </label>
+
+  <div class="layout">
+    <aside class="sidebar">
+      <p class="sidebar-title">On this page</p>
+      <nav class="nav-list">
+<a href="#s1" class="nav-link"><span class="nav-num">1</span>ICT का अर्थ</a>
+<a href="#s2" class="nav-link"><span class="nav-num">2</span>Data and Information</a>
+<a href="#s3" class="nav-link"><span class="nav-num">3</span>Important ICT Abbreviations</a>
+<a href="#s4" class="nav-link"><span class="nav-num">4</span>Computer System: Basic Concepts</a>
+<a href="#s5" class="nav-link"><span class="nav-num">5</span>Input and Output Devices</a>
+<a href="#s6" class="nav-link"><span class="nav-num">6</span>Memory and Storage</a>
+<a href="#s7" class="nav-link"><span class="nav-num">7</span>Units of Digital Storage</a>
+<a href="#s8" class="nav-link"><span class="nav-num">8</span>Types of Computer Networks</a>
+<a href="#s9" class="nav-link"><span class="nav-num">9</span>Internet, Intranet and Extranet</a>
+<a href="#s10" class="nav-link"><span class="nav-num">10</span>Internet vs World Wide Web</a>
+<a href="#s11" class="nav-link"><span class="nav-num">11</span>Website, Webpage and Browser</a>
+<a href="#s12" class="nav-link"><span class="nav-num">12</span>URL and Domain Name</a>
+<a href="#s13" class="nav-link"><span class="nav-num">13</span>Important Internet Protocols</a>
+<a href="#s14" class="nav-link"><span class="nav-num">14</span>TCP and UDP</a>
+<a href="#s15" class="nav-link"><span class="nav-num">15</span>E-mail</a>
+<a href="#s16" class="nav-link"><span class="nav-num">16</span>Audio Conferencing and Video Conferencing</a>
+<a href="#s17" class="nav-link"><span class="nav-num">17</span>Bandwidth and Related Terms</a>
+<a href="#s18" class="nav-link"><span class="nav-num">18</span>Digital Learning</a>
+<a href="#s19" class="nav-link"><span class="nav-num">19</span>MOOCs</a>
+<a href="#s20" class="nav-link"><span class="nav-num">20</span>Four Quadrants of SWAYAM MOOCs</a>
+<a href="#s21" class="nav-link"><span class="nav-num">21</span>SWAYAM</a>
+<a href="#s22" class="nav-link"><span class="nav-num">22</span>SWAYAM PRABHA</a>
+<a href="#s23" class="nav-link"><span class="nav-num">23</span>Important Digital Initiatives in Education</a>
+<a href="#s24" class="nav-link"><span class="nav-num">24</span>Digital Divide</a>
+<a href="#s25" class="nav-link"><span class="nav-num">25</span>ICT in Higher Education</a>
+<a href="#s26" class="nav-link"><span class="nav-num">26</span>ICT and Governance</a>
+<a href="#s27" class="nav-link"><span class="nav-num">27</span>Major Digital-Governance Initiatives</a>
+<a href="#s28" class="nav-link"><span class="nav-num">28</span>Good Digital Governance Principles</a>
+<a href="#s29" class="nav-link"><span class="nav-num">29</span>Cybersecurity Basics</a>
+<a href="#s30" class="nav-link"><span class="nav-num">30</span>Cloud Computing</a>
+<a href="#s31" class="nav-link"><span class="nav-num">31</span>Artificial Intelligence in Education</a>
+<a href="#s32" class="nav-link"><span class="nav-num">32</span>Common Exam Traps</a>
+<a href="#s33" class="nav-link"><span class="nav-num">33</span>Verified Previous Year Questions</a>
+<a href="#s34" class="nav-link"><span class="nav-num">34</span>PYQ Trend Analysis</a>
+<a href="#s35" class="nav-link"><span class="nav-num">35</span>December 2026 Expected MCQs</a>
+<a href="#s36" class="nav-link"><span class="nav-num">36</span>One-Page Revision Capsule</a>
+      </nav>
+    </aside>
+
+    <div class="content">
+<section id="s1" class="topic-section">
+<div class="sec-head"><span class="sec-num">1</span><h2>ICT का अर्थ</h2></div>
+<p>Information and Communication Technology (ICT) refers to technologies used for collecting, processing, storing, retrieving and communicating information.</p>
+<p>सूचना एवं संचार प्रौद्योगिकी उन technologies का समूह है जिनका उपयोग information को collect, process, store, retrieve और transmit करने के लिए किया जाता है।</p>
+<div class="formula">Master Formula</div>
+<div class="formula">ICT = Information Processing + Digital Storage + Communication Network</div>
+<ul class="bullet-list"><li>ICT के Components</li><li>Computer hardware</li><li>Software</li><li>Internet and networks</li><li>Telecommunication</li><li>Audio-video technology</li><li>Digital platforms</li><li>Cloud services</li><li>Database systems</li><li>Mobile communication</li><li>Artificial Intelligence</li><li>Educational Example</li></ul>
+<p>जब teacher Google Meet पर live class लेता है, LMS पर notes upload करता है और online quiz से assessment करता है, तो वह ICT-enabled teaching कर रहा है।</p>
+</section>
+<section id="s2" class="topic-section">
+<div class="sec-head"><span class="sec-num">2</span><h2>Data and Information</h2></div>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>Data / डेटा</th><th>Information / सूचना</th></tr></thead><tbody><tr><td>Raw facts</td><td>Processed and meaningful data</td></tr><tr><td>Unorganised हो सकता है</td><td>Organised और contextual</td></tr><tr><td>Example: 45, 60, 75</td><td>Average marks = 60</td></tr><tr><td>Input की तरह कार्य करता है</td><td>Decision-making में useful</td></tr></tbody></table></div>
+<div class="formula">Data + Processing = Information</div>
+</section>
+<section id="s3" class="topic-section">
+<div class="sec-head"><span class="sec-num">3</span><h2>Important ICT Abbreviations</h2></div>
+<ul class="bullet-list"><li>A. Computer and Storage</li></ul>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>Abbreviation</th><th>Full Form</th></tr></thead><tbody><tr><td>ICT</td><td>Information and Communication Technology</td></tr><tr><td>IT</td><td>Information Technology</td></tr><tr><td>CPU</td><td>Central Processing Unit</td></tr><tr><td>ALU</td><td>Arithmetic Logic Unit</td></tr><tr><td>CU</td><td>Control Unit</td></tr><tr><td>RAM</td><td>Random Access Memory</td></tr><tr><td>ROM</td><td>Read Only Memory</td></tr><tr><td>HDD</td><td>Hard Disk Drive</td></tr><tr><td>SSD</td><td>Solid State Drive</td></tr><tr><td>USB</td><td>Universal Serial Bus</td></tr><tr><td>UPS</td><td>Uninterruptible Power Supply</td></tr><tr><td>BIOS</td><td>Basic Input/Output System</td></tr><tr><td>GUI</td><td>Graphical User Interface</td></tr><tr><td>OS</td><td>Operating System</td></tr><tr><td>PDF</td><td>Portable Document Format</td></tr><tr><td>OCR</td><td>Optical Character Recognition</td></tr><tr><td>OMR</td><td>Optical Mark Recognition</td></tr><tr><td>MICR</td><td>Magnetic Ink Character Recognition</td></tr></tbody></table></div>
+<ul class="bullet-list"><li>B. Internet and Networking</li></ul>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>Abbreviation</th><th>Full Form</th></tr></thead><tbody><tr><td>LAN</td><td>Local Area Network</td></tr><tr><td>MAN</td><td>Metropolitan Area Network</td></tr><tr><td>WAN</td><td>Wide Area Network</td></tr><tr><td>PAN</td><td>Personal Area Network</td></tr><tr><td>WLAN</td><td>Wireless Local Area Network</td></tr><tr><td>WWW</td><td>World Wide Web</td></tr><tr><td>URL</td><td>Uniform Resource Locator</td></tr><tr><td>ISP</td><td>Internet Service Provider</td></tr><tr><td>IP</td><td>Internet Protocol</td></tr><tr><td>DNS</td><td>Domain Name System</td></tr><tr><td>DHCP</td><td>Dynamic Host Configuration Protocol</td></tr><tr><td>HTTP</td><td>Hypertext Transfer Protocol</td></tr><tr><td>HTTPS</td><td>Hypertext Transfer Protocol Secure</td></tr><tr><td>FTP</td><td>File Transfer Protocol</td></tr><tr><td>TCP</td><td>Transmission Control Protocol</td></tr><tr><td>UDP</td><td>User Datagram Protocol</td></tr><tr><td>VPN</td><td>Virtual Private Network</td></tr><tr><td>Wi-Fi</td><td>Wireless networking technology</td></tr><tr><td>VoIP</td><td>Voice over Internet Protocol</td></tr><tr><td>HTML</td><td>HyperText Markup Language</td></tr><tr><td>XML</td><td>Extensible Markup Language</td></tr></tbody></table></div>
+<ul class="bullet-list"><li>C. E-mail</li></ul>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>Abbreviation</th><th>Full Form</th></tr></thead><tbody><tr><td>SMTP</td><td>Simple Mail Transfer Protocol</td></tr><tr><td>POP3</td><td>Post Office Protocol Version 3</td></tr><tr><td>IMAP</td><td>Internet Message Access Protocol</td></tr><tr><td>CC</td><td>Carbon Copy</td></tr><tr><td>BCC</td><td>Blind Carbon Copy</td></tr><tr><td>MIME</td><td>Multipurpose Internet Mail Extensions</td></tr></tbody></table></div>
+<ul class="bullet-list"><li>D. Education and Governance</li></ul>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>Abbreviation</th><th>Full Form</th></tr></thead><tbody><tr><td>MOOC</td><td>Massive Open Online Course</td></tr><tr><td>LMS</td><td>Learning Management System</td></tr><tr><td>SWAYAM</td><td>Study Webs of Active Learning for Young Aspiring Minds</td></tr><tr><td>NPTEL</td><td>National Programme on Technology Enhanced Learning</td></tr><tr><td>CEC</td><td>Consortium for Educational Communication</td></tr><tr><td>NDLI</td><td>National Digital Library of India</td></tr><tr><td>NAD</td><td>National Academic Depository</td></tr><tr><td>DIKSHA</td><td>Digital Infrastructure for Knowledge Sharing</td></tr><tr><td>NETF</td><td>National Educational Technology Forum</td></tr><tr><td>NMEICT</td><td>National Mission on Education through ICT</td></tr><tr><td>G2C</td><td>Government to Citizen</td></tr><tr><td>G2B</td><td>Government to Business</td></tr><tr><td>G2G</td><td>Government to Government</td></tr><tr><td>G2E</td><td>Government to Employee</td></tr></tbody></table></div>
+</section>
+<section id="s4" class="topic-section">
+<div class="sec-head"><span class="sec-num">4</span><h2>Computer System: Basic Concepts</h2></div>
+<ul class="bullet-list"><li>Hardware</li></ul>
+<p>Physical components of a computer that can be seen or touched.</p>
+<p>Examples: Keyboard, monitor, CPU, printer, hard disk.</p>
+<ul class="bullet-list"><li>Software</li></ul>
+<p>Instructions or programs that direct a computer to perform tasks.</p>
+<ul class="bullet-list"><li>Types of Software</li><li>System Software: Operating system, device drivers</li><li>Application Software: Word processor, browser, spreadsheet</li><li>Utility Software: Antivirus, backup, compression tools</li><li>Example</li></ul>
+<div class="formula">Windows/Linux → System software</div>
+<div class="formula">MS Word → Application software</div>
+<div class="formula">Antivirus → Utility software</div>
+</section>
+<section id="s5" class="topic-section">
+<div class="sec-head"><span class="sec-num">5</span><h2>Input and Output Devices</h2></div>
+<ul class="bullet-list"><li>Input Devices</li></ul>
+<p>Data को computer में enter करते हैं।</p>
+<ul class="bullet-list"><li>Keyboard</li><li>Mouse</li><li>Scanner</li><li>Microphone</li><li>Webcam</li><li>Barcode reader</li><li>OCR</li><li>OMR</li><li>MICR</li><li>Touchscreen</li><li>Output Devices</li></ul>
+<p>Processed information प्रस्तुत करते हैं।</p>
+<ul class="bullet-list"><li>Monitor</li><li>Printer</li><li>Speaker</li><li>Projector</li><li>Plotter</li><li>Important Devices</li></ul>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>Device</th><th>Function</th></tr></thead><tbody><tr><td>OCR</td><td>Printed characters को editable digital text में बदलता है</td></tr><tr><td>OMR</td><td>Shaded marks/bubbles पढ़ता है</td></tr><tr><td>MICR</td><td>Bank cheques पर magnetic-ink characters पढ़ता है</td></tr><tr><td>Barcode reader</td><td>Product code scan करता है</td></tr><tr><td>Biometric scanner</td><td>Fingerprint/iris जैसी biological identity पढ़ता है</td></tr></tbody></table></div>
+<ul class="bullet-list"><li>Exam Trap</li></ul>
+<p>OMR handwritten essay नहीं पढ़ता।</p>
+<p>OCR shaded circles identify करने का primary device नहीं है।</p>
+<p>MICR का प्रमुख उपयोग banking में होता है।</p>
+</section>
+<section id="s6" class="topic-section">
+<div class="sec-head"><span class="sec-num">6</span><h2>Memory and Storage</h2></div>
+<ul class="bullet-list"><li>Primary Memory</li></ul>
+<p>CPU द्वारा directly accessible memory.</p>
+<ul class="bullet-list"><li>RAM</li><li>Volatile memory</li><li>Temporary storage</li><li>Power बंद होने पर data lost</li><li>Read and write possible</li><li>ROM</li><li>Non-volatile memory</li><li>Permanent instructions</li><li>Power बंद होने पर data retained</li><li>Cache Memory</li><li>Very fast memory</li><li>CPU और main memory के बीच</li><li>Frequently used data/instructions रखती है</li><li>Secondary Storage</li><li>HDD</li><li>SSD</li><li>Pen drive</li><li>Memory card</li><li>CD/DVD</li><li>Magnetic tape</li><li>Memory Hierarchy</li></ul>
+<div class="formula">Registers → Cache → RAM → SSD/HDD → Optical/Tape</div>
+<p>ऊपर से नीचे जाने पर:</p>
+<ul class="bullet-list"><li>Speed decreases</li><li>Capacity increases</li><li>Cost per unit generally decreases</li></ul>
+</section>
+<section id="s7" class="topic-section">
+<div class="sec-head"><span class="sec-num">7</span><h2>Units of Digital Storage</h2></div>
+<div class="formula">1 Byte=8 bits1\text{ Byte}=8\text{ bits}</div>
+<p>Traditional binary convention में:</p>
+<p>1 KB=1024 Bytes1\text{ KB}=1024\text{ Bytes} 1 MB=1024 KB1\text{ MB}=1024\text{ KB} 1 GB=1024 MB1\text{ GB}=1024\text{ MB} 1 TB=1024 GB1\text{ TB}=1024\text{ GB}</p>
+<ul class="bullet-list"><li>Order</li></ul>
+<div class="formula">Bit → Nibble → Byte → KB → MB → GB → TB → PB</div>
+<div class="formula">Nibble = 4 bits</div>
+<div class="formula">Byte = 8 bits</div>
+<ul class="bullet-list"><li>Exam Trap</li></ul>
+<p>Lowercase b means bit and uppercase B means byte.</p>
+<div class="formula">Mbps = megabits per second</div>
+<div class="formula">MBps = megabytes per second</div>
+</section>
+<section id="s8" class="topic-section">
+<div class="sec-head"><span class="sec-num">8</span><h2>Types of Computer Networks</h2></div>
+<ul class="bullet-list"><li>PAN — Personal Area Network</li></ul>
+<p>एक व्यक्ति के आसपास छोटी range का network।</p>
+<p>Example: Smartphone और wireless earbuds का Bluetooth connection।</p>
+<ul class="bullet-list"><li>LAN — Local Area Network</li></ul>
+<p>छोटे geographical area में network।</p>
+<p>Example: Computer laboratory or university department.</p>
+<ul class="bullet-list"><li>MAN — Metropolitan Area Network</li></ul>
+<p>City या metropolitan area तक फैला network।</p>
+<ul class="bullet-list"><li>WAN — Wide Area Network</li></ul>
+<p>Large geographical area covering countries or continents.</p>
+<p>Example: Internet.</p>
+<ul class="bullet-list"><li>Range Formula</li><li>PAN &lt; LAN &lt; MAN &lt; WAN</li></ul>
+</section>
+<section id="s9" class="topic-section">
+<div class="sec-head"><span class="sec-num">9</span><h2>Internet, Intranet and Extranet</h2></div>
+<ul class="bullet-list"><li>Internet</li></ul>
+<p>A global public network of interconnected networks.</p>
+<div class="formula">Internet = Network of Networks</div>
+<ul class="bullet-list"><li>Intranet</li></ul>
+<p>Internet technologies पर आधारित private organisational network।</p>
+<p>Example: University का internal faculty portal.</p>
+<ul class="bullet-list"><li>Extranet</li></ul>
+<p>Controlled private network in which selected outsiders are also given authorised access.</p>
+<p>Example: University portal accessed by authorised vendors or collaborating institutions.</p>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>Basis</th><th>Internet</th><th>Intranet</th><th>Extranet</th></tr></thead><tbody><tr><td>Access</td><td>Public</td><td>Internal authorised users</td><td>Internal + selected external users</td></tr><tr><td>Ownership</td><td>No single owner</td><td>Organisation</td><td>Organisation/partners</td></tr><tr><td>Security</td><td>Relatively less controlled</td><td>More controlled</td><td>Controlled access</td></tr><tr><td>Scope</td><td>Global</td><td>Organisation</td><td>Collaborating groups</td></tr><tr><td>Example</td><td>Public website</td><td>Employee portal</td><td>Supplier/collaboration portal</td></tr></tbody></table></div>
+<div class="formula">Recall</div>
+<p>Internet = Everyone
+Intranet = Employees/Internal members
+Extranet = Employees + Authorised outsiders</p>
+</section>
+<section id="s10" class="topic-section">
+<div class="sec-head"><span class="sec-num">10</span><h2>Internet vs World Wide Web</h2></div>
+<ul class="bullet-list"><li>Internet</li></ul>
+<p>Physical and logical network infrastructure connecting devices worldwide.</p>
+<ul class="bullet-list"><li>World Wide Web</li></ul>
+<p>Internet पर उपलब्ध interlinked web pages और resources की service।</p>
+<p>Internet is the infrastructure; WWW is a service running on it.</p>
+<ul class="bullet-list"><li>Other Internet Services</li><li>E-mail</li><li>FTP</li><li>VoIP</li><li>Video conferencing</li><li>Web browsing</li><li>Cloud services</li><li>Instant messaging</li><li>Exam Trap</li></ul>
+<p>Internet और WWW समान concepts नहीं हैं। WWW, Internet की services में से एक है।</p>
+</section>
+<section id="s11" class="topic-section">
+<div class="sec-head"><span class="sec-num">11</span><h2>Website, Webpage and Browser</h2></div>
+<ul class="bullet-list"><li>Website</li></ul>
+<p>Related web pages का collection।</p>
+<ul class="bullet-list"><li>Webpage</li></ul>
+<p>Website का single document/page।</p>
+<ul class="bullet-list"><li>Home Page</li></ul>
+<p>Website का main or introductory page।</p>
+<ul class="bullet-list"><li>Web Browser</li></ul>
+<p>Web resources access और display करने वाला software।</p>
+<p>Examples: Chrome, Firefox, Edge, Safari.</p>
+<ul class="bullet-list"><li>Search Engine</li></ul>
+<p>Internet पर information search करने वाली service।</p>
+<p>Examples: Google, Bing.</p>
+<ul class="bullet-list"><li>Exam Trap</li></ul>
+<p>Google primarily search engine है; Chrome browser है।</p>
+</section>
+<section id="s12" class="topic-section">
+<div class="sec-head"><span class="sec-num">12</span><h2>URL and Domain Name</h2></div>
+<ul class="bullet-list"><li>URL</li></ul>
+<p>Internet resource का complete address।</p>
+<p>Example:</p>
+<ul class="bullet-list"><li>https://www.example.com/course/page1</li><li>Components</li></ul>
+<div class="formula">https → protocol</div>
+<div class="formula">www.example.com → domain</div>
+<div class="formula">/course/page1 → path</div>
+<ul class="bullet-list"><li>Domain Examples</li></ul>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>Domain</th><th>Common Association</th></tr></thead><tbody><tr><td>.com</td><td>Commercial</td></tr><tr><td>.org</td><td>Organisation</td></tr><tr><td>.edu</td><td>Education</td></tr><tr><td>.gov</td><td>Government</td></tr><tr><td>.net</td><td>Network</td></tr><tr><td>.in</td><td>India country-code domain</td></tr></tbody></table></div>
+</section>
+<section id="s13" class="topic-section">
+<div class="sec-head"><span class="sec-num">13</span><h2>Important Internet Protocols</h2></div>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>Protocol</th><th>Main Function</th></tr></thead><tbody><tr><td>HTTP</td><td>Web pages transfer</td></tr><tr><td>HTTPS</td><td>Encrypted web communication</td></tr><tr><td>SMTP</td><td>Sending e-mail</td></tr><tr><td>POP3</td><td>Downloading/retrieving e-mail</td></tr><tr><td>IMAP</td><td>Server-based e-mail access and synchronisation</td></tr><tr><td>FTP</td><td>File transfer</td></tr><tr><td>SFTP</td><td>Secure file transfer</td></tr><tr><td>TCP</td><td>Reliable, connection-oriented delivery</td></tr><tr><td>UDP</td><td>Faster, connectionless delivery</td></tr><tr><td>DNS</td><td>Domain name को IP address में translate करना</td></tr><tr><td>DHCP</td><td>Device को automatically IP address assign करना</td></tr></tbody></table></div>
+<div class="formula">Easy Formula</div>
+<div class="formula">SMTP Sends
+POP3 Pulls/Downloads
+IMAP Synchronises
+DNS Names → Numbers
+DHCP Assigns IP</div>
+</section>
+<section id="s14" class="topic-section">
+<div class="sec-head"><span class="sec-num">14</span><h2>TCP and UDP</h2></div>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>TCP</th><th>UDP</th></tr></thead><tbody><tr><td>Connection-oriented</td><td>Connectionless</td></tr><tr><td>Reliable delivery</td><td>Delivery guarantee नहीं</td></tr><tr><td>Error checking and sequencing</td><td>Lower overhead</td></tr><tr><td>Comparatively slower</td><td>Faster</td></tr><tr><td>Web, e-mail, file transfer</td><td>Live streaming, gaming, VoIP</td></tr></tbody></table></div>
+<ul class="bullet-list"><li>Exam Trap</li></ul>
+<p>UDP का fast होना यह नहीं दर्शाता कि वह TCP से अधिक reliable है।</p>
+</section>
+<section id="s15" class="topic-section">
+<div class="sec-head"><span class="sec-num">15</span><h2>E-mail</h2></div>
+<p>Electronic mail is a system for sending digital messages through a network.</p>
+<ul class="bullet-list"><li>Major Fields</li><li>To</li></ul>
+<p>Primary recipient.</p>
+<ul class="bullet-list"><li>CC — Carbon Copy</li></ul>
+<p>Additional recipients visible to everyone.</p>
+<ul class="bullet-list"><li>BCC — Blind Carbon Copy</li></ul>
+<p>Additional recipients whose addresses other recipients cannot see.</p>
+<ul class="bullet-list"><li>Subject</li></ul>
+<p>Message का concise purpose.</p>
+<ul class="bullet-list"><li>Attachment</li></ul>
+<p>Message के साथ भेजी गई file.</p>
+<ul class="bullet-list"><li>E-mail Protocols</li></ul>
+<div class="formula">Sending → SMTP</div>
+<div class="formula">Receiving/downloading → POP3</div>
+<div class="formula">Server-based synchronisation → IMAP</div>
+<ul class="bullet-list"><li>POP3 vs IMAP</li></ul>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>POP3</th><th>IMAP</th></tr></thead><tbody><tr><td>Mail device पर download करता है</td><td>Mail server पर manage करता है</td></tr><tr><td>Limited synchronisation</td><td>Multiple devices पर synchronisation</td></tr><tr><td>Offline access useful</td><td>Multi-device access useful</td></tr><tr><td>Local storage-oriented</td><td>Server-oriented</td></tr></tbody></table></div>
+<ul class="bullet-list"><li>Example</li></ul>
+<p>यदि user mobile और laptop दोनों पर same inbox status देखना चाहता है, IMAP अधिक suitable है।</p>
+</section>
+<section id="s16" class="topic-section">
+<div class="sec-head"><span class="sec-num">16</span><h2>Audio Conferencing and Video Conferencing</h2></div>
+<ul class="bullet-list"><li>Audio Conferencing</li></ul>
+<p>Participants केवल audio के माध्यम से communicate करते हैं।</p>
+<ul class="bullet-list"><li>Video Conferencing</li></ul>
+<p>Real-time audio and visual communication.</p>
+<p>Examples: Google Meet, Zoom, Microsoft Teams, Webex.</p>
+<ul class="bullet-list"><li>Essential Requirements</li><li>Computer/mobile device</li><li>Microphone</li><li>Speaker/headphones</li><li>Camera for video</li><li>Internet connection</li><li>Conferencing software/platform</li><li>Synchronous Communication</li></ul>
+<p>Participants same time पर interact करते हैं।</p>
+<p>Examples: Live Google Meet class, webinar, chat.</p>
+<ul class="bullet-list"><li>Asynchronous Communication</li></ul>
+<p>Participants का same time पर present होना आवश्यक नहीं।</p>
+<p>Examples: Recorded lecture, discussion forum, e-mail.</p>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>Synchronous</th><th>Asynchronous</th></tr></thead><tbody><tr><td>Real-time</td><td>Time-independent</td></tr><tr><td>Immediate feedback</td><td>Delayed feedback</td></tr><tr><td>Fixed schedule</td><td>Flexible access</td></tr><tr><td>Live class</td><td>Recorded class</td></tr></tbody></table></div>
+<ul class="bullet-list"><li>Advantages in Education</li><li>Remote access</li><li>Guest lectures</li><li>Collaboration</li><li>Immediate interaction</li><li>Reduced travel cost</li><li>Screen sharing and demonstration</li><li>Recording and revision</li><li>Limitations</li><li>Bandwidth problems</li><li>Digital divide</li><li>Screen fatigue</li><li>Reduced non-verbal cues</li><li>Privacy concerns</li><li>Technology anxiety</li><li>Distraction and multitasking</li></ul>
+</section>
+<section id="s17" class="topic-section">
+<div class="sec-head"><span class="sec-num">17</span><h2>Bandwidth and Related Terms</h2></div>
+<ul class="bullet-list"><li>Bandwidth</li></ul>
+<p>A communication channel की theoretical data-carrying capacity.</p>
+<ul class="bullet-list"><li>Data Transfer Rate</li></ul>
+<p>Actual data transferred per unit time.</p>
+<ul class="bullet-list"><li>Latency</li></ul>
+<p>Data को source से destination तक पहुँचने में लगने वाला delay.</p>
+<ul class="bullet-list"><li>Jitter</li></ul>
+<p>Packet delay में variation.</p>
+<ul class="bullet-list"><li>Video-conferencing Example</li></ul>
+<div class="formula">Low bandwidth → low video quality</div>
+<div class="formula">High latency → response delay</div>
+<div class="formula">High jitter → broken or irregular audio</div>
+<div class="formula">Packet loss → missing audio/video segments</div>
+<ul class="bullet-list"><li>Exam Trap</li></ul>
+<p>High bandwidth alone does not guarantee perfect video conferencing; latency, jitter, congestion and device performance भी relevant हैं।</p>
+</section>
+<section id="s18" class="topic-section">
+<div class="sec-head"><span class="sec-num">18</span><h2>Digital Learning</h2></div>
+<ul class="bullet-list"><li>E-learning</li></ul>
+<p>Electronic technologies के माध्यम से learning.</p>
+<ul class="bullet-list"><li>Online Learning</li></ul>
+<p>Internet-based learning.</p>
+<ul class="bullet-list"><li>Blended Learning</li></ul>
+<p>Face-to-face और online learning का planned combination.</p>
+<ul class="bullet-list"><li>Flipped Classroom</li></ul>
+<p>Learners class से पहले instructional content देखते हैं और classroom time discussion, application तथा problem-solving के लिए उपयोग होता है।</p>
+<ul class="bullet-list"><li>LMS</li></ul>
+<p>Learning Management System courses, content, assessment, attendance and learner progress को manage करता है।</p>
+<p>Examples: Moodle, Canvas and institutional LMS.</p>
+<ul class="bullet-list"><li>Comparison</li></ul>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>E-learning</th><th>Online learning</th><th>Blended learning</th></tr></thead><tbody><tr><td>Broad electronic learning</td><td>Internet आवश्यक</td><td>Online + face-to-face</td></tr><tr><td>Offline digital content भी possible</td><td>Network-dependent</td><td>दोनों modes integrated</td></tr></tbody></table></div>
+</section>
+<section id="s19" class="topic-section">
+<div class="sec-head"><span class="sec-num">19</span><h2>MOOCs</h2></div>
+<div class="formula">MOOC = Massive Open Online Course</div>
+<ul class="bullet-list"><li>Massive: Large number of learners</li><li>Open: Broad accessibility</li><li>Online: Internet-based delivery</li><li>Course: Organised learning experience</li><li>Major Characteristics</li><li>Learner-centric</li><li>Flexible access</li><li>Scalability</li><li>Multimedia content</li><li>Discussion and interaction</li><li>Assessment and certification possible</li><li>Self-paced or scheduled course possible</li><li>Credit and non-credit courses possible</li><li>Exam Trap</li></ul>
+<p>सभी MOOCs credit-based नहीं होते।</p>
+<p>MOOCs केवल SWAYAM पर उपलब्ध नहीं होते।</p>
+<p>Open access का अर्थ automatically high completion rate नहीं है।</p>
+<p>Course access free हो सकता है, लेकिन certification examination के लिए fee हो सकती है।</p>
+</section>
+<section id="s20" class="topic-section">
+<div class="sec-head"><span class="sec-num">20</span><h2>Four Quadrants of SWAYAM MOOCs</h2></div>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>Quadrant</th><th>Component</th></tr></thead><tbody><tr><td>Quadrant I</td><td>Video/e-tutorial</td></tr><tr><td>Quadrant II</td><td>E-content/readable study material</td></tr><tr><td>Quadrant III</td><td>Web resources/further references</td></tr><tr><td>Quadrant IV</td><td>Self-assessment</td></tr></tbody></table></div>
+<div class="formula">Memory Formula</div>
+<div class="formula">Watch → Read → Explore → Assess</div>
+<ul class="bullet-list"><li>Self-assessment Includes</li><li>Quizzes</li><li>Assignments</li><li>Practice exercises</li><li>Tests</li><li>Questions and answers</li></ul>
+</section>
+<section id="s21" class="topic-section">
+<div class="sec-head"><span class="sec-num">21</span><h2>SWAYAM</h2></div>
+<ul class="bullet-list"><li>Study Webs of Active Learning for Young Aspiring Minds</li></ul>
+<p>SWAYAM is India’s online learning platform designed to facilitate access to courses across school and higher-education levels. The official platform describes access from Class 9 to postgraduate level, available to learners anywhere and anytime. Official SWAYAM information</p>
+<ul class="bullet-list"><li>Core Principles</li><li>Access + Equity + Quality</li><li>National Coordinators Frequently Asked in Exams</li></ul>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>Coordinator</th><th>Area</th></tr></thead><tbody><tr><td>AICTE</td><td>Self-paced and international courses</td></tr><tr><td>NPTEL</td><td>Engineering</td></tr><tr><td>UGC</td><td>Non-technical postgraduate education</td></tr><tr><td>CEC</td><td>Undergraduate education</td></tr><tr><td>NCERT</td><td>School education</td></tr><tr><td>NIOS</td><td>Out-of-school learners/school education</td></tr><tr><td>IGNOU</td><td>Diploma and certificate programmes</td></tr><tr><td>IIM Bangalore</td><td>Management studies</td></tr><tr><td>NITTTR</td><td>Teacher-training programmes</td></tr></tbody></table></div>
+<p>Coordinator allocation may be revised administratively; exam questions should be answered according to the framework stated in the question or prescribed material.</p>
+</section>
+<section id="s22" class="topic-section">
+<div class="sec-head"><span class="sec-num">22</span><h2>SWAYAM PRABHA</h2></div>
+<p>SWAYAM PRABHA is a group of educational DTH channels that telecast educational programmes on a 24×7 basis and use satellite communication. Official PM e-VIDYA information associates it with GSAT-15. Official SWAYAM PRABHA information</p>
+<ul class="bullet-list"><li>SWAYAM vs SWAYAM PRABHA</li></ul>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>SWAYAM</th><th>SWAYAM PRABHA</th></tr></thead><tbody><tr><td>Online learning/MOOC platform</td><td>Educational DTH channels</td></tr><tr><td>Internet-based</td><td>Satellite/television-based</td></tr><tr><td>Interactive course components</td><td>Broadcast-oriented</td></tr><tr><td>Assessment possible</td><td>Primarily content telecast</td></tr></tbody></table></div>
+<div class="formula">Exam Formula</div>
+<div class="formula">SWAYAM = Online Courses
+SWAYAM PRABHA = DTH Educational Channels</div>
+</section>
+<section id="s23" class="topic-section">
+<div class="sec-head"><span class="sec-num">23</span><h2>Important Digital Initiatives in Education</h2></div>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>Initiative</th><th>Purpose</th></tr></thead><tbody><tr><td>SWAYAM</td><td>MOOCs and online courses</td></tr><tr><td>SWAYAM PRABHA</td><td>Educational DTH channels</td></tr><tr><td>NPTEL</td><td>Technology and engineering e-learning</td></tr><tr><td>NDLI</td><td>Digital learning-resource repository/library</td></tr><tr><td>e-PG Pathshala</td><td>Postgraduate e-content</td></tr><tr><td>e-ShodhSindhu</td><td>Access to scholarly electronic resources</td></tr><tr><td>Shodhganga</td><td>Repository of Indian theses and dissertations</td></tr><tr><td>Shodhgangotri</td><td>Repository of approved research synopses</td></tr><tr><td>VIDWAN</td><td>Database of experts and researchers</td></tr><tr><td>DIKSHA</td><td>Digital infrastructure for school education</td></tr><tr><td>DigiLocker</td><td>Storage and access of personal digital documents</td></tr><tr><td>NAD</td><td>Digital academic awards</td></tr><tr><td>Virtual Labs</td><td>Remote access to simulated/online laboratory experience</td></tr><tr><td>Spoken Tutorial</td><td>Software and ICT skill tutorials</td></tr><tr><td>FOSSEE</td><td>Promotion of open-source software in education</td></tr><tr><td>PM e-VIDYA</td><td>Unified digital, online and on-air education initiative</td></tr></tbody></table></div>
+<ul class="bullet-list"><li>High-Frequency Associations</li></ul>
+<div class="formula">Thesis → Shodhganga
+Research Synopsis → Shodhgangotri
+Expert Database → VIDWAN
+Digital Library → NDLI
+MOOCs → SWAYAM
+DTH → SWAYAM PRABHA
+School Digital Platform → DIKSHA
+Academic Awards → NAD</div>
+</section>
+<section id="s24" class="topic-section">
+<div class="sec-head"><span class="sec-num">24</span><h2>Digital Divide</h2></div>
+<p>Digital divide means inequality in access to and effective use of digital technology.</p>
+<p>डिजिटल विभाजन technology की उपलब्धता, affordability, skills और meaningful use में असमानता है।</p>
+<ul class="bullet-list"><li>Dimensions</li><li>Access divide</li><li>Affordability divide</li><li>Rural–urban divide</li><li>Gender divide</li><li>Language divide</li><li>Disability-related divide</li><li>Digital-literacy divide</li><li>Quality-of-connectivity divide</li><li>Usage and outcome divide</li><li>Example</li></ul>
+<p>Student के पास smartphone है, लेकिन stable Internet और digital literacy नहीं है। Device access होने के बावजूद meaningful access incomplete है।</p>
+<ul class="bullet-list"><li>Inclusive Measures</li><li>Accessible digital content</li><li>Captions and transcripts</li><li>Screen-reader compatibility</li><li>Regional-language content</li><li>Low-bandwidth resources</li><li>Offline downloads</li><li>Community digital centres</li><li>Digital-literacy training</li></ul>
+</section>
+<section id="s25" class="topic-section">
+<div class="sec-head"><span class="sec-num">25</span><h2>ICT in Higher Education</h2></div>
+<ul class="bullet-list"><li>Teaching Applications</li><li>Multimedia presentations</li><li>Smart classrooms</li><li>Simulations</li><li>Virtual laboratories</li><li>Recorded lectures</li><li>Flipped classrooms</li><li>Adaptive learning</li><li>Learning Applications</li><li>Self-paced study</li><li>Digital libraries</li><li>Peer collaboration</li><li>Discussion forums</li><li>Remote learning</li><li>Personalised feedback</li><li>Assessment Applications</li><li>Computer-based testing</li><li>Online quizzes</li><li>Automated feedback</li><li>E-portfolios</li><li>Learning analytics</li></ul>
+<div class="pyq-tag">Question banks</div>
+<ul class="bullet-list"><li>Research Applications</li><li>Literature search</li><li>Reference management</li><li>Online surveys</li><li>Data analysis</li><li>Plagiarism checking</li><li>Collaborative writing</li><li>Institutional repositories</li><li>Video interviews</li><li>Administration</li><li>Online admission</li><li>Student-information systems</li><li>Attendance and examination management</li><li>Digital certificates</li><li>Financial management</li><li>Academic Bank and document services</li></ul>
+</section>
+<section id="s26" class="topic-section">
+<div class="sec-head"><span class="sec-num">26</span><h2>ICT and Governance</h2></div>
+<ul class="bullet-list"><li>E-Governance</li></ul>
+<p>Use of ICT by government to improve administration, service delivery, transparency, participation and accountability.</p>
+<div class="formula">Formula</div>
+<div class="formula">E-Governance = ICT + Public Services + Transparency + Accountability</div>
+<ul class="bullet-list"><li>Types of E-Governance Interaction</li></ul>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>Type</th><th>Meaning</th><th>Example</th></tr></thead><tbody><tr><td>G2C</td><td>Government to Citizen</td><td>Online certificates, tax services</td></tr><tr><td>G2G</td><td>Government to Government</td><td>Interdepartmental data exchange</td></tr><tr><td>G2B</td><td>Government to Business</td><td>E-tendering, online licences</td></tr><tr><td>G2E</td><td>Government to Employee</td><td>Payroll, service portal</td></tr></tbody></table></div>
+<ul class="bullet-list"><li>Objectives</li><li>Faster services</li><li>Transparency</li><li>Reduced paperwork</li><li>Better record management</li><li>Citizen participation</li><li>Reduced transaction costs</li><li>Monitoring and accountability</li><li>Wider accessibility</li><li>Governance Models</li><li>Information Model</li></ul>
+<p>Government information online उपलब्ध कराना।</p>
+<ul class="bullet-list"><li>Interaction Model</li></ul>
+<p>Citizen feedback, queries and communication.</p>
+<ul class="bullet-list"><li>Transaction Model</li></ul>
+<p>Online payment, application, certificate or licence.</p>
+<ul class="bullet-list"><li>Transformation Model</li></ul>
+<p>Departments और services का integrated digital restructuring.</p>
+<ul class="bullet-list"><li>Participation Model</li></ul>
+<p>Online consultation and citizen involvement.</p>
+</section>
+<section id="s27" class="topic-section">
+<div class="sec-head"><span class="sec-num">27</span><h2>Major Digital-Governance Initiatives</h2></div>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>Initiative</th><th>Main Purpose</th></tr></thead><tbody><tr><td>Digital India</td><td>Digitally empowered society and knowledge economy</td></tr><tr><td>UMANG</td><td>Multiple government services through a unified application</td></tr><tr><td>DigiLocker</td><td>Digital documents and certificates</td></tr><tr><td>Aadhaar</td><td>Digital identity/authentication framework</td></tr><tr><td>GeM</td><td>Government e-Marketplace</td></tr><tr><td>e-Office</td><td>Digital government-office processes</td></tr><tr><td>MyGov</td><td>Citizen engagement and participation</td></tr><tr><td>BharatNet</td><td>Broadband connectivity infrastructure</td></tr><tr><td>Common Service Centres</td><td>Assisted digital public services</td></tr><tr><td>DBT</td><td>Direct Benefit Transfer</td></tr><tr><td>e-Hospital</td><td>Digital hospital-related services</td></tr><tr><td>National Scholarship Portal</td><td>Scholarship services</td></tr><tr><td>GSTN</td><td>Digital GST-related infrastructure</td></tr></tbody></table></div>
+<p>MeitY’s official digital-governance material covers areas such as the National e-Governance Plan, DigiLocker and e-governance infrastructure. MeitY Digital Governance</p>
+</section>
+<section id="s28" class="topic-section">
+<div class="sec-head"><span class="sec-num">28</span><h2>Good Digital Governance Principles</h2></div>
+<ul class="bullet-list"><li>Transparency</li><li>Accountability</li><li>Accessibility</li><li>Responsiveness</li><li>Inclusion</li><li>Efficiency</li><li>Security</li><li>Privacy</li><li>Interoperability</li><li>Reliability</li><li>Citizen-centricity</li><li>Grievance redressal</li><li>ICT Governance vs E-Governance</li></ul>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>ICT Governance</th><th>E-Governance</th></tr></thead><tbody><tr><td>Organisation में ICT decisions and controls</td><td>Government services में ICT का use</td></tr><tr><td>Alignment, risk, resources and performance</td><td>Service delivery, transparency and participation</td></tr><tr><td>Broader organisational concept</td><td>Public-governance context</td></tr></tbody></table></div>
+</section>
+<section id="s29" class="topic-section">
+<div class="sec-head"><span class="sec-num">29</span><h2>Cybersecurity Basics</h2></div>
+<ul class="bullet-list"><li>Malware</li></ul>
+<p>Malicious software designed to damage, disrupt or gain unauthorised access.</p>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>Type</th><th>Characteristic</th></tr></thead><tbody><tr><td>Virus</td><td>Host file/program से जुड़ता है</td></tr><tr><td>Worm</td><td>Network पर self-replicate कर सकता है</td></tr><tr><td>Trojan Horse</td><td>Legitimate software जैसा दिखाई देता है</td></tr><tr><td>Ransomware</td><td>Data encrypt करके ransom माँगता है</td></tr><tr><td>Spyware</td><td>Secretly information collect करता है</td></tr><tr><td>Adware</td><td>Unwanted advertisements</td></tr><tr><td>Rootkit</td><td>Malicious access/process छिपाता है</td></tr><tr><td>Logic bomb</td><td>Specific event पर activate होता है</td></tr></tbody></table></div>
+<ul class="bullet-list"><li>Social Engineering Attacks</li></ul>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>Attack</th><th>Meaning</th></tr></thead><tbody><tr><td>Phishing</td><td>Fraudulent e-mail/message</td></tr><tr><td>Spear phishing</td><td>Targeted phishing</td></tr><tr><td>Smishing</td><td>SMS-based phishing</td></tr><tr><td>Vishing</td><td>Voice-call-based fraud</td></tr><tr><td>Pharming</td><td>User को fraudulent website पर redirect करना</td></tr><tr><td>Spoofing</td><td>False identity/address दिखाना</td></tr></tbody></table></div>
+<ul class="bullet-list"><li>Protective Measures</li><li>Strong unique passwords</li><li>Multi-factor authentication</li><li>Updated software</li><li>Antivirus and firewall</li><li>Encryption</li><li>Regular backups</li><li>Secure Wi-Fi</li><li>Suspicious links से बचना</li><li>Role-based access control</li><li>Authentication Factors</li></ul>
+<div class="formula">Something you know → Password/PIN</div>
+<div class="formula">Something you have → Phone/token/card</div>
+<div class="formula">Something you are → Fingerprint/iris</div>
+<ul class="bullet-list"><li>Exam Trap</li></ul>
+<p>Password + PIN necessarily two-factor authentication नहीं है, क्योंकि दोनों “something you know” category में हैं।</p>
+</section>
+<section id="s30" class="topic-section">
+<div class="sec-head"><span class="sec-num">30</span><h2>Cloud Computing</h2></div>
+<p>Cloud computing provides computing resources through the Internet.</p>
+<ul class="bullet-list"><li>Service Models</li></ul>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>Model</th><th>Meaning</th></tr></thead><tbody><tr><td>IaaS</td><td>Infrastructure as a Service</td></tr><tr><td>PaaS</td><td>Platform as a Service</td></tr><tr><td>SaaS</td><td>Software as a Service</td></tr></tbody></table></div>
+<ul class="bullet-list"><li>Examples</li></ul>
+<div class="formula">SaaS → Online e-mail, Google Docs</div>
+<div class="formula">PaaS → Application-development platform</div>
+<div class="formula">IaaS → Virtual servers and storage</div>
+<ul class="bullet-list"><li>Deployment Models</li><li>Public cloud</li><li>Private cloud</li><li>Hybrid cloud</li><li>Community cloud</li><li>Advantages</li><li>Scalability</li><li>Remote access</li><li>Reduced infrastructure burden</li><li>Collaboration</li><li>Backup and recovery</li><li>Risks</li><li>Privacy</li><li>Vendor dependence</li><li>Internet dependence</li><li>Data breach</li><li>Service availability</li></ul>
+</section>
+<section id="s31" class="topic-section">
+<div class="sec-head"><span class="sec-num">31</span><h2>Artificial Intelligence in Education</h2></div>
+<ul class="bullet-list"><li>Applications</li><li>Adaptive learning</li><li>Automated assessment</li><li>Intelligent tutoring</li><li>Chatbots</li><li>Learning analytics</li><li>Content recommendation</li><li>Translation and accessibility</li><li>Concerns</li><li>Algorithmic bias</li><li>Privacy</li><li>Hallucinated or inaccurate information</li><li>Academic integrity</li><li>Lack of transparency</li><li>Overdependence</li><li>Digital inequality</li></ul>
+<p>AI teacher को automatically replace नहीं करता; it can support teaching, assessment and administration.</p>
+</section>
+<section id="s32" class="topic-section">
+<div class="sec-head"><span class="sec-num">32</span><h2>Common Exam Traps</h2></div>
+<p>Internet and WWW are not synonymous.</p>
+<p>Internet is public; intranet is privately controlled.</p>
+<p>Extranet allows selected external users.</p>
+<p>SMTP sends e-mail; POP3/IMAP retrieve or access it.</p>
+<p>BCC recipients are hidden from other recipients.</p>
+<p>HTTPS adds encryption; it does not guarantee that every website is trustworthy.</p>
+<p>RAM is volatile; ROM is non-volatile.</p>
+<p>Google is a search engine; Chrome is a browser.</p>
+<p>SWAYAM is an online course platform; SWAYAM PRABHA is DTH-based.</p>
+<p>NDLI is a digital library; it is not the thesis-only repository.</p>
+<p>Shodhganga contains theses; Shodhgangotri contains research synopses.</p>
+<p>MOOCs may be credit or non-credit.</p>
+<p>Blended learning is not merely using PowerPoint in a classroom.</p>
+<p>Video conferencing is synchronous; recorded lecture is asynchronous.</p>
+<p>Digital availability does not automatically ensure digital inclusion.</p>
+<p>ICT governance includes alignment, security, accountability and resource use—not only hardware purchase.</p>
+<p>Virus usually requires a host; worm can self-replicate over networks.</p>
+<p>Phishing, smishing and vishing differ by communication medium.</p>
+</section>
+<section id="s33" class="topic-section">
+<div class="sec-head"><span class="sec-num">33</span><h2>Verified Previous Year Questions</h2></div>
+<div class="pyq-tag">PYQ 1: UGC NET, 30 September 2020, Shift 1</div>
+<p>Which statements are correct?</p>
+<p>A. Internet is larger than the intranet.
+B. Intranet is larger than Internet.
+C. Internet and intranet are the same.
+D. Internet is a network of networks.
+E. World Wide Web is an example of intranet.</p>
+<ul class="bullet-list"><li>Options</li><li>B and E only</li><li>A and D only</li><li>C and E only</li><li>B and C only</li></ul>
+<div class="answer-box">Answer: 2. A and D only</div>
+<p class="explain">Explanation</p>
+<p>Internet has global coverage and is a network of interconnected networks. Intranet is a restricted private network. WWW is an Internet-based service, not an intranet.</p>
+<ul class="bullet-list"><li>Verified PYQ</li></ul>
+<div class="pyq-tag">PYQ 2: UGC NET, 29 November 2021, Shift 1</div>
+<p>Which statements regarding intranets are correct?</p>
+<p>A. The intranet can be accessed from anywhere by anyone.
+B. The intranet has public access.
+C. Intranets are more secure than the Internet.
+D. In an intranet, it is possible to control external links.</p>
+<ul class="bullet-list"><li>Options</li><li>A, B and C only</li><li>C and D only</li><li>A, C and D only</li><li>B and C only</li></ul>
+<div class="answer-box">Answer: 2. C and D only</div>
+<p class="explain">Explanation</p>
+<p>Intranet authorised members के लिए restricted network है। Organisation authentication, access rights और external links को control कर सकती है।</p>
+<ul class="bullet-list"><li>Verified PYQ</li></ul>
+<div class="pyq-tag">PYQ 3: UGC NET, 22 November 2021, Shift 1</div>
+<p>Match the digital initiatives with their purposes:</p>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>List I</th><th>List II</th></tr></thead><tbody><tr><td>A. SWAYAM</td><td>I. Online store/access of academic awards</td></tr><tr><td>B. SWAYAM PRABHA</td><td>II. Store/access personal e-documents</td></tr><tr><td>C. DigiLocker</td><td>III. MOOCs for education anywhere and anytime</td></tr><tr><td>D. NAD</td><td>IV. Free DTH channel for education</td></tr></tbody></table></div>
+<ul class="bullet-list"><li>Options</li><li>A–III, B–IV, C–II, D–I</li><li>A–IV, B–III, C–I, D–II</li><li>A–IV, B–III, C–II, D–I</li><li>A–II, B–I, C–III, D–IV</li></ul>
+<div class="answer-box">Answer: 1. A–III, B–IV, C–II, D–I</div>
+<p class="explain">Explanation</p>
+<div class="formula">SWAYAM → MOOCs</div>
+<div class="formula">SWAYAM PRABHA → Educational DTH</div>
+<div class="formula">DigiLocker → Personal digital documents</div>
+<div class="formula">NAD → Academic awards</div>
+<ul class="bullet-list"><li>Verified PYQ</li></ul>
+<div class="pyq-tag">PYQ 4: UGC NET, 29 September 2022, Shift 2</div>
+<p>In the context of MOOCs in higher education, which statements are correct?</p>
+<p>A. They are learner-centric.
+B. They can be delivered only through SWAYAM.
+C. They can benefit a large number of learners.
+D. They can be accessed anytime, anywhere and repeatedly.
+E. All MOOCs are for earning credit.</p>
+<ul class="bullet-list"><li>Options</li><li>A and D only</li><li>C and D only</li><li>A, B and E only</li><li>A, C and D only</li></ul>
+<div class="answer-box">Answer: 4. A, C and D only</div>
+<p class="explain">Explanation</p>
+<p>MOOCs learner-centric, scalable and flexible होते हैं। वे केवल SWAYAM तक सीमित नहीं और सभी MOOCs credit-based नहीं होते।</p>
+<ul class="bullet-list"><li>Verified PYQ</li></ul>
+<div class="pyq-tag">PYQ 5: UGC NET, 21 October 2022, Shift 2</div>
+<p>Statement I: DIKSHA, SWAYAM and SWAYAM PRABHA are existing e-learning platforms.
+Statement II: NEP 2020 identified the National Educational Technology Forum to conduct pilot studies for online education.</p>
+<ul class="bullet-list"><li>Options</li></ul>
+<p>Both Statement I and Statement II are true.</p>
+<p>Both Statement I and Statement II are false.</p>
+<p>Statement I is true but Statement II is false.</p>
+<p>Statement I is false but Statement II is true.</p>
+<div class="answer-box">Answer: 1. Both statements are true</div>
+<p class="explain">Explanation</p>
+<p>DIKSHA, SWAYAM and SWAYAM PRABHA support technology-enabled education. NEP 2020 envisages NETF as a platform related to technology use in education, including experimentation and knowledge exchange.</p>
+<ul class="bullet-list"><li>Verified PYQ</li></ul>
+<div class="pyq-tag">PYQ 6: UGC NET, 21 June 2023, Shift 2</div>
+<p>In MOOCs under the NME-ICT programme, the fourth quadrant is related to:</p>
+<ul class="bullet-list"><li>E-content</li><li>Self-assessment</li><li>E-tutorial</li><li>Web resources</li></ul>
+<div class="answer-box">Answer: 2. Self-assessment</div>
+<p class="explain">Explanation</p>
+<p>Fourth quadrant में quizzes, assignments और self-assessment activities आती हैं।</p>
+<ul class="bullet-list"><li>Verified PYQ</li></ul>
+</section>
+<section id="s34" class="topic-section">
+<div class="sec-head"><span class="sec-num">34</span><h2>PYQ Trend Analysis</h2></div>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>Tested Area</th><th>Common Question Format</th></tr></thead><tbody><tr><td>Internet–Intranet–Extranet</td><td>Statements/correct combination</td></tr><tr><td>E-mail protocols</td><td>Match or direct MCQ</td></tr><tr><td>Digital initiatives</td><td>Match List I–II</td></tr><tr><td>SWAYAM/MOOCs</td><td>Statements and assertion–reason</td></tr><tr><td>Four quadrants</td><td>Direct factual question</td></tr><tr><td>Memory and storage</td><td>Correct sequence</td></tr><tr><td>Cybersecurity</td><td>Scenario-based identification</td></tr><tr><td>E-governance</td><td>G2C/G2G/G2B/G2E classification</td></tr><tr><td>Synchronous/asynchronous</td><td>Classroom scenario</td></tr><tr><td>Digital divide</td><td>Application-based question</td></tr><tr><td>Cloud and AI</td><td>Correct-statement combination</td></tr><tr><td>Network types</td><td>Range and example identification</td></tr></tbody></table></div>
+<ul class="bullet-list"><li>December 2026 Focus</li></ul>
+<p>विशेष रूप से तैयार करें:</p>
+<ul class="bullet-list"><li>Protocol–function matching</li><li>SWAYAM four quadrants</li><li>Digital initiative–purpose mapping</li><li>Intranet and extranet distinction</li><li>Cyber-fraud scenarios</li><li>Cloud service models</li><li>AI ethics and academic integrity</li><li>Accessibility and digital divide</li><li>ICT governance and privacy</li><li>Blended/flipped learning scenarios</li></ul>
+</section>
+<section id="s35" class="topic-section">
+<div class="sec-head"><span class="sec-num">35</span><h2>December 2026 Expected MCQs</h2></div>
+<div class="pyq-tag">Question 1</div>
+<p>A university portal is accessible only to employees and registered faculty members. It is:</p>
+<ul class="bullet-list"><li>A. Internet
+B. Intranet
+C. Extranet
+D. World Wide Web</li></ul>
+<div class="answer-box">Answer: B. Intranet</div>
+<p class="explain">Explanation: Restricted organisational network is an intranet.</p>
+<div class="pyq-tag">Question 2</div>
+<p>कौन-सा protocol primarily e-mail भेजने के लिए उपयोग होता है?</p>
+<ul class="bullet-list"><li>A. POP3
+B. IMAP
+C. SMTP
+D. FTP</li></ul>
+<div class="answer-box">Answer: C. SMTP</div>
+<div class="pyq-tag">Question 3</div>
+<p>Match the following:</p>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>List I</th><th>List II</th></tr></thead><tbody><tr><td>A. DNS</td><td>I. Automatically assigns IP address</td></tr><tr><td>B. DHCP</td><td>II. Transfers web pages</td></tr><tr><td>C. HTTP</td><td>III. Domain name to IP address</td></tr><tr><td>D. FTP</td><td>IV. File transfer</td></tr></tbody></table></div>
+<ul class="bullet-list"><li>Options</li><li>A–III, B–I, C–II, D–IV</li><li>A–I, B–III, C–IV, D–II</li><li>A–II, B–IV, C–I, D–III</li><li>A–IV, B–II, C–III, D–I</li></ul>
+<div class="answer-box">Answer: 1. A–III, B–I, C–II, D–IV</div>
+<div class="pyq-tag">Question 4</div>
+<p>Which initiative is primarily associated with Indian theses and dissertations?</p>
+<ul class="bullet-list"><li>A. VIDWAN
+B. Shodhganga
+C. SWAYAM PRABHA
+D. DigiLocker</li></ul>
+<div class="answer-box">Answer: B. Shodhganga</div>
+<div class="pyq-tag">Question 5</div>
+<p>A learner watches recorded lectures before class and solves complex problems during classroom time. This is:</p>
+<p>A. Programmed instruction
+B. Flipped classroom
+C. Audio conferencing
+D. Purely traditional teaching</p>
+<div class="answer-box">Answer: B. Flipped classroom</div>
+<div class="pyq-tag">Question 6</div>
+<p>Statement I: Video conferencing is synchronous communication.
+Statement II: E-mail generally represents asynchronous communication.</p>
+<p>A. Both statements are correct
+B. Both statements are incorrect
+C. Statement I correct, Statement II incorrect
+D. Statement I incorrect, Statement II correct</p>
+<div class="answer-box">Answer: A. Both statements are correct</div>
+<div class="pyq-tag">Question 7</div>
+<p>Which is an example of G2C interaction?</p>
+<p>A. Two ministries exchanging records
+B. Government purchasing goods from a company
+C. Citizen applying online for a certificate
+D. Employee accessing an internal payroll portal</p>
+<div class="answer-box">Answer: C. Citizen applying online for a certificate</div>
+<div class="pyq-tag">Question 8</div>
+<p>कौन-सा cyberattack voice calls के माध्यम से confidential information प्राप्त करने का प्रयास करता है?</p>
+<ul class="bullet-list"><li>A. Smishing
+B. Vishing
+C. Pharming
+D. Ransomware</li></ul>
+<div class="answer-box">Answer: B. Vishing</div>
+<div class="pyq-tag">Question 9</div>
+<p>Which combination correctly represents two-factor authentication?</p>
+<p>A. Password + PIN
+B. Password + security question
+C. Password + fingerprint
+D. PIN + another PIN</p>
+<div class="answer-box">Answer: C. Password + fingerprint</div>
+<p class="explain">Explanation: Password is “something you know”; fingerprint is “something you are.”</p>
+<div class="pyq-tag">Question 10</div>
+<p>In SWAYAM MOOCs, quizzes and assignments primarily belong to:</p>
+<ul class="bullet-list"><li>A. Quadrant I
+B. Quadrant II
+C. Quadrant III
+D. Quadrant IV</li></ul>
+<div class="answer-box">Answer: D. Quadrant IV</div>
+<div class="pyq-tag">Question 11</div>
+<p>A student possesses a smartphone but cannot meaningfully access classes due to poor connectivity and lack of digital skills. This reflects:</p>
+<p>A. Only hardware failure
+B. Digital divide
+C. Data compression
+D. Network topology</p>
+<div class="answer-box">Answer: B. Digital divide</div>
+<div class="pyq-tag">Question 12</div>
+<p>Assertion: Availability of ICT infrastructure does not automatically guarantee effective learning.
+Reason: Technology must be integrated with pedagogy, learner needs and appropriate content.</p>
+<p>A. Both are true and Reason correctly explains Assertion
+B. Both are true but Reason does not explain Assertion
+C. Assertion true, Reason false
+D. Assertion false, Reason true</p>
+<div class="answer-box">Answer: A</div>
+<div class="pyq-tag">Question 13</div>
+<p>Which cloud-computing model provides ready-to-use software through the Internet?</p>
+<ul class="bullet-list"><li>A. IaaS
+B. PaaS
+C. SaaS
+D. LAN</li></ul>
+<div class="answer-box">Answer: C. SaaS</div>
+<div class="pyq-tag">Question 14</div>
+<p>Statement I: A worm necessarily requires a host file to spread.
+Statement II: A Trojan may appear to be legitimate software.</p>
+<p>A. Both statements are true
+B. Both statements are false
+C. Statement I true, Statement II false
+D. Statement I false, Statement II true</p>
+<div class="answer-box">Answer: D</div>
+<p class="explain">Explanation: Worm self-replicate कर सकता है; host file की requirement virus से अधिक associated है।</p>
+<div class="pyq-tag">Question 15</div>
+<p>Which is the most appropriate example of inclusive ICT?</p>
+<p>A. केवल high-resolution video देना
+B. सभी students के लिए एक ही complex interface
+C. Captions, transcripts and screen-reader-compatible content
+D. केवल English-language content</p>
+<div class="answer-box">Answer: C</div>
+</section>
+<section id="s36" class="topic-section">
+<div class="sec-head"><span class="sec-num">36</span><h2>One-Page Revision Capsule</h2></div>
+<ul class="bullet-list"><li>Core Internet Formula</li></ul>
+<p>Internet = Public network of networks
+Intranet = Private organisational network
+Extranet = Private network + authorised outsiders</p>
+<ul class="bullet-list"><li>Protocol Formula</li></ul>
+<div class="formula">SMTP → Send mail
+POP3/IMAP → Receive/access mail
+HTTP/HTTPS → Web
+FTP → Files
+DNS → Name to IP
+DHCP → Assign IP</div>
+<ul class="bullet-list"><li>Educational Initiatives</li></ul>
+<div class="formula">SWAYAM → MOOCs
+SWAYAM PRABHA → DTH
+NDLI → Digital Library
+Shodhganga → Thesis
+Shodhgangotri → Synopsis
+VIDWAN → Experts
+DIKSHA → School education
+NAD → Academic awards</div>
+<ul class="bullet-list"><li>MOOC Quadrants</li></ul>
+<div class="formula">Video → Reading → Resources → Self-assessment</div>
+<ul class="bullet-list"><li>Communication</li></ul>
+<p>Live Meet = Synchronous
+Recorded lecture/e-mail = Asynchronous
+Online + face-to-face = Blended
+Content before class + application in class = Flipped</p>
+<ul class="bullet-list"><li>Governance</li></ul>
+<div class="formula">ICT + Public Service + Transparency + Accountability = E-Governance</div>
+<ul class="bullet-list"><li>Final Exam Strategy</li></ul>
+<div class="formula">Term → Full Form → Function → Example → Similar-term distinction → Application</div>
+</section>
+      <div class="enroll-cta">
+        <div>
+          <h3 class="h-display">Join the Paper-1 Batch</h3>
+          <p>Course fee FREE — ₹500 registration &amp; academic/logistics contribution. Classes daily at 6:30 PM.</p>
+        </div>
+        <a href="enroll.html" class="btn-gold">✓ JOIN BATCH @ ₹500</a>
+      </div>
+    </div>
+  </div>
+</main>
+
+<!-- ================= FOOTER PLACEHOLDER : apna existing footer yahan paste karein ================= -->
+
+<script>
+(function(){
+  var links = document.querySelectorAll('.nav-link');
+  var sections = document.querySelectorAll('.topic-section');
+  function onScroll(){
+    var y = window.scrollY + 90;
+    var current = sections[0] && sections[0].id;
+    sections.forEach(function(s){ if (s.offsetTop <= y) current = s.id; });
+    links.forEach(function(l){ l.classList.toggle('active', l.getAttribute('href') === '#' + current); });
+  }
+  document.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+  links.forEach(function(l){
+    l.addEventListener('click', function(){
+      var box = document.getElementById('sidebar-toggle');
+      if (box) box.checked = false;
+    });
+  });
+})();
+</script>
+</body>
+</html>

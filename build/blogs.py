@@ -10,9 +10,9 @@ BLOGS = [
     "date": "2026-08-26",
     "readTime": "12 min read",
     "author": {
-      "name": "Er. R.P. Singh",
+      "name": "Dr. Shardool Sir",
       "role": "Founder, GS NET Academy",
-      "experience": "10+ Years Teaching Experience",
+      "experience": "14+ Years Teaching Experience",
       "note": "Guiding thousands of NET aspirants with clear concepts, smart strategies and result-oriented mentorship.",
       "photo": ""
     },
@@ -268,9 +268,9 @@ BLOGS = [
     "date": "2026-08-22",
     "readTime": "9 min read",
     "author": {
-      "name": "Er. R.P. Singh",
+      "name": "Dr. Shardool Sir",
       "role": "Founder, GS NET Academy",
-      "experience": "10+ Years Teaching Experience",
+      "experience": "14+ Years Teaching Experience",
       "note": "Guiding thousands of NET aspirants with clear concepts, smart strategies and result-oriented mentorship.",
       "photo": ""
     },
@@ -442,9 +442,9 @@ BLOGS = [
     "date": "2026-08-18",
     "readTime": "10 min read",
     "author": {
-      "name": "Er. R.P. Singh",
+      "name": "Dr. Shardool Sir",
       "role": "Founder, GS NET Academy",
-      "experience": "10+ Years Teaching Experience",
+      "experience": "14+ Years Teaching Experience",
       "note": "Guiding thousands of NET aspirants with clear concepts, smart strategies and result-oriented mentorship.",
       "photo": ""
     },
@@ -620,9 +620,9 @@ BLOGS = [
     "date": "2026-08-12",
     "readTime": "8 min read",
     "author": {
-      "name": "Er. R.P. Singh",
+      "name": "Dr. Shardool Sir",
       "role": "Founder, GS NET Academy",
-      "experience": "10+ Years Teaching Experience",
+      "experience": "14+ Years Teaching Experience",
       "note": "Guiding thousands of NET aspirants with clear concepts, smart strategies and result-oriented mentorship.",
       "photo": ""
     },
@@ -784,9 +784,9 @@ BLOGS = [
     "date": "2026-08-06",
     "readTime": "9 min read",
     "author": {
-      "name": "Er. R.P. Singh",
+      "name": "Dr. Shardool Sir",
       "role": "Founder, GS NET Academy",
-      "experience": "10+ Years Teaching Experience",
+      "experience": "14+ Years Teaching Experience",
       "note": "Guiding thousands of NET aspirants with clear concepts, smart strategies and result-oriented mentorship.",
       "photo": ""
     },

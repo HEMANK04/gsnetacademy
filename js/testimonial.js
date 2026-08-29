@@ -15,6 +15,11 @@
  * (the result rows already do). To use it on another row, just add that class
  * — or list your own selector in STRIPS below.
  *
+ * NOTE: Panels laid out as a CSS grid (e.g. the Results page photo grids,
+ * which use Tailwind's "grid grid-cols-…" classes) are intentionally left
+ * alone — they are meant to be a normal, static, multi-row gallery, not a
+ * scrolling strip. Only true single-row / flex strips get the marquee.
+ *
  * SPEED — pixels per second. Higher = faster.
  * ========================================================================= */
 
@@ -28,6 +33,13 @@
   var still = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   function setup(strip) {
+    /* Grid-based panels (like the Results photo galleries) are a static,
+       wrapping, multi-row layout — not a horizontal strip. Marqueeing them
+       would duplicate every image and try to "scroll" a grid that has no
+       horizontal overflow, which breaks the layout. Skip those entirely. */
+    var layout = window.getComputedStyle(strip).display;
+    if (layout.indexOf("grid") !== -1) return;
+
     var original = Array.prototype.slice.call(strip.children);
     if (original.length < 2) return;               // nothing to loop
 
