@@ -21,7 +21,7 @@
   + '.gs-pop{position:fixed;inset:0;z-index:9999;display:flex;align-items:center;justify-content:center;padding:16px;opacity:0;visibility:hidden;transition:opacity .28s ease,visibility .28s ease}'
   + '.gs-pop.is-open{opacity:1;visibility:visible}'
   + '.gs-pop__scrim{position:absolute;inset:0;background:rgba(6,15,30,.85);backdrop-filter:blur(4px)}'
-  + '.gs-pop__box{position:relative;width:100%;max-width:640px;max-height:calc(100vh - 32px);overflow-y:auto;border-radius:16px;background:#0B1B34;'
+  + '.gs-pop__box{position:relative;width:100%;max-width:500px;max-height:calc(100vh - 32px);overflow-y:auto;border-radius:16px;background:#0B1B34;'
   +   'box-shadow:0 24px 60px rgba(0,0,0,.5);transform:translateY(14px) scale(.97);transition:transform .3s cubic-bezier(.2,.8,.3,1);'
   +   '-webkit-overflow-scrolling:touch;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif; display:flex; flex-direction:column;'
   +   'scrollbar-width:none;-ms-overflow-style:none}'
