@@ -1,0 +1,706 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Comprehension | GS Net Academy</title>
+<meta name="description" content="Complete notes: comprehension levels, main idea, title, tone, purpose, inference, vocabulary in context, connectors &amp; verified practice passages.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@700;800&display=swap" rel="stylesheet">
+<style>
+:root{--navy-950:#0b1330;--navy-900:#101a3d;--navy-700:#33406b;--navy-500:#5b6690;--navy-100:#e7eaf5;--navy-50:#f4f6fc;--gold-400:#e8b74b;--gold-500:#d9a53a;--gold-600:#b9852a;--gold-50:#fdf6e7;--cream:#f8f5ee;--green:#1a7a4c;--orange:#c65b1f;}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{margin:0;font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:var(--cream);color:var(--navy-900);}
+.h-display{font-family:'Poppins',system-ui,sans-serif;font-weight:800;letter-spacing:-.01em;}
+a{text-decoration:none;color:inherit;}
+.container-x{max-width:1360px;margin:0 auto;padding:0 20px;}
+
+.topbar{background:var(--navy-950);color:#fff;padding:9px 0;font-size:12.5px;}
+.topbar .container-x{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;}
+.topbar .target{color:var(--gold-400);font-weight:700;}
+.topbar .right{display:flex;gap:20px;flex-wrap:wrap;color:rgba(255,255,255,.85);}
+
+.mainnav{background:var(--cream);padding:14px 0;border-bottom:1px solid rgba(16,26,61,.08);}
+.mainnav .container-x{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;}
+.brand{display:flex;align-items:center;gap:10px;}
+.brand-badge{width:42px;height:42px;border-radius:9px;background:var(--navy-950);color:var(--gold-400);display:flex;align-items:center;justify-content:center;font-family:'Poppins';font-weight:800;font-size:11px;text-align:center;line-height:1.1;}
+.brand-text .rank{color:var(--gold-600);font-weight:800;font-size:14px;}
+.brand-text .line{font-size:12.5px;color:var(--navy-500);}
+.nav-links{display:flex;gap:26px;font-size:14.5px;font-weight:600;color:var(--navy-900);flex-wrap:wrap;}
+.nav-cta{display:flex;gap:10px;align-items:center;}
+.btn{padding:9px 16px;border-radius:9px;font-size:13.5px;font-weight:700;border:1px solid rgba(16,26,61,.15);}
+.btn.demo{background:#fff;}
+.btn.join{background:var(--gold-400);color:var(--navy-950);border:none;}
+
+.hero{position:relative;background:var(--navy-950);color:#fff;overflow:hidden;}
+.hero:before{content:"";position:absolute;right:-120px;top:-140px;width:380px;height:380px;border-radius:50%;background:radial-gradient(circle,rgba(232,183,75,.25),transparent 70%);}
+.hero-inner{position:relative;padding:42px 0 34px;}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);padding:6px 14px;border-radius:999px;font-size:12.5px;font-weight:700;color:var(--gold-400);}
+.hero h1{font-size:clamp(26px,4vw,42px);margin:16px 0 8px;line-height:1.2;}
+.hero p{color:rgba(255,255,255,.78);max-width:700px;font-size:15px;line-height:1.6;margin:0;}
+.hero-tags{display:flex;gap:12px;margin-top:20px;flex-wrap:wrap;}
+.tag{border:1px solid rgba(255,255,255,.18);border-radius:9px;padding:8px 15px;font-size:12.8px;font-weight:700;color:#cdd2e3;display:flex;gap:7px;align-items:center;}
+.tag b{color:var(--gold-400);}
+
+.layout{display:grid;grid-template-columns:290px 1fr;gap:28px;padding:28px 0 60px;align-items:start;}
+@media (max-width:980px){.layout{grid-template-columns:1fr;}}
+
+.sidebar{position:sticky;top:16px;max-height:calc(100vh - 32px);overflow-y:auto;background:#fff;border:1px solid rgba(16,26,61,.08);border-radius:16px;padding:18px 14px;box-shadow:0 6px 24px rgba(16,26,61,.05);}
+.sidebar::-webkit-scrollbar{width:6px;}
+.sidebar::-webkit-scrollbar-thumb{background:#e2e6f2;border-radius:6px;}
+.sidebar-title{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.14em;color:var(--gold-600);padding:6px 10px 12px;}
+.nav-link{display:flex;align-items:flex-start;gap:10px;padding:9px 10px;border-radius:10px;font-size:13.3px;font-weight:600;color:var(--navy-700);line-height:1.35;cursor:pointer;border:none;background:none;width:100%;text-align:left;}
+.nav-link:hover{background:var(--navy-50);color:var(--navy-900);}
+.nav-link.active{background:var(--gold-50);color:var(--navy-900);}
+.nav-num{flex:none;width:22px;height:22px;border-radius:7px;background:var(--navy-50);color:var(--navy-500);font-size:11px;font-weight:800;display:grid;place-items:center;}
+.nav-link.active .nav-num{background:var(--gold-400);color:var(--navy-950);}
+
+.sb-divider{height:1px;background:rgba(16,26,61,.08);margin:14px 6px;}
+.sb-module{display:flex;align-items:center;gap:10px;padding:9px 10px;border-radius:10px;font-size:13px;color:var(--navy-500);margin-bottom:2px;}
+.sb-module.current{color:var(--gold-600);font-weight:700;background:var(--gold-50);}
+.sb-module .dot{width:6px;height:6px;border-radius:50%;background:var(--navy-100);flex:none;}
+.sb-module.current .dot{background:var(--gold-500);}
+
+#sidebar-toggle{display:none;}
+.mobile-bar{display:none;}
+@media (max-width:980px){
+  .mobile-bar{display:flex;align-items:center;justify-content:space-between;gap:10px;background:#fff;border:1px solid rgba(16,26,61,.1);border-radius:12px;padding:12px 14px;margin-bottom:6px;font-weight:800;font-size:13.5px;color:var(--navy-900);}
+  .sidebar{position:static;max-height:none;display:none;}
+  #sidebar-toggle:checked ~ .layout .sidebar{display:block;}
+}
+
+.content{min-width:0;}
+.topic-section{background:#fff;border:1px solid rgba(16,26,61,.08);border-radius:16px;padding:22px 22px 20px;margin-bottom:18px;scroll-margin-top:18px;}
+.sec-head{display:flex;align-items:center;gap:12px;margin-bottom:12px;}
+.sec-num{flex:none;width:34px;height:34px;border-radius:10px;background:var(--navy-950);color:var(--gold-400);font-weight:800;font-size:14px;display:grid;place-items:center;}
+.sec-head h2{margin:0;font-size:19px;font-weight:800;color:var(--navy-900);}
+.sec-head .hi{font-size:13px;color:var(--navy-500);font-weight:600;margin-left:4px;}
+.topic-section p{font-size:14.5px;line-height:1.75;color:var(--navy-700);margin:6px 0;}
+.topic-section h3{font-size:15.5px;font-weight:800;color:var(--navy-900);margin:16px 0 6px;}
+.bullet-list{margin:8px 0;padding:0;list-style:none;display:grid;gap:6px;}
+.bullet-list li{position:relative;padding-left:20px;font-size:14.3px;line-height:1.6;color:var(--navy-700);}
+.bullet-list li:before{content:"";position:absolute;left:2px;top:9px;width:6px;height:6px;border-radius:50%;background:var(--gold-500);}
+.formula{background:var(--navy-950);color:#fdeec2;font-weight:700;font-size:13.6px;padding:12px 16px;border-radius:10px;margin:10px 0;line-height:1.7;}
+.pyq-tag{display:inline-block;background:var(--gold-50);color:var(--gold-600);font-weight:800;font-size:12px;letter-spacing:.03em;padding:6px 12px;border-radius:8px;margin:14px 0 6px;}
+.answer-box{background:#eefaf2;border:1px solid #bfe8cc;color:var(--green);font-weight:700;font-size:13.6px;padding:8px 14px;border-radius:9px;margin:6px 0;}
+.explain{background:var(--navy-50);border-radius:9px;padding:8px 14px;font-size:13.6px;color:var(--navy-700);}
+.example{background:#fff;border:1px dashed var(--gold-500);border-radius:9px;padding:10px 14px;font-size:13.8px;color:var(--navy-700);margin:8px 0;}
+.example .lbl{color:var(--gold-600);font-weight:800;font-size:11.5px;text-transform:uppercase;letter-spacing:.05em;margin-bottom:4px;display:block;}
+.trap{background:#fdf0e4;border-left:4px solid var(--orange);border-radius:9px;padding:10px 14px;font-size:13.8px;color:#6b3a17;margin:8px 0;}
+.trap .lbl{color:var(--orange);font-weight:800;font-size:11.5px;text-transform:uppercase;letter-spacing:.05em;margin-bottom:4px;display:block;}
+.mini-table{width:100%;border-collapse:collapse;margin:10px 0;font-size:13.3px;}
+.mini-table th{background:var(--navy-950);color:var(--gold-400);text-align:left;padding:8px 12px;font-weight:700;}
+.mini-table td{padding:8px 12px;border-bottom:1px solid var(--navy-100);color:var(--navy-700);}
+.mini-table tr:nth-child(even) td{background:var(--navy-50);}
+
+.enroll-cta{position:relative;overflow:hidden;background:var(--navy-950);color:#fff;border-radius:16px;padding:26px 26px;margin-top:20px;display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between;}
+.enroll-cta:before{content:"";position:absolute;right:-60px;top:-60px;width:200px;height:200px;border-radius:50%;background:radial-gradient(circle,rgba(232,183,75,.25),transparent 70%);}
+.enroll-cta h3{margin:0 0 4px;font-size:20px;}
+.enroll-cta p{margin:0;color:rgba(255,255,255,.75);font-size:13.5px;max-width:480px;}
+.btn-gold{position:relative;background:var(--gold-400);color:var(--navy-950);font-weight:800;padding:11px 22px;border-radius:10px;font-size:13.5px;white-space:nowrap;}
+.footer-note{text-align:center;color:var(--navy-500);font-size:13px;margin-top:20px;}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="container-x">
+    <span class="target">◎ Target December 2026 Exam — Paper-I Batch Started 16 August 2026</span>
+    <div class="right">
+      <span>📞 +91 9266511505</span>
+      <span>📞 +91 9810845327</span>
+      <span>✉ gsnetacademy@gmail.com</span>
+      <span>💬 chat us</span>
+    </div>
+  </div>
+</div>
+
+<nav class="mainnav">
+  <div class="container-x">
+    <div class="brand">
+      <div class="brand-badge">GS<br>Net</div>
+      <div class="brand-text">
+        <div class="rank">#1 A Premier institute for</div>
+        <div class="line">UGC NET Paper-1.</div>
+      </div>
+    </div>
+    <div class="nav-links">
+      <a href="#">UGC NET Paper-I</a>
+      <a href="#">Tutorials</a>
+      <a href="#">Notes</a>
+      <a href="#">Blog</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </div>
+    <div class="nav-cta">
+      <a class="btn demo" href="#">🔒 Exam Portal</a>
+      <a class="btn demo" href="#">Demo</a>
+      <a class="btn join" href="#">Join Now</a>
+    </div>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="container-x hero-inner">
+    <span class="eyebrow">✦ Unit III · Comprehension</span>
+    <h1 class="h-display">Unit–III: Comprehension</h1>
+    <p>UGC NET/JRF &amp; Assistant Professor Paper-1 — December 2026. Reading, reasoning, interpretation and inference — levels of comprehension, main idea, title, tone, purpose, vocabulary in context and practice passages.</p>
+    <div class="hero-tags">
+      <div class="tag">📘 <b>24</b> Sections</div>
+      <div class="tag">📝 <b>10</b> Practice Questions</div>
+      <div class="tag">🎯 <b>2</b> Model Passages</div>
+    </div>
+  </div>
+</section>
+
+<main class="container-x">
+  <input type="checkbox" id="sidebar-toggle">
+  <label for="sidebar-toggle" class="mobile-bar">
+    <span>📑 On this page</span>
+    <span>☰ Menu</span>
+  </label>
+
+  <div class="layout">
+    <aside class="sidebar">
+      <p class="sidebar-title">On this page</p>
+      <nav class="nav-list">
+        <a href="/tutorials/comprehension/comprehension/comprehension-का-अर्थ" class="nav-link"><span class="nav-num">1</span>Comprehension का अर्थ</a>
+        <a href="/tutorials/comprehension/comprehension/comprehension-में-क्या-जाँचा-जाता-है" class="nav-link"><span class="nav-num">2</span>Comprehension में क्या जाँचा जाता है</a>
+        <a href="/tutorials/comprehension/comprehension/तीन-levels-of-comprehension" class="nav-link"><span class="nav-num">3</span>तीन Levels of Comprehension</a>
+        <a href="/tutorials/comprehension/comprehension/passage-के-प्रमुख-components" class="nav-link"><span class="nav-num">4</span>Passage के प्रमुख Components</a>
+        <a href="/tutorials/comprehension/comprehension/main-idea-कैसे-पहचानें" class="nav-link"><span class="nav-num">5</span>Main Idea कैसे पहचानें</a>
+        <a href="/tutorials/comprehension/comprehension/suitable-title-कैसे-चुनें" class="nav-link"><span class="nav-num">6</span>Suitable Title कैसे चुनें</a>
+        <a href="/tutorials/comprehension/comprehension/author-purpose" class="nav-link"><span class="nav-num">7</span>Author's Purpose</a>
+        <a href="/tutorials/comprehension/comprehension/author-tone" class="nav-link"><span class="nav-num">8</span>Author's Tone</a>
+        <a href="/tutorials/comprehension/comprehension/fact-opinion-और-inference" class="nav-link"><span class="nav-num">9</span>Fact, Opinion और Inference</a>
+        <a href="/tutorials/comprehension/comprehension/vocabulary-in-context" class="nav-link"><span class="nav-num">10</span>Vocabulary in Context</a>
+        <a href="/tutorials/comprehension/comprehension/pronoun-reference" class="nav-link"><span class="nav-num">11</span>Pronoun Reference</a>
+        <a href="/tutorials/comprehension/comprehension/connectors-और-उनका-अर्थ" class="nav-link"><span class="nav-num">12</span>Connectors और उनका अर्थ</a>
+        <a href="/tutorials/comprehension/comprehension/प्रकार-के-questions" class="nav-link"><span class="nav-num">13</span>प्रकार के Questions</a>
+        <a href="/tutorials/comprehension/comprehension/सही-answer-चुनने-की-strategy" class="nav-link"><span class="nav-num">14</span>सही Answer चुनने की Strategy</a>
+        <a href="/tutorials/comprehension/comprehension/wrong-options-के-common-patterns" class="nav-link"><span class="nav-num">15</span>Wrong Options के Common Patterns</a>
+        <a href="/tutorials/comprehension/comprehension/Inference-के-नियम" class="nav-link"><span class="nav-num">16</span>Inference के नियम</a>
+        <a href="/tutorials/comprehension/comprehension/negative-questions" class="nav-link"><span class="nav-num">17</span>Negative Questions</a>
+        <a href="/tutorials/comprehension/comprehension/Time-management-strategy" class="nav-link"><span class="nav-num">18</span>Time-Management Strategy</a>
+        <a href="/tutorials/comprehension/comprehension/common-mistakes" class="nav-link"><span class="nav-num">19</span>Common Mistakes</a>
+        <a href="/tutorials/comprehension/comprehension/important-exam-points" class="nav-link"><span class="nav-num">20</span>Important Exam Points</a>
+        <a href="/tutorials/comprehension/comprehension/model-passage-for-UGC-NET-paper-1" class="nav-link"><span class="nav-num">21</span>Model Passage for UGC NET Paper-1</a>
+        <a href="/tutorials/comprehension/comprehension/advanced-practice-passage" class="nav-link"><span class="nav-num">22</span>Advanced Practice Passage</a>
+        <a href="/tutorials/comprehension/comprehension/december-2026-expected-question-patterns" class="nav-link"><span class="nav-num">23</span>December 2026 Expected Question Patterns</a>
+        <a href="/tutorials/comprehension/comprehension/quick-revision-table" class="nav-link"><span class="nav-num">24</span>Quick Revision Table</a>
+      </nav>
+
+      <div class="sb-divider"></div>
+      <p class="sidebar-title">Paper-1 Units</p>
+      <div class="sb-module"><span class="dot"></span> Unit 2 · Research Aptitude</div>
+      <div class="sb-module current"><span class="dot"></span> Unit 3 · Comprehension</div>
+      <div class="sb-module"><span class="dot"></span> Unit 4 · Communication</div>
+      <div class="sb-module"><span class="dot"></span> Unit 9 · People, Development &amp; Environment</div>
+    </aside>
+
+    <div class="content">
+
+      <section id="s1" class="topic-section">
+        <div class="sec-head"><span class="sec-num">1</span><h2>Comprehension का अर्थ <span class="hi">बोधगम्यता / अपठित गद्यांश</span></h2></div>
+        <p>UGC NET Paper–1 में एक passage दिया जाता है और उसके आधार पर questions पूछे जाते हैं। इसका उद्देश्य केवल English vocabulary जाँचना नहीं, बल्कि candidate की <b>reading, reasoning, interpretation और inference ability</b> का परीक्षण करना है।</p>
+        <div class="formula">Comprehension = Reading + Understanding + Interpretation + Inference</div>
+        <p><b>Comprehension</b> का अर्थ है — दिए गए passage को ध्यानपूर्वक पढ़कर:</p>
+        <ul class="bullet-list">
+          <li>Central idea समझना</li>
+          <li>Important facts पहचानना</li>
+          <li>Author का argument समझना</li>
+          <li>Stated और implied meaning में अंतर करना</li>
+          <li>Logical inference निकालना</li>
+          <li>Author का tone और purpose पहचानना</li>
+          <li>Passage-based answer चुनना</li>
+        </ul>
+        <div class="trap"><span class="lbl">Exam Rule</span>Answer अपने personal knowledge से नहीं, केवल passage में उपलब्ध information और logically supported inference से देना है।</div>
+      </section>
+
+      <section id="s2" class="topic-section">
+        <div class="sec-head"><span class="sec-num">2</span><h2>Comprehension में क्या जाँचा जाता है?</h2></div>
+        <table class="mini-table">
+          <tr><th>Ability</th><th>अर्थ</th></tr>
+          <tr><td>Literal comprehension</td><td>Passage में directly stated information</td></tr>
+          <tr><td>Interpretative comprehension</td><td>Ideas का meaning और relationship</td></tr>
+          <tr><td>Inferential comprehension</td><td>Information से logical conclusion</td></tr>
+          <tr><td>Critical comprehension</td><td>Argument, assumption और evidence का evaluation</td></tr>
+          <tr><td>Vocabulary in context</td><td>Passage के context में शब्द का अर्थ</td></tr>
+          <tr><td>Structural comprehension</td><td>Paragraphs और ideas का organisation</td></tr>
+        </table>
+      </section>
+
+      <section id="s3" class="topic-section">
+        <div class="sec-head"><span class="sec-num">3</span><h2>तीन Levels of Comprehension</h2></div>
+
+        <h3>A. Literal Level — प्रत्यक्ष बोध</h3>
+        <p>इसमें answer passage में सीधे लिखा होता है।</p>
+        <p><b>Question Words:</b> According to the passage, The author states that, Which of the following is mentioned?, Passage के अनुसार, लेखक ने स्पष्ट रूप से क्या कहा है?</p>
+        <div class="example"><span class="lbl">Example</span>Passage: "Digital learning provides flexibility to learners." Question: Digital learning का कौन-सा benefit passage में mentioned है? Answer: Flexibility</div>
+        <div class="formula">Literal Question = Locate + Match</div>
+
+        <h3>B. Inferential Level — अनुमानात्मक बोध</h3>
+        <p>Answer directly नहीं लिखा होता, लेकिन passage की information से logically निकाला जा सकता है।</p>
+        <div class="example"><span class="lbl">Example</span>Passage: "Many students possess smartphones, but lack stable internet connectivity." Inference: केवल smartphone की availability digital access की guarantee नहीं है।</div>
+        <div class="formula">Inference = Passage Evidence + Logical Connection</div>
+        <div class="trap"><span class="lbl">Exam Trap</span>Inference: Passage से supported होना चाहिए। Possible imagination नहीं होना चाहिए। Extreme conclusion नहीं होना चाहिए।</div>
+
+        <h3>C. Critical/Evaluative Level — आलोचनात्मक बोध</h3>
+        <p>इसमें author के argument, evidence, assumption, tone या purpose का evaluation किया जाता है।</p>
+        <p><b>सामान्य Questions:</b> Author की मुख्य चिंता क्या है? Argument किस assumption पर आधारित है? कौन-सा evidence argument को strengthen करेगा? Author का tone क्या है? Passage का उद्देश्य क्या है?</p>
+      </section>
+
+      <section id="s4" class="topic-section">
+        <div class="sec-head"><span class="sec-num">4</span><h2>Passage के प्रमुख Components</h2></div>
+
+        <h3>Topic</h3>
+        <p>Passage broadly किस subject के बारे में है? उदाहरण: Online education, environment, research ethics, democracy।</p>
+
+        <h3>Central Idea / Main Idea</h3>
+        <p>Author topic के बारे में मुख्य रूप से क्या कहना चाहता है?</p>
+        <p><b>Difference:</b> Topic — Passage किस बारे में है? Main idea — Author उस topic के बारे में क्या कहना चाहता है?</p>
+        <div class="example"><span class="lbl">Example</span>Topic: Technology in education. Main idea: Technology तभी effective है जब उसे pedagogy और learner needs के साथ integrate किया जाए।</div>
+
+        <h3>Supporting Details</h3>
+        <p>Main idea को explain या support करने वाले: Facts, Examples, Reasons, Statistics, Comparisons, Illustrations।</p>
+
+        <h3>Argument</h3>
+        <p>Author द्वारा प्रस्तुत claim और उसके supporting reasons।</p>
+        <div class="formula">Argument = Claim + Reasons/Evidence</div>
+
+        <h3>Conclusion</h3>
+        <p>Author के reasoning से प्राप्त final position या judgement।</p>
+
+        <h3>Assumption</h3>
+        <p>ऐसा unstated belief जिस पर argument depend करता है।</p>
+      </section>
+
+      <section id="s5" class="topic-section">
+        <div class="sec-head"><span class="sec-num">5</span><h2>Main Idea कैसे पहचानें?</h2></div>
+        <p>Main idea सामान्यतः:</p>
+        <ul class="bullet-list">
+          <li>Passage के पूरे content को cover करती है।</li>
+          <li>बहुत broad या बहुत narrow नहीं होती।</li>
+          <li>अधिकांश paragraphs से संबंधित होती है।</li>
+          <li>Author के principal message को व्यक्त करती है।</li>
+        </ul>
+        <h3>सही Method</h3>
+        <ul class="bullet-list">
+          <li>प्रत्येक paragraph का one-line summary बनाइए।</li>
+          <li>Repeated concept पहचानिए।</li>
+          <li>Author का final message देखिए।</li>
+          <li>सभी paragraphs को cover करने वाला option चुनिए।</li>
+        </ul>
+        <div class="trap"><span class="lbl">Exam Trap</span>ऐसा option जो passage के केवल एक example को बताता है, सामान्यतः main idea नहीं होगा। Main Idea ≠ One Supporting Detail</div>
+      </section>
+
+      <section id="s6" class="topic-section">
+        <div class="sec-head"><span class="sec-num">6</span><h2>Suitable Title कैसे चुनें?</h2></div>
+        <p>एक अच्छा title:</p>
+        <ul class="bullet-list">
+          <li>Passage के central idea को represent करे</li>
+          <li>Concise हो</li>
+          <li>पूरे passage को cover करे</li>
+          <li>Neutral और accurate हो</li>
+          <li>किसी minor detail तक सीमित न हो</li>
+        </ul>
+        <div class="example"><span class="lbl">Example</span>यदि passage technology की availability और उसके meaningful educational integration दोनों की चर्चा करता है, तो — Weak title: "Computers in Schools". Better title: "Meaningful Integration of Technology in Education"</div>
+      </section>
+
+      <section id="s7" class="topic-section">
+        <div class="sec-head"><span class="sec-num">7</span><h2>Author's Purpose</h2></div>
+        <p>Author passage क्यों लिख रहा है?</p>
+        <table class="mini-table">
+          <tr><th>Purpose</th><th>संकेत</th></tr>
+          <tr><td>To inform</td><td>Facts और explanation देना</td></tr>
+          <tr><td>To explain</td><td>Process या relationship समझाना</td></tr>
+          <tr><td>To argue/persuade</td><td>किसी position के पक्ष में reasons देना</td></tr>
+          <tr><td>To criticise</td><td>Weakness या problem दिखाना</td></tr>
+          <tr><td>To compare</td><td>Similarities/differences प्रस्तुत करना</td></tr>
+          <tr><td>To analyse</td><td>Causes, effects और components examine करना</td></tr>
+          <tr><td>To warn</td><td>Possible danger की ओर ध्यान दिलाना</td></tr>
+          <tr><td>To recommend</td><td>Solution या action suggest करना</td></tr>
+        </table>
+        <div class="trap"><span class="lbl">Exam Trap</span>Informative passage में facts होते हैं; persuasive passage reader को किसी position की ओर convince करता है।</div>
+      </section>
+
+      <section id="s8" class="topic-section">
+        <div class="sec-head"><span class="sec-num">8</span><h2>Author's Tone</h2></div>
+        <p><b>Tone</b> author का subject के प्रति attitude है।</p>
+        <table class="mini-table">
+          <tr><th>Tone</th><th>अर्थ</th></tr>
+          <tr><td>Objective</td><td>निष्पक्ष, factual</td></tr>
+          <tr><td>Analytical</td><td>विश्लेषणात्मक</td></tr>
+          <tr><td>Critical</td><td>कमियों का परीक्षण करने वाला</td></tr>
+          <tr><td>Optimistic</td><td>आशावादी</td></tr>
+          <tr><td>Pessimistic</td><td>निराशावादी</td></tr>
+          <tr><td>Concerned</td><td>चिंतित</td></tr>
+          <tr><td>Cautious</td><td>सावधान</td></tr>
+          <tr><td>Skeptical</td><td>संदेहात्मक</td></tr>
+          <tr><td>Persuasive</td><td>मनाने वाला</td></tr>
+          <tr><td>Appreciative</td><td>प्रशंसात्मक</td></tr>
+          <tr><td>Satirical</td><td>व्यंग्यात्मक</td></tr>
+          <tr><td>Neutral</td><td>तटस्थ</td></tr>
+          <tr><td>Didactic</td><td>शिक्षाप्रद</td></tr>
+          <tr><td>Reflective</td><td>चिंतनशील</td></tr>
+        </table>
+        <p><b>Tone पहचानने के संकेत:</b> Adjectives और evaluative words, Positive/negative expressions, Author recommendations, Certainty या doubt, Criticism या appreciation।</p>
+        <div class="trap"><span class="lbl">Exam Trap</span>यदि author balanced advantages और limitations प्रस्तुत करता है, तो tone सामान्यतः <b>analytical/objective</b> होगी, emotional या sarcastic नहीं।</div>
+      </section>
+
+      <section id="s9" class="topic-section">
+        <div class="sec-head"><span class="sec-num">9</span><h2>Fact, Opinion और Inference</h2></div>
+        <p><b>Fact:</b> Passage में verifiable information या directly stated claim।</p>
+        <p><b>Opinion:</b> Author या किसी व्यक्ति का judgement, belief या evaluation।</p>
+        <p><b>Inference:</b> Passage के evidence से निकाला गया logical conclusion।</p>
+        <div class="example"><span class="lbl">Example</span>Passage: "Survey में 70% students ने online resources का उपयोग किया, लेकिन rural students ने connectivity problems report कीं।"<br>Fact: 70% students ने online resources उपयोग किए।<br>Opinion: Online education सबसे अच्छा learning mode है।<br>Inference: Digital participation अलग-अलग groups में unequal हो सकती है।</div>
+      </section>
+
+      <section id="s10" class="topic-section">
+        <div class="sec-head"><span class="sec-num">10</span><h2>Vocabulary in Context</h2></div>
+        <p>Question किसी word का dictionary meaning नहीं, passage में उसका contextual meaning पूछता है।</p>
+        <h3>सही Approach</h3>
+        <ul class="bullet-list">
+          <li>Word वाली पूरी sentence पढ़ें।</li>
+          <li>उसके पहले और बाद की sentences देखें।</li>
+          <li>Word को प्रत्येक option से replace करें।</li>
+          <li>जो meaning context में fit हो, उसे चुनें।</li>
+        </ul>
+        <p><b>Context Clues:</b> Definition clue, Synonym clue, Antonym/contrast clue, Example clue, Cause-effect clue, General sense of paragraph।</p>
+        <div class="example"><span class="lbl">Example</span>"The policy was described as 'ambitious,' but its implementation remained limited." यहाँ "ambitious" का अर्थ केवल difficult नहीं, बल्कि <b>large goals वाली</b> policy है।</div>
+      </section>
+
+      <section id="s11" class="topic-section">
+        <div class="sec-head"><span class="sec-num">11</span><h2>Pronoun Reference</h2></div>
+        <p>Questions पूछ सकते हैं कि It, They, This, These, Such, Former, Latter किस noun या idea को refer करते हैं।</p>
+        <h3>Rule</h3>
+        <p>Pronoun का nearest noun हमेशा answer नहीं होता। ऐसा noun चुनें जो:</p>
+        <ul class="bullet-list">
+          <li>Grammatically match करे</li>
+          <li>Singular/plural match करे</li>
+          <li>Sentence के meaning में fit हो</li>
+        </ul>
+      </section>
+
+      <section id="s12" class="topic-section">
+        <div class="sec-head"><span class="sec-num">12</span><h2>Connectors और उनका अर्थ</h2></div>
+        <p>Connectors argument की direction बताते हैं।</p>
+        <table class="mini-table">
+          <tr><th>Connector</th><th>Function</th></tr>
+          <tr><td>However, but, although</td><td>Contrast</td></tr>
+          <tr><td>Therefore, thus, hence</td><td>Conclusion/result</td></tr>
+          <tr><td>Because, since</td><td>Reason</td></tr>
+          <tr><td>For example, for instance</td><td>Illustration</td></tr>
+          <tr><td>Moreover, furthermore</td><td>Additional support</td></tr>
+          <tr><td>On the contrary</td><td>Opposition</td></tr>
+          <tr><td>Similarly, likewise</td><td>Similarity</td></tr>
+          <tr><td>Consequently</td><td>Result</td></tr>
+          <tr><td>Nevertheless</td><td>Contrast के बावजूद</td></tr>
+          <tr><td>In other words</td><td>Restatement</td></tr>
+        </table>
+        <div class="trap"><span class="lbl">Exam Strategy</span>Connector बदलते ही argument की direction बदल सकती है। "However" के बाद आने वाला idea author की important qualification या contrast हो सकता है।</div>
+      </section>
+
+      <section id="s13" class="topic-section">
+        <div class="sec-head"><span class="sec-num">13</span><h2>प्रकार के Questions</h2></div>
+        <ul class="bullet-list">
+          <li><b>Direct Fact Question:</b> Answer directly passage में उपलब्ध।</li>
+          <li><b>Main Idea Question:</b> Whole passage का central message।</li>
+          <li><b>Title Question:</b> Passage के लिए appropriate heading।</li>
+          <li><b>Inference Question:</b> Evidence से logically supported conclusion।</li>
+          <li><b>Author's Tone:</b> Author का attitude।</li>
+          <li><b>Author's Purpose:</b> Passage लिखने का उद्देश्य।</li>
+          <li><b>Vocabulary Question:</b> Contextual meaning या opposite।</li>
+          <li><b>Statement Verification:</b> कौन-सा statement true/false/not mentioned है?</li>
+          <li><b>Assumption Question:</b> Argument के पीछे unstated belief।</li>
+          <li><b>Application Question:</b> Passage का principle नई situation पर apply करना।</li>
+        </ul>
+      </section>
+
+      <section id="s14" class="topic-section">
+        <div class="sec-head"><span class="sec-num">14</span><h2>सही Answer चुनने की GS Net Academy Strategy</h2></div>
+        <h3>Step 1: Questions को जल्दी Scan करें</h3>
+        <p>पहले questions देखकर जानें कि किन चीजों पर ध्यान देना है: Main idea, Fact, Word meaning, Tone, Inference। सभी options को deeply पढ़ने में शुरुआत में समय न गँवाएँ।</p>
+        <h3>Step 2: Passage की First Reading</h3>
+        <p>Passage पढ़ते समय पहचानें: Topic, Author का central claim, Paragraph का function, Contrast words, Conclusion words।</p>
+        <h3>Step 3: Paragraph Mapping</h3>
+        <p>प्रत्येक paragraph का 3–5 शब्दों में mental label बनाएं।</p>
+        <div class="example"><span class="lbl">Example</span>P1: Technology का promise · P2: Access inequality · P3: Teacher training · P4: Balanced conclusion</div>
+        <h3>Step 4: Direct Questions पहले</h3>
+        <p>Direct facts और vocabulary questions पहले solve करें।</p>
+        <h3>Step 5: Main Idea और Inference बाद में</h3>
+        <p>पूरे passage की understanding के बाद solve करें।</p>
+        <h3>Step 6: Evidence Verification</h3>
+        <p>Option चुनने से पहले स्वयं पूछें: "इस answer का evidence passage में कहाँ है?"</p>
+        <h3>Step 7: Elimination</h3>
+        <p>गलत options को eliminate करें: Passage से बाहर, Opposite meaning, Partly correct, Too broad, Too narrow, Extreme/absolute, Personal opinion।</p>
+      </section>
+
+      <section id="s15" class="topic-section">
+        <div class="sec-head"><span class="sec-num">15</span><h2>Wrong Options के Common Patterns</h2></div>
+        <h3>Out of Scope</h3>
+        <p>Statement logically सही हो सकती है, लेकिन passage में discussed नहीं है।</p>
+        <h3>Extreme Option</h3>
+        <p>Words: Always, Never, Completely, Only, All, None, Entirely, Impossible। Passage moderate language उपयोग करता है, लेकिन option उसे absolute बना देता है।</p>
+        <div class="example"><span class="lbl">Example</span>Passage: "Technology can improve access under suitable conditions." Wrong option: "Technology always guarantees equal access."</div>
+        <h3>Half-True Option</h3>
+        <p>Option का एक भाग सही, दूसरा गलत।</p>
+        <h3>Reversed Relationship</h3>
+        <p>Cause को effect और effect को cause बना देना।</p>
+        <h3>Distorted Detail</h3>
+        <p>Passage के शब्द उपयोग करके meaning बदल देना।</p>
+        <h3>True but Not Mentioned</h3>
+        <p>General knowledge के अनुसार सही, लेकिन passage-supported नहीं।</p>
+        <h3>Too Narrow</h3>
+        <p>केवल एक example को entire passage का main idea बनाना।</p>
+        <h3>Too Broad</h3>
+        <p>Passage की सीमा से बाहर generalisation करना।</p>
+      </section>
+
+      <section id="s16" class="topic-section">
+        <div class="sec-head"><span class="sec-num">16</span><h2>Inference के नियम</h2></div>
+        <p><b>Valid inference:</b></p>
+        <ul class="bullet-list">
+          <li>Passage के evidence से निकलती हो</li>
+          <li>Necessary या highly supported हो</li>
+          <li>Author के argument से consistent हो</li>
+          <li>नई unsupported information introduce न करे</li>
+        </ul>
+        <p><b>Invalid inference:</b></p>
+        <ul class="bullet-list">
+          <li>केवल possible हो</li>
+          <li>Personal knowledge पर आधारित हो</li>
+          <li>Emotional assumption हो</li>
+          <li>Absolute generalisation हो</li>
+        </ul>
+        <div class="formula">Possible ≠ Necessary<br>Imaginable ≠ Inferable</div>
+      </section>
+
+      <section id="s17" class="topic-section">
+        <div class="sec-head"><span class="sec-num">17</span><h2>Negative Questions</h2></div>
+        <p>Questions में निम्न words को carefully mark करें: NOT, EXCEPT, INCORRECT, FALSE, LEAST LIKELY, Cannot be inferred।</p>
+        <h3>Strategy</h3>
+        <ul class="bullet-list">
+          <li>Negative word mentally circle करें।</li>
+          <li>प्रत्येक option को passage से verify करें।</li>
+          <li>तीन correct statements मिलने पर शेष option चुनें।</li>
+          <li>Final answer mark करने से पहले question दोबारा पढ़ें।</li>
+        </ul>
+      </section>
+
+      <section id="s18" class="topic-section">
+        <div class="sec-head"><span class="sec-num">18</span><h2>Time-Management Strategy</h2></div>
+        <p>UGC NET comprehension में passage पर जरूरत से अधिक समय नहीं लगाना चाहिए।</p>
+        <h3>Suggested Approach</h3>
+        <ul class="bullet-list">
+          <li>Questions scan: लगभग 30–45 seconds</li>
+          <li>Passage reading: 2–3 minutes</li>
+          <li>Questions solving: 3–4 minutes</li>
+          <li>Final review: 30 seconds</li>
+        </ul>
+        <p>यह fixed rule नहीं है; passage की length और complexity के अनुसार adjust करें।</p>
+        <div class="trap"><span class="lbl">Golden Rule</span>Passage को बार-बार पूरा पढ़ने के बजाय relevant paragraph पर वापस जाएँ।</div>
+      </section>
+
+      <section id="s19" class="topic-section">
+        <div class="sec-head"><span class="sec-num">19</span><h2>Common Mistakes</h2></div>
+        <ul class="bullet-list">
+          <li>Personal knowledge से answer देना</li>
+          <li>Passage के बाहर inference निकालना</li>
+          <li>Main idea को supporting detail समझना</li>
+          <li>Extreme options चुनना</li>
+          <li>NOT/EXCEPT miss करना</li>
+          <li>Author और quoted person के views को एक मानना</li>
+          <li>Word का dictionary meaning चुनना, contextual नहीं</li>
+          <li>जल्दी पढ़कर connector ignore करना</li>
+          <li>Passage की exact line match होते ही option चुन लेना, जबकि meaning altered हो</li>
+          <li>सभी questions के लिए passage दोबारा पूरा पढ़ना</li>
+        </ul>
+      </section>
+
+      <section id="s20" class="topic-section">
+        <div class="sec-head"><span class="sec-num">20</span><h2>Important Exam Points</h2></div>
+        <ul class="bullet-list">
+          <li>Comprehension questions passage-dependent होते हैं।</li>
+          <li>Main idea पूरे passage को cover करती है।</li>
+          <li>Title concise और comprehensive होना चाहिए।</li>
+          <li>Inference passage से logically supported हो।</li>
+          <li>Fact और opinion अलग हैं।</li>
+          <li>Tone author का attitude है; purpose लिखने का उद्देश्य।</li>
+          <li>"According to passage" में outside knowledge उपयोग न करें।</li>
+          <li>Qualifying words — may, often, generally — को ignore न करें।</li>
+          <li>Absolute option moderate statement को distort कर सकता है।</li>
+          <li>Same words वाला option हमेशा correct नहीं होता।</li>
+        </ul>
+      </section>
+
+      <section id="s21" class="topic-section">
+        <div class="sec-head"><span class="sec-num">21</span><h2>Model Passage for UGC NET Paper–1</h2></div>
+        <p>निम्न passage पढ़कर Questions 1–5 के उत्तर दीजिए:</p>
+        <div class="example"><span class="lbl">Passage</span>Digital technology has expanded access to educational resources, but access alone does not ensure meaningful learning. A student may possess a smartphone and still be unable to participate effectively because of unreliable connectivity, limited digital literacy or unsuitable content. Similarly, an institution may install smart classrooms without adequately preparing teachers to integrate technology with pedagogy.<br><br>Technology becomes educationally valuable when it serves clearly defined learning objectives. Its effectiveness depends not only on infrastructure but also on teacher competence, accessible content, learner support and appropriate assessment. Therefore, the success of digital education should not be measured merely by the number of devices distributed or platforms created.<br><br>Digital education should also be evaluated from the perspective of equity. If technological innovation benefits only learners with stable connectivity, suitable devices and strong digital skills, it may widen existing inequalities. The appropriate policy approach is thus neither to reject technology nor to treat it as an automatic solution. It is to integrate technology thoughtfully while addressing the social and educational conditions that influence its use.</div>
+
+        <div class="pyq-tag">Question 1</div>
+        <p>Passage का central idea क्या है?</p>
+        <p>A. Digital technology को traditional teaching पूरी तरह replace कर देना चाहिए। &nbsp; B. केवल devices distribute करने से educational equality सुनिश्चित हो जाती है। &nbsp; C. Technology तभी effective है जब उसे pedagogy, support और equity के साथ integrate किया जाए। &nbsp; D. Digital education केवल urban students के लिए उपयोगी है।</p>
+        <div class="answer-box">Answer: C</div>
+        <p class="explain">पूरा passage बताता है कि infrastructure पर्याप्त नहीं; technology को objectives, pedagogy, teacher competence, learner support और equity के साथ integrate करना आवश्यक है। Exam Trap: Option A और B absolute claims हैं, जिन्हें passage reject करता है।</p>
+
+        <div class="pyq-tag">Question 2</div>
+        <p>Passage के आधार पर कौन-सा inference valid है?</p>
+        <p>A. Smartphone रखने वाला प्रत्येक student digitally literate होता है। &nbsp; B. Smart classroom की availability effective teaching की guarantee नहीं है। &nbsp; C. Teacher competence का technology use से कोई संबंध नहीं है। &nbsp; D. Digital education inequalities को हमेशा समाप्त करती है।</p>
+        <div class="answer-box">Answer: B</div>
+        <p class="explain">Passage स्पष्ट करता है कि teacher preparation और pedagogical integration के बिना smart classroom effective learning सुनिश्चित नहीं करती।</p>
+
+        <div class="pyq-tag">Question 3</div>
+        <p>Author के अनुसार digital education की success को केवल किस आधार पर नहीं मापना चाहिए?</p>
+        <p>A. Learning objectives &nbsp; B. Learner support &nbsp; C. Devices और platforms की संख्या &nbsp; D. Teacher competence</p>
+        <div class="answer-box">Answer: C</div>
+        <p class="explain">Passage में directly कहा गया है कि devices distributed या platforms created की संख्या अकेली success का उचित measure नहीं है।</p>
+
+        <div class="pyq-tag">Question 4</div>
+        <p>Passage में "equity" का निकटतम अर्थ क्या है?</p>
+        <p>A. प्रत्येक learner को बिल्कुल समान device देना &nbsp; B. Learners की विभिन्न conditions को ध्यान में रखते हुए fair educational opportunity &nbsp; C. Technology का commercial expansion &nbsp; D. सभी learners के लिए एक ही teaching method</p>
+        <div class="answer-box">Answer: B</div>
+        <p class="explain">Context में equity का संबंध connectivity, devices और digital skills की inequalities को address करने से है।</p>
+
+        <div class="pyq-tag">Question 5</div>
+        <p>Author का tone मुख्यतः कैसा है?</p>
+        <p>A. Completely pessimistic &nbsp; B. Satirical &nbsp; C. Balanced and analytical &nbsp; D. Unconditionally enthusiastic</p>
+        <div class="answer-box">Answer: C. Balanced and analytical</div>
+        <p class="explain">Author technology को reject नहीं करता, लेकिन उसे automatic solution भी नहीं मानता। वह benefits और limitations दोनों का balanced analysis प्रस्तुत करता है।</p>
+      </section>
+
+      <section id="s22" class="topic-section">
+        <div class="sec-head"><span class="sec-num">22</span><h2>Advanced Practice Passage</h2></div>
+        <div class="example"><span class="lbl">Passage</span>Research is often described as a search for truth, but scientific knowledge is rarely final. A research finding is accepted not because it is beyond all possible doubt, but because it is supported by the best available evidence and has survived critical examination. New evidence, improved instruments or alternative explanations may require an earlier conclusion to be revised.<br><br>This provisional character of knowledge should not be confused with unreliability. Scientific claims become credible through transparent methods, replicable procedures, peer criticism and willingness to correct errors. In contrast, presenting conclusions as unquestionable may weaken rather than strengthen scientific inquiry because it discourages further testing.<br><br>A responsible researcher, therefore, does not conceal uncertainty. The researcher explains the limits of the data, distinguishes evidence from interpretation and avoids claims that go beyond the study. Intellectual humility is not a weakness of research; it is one of the conditions that allow knowledge to grow.</div>
+
+        <div class="pyq-tag">Question 6</div>
+        <p>Passage के अनुसार scientific knowledge को provisional क्यों माना गया है?</p>
+        <p>A. क्योंकि scientific methods हमेशा unreliable होते हैं। &nbsp; B. क्योंकि findings नए evidence के आधार पर revise हो सकती हैं। &nbsp; C. क्योंकि researchers किसी conclusion तक नहीं पहुँचते। &nbsp; D. क्योंकि peer review evidence को reject करता है।</p>
+        <div class="answer-box">Answer: B</div>
+        <p class="explain">Passage बताता है कि new evidence, improved instruments या alternative explanations previous conclusions में revision ला सकते हैं।</p>
+
+        <div class="pyq-tag">Question 7</div>
+        <p>Passage के अनुसार scientific claims credible कैसे बनते हैं?</p>
+        <p>A. उन्हें unquestionable घोषित करके &nbsp; B. Uncertainty को conceal करके &nbsp; C. Transparent methods, replication और critical examination से &nbsp; D. केवल famous researcher द्वारा प्रस्तुत किए जाने से</p>
+        <div class="answer-box">Answer: C</div>
+        <p class="explain">Credibility authority से नहीं, transparent method, replicability, criticism और correction से प्राप्त होती है।</p>
+
+        <div class="pyq-tag">Question 8</div>
+        <p>"Intellectual humility" का contextual meaning क्या है?</p>
+        <p>A. Researcher का अपने findings को महत्वहीन मानना &nbsp; B. Evidence की limitations स्वीकार करना और revision के लिए तैयार रहना &nbsp; C. सभी alternative explanations को गलत मानना &nbsp; D. Research findings को publish न करना</p>
+        <div class="answer-box">Answer: B</div>
+        <p class="explain">Passage में intellectual humility का संबंध uncertainty, limitations और correction की openness से है।</p>
+
+        <div class="pyq-tag">Question 9</div>
+        <p>निम्न में से कौन-सा passage से infer नहीं किया जा सकता?</p>
+        <p>A. Scientific conclusions future evidence से बदल सकते हैं। &nbsp; B. Uncertainty स्वीकार करना responsible research का हिस्सा है। &nbsp; C. Scientific credibility केवल researcher की reputation से निर्धारित होती है। &nbsp; D. Overgeneralisation से बचना चाहिए।</p>
+        <div class="answer-box">Answer: C</div>
+        <p class="explain">Passage authority-based credibility के बजाय method और evidence पर बल देता है।</p>
+
+        <div class="pyq-tag">Question 10</div>
+        <p>Passage के लिए सबसे appropriate title क्या होगा?</p>
+        <p>A. Scientific Knowledge, Evidence and Intellectual Humility &nbsp; B. Researchers Should Avoid Conclusions &nbsp; C. Why Peer Review Is Unnecessary &nbsp; D. Certainty as the Goal of All Research</p>
+        <div class="answer-box">Answer: A</div>
+        <p class="explain">यह title passage के तीन central ideas — scientific knowledge की provisional nature, evidence और intellectual humility — को cover करता है।</p>
+      </section>
+
+      <section id="s23" class="topic-section">
+        <div class="sec-head"><span class="sec-num">23</span><h2>December 2026 Expected Question Patterns</h2></div>
+        <p>निम्न question types की practice करें:</p>
+        <ul class="bullet-list">
+          <li>Passage की central idea</li>
+          <li>Most suitable title</li>
+          <li>Author's tone</li>
+          <li>Author's purpose</li>
+          <li>Directly stated fact</li>
+          <li>Valid/invalid inference</li>
+          <li>"Cannot be inferred" question</li>
+          <li>Word meaning in context</li>
+          <li>Pronoun reference</li>
+          <li>Statement consistent with passage</li>
+          <li>Author किस view की आलोचना करता है?</li>
+          <li>कौन-सा evidence argument को strengthen करेगा?</li>
+          <li>Paragraph का function</li>
+          <li>Cause–effect relationship</li>
+          <li>Assertion supported by passage</li>
+        </ul>
+      </section>
+
+      <section id="s24" class="topic-section">
+        <div class="sec-head"><span class="sec-num">24</span><h2>Quick Revision Table</h2></div>
+        <table class="mini-table">
+          <tr><th>Question Type</th><th>क्या करें?</th></tr>
+          <tr><td>Direct fact</td><td>Relevant line locate करें</td></tr>
+          <tr><td>Main idea</td><td>पूरे passage को cover करने वाला option</td></tr>
+          <tr><td>Title</td><td>Concise + comprehensive</td></tr>
+          <tr><td>Inference</td><td>Evidence से necessary conclusion</td></tr>
+          <tr><td>Tone</td><td>Author's attitude पहचानें</td></tr>
+          <tr><td>Purpose</td><td>Author क्यों लिख रहा है?</td></tr>
+          <tr><td>Vocabulary</td><td>Context के अनुसार अर्थ</td></tr>
+          <tr><td>NOT/EXCEPT</td><td>Negative word पहले mark करें</td></tr>
+          <tr><td>Assumption</td><td>Argument के लिए necessary unstated belief</td></tr>
+          <tr><td>Application</td><td>Passage principle को नई situation पर apply करें</td></tr>
+        </table>
+        <div class="formula">Master Formula<br>Read the Passage → Map the Paragraphs → Identify the Main Idea → Locate Evidence → Eliminate Distortions → Select the Best Answer</div>
+        <div class="trap"><span class="lbl">Final Exam Mantra</span>Passage में जो लिखा है वही आधार है; जो आपको पहले से पता है, वह नहीं।</div>
+      </section>
+
+      <div class="enroll-cta">
+        <div>
+          <h3 class="h-display">Join the Paper-1 Batch</h3>
+          <p>Course fee FREE — ₹500 registration &amp; academic/logistics contribution. Classes daily at 6:30 PM.</p>
+        </div>
+        <a href="enroll.html" class="btn-gold">✓ JOIN BATCH @ ₹500</a>
+      </div>
+
+      <p class="footer-note">GS Net Academy · Research Aptitude · Unit 2 · Target December 2026 Exam</p>
+    </div>
+  </div>
+</main>
+
+<script>
+(function(){
+  var links = document.querySelectorAll('.nav-link');
+  var sections = document.querySelectorAll('.topic-section');
+
+  function onScroll(){
+    var y = window.scrollY + 90;
+    var current = sections[0] && sections[0].id;
+    sections.forEach(function(s){ if (s.offsetTop <= y) current = s.id; });
+    links.forEach(function(l, i){
+      var sec = sections[i];
+      l.classList.toggle('active', sec && sec.id === current);
+    });
+  }
+
+  document.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+
+  links.forEach(function(l, index){
+    l.addEventListener('click', function(e){
+      e.preventDefault();
+
+      // Link ke same position wala section uthao (dono list same order me hain)
+      var target = sections[index];
+
+      if(target){
+        var offset = 90;
+        var position = target.getBoundingClientRect().top + window.pageYOffset - offset;
+        window.scrollTo({ top: position, behavior: 'smooth' });
+
+        links.forEach(function(item){ item.classList.remove('active'); });
+        l.classList.add('active');
+
+        history.pushState(null, '', l.getAttribute('href'));
+      }
+
+      var box = document.getElementById('sidebar-toggle');
+      if (box) box.checked = false;
+    });
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,1068 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Unit 6: Logical Reasoning — Full Notes | GS Net Academy</title>
+<meta name="description" content="Complete Unit 6 tutorial: arguments, deductive-inductive reasoning, categorical propositions, square of opposition, syllogism, fallacies, Indian logic, Hetvabhasa & PYQs.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@700;800&display=swap" rel="stylesheet">
+<style>
+:root{--navy-950:#0b1330;--navy-900:#101a3d;--navy-700:#33406b;--navy-500:#5b6690;--navy-100:#e7eaf5;--navy-50:#f4f6fc;--gold-400:#e8b74b;--gold-500:#d9a53a;--gold-600:#b9852a;--gold-50:#fdf6e7;--cream:#f8f5ee;--green:#1a7a4c;}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{margin:0;font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:var(--cream);color:var(--navy-900);}
+.h-display{font-family:'Poppins',system-ui,sans-serif;font-weight:800;letter-spacing:-.01em;}
+a{text-decoration:none;color:inherit;}
+.container-x{max-width:1360px;margin:0 auto;padding:0 20px;}
+.hero{position:relative;background:var(--navy-950);color:#fff;overflow:hidden;}
+.hero:before{content:"";position:absolute;right:-120px;top:-140px;width:380px;height:380px;border-radius:50%;background:radial-gradient(circle,rgba(232,183,75,.25),transparent 70%);}
+.hero-inner{position:relative;padding:38px 0 30px;}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);padding:6px 14px;border-radius:999px;font-size:12.5px;font-weight:700;color:var(--gold-400);}
+.hero h1{font-size:clamp(28px,4.2vw,46px);margin:16px 0 8px;}
+.hero p{color:rgba(255,255,255,.78);max-width:680px;font-size:15px;line-height:1.6;margin:0;}
+
+.layout{display:grid;grid-template-columns:290px 1fr;gap:28px;padding:28px 0 60px;align-items:start;}
+@media (max-width:980px){.layout{grid-template-columns:1fr;}}
+
+.sidebar{position:sticky;top:16px;max-height:calc(100vh - 32px);overflow-y:auto;background:#fff;border:1px solid rgba(16,26,61,.08);border-radius:16px;padding:18px 14px;box-shadow:0 6px 24px rgba(16,26,61,.05);}
+.sidebar::-webkit-scrollbar{width:6px;}
+.sidebar::-webkit-scrollbar-thumb{background:#e2e6f2;border-radius:6px;}
+.sidebar-title{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.14em;color:var(--gold-600);padding:6px 10px 12px;}
+.nav-link{display:flex;align-items:flex-start;gap:10px;padding:9px 10px;border-radius:10px;font-size:13.3px;font-weight:600;color:var(--navy-700);line-height:1.35;}
+.nav-link:hover{background:var(--navy-50);color:var(--navy-900);}
+.nav-link.active{background:var(--gold-50);color:var(--navy-900);}
+.nav-num{flex:none;width:22px;height:22px;border-radius:7px;background:var(--navy-50);color:var(--navy-500);font-size:11px;font-weight:800;display:grid;place-items:center;}
+.nav-link.active .nav-num{background:var(--gold-400);color:var(--navy-950);}
+
+#sidebar-toggle{display:none;}
+.mobile-bar{display:none;}
+@media (max-width:980px){
+  .mobile-bar{display:flex;align-items:center;justify-content:space-between;gap:10px;background:#fff;border:1px solid rgba(16,26,61,.1);border-radius:12px;padding:12px 14px;margin-bottom:6px;font-weight:800;font-size:13.5px;color:var(--navy-900);}
+  .sidebar{position:static;max-height:none;display:none;}
+  #sidebar-toggle:checked ~ .layout .sidebar{display:block;}
+}
+
+.content{min-width:0;}
+.topic-section{background:#fff;border:1px solid rgba(16,26,61,.08);border-radius:16px;padding:22px 22px 20px;margin-bottom:18px;scroll-margin-top:18px;}
+.sec-head{display:flex;align-items:center;gap:12px;margin-bottom:14px;}
+.sec-num{flex:none;width:34px;height:34px;border-radius:10px;background:var(--navy-950);color:var(--gold-400);font-weight:800;font-size:14px;display:grid;place-items:center;}
+.sec-head h2{margin:0;font-size:19px;font-weight:800;color:var(--navy-900);}
+.topic-section p{font-size:14.5px;line-height:1.75;color:var(--navy-700);margin:6px 0;}
+.bullet-list{margin:8px 0;padding:0;list-style:none;display:grid;gap:6px;}
+.bullet-list li{position:relative;padding-left:20px;font-size:14.3px;line-height:1.6;color:var(--navy-700);}
+.bullet-list li:before{content:"";position:absolute;left:2px;top:9px;width:6px;height:6px;border-radius:50%;background:var(--gold-500);}
+.formula{background:var(--navy-950);color:#fdeec2;font-weight:700;font-size:13.6px;padding:12px 16px;border-radius:10px;margin:10px 0;overflow-x:auto;white-space:nowrap;}
+.pyq-tag{display:inline-block;background:var(--gold-50);color:var(--gold-600);font-weight:800;font-size:12px;letter-spacing:.03em;padding:6px 12px;border-radius:8px;margin:14px 0 6px;}
+.answer-box{background:#eefaf2;border:1px solid #bfe8cc;color:var(--green);font-weight:700;font-size:13.6px;padding:8px 14px;border-radius:9px;margin:6px 0;}
+.explain{background:var(--navy-50);border-radius:9px;padding:8px 14px;font-size:13.6px;color:var(--navy-700);}
+.data-table{width:100%;border-collapse:collapse;margin:12px 0;font-size:13.6px;overflow-x:auto;display:block;}
+.data-table th,.data-table td{border:1px solid var(--navy-100);padding:8px 12px;text-align:left;color:var(--navy-700);white-space:normal;}
+.data-table th{background:var(--navy-50);color:var(--navy-900);font-weight:800;}
+.part-tag{display:inline-block;background:var(--navy-950);color:var(--gold-400);font-weight:800;font-size:11.5px;letter-spacing:.08em;padding:6px 12px;border-radius:8px;margin-bottom:12px;}
+
+.subtopic{padding:16px 0;border-top:1px dashed var(--navy-100);}
+.subtopic:first-of-type{border-top:none;padding-top:4px;}
+.subhead{display:flex;align-items:center;gap:10px;margin-bottom:8px;}
+.sub-num{flex:none;width:26px;height:26px;border-radius:8px;background:var(--gold-50);color:var(--gold-600);font-weight:800;font-size:12px;display:grid;place-items:center;}
+.subhead h3{margin:0;font-size:15.5px;font-weight:800;color:var(--navy-900);}
+
+.enroll-cta{position:relative;overflow:hidden;background:var(--navy-950);color:#fff;border-radius:16px;padding:26px 26px;margin-top:20px;display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between;}
+.enroll-cta:before{content:"";position:absolute;right:-60px;top:-60px;width:200px;height:200px;border-radius:50%;background:radial-gradient(circle,rgba(232,183,75,.25),transparent 70%);}
+.enroll-cta h3{margin:0 0 4px;font-size:20px;}
+.enroll-cta p{margin:0;color:rgba(255,255,255,.75);font-size:13.5px;max-width:480px;}
+.btn-gold{position:relative;background:var(--gold-400);color:var(--navy-950);font-weight:800;padding:11px 22px;border-radius:10px;font-size:13.5px;white-space:nowrap;}
+</style>
+</head>
+<body>
+
+<!-- ================= NAVBAR PLACEHOLDER : apna existing header/nav yahan paste karein ================= -->
+
+<section class="hero">
+  <div class="container-x hero-inner">
+    <span class="eyebrow">★ UGC NET Paper-I · Unit 6</span>
+    <h1 class="h-display">Unit 6: Logical Reasoning — Full Notes</h1>
+    <p>Complete Unit 6 tutorial: arguments, deductive-inductive reasoning, categorical propositions, square of opposition, syllogism, fallacies, Indian logic, Hetvābhāsa &amp; PYQs.</p>
+  </div>
+</section>
+
+<main class="container-x">
+  <input type="checkbox" id="sidebar-toggle">
+  <label for="sidebar-toggle" class="mobile-bar">
+    <span>📑 On this page</span>
+    <span>☰ Menu</span>
+  </label>
+
+  <div class="layout">
+    <aside class="sidebar">
+      <p class="sidebar-title">On this page</p>
+      <nav class="nav-list">
+<a href="/tutorials/logical-reasoning/logical-reasoning/unit-overview" class="nav-link">
+  <span class="nav-num">1</span>Unit Overview
+</a>
+<a href="/tutorials/logical-reasoning/logical-reasoning/arguments" class="nav-link">
+  <span class="nav-num">2</span>Arguments
+</a>
+<a href="/tutorials/logical-reasoning/logical-reasoning/deductive-and-inductive-reasoning" class="nav-link">
+  <span class="nav-num">3</span>Deductive and Inductive Reasoning
+</a>
+<a href="/tutorials/logical-reasoning/logical-reasoning/categorical-propositions" class="nav-link">
+  <span class="nav-num">4</span>Categorical Propositions
+</a>
+<a href="/tutorials/logical-reasoning/logical-reasoning/immediate-inferences" class="nav-link">
+  <span class="nav-num">5</span>Immediate Inferences
+</a>
+<a href="/tutorials/logical-reasoning/logical-reasoning/square-of-opposition" class="nav-link">
+  <span class="nav-num">6</span>Square of Opposition
+</a>
+<a href="/tutorials/logical-reasoning/logical-reasoning/categorical-syllogism" class="nav-link">
+  <span class="nav-num">7</span>Categorical Syllogism
+</a>
+<a href="/tutorials/logical-reasoning/logical-reasoning/formal-fallacies" class="nav-link">
+  <span class="nav-num">8</span>Formal Fallacies
+</a>
+<a href="/tutorials/logical-reasoning/logical-reasoning/informal-fallacies" class="nav-link">
+  <span class="nav-num">9</span>Informal Fallacies
+</a>
+<a href="/tutorials/logical-reasoning/logical-reasoning/uses-of-language" class="nav-link">
+  <span class="nav-num">10</span>Uses of Language
+</a>
+<a href="/tutorials/logical-reasoning/logical-reasoning/analogy" class="nav-link">
+  <span class="nav-num">11</span>Analogy
+</a>
+<a href="/tutorials/logical-reasoning/logical-reasoning/venn-diagrams" class="nav-link">
+  <span class="nav-num">12</span>Venn Diagrams
+</a>
+<a href="/tutorials/logical-reasoning/logical-reasoning/indian-logic" class="nav-link">
+  <span class="nav-num">13</span>Indian Logic
+</a>
+<a href="/tutorials/logical-reasoning/logical-reasoning/hetvābhāsa" class="nav-link">
+  <span class="nav-num">14</span>Hetvābhāsa
+</a>
+<a href="/tutorials/logical-reasoning/logical-reasoning/exam-traps" class="nav-link">
+  <span class="nav-num">15</span>Exam Traps
+</a>
+<a href="/tutorials/logical-reasoning/logical-reasoning/verified-previous-year-questions" class="nav-link">
+  <span class="nav-num">16</span>Verified Previous Year Questions
+</a>
+<a href="/tutorials/logical-reasoning/logical-reasoning/pyq-trend-analysis" class="nav-link">
+  <span class="nav-num">17</span>PYQ Trend Analysis
+</a>
+<a href="/tutorials/logical-reasoning/logical-reasoning/december-2026-expected-mcqs" class="nav-link">
+  <span class="nav-num">18</span>December 2026 Expected MCQs
+</a>
+<a href="/tutorials/logical-reasoning/logical-reasoning/one-page-revision" class="nav-link">
+  <span class="nav-num">19</span>One-Page Revision
+</a>
+      </nav>
+    </aside>
+
+    <div class="content">
+
+<!-- ============ PAGE 1: OVERVIEW ============ -->
+<section id="s1" class="topic-section">
+<div class="sec-head"><span class="sec-num">1</span><h2>Unit Overview</h2></div>
+<ul class="bullet-list"><li>तार्किक तर्कशक्ति</li><li>UGC NET/JRF एवं Assistant Professor Paper-1 | December 2026</li></ul>
+<p>यह unit दो प्रमुख परम्पराओं को cover करता है:</p>
+<ul class="bullet-list">
+<li><strong>Western/Aristotelian Logic</strong> — Arguments, categorical propositions, mood–figure, fallacies, analogy और Venn diagrams</li>
+<li><strong>Indian Logic</strong> — Pramāṇas, Anumāna, Vyāpti और Hetvābhāsa</li>
+</ul>
+<div class="formula">Logical Reasoning = Premises + Logical Relation + Conclusion</div>
+</section>
+
+<!-- ============ PAGE 2: ARGUMENTS (PART A) ============ -->
+<section id="s2" class="topic-section">
+<span class="part-tag">PART A: ARGUMENTS</span>
+<div class="sec-head"><span class="sec-num">2</span><h2>Arguments — तर्क एवं उसकी संरचना</h2></div>
+
+<div class="subtopic">
+<div class="subhead"><span class="sub-num">1</span><h3>Argument का अर्थ</h3></div>
+<p><strong>Argument</strong> statements का ऐसा समूह है जिसमें एक या अधिक statements किसी अन्य statement के समर्थन में प्रस्तुत किए जाते हैं।</p>
+<ul class="bullet-list"><li>Supporting statements = <strong>Premises</strong></li><li>Supported statement = <strong>Conclusion</strong></li></ul>
+<p><strong>Example:</strong> All researchers are critical thinkers. Ravi is a researcher. Therefore, Ravi is a critical thinker.</p>
+<ul class="bullet-list">
+<li>Major premise: All researchers are critical thinkers.</li>
+<li>Minor premise: Ravi is a researcher.</li>
+<li>Conclusion: Ravi is a critical thinker.</li>
+</ul>
+<div class="formula">Argument = Premise(s) → Conclusion</div>
+</div>
+
+<div class="subtopic">
+<div class="subhead"><span class="sub-num">2</span><h3>Argument और Explanation में अंतर</h3></div>
+<p><strong>Argument</strong> किसी conclusion को true मानने के लिए reasons देता है। <strong>Explanation</strong> पहले से accepted fact के होने का कारण बताती है।</p>
+<p><strong>Example (Argument):</strong> सड़क गीली है; इसलिए शायद वर्षा हुई है। यहाँ वर्षा conclusion है।</p>
+<p><strong>Example (Explanation):</strong> सड़क गीली है क्योंकि वर्षा हुई थी। यहाँ सड़क का गीला होना accepted fact है और वर्षा उसका explanation है।</p>
+</div>
+
+<div class="subtopic">
+<div class="subhead"><span class="sub-num">3</span><h3>Premise और Conclusion Indicators</h3></div>
+<p><strong>Premise Indicators:</strong> Because, Since, Given that, For, As indicated by, क्योंकि, चूँकि, इस आधार पर कि</p>
+<p><strong>Conclusion Indicators:</strong> Therefore, Hence, Thus, Consequently, It follows that, अतः, इसलिए, फलतः</p>
+<p><strong>Exam Trap:</strong> हर argument में indicator word होना आवश्यक नहीं है। Meaning और logical role देखकर premise–conclusion पहचानें।</p>
+</div>
+
+<div class="subtopic">
+<div class="subhead"><span class="sub-num">4</span><h3>Proposition और Sentence</h3></div>
+<p><strong>Proposition</strong> ऐसा statement है जिसे true या false माना जा सकता है। Example: "Delhi is the capital of India."</p>
+<p><strong>Proposition नहीं:</strong> प्रश्न (क्या आप तैयार हैं?), आदेश (दरवाजा बंद करो), विस्मय (कितना सुंदर दृश्य है!), इच्छा (काश मैं सफल हो जाऊँ!)</p>
+<p><strong>Exam Point:</strong> केवल declarative sentence सामान्यतः proposition express करती है।</p>
+</div>
+</section>
+
+<!-- ============ PAGE 3: DEDUCTIVE AND INDUCTIVE REASONING (PART B) ============ -->
+<section id="s3" class="topic-section">
+<span class="part-tag">PART B: DEDUCTIVE AND INDUCTIVE REASONING</span>
+<div class="sec-head"><span class="sec-num">3</span><h2>Deductive and Inductive Reasoning</h2></div>
+
+<div class="subtopic">
+<div class="subhead"><span class="sub-num">1</span><h3>Deductive Reasoning — निगमनात्मक तर्क</h3></div>
+<p>ऐसा argument जिसमें premises conclusion को logically necessary support देने का दावा करती हैं।</p>
+<div class="formula">General Rule → Specific Conclusion</div>
+<p><strong>Example:</strong> All mammals are warm-blooded. Whales are mammals. Therefore, whales are warm-blooded। यदि premises true हैं और logical form valid है, conclusion false नहीं हो सकता।</p>
+<p><strong>Evaluation:</strong> Deductive argument को evaluate किया जाता है: Valid/Invalid, Sound/Unsound</p>
+</div>
+
+<div class="subtopic">
+<div class="subhead"><span class="sub-num">2</span><h3>Validity और Soundness</h3></div>
+<p><strong>Valid Argument:</strong> यदि premises true हों तो conclusion का false होना impossible हो। Validity concerns logical form, not actual truth.</p>
+<p><strong>Valid लेकिन Unsound — Example:</strong> All birds are mammals. All dogs are birds. Therefore, all dogs are mammals. Logical form valid है, लेकिन premises false हैं; इसलिए argument unsound है।</p>
+<div class="formula">Sound = Valid Form + All True Premises</div>
+<table class="data-table">
+<tr><th>Concept</th><th>Meaning</th></tr>
+<tr><td>Truth/Falsity</td><td>Individual proposition की property</td></tr>
+<tr><td>Validity/Invalidity</td><td>Deductive argument की property</td></tr>
+<tr><td>Soundness</td><td>Valid argument + true premises</td></tr>
+</table>
+<p><strong>Exam Trap:</strong> Proposition valid/invalid नहीं होती; true/false होती है। Argument true/false नहीं, valid/invalid कहा जाता है।</p>
+</div>
+
+<div class="subtopic">
+<div class="subhead"><span class="sub-num">3</span><h3>Inductive Reasoning — आगमनात्मक तर्क</h3></div>
+<p>Premises conclusion को probable support देती हैं, logically necessary नहीं।</p>
+<div class="formula">Specific Observations → Probable Generalisation</div>
+<p><strong>Example:</strong> पिछले कई वर्षों में जून में वर्षा हुई है। इसलिए इस वर्ष भी जून में वर्षा होने की संभावना है।</p>
+<p><strong>Evaluation:</strong> Inductive argument: Strong/Weak, Cogent/Uncogent</p>
+<div class="formula">Cogent = Strong Inductive Argument + True Premises</div>
+</div>
+
+<div class="subtopic">
+<div class="subhead"><span class="sub-num">4</span><h3>Deductive बनाम Inductive</h3></div>
+<table class="data-table">
+<tr><th>आधार</th><th>Deductive</th><th>Inductive</th></tr>
+<tr><td>Support</td><td>Necessary</td><td>Probable</td></tr>
+<tr><td>Direction</td><td>अक्सर general से specific</td><td>अक्सर specific से general</td></tr>
+<tr><td>Evaluation</td><td>Valid/invalid</td><td>Strong/weak</td></tr>
+<tr><td>Good argument</td><td>Sound</td><td>Cogent</td></tr>
+<tr><td>New evidence</td><td>Valid form को नहीं बदलता</td><td>Strength को बदल सकता है</td></tr>
+<tr><td>Example</td><td>Syllogism</td><td>Generalisation/prediction</td></tr>
+</table>
+<p><strong>Most Important Trap:</strong> General-to-particular और particular-to-general useful indicators हैं, लेकिन final distinction support की <strong>necessity बनाम probability</strong> है।</p>
+</div>
+</section>
+
+<!-- ============ PAGE 4: CATEGORICAL PROPOSITIONS (PART C) ============ -->
+<section id="s4" class="topic-section">
+<span class="part-tag">PART C: CATEGORICAL PROPOSITIONS</span>
+<div class="sec-head"><span class="sec-num">4</span><h2>Categorical Propositions — निरपेक्ष वर्ग-वाक्य</h2></div>
+
+<div class="subtopic">
+<div class="subhead"><span class="sub-num">1</span><h3>Categorical Proposition</h3></div>
+<p>ऐसी proposition जो दो classes/categories — Subject और Predicate — के बीच inclusion या exclusion assert करती है।</p>
+<div class="formula">Standard Form = Quantifier + Subject Term + Copula + Predicate Term</div>
+<p><strong>Example:</strong> All teachers are learners. — Quantifier: All; Subject: Teachers; Copula: Are; Predicate: Learners</p>
+</div>
+
+<div class="subtopic">
+<div class="subhead"><span class="sub-num">2</span><h3>Quantity और Quality</h3></div>
+<p><strong>Quantity</strong> — Subject class के कितने members की बात की गई है? Universal (सभी), Particular (कुछ)</p>
+<p><strong>Quality</strong> — Proposition inclusion affirm करती है या deny? Affirmative, Negative</p>
+</div>
+
+<div class="subtopic">
+<div class="subhead"><span class="sub-num">3</span><h3>Four Standard Categorical Propositions: A–E–I–O</h3></div>
+<table class="data-table">
+<tr><th>Symbol</th><th>Standard Form</th><th>Quantity</th><th>Quality</th></tr>
+<tr><td>A</td><td>All S are P</td><td>Universal</td><td>Affirmative</td></tr>
+<tr><td>E</td><td>No S are P</td><td>Universal</td><td>Negative</td></tr>
+<tr><td>I</td><td>Some S are P</td><td>Particular</td><td>Affirmative</td></tr>
+<tr><td>O</td><td>Some S are not P</td><td>Particular</td><td>Negative</td></tr>
+</table>
+<div class="formula">A–I = Affirmative; E–O = Negative (AffIrmo: A,I | NEgO: E,O)</div>
+</div>
+
+<div class="subtopic">
+<div class="subhead"><span class="sub-num">4</span><h3>Distribution of Terms</h3></div>
+<p>कोई term distributed है जब proposition उस class के सभी members के बारे में कुछ कहती है।</p>
+<table class="data-table">
+<tr><th>Proposition</th><th>Subject</th><th>Predicate</th></tr>
+<tr><td>A: All S are P</td><td>Distributed</td><td>Undistributed</td></tr>
+<tr><td>E: No S are P</td><td>Distributed</td><td>Distributed</td></tr>
+<tr><td>I: Some S are P</td><td>Undistributed</td><td>Undistributed</td></tr>
+<tr><td>O: Some S are not P</td><td>Undistributed</td><td>Distributed</td></tr>
+</table>
+<div class="formula">A distributes S; E distributes both; I distributes none; O distributes P</div>
+<p><strong>Example:</strong> "All teachers are educated." — यह सभी teachers के बारे में कहता है, लेकिन सभी educated persons के बारे में नहीं। Teacher distributed; Educated undistributed।</p>
+</div>
+
+<div class="subtopic">
+<div class="subhead"><span class="sub-num">5</span><h3>Non-standard Statements को Standard Form में बदलना</h3></div>
+<p><strong>"Only A are B"</strong> → All B are A। Example: "Only graduates are eligible" → "All eligible persons are graduates."</p>
+<p><strong>Exam Trap:</strong> "Only" के बाद वाला class predicate बनता है।</p>
+<p><strong>"None but A are B"</strong> → All B are A</p>
+<p><strong>"Not all S are P"</strong> → Some S are not P — O proposition</p>
+<p><strong>"All S are not P"</strong> → No S are P — E proposition (natural-language ambiguity से बचते हुए standard categorical interpretation)</p>
+<p><strong>"Few S are P"</strong> → कम-से-कम यह Some S are P imply करता है; natural language में यह "some S are not P" भी suggest कर सकता है; exam में context/options देखें।</p>
+</div>
+</section>
+
+<!-- ============ PAGE 5: IMMEDIATE INFERENCES (PART D) ============ -->
+<section id="s5" class="topic-section">
+<span class="part-tag">PART D: IMMEDIATE INFERENCES</span>
+<div class="sec-head"><span class="sec-num">5</span><h2>Immediate Inferences</h2></div>
+
+<div class="subtopic">
+<div class="subhead"><span class="sub-num">1</span><h3>Conversion</h3></div>
+<p>Subject और predicate को interchange करना।</p>
+<p><strong>Valid Simple Conversion:</strong> E: No S are P → No P are S; I: Some S are P → Some P are S</p>
+<p><strong>Conversion by Limitation:</strong> Traditional logic में A: All S are P → Some P are S (यह existential import पर depend करता है)</p>
+<p><strong>O Proposition:</strong> O का valid conversion नहीं।</p>
+</div>
+
+<div class="subtopic">
+<div class="subhead"><span class="sub-num">2</span><h3>Obversion</h3></div>
+<p>1. Quality बदलें। 2. Predicate को उसके complement से replace करें। Obversion चारों forms — A, E, I, O — के लिए valid है।</p>
+<table class="data-table">
+<tr><th>Original</th><th>Obverse</th></tr>
+<tr><td>All S are P</td><td>No S are non-P</td></tr>
+<tr><td>No S are P</td><td>All S are non-P</td></tr>
+<tr><td>Some S are P</td><td>Some S are not non-P</td></tr>
+<tr><td>Some S are not P</td><td>Some S are non-P</td></tr>
+</table>
+</div>
+
+<div class="subtopic">
+<div class="subhead"><span class="sub-num">3</span><h3>Contraposition</h3></div>
+<p>1. Subject और predicate interchange करें। 2. दोनों terms को complements से replace करें।</p>
+<p><strong>Valid:</strong> A proposition, O proposition</p>
+<p><strong>Limited/Invalid in Standard Form:</strong> E by limitation in traditional treatment; I invalid</p>
+<p><strong>Example:</strong> All humans are mortal. → Contrapositive: All non-mortals are non-humans.</p>
+</div>
+</section>
+
+<!-- ============ PAGE 6: SQUARE OF OPPOSITION (PART E) ============ -->
+<section id="s6" class="topic-section">
+<span class="part-tag">PART E: SQUARE OF OPPOSITION</span>
+<div class="sec-head"><span class="sec-num">6</span><h2>Square of Opposition — विरोध का परम्परागत वर्ग</h2></div>
+<p>Traditional Square में: A: All S are P, E: No S are P, I: Some S are P, O: Some S are not P</p>
+
+<div class="subtopic">
+<div class="subhead"><span class="sub-num">1</span><h3>Contradictory Relation</h3></div>
+<p>Pairs: A ↔ O, E ↔ I</p>
+<p>Rules: दोनों true नहीं हो सकतीं। दोनों false नहीं हो सकतीं। एक true तो दूसरी false।</p>
+<div class="formula">Contradiction = Cannot both be true and cannot both be false</div>
+</div>
+
+<div class="subtopic">
+<div class="subhead"><span class="sub-num">2</span><h3>Contrary Relation</h3></div>
+<p>Pair: A ↔ E — दोनों true नहीं हो सकतीं। दोनों false हो सकती हैं।</p>
+<div class="formula">Contrary = Cannot both be true; may both be false</div>
+<p><strong>Example:</strong> "All students are honest." और "No student is honest." — दोनों true नहीं, लेकिन दोनों false हो सकती हैं यदि कुछ honest और कुछ dishonest हों।</p>
+</div>
+
+<div class="subtopic">
+<div class="subhead"><span class="sub-num">3</span><h3>Subcontrary Relation</h3></div>
+<p>Pair: I ↔ O — दोनों false नहीं हो सकतीं। दोनों true हो सकती हैं।</p>
+<div class="formula">Subcontrary = Cannot both be false; may both be true</div>
+</div>
+
+<div class="subtopic">
+<div class="subhead"><span class="sub-num">4</span><h3>Subalternation</h3></div>
+<p>Relations: A → I, E → O. Universal = Superaltern; Particular = Subaltern</p>
+<p>Traditional logic में: Universal की truth downward particular तक जाती है। Particular की falsity upward universal तक जाती है।</p>
+<div class="formula">Truth flows downward; falsity flows upward</div>
+<p><strong>Modern Logic Caution:</strong> Traditional square universal propositions को existential import देती है। Modern Boolean interpretation में A और E से automatically existence imply नहीं होती। UGC NET में "traditional square" लिखा हो तो traditional rules apply करें।</p>
+</div>
+
+<div class="subtopic">
+<div class="subhead"><span class="sub-num">5</span><h3>Square of Opposition Summary</h3></div>
+<table class="data-table">
+<tr><th>Relation</th><th>Pair</th><th>Rule</th></tr>
+<tr><td>Contradictory</td><td>A–O, E–I</td><td>न दोनों true, न दोनों false</td></tr>
+<tr><td>Contrary</td><td>A–E</td><td>दोनों true नहीं; दोनों false संभव</td></tr>
+<tr><td>Subcontrary</td><td>I–O</td><td>दोनों false नहीं; दोनों true संभव</td></tr>
+<tr><td>Subalternation</td><td>A–I, E–O</td><td>Truth down, falsity up</td></tr>
+</table>
+</div>
+</section>
+
+<!-- ============ PAGE 7: CATEGORICAL SYLLOGISM (PART F) ============ -->
+<section id="s7" class="topic-section">
+<span class="part-tag">PART F: CATEGORICAL SYLLOGISM</span>
+<div class="sec-head"><span class="sec-num">7</span><h2>Categorical Syllogism</h2></div>
+
+<div class="subtopic">
+<div class="subhead"><span class="sub-num">1</span><h3>Categorical Syllogism</h3></div>
+<p>तीन categorical propositions वाला deductive argument: Major premise, Minor premise, Conclusion। और तीन terms: Major Term (P), Minor Term (S), Middle Term (M)</p>
+<p><strong>Identification:</strong> Major Term = Conclusion का predicate। Minor Term = Conclusion का subject। Middle Term = दोनों premises में आता है, conclusion में नहीं।</p>
+<p><strong>Example:</strong> All researchers are readers. All scholars are researchers. Therefore, all scholars are readers. — S = Scholars, P = Readers, M = Researchers</p>
+</div>
+
+<div class="subtopic">
+<div class="subhead"><span class="sub-num">2</span><h3>Mood</h3></div>
+<p>Major premise, minor premise और conclusion के A/E/I/O forms का क्रम।</p>
+<p><strong>Example:</strong> All M are P (A); All S are M (A); All S are P (A) → Mood: AAA</p>
+<div class="formula">Mood is determined by quantity and quality of the three propositions</div>
+</div>
+
+<div class="subtopic">
+<div class="subhead"><span class="sub-num">3</span><h3>Figure</h3></div>
+<p>Middle term की premises में position figure निर्धारित करती है।</p>
+<table class="data-table">
+<tr><th>Figure</th><th>Major Premise</th><th>Minor Premise</th></tr>
+<tr><td>1</td><td>M–P</td><td>S–M</td></tr>
+<tr><td>2</td><td>P–M</td><td>S–M</td></tr>
+<tr><td>3</td><td>M–P</td><td>M–S</td></tr>
+<tr><td>4</td><td>P–M</td><td>M–S</td></tr>
+</table>
+<p><strong>Example:</strong> All mammals are animals. All dogs are mammals. Therefore, all dogs are animals. — Mood = AAA, Figure = 1, Form = AAA-1</p>
+</div>
+
+<div class="subtopic">
+<div class="subhead"><span class="sub-num">4</span><h3>Validity Rules of Categorical Syllogism</h3></div>
+<ul class="bullet-list">
+<li>1. Exactly three terms होने चाहिए।</li>
+<li>2. Middle term कम-से-कम एक premise में distributed हो।</li>
+<li>3. Conclusion में distributed term premise में भी distributed हो।</li>
+<li>4. दो negative premises से conclusion नहीं निकलता।</li>
+<li>5. यदि एक premise negative है तो conclusion negative होना चाहिए।</li>
+<li>6. Negative conclusion के लिए एक negative premise आवश्यक है।</li>
+<li>7. दो particular premises से valid conclusion नहीं निकलता।</li>
+<li>8. Particular premise से universal conclusion नहीं निकलता।</li>
+<li>9. Modern Boolean interpretation में two universal premises से particular conclusion निकालना existential fallacy हो सकता है।</li>
+</ul>
+</div>
+</section>
+
+<!-- ============ PAGE 8: FORMAL FALLACIES (PART G) ============ -->
+<section id="s8" class="topic-section">
+<span class="part-tag">PART G: FORMAL FALLACIES</span>
+<div class="sec-head"><span class="sec-num">8</span><h2>Formal Fallacies — आकारिक तर्कदोष</h2></div>
+
+<div class="subtopic">
+<div class="subhead"><span class="sub-num">1</span><h3>Formal Fallacy</h3></div>
+<p>Argument की logical structure/form में error।</p>
+<ul class="bullet-list">
+<li><strong>Undistributed Middle:</strong> Middle term किसी premise में distributed नहीं है। Example: All dogs are animals. All cats are animals. Therefore, all cats are dogs. — "Animals" दोनों A propositions में predicate है और undistributed है।</li>
+<li><strong>Illicit Major:</strong> Conclusion का major term distributed है, लेकिन major premise में distributed नहीं।</li>
+<li><strong>Illicit Minor:</strong> Conclusion का minor term distributed है, लेकिन minor premise में distributed नहीं।</li>
+<li><strong>Exclusive Premises:</strong> दो negative premises से conclusion निकालना। No A are B. No C are B. Therefore… — Valid relation establish नहीं होती।</li>
+<li><strong>Affirmative Conclusion from Negative Premise:</strong> यदि कोई premise negative है, conclusion affirmative नहीं हो सकता।</li>
+<li><strong>Negative Conclusion from Affirmative Premises:</strong> दो affirmative premises से negative conclusion नहीं निकल सकता।</li>
+<li><strong>Two Particular Premises:</strong> दो particular premises valid syllogistic conclusion नहीं देतीं।</li>
+<li><strong>Existential Fallacy:</strong> Modern Boolean logic में universal premises से particular conclusion निकालना, जब existence assumed न हो।</li>
+</ul>
+</div>
+
+<div class="subtopic">
+<div class="subhead"><span class="sub-num">2</span><h3>Conditional Argument Fallacies</h3></div>
+<p><strong>Affirming the Consequent — Example:</strong> यदि वर्षा होगी तो सड़क गीली होगी। सड़क गीली है। इसलिए वर्षा हुई है। — सड़क किसी अन्य कारण से भी गीली हो सकती है।</p>
+<p><strong>Denying the Antecedent — Example:</strong> यदि वह दिल्ली में है तो भारत में है। वह दिल्ली में नहीं है। इसलिए वह भारत में नहीं है। — वह भारत के किसी अन्य स्थान पर हो सकता है।</p>
+</div>
+</section>
+
+<!-- ============ PAGE 9: INFORMAL FALLACIES (PART H) ============ -->
+<section id="s9" class="topic-section">
+<span class="part-tag">PART H: INFORMAL FALLACIES</span>
+<div class="sec-head"><span class="sec-num">9</span><h2>Informal Fallacies — अनाकारिक तर्कदोष</h2></div>
+<p>Language, relevance, evidence या assumptions में error।</p>
+<table class="data-table">
+<tr><th>Fallacy</th><th>Meaning / Example</th></tr>
+<tr><td>Ad Hominem</td><td>Argument के बजाय व्यक्ति पर attack — "उसकी शिक्षा-नीति मत सुनो; वह स्वयं अच्छे college में नहीं पढ़ा।"</td></tr>
+<tr><td>Appeal to Authority</td><td>किसी authority के statement को पर्याप्त evidence मानना, विशेषकर जब वह relevant expert न हो।</td></tr>
+<tr><td>Appeal to Popularity (Ad Populum)</td><td>अधिकांश लोग मानते हैं, इसलिए यह सत्य है।</td></tr>
+<tr><td>Appeal to Pity (Ad Misericordiam)</td><td>Evidence के स्थान पर sympathy का उपयोग।</td></tr>
+<tr><td>Appeal to Force (Ad Baculum)</td><td>Threat के आधार पर conclusion स्वीकार कराना।</td></tr>
+<tr><td>Appeal to Ignorance (Ad Ignorantiam)</td><td>किसी claim को इसलिए true मानना क्योंकि false सिद्ध नहीं हुआ, या उलटा।</td></tr>
+<tr><td>Straw Man</td><td>Opponent के actual argument को distort करके कमजोर version attack करना।</td></tr>
+<tr><td>Red Herring</td><td>Relevant issue से attention हटाकर unrelated issue introduce करना।</td></tr>
+<tr><td>Hasty Generalisation</td><td>Insufficient/unrepresentative cases से general conclusion — "दो online students fail हुए; इसलिए online education ineffective है।"</td></tr>
+<tr><td>False Cause/Post Hoc</td><td>Sequence/correlation को causation मान लेना — "New timetable के बाद marks घटे; timetable ही गिरावट का कारण है।"</td></tr>
+<tr><td>Slippery Slope</td><td>बिना adequate evidence छोटे first step से extreme chain of consequences predict करना।</td></tr>
+<tr><td>False Dilemma</td><td>जब कई alternatives हों, केवल दो options प्रस्तुत करना — "या तो आप इस policy से सहमत हैं या education के विरोधी हैं।"</td></tr>
+<tr><td>Begging the Question</td><td>Conclusion को premises में ही assume कर लेना — "यह पुस्तक विश्वसनीय है क्योंकि इसमें केवल विश्वसनीय बातें लिखी हैं।"</td></tr>
+<tr><td>Circular Reasoning</td><td>Claim स्वयं को support करता है।</td></tr>
+<tr><td>Equivocation</td><td>एक ही word को अलग meanings में उपयोग करना — "Light cannot be dark. Feathers are light. Therefore, feathers cannot be dark." ("Light" का अर्थ brightness और low weight)</td></tr>
+<tr><td>Amphiboly</td><td>Grammatical ambiguity से fallacy।</td></tr>
+<tr><td>Composition</td><td>Parts की property को whole पर apply करना — "Team का प्रत्येक player excellent है; इसलिए team निश्चित रूप से excellent होगी।"</td></tr>
+<tr><td>Division</td><td>Whole की property को प्रत्येक part पर apply करना — "University प्रसिद्ध है; इसलिए उसका प्रत्येक department प्रसिद्ध है।"</td></tr>
+</table>
+</section>
+
+<!-- ============ PAGE 10: USES OF LANGUAGE (PART I) ============ -->
+<section id="s10" class="topic-section">
+<span class="part-tag">PART I: USES OF LANGUAGE</span>
+<div class="sec-head"><span class="sec-num">10</span><h2>Uses of Language</h2></div>
+
+<div class="subtopic">
+<div class="subhead"><span class="sub-num">1</span><h3>प्रमुख Functions of Language</h3></div>
+<ul class="bullet-list">
+<li><strong>Informative:</strong> Facts या information communicate करना।</li>
+<li><strong>Expressive:</strong> Feelings और attitudes व्यक्त करना।</li>
+<li><strong>Directive:</strong> किसी action के लिए influence या command।</li>
+<li><strong>Performative/Ceremonial:</strong> Statement बोलने से ही कोई social act सम्पन्न होता है — "मैं आपको अध्यक्ष नियुक्त करता हूँ।"</li>
+</ul>
+</div>
+
+<div class="subtopic">
+<div class="subhead"><span class="sub-num">2</span><h3>Denotation and Connotation</h3></div>
+<p><strong>Denotation:</strong> Term जिन objects/members पर apply होती है उसका extension। "Student" की denotation = सभी students</p>
+<p><strong>Connotation:</strong> Term द्वारा implied attributes/qualities। "Student" की connotation = learner, enrolled person आदि।</p>
+<p><strong>General Relationship:</strong> अक्सर connotation बढ़ने पर denotation घटती है। Example: Person → Educated person → Educated Indian person → Educated Indian researcher (Attributes बढ़े, applicable members कम हुए)</p>
+</div>
+
+<div class="subtopic">
+<div class="subhead"><span class="sub-num">3</span><h3>Terms के प्रकार</h3></div>
+<table class="data-table">
+<tr><th>Type</th><th>Meaning</th><th>Example</th></tr>
+<tr><td>Positive Term</td><td>किसी quality की presence</td><td>Honest</td></tr>
+<tr><td>Negative Term</td><td>Quality की absence</td><td>Dishonest, non-living</td></tr>
+<tr><td>Absolute Term</td><td>Independent meaning</td><td>Teacher</td></tr>
+<tr><td>Relative Term</td><td>Relationship पर आधारित</td><td>Parent, teacher, employer</td></tr>
+<tr><td>Concrete Term</td><td>Object/person</td><td>Scientist</td></tr>
+<tr><td>Abstract Term</td><td>Quality/state</td><td>Scientificness, honesty</td></tr>
+<tr><td>Collective Term</td><td>Group को unit के रूप में</td><td>Committee, army</td></tr>
+</table>
+</div>
+</section>
+
+<!-- ============ PAGE 11: ANALOGY (PART J) ============ -->
+<section id="s11" class="topic-section">
+<span class="part-tag">PART J: ANALOGY</span>
+<div class="sec-head"><span class="sec-num">11</span><h2>Analogy — सादृश्य</h2></div>
+
+<div class="subtopic">
+<div class="subhead"><span class="sub-num">1</span><h3>Analogy का अर्थ</h3></div>
+<p>दो pairs के बीच same relationship पहचानना।</p>
+<div class="formula">A : B :: C : D</div>
+<p><strong>प्रकार:</strong> Synonym, Antonym, Part–whole, Cause–effect, Tool–function, Worker–workplace, Degree, Classification, Number relationship</p>
+<p><strong>Example:</strong> Doctor : Hospital :: Teacher : School</p>
+</div>
+
+<div class="subtopic">
+<div class="subhead"><span class="sub-num">2</span><h3>Analogical Argument की Strength</h3></div>
+<ul class="bullet-list">
+<li>Relevant similarities कितनी हैं?</li>
+<li>Differences कितनी significant हैं?</li>
+<li>Cases की संख्या कितनी है?</li>
+<li>Conclusion कितना modest है?</li>
+<li>कोई disanalogy conclusion को कमजोर करती है या नहीं?</li>
+</ul>
+<p><strong>Exam Trap:</strong> Superficial similarity strong analogy की guarantee नहीं है।</p>
+</div>
+</section>
+
+<!-- ============ PAGE 12: VENN DIAGRAMS (PART K) ============ -->
+<section id="s12" class="topic-section">
+<span class="part-tag">PART K: VENN DIAGRAMS</span>
+<div class="sec-head"><span class="sec-num">12</span><h2>Venn Diagrams</h2></div>
+
+<div class="subtopic">
+<div class="subhead"><span class="sub-num">1</span><h3>Venn Diagram का उपयोग</h3></div>
+<p>Categorical propositions और arguments की validity establish करने के लिए classes को circles द्वारा represent किया जाता है।</p>
+<p><strong>Symbols:</strong> Shading = उस region में कोई member नहीं। X = कम-से-कम एक member exists। Blank region = existence या non-existence के बारे में कोई information नहीं।</p>
+</div>
+
+<div class="subtopic">
+<div class="subhead"><span class="sub-num">2</span><h3>A, E, I, O का Venn Representation</h3></div>
+<p><strong>A: All S are P</strong> — S का जो भाग P के बाहर है उसे shade करें। (S ⊆ P)</p>
+<p><strong>E: No S are P</strong> — S और P के overlap को shade करें। (S ∩ P = ∅)</p>
+<p><strong>I: Some S are P</strong> — S–P overlap में X रखें।</p>
+<p><strong>O: Some S are not P</strong> — S के P से बाहर वाले भाग में X रखें।</p>
+</div>
+
+<div class="subtopic">
+<div class="subhead"><span class="sub-num">3</span><h3>Syllogism की Validity by Venn Diagram</h3></div>
+<ul class="bullet-list">
+<li>1. तीन circles बनाएं — S, P और M।</li>
+<li>2. केवल premises diagram करें।</li>
+<li>3. Universal information पहले shade करें।</li>
+<li>4. Particular information बाद में X से दिखाएँ।</li>
+<li>5. देखें कि conclusion diagram में पहले से represented है या नहीं।</li>
+</ul>
+<p>यदि conclusion premises के diagram से necessarily represented है, argument valid है।</p>
+<p><strong>Example:</strong> All M are P. All S are M. Therefore, all S are P. — Premises diagram करने पर S का P से बाहर कोई region नहीं बचता; conclusion valid है।</p>
+</div>
+</section>
+
+<!-- ============ PAGE 13: INDIAN LOGIC (PART L) ============ -->
+<section id="s13" class="topic-section">
+<span class="part-tag">PART L: INDIAN LOGIC</span>
+<div class="sec-head"><span class="sec-num">13</span><h2>Indian Logic — भारतीय तर्कशास्त्र</h2></div>
+
+<div class="subtopic">
+<div class="subhead"><span class="sub-num">1</span><h3>Pramā, Apramā and Pramāṇa</h3></div>
+<p><strong>Pramā:</strong> Valid cognition/यथार्थ ज्ञान। <strong>Apramā:</strong> Invalid cognition/अयथार्थ ज्ञान। <strong>Pramāṇa:</strong> Valid knowledge प्राप्त करने का means/instrument।</p>
+<div class="formula">Pramāṇa → Pramā → Valid Knowledge</div>
+</div>
+
+<div class="subtopic">
+<div class="subhead"><span class="sub-num">2</span><h3>Six Major Pramāṇas</h3></div>
+<ul class="bullet-list">
+<li>1. Pratyakṣa — Perception</li>
+<li>2. Anumāna — Inference</li>
+<li>3. Upamāna — Comparison</li>
+<li>4. Śabda — Verbal Testimony</li>
+<li>5. Arthāpatti — Postulation/Implication</li>
+<li>6. Anupalabdhi — Non-apprehension</li>
+</ul>
+<div class="formula">Recall: P–A–U–Ś–A–A → Pratyakṣa → Anumāna → Upamāna → Śabda → Arthāpatti → Anupalabdhi</div>
+</div>
+
+<div class="subtopic">
+<div class="subhead"><span class="sub-num">3</span><h3>Schools और Accepted Pramāṇas</h3></div>
+<table class="data-table">
+<tr><th>School</th><th>प्रमुख रूप से स्वीकार Pramāṇas</th></tr>
+<tr><td>Cārvāka</td><td>केवल Pratyakṣa</td></tr>
+<tr><td>Buddhism</td><td>Pratyakṣa और Anumāna</td></tr>
+<tr><td>Vaiśeṣika</td><td>Pratyakṣa और Anumāna</td></tr>
+<tr><td>Sāṃkhya</td><td>Pratyakṣa, Anumāna, Śabda</td></tr>
+<tr><td>Yoga</td><td>Pratyakṣa, Anumāna, Śabda</td></tr>
+<tr><td>Nyāya</td><td>Pratyakṣa, Anumāna, Upamāna, Śabda</td></tr>
+<tr><td>Prābhākara Mīmāṃsā</td><td>पाँच — Anupalabdhi को छोड़कर</td></tr>
+<tr><td>Bhāṭṭa Mīmāṃsā</td><td>सभी छह</td></tr>
+<tr><td>Advaita Vedānta</td><td>सभी छह</td></tr>
+</table>
+<p><strong>Exam Trap:</strong> सभी Indian schools छह pramāṇas स्वीकार नहीं करते।</p>
+</div>
+
+<div class="subtopic">
+<div class="subhead"><span class="sub-num">4</span><h3>Pratyakṣa — प्रत्यक्ष / Perception</h3></div>
+<p>Sense-object contact से उत्पन्न immediate knowledge।</p>
+<p><strong>External Perception</strong> — पाँच external senses: Eyes (Form/colour), Ears (Sound), Nose (Smell), Tongue (Taste), Skin (Touch)</p>
+<p><strong>Internal Perception</strong> — Mind द्वारा internal states का perception: Pleasure, Pain, Desire, Cognition</p>
+<p><strong>Stages:</strong> <strong>Nirvikalpaka</strong> — Indeterminate, pre-conceptual perception। <strong>Savikalpaka</strong> — Determinate perception। <strong>Pratyabhijñā</strong> — Recognition: "यह वही व्यक्ति है जिसे मैंने पहले देखा था।"</p>
+</div>
+
+<div class="subtopic">
+<div class="subhead"><span class="sub-num">5</span><h3>Anumāna — अनुमान / Inference</h3></div>
+<p>Perceived sign के आधार पर unperceived fact का knowledge।</p>
+<p><strong>Classic Example:</strong> Mountain has smoke. Wherever there is smoke, there is fire. Therefore, mountain has fire.</p>
+<table class="data-table">
+<tr><th>Term</th><th>Meaning</th><th>Example</th></tr>
+<tr><td>Pakṣa</td><td>Subject under consideration</td><td>Mountain</td></tr>
+<tr><td>Sādhya</td><td>Probandum — to be proved</td><td>Fire</td></tr>
+<tr><td>Hetu/Liṅga</td><td>Reason/sign</td><td>Smoke</td></tr>
+<tr><td>Vyāpti</td><td>Invariable relation</td><td>Wherever smoke, there fire</td></tr>
+<tr><td>Sapakṣa</td><td>Similar positive instances</td><td>Kitchen</td></tr>
+<tr><td>Vipakṣa</td><td>Negative instances</td><td>Lake</td></tr>
+<tr><td>Pakṣadharmatā</td><td>Hetu present in pakṣa</td><td>Smoke is on mountain</td></tr>
+</table>
+</div>
+
+<div class="subtopic">
+<div class="subhead"><span class="sub-num">6</span><h3>Types of Anumāna</h3></div>
+<p><strong>Purpose के आधार पर:</strong> <strong>Svārthānumāna</strong> — Inference for oneself। <strong>Parārthānumāna</strong> — Inference formally presented for another person।</p>
+<div class="formula">Anumāna = Svārtha + Parārtha</div>
+<p><strong>Causal Nature के आधार पर:</strong> <strong>Pūrvavat</strong> — Known cause से unperceived effect का inference (Dark clouds से future rain का अनुमान)। <strong>Śeṣavat</strong> — Known effect से previous cause का inference (Flooded river से past rain का अनुमान)। <strong>Sāmānyatodṛṣṭa</strong> — Cause-effect के बजाय सामान्य observed relation पर inference (Moon की changing position से motion का inference)।</p>
+<p><strong>Vyāpti के आधार पर:</strong> <strong>Kevalānvayi</strong> — केवल positive agreement। <strong>Kevalavyatireki</strong> — केवल negative agreement। <strong>Anvayavyatireki</strong> — Positive agreement और negative difference दोनों।</p>
+</div>
+
+<div class="subtopic">
+<div class="subhead"><span class="sub-num">7</span><h3>Nyāya Five-Member Syllogism — पंचावयवी अनुमान</h3></div>
+<ul class="bullet-list">
+<li><strong>1. Pratijñā — Proposition:</strong> The mountain has fire.</li>
+<li><strong>2. Hetu — Reason:</strong> Because it has smoke.</li>
+<li><strong>3. Udāharaṇa — Universal Rule with Example:</strong> Wherever there is smoke, there is fire, as in a kitchen.</li>
+<li><strong>4. Upanaya — Application:</strong> The mountain has such smoke.</li>
+<li><strong>5. Nigamana — Conclusion:</strong> Therefore, the mountain has fire.</li>
+</ul>
+<div class="formula">Pratijñā → Hetu → Udāharaṇa → Upanaya → Nigamana</div>
+</div>
+
+<div class="subtopic">
+<div class="subhead"><span class="sub-num">8</span><h3>Vyāpti — व्याप्ति / Invariable Concomitance</h3></div>
+<p>Hetu और Sādhya के बीच unconditional और invariable relation।</p>
+<div class="formula">Wherever there is smoke, there is fire</div>
+<p>Vyāpya — pervaded/sign: Smoke। Vyāpaka — pervader: Fire।</p>
+<p><strong>Rule:</strong> Smoke के सभी cases में fire होना चाहिए, लेकिन fire के सभी cases में smoke होना आवश्यक नहीं।</p>
+<p><strong>Anvaya</strong> (Positive concomitance): Where smoke is present, fire is present. <strong>Vyatireka</strong> (Negative concomitance): Where fire is absent, smoke is absent.</p>
+<p><strong>Upādhi:</strong> ऐसी hidden condition जो apparent vyāpti को conditional बनाती है। Example: जहाँ fire है वहाँ smoke है — यह universally true नहीं। Wet fuel जैसी condition smoke उत्पन्न कर सकती है।</p>
+</div>
+
+<div class="subtopic">
+<div class="subhead"><span class="sub-num">9</span><h3>Upamāna — उपमान / Comparison</h3></div>
+<p>Known object से similarity के आधार पर unknown object या word–object relation का knowledge।</p>
+<p><strong>Classic Example:</strong> किसी व्यक्ति को बताया गया: "Gavaya जंगली गाय के समान होता है।" जंगल में गाय जैसा animal देखकर वह पहचानता है: "यह Gavaya है।"</p>
+<p><strong>Exam Point:</strong> Upamāna केवल superficial comparison नहीं; similarity से unfamiliar object/word का knowledge है।</p>
+</div>
+
+<div class="subtopic">
+<div class="subhead"><span class="sub-num">10</span><h3>Śabda — शब्द / Verbal Testimony</h3></div>
+<p>Trustworthy person या authoritative statement से प्राप्त knowledge।</p>
+<p><strong>Āpta:</strong> ऐसा reliable speaker जो विषय को जानता हो और सत्य बोलने का intention रखता हो।</p>
+<p><strong>प्रकार:</strong> <strong>Vaidika</strong> — Scriptural/Vedic testimony। <strong>Laukika</strong> — Trustworthy ordinary person का testimony।</p>
+<p><strong>Exam Trap:</strong> हर spoken statement Śabda-pramāṇa नहीं; testimony reliable होना चाहिए।</p>
+</div>
+
+<div class="subtopic">
+<div class="subhead"><span class="sub-num">11</span><h3>Arthāpatti — अर्थापत्ति / Postulation</h3></div>
+<p>दो apparently inconsistent facts को reconcile करने के लिए necessary unperceived fact postulate करना।</p>
+<p><strong>Classic Example:</strong> Devadatta मोटा हो रहा है। वह दिन में नहीं खाता। अतः वह रात में खाता होगा।</p>
+<div class="formula">Arthāpatti = Necessary Postulation to Explain Otherwise Inexplicable Facts</div>
+<p><strong>Anumāna से अंतर:</strong> Anumāna established vyāpti पर आधारित है। Arthāpatti conflicting facts को logically reconcile करने के लिए necessary postulation है।</p>
+</div>
+
+<div class="subtopic">
+<div class="subhead"><span class="sub-num">12</span><h3>Anupalabdhi — अनुपलब्धि / Non-apprehension</h3></div>
+<p>Suitable conditions में perceivable object का non-perception, उसके absence का knowledge देता है।</p>
+<p><strong>Example:</strong> प्रकाशयुक्त table पर book दिखाई नहीं देती; इसलिए table पर book नहीं है।</p>
+<div class="formula">Anupalabdhi = Knowledge of Absence through Non-perception</div>
+<p><strong>Exam Trap:</strong> देखने की conditions suitable होनी चाहिए। अंधेरे room में book न दिखना absence prove नहीं करता।</p>
+</div>
+</section>
+
+<!-- ============ PAGE 14: HETVĀBHĀSA (PART M) ============ -->
+<section id="s14" class="topic-section">
+<span class="part-tag">PART M: HETVĀBHĀSA</span>
+<div class="sec-head"><span class="sec-num">14</span><h2>Hetvābhāsa — अनुमान के तर्कदोष</h2></div>
+
+<div class="subtopic">
+<div class="subhead"><span class="sub-num">1</span><h3>Hetvābhāsa का अर्थ</h3></div>
+<p>ऐसा apparent reason जो valid Hetu जैसा दिखे लेकिन वास्तव में inference establish न करे।</p>
+<div class="formula">Hetvābhāsa = Fallacious Middle/Defective Reason</div>
+</div>
+
+<div class="subtopic">
+<div class="subhead"><span class="sub-num">2</span><h3>Savyabhicāra/Anaikāntika — अनियमित कारण</h3></div>
+<p>Hetu Sādhya से invariably connected नहीं। <strong>Example:</strong> Mountain has fire because it is knowable — "Knowable" fire वाले और बिना fire वाले दोनों objects में मिलता है।</p>
+<p><strong>प्रकार:</strong> <strong>Sādhāraṇa</strong> — Hetu sapakṣa और vipakṣa दोनों में। <strong>Asādhāraṇa</strong> — Hetu केवल pakṣa में; comparison unavailable। <strong>Anupasaṃhāri</strong> — Pakṣa इतना all-inclusive कि sapakṣa–vipakṣa distinction संभव नहीं।</p>
+</div>
+
+<div class="subtopic">
+<div class="subhead"><span class="sub-num">3</span><h3>Viruddha — विरोधी हेतु</h3></div>
+<p>Hetu intended Sādhya के opposite को establish करता है। <strong>Example:</strong> Sound is eternal because it is produced — Produced होना eternity नहीं, non-eternity support करता है।</p>
+</div>
+
+<div class="subtopic">
+<div class="subhead"><span class="sub-num">4</span><h3>Satpratipakṣa — समान-बल प्रतिपक्ष</h3></div>
+<p>एक competing valid reason opposite conclusion support करता है। अर्थात original Hetu को counterbalancing Hetu मिल जाता है।</p>
+</div>
+
+<div class="subtopic">
+<div class="subhead"><span class="sub-num">5</span><h3>Asiddha — असिद्ध हेतु</h3></div>
+<p>Hetu itself established नहीं। <strong>प्रकार:</strong> <strong>Āśrayāsiddha</strong> — Pakṣa itself unreal/non-existent (Sky-lotus is fragrant because it is a lotus)। <strong>Svarūpāsiddha</strong> — Hetu pakṣa में present नहीं (Sound is visible because it has colour)। <strong>Vyāpyatvāsiddha</strong> — Hetu–Sādhya की vyāpti established नहीं या upādhi से conditioned है।</p>
+</div>
+
+<div class="subtopic">
+<div class="subhead"><span class="sub-num">6</span><h3>Bādhita — बाधित हेतु</h3></div>
+<p>Conclusion stronger knowledge/pramāṇa से contradicted है। <strong>Example:</strong> Fire is cold because it is a substance — Direct perception fire को hot सिद्ध करता है; इसलिए argument bādhita है।</p>
+</div>
+
+<div class="subtopic">
+<div class="subhead"><span class="sub-num">7</span><h3>Hetvābhāsa Quick Comparison</h3></div>
+<table class="data-table">
+<tr><th>Hetvābhāsa</th><th>मुख्य दोष</th></tr>
+<tr><td>Savyabhicāra</td><td>Hetu irregular/inconclusive</td></tr>
+<tr><td>Viruddha</td><td>Hetu opposite conclusion सिद्ध करता है</td></tr>
+<tr><td>Satpratipakṣa</td><td>Counter-reason opposite conclusion support करता है</td></tr>
+<tr><td>Asiddha</td><td>Hetu या उसका basis unestablished</td></tr>
+<tr><td>Bādhita</td><td>Stronger knowledge conclusion को contradict करती है</td></tr>
+</table>
+</div>
+</section>
+
+<!-- ============ PAGE 15: EXAM TRAPS (PART N) ============ -->
+<section id="s15" class="topic-section">
+<span class="part-tag">PART N: EXAM TRAPS</span>
+<div class="sec-head"><span class="sec-num">15</span><h2>Exam Traps</h2></div>
+<ul class="bullet-list">
+<li>1. Truth proposition की; validity argument की property है।</li>
+<li>2. Sound argument = valid + true premises।</li>
+<li>3. Cogent argument = strong induction + true premises।</li>
+<li>4. A distributes subject; O distributes predicate।</li>
+<li>5. E distributes both; I none।</li>
+<li>6. Contraries दोनों false हो सकती हैं।</li>
+<li>7. Subcontraries दोनों true हो सकती हैं।</li>
+<li>8. Contradictories न दोनों true, न दोनों false।</li>
+<li>9. Mood = A/E/I/O sequence; figure = middle term position।</li>
+<li>10. Middle term conclusion में नहीं आता।</li>
+<li>11. Obversion सभी A/E/I/O पर valid है।</li>
+<li>12. Affirming consequent और denying antecedent invalid हैं।</li>
+<li>13. Analogy similarity पर आधारित है, identity पर नहीं।</li>
+<li>14. Venn में shading emptiness; X existence दिखाता है।</li>
+<li>15. Pramāṇa means of knowledge है; Pramā valid knowledge।</li>
+<li>16. Cārvāka केवल Pratyakṣa स्वीकार करता है।</li>
+<li>17. Nyāya चार pramāṇas स्वीकार करता है।</li>
+<li>18. Svārtha और Parārtha Anumāna के प्रकार हैं।</li>
+<li>19. Arthāpatti = necessary postulation।</li>
+<li>20. Anupalabdhi = absence का knowledge।</li>
+<li>21. Vyāpti = invariable relation।</li>
+<li>22. Hetu smoke, Sādhya fire और Pakṣa mountain है।</li>
+<li>23. Hetvābhāsa Western fallacy का exact synonym नहीं, बल्कि inference के defective reason की Indian classification है।</li>
+</ul>
+</section>
+
+<!-- ============ PAGE 16: VERIFIED PYQs (PART O) ============ -->
+<section id="s16" class="topic-section">
+<div class="sec-head"><span class="sec-num">16</span><h2>Verified Previous Year Questions</h2></div>
+
+<div class="pyq-tag">PYQ 1: UGC NET, 24 September 2020, Shift 2</div>
+<p>Categorical proposition की quantity और quality क्या निर्धारित करती हैं?</p>
+<ul class="bullet-list"><li>A. Validity</li><li>B. Invalidity</li><li>C. Mood</li><li>D. Figure</li></ul>
+<div class="answer-box">Correct Answer: C. Mood</div>
+<p class="explain">Explanation: A, E, I और O proposition की quantity — universal/particular — और quality — affirmative/negative — से निर्धारित होते हैं। Syllogism में इन forms का क्रम mood बनाता है। Figure middle term की position से निर्धारित होती है।</p>
+
+<div class="pyq-tag">PYQ 2: UGC NET, 3 December 2019, Shift 2</div>
+<p>Traditional square of opposition में दो propositions दोनों false नहीं हो सकतीं, लेकिन दोनों true हो सकती हैं। वे क्या कहलाती हैं?</p>
+<ul class="bullet-list"><li>A. Subalterns</li><li>B. Subcontraries</li><li>C. Contradictories</li><li>D. Contraries</li></ul>
+<div class="answer-box">Correct Answer: B. Subcontraries</div>
+<p class="explain">Explanation: I और O subcontraries हैं। दोनों true हो सकती हैं, पर दोनों false नहीं।</p>
+
+<div class="pyq-tag">PYQ 3: UGC NET, 25 September 2020, Shift 1</div>
+<p>निम्न propositions में कौन-सी दो ऐसी हैं जो दोनों true नहीं हो सकतीं, लेकिन दोनों false हो सकती हैं?</p>
+<p>A. All men are honest.<br>B. No men are honest.<br>C. Some men are honest.<br>D. Some men are not honest.</p>
+<p>Options: A. A और B&nbsp;&nbsp; B. A और D&nbsp;&nbsp; C. B और C&nbsp;&nbsp; D. C और D</p>
+<div class="answer-box">Correct Answer: A. A और B</div>
+<p class="explain">Explanation: A universal affirmative और E universal negative contrary relation में हैं। वे दोनों true नहीं, लेकिन दोनों false हो सकती हैं।</p>
+
+<div class="pyq-tag">PYQ 4: UGC NET, 21 June 2019, Shift 2</div>
+<p>"There is no jar now on the ground" — इसमें कौन-सा Pramāṇa involved है?</p>
+<ul class="bullet-list"><li>A. Anupalabdhi</li><li>B. Arthāpatti</li><li>C. Pratyakṣa</li><li>D. Anumāna</li></ul>
+<div class="answer-box">Correct Answer: A. Anupalabdhi</div>
+<p class="explain">Explanation: Suitable perceptual conditions में jar का non-apprehension उसके absence का knowledge देता है।</p>
+
+<div class="pyq-tag">PYQ 5: UGC NET, 5 December 2019, Shift 1</div>
+<p>दो apparently inconsistent perceived facts को reconcile करने के लिए unperceived fact assume करना Indian logic में क्या कहलाता है?</p>
+<ul class="bullet-list"><li>A. Anumāna</li><li>B. Upamāna</li><li>C. Arthāpatti</li><li>D. Anupalabdhi</li></ul>
+<div class="answer-box">Correct Answer: C. Arthāpatti</div>
+<p class="explain">Explanation: Arthāpatti किसी otherwise inexplicable fact को explain करने के लिए necessary postulation है।</p>
+
+<div class="pyq-tag">PYQ 6: UGC NET, 22 July 2022, Shift 1</div>
+<p>Word और उसके denotation के relationship का knowledge किस Pramāṇa से संबंधित है?</p>
+<ul class="bullet-list"><li>A. Śabda</li><li>B. Upamāna</li><li>C. Anumāna</li><li>D. Pratyakṣa</li></ul>
+<div class="answer-box">Correct Answer: A. Śabda</div>
+<p class="explain">Explanation: Śabda trustworthy linguistic/verbal testimony से knowledge देता है। Upamāna similarity के माध्यम से unfamiliar object/word को समझने में सहायता करता है।</p>
+
+<div class="pyq-tag">PYQ 7: UGC NET, 13 October 2022, Shift 2</div>
+<p>कौन-सा Pramāṇa Svārtha और Parārtha में विभाजित है?</p>
+<ul class="bullet-list"><li>A. Pratyakṣa</li><li>B. Anumāna</li><li>C. Upamāna</li><li>D. Śabda</li></ul>
+<div class="answer-box">Correct Answer: B. Anumāna</div>
+<p class="explain">Explanation: Svārthānumāna अपने लिए inference और Parārthānumāna दूसरे को logically demonstrate करने के लिए inference है।</p>
+
+<div class="pyq-tag">PYQ 8: UGC NET, 20 October 2022, Shift 1</div>
+<p>किस Pramāṇa में ऐसे fact को accept/postulate किया जाता है जिसके बिना undeniable fact की explanation सम्भव न हो?</p>
+<ul class="bullet-list"><li>A. Anupalabdhi</li><li>B. Upamāna</li><li>C. Śabda</li><li>D. Arthāpatti</li></ul>
+<div class="answer-box">Correct Answer: D. Arthāpatti</div>
+<p class="explain">Explanation: Arthāpatti necessary explanatory postulation है। Devadatta का रात में भोजन करना इसका classic example है।</p>
+</section>
+
+<!-- ============ PAGE 17: PYQ TREND ANALYSIS (PART P) ============ -->
+<section id="s17" class="topic-section">
+<div class="sec-head"><span class="sec-num">17</span><h2>PYQ Trend Analysis</h2></div>
+<table class="data-table">
+<tr><th>Tested Area</th><th>Common Question Pattern</th></tr>
+<tr><td>A–E–I–O</td><td>Form, quantity, quality</td></tr>
+<tr><td>Distribution</td><td>Subject/predicate matching</td></tr>
+<tr><td>Square of opposition</td><td>Truth–falsity relation</td></tr>
+<tr><td>Mood and figure</td><td>Identification</td></tr>
+<tr><td>Formal fallacies</td><td>Scenario/form</td></tr>
+<tr><td>Informal fallacies</td><td>Everyday examples</td></tr>
+<tr><td>Venn diagrams</td><td>Argument validity</td></tr>
+<tr><td>Deductive–inductive</td><td>Distinction</td></tr>
+<tr><td>Pramāṇas</td><td>Definition/example matching</td></tr>
+<tr><td>School–Pramāṇa</td><td>Match the lists</td></tr>
+<tr><td>Anumāna</td><td>Components and five steps</td></tr>
+<tr><td>Vyāpti</td><td>Relation identification</td></tr>
+<tr><td>Hetvābhāsa</td><td>Defective-reason scenario</td></tr>
+</table>
+<p><strong>December 2026 Focus</strong> — विशेष तैयारी करें:</p>
+<ul class="bullet-list">
+<li>A/E/I/O distribution table</li>
+<li>Square of opposition truth–falsity rules</li>
+<li>Mood बनाम figure</li>
+<li>"Only" propositions का standardisation</li>
+<li>Affirming consequent बनाम modus ponens</li>
+<li>Informal fallacy scenarios</li>
+<li>Venn diagram shading और X</li>
+<li>Pramāṇa–example matching</li>
+<li>Nyāya five-member inference का sequence</li>
+<li>Pakṣa–Sādhya–Hetu identification</li>
+<li>Arthāpatti बनाम Anumāna</li>
+<li>Anupalabdhi की suitable-condition requirement</li>
+<li>Hetvābhāsa matching</li>
+</ul>
+</section>
+
+<!-- ============ PAGE 18: DECEMBER 2026 EXPECTED MCQs (PART Q) ============ -->
+<section id="s18" class="topic-section">
+<div class="sec-head"><span class="sec-num">18</span><h2>December 2026 Expected MCQs</h2></div>
+
+<div class="pyq-tag">Question 1</div>
+<p>"All researchers are readers" में कौन-से terms distributed हैं?</p>
+<ul class="bullet-list"><li>A. केवल Subject</li><li>B. केवल Predicate</li><li>C. दोनों Subject और Predicate</li><li>D. कोई भी नहीं</li></ul>
+<div class="answer-box">Correct Answer: A. केवल Subject</div>
+<p class="explain">Explanation: यह A proposition है; A proposition subject को distribute करती है, predicate को नहीं।</p>
+
+<div class="pyq-tag">Question 2</div>
+<p>"Some teachers are not researchers" किस form की proposition है?</p>
+<ul class="bullet-list"><li>A. A</li><li>B. E</li><li>C. I</li><li>D. O</li></ul>
+<div class="answer-box">Correct Answer: D. O</div>
+<p class="explain">Explanation: यह particular negative proposition है।</p>
+
+<div class="pyq-tag">Question 3</div>
+<p>यदि A proposition true है, तो traditional square में कौन-सी proposition necessarily false होगी?</p>
+<ul class="bullet-list"><li>A. E और I दोनों</li><li>B. केवल I</li><li>C. O</li><li>D. I और O दोनों</li></ul>
+<div class="answer-box">Correct Answer: C. O</div>
+<p class="explain">Explanation: A और O contradictory हैं। A true होने पर O false होगी।</p>
+
+<div class="pyq-tag">Question 4</div>
+<p>निम्न argument में कौन-सी fallacy है? If a person is a professor, the person is educated. Ravi is educated. Therefore, Ravi is a professor.</p>
+<ul class="bullet-list"><li>A. Denying the antecedent</li><li>B. Affirming the consequent</li><li>C. Modus tollens</li><li>D. Disjunctive syllogism</li></ul>
+<div class="answer-box">Correct Answer: B. Affirming the Consequent</div>
+<p class="explain">Explanation: P→Q, Q, ∴P invalid form है।</p>
+
+<div class="pyq-tag">Question 5</div>
+<p>"केवल NET-qualified candidates eligible हैं" का standard form क्या है?</p>
+<ul class="bullet-list"><li>A. All NET-qualified candidates are eligible.</li><li>B. All eligible candidates are NET-qualified.</li><li>C. Some eligible candidates are not NET-qualified.</li><li>D. No NET-qualified candidate is eligible.</li></ul>
+<div class="answer-box">Correct Answer: B</div>
+<p class="explain">Explanation: "Only A are B" को "All B are A" में बदलते हैं।</p>
+
+<div class="pyq-tag">Question 6</div>
+<p>निम्न में कौन-सा valid deductive form है?</p>
+<ul class="bullet-list"><li>A. P→Q, Q, ∴P</li><li>B. P→Q, ¬P, ∴¬Q</li><li>C. P→Q, P, ∴Q</li><li>D. P→Q, Q, ∴¬P</li></ul>
+<div class="answer-box">Correct Answer: C. Modus Ponens</div>
+
+<div class="pyq-tag">Question 7</div>
+<p>"University prestigious है; इसलिए उसका प्रत्येक department prestigious है" — यह कौन-सी fallacy है?</p>
+<ul class="bullet-list"><li>A. Composition</li><li>B. Division</li><li>C. Equivocation</li><li>D. Appeal to force</li></ul>
+<div class="answer-box">Correct Answer: B. Division</div>
+<p class="explain">Explanation: Whole की property को प्रत्येक constituent part पर apply किया गया।</p>
+
+<div class="pyq-tag">Question 8</div>
+<p>Mountain–smoke–fire example में Sādhya क्या है?</p>
+<ul class="bullet-list"><li>A. Mountain</li><li>B. Smoke</li><li>C. Fire</li><li>D. Kitchen</li></ul>
+<div class="answer-box">Correct Answer: C. Fire</div>
+<p class="explain">Explanation: Fire वह property है जिसे mountain के बारे में prove करना है।</p>
+
+<div class="pyq-tag">Question 9</div>
+<p>Nyāya syllogism का सही sequence कौन-सा है?</p>
+<ul class="bullet-list"><li>A. Hetu → Pratijñā → Nigamana → Upanaya → Udāharaṇa</li><li>B. Pratijñā → Hetu → Udāharaṇa → Upanaya → Nigamana</li><li>C. Pratijñā → Upanaya → Hetu → Nigamana → Udāharaṇa</li><li>D. Udāharaṇa → Hetu → Pratijñā → Nigamana → Upanaya</li></ul>
+<div class="answer-box">Correct Answer: B</div>
+
+<div class="pyq-tag">Question 10</div>
+<p>"Devadatta दिन में नहीं खाता, फिर भी मोटा है; इसलिए रात में खाता होगा" — यह है:</p>
+<ul class="bullet-list"><li>A. Anupalabdhi</li><li>B. Upamāna</li><li>C. Arthāpatti</li><li>D. Śabda</li></ul>
+<div class="answer-box">Correct Answer: C. Arthāpatti</div>
+
+<div class="pyq-tag">Question 11</div>
+<p>"Fire is cold because it is a substance" किस Hetvābhāsa का उदाहरण है?</p>
+<ul class="bullet-list"><li>A. Savyabhicāra</li><li>B. Viruddha</li><li>C. Asiddha</li><li>D. Bādhita</li></ul>
+<div class="answer-box">Correct Answer: D. Bādhita</div>
+<p class="explain">Explanation: Direct perception fire के cold होने को contradict करती है।</p>
+
+<div class="pyq-tag">Question 12</div>
+<p>एक Hetu intended conclusion के ठीक opposite को establish करे तो वह है:</p>
+<ul class="bullet-list"><li>A. Viruddha</li><li>B. Satpratipakṣa</li><li>C. Asiddha</li><li>D. Savyabhicāra</li></ul>
+<div class="answer-box">Correct Answer: A. Viruddha</div>
+</section>
+
+<!-- ============ PAGE 19: ONE-PAGE REVISION ============ -->
+<section id="s19" class="topic-section">
+<div class="sec-head"><span class="sec-num">19</span><h2>One-Page Revision</h2></div>
+<table class="data-table">
+<tr><th>Concept</th><th>Quick Recall</th></tr>
+<tr><td>Deductive</td><td>Necessary support</td></tr>
+<tr><td>Inductive</td><td>Probable support</td></tr>
+<tr><td>Sound</td><td>Valid + true premises</td></tr>
+<tr><td>Cogent</td><td>Strong + true premises</td></tr>
+<tr><td>A</td><td>All S are P; S distributed</td></tr>
+<tr><td>E</td><td>No S are P; both distributed</td></tr>
+<tr><td>I</td><td>Some S are P; none distributed</td></tr>
+<tr><td>O</td><td>Some S are not P; P distributed</td></tr>
+<tr><td>Contradictory</td><td>A–O, E–I</td></tr>
+<tr><td>Contrary</td><td>A–E</td></tr>
+<tr><td>Subcontrary</td><td>I–O</td></tr>
+<tr><td>Mood</td><td>A/E/I/O sequence</td></tr>
+<tr><td>Figure</td><td>Middle-term position</td></tr>
+<tr><td>Venn shading</td><td>Empty region</td></tr>
+<tr><td>Venn X</td><td>Existence</td></tr>
+<tr><td>Pratyakṣa</td><td>Perception</td></tr>
+<tr><td>Anumāna</td><td>Inference</td></tr>
+<tr><td>Upamāna</td><td>Comparison</td></tr>
+<tr><td>Śabda</td><td>Reliable testimony</td></tr>
+<tr><td>Arthāpatti</td><td>Necessary postulation</td></tr>
+<tr><td>Anupalabdhi</td><td>Knowledge of absence</td></tr>
+<tr><td>Pakṣa</td><td>Mountain</td></tr>
+<tr><td>Sādhya</td><td>Fire</td></tr>
+<tr><td>Hetu</td><td>Smoke</td></tr>
+<tr><td>Vyāpti</td><td>Smoke–fire invariable relation</td></tr>
+<tr><td>Savyabhicāra</td><td>Irregular reason</td></tr>
+<tr><td>Viruddha</td><td>Opposite-proving reason</td></tr>
+<tr><td>Satpratipakṣa</td><td>Counterbalanced reason</td></tr>
+<tr><td>Asiddha</td><td>Unestablished reason</td></tr>
+<tr><td>Bādhita</td><td>Contradicted by stronger knowledge</td></tr>
+</table>
+<p><strong>Final Master Formula</strong></p>
+<div class="formula">Western Logic: Proposition → Distribution → Opposition → Syllogism → Validity → Fallacy</div>
+<div class="formula">Indian Logic: Pramāṇa → Anumāna → Pakṣa–Hetu–Sādhya → Vyāpti → Hetvābhāsa</div>
+</section>
+
+      <div class="enroll-cta">
+        <div>
+          <h3 class="h-display">Join the Paper-1 Batch</h3>
+          <p>Course fee FREE — ₹500 registration &amp; academic/logistics contribution. Classes daily at 6:30 PM.</p>
+        </div>
+        <a href="enroll.html" class="btn-gold">✓ JOIN BATCH @ ₹500</a>
+      </div>
+    </div>
+  </div>
+</main>
+
+<!-- ================= FOOTER PLACEHOLDER : apna existing footer yahan paste karein ================= -->
+
+<script>
+(function(){
+  var links = document.querySelectorAll('.nav-link');
+  var sections = document.querySelectorAll('.topic-section');
+
+  function onScroll(){
+    var y = window.scrollY + 90;
+    var current = sections[0] && sections[0].id;
+    sections.forEach(function(s){ if (s.offsetTop <= y) current = s.id; });
+    links.forEach(function(l, i){
+      var sec = sections[i];
+      l.classList.toggle('active', sec && sec.id === current);
+    });
+  }
+
+  document.addEventListener('scroll', onScroll, {passive:true});
+
+  links.forEach(function(l, index){
+    l.addEventListener('click', function(e){
+      e.preventDefault();
+
+      // Link ke same position wala section uthao (dono list same order me hain)
+      var target = sections[index];
+
+      if (target){
+        var top = target.getBoundingClientRect().top + window.pageYOffset - 12;
+        window.scrollTo({ top: top, behavior: 'smooth' });
+
+        links.forEach(function(x){ x.classList.remove('active'); });
+        l.classList.add('active');
+
+        if (history.pushState) { history.pushState(null, '', l.getAttribute('href')); }
+      }
+
+      var box = document.getElementById('sidebar-toggle');
+      if (box) box.checked = false;
+    });
+  });
+
+  onScroll();
+})();
+</script>
+</body>
+</html>

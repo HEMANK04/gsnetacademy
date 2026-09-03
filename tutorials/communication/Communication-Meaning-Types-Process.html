@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Communication: Meaning, Types & Process – Full Notes | UGC NET Paper-1</title>
+  <meta name="description" content="Complete tutorial: Communication meaning, nature, types (verbal, non-verbal, formal, informal, interpersonal, mass communication), process (sender, message, channel, receiver, feedback, noise) for UGC NET Paper-1.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; }
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background: #f8f5ee;
+      color: #101a3d;
+    }
+    .h-display { font-family: 'Poppins', sans-serif; font-weight: 800; letter-spacing: -0.01em; }
+    .container { max-width: 1360px; margin: 0 auto; padding: 0 20px; }
+
+    .hero {
+      background: #0b1330;
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+      padding: 28px 0 22px;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      right: -80px;
+      top: -100px;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(232,183,75,0.2), transparent 70%);
+    }
+    .hero-inner { position: relative; }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      padding: 6px 16px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+      color: #e8b74b;
+    }
+    .hero h1 {
+      font-size: clamp(28px, 4.2vw, 44px);
+      margin: 12px 0 6px;
+    }
+    .hero p {
+      color: rgba(255,255,255,0.78);
+      max-width: 680px;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 28px;
+      padding: 28px 0 50px;
+      align-items: start;
+    }
+    @media (max-width: 980px) {
+      .layout { grid-template-columns: 1fr; }
+    }
+
+    .sidebar {
+      position: sticky;
+      top: 16px;
+      max-height: calc(100vh - 40px);
+      overflow-y: auto;
+      background: #fff;
+      border: 1px solid rgba(16,26,61,0.08);
+      border-radius: 16px;
+      padding: 16px 12px;
+      box-shadow: 0 6px 24px rgba(16,26,61,0.05);
+    }
+    .sidebar::-webkit-scrollbar { width: 5px; }
+    .sidebar::-webkit-scrollbar-thumb { background: #dde2ef; border-radius: 8px; }
+    .sidebar-title {
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: #b9852a;
+      padding: 4px 10px 14px;
+    }
+    .nav-link {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 10px;
+      border-radius: 10px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #33406b;
+      line-height: 1.3;
+      transition: 0.1s;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .nav-link:hover { background: #f4f6fc; color: #0b1330; }
+    .nav-link.active {
+      background: #fdf6e7;
+      color: #0b1330;
+    }
+    .nav-num {
+      flex: none;
+      width: 22px;
+      height: 22px;
+      border-radius: 7px;
+      background: #e7eaf5;
+      color: #5b6690;
+      font-size: 11px;
+      font-weight: 800;
+      display: grid;
+      place-items: center;
+    }
+    .nav-link.active .nav-num {
+      background: #e8b74b;
+      color: #0b1330;
+    }
+
+    #sidebar-toggle { display: none; }
+    .mobile-bar { display: none; }
+    @media (max-width: 980px) {
+      .mobile-bar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: #fff;
+        border: 1px solid rgba(16,26,61,0.1);
+        border-radius: 12px;
+        padding: 12px 16px;
+        margin-bottom: 8px;
+        font-weight: 800;
+        font-size: 13.5px;
+        color: #0b1330;
+      }
+      .sidebar { display: none; position: static; max-height: none; }
+      #sidebar-toggle:checked ~ .layout .sidebar { display: block; }
+    }
+
+    .content { min-width: 0; }
+    .topic-card {
+      background: #fff;
+      border: 1px solid rgba(16,26,61,0.08);
+      border-radius: 16px;
+      padding: 20px 20px 16px;
+      margin-bottom: 18px;
+      scroll-margin-top: 20px;
+      display: block;
+    }
+    .topic-card.hidden { display: none; }
+    .sec-head {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+    .sec-num {
+      flex: none;
+      width: 34px;
+      height: 34px;
+      border-radius: 10px;
+      background: #0b1330;
+      color: #e8b74b;
+      font-weight: 800;
+      font-size: 14px;
+      display: grid;
+      place-items: center;
+    }
+    .sec-head h2 {
+      margin: 0;
+      font-size: 19px;
+      font-weight: 800;
+      color: #0b1330;
+    }
+    .topic-card p {
+      font-size: 14.5px;
+      line-height: 1.75;
+      color: #1a254a;
+      margin: 6px 0;
+    }
+    .bullet-list {
+      margin: 8px 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 5px;
+    }
+    .bullet-list li {
+      position: relative;
+      padding-left: 20px;
+      font-size: 14px;
+      line-height: 1.6;
+      color: #1a254a;
+    }
+    .bullet-list li::before {
+      content: "";
+      position: absolute;
+      left: 2px;
+      top: 9px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #d9a53a;
+    }
+    .formula-box {
+      background: #0b1330;
+      color: #fdeec2;
+      font-weight: 700;
+      font-size: 13.6px;
+      padding: 10px 16px;
+      border-radius: 10px;
+      margin: 10px 0;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 12px 0;
+      font-size: 13.6px;
+      display: block;
+      overflow-x: auto;
+    }
+    .data-table th, .data-table td {
+      border: 1px solid #e7eaf5;
+      padding: 8px 12px;
+      text-align: left;
+      color: #1a254a;
+      white-space: normal;
+    }
+    .data-table th {
+      background: #f4f6fc;
+      color: #0b1330;
+      font-weight: 800;
+    }
+    .pyq-tag {
+      display: inline-block;
+      background: #fdf6e7;
+      color: #b9852a;
+      font-weight: 800;
+      font-size: 12px;
+      padding: 4px 12px;
+      border-radius: 8px;
+      margin: 12px 0 6px;
+    }
+    .answer-box {
+      background: #eefaf2;
+      border: 1px solid #bfe8cc;
+      color: #1a7a4c;
+      font-weight: 700;
+      font-size: 13.6px;
+      padding: 6px 14px;
+      border-radius: 9px;
+      margin: 6px 0;
+    }
+    .explain {
+      background: #f4f6fc;
+      border-radius: 9px;
+      padding: 6px 14px;
+      font-size: 13.6px;
+      color: #1a254a;
+    }
+    .subtopic {
+      padding: 14px 0 6px;
+      border-top: 1px dashed #e7eaf5;
+    }
+    .subtopic:first-of-type { border-top: none; padding-top: 2px; }
+    .subhead {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 6px;
+    }
+    .sub-num {
+      flex: none;
+      width: 26px;
+      height: 26px;
+      border-radius: 8px;
+      background: #fdf6e7;
+      color: #b9852a;
+      font-weight: 800;
+      font-size: 12px;
+      display: grid;
+      place-items: center;
+    }
+    .subhead h3 {
+      margin: 0;
+      font-size: 15.5px;
+      font-weight: 800;
+      color: #0b1330;
+    }
+    .enroll-cta {
+      background: #0b1330;
+      color: #fff;
+      border-radius: 16px;
+      padding: 24px 24px;
+      margin-top: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+      overflow: hidden;
+    }
+    .enroll-cta::before {
+      content: "";
+      position: absolute;
+      right: -40px;
+      top: -40px;
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(232,183,75,0.2), transparent 70%);
+    }
+    .enroll-cta h3 { margin: 0 0 4px; font-size: 20px; }
+    .enroll-cta p { margin: 0; color: rgba(255,255,255,0.75); font-size: 13.5px; max-width: 480px; }
+    .btn-gold {
+      background: #e8b74b;
+      color: #0b1330;
+      font-weight: 800;
+      padding: 10px 22px;
+      border-radius: 10px;
+      font-size: 13.5px;
+      white-space: nowrap;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="container hero-inner">
+    <span class="eyebrow">★ UGC NET Paper-I · Communication</span>
+    <h1 class="h-display">Communication: Meaning, Types & Process</h1>
+    <p>Complete tutorial: meaning, nature, characteristics, types (verbal, non-verbal, formal, informal, interpersonal, mass communication), process (sender, message, channel, receiver, feedback, noise) for UGC NET Paper-1.</p>
+  </div>
+</section>
+
+<main class="container">
+  <input type="checkbox" id="sidebar-toggle">
+  <label for="sidebar-toggle" class="mobile-bar">
+    <span>📑 On this page</span>
+    <span>☰ Menu</span>
+  </label>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebarNav">
+      <p class="sidebar-title">On this page</p>
+<a href="/tutorials/communication/communication-meaning-types-process/meaning-communication" class="nav-link active">
+  <span class="nav-num">1</span>Meaning of Communication
+</a>
+<a href="/tutorials/communication/communication-meaning-types-process/nature-characteristics" class="nav-link">
+  <span class="nav-num">2</span>Nature & Characteristics
+</a>
+<a href="/tutorials/communication/communication-meaning-types-process/process-communication" class="nav-link">
+  <span class="nav-num">3</span>Process of Communication
+</a>
+<a href="/tutorials/communication/communication-meaning-types-process/elements-process" class="nav-link">
+  <span class="nav-num">4</span>Elements of Communication
+</a>
+<a href="/tutorials/communication/communication-meaning-types-process/feedback" class="nav-link">
+  <span class="nav-num">5</span>Feedback
+</a>
+<a href="/tutorials/communication/communication-meaning-types-process/noise-barriers" class="nav-link">
+  <span class="nav-num">6</span>Noise & Barriers
+</a>
+<a href="/tutorials/communication/communication-meaning-types-process/types-communication" class="nav-link">
+  <span class="nav-num">7</span>Types of Communication
+</a>
+<a href="/tutorials/communication/communication-meaning-types-process/verbal-communication" class="nav-link">
+  <span class="nav-num">8</span>Verbal Communication
+</a>
+<a href="/tutorials/communication/communication-meaning-types-process/non-verbal-communication" class="nav-link">
+  <span class="nav-num">9</span>Non-Verbal Communication
+</a>
+<a href="/tutorials/communication/communication-meaning-types-process/kinesics-proxemics-paralanguage" class="nav-link">
+  <span class="nav-num">10</span>Kinesics, Proxemics & Paralanguage
+</a>
+<a href="/tutorials/communication/communication-meaning-types-process/formal-informal" class="nav-link">
+  <span class="nav-num">11</span>Formal vs Informal Communication
+</a>
+<a href="/tutorials/communication/communication-meaning-types-process/interpersonal-mass" class="nav-link">
+  <span class="nav-num">12</span>Interpersonal & Mass Communication
+</a>
+<a href="/tutorials/communication/communication-meaning-types-process/communication-flows" class="nav-link">
+  <span class="nav-num">13</span>Communication Flows
+</a>
+<a href="/tutorials/communication/communication-meaning-types-process/effective-communication" class="nav-link">
+  <span class="nav-num">14</span>Effective Communication
+</a>
+<a href="/tutorials/communication/communication-meaning-types-process/7cs-communication" class="nav-link">
+  <span class="nav-num">15</span>7 C's of Communication
+</a>
+<a href="/tutorials/communication/communication-meaning-types-process/exam-traps" class="nav-link">
+  <span class="nav-num">16</span>Common Exam Traps
+</a>
+<a href="/tutorials/communication/communication-meaning-types-process/practice-questions" class="nav-link">
+  <span class="nav-num">17</span>Practice Questions
+</a>
+<a href="/tutorials/communication/communication-meaning-types-process/one-page-revision" class="nav-link">
+  <span class="nav-num">18</span>One-Page Revision
+</a>
+    </aside>
+
+    <div class="content" id="contentArea">
+      <!-- ===== CARDS ===== -->
+      <div id="meaning-communication" class="topic-card"><div class="sec-head"><span class="sec-num">1</span><h2>Meaning of Communication — संचार का अर्थ</h2></div><p><strong>Communication</strong> Latin word <strong>"communicare"</strong> से बना है, जिसका अर्थ है <strong>share, impart या make common</strong>।</p><p><strong>Communication</strong> वह प्रक्रिया है जिसके माध्यम से <strong>sender</strong> किसी <strong>message</strong> को <strong>channel</strong> के माध्यम से <strong>receiver</strong> तक पहुँचाता है और <strong>feedback</strong> प्राप्त करता है।</p><div class="formula-box">Communication = Sender + Message + Channel + Receiver + Feedback</div><p><strong>Key Definitions:</strong></p><ul class="bullet-list"><li><strong>Information sharing</strong> — सूचना का आदान-प्रदान</li><li><strong>Meaning making</strong> — अर्थ का निर्माण</li><li><strong>Understanding</strong> — आपसी समझ</li><li><strong>Influence</strong> — प्रभाव डालना</li></ul><p><strong>सरल उदाहरण:</strong></p><ul class="bullet-list"><li><strong>Teacher → Students:</strong> Teacher concept explain करता है, students समझते हैं और questions पूछते हैं → यह communication है।</li><li><strong>Two friends:</strong> दोस्त आपस में बात करते हैं और एक-दूसरे को समझते हैं → यह communication है।</li></ul></div>
+
+      <div id="nature-characteristics" class="topic-card"><div class="sec-head"><span class="sec-num">2</span><h2>Nature & Characteristics — प्रकृति एवं विशेषताएँ</h2></div><ul class="bullet-list"><li><strong>Two-Way Process — द्वि-दिशात्मक प्रक्रिया:</strong> Communication में sender और receiver दोनों active होते हैं।</li><li><strong>Continuous Process — सतत प्रक्रिया:</strong> Communication ongoing और never-ending है।</li><li><strong>Dynamic — गतिशील:</strong> परिस्थिति, context और feedback के अनुसार बदलता है।</li><li><strong>Goal-Oriented — उद्देश्यपूर्ण:</strong> Communication का कोई न कोई उद्देश्य होता है।</li><li><strong>Pervasive — सर्वव्यापी:</strong> Communication हर जगह होता है — व्यक्तिगत, संगठनात्मक, सामाजिक।</li><li><strong>Contextual — सन्दर्भ-आधारित:</strong> Context के अनुसार communication का अर्थ बदलता है।</li><li><strong>Involves Understanding — समझ पर आधारित:</strong> Communication तभी सफल होता है जब receiver message को समझे।</li><li><strong>Exchange of Meaning — अर्थ का आदान-प्रदान:</strong> Communication केवल words नहीं, बल्कि meaning का exchange है।</li><li><strong>Irreversible — अपरिवर्तनीय:</strong> Communicate किए गए message को वापस नहीं लिया जा सकता।</li><li><strong>Unavoidable — अपरिहार्य:</strong> चाहे हम बोलें या न बोलें, communication होता ही है (even silence communicates)।</li></ul></div>
+
+      <div id="process-communication" class="topic-card"><div class="sec-head"><span class="sec-num">3</span><h2>Process of Communication — संचार की प्रक्रिया</h2></div><div class="formula-box">Sender → Encoding → Message → Channel → Decoding → Receiver → Feedback</div><p><strong>Simple Flow:</strong></p><div class="formula-box">Idea → Encoding → Message → Transmission → Reception → Decoding → Understanding → Response</div><p><strong>Explanation:</strong></p><ul class="bullet-list"><li><strong>Sender (संदेश भेजने वाला):</strong> Communication शुरू करता है</li><li><strong>Encoding (संकेतन):</strong> Idea को words, symbols या gestures में बदलना</li><li><strong>Message (संदेश):</strong> वह content जो communicate किया जा रहा है</li><li><strong>Channel (माध्यम):</strong> वह medium जिसके माध्यम से message भेजा जाता है</li><li><strong>Receiver (संदेश पाने वाला):</strong> वह व्यक्ति जिसे message भेजा गया है</li><li><strong>Decoding (विसंकेतन):</strong> Receiver message को interpret/समझता है</li><li><strong>Feedback (प्रतिपुष्टि):</strong> Receiver की response sender तक वापस आती है</li></ul></div>
+
+      <div id="elements-process" class="topic-card"><div class="sec-head"><span class="sec-num">4</span><h2>Elements of Communication — संचार के तत्व</h2></div><ul class="bullet-list"><li><strong>Sender (Communicator) — संदेश भेजने वाला:</strong> Communication का source। इसे <strong>encoder</strong> भी कहते हैं।</li><li><strong>Encoding — संकेतन:</strong> Idea को understand/meaningful form में बदलना (words, gestures, symbols)</li><li><strong>Message — संदेश:</strong> वह content जो communicate किया जा रहा है (verbal, non-verbal, written)</li><li><strong>Channel — माध्यम:</strong> वह medium/route जिससे message travel करता है (speech, writing, gestures, visual)</li><li><strong>Receiver — संदेश पाने वाला:</strong> वह व्यक्ति जो message प्राप्त करता है और उसे decode करता है। इसे <strong>decoder</strong> भी कहते हैं।</li><li><strong>Decoding — विसंकेतन:</strong> Receiver द्वारा message को interpret/समझना</li><li><strong>Feedback — प्रतिपुष्टि:</strong> Receiver की response sender तक वापस आना</li><li><strong>Noise — शोर/बाधा:</strong> Communication में आने वाली कोई भी obstacle (physical, psychological, semantic)</li><li><strong>Context — सन्दर्भ:</strong> वह environment/situation जिसमें communication होता है</li></ul></div>
+
+      <div id="feedback" class="topic-card"><div class="sec-head"><span class="sec-num">5</span><h2>Feedback — प्रतिपुष्टि</h2></div><p><strong>Feedback</strong> receiver की response है जो sender को यह बताती है कि message <strong>प्राप्त, decoded और understood</strong> हो गया है या नहीं।</p><div class="formula-box">Feedback = Receiver's Response to Sender</div><p><strong>Types of Feedback:</strong></p><ul class="bullet-list"><li><strong>Positive — सकारात्मक:</strong> Supporting, encouraging, agreeing</li><li><strong>Negative — नकारात्मक:</strong> Disagreeing, correcting, criticizing (constructive हो सकता है)</li><li><strong>Immediate — तात्कालिक:</strong> Instantly given (in face-to-face communication)</li><li><strong>Delayed — विलंबित:</strong> Given after some time (in written communication)</li><li><strong>Verbal — मौखिक:</strong> Spoken feedback</li><li><strong>Non-Verbal — अमौखिक:</strong> Gestures, expressions, body language</li></ul><p><strong>Importance of Feedback:</strong></p><ul class="bullet-list"><li>Communication को <strong>complete</strong> बनाता है</li><li>Message की <strong>understanding</strong> को verify करता है</li><li><strong>Misunderstanding</strong> को correct करता है</li><li>Sender को <strong>adjust</strong> करने का अवसर देता है</li><li><strong>Two-way communication</strong> सुनिश्चित करता है</li></ul></div>
+
+      <div id="noise-barriers" class="topic-card"><div class="sec-head"><span class="sec-num">6</span><h2>Noise & Barriers — शोर/बाधाएँ</h2></div><p><strong>Noise/Barrier</strong> communication में कोई भी ऐसी obstacle जो message की <strong>effective transmission या understanding</strong> में बाधा डालती है।</p><p><strong>Types of Barriers:</strong></p><ul class="bullet-list"><li><strong>Physical — भौतिक:</strong> Noise, distance, poor lighting, technical issues</li><li><strong>Semantic — अर्थगत:</strong> Language, jargon, ambiguous words, misinterpretation</li><li><strong>Psychological — मनोवैज्ञानिक:</strong> Prejudice, emotions, stress, perceptions, ego</li><li><strong>Organizational — संगठनात्मक:</strong> Hierarchy, rules, communication gap, poor structure</li><li><strong>Cultural — सांस्कृतिक:</strong> Different norms, values, beliefs, customs</li><li><strong>Physiological — शारीरिक:</strong> Hearing impairment, fatigue, illness, speech problems</li><li><strong>Attitudinal — दृष्टिकोणात्मक:</strong> Closed-mindedness, bias, stereotypes, resistance to change</li></ul></div>
+
+      <div id="types-communication" class="topic-card"><div class="sec-head"><span class="sec-num">7</span><h2>Types of Communication — संचार के प्रकार</h2></div><p><strong>Major Classifications:</strong></p><ul class="bullet-list"><li><strong>Based on Medium — माध्यम के आधार पर:</strong> Verbal, Non-Verbal, Written, Visual</li><li><strong>Based on Relationship/Structure — सम्बन्ध/संरचना के आधार पर:</strong> Formal, Informal</li><li><strong>Based on Number of People — लोगों की संख्या के आधार पर:</strong> Intrapersonal, Interpersonal, Group, Mass</li><li><strong>Based on Direction — दिशा के आधार पर:</strong> Downward, Upward, Horizontal, Diagonal</li><li><strong>Based on Feedback — प्रतिपुष्टि के आधार पर:</strong> One-way, Two-way</li></ul></div>
+
+      <div id="verbal-communication" class="topic-card"><div class="sec-head"><span class="sec-num">8</span><h2>Verbal Communication — मौखिक संचार</h2></div><p><strong>Verbal Communication</strong> में <strong>words</strong> का उपयोग किया जाता है — spoken या written।</p><p><strong>Two Types:</strong></p><ul class="bullet-list"><li><strong>Oral — मौखिक:</strong> Face-to-face conversation, telephone, speeches, presentations, meetings, interviews</li><li><strong>Written — लिखित:</strong> Letters, emails, reports, memos, messages, notices, articles</li></ul><p><strong>Advantages:</strong></p><ul class="bullet-list"><li>Immediate feedback (oral)</li><li>Permanent record (written)</li><li>Clarity and precision</li><li>Can be formal or informal</li></ul><p><strong>Limitations:</strong></p><ul class="bullet-list"><li>Misinterpretation possible</li><li>Language barriers</li><li>No voice/expression in written</li><li>Delayed feedback in written</li></ul></div>
+
+      <div id="non-verbal-communication" class="topic-card"><div class="sec-head"><span class="sec-num">9</span><h2>Non-Verbal Communication — अमौखिक संचार</h2></div><p><strong>Non-Verbal Communication</strong> में <strong>words का उपयोग नहीं</strong> होता। इसमें <strong>gestures, expressions, body language, tone</strong> आदि शामिल हैं।</p><div class="formula-box">Non-Verbal = Body Language + Expressions + Gestures + Tone</div><p><strong>Types:</strong></p><ul class="bullet-list"><li><strong>Kinesics — गतिकी:</strong> Body movements, gestures, facial expressions</li><li><strong>Proxemics — दूरी-विज्ञान:</strong> Personal space, distance</li><li><strong>Paralanguage — अशाब्दिक स्वर:</strong> Tone, pitch, volume, pace, pauses</li><li><strong>Chronemics — समय-विज्ञान:</strong> Use of time (punctuality, waiting)</li><li><strong>Haptics — स्पर्श-विज्ञान:</strong> Touch</li><li><strong>Oculesics — दृष्टि-विज्ञान:</strong> Eye contact</li><li><strong>Artifacts — वस्त्र/आभूषण:</strong> Clothing, jewellery, appearance</li><li><strong>Silence — मौन:</strong> Not speaking</li></ul></div>
+
+      <div id="kinesics-proxemics-paralanguage" class="topic-card"><div class="sec-head"><span class="sec-num">10</span><h2>Kinesics, Proxemics & Paralanguage — प्रमुख अमौखिक तत्व</h2></div><ul class="bullet-list"><li><strong>Kinesics — गतिकी:</strong><ul><li>Facial expressions — चेहरे के भाव</li><li>Gestures — हाथ/शरीर की हरकतें (thumbs up, waving, pointing)</li><li>Posture — शरीर की मुद्रा (sitting, standing, leaning)</li><li>Eye contact — आँखों का संपर्क</li></ul></li><li><strong>Proxemics — दूरी-विज्ञान:</strong><ul><li>Intimate zone — 0-18 inches</li><li>Personal zone — 18 inches to 4 feet</li><li>Social zone — 4-12 feet</li><li>Public zone — 12+ feet</li></ul></li><li><strong>Paralanguage — अशाब्दिक स्वर:</strong><ul><li>Pitch — उच्च/नीच</li><li>Volume — आवाज की तीव्रता</li><li>Speed — बोलने की गति</li><li>Pauses — रुकना</li><li>Tone — स्वर (angry, happy, sad, sarcastic)</li><li>Emphasis — जोर</li></ul></li></ul></div>
+
+      <div id="formal-informal" class="topic-card"><div class="sec-head"><span class="sec-num">11</span><h2>Formal vs Informal Communication — औपचारिक vs अनौपचारिक संचार</h2></div><table class="data-table"><tr><th>Basis</th><th>Formal Communication</th><th>Informal Communication</th></tr><tr><td>Structure</td><td>Defined, official channels</td><td>No defined structure</td></tr><tr><td>Nature</td><td>Professional, official</td><td>Personal, social</td></tr><tr><td>Flow</td><td>Hierarchical (downward/upward/horizontal)</td><td>Any direction (grapevine)</td></tr><tr><td>Documentation</td><td>Usually documented</td><td>Rarely documented</td></tr><tr><td>Speed</td><td>Slower</td><td>Faster</td></tr><tr><td>Accuracy</td><td>More accurate</td><td>May be inaccurate (rumours)</td></tr><tr><td>Examples</td><td>Official memos, reports, meetings</td><td>Grapevine, water cooler talk</td></tr></table></div>
+
+      <div id="interpersonal-mass" class="topic-card"><div class="sec-head"><span class="sec-num">12</span><h2>Interpersonal & Mass Communication — अंतर्वैयक्तिक एवं जनसंचार</h2></div><ul class="bullet-list"><li><strong>Intrapersonal — आंतरिक संचार:</strong> Self-talk, thinking, inner dialogue। एक व्यक्ति अपने अंदर communicate करता है।</li><li><strong>Interpersonal — अंतर्वैयक्तिक:</strong> Two or more people के बीच direct, face-to-face communication। Immediate feedback।</li><li><strong>Small Group — छोटा समूह:</strong> 3-15 people। Discussion, meetings, brainstorming।</li><li><strong>Public Communication — सार्वजनिक संचार:</strong> One person to a large audience। Speeches, lectures, presentations। Limited feedback।</li><li><strong>Mass Communication — जनसंचार:</strong> Large, anonymous audience through media (TV, radio, newspapers, Internet). Delayed/limited feedback।</li></ul></div>
+
+      <div id="communication-flows" class="topic-card"><div class="sec-head"><span class="sec-num">13</span><h2>Communication Flows — संचार की दिशाएँ</h2></div><ul class="bullet-list"><li><strong>Downward — नीचे की ओर:</strong> Higher to lower level (manager → employees). Instructions, policies, feedback.</li><li><strong>Upward — ऊपर की ओर:</strong> Lower to higher level (employees → manager). Reports, suggestions, grievances.</li><li><strong>Horizontal/Lateral — समान स्तर:</strong> Same level (peer to peer). Coordination, sharing, cooperation.</li><li><strong>Diagonal — विकर्ण:</strong> Different departments, different levels. Cross-functional communication.</li><li><strong>Grapevine — बेल/अनौपचारिक:</strong> Informal, unofficial channel. Rumours, gossip, social interactions. (Not based on official hierarchy)</li></ul></div>
+
+      <div id="effective-communication" class="topic-card"><div class="sec-head"><span class="sec-num">14</span><h2>Effective Communication — प्रभावी संचार</h2></div><p><strong>Effective Communication</strong> तब होता है जब <strong>sender का intended message</strong> receiver द्वारा <strong>सही अर्थ में समझ</strong> लिया जाता है।</p><p><strong>Characteristics:</strong></p><ul class="bullet-list"><li>Clear — स्पष्ट</li><li>Concise — संक्षिप्त</li><li>Complete — पूर्ण</li><li>Correct — सही</li><li>Concrete — ठोस</li><li>Courteous — विनम्र</li><li>Coherent — सुसंगत</li></ul><p><strong>Importance:</strong></p><ul class="bullet-list"><li>Understanding बढ़ता है</li><li>Relationships improve होते हैं</li><li>Productivity बढ़ती है</li><li>Conflicts कम होते हैं</li><li>Better decision making</li></ul></div>
+
+      <div id="7cs-communication" class="topic-card"><div class="sec-head"><span class="sec-num">15</span><h2>7 C's of Communication — संचार के 7 सी</h2></div><ul class="bullet-list"><li><strong>Clarity — स्पष्टता:</strong> Message को स्पष्ट और समझने योग्य भाषा में कहें।</li><li><strong>Conciseness — संक्षिप्तता:</strong> Unnecessary words से बचें। Short and to the point।</li><li><strong>Completeness — पूर्णता:</strong> All necessary information provide करें।</li><li><strong>Correctness — शुद्धता:</strong> Facts, grammar, spelling, punctuation — सब सही होना चाहिए।</li><li><strong>Concreteness — ठोसता:</strong> Abstract ideas को specific facts/figures से support करें।</li><li><strong>Courtesy — विनम्रता:</strong> Respectful, polite, considerate language।</li><li><strong>Coherence — सुसंगति:</strong> Logical flow, all parts well-connected।</li></ul></div>
+
+      <div id="exam-traps" class="topic-card"><div class="sec-head"><span class="sec-num">16</span><h2>Common Exam Traps — सामान्य परीक्षा जाल</h2></div><ul class="bullet-list"><li><strong>Trap 1:</strong> Communication = only verbal — ❌ गलत। Communication verbal और non-verbal दोनों है।</li><li><strong>Trap 2:</strong> Feedback = not necessary — ❌ गलत। Feedback communication को complete करता है।</li><li><strong>Trap 3:</strong> Noise = only physical sound — ❌ गलत। Noise psychological, semantic, cultural भी हो सकता है।</li><li><strong>Trap 4:</strong> Formal = better than informal — ❌ गलत। Both have their own purpose and importance।</li><li><strong>Trap 5:</strong> Non-verbal = only gestures — ❌ गलत। Non-verbal में tone, expressions, distance, touch, time आदि सब शामिल हैं।</li><li><strong>Trap 6:</strong> Grapevine = always inaccurate — ❌ गलत। Grapevine often accurate हो सकता है।</li><li><strong>Trap 7:</strong> Communication is one-way — ❌ गलत। Communication is always two-way (sender → receiver → feedback)।</li><li><strong>Trap 8:</strong> Mass communication = interpersonal — ❌ गलत। Mass communication large, anonymous audience को है।</li></ul></div>
+
+      <div id="practice-questions" class="topic-card"><div class="sec-head"><span class="sec-num">17</span><h2>Practice Questions — अभ्यास प्रश्न</h2></div>
+      <div class="pyq-tag">Question 1</div>
+      <p>Which of the following completes the communication process?</p>
+      <ul class="bullet-list"><li>A. Sender</li><li>B. Message</li><li>C. Channel</li><li>D. Feedback</li></ul>
+      <div class="answer-box">Answer: D. Feedback</div>
+      <p class="explain">Explanation: Feedback receiver की response है जो communication को complete करता है।</p>
+
+      <div class="pyq-tag">Question 2</div>
+      <p>Body language, gestures and facial expressions come under:</p>
+      <ul class="bullet-list"><li>A. Verbal communication</li><li>B. Non-verbal communication</li><li>C. Written communication</li><li>D. Mass communication</li></ul>
+      <div class="answer-box">Answer: B. Non-verbal communication</div>
+      <p class="explain">Explanation: Kinesics (body language, gestures, facial expressions) non-verbal communication का हिस्सा है।</p>
+
+      <div class="pyq-tag">Question 3</div>
+      <p>What is the study of personal space and distance called?</p>
+      <ul class="bullet-list"><li>A. Kinesics</li><li>B. Proxemics</li><li>C. Paralanguage</li><li>D. Haptics</li></ul>
+      <div class="answer-box">Answer: B. Proxemics</div>
+      <p class="explain">Explanation: Proxemics — personal space और distance का study। Kinesics — body movements; Paralanguage — voice qualities; Haptics — touch।</p>
+
+      <div class="pyq-tag">Question 4</div>
+      <p>Rumours and gossip in an organisation travel through:</p>
+      <ul class="bullet-list"><li>A. Formal channel</li><li>B. Grapevine</li><li>C. Downward communication</li><li>D. Upward communication</li></ul>
+      <div class="answer-box">Answer: B. Grapevine</div>
+      <p class="explain">Explanation: Grapevine informal channel है — rumours, gossip, casual conversations इसी के माध्यम से travel करते हैं।</p>
+
+      <div class="pyq-tag">Question 5</div>
+      <p>Which of the following is NOT a type of noise/barrier in communication?</p>
+      <ul class="bullet-list"><li>A. Physical</li><li>B. Semantic</li><li>C. Positive</li><li>D. Psychological</li></ul>
+      <div class="answer-box">Answer: C. Positive</div>
+      <p class="explain">Explanation: Noise/barrier physical, semantic, psychological, cultural, organizational, physiological आदि हो सकता है — पर "positive" barrier नहीं है।</p>
+
+      <div class="pyq-tag">Question 6</div>
+      <p>In the communication process, the receiver's response is called:</p>
+      <ul class="bullet-list"><li>A. Encoding</li><li>B. Decoding</li><li>C. Feedback</li><li>D. Noise</li></ul>
+      <div class="answer-box">Answer: C. Feedback</div>
+      <p class="explain">Explanation: Feedback receiver की response है जो sender तक वापस आती है। Encoding sender का काम है; decoding receiver का काम है।</p></div>
+
+      <div id="one-page-revision" class="topic-card"><div class="sec-head"><span class="sec-num">18</span><h2>One-Page Revision — एक पेज में पुनरावृत्ति</h2></div>
+      <div class="formula-box">Communication = Sender + Encoding + Message + Channel + Decoding + Receiver + Feedback</div>
+      <div class="formula-box">Feedback = Completes Communication | Noise = Barrier to Communication</div>
+
+      <p><strong>Types of Communication:</strong></p>
+      <ul class="bullet-list"><li>Verbal (Oral, Written) + Non-Verbal (Body Language, Tone, Expressions)</li><li>Formal + Informal (Grapevine)</li><li>Intrapersonal + Interpersonal + Group + Public + Mass</li></ul>
+
+      <p><strong>Non-Verbal Elements:</strong></p>
+      <ul class="bullet-list"><li>Kinesics — Body language, gestures, expressions</li><li>Proxemics — Distance/space</li><li>Paralanguage — Tone, pitch, volume, speed</li><li>Haptics — Touch</li><li>Chronemics — Use of time</li><li>Oculesics — Eye contact</li></ul>
+
+      <p><strong>Communication Flows:</strong></p>
+      <ul class="bullet-list"><li>Downward, Upward, Horizontal, Diagonal, Grapevine</li></ul>
+
+      <p><strong>7 C's:</strong></p>
+      <ul class="bullet-list"><li>Clarity, Conciseness, Completeness, Correctness, Concreteness, Courtesy, Coherence</li></ul>
+
+      <p><strong>Barriers:</strong></p>
+      <ul class="bullet-list"><li>Physical, Semantic, Psychological, Cultural, Organizational, Physiological, Attitudinal</li></ul>
+
+      <p><strong>Exam Formula:</strong></p>
+      <div class="formula-box">Communication = Sender → Message → Receiver → Feedback (complete the loop)</div>
+      <p><em>UGC NET में Communication के questions अक्सर process, elements, types और barriers पर based होते हैं।</em></p></div>
+
+      <div class="enroll-cta"><div><h3 class="h-display">Join the Paper-1 Batch</h3><p>Course fee FREE — ₹500 registration & academic/logistics contribution. Classes daily at 6:30 PM.</p></div><a href="#" class="btn-gold">✓ JOIN BATCH @ ₹500</a></div>
+    </div>
+  </div>
+</main>
+
+<script>
+(function() {
+
+  const BASE_PATH =
+    "/tutorials/communication/communication-meaning-types-process";
+
+  const links = document.querySelectorAll(".nav-link");
+  const cards = document.querySelectorAll(".topic-card");
+  const content = document.getElementById("contentArea");
+  const sidebarToggle = document.getElementById("sidebar-toggle");
+
+
+  // Get topic slug from current URL
+  function getSlugFromPath() {
+
+    const path = window.location.pathname
+      .replace(/\/+$/, "");
+
+    if (path.startsWith(BASE_PATH + "/")) {
+
+      return path
+        .substring((BASE_PATH + "/").length)
+        .split("/")[0];
+
+    }
+
+    return null;
+  }
+
+
+  // Update browser URL
+  function updateUrl(slug, replace = false) {
+
+    const newPath =
+      BASE_PATH + "/" + slug;
+
+    if (window.location.pathname !== newPath) {
+
+      if (replace) {
+        history.replaceState(null, "", newPath);
+      } else {
+        history.pushState(null, "", newPath);
+      }
+
+    }
+  }
+
+
+  // Update active sidebar link
+  function updateActiveLink(slug) {
+
+    links.forEach(function(link) {
+
+      const href =
+        link.getAttribute("href");
+
+      if (!href) return;
+
+      const linkSlug =
+        href
+          .split("/")
+          .filter(Boolean)
+          .pop();
+
+      link.classList.toggle(
+        "active",
+        linkSlug === slug
+      );
+
+    });
+  }
+
+
+  // Show selected topic card
+  function showCard(slug, updateHistory = true) {
+
+    cards.forEach(function(card) {
+      card.classList.add("hidden");
+    });
+
+
+    const target =
+      document.getElementById(slug);
+
+
+    // Topic not found
+    if (!target) {
+
+      const first = cards[0];
+
+      if (first) {
+
+        first.classList.remove("hidden");
+
+        const firstSlug = first.id;
+
+        updateActiveLink(firstSlug);
+
+        updateUrl(firstSlug, true);
+
+      }
+
+      return;
+    }
+
+
+    // Show selected topic
+    target.classList.remove("hidden");
+
+    updateActiveLink(slug);
+
+
+    // Update URL
+    if (updateHistory) {
+      updateUrl(slug);
+    }
+
+
+    // Close mobile sidebar
+    if (sidebarToggle) {
+      sidebarToggle.checked = false;
+    }
+
+
+    // Scroll to content
+    if (content) {
+
+      const top =
+        content.getBoundingClientRect().top +
+        window.pageYOffset -
+        10;
+
+      window.scrollTo({
+        top: top,
+        behavior: "smooth"
+      });
+
+    }
+
+  }
+
+
+  // Sidebar link click
+  links.forEach(function(link) {
+
+    link.addEventListener("click", function(e) {
+
+      e.preventDefault();
+
+      const href =
+        this.getAttribute("href");
+
+      if (!href) return;
+
+
+      const slug =
+        href
+          .split("/")
+          .filter(Boolean)
+          .pop();
+
+
+      if (!slug) return;
+
+
+      console.log("Clicked topic:", slug);
+
+      showCard(slug, true);
+
+    });
+
+  });
+
+
+  // Initial page load
+  function initFromPath() {
+
+    let slug =
+      getSlugFromPath();
+
+
+    if (
+      !slug ||
+      !document.getElementById(slug)
+    ) {
+
+      slug =
+        cards[0]?.id ||
+        "meaning-communication";
+
+    }
+
+
+    // Show topic without creating history entry
+    showCard(slug, false);
+
+
+    // Set correct nested URL
+    updateUrl(slug, true);
+
+  }
+
+
+  initFromPath();
+
+
+  // Browser Back / Forward
+  window.addEventListener(
+    "popstate",
+    function() {
+
+      const slug =
+        getSlugFromPath();
+
+
+      if (
+        slug &&
+        document.getElementById(slug)
+      ) {
+
+        showCard(slug, false);
+
+      } else {
+
+        const firstSlug =
+          cards[0]?.id ||
+          "meaning-communication";
+
+        showCard(firstSlug, false);
+
+      }
+
+    }
+  );
+
+
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Analogy / सादृश्य – Full Notes | UGC NET Paper-1</title>
+  <meta name="description" content="Complete tutorial: Analogy meaning & structure (A : B :: C : D), Types of analogy (Synonym/Antonym, Part–Whole, Cause–Effect, Tool–Function, Worker–Workplace, Degree & Classification), Strength of analogical arguments, Relevant similarity vs Superficial similarity for UGC NET Paper-1 Logical Reasoning.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; }
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background: #f8f5ee;
+      color: #101a3d;
+    }
+    .h-display { font-family: 'Poppins', sans-serif; font-weight: 800; letter-spacing: -0.01em; }
+    .container { max-width: 1360px; margin: 0 auto; padding: 0 20px; }
+
+    .hero {
+      background: #0b1330;
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+      padding: 28px 0 22px;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      right: -80px;
+      top: -100px;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(232,183,75,0.2), transparent 70%);
+    }
+    .hero-inner { position: relative; }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      padding: 6px 16px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+      color: #e8b74b;
+    }
+    .hero h1 {
+      font-size: clamp(28px, 4.2vw, 44px);
+      margin: 12px 0 6px;
+    }
+    .hero p {
+      color: rgba(255,255,255,0.78);
+      max-width: 680px;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 28px;
+      padding: 28px 0 50px;
+      align-items: start;
+    }
+    @media (max-width: 980px) {
+      .layout { grid-template-columns: 1fr; }
+    }
+
+    .sidebar {
+      position: sticky;
+      top: 16px;
+      max-height: calc(100vh - 40px);
+      overflow-y: auto;
+      background: #fff;
+      border: 1px solid rgba(16,26,61,0.08);
+      border-radius: 16px;
+      padding: 16px 12px;
+      box-shadow: 0 6px 24px rgba(16,26,61,0.05);
+    }
+    .sidebar::-webkit-scrollbar { width: 5px; }
+    .sidebar::-webkit-scrollbar-thumb { background: #dde2ef; border-radius: 8px; }
+    .sidebar-title {
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: #b9852a;
+      padding: 4px 10px 14px;
+    }
+    .nav-link {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 10px;
+      border-radius: 10px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #33406b;
+      line-height: 1.3;
+      transition: 0.1s;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .nav-link:hover { background: #f4f6fc; color: #0b1330; }
+    .nav-link.active {
+      background: #fdf6e7;
+      color: #0b1330;
+    }
+    .nav-num {
+      flex: none;
+      width: 22px;
+      height: 22px;
+      border-radius: 7px;
+      background: #e7eaf5;
+      color: #5b6690;
+      font-size: 11px;
+      font-weight: 800;
+      display: grid;
+      place-items: center;
+    }
+    .nav-link.active .nav-num {
+      background: #e8b74b;
+      color: #0b1330;
+    }
+
+    #sidebar-toggle { display: none; }
+    .mobile-bar { display: none; }
+    @media (max-width: 980px) {
+      .mobile-bar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: #fff;
+        border: 1px solid rgba(16,26,61,0.1);
+        border-radius: 12px;
+        padding: 12px 16px;
+        margin-bottom: 8px;
+        font-weight: 800;
+        font-size: 13.5px;
+        color: #0b1330;
+      }
+      .sidebar { display: none; position: static; max-height: none; }
+      #sidebar-toggle:checked ~ .layout .sidebar { display: block; }
+    }
+
+    .content { min-width: 0; }
+    .topic-card {
+      background: #fff;
+      border: 1px solid rgba(16,26,61,0.08);
+      border-radius: 16px;
+      padding: 20px 20px 16px;
+      margin-bottom: 18px;
+      scroll-margin-top: 20px;
+      display: block;
+    }
+    .topic-card.hidden { display: none; }
+    .sec-head {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+    .sec-num {
+      flex: none;
+      width: 34px;
+      height: 34px;
+      border-radius: 10px;
+      background: #0b1330;
+      color: #e8b74b;
+      font-weight: 800;
+      font-size: 14px;
+      display: grid;
+      place-items: center;
+    }
+    .sec-head h2 {
+      margin: 0;
+      font-size: 19px;
+      font-weight: 800;
+      color: #0b1330;
+    }
+    .topic-card p {
+      font-size: 14.5px;
+      line-height: 1.75;
+      color: #1a254a;
+      margin: 6px 0;
+    }
+    .bullet-list {
+      margin: 8px 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 5px;
+    }
+    .bullet-list li {
+      position: relative;
+      padding-left: 20px;
+      font-size: 14px;
+      line-height: 1.6;
+      color: #1a254a;
+    }
+    .bullet-list li::before {
+      content: "";
+      position: absolute;
+      left: 2px;
+      top: 9px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #d9a53a;
+    }
+    .formula-box {
+      background: #0b1330;
+      color: #fdeec2;
+      font-weight: 700;
+      font-size: 13.6px;
+      padding: 10px 16px;
+      border-radius: 10px;
+      margin: 10px 0;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 12px 0;
+      font-size: 13.6px;
+      display: block;
+      overflow-x: auto;
+    }
+    .data-table th, .data-table td {
+      border: 1px solid #e7eaf5;
+      padding: 8px 12px;
+      text-align: left;
+      color: #1a254a;
+      white-space: normal;
+    }
+    .data-table th {
+      background: #f4f6fc;
+      color: #0b1330;
+      font-weight: 800;
+    }
+    .pyq-tag {
+      display: inline-block;
+      background: #fdf6e7;
+      color: #b9852a;
+      font-weight: 800;
+      font-size: 12px;
+      padding: 4px 12px;
+      border-radius: 8px;
+      margin: 12px 0 6px;
+    }
+    .answer-box {
+      background: #eefaf2;
+      border: 1px solid #bfe8cc;
+      color: #1a7a4c;
+      font-weight: 700;
+      font-size: 13.6px;
+      padding: 6px 14px;
+      border-radius: 9px;
+      margin: 6px 0;
+    }
+    .explain {
+      background: #f4f6fc;
+      border-radius: 9px;
+      padding: 6px 14px;
+      font-size: 13.6px;
+      color: #1a254a;
+    }
+    .subtopic {
+      padding: 14px 0 6px;
+      border-top: 1px dashed #e7eaf5;
+    }
+    .subtopic:first-of-type { border-top: none; padding-top: 2px; }
+    .subhead {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 6px;
+    }
+    .sub-num {
+      flex: none;
+      width: 26px;
+      height: 26px;
+      border-radius: 8px;
+      background: #fdf6e7;
+      color: #b9852a;
+      font-weight: 800;
+      font-size: 12px;
+      display: grid;
+      place-items: center;
+    }
+    .subhead h3 {
+      margin: 0;
+      font-size: 15.5px;
+      font-weight: 800;
+      color: #0b1330;
+    }
+    .enroll-cta {
+      background: #0b1330;
+      color: #fff;
+      border-radius: 16px;
+      padding: 24px 24px;
+      margin-top: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+      overflow: hidden;
+    }
+    .enroll-cta::before {
+      content: "";
+      position: absolute;
+      right: -40px;
+      top: -40px;
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(232,183,75,0.2), transparent 70%);
+    }
+    .enroll-cta h3 { margin: 0 0 4px; font-size: 20px; }
+    .enroll-cta p { margin: 0; color: rgba(255,255,255,0.75); font-size: 13.5px; max-width: 480px; }
+    .btn-gold {
+      background: #e8b74b;
+      color: #0b1330;
+      font-weight: 800;
+      padding: 10px 22px;
+      border-radius: 10px;
+      font-size: 13.5px;
+      white-space: nowrap;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="container hero-inner">
+    <span class="eyebrow">★ UGC NET Paper-I · Logical Reasoning</span>
+    <h1 class="h-display">Analogy / सादृश्य</h1>
+    <p>Complete tutorial: Meaning & structure (A : B :: C : D), Types of analogy (Synonym/Antonym, Part–Whole, Cause–Effect, Tool–Function, Worker–Workplace, Degree & Classification), Strength of analogical arguments, Relevant similarity vs Superficial similarity.</p>
+  </div>
+</section>
+
+<main class="container">
+  <input type="checkbox" id="sidebar-toggle">
+  <label for="sidebar-toggle" class="mobile-bar">
+    <span>📑 On this page</span>
+    <span>☰ Menu</span>
+  </label>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebarNav">
+      <p class="sidebar-title">On this page</p>
+      <nav>
+        <a href="/tutorials/logical-reasoning/analogy/analogy-meaning" class="nav-link active">
+  <span class="nav-num">1</span>Meaning & Structure
+</a>
+<a href="/tutorials/logical-reasoning/analogy/types-analogy" class="nav-link">
+  <span class="nav-num">2</span>Types of Analogy
+</a>
+<a href="/tutorials/logical-reasoning/analogy/synonym-antonym" class="nav-link">
+  <span class="nav-num">3</span>Synonym / Antonym
+</a>
+<a href="/tutorials/logical-reasoning/analogy/part-whole" class="nav-link">
+  <span class="nav-num">4</span>Part–Whole
+</a>
+<a href="/tutorials/logical-reasoning/analogy/cause-effect" class="nav-link">
+  <span class="nav-num">5</span>Cause–Effect
+</a>
+<a href="/tutorials/logical-reasoning/analogy/tool-function" class="nav-link">
+  <span class="nav-num">6</span>Tool–Function
+</a>
+<a href="/tutorials/logical-reasoning/analogy/worker-workplace" class="nav-link">
+  <span class="nav-num">7</span>Worker–Workplace
+</a>
+<a href="/tutorials/logical-reasoning/analogy/degree-classification" class="nav-link">
+  <span class="nav-num">8</span>Degree & Classification
+</a>
+<a href="/tutorials/logical-reasoning/analogy/strength-analogical" class="nav-link">
+  <span class="nav-num">9</span>Strength of Analogical Arguments
+</a>
+<a href="/tutorials/logical-reasoning/analogy/relevant-superficial" class="nav-link">
+  <span class="nav-num">10</span>Relevant vs Superficial Similarity
+</a>
+<a href="/tutorials/logical-reasoning/analogy/exam-traps" class="nav-link">
+  <span class="nav-num">11</span>Common Exam Traps
+</a>
+<a href="/tutorials/logical-reasoning/analogy/practice-questions" class="nav-link">
+  <span class="nav-num">12</span>Practice Questions
+</a>
+<a href="/tutorials/logical-reasoning/analogy/one-page-revision" class="nav-link">
+  <span class="nav-num">13</span>One-Page Revision
+</a>
+      </nav>
+    </aside>
+
+    <div class="content" id="contentArea">
+      <!-- ===== CARDS ===== -->
+      <div id="analogy-meaning" class="topic-card"><div class="sec-head"><span class="sec-num">1</span><h2>Meaning & Structure — अर्थ एवं संरचना</h2></div><p><strong>Analogy (सादृश्य)</strong> दो pairs के बीच <strong>similarity/relationship</strong> को दर्शाता है।</p><div class="formula-box">A : B :: C : D</div><p><strong>Read as:</strong> "A is to B as C is to D"</p><p><strong>Example:</strong></p><ul class="bullet-list"><li><strong>Doctor : Hospital :: Teacher : School</strong></li><li>Doctor works in a hospital — Teacher works in a school.</li></ul><p><strong>Structure:</strong></p><ul class="bullet-list"><li><strong>A : B</strong> — First pair (the known relationship)</li><li><strong>C : D</strong> — Second pair (the relationship to be identified)</li><li>The relationship between <strong>A and B</strong> must be <strong>same</strong> as the relationship between <strong>C and D</strong></li></ul></div>
+
+      <div id="types-analogy" class="topic-card"><div class="sec-head"><span class="sec-num">2</span><h2>Types of Analogy — सादृश्य के प्रकार</h2></div><ul class="bullet-list"><li><strong>Synonym / Antonym — पर्यायवाची / विलोम</strong></li><li><strong>Part–Whole — भाग–सम्पूर्ण</strong></li><li><strong>Cause–Effect — कारण–प्रभाव</strong></li><li><strong>Tool–Function — उपकरण–कार्य</strong></li><li><strong>Worker–Workplace — कार्यकर्ता–कार्यस्थल</strong></li><li><strong>Degree & Classification — डिग्री एवं वर्गीकरण</strong></li></ul></div>
+
+      <div id="synonym-antonym" class="topic-card"><div class="sec-head"><span class="sec-num">3</span><h2>Synonym / Antonym — पर्यायवाची / विलोम</h2></div><ul class="bullet-list"><li><strong>Synonym Analogy:</strong> दो words का अर्थ <strong>same</strong> होता है।</li><li><strong>Antonym Analogy:</strong> दो words के अर्थ <strong>opposite</strong> होते हैं।</li></ul><p><strong>Examples:</strong></p><ul class="bullet-list"><li><strong>Synonym:</strong> Happy : Joyful :: Sad : Depressed</li><li><strong>Antonym:</strong> Hot : Cold :: Light : Dark</li><li><strong>Synonym:</strong> Brave : Courageous :: Kind : Benevolent</li><li><strong>Antonym:</strong> Success : Failure :: Win : Lose</li></ul></div>
+
+      <div id="part-whole" class="topic-card"><div class="sec-head"><span class="sec-num">4</span><h2>Part–Whole — भाग–सम्पूर्ण</h2></div><p>One term is a <strong>part</strong> of the other, or a <strong>component</strong> of the whole.</p><p><strong>Examples:</strong></p><ul class="bullet-list"><li><strong>Wheel : Car :: Leaf : Tree</strong> — Wheel is part of car; Leaf is part of tree.</li><li><strong>Page : Book :: Room : House</strong> — Page is part of book; Room is part of house.</li><li><strong>Finger : Hand :: Toe : Foot</strong> — Finger is part of hand; Toe is part of foot.</li><li><strong>Chapter : Book :: Scene : Movie</strong> — Chapter is part of book; Scene is part of movie.</li></ul></div>
+
+      <div id="cause-effect" class="topic-card"><div class="sec-head"><span class="sec-num">5</span><h2>Cause–Effect — कारण–प्रभाव</h2></div><p>One term is the <strong>cause</strong> and the other is the <strong>effect</strong> (or vice versa).</p><p><strong>Examples:</strong></p><ul class="bullet-list"><li><strong>Rain : Flood :: Heat : Drought</strong> — Rain causes flood; Heat causes drought.</li><li><strong>Study : Success :: Hard Work : Achievement</strong> — Study leads to success; Hard work leads to achievement.</li><li><strong>Smoking : Cancer :: Overeating : Obesity</strong> — Smoking causes cancer; Overeating causes obesity.</li><li><strong>Practice : Perfection :: Preparation : Success</strong> — Practice leads to perfection; Preparation leads to success.</li></ul></div>
+
+      <div id="tool-function" class="topic-card"><div class="sec-head"><span class="sec-num">6</span><h2>Tool–Function — उपकरण–कार्य</h2></div><p>One term is a <strong>tool</strong> and the other is its <strong>function/use</strong>.</p><p><strong>Examples:</strong></p><ul class="bullet-list"><li><strong>Pen : Write :: Knife : Cut</strong> — Pen is used to write; Knife is used to cut.</li><li><strong>Brush : Paint :: Broom : Sweep</strong> — Brush is used to paint; Broom is used to sweep.</li><li><strong>Thermometer : Temperature :: Barometer : Pressure</strong> — Thermometer measures temperature; Barometer measures pressure.</li><li><strong>Calculator : Calculate :: Computer : Process</strong> — Calculator is used to calculate; Computer is used to process.</li></ul></div>
+
+      <div id="worker-workplace" class="topic-card"><div class="sec-head"><span class="sec-num">7</span><h2>Worker–Workplace — कार्यकर्ता–कार्यस्थल</h2></div><p>One term is a <strong>worker/person</strong> and the other is the <strong>place</strong> where they work.</p><p><strong>Examples:</strong></p><ul class="bullet-list"><li><strong>Doctor : Hospital :: Teacher : School</strong> — Doctor works in a hospital; Teacher works in a school.</li><li><strong>Judge : Court :: Chef : Kitchen</strong> — Judge works in a court; Chef works in a kitchen.</li><li><strong>Pilot : Airplane :: Driver : Car</strong> — Pilot works in an airplane; Driver works in a car.</li><li><strong>Miner : Mine :: Farmer : Farm</strong> — Miner works in a mine; Farmer works on a farm.</li></ul></div>
+
+      <div id="degree-classification" class="topic-card"><div class="sec-head"><span class="sec-num">8</span><h2>Degree & Classification — डिग्री एवं वर्गीकरण</h2></div><ul class="bullet-list"><li><strong>Degree Analogy:</strong> Words show a <strong>gradual difference</strong> in intensity/intensity level.</li><li><strong>Classification Analogy:</strong> One term is a <strong>category/class</strong> of the other.</li></ul><p><strong>Degree Examples:</strong></p><ul class="bullet-list"><li><strong>Cold : Freezing :: Warm : Hot</strong> — Cold is less intense than freezing; Warm is less intense than hot.</li><li><strong>Happy : Ecstatic :: Sad : Depressed</strong> — Happy is less intense than ecstatic; Sad is less intense than depressed.</li><li><strong>Rain : Downpour :: Breeze : Gale</strong> — Rain is less intense than downpour; Breeze is less intense than gale.</li></ul><p><strong>Classification Examples:</strong></p><ul class="bullet-list"><li><strong>Rose : Flower :: Dog : Mammal</strong> — Rose is a type of flower; Dog is a type of mammal.</li><li><strong>Chair : Furniture :: Apple : Fruit</strong> — Chair is a type of furniture; Apple is a type of fruit.</li><li><strong>Sparrow : Bird :: Tulsi : Plant</strong> — Sparrow is a type of bird; Tulsi is a type of plant.</li></ul></div>
+
+      <div id="strength-analogical" class="topic-card"><div class="sec-head"><span class="sec-num">9</span><h2>Strength of Analogical Arguments — सादृश्य तर्कों की बल</h2></div><p>An analogical argument is <strong>stronger</strong> when:</p><ul class="bullet-list"><li><strong>More similarities</strong> between the two cases</li><li><strong>Relevant similarities</strong> (not superficial)</li><li><strong>Fewer irrelevant differences</strong> between the two cases</li><li>The similarity is <strong>directly related</strong> to the conclusion</li><li><strong>More instances</strong> (multiple examples) of the analogy</li><li>The conclusion is <strong>modest and specific</strong> (not overgeneralised)</li></ul><div class="formula-box">Stronger Analogy = More Relevant Similarities + Fewer Irrelevant Differences</div><p><strong>Weaker Analogy:</strong></p><ul class="bullet-list"><li>Few similarities</li><li>Superficial similarities (look alike but not related)</li><li>Many irrelevant differences</li><li>Conclusion is overgeneralised</li></ul></div>
+
+      <div id="relevant-superficial" class="topic-card"><div class="sec-head"><span class="sec-num">10</span><h2>Relevant vs Superficial Similarity — प्रासंगिक vs सतही समानता</h2></div><ul class="bullet-list"><li><strong>Relevant Similarity — प्रासंगिक समानता:</strong> Similarities that are <strong>directly connected</strong> to the conclusion/argument. They matter to the reasoning.</li><li><strong>Superficial Similarity — सतही समानता:</strong> Similarities that are <strong>surface-level, incidental</strong> and not related to the conclusion. They look similar but don't matter to the argument.</li></ul><p><strong>Example:</strong></p><ul class="bullet-list"><li><strong>Relevant:</strong> Two cars have the same engine type, same weight, same tyre brand → Likely similar performance. (Relevant to conclusion about performance).</li><li><strong>Superficial:</strong> Two cars have the same colour, same seats, same logo → But different engine and build → Likely different performance. (Colour/logo is superficial).</li></ul><p><strong>Exam Tip:</strong> Good analogies use <strong>relevant similarities</strong>. Weak analogies rely on <strong>superficial similarities</strong>.</p></div>
+
+      <div id="exam-traps" class="topic-card"><div class="sec-head"><span class="sec-num">11</span><h2>Common Exam Traps — सामान्य परीक्षा जाल</h2></div><ul class="bullet-list"><li><strong>Trap 1:</strong> All similarities make an analogy stronger → ❌ Only <strong>relevant</strong> similarities make it stronger.</li><li><strong>Trap 2:</strong> The relationship in A:B is always the same direction as C:D → ❌ The direction must be consistent but sometimes the order can be different.</li><li><strong>Trap 3:</strong> Synonym = exactly same meaning → ❌ They are close/related meanings, not always identical.</li><li><strong>Trap 4:</strong> Part–Whole analogy = any part of any whole → ❌ The part must be a <strong>fundamental component</strong> of the whole.</li><li><strong>Trap 5:</strong> Cause–Effect analogy = any two things that happen together → ❌ There must be a <strong>causal relationship</strong>, not just coincidence.</li><li><strong>Trap 6:</strong> Tool–Function = any tool and any action → ❌ The tool must be <strong>primarily used</strong> for that function.</li><li><strong>Trap 7:</strong> More examples always make analogy stronger → ❌ More examples help, but relevance of similarities matters more.</li></ul></div>
+
+      <div id="practice-questions" class="topic-card"><div class="sec-head"><span class="sec-num">12</span><h2>Practice Questions — अभ्यास प्रश्न</h2></div>
+      <div class="pyq-tag">Question 1 (Synonym)</div>
+      <p>Happy : Joyful :: Sad : ?</p>
+      <ul class="bullet-list"><li>A. Angry</li><li>B. Depressed</li><li>C. Excited</li><li>D. Nervous</li></ul>
+      <div class="answer-box">Answer: B. Depressed</div>
+      <p class="explain">Explanation: Happy is a synonym of Joyful; Sad is a synonym of Depressed.</p>
+
+      <div class="pyq-tag">Question 2 (Antonym)</div>
+      <p>Hot : Cold :: Light : ?</p>
+      <ul class="bullet-list"><li>A. Bright</li><li>B. Heavy</li><li>C. Dark</li><li>D. Dim</li></ul>
+      <div class="answer-box">Answer: C. Dark</div>
+      <p class="explain">Explanation: Hot is antonym of Cold; Light is antonym of Dark.</p>
+
+      <div class="pyq-tag">Question 3 (Part–Whole)</div>
+      <p>Finger : Hand :: Toe : ?</p>
+      <ul class="bullet-list"><li>A. Foot</li><li>B. Leg</li><li>C. Head</li><li>D. Body</li></ul>
+      <div class="answer-box">Answer: A. Foot</div>
+      <p class="explain">Explanation: Finger is part of Hand; Toe is part of Foot.</p>
+
+      <div class="pyq-tag">Question 4 (Cause–Effect)</div>
+      <p>Rain : Flood :: Heat : ?</p>
+      <ul class="bullet-list"><li>A. Cold</li><li>B. Drought</li><li>C. Water</li><li>D. Heat</li></ul>
+      <div class="answer-box">Answer: B. Drought</div>
+      <p class="explain">Explanation: Rain causes Flood; Heat causes Drought.</p>
+
+      <div class="pyq-tag">Question 5 (Tool–Function)</div>
+      <p>Pen : Write :: Knife : ?</p>
+      <ul class="bullet-list"><li>A. Eat</li><li>B. Cut</li><li>C. Paint</li><li>D. Cook</li></ul>
+      <div class="answer-box">Answer: B. Cut</div>
+      <p class="explain">Explanation: Pen is used to Write; Knife is used to Cut.</p>
+
+      <div class="pyq-tag">Question 6 (Worker–Workplace)</div>
+      <p>Doctor : Hospital :: Teacher : ?</p>
+      <ul class="bullet-list"><li>A. Court</li><li>B. School</li><li>C. Office</li><li>D. Factory</li></ul>
+      <div class="answer-box">Answer: B. School</div>
+      <p class="explain">Explanation: Doctor works in Hospital; Teacher works in School.</p>
+
+      <div class="pyq-tag">Question 7 (Degree)</div>
+      <p>Cold : Freezing :: Warm : ?</p>
+      <ul class="bullet-list"><li>A. Cool</li><li>B. Hot</li><li>C. Boiling</li><li>D. Chilly</li></ul>
+      <div class="answer-box">Answer: B. Hot</div>
+      <p class="explain">Explanation: Cold is a milder form of Freezing; Warm is a milder form of Hot.</p>
+
+      <div class="pyq-tag">Question 8 (Classification)</div>
+      <p>Rose : Flower :: Dog : ?</p>
+      <ul class="bullet-list"><li>A. Pet</li><li>B. Mammal</li><li>C. Animal</li><li>D. Dog</li></ul>
+      <div class="answer-box">Answer: B. Mammal</div>
+      <p class="explain">Explanation: Rose is a type of Flower; Dog is a type of Mammal.</p></div>
+
+      <div id="one-page-revision" class="topic-card"><div class="sec-head"><span class="sec-num">13</span><h2>One-Page Revision — एक पेज में पुनरावृत्ति</h2></div>
+      <div class="formula-box">Analogy = A : B :: C : D (Same relationship)</div>
+
+      <p><strong>Types of Analogy:</strong></p>
+      <ul class="bullet-list"><li><strong>Synonym:</strong> Same meaning → Happy : Joyful</li>
+      <li><strong>Antonym:</strong> Opposite meaning → Hot : Cold</li>
+      <li><strong>Part–Whole:</strong> Component → Finger : Hand</li>
+      <li><strong>Cause–Effect:</strong> Cause leads to effect → Rain : Flood</li>
+      <li><strong>Tool–Function:</strong> Tool use → Pen : Write</li>
+      <li><strong>Worker–Workplace:</strong> Person & place → Doctor : Hospital</li>
+      <li><strong>Degree:</strong> Intensity level → Cold : Freezing</li>
+      <li><strong>Classification:</strong> Category → Rose : Flower</li></ul>
+
+      <p><strong>Strength of Analogical Arguments:</strong></p>
+      <ul class="bullet-list"><li>More relevant similarities → Stronger</li>
+      <li>Fewer irrelevant differences → Stronger</li>
+      <li>Relevant similarity > Superficial similarity</li></ul>
+
+      <p><strong>Exam Formula:</strong></p>
+      <div class="formula-box">Identify Relationship → Apply Same Relationship → Find Missing Term</div>
+      <p><em>UGC NET में Analogy के questions relationship identification और application पर based होते हैं।</em></p></div>
+
+      <div class="enroll-cta"><div><h3 class="h-display">Join the Paper-1 Batch</h3><p>Course fee FREE — ₹500 registration & academic/logistics contribution. Classes daily at 6:30 PM.</p></div><a href="#" class="btn-gold">✓ JOIN BATCH @ ₹500</a></div>
+    </div>
+  </div>
+</main>
+
+<script>
+  (function() {
+
+    const BASE_PATH =
+      "/tutorials/logical-reasoning/analogy";
+
+    const links = document.querySelectorAll(".nav-link");
+    const cards = document.querySelectorAll(".topic-card");
+    const content = document.getElementById("contentArea");
+    const sidebarToggle = document.getElementById("sidebar-toggle");
+
+
+    // Get topic slug from current URL
+    function getSlugFromPath() {
+
+      const path = window.location.pathname
+        .replace(/\/+$/, "");
+
+      if (path.startsWith(BASE_PATH + "/")) {
+
+        return path
+          .substring((BASE_PATH + "/").length)
+          .split("/")[0];
+
+      }
+
+      return null;
+    }
+
+
+    // Update browser URL
+    function updateUrl(slug, replace = false) {
+
+      const newPath =
+        BASE_PATH + "/" + slug;
+
+      if (window.location.pathname !== newPath) {
+
+        if (replace) {
+
+          history.replaceState(
+            null,
+            "",
+            newPath
+          );
+
+        } else {
+
+          history.pushState(
+            null,
+            "",
+            newPath
+          );
+
+        }
+
+      }
+    }
+
+
+    // Update active sidebar link
+    function updateActiveLink(slug) {
+
+      links.forEach(function(link) {
+
+        const href =
+          link.getAttribute("href");
+
+        if (!href) return;
+
+        const linkSlug =
+          href
+            .split("/")
+            .filter(Boolean)
+            .pop();
+
+        link.classList.toggle(
+          "active",
+          linkSlug === slug
+        );
+
+      });
+
+    }
+
+
+    // Show selected topic card
+    function showCard(
+      slug,
+      updateHistory = true
+    ) {
+
+      cards.forEach(function(card) {
+
+        card.classList.add("hidden");
+
+      });
+
+
+      const target =
+        document.getElementById(slug);
+
+
+      if (!target) {
+
+        const first = cards[0];
+
+        if (first) {
+
+          first.classList.remove("hidden");
+
+          const firstSlug =
+            first.id;
+
+          updateActiveLink(firstSlug);
+
+          updateUrl(
+            firstSlug,
+            true
+          );
+
+        }
+
+        return;
+      }
+
+
+      target.classList.remove("hidden");
+
+      updateActiveLink(slug);
+
+
+      if (updateHistory) {
+
+        updateUrl(
+          slug,
+          false
+        );
+
+      }
+
+
+      if (sidebarToggle) {
+
+        sidebarToggle.checked = false;
+
+      }
+
+
+      if (content) {
+
+        const top =
+          content.getBoundingClientRect().top +
+          window.pageYOffset -
+          10;
+
+        window.scrollTo({
+
+          top: top,
+
+          behavior: "smooth"
+
+        });
+
+      }
+
+    }
+
+
+    // Sidebar link click
+    links.forEach(function(link) {
+
+      link.addEventListener(
+        "click",
+        function(e) {
+
+          e.preventDefault();
+
+
+          const href =
+            this.getAttribute("href");
+
+          if (!href) return;
+
+
+          const slug =
+            href
+              .split("/")
+              .filter(Boolean)
+              .pop();
+
+
+          if (!slug) return;
+
+
+          console.log(
+            "Clicked topic:",
+            slug
+          );
+
+
+          showCard(
+            slug,
+            true
+          );
+
+        }
+      );
+
+    });
+
+
+    // Initial page load
+    function initFromPath() {
+
+      let slug =
+        getSlugFromPath();
+
+
+      if (
+        !slug ||
+        !document.getElementById(slug)
+      ) {
+
+        slug =
+          cards[0]?.id ||
+          "analogy-meaning";
+
+      }
+
+
+      showCard(
+        slug,
+        false
+      );
+
+
+      updateUrl(
+        slug,
+        true
+      );
+
+    }
+
+
+    initFromPath();
+
+
+    // Browser Back / Forward
+    window.addEventListener(
+      "popstate",
+      function() {
+
+        const slug =
+          getSlugFromPath();
+
+
+        if (
+          slug &&
+          document.getElementById(slug)
+        ) {
+
+          showCard(
+            slug,
+            false
+          );
+
+        } else {
+
+          const firstSlug =
+            cards[0]?.id ||
+            "analogy-meaning";
+
+          showCard(
+            firstSlug,
+            false
+          );
+
+        }
+
+      }
+    );
+
+
+  })();
+</script>
+</body>
+</html>

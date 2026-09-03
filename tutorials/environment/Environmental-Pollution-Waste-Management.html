@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Environmental Pollution & Waste Management – Full Notes | UGC NET Paper-1</title>
+  <meta name="description" content="Complete tutorial: Environmental Pollution & Waste Management - Air, Water, Soil, Noise Pollution, Solid Waste, Biomedical Waste, E-waste, Waste Management Hierarchy, BOD, COD, DO, Eutrophication & Biomagnification for UGC NET Paper-1 Environment.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; }
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background: #f8f5ee;
+      color: #101a3d;
+    }
+    .h-display { font-family: 'Poppins', sans-serif; font-weight: 800; letter-spacing: -0.01em; }
+    .container { max-width: 1360px; margin: 0 auto; padding: 0 20px; }
+
+    .hero {
+      background: #0b1330;
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+      padding: 28px 0 22px;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      right: -80px;
+      top: -100px;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(232,183,75,0.2), transparent 70%);
+    }
+    .hero-inner { position: relative; }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      padding: 6px 16px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+      color: #e8b74b;
+    }
+    .hero h1 {
+      font-size: clamp(28px, 4.2vw, 44px);
+      margin: 12px 0 6px;
+    }
+    .hero p {
+      color: rgba(255,255,255,0.78);
+      max-width: 680px;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 28px;
+      padding: 28px 0 50px;
+      align-items: start;
+    }
+    @media (max-width: 980px) {
+      .layout { grid-template-columns: 1fr; }
+    }
+
+    .sidebar {
+      position: sticky;
+      top: 16px;
+      max-height: calc(100vh - 40px);
+      overflow-y: auto;
+      background: #fff;
+      border: 1px solid rgba(16,26,61,0.08);
+      border-radius: 16px;
+      padding: 16px 12px;
+      box-shadow: 0 6px 24px rgba(16,26,61,0.05);
+    }
+    .sidebar::-webkit-scrollbar { width: 5px; }
+    .sidebar::-webkit-scrollbar-thumb { background: #dde2ef; border-radius: 8px; }
+    .sidebar-title {
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: #b9852a;
+      padding: 4px 10px 14px;
+    }
+    .nav-link {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 10px;
+      border-radius: 10px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #33406b;
+      line-height: 1.3;
+      transition: 0.1s;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .nav-link:hover { background: #f4f6fc; color: #0b1330; }
+    .nav-link.active {
+      background: #fdf6e7;
+      color: #0b1330;
+    }
+    .nav-num {
+      flex: none;
+      width: 22px;
+      height: 22px;
+      border-radius: 7px;
+      background: #e7eaf5;
+      color: #5b6690;
+      font-size: 11px;
+      font-weight: 800;
+      display: grid;
+      place-items: center;
+    }
+    .nav-link.active .nav-num {
+      background: #e8b74b;
+      color: #0b1330;
+    }
+
+    #sidebar-toggle { display: none; }
+    .mobile-bar { display: none; }
+    @media (max-width: 980px) {
+      .mobile-bar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: #fff;
+        border: 1px solid rgba(16,26,61,0.1);
+        border-radius: 12px;
+        padding: 12px 16px;
+        margin-bottom: 8px;
+        font-weight: 800;
+        font-size: 13.5px;
+        color: #0b1330;
+      }
+      .sidebar { display: none; position: static; max-height: none; }
+      #sidebar-toggle:checked ~ .layout .sidebar { display: block; }
+    }
+
+    .content { min-width: 0; }
+    .topic-card {
+      background: #fff;
+      border: 1px solid rgba(16,26,61,0.08);
+      border-radius: 16px;
+      padding: 20px 20px 16px;
+      margin-bottom: 18px;
+      scroll-margin-top: 20px;
+      display: block;
+    }
+    .topic-card.hidden { display: none; }
+    .sec-head {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+    .sec-num {
+      flex: none;
+      width: 34px;
+      height: 34px;
+      border-radius: 10px;
+      background: #0b1330;
+      color: #e8b74b;
+      font-weight: 800;
+      font-size: 14px;
+      display: grid;
+      place-items: center;
+    }
+    .sec-head h2 {
+      margin: 0;
+      font-size: 19px;
+      font-weight: 800;
+      color: #0b1330;
+    }
+    .topic-card p {
+      font-size: 14.5px;
+      line-height: 1.75;
+      color: #1a254a;
+      margin: 6px 0;
+    }
+    .bullet-list {
+      margin: 8px 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 5px;
+    }
+    .bullet-list li {
+      position: relative;
+      padding-left: 20px;
+      font-size: 14px;
+      line-height: 1.6;
+      color: #1a254a;
+    }
+    .bullet-list li::before {
+      content: "";
+      position: absolute;
+      left: 2px;
+      top: 9px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #d9a53a;
+    }
+    .formula-box {
+      background: #0b1330;
+      color: #fdeec2;
+      font-weight: 700;
+      font-size: 13.6px;
+      padding: 10px 16px;
+      border-radius: 10px;
+      margin: 10px 0;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 12px 0;
+      font-size: 13.6px;
+      display: block;
+      overflow-x: auto;
+    }
+    .data-table th, .data-table td {
+      border: 1px solid #e7eaf5;
+      padding: 8px 12px;
+      text-align: left;
+      color: #1a254a;
+      white-space: normal;
+    }
+    .data-table th {
+      background: #f4f6fc;
+      color: #0b1330;
+      font-weight: 800;
+    }
+    .pyq-tag {
+      display: inline-block;
+      background: #fdf6e7;
+      color: #b9852a;
+      font-weight: 800;
+      font-size: 12px;
+      padding: 4px 12px;
+      border-radius: 8px;
+      margin: 12px 0 6px;
+    }
+    .answer-box {
+      background: #eefaf2;
+      border: 1px solid #bfe8cc;
+      color: #1a7a4c;
+      font-weight: 700;
+      font-size: 13.6px;
+      padding: 6px 14px;
+      border-radius: 9px;
+      margin: 6px 0;
+    }
+    .explain {
+      background: #f4f6fc;
+      border-radius: 9px;
+      padding: 6px 14px;
+      font-size: 13.6px;
+      color: #1a254a;
+    }
+    .subtopic {
+      padding: 14px 0 6px;
+      border-top: 1px dashed #e7eaf5;
+    }
+    .subtopic:first-of-type { border-top: none; padding-top: 2px; }
+    .subhead {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 6px;
+    }
+    .sub-num {
+      flex: none;
+      width: 26px;
+      height: 26px;
+      border-radius: 8px;
+      background: #fdf6e7;
+      color: #b9852a;
+      font-weight: 800;
+      font-size: 12px;
+      display: grid;
+      place-items: center;
+    }
+    .subhead h3 {
+      margin: 0;
+      font-size: 15.5px;
+      font-weight: 800;
+      color: #0b1330;
+    }
+    .enroll-cta {
+      background: #0b1330;
+      color: #fff;
+      border-radius: 16px;
+      padding: 24px 24px;
+      margin-top: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+      overflow: hidden;
+    }
+    .enroll-cta::before {
+      content: "";
+      position: absolute;
+      right: -40px;
+      top: -40px;
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(232,183,75,0.2), transparent 70%);
+    }
+    .enroll-cta h3 { margin: 0 0 4px; font-size: 20px; }
+    .enroll-cta p { margin: 0; color: rgba(255,255,255,0.75); font-size: 13.5px; max-width: 480px; }
+    .btn-gold {
+      background: #e8b74b;
+      color: #0b1330;
+      font-weight: 800;
+      padding: 10px 22px;
+      border-radius: 10px;
+      font-size: 13.5px;
+      white-space: nowrap;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="container hero-inner">
+    <span class="eyebrow">★ UGC NET Paper-I · Environment</span>
+    <h1 class="h-display">Environmental Pollution & Waste Management</h1>
+    <p>Complete tutorial: Air Pollution, Water Pollution, Soil Pollution, Noise Pollution, Solid Waste, Biomedical Waste, E-waste, Waste Management Hierarchy, BOD, COD, DO, Eutrophication & Biomagnification.</p>
+  </div>
+</section>
+
+<main class="container">
+  <input type="checkbox" id="sidebar-toggle">
+  <label for="sidebar-toggle" class="mobile-bar">
+    <span>📑 On this page</span>
+    <span>☰ Menu</span>
+  </label>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebarNav">
+      <p class="sidebar-title">On this page</p>
+      <nav>
+       <a href="/tutorials/people-development-and-environment/environmental-pollution-waste-management/pollution-intro" class="nav-link active"><span class="nav-num">1</span>Environmental Pollution</a>
+        <a href="/tutorials/people-development-and-environment/environmental-pollution-waste-management/air-pollution" class="nav-link"><span class="nav-num">2</span>Air Pollution</a>
+        <a href="/tutorials/people-development-and-environment/environmental-pollution-waste-management/water-pollution" class="nav-link"><span class="nav-num">3</span>Water Pollution</a>
+        <a href="/tutorials/people-development-and-environment/environmental-pollution-waste-management/soil-pollution" class="nav-link"><span class="nav-num">4</span>Soil Pollution</a>
+        <a href="/tutorials/people-development-and-environment/environmental-pollution-waste-management/noise-pollution" class="nav-link"><span class="nav-num">5</span>Noise Pollution</a>
+        <a href="/tutorials/people-development-and-environment/environmental-pollution-waste-management/solid-waste" class="nav-link"><span class="nav-num">6</span>Solid Waste</a>
+        <a href="/tutorials/people-development-and-environment/environmental-pollution-waste-management/biomedical-waste" class="nav-link"><span class="nav-num">7</span>Biomedical Waste</a>
+        <a href="/tutorials/people-development-and-environment/environmental-pollution-waste-management/e-waste" class="nav-link"><span class="nav-num">8</span>E-waste</a>
+        <a href="/tutorials/people-development-and-environment/environmental-pollution-waste-management/waste-hierarchy" class="nav-link"><span class="nav-num">9</span>Waste Management Hierarchy</a>
+        <a href="/tutorials/people-development-and-environment/environmental-pollution-waste-management/bod-cod-do" class="nav-link"><span class="nav-num">10</span>BOD, COD & DO</a>
+        <a href="/tutorials/people-development-and-environment/environmental-pollution-waste-management/eutrophication" class="nav-link"><span class="nav-num">11</span>Eutrophication</a>
+        <a href="/tutorials/people-development-and-environment/environmental-pollution-waste-management/biomagnification" class="nav-link"><span class="nav-num">12</span>Biomagnification</a>
+        <a href="/tutorials/people-development-and-environment/environmental-pollution-waste-management/exam-traps" class="nav-link"><span class="nav-num">13</span>Common Exam Traps</a>
+        <a href="/tutorials/people-development-and-environment/environmental-pollution-waste-management/practice-questions" class="nav-link"><span class="nav-num">14</span>Practice Questions</a>
+        <a href="/tutorials/people-development-and-environment/environmental-pollution-waste-management/one-page-revision" class="nav-link"><span class="nav-num">15</span>One-Page Revision</a>
+      </nav>
+    </aside>
+
+    <div class="content" id="contentArea">
+      <!-- ===== CARDS ===== -->
+      <div id="pollution-intro" class="topic-card"><div class="sec-head"><span class="sec-num">1</span><h2>Environmental Pollution — पर्यावरणीय प्रदूषण</h2></div><p><strong>Environmental Pollution</strong> environment में <strong>harmful substances</strong> (pollutants) का introduction है जो <strong>living organisms</strong> और <strong>natural systems</strong> को negatively impact करता है।</p><div class="formula-box">Pollution = Contaminant + Environment + Adverse Effect</div><p><strong>Types of Pollution:</strong></p><ul class="bullet-list"><li><strong>Air Pollution — वायु प्रदूषण</strong></li><li><strong>Water Pollution — जल प्रदूषण</strong></li><li><strong>Soil/Land Pollution — मृदा प्रदूषण</strong></li><li><strong>Noise Pollution — ध्वनि प्रदूषण</strong></li><li><strong>Thermal Pollution — तापीय प्रदूषण</strong></li><li><strong>Radiation Pollution — विकिरण प्रदूषण</strong></li></ul></div>
+
+      <div id="air-pollution" class="topic-card"><div class="sec-head"><span class="sec-num">2</span><h2>Air Pollution — वायु प्रदूषण</h2></div><p><strong>Air Pollution</strong> atmosphere में <strong>harmful gases, particulate matter</strong> और <strong>biological molecules</strong> का presence है।</p><p><strong>Major Pollutants:</strong></p><ul class="bullet-list"><li><strong>Primary Pollutants:</strong> Directly emitted — CO, SO₂, NOx, PM2.5, PM10, VOCs</li><li><strong>Secondary Pollutants:</strong> Formed from reactions — Ozone (O₃), Smog, Acid rain</li></ul><p><strong>Sources:</strong></p><ul class="bullet-list"><li>Fossil fuel burning (vehicles, industries)</li><li>Industrial emissions</li><li>Agricultural activities</li><li>Deforestation</li><li>Natural sources (volcanoes, dust storms)</li></ul><p><strong>Effects:</strong></p><ul class="bullet-list"><li>Respiratory diseases (asthma, bronchitis)</li><li>Global warming and climate change</li><li>Acid rain (damages buildings, forests, water bodies)</li><li>Ozone layer depletion</li></ul></div>
+
+      <div id="water-pollution" class="topic-card"><div class="sec-head"><span class="sec-num">3</span><h2>Water Pollution — जल प्रदूषण</h2></div><p><strong>Water Pollution</strong> water bodies (rivers, lakes, oceans, groundwater) में <strong>contaminants</strong> का introduction है जो water quality degrade करता है।</p><p><strong>Sources:</strong></p><ul class="bullet-list"><li>Industrial effluents (chemicals, heavy metals)</li><li>Agricultural runoff (fertilizers, pesticides, manure)</li><li>Domestic sewage (organic matter, pathogens)</li><li>Oil spills</li><li>Plastic waste</li></ul><p><strong>Effects:</strong></p><ul class="bullet-list"><li>Waterborne diseases (cholera, typhoid, dysentery)</li><li>Eutrophication (excess nutrients → algal blooms)</li><li>Bioaccumulation and biomagnification</li><li>Loss of aquatic biodiversity</li></ul></div>
+
+      <div id="soil-pollution" class="topic-card"><div class="sec-head"><span class="sec-num">4</span><h2>Soil Pollution — मृदा प्रदूषण</h2></div><p><strong>Soil Pollution</strong> soil में <strong>toxic chemicals, heavy metals, pesticides</strong> और <strong>waste</strong> का accumulation है जो soil quality degrade करता है।</p><p><strong>Sources:</strong></p><ul class="bullet-list"><li>Industrial waste dumping</li><li>Excessive use of fertilisers and pesticides</li><li>Mining activities</li><li>Urban waste disposal</li><li>Oil spills and chemical leaks</li></ul><p><strong>Effects:</strong></p><ul class="bullet-list"><li>Reduced soil fertility</li><li>Contamination of groundwater</li><li>Toxicity to plants and animals</li><li>Health risks to humans (through food chain)</li></ul></div>
+
+      <div id="noise-pollution" class="topic-card"><div class="sec-head"><span class="sec-num">5</span><h2>Noise Pollution — ध्वनि प्रदूषण</h2></div><p><strong>Noise Pollution</strong> <strong>unwanted or excessive sound</strong> है जो human health और environment को adversely affect करता है।</p><p><strong>Sources:</strong></p><ul class="bullet-list"><li>Transportation (road, rail, air)</li><li>Industrial activities</li><li>Construction</li><li>Entertainment (loudspeakers, music)</li><li>Household appliances</li></ul><p><strong>Measured in:</strong> <strong>Decibels (dB)</strong></p><p><strong>Effects:</strong></p><ul class="bullet-list"><li>Hearing loss</li><li>Stress and anxiety</li><li>Sleep disturbance</li><li>Cardiovascular problems</li><li>Reduced concentration</li></ul><p><strong>Permissible Limits:</strong></p><ul class="bullet-list"><li>Residential area: 55 dB (day), 45 dB (night)</li><li>Industrial area: 75 dB (day), 70 dB (night)</li><li>Commercial area: 65 dB (day), 55 dB (night)</li><li>Silent zone: 50 dB (day), 40 dB (night)</li></ul></div>
+
+      <div id="solid-waste" class="topic-card"><div class="sec-head"><span class="sec-num">6</span><h2>Solid Waste — ठोस अपशिष्ट</h2></div><p><strong>Solid Waste</strong> वे unwanted or discarded solid materials हैं जो human activities से उत्पन्न होते हैं।</p><p><strong>Types:</strong></p><ul class="bullet-list"><li><strong>Municipal Solid Waste (MSW):</strong> Household, commercial, institutional waste</li><li><strong>Industrial Solid Waste:</strong> Factory waste, construction debris</li><li><strong>Agricultural Waste:</strong> Crop residues, animal manure</li><li><strong>Hazardous Waste:</strong> Toxic, flammable, reactive, corrosive</li><li><strong>Biomedical Waste:</strong> Hospital and healthcare waste</li><li><strong>E-waste:</strong> Electronic and electrical waste</li></ul></div>
+
+      <div id="biomedical-waste" class="topic-card"><div class="sec-head"><span class="sec-num">7</span><h2>Biomedical Waste — जैव-चिकित्सा अपशिष्ट</h2></div><p><strong>Biomedical Waste</strong> healthcare activities (hospitals, clinics, laboratories, research) से उत्पन्न होने वाला waste है — which may be <strong>infectious, hazardous, or toxic</strong>.</p><p><strong>Types:</strong></p><ul class="bullet-list"><li><strong>Infectious Waste:</strong> Blood, body fluids, cultures, sharps</li><li><strong>Pathological Waste:</strong> Tissues, organs, body parts</li><li><strong>Sharp Waste:</strong> Needles, syringes, scalpels</li><li><strong>Pharmaceutical Waste:</strong> Expired medicines</li><li><strong>Chemical Waste:</strong> Laboratory chemicals</li><li><strong>Radioactive Waste:</strong> Radioactive materials</li></ul><p><strong>Disposal Methods:</strong></p><ul class="bullet-list"><li>Incineration</li><li>Autoclaving (steam sterilisation)</li><li>Microwave treatment</li><li>Chemical disinfection</li><li>Landfilling (after treatment)</li></ul></div>
+
+      <div id="e-waste" class="topic-card"><div class="sec-head"><span class="sec-num">8</span><h2>E-waste — ई-अपशिष्ट</h2></div><p><strong>E-waste (Electronic Waste)</strong> discarded <strong>electrical and electronic equipment</strong> (EEEE) है — which contains <strong>hazardous</strong> and <strong>valuable</strong> materials.</p><p><strong>Examples:</strong></p><ul class="bullet-list"><li>Computers, laptops, mobile phones</li><li>TVs, monitors, refrigerators</li><li>Printers, scanners, copiers</li><li>Batteries, chargers</li><li>Wires, cables, circuit boards</li></ul><p><strong>Hazardous Components:</strong></p><ul class="bullet-list"><li>Lead, Mercury, Cadmium</li><li>Arsenic, Chromium</li><li>Brominated flame retardants</li><li>PVC plastics</li></ul><p><strong>Recycling/Management:</strong></p><ul class="bullet-list"><li>Extended Producer Responsibility (EPR)</li><li>Dismantling and segregation</li><li>Recovery of precious metals (gold, silver, copper)</li><li>Safe disposal of hazardous components</li></ul></div>
+
+      <div id="waste-hierarchy" class="topic-card"><div class="sec-head"><span class="sec-num">9</span><h2>Waste Management Hierarchy — अपशिष्ट प्रबंधन पदानुक्रम</h2></div><p><strong>Waste Management Hierarchy</strong> waste management का priority order है — from <strong>most preferred</strong> to <strong>least preferred</strong>.</p><div class="formula-box">Waste Hierarchy = Prevent → Reduce → Reuse → Recycle → Recover → Disposal</div><ul class="bullet-list"><li><strong>Prevention — निवारण:</strong> Avoid generating waste (most preferred)</li><li><strong>Reduction — कमी:</strong> Reduce the amount of waste produced</li><li><strong>Reuse — पुन:उपयोग:</strong> Use items again without processing</li><li><strong>Recycle — पुनर्चक्रण:</strong> Process waste into new products</li><li><strong>Recovery — पुन:प्राप्ति:</strong> Energy recovery (incineration with energy recovery)</li><li><strong>Disposal — निपटान:</strong> Landfilling, incineration without recovery (least preferred)</li></ul><p><strong>Key Principle:</strong> <strong>Reduce, Reuse, Recycle (3R's)</strong></p></div>
+
+      <div id="bod-cod-do" class="topic-card"><div class="sec-head"><span class="sec-num">10</span><h2>BOD, COD & DO — BOD, COD और DO</h2></div><ul class="bullet-list"><li><strong>BOD (Biochemical Oxygen Demand) — जैव-रासायनिक ऑक्सीजन माँग:</strong> Oxygen की वह मात्रा जो <strong>microorganisms</strong> organic matter को decompose करने के लिए consume करते हैं। Higher BOD = more organic pollution.</li><li><strong>COD (Chemical Oxygen Demand) — रासायनिक ऑक्सीजन माँग:</strong> Oxygen की वह मात्रा जो <strong>chemical oxidation</strong> के लिए required है। COD > BOD (because chemical oxidation is more complete).</li><li><strong>DO (Dissolved Oxygen) — विघटित ऑक्सीजन:</strong> Water में dissolved oxygen की मात्रा। Higher DO = <strong>clean water</strong>. Lower DO = <strong>polluted water</strong>.</li></ul><p><strong>Key Relationships:</strong></p><ul class="bullet-list"><li>High BOD → Low DO → Polluted water</li><li>Low BOD → High DO → Clean water</li><li>COD > BOD (always)</li></ul></div>
+
+      <div id="eutrophication" class="topic-card"><div class="sec-head"><span class="sec-num">11</span><h2>Eutrophication — सुपोषण</h2></div><p><strong>Eutrophication</strong> water body में <strong>excess nutrients</strong> (especially nitrogen and phosphorus) के accumulation से <strong>algal blooms</strong> की process है — leading to oxygen depletion and death of aquatic life.</p><div class="formula-box">Eutrophication = Excess Nutrients → Algal Bloom → Oxygen Depletion → Death of Aquatic Life</div><p><strong>Stages:</strong></p><ul class="bullet-list"><li>Nutrient enrichment (from fertilisers, sewage)</li><li>Algal bloom (excessive growth of algae)</li><li>Algae die and decompose</li><li>Decomposition consumes oxygen (BOD increases)</li><li>DO decreases → fish and other organisms die</li></ul><p><strong>Causes:</strong></p><ul class="bullet-list"><li>Agricultural runoff (fertilisers, manure)</li><li>Domestic sewage</li><li>Industrial effluents</li><li>Detergents (phosphates)</li></ul></div>
+
+      <div id="biomagnification" class="topic-card"><div class="sec-head"><span class="sec-num">12</span><h2>Biomagnification — जैव-आवर्धन</h2></div><p><strong>Biomagnification (Bioamplification)</strong> <strong>toxic substances</strong> (especially pesticides, heavy metals) का concentration <strong>increasing</strong> होता है as they move <strong>up the food chain</strong>.</p><div class="formula-box">Biomagnification = Increasing Toxin Concentration at Higher Trophic Levels</div><p><strong>Key Points:</strong></p><ul class="bullet-list"><li>Starts at the lowest trophic level (producers)</li><li>Concentration increases at each trophic level</li><li>Top consumers have the highest concentration</li><li>DDT and Mercury are classic examples</li></ul><p><strong>Example (DDT):</strong></p><ul class="bullet-list"><li>Water → DDT concentration: 0.003 ppm</li><li>Phytoplankton → 0.04 ppm</li><li>Zooplankton → 0.16 ppm</li><li>Small fish → 0.5 ppm</li><li>Large fish → 2.0 ppm</li><li>Birds (top consumer) → 25 ppm</li></ul><p><strong>Difference from Bioaccumulation:</strong></p><ul class="bullet-list"><li><strong>Bioaccumulation:</strong> Toxin accumulation within a single organism over time</li><li><strong>Biomagnification:</strong> Toxin concentration increases along the food chain</li></ul></div>
+
+      <div id="exam-traps" class="topic-card"><div class="sec-head"><span class="sec-num">13</span><h2>Common Exam Traps — सामान्य परीक्षा जाल</h2></div><ul class="bullet-list"><li><strong>Trap 1:</strong> COD = BOD → ❌ COD is always higher than BOD.</li><li><strong>Trap 2:</strong> High DO = polluted water → ❌ High DO = clean water; Low DO = polluted water.</li><li><strong>Trap 3:</strong> Eutrophication = good for aquatic life → ❌ Eutrophication leads to oxygen depletion and death of aquatic life.</li><li><strong>Trap 4:</strong> Biomagnification = bioaccumulation → ❌ Biomagnification is along the food chain; bioaccumulation is within an organism.</li><li><strong>Trap 5:</strong> Waste hierarchy = Recycle > Reduce → ❌ Reduce is higher priority than Recycle.</li><li><strong>Trap 6:</strong> E-waste = non-hazardous → ❌ E-waste contains hazardous materials (lead, mercury, cadmium).</li><li><strong>Trap 7:</strong> Noise pollution measured in Hertz → ❌ Measured in Decibels (dB).</li></ul></div>
+
+      <div id="practice-questions" class="topic-card"><div class="sec-head"><span class="sec-num">14</span><h2>Practice Questions — अभ्यास प्रश्न</h2></div>
+      <div class="pyq-tag">Question 1</div>
+      <p>Which of the following indicates higher organic pollution in water?</p>
+      <ul class="bullet-list"><li>A. High DO</li><li>B. Low BOD</li><li>C. High BOD</li><li>D. Low COD</li></ul>
+      <div class="answer-box">Answer: C. High BOD</div>
+      <p class="explain">Explanation: High BOD means more organic matter is being decomposed, indicating higher organic pollution.</p>
+
+      <div class="pyq-tag">Question 2</div>
+      <p>Eutrophication is caused primarily by:</p>
+      <ul class="bullet-list"><li>A. Excess oxygen</li><li>B. Excess nutrients (N and P)</li><li>C. Excess CO₂</li><li>D. Excess sunlight</li></ul>
+      <div class="answer-box">Answer: B. Excess nutrients (N and P)</div>
+      <p class="explain">Explanation: Eutrophication is caused by excess nutrients (nitrogen and phosphorus) from fertilisers and sewage.</p>
+
+      <div class="pyq-tag">Question 3</div>
+      <p>In the waste management hierarchy, which is the most preferred option?</p>
+      <ul class="bullet-list"><li>A. Recycling</li><li>B. Disposal</li><li>C. Prevention</li><li>D. Energy recovery</li></ul>
+      <div class="answer-box">Answer: C. Prevention</div>
+      <p class="explain">Explanation: Prevention (avoiding waste generation) is the most preferred option in the waste hierarchy.</p>
+
+      <div class="pyq-tag">Question 4</div>
+      <p>The increase in concentration of toxic substances along the food chain is called:</p>
+      <ul class="bullet-list"><li>A. Bioaccumulation</li><li>B. Biomagnification</li><li>C. Eutrophication</li><li>D. Biodegradation</li></ul>
+      <div class="answer-box">Answer: B. Biomagnification</div>
+      <p class="explain">Explanation: Biomagnification is the increase in toxin concentration at higher trophic levels along the food chain.</p>
+
+      <div class="pyq-tag">Question 5</div>
+      <p>Which of the following is NOT a component of biomedical waste?</p>
+      <ul class="bullet-list"><li>A. Used needles</li><li>B. Blood samples</li><li>C. Municipal solid waste</li><li>D. Pathological waste</li></ul>
+      <div class="answer-box">Answer: C. Municipal solid waste</div>
+      <p class="explain">Explanation: Municipal solid waste is household/commercial waste, not biomedical waste. Used needles, blood samples, and pathological waste are biomedical waste.</p>
+
+      <div class="pyq-tag">Question 6</div>
+      <p>Which hazardous metal is commonly found in e-waste?</p>
+      <ul class="bullet-list"><li>A. Sodium</li><li>B. Calcium</li><li>C. Lead</li><li>D. Iron</li></ul>
+      <div class="answer-box">Answer: C. Lead</div>
+      <p class="explain">Explanation: Lead, Mercury, Cadmium, and Arsenic are hazardous metals commonly found in e-waste.</p></div>
+
+      <div id="one-page-revision" class="topic-card"><div class="sec-head"><span class="sec-num">15</span><h2>One-Page Revision — एक पेज में पुनरावृत्ति</h2></div>
+      <div class="formula-box">Pollution = Contaminant + Environment + Adverse Effect</div>
+
+      <p><strong>Types of Pollution:</strong></p>
+      <ul class="bullet-list"><li>Air, Water, Soil, Noise, Thermal, Radiation</li></ul>
+
+      <p><strong>Air Pollutants:</strong></p>
+      <ul class="bullet-list"><li>Primary: CO, SO₂, NOx, PM</li>
+      <li>Secondary: Ozone, Smog, Acid rain</li></ul>
+
+      <p><strong>BOD, COD, DO:</strong></p>
+      <ul class="bullet-list"><li>BOD: Oxygen for microbial decomposition (organic pollution)</li>
+      <li>COD: Oxygen for chemical oxidation (always > BOD)</li>
+      <li>DO: Dissolved oxygen in water (high DO = clean water)</li></ul>
+
+      <p><strong>Waste Management Hierarchy:</strong></p>
+      <ul class="bullet-list"><li>Prevention → Reduction → Reuse → Recycle → Recovery → Disposal</li></ul>
+
+      <p><strong>Eutrophication:</strong></p>
+      <ul class="bullet-list"><li>Excess nutrients → Algal bloom → O₂ depletion → Death of aquatic life</li></ul>
+
+      <p><strong>Biomagnification:</strong></p>
+      <ul class="bullet-list"><li>Toxin concentration increases along the food chain (DDT, Mercury)</li></ul>
+
+      <p><strong>Noise Pollution:</strong></p>
+      <ul class="bullet-list"><li>Measured in Decibels (dB)</li>
+      <li>Residential: 55 dB (day), 45 dB (night)</li></ul>
+
+      <p><strong>Exam Formula:</strong></p>
+      <div class="formula-box">BOD ↑ = Pollution ↑ | DO ↑ = Water Quality ↑ | COD > BOD</div>
+      <p><em>UGC NET में Environmental Pollution & Waste Management के questions pollutants, BOD/COD/DO, eutrophication, biomagnification, और waste hierarchy पर based होते हैं।</em></p></div>
+
+      <div class="enroll-cta"><div><h3 class="h-display">Join the Paper-1 Batch</h3><p>Course fee FREE — ₹500 registration & academic/logistics contribution. Classes daily at 6:30 PM.</p></div><a href="#" class="btn-gold">✓ JOIN BATCH @ ₹500</a></div>
+    </div>
+  </div>
+</main>
+
+<script>
+  (function() {
+
+    const BASE_PATH =
+      "/tutorials/people-development-and-environment/environmental-pollution-waste-management";
+
+    const links =
+      document.querySelectorAll(".nav-link");
+
+    const cards =
+      document.querySelectorAll(".topic-card");
+
+    const content =
+      document.getElementById("contentArea");
+
+    const sidebarToggle =
+      document.getElementById("sidebar-toggle");
+
+
+    // Get topic slug from current URL
+    function getSlugFromPath() {
+
+      const path =
+        window.location.pathname
+          .replace(/\/+$/, "");
+
+      if (
+        path.startsWith(BASE_PATH + "/")
+      ) {
+
+        return path
+          .substring(
+            (BASE_PATH + "/").length
+          )
+          .split("/")[0];
+
+      }
+
+      return null;
+    }
+
+
+    // Update browser URL
+    function updateUrl(
+      slug,
+      replace = false
+    ) {
+
+      const newPath =
+        BASE_PATH + "/" + slug;
+
+      if (
+        window.location.pathname !== newPath
+      ) {
+
+        if (replace) {
+
+          history.replaceState(
+            null,
+            "",
+            newPath
+          );
+
+        } else {
+
+          history.pushState(
+            null,
+            "",
+            newPath
+          );
+
+        }
+
+      }
+
+    }
+
+
+    // Update active sidebar link
+    function updateActiveLink(slug) {
+
+      links.forEach(function(link) {
+
+        const href =
+          link.getAttribute("href");
+
+        if (!href) return;
+
+
+        const linkSlug =
+          href
+            .split("/")
+            .filter(Boolean)
+            .pop();
+
+
+        link.classList.toggle(
+          "active",
+          linkSlug === slug
+        );
+
+      });
+
+    }
+
+
+    // Show selected topic card
+    function showCard(
+      slug,
+      updateHistory = true
+    ) {
+
+      cards.forEach(function(card) {
+
+        card.classList.add("hidden");
+
+      });
+
+
+      const target =
+        document.getElementById(slug);
+
+
+      if (!target) {
+
+        const first =
+          cards[0];
+
+        if (first) {
+
+          first.classList.remove("hidden");
+
+          const firstSlug =
+            first.id;
+
+          updateActiveLink(
+            firstSlug
+          );
+
+          updateUrl(
+            firstSlug,
+            true
+          );
+
+        }
+
+        return;
+      }
+
+
+      target.classList.remove("hidden");
+
+      updateActiveLink(slug);
+
+
+      if (updateHistory) {
+
+        updateUrl(
+          slug,
+          false
+        );
+
+      }
+
+
+      if (sidebarToggle) {
+
+        sidebarToggle.checked = false;
+
+      }
+
+
+      if (content) {
+
+        const top =
+          content.getBoundingClientRect().top +
+          window.pageYOffset -
+          10;
+
+        window.scrollTo({
+
+          top: top,
+
+          behavior: "smooth"
+
+        });
+
+      }
+
+    }
+
+
+    // Sidebar link click
+    links.forEach(function(link) {
+
+      link.addEventListener(
+        "click",
+        function(e) {
+
+          e.preventDefault();
+
+
+          const href =
+            this.getAttribute("href");
+
+          if (!href) return;
+
+
+          const slug =
+            href
+              .split("/")
+              .filter(Boolean)
+              .pop();
+
+
+          if (!slug) return;
+
+
+          showCard(
+            slug,
+            true
+          );
+
+        }
+      );
+
+    });
+
+
+    // Initial page load
+    function initFromPath() {
+
+      let slug =
+        getSlugFromPath();
+
+
+      if (
+        !slug ||
+        !document.getElementById(slug)
+      ) {
+
+        slug =
+          cards[0]?.id ||
+          "pollution-intro";
+
+      }
+
+
+      showCard(
+        slug,
+        false
+      );
+
+
+      updateUrl(
+        slug,
+        true
+      );
+
+    }
+
+
+    initFromPath();
+
+
+    // Browser Back / Forward
+    window.addEventListener(
+      "popstate",
+      function() {
+
+        const slug =
+          getSlugFromPath();
+
+
+        if (
+          slug &&
+          document.getElementById(slug)
+        ) {
+
+          showCard(
+            slug,
+            false
+          );
+
+        } else {
+
+          const firstSlug =
+            cards[0]?.id ||
+            "pollution-intro";
+
+          showCard(
+            firstSlug,
+            false
+          );
+
+        }
+
+      }
+    );
+
+
+  })();
+</script>
+</body>
+</html>

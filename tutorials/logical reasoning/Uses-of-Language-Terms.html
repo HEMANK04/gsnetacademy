@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Uses of Language & Terms – Full Notes | UGC NET Paper-1</title>
+  <meta name="description" content="Complete tutorial: Uses of Language - Informative, Expressive, Directive, Performative/Ceremonial; Terms - Denotation, Connotation, Positive & Negative Terms, Absolute & Relative Terms, Concrete & Abstract Terms, Collective Terms for UGC NET Paper-1 Logical Reasoning.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; }
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background: #f8f5ee;
+      color: #101a3d;
+    }
+    .h-display { font-family: 'Poppins', sans-serif; font-weight: 800; letter-spacing: -0.01em; }
+    .container { max-width: 1360px; margin: 0 auto; padding: 0 20px; }
+
+    .hero {
+      background: #0b1330;
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+      padding: 28px 0 22px;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      right: -80px;
+      top: -100px;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(232,183,75,0.2), transparent 70%);
+    }
+    .hero-inner { position: relative; }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      padding: 6px 16px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+      color: #e8b74b;
+    }
+    .hero h1 {
+      font-size: clamp(28px, 4.2vw, 44px);
+      margin: 12px 0 6px;
+    }
+    .hero p {
+      color: rgba(255,255,255,0.78);
+      max-width: 680px;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 28px;
+      padding: 28px 0 50px;
+      align-items: start;
+    }
+    @media (max-width: 980px) {
+      .layout { grid-template-columns: 1fr; }
+    }
+
+    .sidebar {
+      position: sticky;
+      top: 16px;
+      max-height: calc(100vh - 40px);
+      overflow-y: auto;
+      background: #fff;
+      border: 1px solid rgba(16,26,61,0.08);
+      border-radius: 16px;
+      padding: 16px 12px;
+      box-shadow: 0 6px 24px rgba(16,26,61,0.05);
+    }
+    .sidebar::-webkit-scrollbar { width: 5px; }
+    .sidebar::-webkit-scrollbar-thumb { background: #dde2ef; border-radius: 8px; }
+    .sidebar-title {
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: #b9852a;
+      padding: 4px 10px 14px;
+    }
+    .nav-link {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 10px;
+      border-radius: 10px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #33406b;
+      line-height: 1.3;
+      transition: 0.1s;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .nav-link:hover { background: #f4f6fc; color: #0b1330; }
+    .nav-link.active {
+      background: #fdf6e7;
+      color: #0b1330;
+    }
+    .nav-num {
+      flex: none;
+      width: 22px;
+      height: 22px;
+      border-radius: 7px;
+      background: #e7eaf5;
+      color: #5b6690;
+      font-size: 11px;
+      font-weight: 800;
+      display: grid;
+      place-items: center;
+    }
+    .nav-link.active .nav-num {
+      background: #e8b74b;
+      color: #0b1330;
+    }
+
+    #sidebar-toggle { display: none; }
+    .mobile-bar { display: none; }
+    @media (max-width: 980px) {
+      .mobile-bar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: #fff;
+        border: 1px solid rgba(16,26,61,0.1);
+        border-radius: 12px;
+        padding: 12px 16px;
+        margin-bottom: 8px;
+        font-weight: 800;
+        font-size: 13.5px;
+        color: #0b1330;
+      }
+      .sidebar { display: none; position: static; max-height: none; }
+      #sidebar-toggle:checked ~ .layout .sidebar { display: block; }
+    }
+
+    .content { min-width: 0; }
+    .topic-card {
+      background: #fff;
+      border: 1px solid rgba(16,26,61,0.08);
+      border-radius: 16px;
+      padding: 20px 20px 16px;
+      margin-bottom: 18px;
+      scroll-margin-top: 20px;
+      display: block;
+    }
+    .topic-card.hidden { display: none; }
+    .sec-head {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+    .sec-num {
+      flex: none;
+      width: 34px;
+      height: 34px;
+      border-radius: 10px;
+      background: #0b1330;
+      color: #e8b74b;
+      font-weight: 800;
+      font-size: 14px;
+      display: grid;
+      place-items: center;
+    }
+    .sec-head h2 {
+      margin: 0;
+      font-size: 19px;
+      font-weight: 800;
+      color: #0b1330;
+    }
+    .topic-card p {
+      font-size: 14.5px;
+      line-height: 1.75;
+      color: #1a254a;
+      margin: 6px 0;
+    }
+    .bullet-list {
+      margin: 8px 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 5px;
+    }
+    .bullet-list li {
+      position: relative;
+      padding-left: 20px;
+      font-size: 14px;
+      line-height: 1.6;
+      color: #1a254a;
+    }
+    .bullet-list li::before {
+      content: "";
+      position: absolute;
+      left: 2px;
+      top: 9px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #d9a53a;
+    }
+    .formula-box {
+      background: #0b1330;
+      color: #fdeec2;
+      font-weight: 700;
+      font-size: 13.6px;
+      padding: 10px 16px;
+      border-radius: 10px;
+      margin: 10px 0;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 12px 0;
+      font-size: 13.6px;
+      display: block;
+      overflow-x: auto;
+    }
+    .data-table th, .data-table td {
+      border: 1px solid #e7eaf5;
+      padding: 8px 12px;
+      text-align: left;
+      color: #1a254a;
+      white-space: normal;
+    }
+    .data-table th {
+      background: #f4f6fc;
+      color: #0b1330;
+      font-weight: 800;
+    }
+    .pyq-tag {
+      display: inline-block;
+      background: #fdf6e7;
+      color: #b9852a;
+      font-weight: 800;
+      font-size: 12px;
+      padding: 4px 12px;
+      border-radius: 8px;
+      margin: 12px 0 6px;
+    }
+    .answer-box {
+      background: #eefaf2;
+      border: 1px solid #bfe8cc;
+      color: #1a7a4c;
+      font-weight: 700;
+      font-size: 13.6px;
+      padding: 6px 14px;
+      border-radius: 9px;
+      margin: 6px 0;
+    }
+    .explain {
+      background: #f4f6fc;
+      border-radius: 9px;
+      padding: 6px 14px;
+      font-size: 13.6px;
+      color: #1a254a;
+    }
+    .subtopic {
+      padding: 14px 0 6px;
+      border-top: 1px dashed #e7eaf5;
+    }
+    .subtopic:first-of-type { border-top: none; padding-top: 2px; }
+    .subhead {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 6px;
+    }
+    .sub-num {
+      flex: none;
+      width: 26px;
+      height: 26px;
+      border-radius: 8px;
+      background: #fdf6e7;
+      color: #b9852a;
+      font-weight: 800;
+      font-size: 12px;
+      display: grid;
+      place-items: center;
+    }
+    .subhead h3 {
+      margin: 0;
+      font-size: 15.5px;
+      font-weight: 800;
+      color: #0b1330;
+    }
+    .enroll-cta {
+      background: #0b1330;
+      color: #fff;
+      border-radius: 16px;
+      padding: 24px 24px;
+      margin-top: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+      overflow: hidden;
+    }
+    .enroll-cta::before {
+      content: "";
+      position: absolute;
+      right: -40px;
+      top: -40px;
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(232,183,75,0.2), transparent 70%);
+    }
+    .enroll-cta h3 { margin: 0 0 4px; font-size: 20px; }
+    .enroll-cta p { margin: 0; color: rgba(255,255,255,0.75); font-size: 13.5px; max-width: 480px; }
+    .btn-gold {
+      background: #e8b74b;
+      color: #0b1330;
+      font-weight: 800;
+      padding: 10px 22px;
+      border-radius: 10px;
+      font-size: 13.5px;
+      white-space: nowrap;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="container hero-inner">
+    <span class="eyebrow">★ UGC NET Paper-I · Logical Reasoning</span>
+    <h1 class="h-display">Uses of Language & Terms</h1>
+    <p>Complete tutorial: Uses of Language - Informative, Expressive, Directive, Performative/Ceremonial; Terms - Denotation, Connotation, Positive & Negative Terms, Absolute & Relative Terms, Concrete & Abstract Terms, Collective Terms for UGC NET Paper-1.</p>
+  </div>
+</section>
+
+<main class="container">
+  <input type="checkbox" id="sidebar-toggle">
+  <label for="sidebar-toggle" class="mobile-bar">
+    <span>📑 On this page</span>
+    <span>☰ Menu</span>
+  </label>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebarNav">
+      <p class="sidebar-title">On this page</p>
+      <nav>
+        <a href="/tutorials/logical-reasoning/uses-of-language-terms/uses-language-intro" class="nav-link active">
+  <span class="nav-num">1</span>Uses of Language
+</a>
+<a href="/tutorials/logical-reasoning/uses-of-language-terms/informative-use" class="nav-link">
+  <span class="nav-num">2</span>Informative Use
+</a>
+<a href="/tutorials/logical-reasoning/uses-of-language-terms/expressive-use" class="nav-link">
+  <span class="nav-num">3</span>Expressive Use
+</a>
+<a href="/tutorials/logical-reasoning/uses-of-language-terms/directive-use" class="nav-link">
+  <span class="nav-num">4</span>Directive Use
+</a>
+<a href="/tutorials/logical-reasoning/uses-of-language-terms/performative-ceremonial" class="nav-link">
+  <span class="nav-num">5</span>Performative/Ceremonial
+</a>
+<a href="/tutorials/logical-reasoning/uses-of-language-terms/denotation" class="nav-link">
+  <span class="nav-num">6</span>Denotation
+</a>
+<a href="/tutorials/logical-reasoning/uses-of-language-terms/connotation" class="nav-link">
+  <span class="nav-num">7</span>Connotation
+</a>
+<a href="/tutorials/logical-reasoning/uses-of-language-terms/denotation-vs-connotation" class="nav-link">
+  <span class="nav-num">8</span>Denotation vs Connotation
+</a>
+<a href="/tutorials/logical-reasoning/uses-of-language-terms/positive-negative-terms" class="nav-link">
+  <span class="nav-num">9</span>Positive & Negative Terms
+</a>
+<a href="/tutorials/logical-reasoning/uses-of-language-terms/absolute-relative-terms" class="nav-link">
+  <span class="nav-num">10</span>Absolute & Relative Terms
+</a>
+<a href="/tutorials/logical-reasoning/uses-of-language-terms/concrete-abstract-terms" class="nav-link">
+  <span class="nav-num">11</span>Concrete & Abstract Terms
+</a>
+<a href="/tutorials/logical-reasoning/uses-of-language-terms/collective-terms" class="nav-link">
+  <span class="nav-num">12</span>Collective Terms
+</a>
+<a href="/tutorials/logical-reasoning/uses-of-language-terms/exam-traps" class="nav-link">
+  <span class="nav-num">13</span>Common Exam Traps
+</a>
+<a href="/tutorials/logical-reasoning/uses-of-language-terms/practice-questions" class="nav-link">
+  <span class="nav-num">14</span>Practice Questions
+</a>
+<a href="/tutorials/logical-reasoning/uses-of-language-terms/one-page-revision" class="nav-link">
+  <span class="nav-num">15</span>One-Page Revision
+</a>
+      </nav>
+    </aside>
+
+    <div class="content" id="contentArea">
+      <!-- ===== CARDS ===== -->
+      <div id="uses-language-intro" class="topic-card"><div class="sec-head"><span class="sec-num">1</span><h2>Uses of Language — भाषा के उपयोग</h2></div><p>Language का उपयोग <strong>different purposes</strong> के लिए किया जाता है। UGC NET में <strong>four main uses</strong> of language हैं:</p><ul class="bullet-list"><li><strong>Informative — सूचनात्मक:</strong> To <strong>convey information</strong> or facts</li><li><strong>Expressive — अभिव्यंजक:</strong> To <strong>express feelings, emotions, attitudes</strong></li><li><strong>Directive — निर्देशात्मक:</strong> To <strong>direct, command, or request</strong> action</li><li><strong>Performative/Ceremonial — प्रदर्शनात्मक/आनुष्ठानिक:</strong> To <strong>perform an action</strong> or for ceremonial purposes</li></ul></div>
+
+      <div id="informative-use" class="topic-card"><div class="sec-head"><span class="sec-num">2</span><h2>Informative Use — सूचनात्मक उपयोग</h2></div><p><strong>Informative language</strong> का उपयोग <strong>facts, information, knowledge</strong> को convey करने के लिए किया जाता है।</p><div class="formula-box">Informative = Conveying Information / Facts</div><p><strong>Key Points:</strong></p><ul class="bullet-list"><li>It is <strong>true or false</strong> (can be verified)</li><li>It is the <strong>primary use</strong> of language in science and education</li><li>It is <strong>objective</strong> and <strong>descriptive</strong></li></ul><p><strong>Examples:</strong></p><ul class="bullet-list"><li>"Delhi is the capital of India."</li><li>"Water boils at 100°C at sea level."</li><li>"The sun rises in the east."</li><li>"The exam will be held on Monday."</li></ul></div>
+
+      <div id="expressive-use" class="topic-card"><div class="sec-head"><span class="sec-num">3</span><h2>Expressive Use — अभिव्यंजक उपयोग</h2></div><p><strong>Expressive language</strong> का उपयोग <strong>feelings, emotions, attitudes, and personal experiences</strong> को व्यक्त करने के लिए किया जाता है।</p><div class="formula-box">Expressive = Expressing Emotions / Feelings / Attitudes</div><p><strong>Key Points:</strong></p><ul class="bullet-list"><li>It is <strong>subjective</strong> and <strong>personal</strong></li><li>It is <strong>not true or false</strong> in the factual sense</li><li>It conveys the <strong>speaker's inner state</strong></li></ul><p><strong>Examples:</strong></p><ul class="bullet-list"><li>"I am so happy today!"</li><li>"This movie is boring!"</li><li>"I feel sad about what happened."</li><li>"What a beautiful sunset!"</li></ul></div>
+
+      <div id="directive-use" class="topic-card"><div class="sec-head"><span class="sec-num">4</span><h2>Directive Use — निर्देशात्मक उपयोग</h2></div><p><strong>Directive language</strong> का उपयोग <strong>someone to do something</strong> के लिए किया जाता है — commands, requests, instructions, advice.</p><div class="formula-box">Directive = Commands / Requests / Instructions</div><p><strong>Key Points:</strong></p><ul class="bullet-list"><li>It aims to <strong>influence behaviour</strong></li><li>It is <strong>evaluated</strong> as <strong>appropriate/inappropriate</strong>, not true/false</li><li>It often uses <strong>imperative</strong> sentences</li></ul><p><strong>Examples:</strong></p><ul class="bullet-list"><li>"Please close the door."</li><li>"Don't touch the wires."</li><li>"You must submit your assignment by Friday."</li><li>"Take two tablets daily."</li></ul></div>
+
+      <div id="performative-ceremonial" class="topic-card"><div class="sec-head"><span class="sec-num">5</span><h2>Performative/Ceremonial Use — प्रदर्शनात्मक/आनुष्ठानिक उपयोग</h2></div><p><strong>Performative language</strong> किसी <strong>action को perform</strong> करता है — saying something <strong>is</strong> doing something. <strong>Ceremonial</strong> language rituals, ceremonies, and formal occasions में प्रयुक्त होती है।</p><div class="formula-box">Performative = Saying is Doing | Ceremonial = Rituals / Formal Occasions</div><p><strong>Key Points:</strong></p><ul class="bullet-list"><li>Performative utterances <strong>perform an action</strong></li><li>They are <strong>effective if certain conditions are met</strong></li><li>Ceremonial language is <strong>formal and ritualistic</strong></li></ul><p><strong>Performative Examples:</strong></p><ul class="bullet-list"><li>"I now pronounce you husband and wife."</li><li>"I name this ship the Queen Mary."</li><li>"I promise to pay you back."</li><li>"I apologize for my mistake."</li></ul><p><strong>Ceremonial Examples:</strong></p><ul class="bullet-list"><li>"In the name of the Father, the Son, and the Holy Spirit..."</li><li>"We are gathered here today to..."</li><li>"With this ring, I thee wed."</li></ul></div>
+
+      <div id="denotation" class="topic-card"><div class="sec-head"><span class="sec-num">6</span><h2>Denotation — अभिधा/संकेतार्थ</h2></div><p><strong>Denotation</strong> किसी word का <strong>literal, dictionary meaning</strong> है — वह <strong>objective, explicit</strong> meaning जो word को refer करता है।</p><div class="formula-box">Denotation = Literal / Dictionary Meaning</div><p><strong>Key Points:</strong></p><ul class="bullet-list"><li>It is <strong>objective</strong> and <strong>universal</strong></li><li>It is the <strong>core meaning</strong> of a word</li><li>It is <strong>independent of context</strong></li></ul><p><strong>Examples:</strong></p><ul class="bullet-list"><li><strong>"Dog"</strong> = A four-legged carnivorous mammal (literal)</li><li><strong>"Home"</strong> = A place where one lives</li><li><strong>"Snake"</strong> = A long, legless reptile</li><li><strong>"Rose"</strong> = A prickly bush or shrub with fragrant flowers</li></ul></div>
+
+      <div id="connotation" class="topic-card"><div class="sec-head"><span class="sec-num">7</span><h2>Connotation — व्यंजना/भावार्थ</h2></div><p><strong>Connotation</strong> किसी word के <strong>associated meanings, emotions, feelings, and cultural associations</strong> हैं — जो literal meaning से परे होते हैं।</p><div class="formula-box">Connotation = Associated Meaning / Emotional Meaning</div><p><strong>Key Points:</strong></p><ul class="bullet-list"><li>It is <strong>subjective</strong> and <strong>context-dependent</strong></li><li>It includes <strong>emotional, cultural, social</strong> associations</li><li>Different people may have <strong>different connotations</strong> for the same word</li></ul><p><strong>Examples:</strong></p><ul class="bullet-list"><li><strong>"Dog"</strong> = Loyalty, friendship, love (positive) OR aggression, threat (negative)</li><li><strong>"Home"</strong> = Comfort, safety, family, belonging (positive)</li><li><strong>"Snake"</strong> = Deceit, danger, evil (negative)</li><li><strong>"Rose"</strong> = Love, beauty, romance (positive)</li></ul></div>
+
+      <div id="denotation-vs-connotation" class="topic-card"><div class="sec-head"><span class="sec-num">8</span><h2>Denotation vs Connotation — अभिधा vs व्यंजना</h2></div><table class="data-table"><tr><th>Basis</th><th>Denotation</th><th>Connotation</th></tr><tr><td>Definition</td><td>Literal/Dictionary meaning</td><td>Associated/Emotional meaning</td></tr><tr><td>Nature</td><td>Objective</td><td>Subjective</td></tr><tr><td>Universality</td><td>Universal/Standard</td><td>Context-dependent / Cultural</td></tr><tr><td>Emotion</td><td>Neutral</td><td>Emotionally charged</td></tr><tr><td>Example: "Dog"</td><td>A four-legged animal</td><td>Loyalty, friendship (or aggression)</td></tr><tr><td>Example: "Home"</td><td>A place of residence</td><td>Comfort, safety, family</td></tr><tr><td>Example: "Snake"</td><td>A legless reptile</td><td>Deceit, danger, evil</td></tr></table></div>
+
+      <div id="positive-negative-terms" class="topic-card"><div class="sec-head"><span class="sec-num">9</span><h2>Positive & Negative Terms — सकारात्मक एवं नकारात्मक पद</h2></div><ul class="bullet-list"><li><strong>Positive Terms — सकारात्मक पद:</strong> Terms that indicate <strong>presence</strong> of a quality/attribute. (e.g., honest, brave, good, kind, beautiful, intelligent)</li><li><strong>Negative Terms — नकारात्मक पद:</strong> Terms that indicate <strong>absence</strong> of a quality/attribute, often marked by prefixes like <strong>un-, in-, non-, dis-</strong>. (e.g., dishonest, cowardly, bad, unkind, ugly, unintelligent)</li></ul><div class="formula-box">Positive = Presence of Quality | Negative = Absence of Quality</div><p><strong>Important Notes:</strong></p><ul class="bullet-list"><li>Positive and negative <strong>do not mean "good" and "bad"</strong> in the moral sense</li><li>They refer to <strong>logical opposition</strong> — presence vs absence</li><li>"Atheist" (negative) vs "Theist" (positive)</li><li>"Non-smoker" (negative) vs "Smoker" (positive)</li></ul></div>
+
+      <div id="absolute-relative-terms" class="topic-card"><div class="sec-head"><span class="sec-num">10</span><h2>Absolute & Relative Terms — निरपेक्ष एवं सापेक्ष पद</h2></div><ul class="bullet-list"><li><strong>Absolute Terms — निरपेक्ष पद:</strong> Terms that have <strong>no degree</strong> or variation — they are <strong>either true or false</strong>. (e.g., perfect, unique, complete, infinite, immortal, omnipotent)</li><li><strong>Relative Terms — सापेक्ष पद:</strong> Terms that are <strong>comparative</strong> and depend on <strong>context or comparison</strong>. (e.g., tall, short, big, small, heavy, light, fast, slow)</li></ul><div class="formula-box">Absolute = No Degree (All or Nothing) | Relative = Comparative / Contextual</div><p><strong>Examples:</strong></p><ul class="bullet-list"><li><strong>Absolute:</strong> "perfect" — something is either perfect or not; there are no degrees of perfection.</li><li><strong>Relative:</strong> "tall" — what is tall in one context may be short in another (e.g., tall for a child vs tall for an adult).</li></ul></div>
+
+      <div id="concrete-abstract-terms" class="topic-card"><div class="sec-head"><span class="sec-num">11</span><h2>Concrete & Abstract Terms — मूर्त एवं अमूर्त पद</h2></div><ul class="bullet-list"><li><strong>Concrete Terms — मूर्त पद:</strong> Terms that refer to <strong>physical, tangible, perceptible</strong> objects that can be seen, touched, heard, etc. (e.g., table, book, tree, dog, car, mountain)</li><li><strong>Abstract Terms — अमूर्त पद:</strong> Terms that refer to <strong>ideas, concepts, qualities, feelings</strong> that cannot be perceived directly. (e.g., love, justice, beauty, truth, happiness, democracy, freedom)</li></ul><div class="formula-box">Concrete = Physical/Tangible | Abstract = Conceptual/Intangible</div><p><strong>Examples:</strong></p><ul class="bullet-list"><li><strong>Concrete:</strong> "That red apple on the table."</li><li><strong>Abstract:</strong> "Justice must be served."</li><li><strong>Concrete:</strong> "The car is blue."</li><li><strong>Abstract:</strong> "Her kindness was appreciated."</li></ul></div>
+
+      <div id="collective-terms" class="topic-card"><div class="sec-head"><span class="sec-num">12</span><h2>Collective Terms — समूहवाची पद</h2></div><p><strong>Collective Terms</strong> refer to a <strong>group/collection</strong> of things, people, or objects as a <strong>single unit/entity</strong>.</p><div class="formula-box">Collective = Group as a Single Unit</div><p><strong>Key Points:</strong></p><ul class="bullet-list"><li>A collective term denotes <strong>a collection</strong>, not individual members</li><li>It can be used with <strong>singular or plural verbs</strong> (depending on whether the group is seen as one unit or as individuals)</li><li>It refers to the <strong>entirety</strong> of the group</li></ul><p><strong>Examples:</strong></p><ul class="bullet-list"><li>"Class" — a group of students</li><li>"Team" — a group of players</li><li>"Army" — a group of soldiers</li><li>"Jury" — a group of jurors</li><li>"Committee" — a group of members</li><li>"Audience" — a group of spectators</li><li>"Crowd" — a group of people</li></ul></div>
+
+      <div id="exam-traps" class="topic-card"><div class="sec-head"><span class="sec-num">13</span><h2>Common Exam Traps — सामान्य परीक्षा जाल</h2></div><ul class="bullet-list"><li><strong>Trap 1:</strong> Informative language = only factual statements → ✅ But it also includes definitions, explanations, and descriptions.</li><li><strong>Trap 2:</strong> Expressive language = only about emotions → ❌ It also includes attitudes, opinions, and personal perspectives.</li><li><strong>Trap 3:</strong> Directive language = only commands → ❌ It includes requests, advice, instructions, and recommendations.</li><li><strong>Trap 4:</strong> Performative language = just speech acts → ✅ But it requires appropriate conditions (e.g., authority) to be effective.</li><li><strong>Trap 5:</strong> Denotation = emotional meaning → ❌ Denotation is the literal/dictionary meaning; connotation is emotional.</li><li><strong>Trap 6:</strong> Positive terms = good; negative terms = bad → ❌ Positive/negative refers to presence/absence of quality, not moral value.</li><li><strong>Trap 7:</strong> Absolute terms = always relative → ❌ Absolute terms have no degree (e.g., perfect, unique).</li><li><strong>Trap 8:</strong> Collective terms = plural always → ❌ Collective terms can be used as singular (the team is...) or plural (the team are...).</li></ul></div>
+
+      <div id="practice-questions" class="topic-card"><div class="sec-head"><span class="sec-num">14</span><h2>Practice Questions — अभ्यास प्रश्न</h2></div>
+      <div class="pyq-tag">Question 1 (Uses of Language)</div>
+      <p>"The Earth revolves around the Sun." This is an example of:</p>
+      <ul class="bullet-list"><li>A. Expressive use</li><li>B. Informative use</li><li>C. Directive use</li><li>D. Performative use</li></ul>
+      <div class="answer-box">Answer: B. Informative use</div>
+      <p class="explain">Explanation: It conveys a factual statement about the world — informative use.</p>
+
+      <div class="pyq-tag">Question 2 (Uses of Language)</div>
+      <p>"Please open the window." This is an example of:</p>
+      <ul class="bullet-list"><li>A. Informative</li><li>B. Expressive</li><li>C. Directive</li><li>D. Ceremonial</li></ul>
+      <div class="answer-box">Answer: C. Directive</div>
+      <p class="explain">Explanation: It is a request/command directing someone to perform an action.</p>
+
+      <div class="pyq-tag">Question 3 (Denotation & Connotation)</div>
+      <p>The word "dog" denotes:</p>
+      <ul class="bullet-list"><li>A. A four-legged carnivorous animal</li><li>B. Loyalty and friendship</li><li>C. Aggression and threat</li><li>D. A feeling of love</li></ul>
+      <div class="answer-box">Answer: A. A four-legged carnivorous animal</div>
+      <p class="explain">Explanation: Denotation is the literal dictionary meaning of a word.</p>
+
+      <div class="pyq-tag">Question 4 (Positive & Negative Terms)</div>
+      <p>Which of the following is a negative term?</p>
+      <ul class="bullet-list"><li>A. Honest</li><li>B. Brave</li><li>C. Dishonest</li><li>D. Kind</li></ul>
+      <div class="answer-box">Answer: C. Dishonest</div>
+      <p class="explain">Explanation: "Dishonest" indicates the absence of honesty — negative term (logically).</p>
+
+      <div class="pyq-tag">Question 5 (Absolute & Relative Terms)</div>
+      <p>Which of the following is an absolute term?</p>
+      <ul class="bullet-list"><li>A. Tall</li><li>B. Perfect</li><li>C. Heavy</li><li>D. Fast</li></ul>
+      <div class="answer-box">Answer: B. Perfect</div>
+      <p class="explain">Explanation: "Perfect" has no degree — something is either perfect or not. The others are comparative/relative.</p>
+
+      <div class="pyq-tag">Question 6 (Concrete & Abstract Terms)</div>
+      <p>Which of the following is an abstract term?</p>
+      <ul class="bullet-list"><li>A. Table</li><li>B. Justice</li><li>C. Car</li><li>D. Tree</li></ul>
+      <div class="answer-box">Answer: B. Justice</div>
+      <p class="explain">Explanation: "Justice" is a concept — abstract term. Others are concrete, physical objects.</p>
+
+      <div class="pyq-tag">Question 7 (Collective Terms)</div>
+      <p>Which of the following is a collective term?</p>
+      <ul class="bullet-list"><li>A. Student</li><li>B. Class</li><li>C. Teacher</li><li>D. Book</li></ul>
+      <div class="answer-box">Answer: B. Class</div>
+      <p class="explain">Explanation: "Class" refers to a group of students as a single unit — collective term.</p></div>
+
+      <div id="one-page-revision" class="topic-card"><div class="sec-head"><span class="sec-num">15</span><h2>One-Page Revision — एक पेज में पुनरावृत्ति</h2></div>
+      <div class="formula-box">Language Uses = Informative + Expressive + Directive + Performative/Ceremonial</div>
+
+      <p><strong>Uses of Language:</strong></p>
+      <ul class="bullet-list"><li><strong>Informative:</strong> Facts, information (True/False)</li>
+      <li><strong>Expressive:</strong> Feelings, emotions (Subjective)</li>
+      <li><strong>Directive:</strong> Commands, requests (Action-oriented)</li>
+      <li><strong>Performative/Ceremonial:</strong> Action/ritual (Saying = Doing)</li></ul>
+
+      <p><strong>Terms:</strong></p>
+      <ul class="bullet-list"><li><strong>Denotation:</strong> Literal meaning</li>
+      <li><strong>Connotation:</strong> Emotional/associated meaning</li>
+      <li><strong>Positive/Negative:</strong> Presence vs absence of quality</li>
+      <li><strong>Absolute/Relative:</strong> No degree vs comparative</li>
+      <li><strong>Concrete/Abstract:</strong> Physical/tangible vs conceptual/intangible</li>
+      <li><strong>Collective:</strong> Group as a single unit</li></ul>
+
+      <p><strong>Exam Formula:</strong></p>
+      <div class="formula-box">Identify Use → Classify Terms → Apply in Context</div>
+      <p><em>UGC NET में Uses of Language & Terms के questions identification, classification, और application पर based होते हैं।</em></p></div>
+
+      <div class="enroll-cta"><div><h3 class="h-display">Join the Paper-1 Batch</h3><p>Course fee FREE — ₹500 registration & academic/logistics contribution. Classes daily at 6:30 PM.</p></div><a href="#" class="btn-gold">✓ JOIN BATCH @ ₹500</a></div>
+    </div>
+  </div>
+</main>
+
+<script>
+  (function() {
+
+    const BASE_PATH =
+      "/tutorials/logical-reasoning/uses-of-language-terms";
+
+    const links = document.querySelectorAll(".nav-link");
+    const cards = document.querySelectorAll(".topic-card");
+    const content = document.getElementById("contentArea");
+    const sidebarToggle = document.getElementById("sidebar-toggle");
+
+
+    // Get topic slug from current URL
+    function getSlugFromPath() {
+
+      const path = window.location.pathname
+        .replace(/\/+$/, "");
+
+      if (path.startsWith(BASE_PATH + "/")) {
+
+        return path
+          .substring((BASE_PATH + "/").length)
+          .split("/")[0];
+
+      }
+
+      return null;
+    }
+
+
+    // Update browser URL
+    function updateUrl(slug, replace = false) {
+
+      const newPath =
+        BASE_PATH + "/" + slug;
+
+      if (window.location.pathname !== newPath) {
+
+        if (replace) {
+
+          history.replaceState(
+            null,
+            "",
+            newPath
+          );
+
+        } else {
+
+          history.pushState(
+            null,
+            "",
+            newPath
+          );
+
+        }
+
+      }
+    }
+
+
+    // Update active sidebar link
+    function updateActiveLink(slug) {
+
+      links.forEach(function(link) {
+
+        const href =
+          link.getAttribute("href");
+
+        if (!href) return;
+
+        const linkSlug =
+          href
+            .split("/")
+            .filter(Boolean)
+            .pop();
+
+        link.classList.toggle(
+          "active",
+          linkSlug === slug
+        );
+
+      });
+
+    }
+
+
+    // Show selected topic card
+    function showCard(
+      slug,
+      updateHistory = true
+    ) {
+
+      cards.forEach(function(card) {
+
+        card.classList.add("hidden");
+
+      });
+
+
+      const target =
+        document.getElementById(slug);
+
+
+      if (!target) {
+
+        const first = cards[0];
+
+        if (first) {
+
+          first.classList.remove("hidden");
+
+          const firstSlug =
+            first.id;
+
+          updateActiveLink(firstSlug);
+
+          updateUrl(
+            firstSlug,
+            true
+          );
+
+        }
+
+        return;
+      }
+
+
+      target.classList.remove("hidden");
+
+      updateActiveLink(slug);
+
+
+      if (updateHistory) {
+
+        updateUrl(
+          slug,
+          false
+        );
+
+      }
+
+
+      if (sidebarToggle) {
+
+        sidebarToggle.checked = false;
+
+      }
+
+
+      if (content) {
+
+        const top =
+          content.getBoundingClientRect().top +
+          window.pageYOffset -
+          10;
+
+        window.scrollTo({
+
+          top: top,
+
+          behavior: "smooth"
+
+        });
+
+      }
+
+    }
+
+
+    // Sidebar link click
+    links.forEach(function(link) {
+
+      link.addEventListener(
+        "click",
+        function(e) {
+
+          e.preventDefault();
+
+
+          const href =
+            this.getAttribute("href");
+
+          if (!href) return;
+
+
+          const slug =
+            href
+              .split("/")
+              .filter(Boolean)
+              .pop();
+
+
+          if (!slug) return;
+
+
+          console.log(
+            "Clicked topic:",
+            slug
+          );
+
+
+          showCard(
+            slug,
+            true
+          );
+
+        }
+      );
+
+    });
+
+
+    // Initial page load
+    function initFromPath() {
+
+      let slug =
+        getSlugFromPath();
+
+
+      if (
+        !slug ||
+        !document.getElementById(slug)
+      ) {
+
+        slug =
+          cards[0]?.id ||
+          "uses-language-intro";
+
+      }
+
+
+      showCard(
+        slug,
+        false
+      );
+
+
+      updateUrl(
+        slug,
+        true
+      );
+
+    }
+
+
+    initFromPath();
+
+
+    // Browser Back / Forward
+    window.addEventListener(
+      "popstate",
+      function() {
+
+        const slug =
+          getSlugFromPath();
+
+
+        if (
+          slug &&
+          document.getElementById(slug)
+        ) {
+
+          showCard(
+            slug,
+            false
+          );
+
+        } else {
+
+          const firstSlug =
+            cards[0]?.id ||
+            "uses-language-intro";
+
+          showCard(
+            firstSlug,
+            false
+          );
+
+        }
+
+      }
+    );
+
+
+  })();
+</script>
+</body>
+</html>

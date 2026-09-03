@@ -1,0 +1,1863 @@
+<!doctype html>
+<html lang="hi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Unit 9 / इकाई 9: People, Development & Environment — Full Notes | GS Net Academy</title>
+<meta name="description" content="Complete Unit 9 tutorial in English and Hindi: development, sustainability, pollution, climate change, energy resources, disasters, laws & PYQs.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@700;800&display=swap" rel="stylesheet">
+<style>
+:root{--navy-950:#0b1330;--navy-900:#101a3d;--navy-700:#33406b;--navy-500:#5b6690;--navy-100:#e7eaf5;--navy-50:#f4f6fc;--gold-400:#e8b74b;--gold-500:#d9a53a;--gold-600:#b9852a;--gold-50:#fdf6e7;--cream:#f8f5ee;--green:#1a7a4c;}
+*{box-sizing:border-box;}
+body{margin:0;font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:var(--cream);color:var(--navy-900);}
+.h-display{font-family:'Poppins',system-ui,sans-serif;font-weight:800;letter-spacing:-.01em;}
+a{text-decoration:none;color:inherit;}
+.container-x{max-width:1360px;margin:0 auto;padding:0 20px;}
+.hero{position:relative;background:var(--navy-950);color:#fff;overflow:hidden;}
+.hero:before{content:"";position:absolute;right:-120px;top:-140px;width:380px;height:380px;border-radius:50%;background:radial-gradient(circle,rgba(232,183,75,.25),transparent 70%);}
+.hero-inner{position:relative;padding:38px 0 30px;}
+.hero-top{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;flex-wrap:wrap;}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);padding:6px 14px;border-radius:999px;font-size:12.5px;font-weight:700;color:var(--gold-400);}
+.hero h1{font-size:clamp(24px,3.6vw,40px);margin:16px 0 8px;}
+.hero p{color:rgba(255,255,255,.78);max-width:680px;font-size:15px;line-height:1.6;margin:0;}
+.lang-switch{display:inline-flex;gap:6px;flex:none;}
+.lang-switch button{padding:8px 16px;border-radius:10px;font-weight:800;font-size:13px;border:1px solid rgba(255,255,255,.2);color:#fff;background:transparent;cursor:pointer;font-family:inherit;}
+.lang-switch button.active{background:var(--gold-400);color:var(--navy-950);border-color:var(--gold-400);}
+.lang-switch button:not(.active):hover{background:rgba(255,255,255,.1);}
+.current-topic-badge{display:inline-flex;align-items:center;gap:8px;margin-top:16px;background:rgba(232,183,75,.12);border:1px solid rgba(232,183,75,.35);padding:7px 14px;border-radius:10px;font-size:13px;font-weight:700;color:var(--gold-400);}
+.current-topic-badge .lbl{color:rgba(255,255,255,.55);font-weight:600;}
+
+.layout{display:grid;grid-template-columns:290px 1fr;gap:28px;padding:28px 0 60px;align-items:start;}
+@media (max-width:980px){.layout{grid-template-columns:1fr;}}
+
+.sidebar{position:sticky;top:16px;max-height:calc(100vh - 32px);overflow-y:auto;background:#fff;border:1px solid rgba(16,26,61,.08);border-radius:16px;padding:18px 14px;box-shadow:0 6px 24px rgba(16,26,61,.05);}
+.sidebar::-webkit-scrollbar{width:6px;}
+.sidebar::-webkit-scrollbar-thumb{background:#e2e6f2;border-radius:6px;}
+.sidebar-title{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.14em;color:var(--gold-600);padding:6px 10px 12px;}
+.nav-link{display:none;align-items:flex-start;gap:10px;padding:9px 10px;border-radius:10px;font-size:13.3px;font-weight:600;color:var(--navy-700);line-height:1.35;cursor:pointer;}
+.nav-link.shown{display:flex;}
+.nav-link:hover{background:var(--navy-50);color:var(--navy-900);}
+.nav-link.active{background:var(--gold-50);color:var(--navy-900);}
+.nav-num{flex:none;width:22px;height:22px;border-radius:7px;background:var(--navy-50);color:var(--navy-500);font-size:11px;font-weight:800;display:grid;place-items:center;}
+.nav-link.active .nav-num{background:var(--gold-400);color:var(--navy-950);}
+
+#sidebar-toggle{display:none;}
+.mobile-bar{display:none;}
+@media (max-width:980px){
+  .mobile-bar{display:flex;align-items:center;justify-content:space-between;gap:10px;background:#fff;border:1px solid rgba(16,26,61,.1);border-radius:12px;padding:12px 14px;margin-bottom:6px;font-weight:800;font-size:13.5px;color:var(--navy-900);}
+  .sidebar{position:static;max-height:none;display:none;}
+  #sidebar-toggle:checked ~ .layout .sidebar{display:block;}
+}
+
+.content{min-width:0;}
+.topic-section{background:#fff;border:1px solid rgba(16,26,61,.08);border-radius:16px;padding:22px 22px 20px;margin-bottom:18px;scroll-margin-top:18px;display:none;}
+.topic-section.visible{display:block;}
+.sec-head{display:flex;align-items:center;gap:12px;margin-bottom:12px;}
+.sec-num{flex:none;width:34px;height:34px;border-radius:10px;background:var(--navy-950);color:var(--gold-400);font-weight:800;font-size:14px;display:grid;place-items:center;}
+.sec-head h2{margin:0;font-size:19px;font-weight:800;color:var(--navy-900);}
+.topic-section p{font-size:14.5px;line-height:1.75;color:var(--navy-700);margin:6px 0;}
+.bullet-list{margin:8px 0;padding:0;list-style:none;display:grid;gap:6px;}
+.bullet-list li{position:relative;padding-left:20px;font-size:14.3px;line-height:1.6;color:var(--navy-700);}
+.bullet-list li:before{content:"";position:absolute;left:2px;top:9px;width:6px;height:6px;border-radius:50%;background:var(--gold-500);}
+.formula{background:var(--navy-950);color:#fdeec2;font-weight:700;font-size:13.6px;padding:12px 16px;border-radius:10px;margin:10px 0;overflow-x:auto;white-space:pre-wrap;}
+.pyq-tag{display:inline-block;background:var(--gold-50);color:var(--gold-600);font-weight:800;font-size:12px;letter-spacing:.03em;padding:6px 12px;border-radius:8px;margin:14px 0 6px;}
+.answer-box{background:#eefaf2;border:1px solid #bfe8cc;color:var(--green);font-weight:700;font-size:13.6px;padding:8px 14px;border-radius:9px;margin:6px 0;}
+.explain{background:var(--navy-50);border-radius:9px;padding:8px 14px;font-size:13.6px;color:var(--navy-700);}
+
+.topic-pager{display:flex;justify-content:space-between;gap:10px;margin-top:6px;}
+.topic-pager a{flex:1;background:#fff;border:1px solid rgba(16,26,61,.1);border-radius:12px;padding:12px 14px;font-size:13px;font-weight:700;color:var(--navy-700);}
+.topic-pager a:hover{border-color:var(--gold-500);color:var(--navy-900);}
+.topic-pager .next{text-align:right;}
+
+.enroll-cta{position:relative;overflow:hidden;background:var(--navy-950);color:#fff;border-radius:16px;padding:26px 26px;margin-top:20px;display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between;}
+.enroll-cta:before{content:"";position:absolute;right:-60px;top:-60px;width:200px;height:200px;border-radius:50%;background:radial-gradient(circle,rgba(232,183,75,.25),transparent 70%);}
+.enroll-cta h3{margin:0 0 4px;font-size:20px;}
+.enroll-cta p{margin:0;color:rgba(255,255,255,.75);font-size:13.5px;max-width:480px;}
+.btn-gold{position:relative;background:var(--gold-400);color:var(--navy-950);font-weight:800;padding:11px 22px;border-radius:10px;font-size:13.5px;white-space:nowrap;}
+</style>
+</head>
+<body>
+
+<!-- ================= NAVBAR PLACEHOLDER : apna existing header/nav yahan paste karein ================= -->
+
+<section class="hero">
+  <div class="container-x hero-inner">
+    <div class="hero-top">
+      <div>
+        <span class="eyebrow" data-t-en="★ UGC NET Paper-I · Unit 9" data-t-hi="★ UGC NET पेपर-1 · इकाई 9">★ UGC NET Paper-I · Unit 9</span>
+        <h1 class="h-display" id="hero-title" data-t-en="Unit 9: People, Development &amp; Environment — Full Notes" data-t-hi="इकाई 9: लोग, विकास एवं पर्यावरण — पूर्ण नोट्स">Unit 9: People, Development &amp; Environment — Full Notes</h1>
+        <p id="hero-sub" data-t-en="Complete Unit 9 tutorial: development, sustainability, pollution, climate change, energy resources, disasters, laws &amp; PYQs." data-t-hi="इकाई 9 का पूर्ण अध्ययन: विकास, सततता, प्रदूषण, जलवायु परिवर्तन, ऊर्जा संसाधन, आपदा, कानून एवं PYQs।">Complete Unit 9 tutorial: development, sustainability, pollution, climate change, energy resources, disasters, laws &amp; PYQs.</p>
+      </div>
+      <div class="lang-switch">
+        <button type="button" id="btn-en" data-lang="en">English</button>
+        <button type="button" id="btn-hi" data-lang="hi">हिन्दी</button>
+      </div>
+    </div>
+    <div class="current-topic-badge"><span class="lbl" id="current-topic-lbl-text">Currently viewing:</span><span id="current-topic-label">—</span></div>
+  </div>
+</section>
+
+<main class="container-x">
+  <input type="checkbox" id="sidebar-toggle">
+  <label for="sidebar-toggle" class="mobile-bar">
+    <span id="mobile-current-topic">📑 On this page</span>
+    <span id="mobile-menu-lbl">☰ Menu</span>
+  </label>
+
+  <div class="layout">
+    <aside class="sidebar">
+      <p class="sidebar-title" id="sidebar-title-text">On this page</p>
+      <nav class="nav-list">
+<a href="/tutorials/people-development-and-environment/people-development-and-environment/environment-meaning-and-components" data-slug="Environment:-Meaning-and-Components" data-lang="en" class="nav-link lang-en"><span class="nav-num">1</span>Environment: Meaning and Components</a>
+<a href="/tutorials/people-development-and-environment/people-development-and-environment/development-and-environment" data-slug="Development-and-Environment" data-lang="en" class="nav-link lang-en"><span class="nav-num">2</span>Development and Environment</a>
+<a href="/tutorials/people-development-and-environment/people-development-and-environment/sustainable-development" data-slug="Sustainable-Development" data-lang="en" class="nav-link lang-en"><span class="nav-num">3</span>Sustainable Development</a>
+<a href="/tutorials/people-development-and-environment/people-development-and-environment/millennium-development-goals" data-slug="Millennium-Development-Goals" data-lang="en" class="nav-link lang-en"><span class="nav-num">4</span>Millennium Development Goals</a>
+<a href="/tutorials/people-development-and-environment/people-development-and-environment/sustainable-development-goals" data-slug="Sustainable-Development-Goals" data-lang="en" class="nav-link lang-en"><span class="nav-num">5</span>Sustainable Development Goals</a>
+<a href="/tutorials/people-development-and-environment/people-development-and-environment/human-environment-interaction" data-slug="Human–Environment-Interaction" data-lang="en" class="nav-link lang-en"><span class="nav-num">6</span>Human–Environment Interaction</a>
+<a href="/tutorials/people-development-and-environment/people-development-and-environment/anthropogenic-activities" data-slug="Anthropogenic-Activities" data-lang="en" class="nav-link lang-en"><span class="nav-num">7</span>Anthropogenic Activities</a>
+<a href="/tutorials/people-development-and-environment/people-development-and-environment/environmental-issues-by-scale" data-slug="Environmental-Issues-by-Scale" data-lang="en" class="nav-link lang-en"><span class="nav-num">8</span>Environmental Issues by Scale</a>
+<a href="/tutorials/people-development-and-environment/people-development-and-environment/air-pollution" data-slug="Air-Pollution" data-lang="en" class="nav-link lang-en"><span class="nav-num">9</span>Air Pollution</a>
+<a href="/tutorials/people-development-and-environment/people-development-and-environment/water-pollution" data-slug="Water-Pollution" data-lang="en" class="nav-link lang-en"><span class="nav-num">10</span>Water Pollution</a>
+<a href="/tutorials/people-development-and-environment/people-development-and-environment/soil-pollution-and-land-degradation" data-slug="Soil-Pollution-and-Land-Degradation" data-lang="en" class="nav-link lang-en"><span class="nav-num">11</span>Soil Pollution and Land Degradation</a>
+<a href="/tutorials/people-development-and-environment/people-development-and-environment/noise-pollution" data-slug="Noise-Pollution" data-lang="en" class="nav-link lang-en"><span class="nav-num">12</span>Noise Pollution</a>
+<a href="/tutorials/people-development-and-environment/people-development-and-environment/waste-and-its-types" data-slug="Waste-and-Its-Types" data-lang="en" class="nav-link lang-en"><span class="nav-num">13</span>Waste and Its Types</a>
+<a href="/tutorials/people-development-and-environment/people-development-and-environment/waste-management-hierarchy" data-slug="Waste-Management-Hierarchy" data-lang="en" class="nav-link lang-en"><span class="nav-num">14</span>Waste-Management Hierarchy</a>
+<a href="/tutorials/people-development-and-environment/people-development-and-environment/climate-change" data-slug="Climate-Change" data-lang="en" class="nav-link lang-en"><span class="nav-num">15</span>Climate Change</a>
+<a href="/tutorials/people-development-and-environment/people-development-and-environment/socio-economic-dimensions-of-climate-change" data-slug="Socio-economic-Dimensions-of-Climate-Change" data-lang="en" class="nav-link lang-en"><span class="nav-num">16</span>Socio-economic Dimensions of Climate Change</a>
+<a href="/tutorials/people-development-and-environment/people-development-and-environment/pollution-and-human-health" data-slug="Pollution-and-Human-Health" data-lang="en" class="nav-link lang-en"><span class="nav-num">17</span>Pollution and Human Health</a>
+<a href="/tutorials/people-development-and-environment/people-development-and-environment/natural-and-energy-resources" data-slug="Natural-and-Energy-Resources" data-lang="en" class="nav-link lang-en"><span class="nav-num">18</span>Natural and Energy Resources</a>
+<a href="/tutorials/people-development-and-environment/people-development-and-environment/solar-energy" data-slug="Solar-Energy" data-lang="en" class="nav-link lang-en"><span class="nav-num">19</span>Solar Energy</a>
+<a href="/tutorials/people-development-and-environment/people-development-and-environment/wind-energy" data-slug="Wind-Energy" data-lang="en" class="nav-link lang-en"><span class="nav-num">20</span>Wind Energy</a>
+<a href="/tutorials/people-development-and-environment/people-development-and-environment/hydropower" data-slug="Hydropower" data-lang="en" class="nav-link lang-en"><span class="nav-num">21</span>Hydropower</a>
+<a href="/tutorials/people-development-and-environment/people-development-and-environment/geothermal-energy" data-slug="Geothermal-Energy" data-lang="en" class="nav-link lang-en"><span class="nav-num">22</span>Geothermal Energy</a>
+<a href="/tutorials/people-development-and-environment/people-development-and-environment/biomass-energy" data-slug="Biomass-Energy" data-lang="en" class="nav-link lang-en"><span class="nav-num">23</span>Biomass Energy</a>
+<a href="/tutorials/people-development-and-environment/people-development-and-environment/nuclear-energy" data-slug="Nuclear-Energy" data-lang="en" class="nav-link lang-en"><span class="nav-num">24</span>Nuclear Energy</a>
+<a href="/tutorials/people-development-and-environment/people-development-and-environment/forest-resources" data-slug="Forest-Resources" data-lang="en" class="nav-link lang-en"><span class="nav-num">25</span>Forest Resources</a>
+<a href="/tutorials/people-development-and-environment/people-development-and-environment/soil-as-a-resource" data-slug="Soil-as-a-Resource" data-lang="en" class="nav-link lang-en"><span class="nav-num">26</span>Soil as a Resource</a>
+<a href="/tutorials/people-development-and-environment/people-development-and-environment/natural-hazards-and-disasters" data-slug="Natural-Hazards-and-Disasters" data-lang="en" class="nav-link lang-en"><span class="nav-num">27</span>Natural Hazards and Disasters</a>
+<a href="/tutorials/people-development-and-environment/people-development-and-environment/disaster-management-cycle" data-slug="Disaster-Management-Cycle" data-lang="en" class="nav-link lang-en"><span class="nav-num">28</span>Disaster-Management Cycle</a>
+<a href="/tutorials/people-development-and-environment/people-development-and-environment/hazard-specific-mitigation" data-slug="Hazard-specific-Mitigation" data-lang="en" class="nav-link lang-en"><span class="nav-num">29</span>Hazard-specific Mitigation</a>
+<a href="/tutorials/people-development-and-environment/people-development-and-environment/environment-protection-act-1986" data-slug="Environment-Protection-Act-1986" data-lang="en" class="nav-link lang-en"><span class="nav-num">30</span>Environment (Protection) Act, 1986</a>
+<a href="/tutorials/people-development-and-environment/people-development-and-environment/national-action-plan-on-climate-change" data-slug="National-Action-Plan-on-Climate-Change" data-lang="en" class="nav-link lang-en"><span class="nav-num">31</span>National Action Plan on Climate Change</a>
+<a href="/tutorials/people-development-and-environment/people-development-and-environment/international-environmental-agreements" data-slug="International-Environmental-Agreements" data-lang="en" class="nav-link lang-en"><span class="nav-num">32</span>International Environmental Agreements</a>
+<a href="/tutorials/people-development-and-environment/people-development-and-environment/chronology-of-international-efforts" data-slug="Chronology-of-International-Efforts" data-lang="en" class="nav-link lang-en"><span class="nav-num">33</span>Chronology of International Efforts</a>
+<a href="/tutorials/people-development-and-environment/people-development-and-environment/verified-previous-year-questions" data-slug="Verified-Previous-Year-Questions" data-lang="en" class="nav-link lang-en"><span class="nav-num">34</span>Verified Previous Year Questions</a>
+<a href="/tutorials/people-development-and-environment/people-development-and-environment/pyq-trend-analysis" data-slug="PYQ-Trend-Analysis" data-lang="en" class="nav-link lang-en"><span class="nav-num">35</span>PYQ Trend Analysis</a>
+<a href="/tutorials/people-development-and-environment/people-development-and-environment/december-2026-expected-mcqs" data-slug="December-2026-Expected-MCQs" data-lang="en" class="nav-link lang-en"><span class="nav-num">36</span>December 2026 Expected MCQs</a>
+<a href="/tutorials/people-development-and-environment/people-development-and-environment/one-page-revision-capsule" data-slug="One-Page-Revision-Capsule" data-lang="en" class="nav-link lang-en"><span class="nav-num">37</span>One-Page Revision Capsule</a>
+<a href="/tutorials/people-development-and-environment/people-development-and-environment/पर्यावरण-का-अर्थ-एवं-घटक" data-slug="पर्यावरण-का-अर्थ-एवं-घटक" data-lang="hi" class="nav-link lang-hi"><span class="nav-num">1</span>पर्यावरण का अर्थ एवं घटक</a>
+<a href="/tutorials/people-development-and-environment/people-development-and-environment/विकास-और-पर्यावरण" data-slug="विकास-और-पर्यावरण" data-lang="hi" class="nav-link lang-hi"><span class="nav-num">2</span>विकास और पर्यावरण</a>
+<a href="/tutorials/people-development-and-environment/people-development-and-environment/सतत-विकास" data-slug="सतत-विकास" data-lang="hi" class="nav-link lang-hi"><span class="nav-num">3</span>सतत विकास</a>
+<a href="/tutorials/people-development-and-environment/people-development-and-environment/सहस्राब्दी-विकास-लक्ष्य" data-slug="सहस्राब्दी-विकास-लक्ष्य" data-lang="hi" class="nav-link lang-hi"><span class="nav-num">4</span>सहस्राब्दी विकास लक्ष्य</a>
+<a href="/tutorials/people-development-and-environment/people-development-and-environment/सतत-विकास-लक्ष्य" data-slug="सतत-विकास-लक्ष्य" data-lang="hi" class="nav-link lang-hi"><span class="nav-num">5</span>सतत विकास लक्ष्य</a>
+<a href="/tutorials/people-development-and-environment/people-development-and-environment/mdgs-और-sdgs-में-अंतर" data-slug="MDGs-और-SDGs-में-अंतर" data-lang="hi" class="nav-link lang-hi"><span class="nav-num">6</span>MDGs और SDGs में अंतर</a>
+<a href="/tutorials/people-development-and-environment/people-development-and-environment/मानव-पर्यावरण-अंतःक्रिया" data-slug="मानव–पर्यावरण-अंतःक्रिया" data-lang="hi" class="nav-link lang-hi"><span class="nav-num">7</span>मानव–पर्यावरण अंतःक्रिया</a>
+<a href="/tutorials/people-development-and-environment/people-development-and-environment/मानवजनित-गतिविधियाँ" data-slug="मानवजनित-गतिविधियाँ" data-lang="hi" class="nav-link lang-hi"><span class="nav-num">8</span>मानवजनित गतिविधियाँ</a>
+<a href="/tutorials/people-development-and-environment/people-development-and-environment/पर्यावरणीय-समस्याओं-का-स्तर" data-slug="पर्यावरणीय-समस्याओं-का-स्तर" data-lang="hi" class="nav-link lang-hi"><span class="nav-num">9</span>पर्यावरणीय समस्याओं का स्तर</a>
+<a href="/tutorials/people-development-and-environment/people-development-and-environment/वायु-प्रदूषण" data-slug="वायु-प्रदूषण" data-lang="hi" class="nav-link lang-hi"><span class="nav-num">10</span>वायु प्रदूषण</a>
+<a href="/tutorials/people-development-and-environment/people-development-and-environment/स्मॉग" data-slug="स्मॉग" data-lang="hi" class="nav-link lang-hi"><span class="nav-num">11</span>स्मॉग</a>
+<a href="/tutorials/people-development-and-environment/people-development-and-environment/अम्ल-वर्षा" data-slug="अम्ल-वर्षा" data-lang="hi" class="nav-link lang-hi"><span class="nav-num">12</span>अम्ल वर्षा</a>
+<a href="/tutorials/people-development-and-environment/people-development-and-environment/जल-प्रदूषण" data-slug="जल-प्रदूषण" data-lang="hi" class="nav-link lang-hi"><span class="nav-num">13</span>जल प्रदूषण</a>
+<a href="/tutorials/people-development-and-environment/people-development-and-environment/सुपोषण" data-slug="सुपोषण" data-lang="hi" class="nav-link lang-hi"><span class="nav-num">14</span>सुपोषण</a>
+<a href="/tutorials/people-development-and-environment/people-development-and-environment/जैव-संचयन-और-जैव-आवर्धन" data-slug="जैव-संचयन-और-जैव-आवर्धन" data-lang="hi" class="nav-link lang-hi"><span class="nav-num">15</span>जैव-संचयन और जैव-आवर्धन</a>
+<a href="/tutorials/people-development-and-environment/people-development-and-environment/मृदा-प्रदूषण-एवं-भूमि-क्षरण" data-slug="मृदा-प्रदूषण-एवं-भूमि-क्षरण" data-lang="hi" class="nav-link lang-hi"><span class="nav-num">16</span>मृदा प्रदूषण एवं भूमि क्षरण</a>
+<a href="/tutorials/people-development-and-environment/people-development-and-environment/ध्वनि-प्रदूषण" data-slug="ध्वनि-प्रदूषण" data-lang="hi" class="nav-link lang-hi"><span class="nav-num">17</span>ध्वनि प्रदूषण</a>
+<a href="/tutorials/people-development-and-environment/people-development-and-environment/अपशिष्ट-के-प्रकार" data-slug="अपशिष्ट-के-प्रकार" data-lang="hi" class="nav-link lang-hi"><span class="nav-num">18</span>अपशिष्ट के प्रकार</a>
+<a href="/tutorials/people-development-and-environment/people-development-and-environment/अपशिष्ट-प्रबंधन-पदानुक्रम" data-slug="अपशिष्ट-प्रबंधन-पदानुक्रम" data-lang="hi" class="nav-link lang-hi"><span class="nav-num">19</span>अपशिष्ट प्रबंधन पदानुक्रम</a>
+<a href="/tutorials/people-development-and-environment/people-development-and-environment/जलवायु-परिवर्तन" data-slug="जलवायु-परिवर्तन" data-lang="hi" class="nav-link lang-hi"><span class="nav-num">20</span>जलवायु परिवर्तन</a>
+<a href="/tutorials/people-development-and-environment/people-development-and-environment/जलवायु-परिवर्तन-के-प्रभाव" data-slug="जलवायु-परिवर्तन-के-प्रभाव" data-lang="hi" class="nav-link lang-hi"><span class="nav-num">21</span>जलवायु परिवर्तन के प्रभाव</a>
+<a href="/tutorials/people-development-and-environment/people-development-and-environment/शमन-और-अनुकूलन" data-slug="शमन-और-अनुकूलन" data-lang="hi" class="nav-link lang-hi"><span class="nav-num">22</span>शमन और अनुकूलन</a>
+<a href="/tutorials/people-development-and-environment/people-development-and-environment/जलवायु-परिवर्तन-के-सामाजिक-आर्थिक-आयाम" data-slug="जलवायु-परिवर्तन-के-सामाजिक-आर्थिक-आयाम" data-lang="hi" class="nav-link lang-hi"><span class="nav-num">23</span>जलवायु परिवर्तन के सामाजिक-आर्थिक आयाम</a>
+<a href="/tutorials/people-development-and-environment/people-development-and-environment/प्रदूषक-और-मानव-स्वास्थ्य" data-slug="प्रदूषक-और-मानव-स्वास्थ्य" data-lang="hi" class="nav-link lang-hi"><span class="nav-num">24</span>प्रदूषक और मानव स्वास्थ्य</a>
+<a href="/tutorials/people-development-and-environment/people-development-and-environment/प्राकृतिक-एवं-ऊर्जा-संसाधन" data-slug="प्राकृतिक-एवं-ऊर्जा-संसाधन" data-lang="hi" class="nav-link lang-hi"><span class="nav-num">25</span>प्राकृतिक एवं ऊर्जा संसाधन</a>
+<a href="/tutorials/people-development-and-environment/people-development-and-environment/सौर-ऊर्जा" data-slug="सौर-ऊर्जा" data-lang="hi" class="nav-link lang-hi"><span class="nav-num">26</span>सौर ऊर्जा</a>
+<a href="/tutorials/people-development-and-environment/people-development-and-environment/पवन-ऊर्जा" data-slug="पवन-ऊर्जा" data-lang="hi" class="nav-link lang-hi"><span class="nav-num">27</span>पवन ऊर्जा</a>
+<a href="/tutorials/people-development-and-environment/people-development-and-environment/जल-विद्युत" data-slug="जल-विद्युत" data-lang="hi" class="nav-link lang-hi"><span class="nav-num">28</span>जल विद्युत</a>
+<a href="/tutorials/people-development-and-environment/people-development-and-environment/भू-तापीय-ऊर्जा" data-slug="भू-तापीय-ऊर्जा" data-lang="hi" class="nav-link lang-hi"><span class="nav-num">29</span>भू-तापीय ऊर्जा</a>
+<a href="/tutorials/people-development-and-environment/people-development-and-environment/बायोमास-ऊर्जा" data-slug="बायोमास-ऊर्जा" data-lang="hi" class="nav-link lang-hi"><span class="nav-num">30</span>बायोमास ऊर्जा</a>
+<a href="/tutorials/people-development-and-environment/people-development-and-environment/परमाणु-ऊर्जा" data-slug="परमाणु-ऊर्जा" data-lang="hi" class="nav-link lang-hi"><span class="nav-num">31</span>परमाणु ऊर्जा</a>
+<a href="/tutorials/people-development-and-environment/people-development-and-environment/वन-संसाधन" data-slug="वन-संसाधन" data-lang="hi" class="nav-link lang-hi"><span class="nav-num">32</span>वन संसाधन</a>
+<a href="/tutorials/people-development-and-environment/people-development-and-environment/मिट्टी-एक-प्राकृतिक-संसाधन" data-slug="मिट्टी-एक-प्राकृतिक-संसाधन" data-lang="hi" class="nav-link lang-hi"><span class="nav-num">33</span>मिट्टी एक प्राकृतिक संसाधन</a>
+<a href="/tutorials/people-development-and-environment/people-development-and-environment/प्राकृतिक-संकट-एवं-आपदा" data-slug="प्राकृतिक-संकट-एवं-आपदा" data-lang="hi" class="nav-link lang-hi"><span class="nav-num">34</span>प्राकृतिक संकट एवं आपदा</a>
+<a href="/tutorials/people-development-and-environment/people-development-and-environment/संकटों-के-प्रकार" data-slug="संकटों-के-प्रकार" data-lang="hi" class="nav-link lang-hi"><span class="nav-num">35</span>संकटों के प्रकार</a>
+<a href="/tutorials/people-development-and-environment/people-development-and-environment/आपदा-प्रबंधन-चक्र" data-slug="आपदा-प्रबंधन-चक्र" data-lang="hi" class="nav-link lang-hi"><span class="nav-num">36</span>आपदा प्रबंधन चक्र</a>
+<a href="/tutorials/people-development-and-environment/people-development-and-environment/संकट-विशिष्ट-शमन-रणनीतियाँ" data-slug="संकट-विशिष्ट-शमन-रणनीतियाँ" data-lang="hi" class="nav-link lang-hi"><span class="nav-num">37</span>संकट-विशिष्ट शमन रणनीतियाँ</a>
+<a href="/tutorials/people-development-and-environment/people-development-and-environment/पर्यावरण-संरक्षण-अधिनियम-1986" data-slug="पर्यावरण-संरक्षण-अधिनियम-1986" data-lang="hi" class="nav-link lang-hi"><span class="nav-num">38</span>पर्यावरण संरक्षण अधिनियम, 1986</a>
+<a href="/tutorials/people-development-and-environment/people-development-and-environment/प्रमुख-पर्यावरणीय-कानून" data-slug="प्रमुख-पर्यावरणीय-कानून" data-lang="hi" class="nav-link lang-hi"><span class="nav-num">39</span>प्रमुख पर्यावरणीय कानून</a>
+<a href="/tutorials/people-development-and-environment/people-development-and-environment/राष्ट्रीय-जलवायु-परिवर्तन-कार्ययोजना" data-slug="राष्ट्रीय-जलवायु-परिवर्तन-कार्ययोजना" data-lang="hi" class="nav-link lang-hi"><span class="nav-num">40</span>राष्ट्रीय जलवायु परिवर्तन कार्ययोजना</a>
+<a href="/tutorials/people-development-and-environment/people-development-and-environment/अंतरराष्ट्रीय-पर्यावरणीय-समझौते" data-slug="अंतरराष्ट्रीय-पर्यावरणीय-समझौते" data-lang="hi" class="nav-link lang-hi"><span class="nav-num">41</span>अंतरराष्ट्रीय पर्यावरणीय समझौते</a>
+<a href="/tutorials/people-development-and-environment/people-development-and-environment/अंतरराष्ट्रीय-प्रयासों-का-कालक्रम" data-slug="अंतरराष्ट्रीय-प्रयासों-का-कालक्रम" data-lang="hi" class="nav-link lang-hi"><span class="nav-num">42</span>अंतरराष्ट्रीय प्रयासों का कालक्रम</a>
+<a href="/tutorials/people-development-and-environment/people-development-and-environment/सत्यापित-पिछले-वर्षों-के-प्रश्न" data-slug="सत्यापित-पिछले-वर्षों-के-प्रश्न" data-lang="hi" class="nav-link lang-hi"><span class="nav-num">43</span>सत्यापित पिछले वर्षों के प्रश्न</a>
+<a href="/tutorials/people-development-and-environment/people-development-and-environment/pyq-प्रवृत्ति-विश्लेषण" data-slug="PYQ-प्रवृत्ति-विश्लेषण" data-lang="hi" class="nav-link lang-hi"><span class="nav-num">44</span>PYQ प्रवृत्ति विश्लेषण</a>
+<a href="/tutorials/people-development-and-environment/people-development-and-environment/दिसंबर-2026-के-संभावित-प्रश्न" data-slug="दिसंबर-2026-के-संभावित-प्रश्न" data-lang="hi" class="nav-link lang-hi"><span class="nav-num">45</span>दिसंबर 2026 के संभावित प्रश्न</a>
+<a href="/tutorials/people-development-and-environment/people-development-and-environment/एक-पृष्ठ-त्वरित-पुनरावृत्ति" data-slug="एक-पृष्ठ-त्वरित-पुनरावृत्ति" data-lang="hi" class="nav-link lang-hi"><span class="nav-num">46</span>एक-पृष्ठ त्वरित पुनरावृत्ति</a>
+      </nav>
+    </aside>
+
+    <div class="content">
+<section id="en-Environment:-Meaning-and-Components" class="topic-section lang-en" data-slug="Environment:-Meaning-and-Components" data-lang="en" data-title="Environment: Meaning and Components">
+<div class="sec-head"><span class="sec-num">1</span><h2>Environment: Meaning and Components</h2></div>
+<ul class="bullet-list"><li>पर्यावरण का अर्थ एवं घटक</li></ul>
+<p>Environment means the totality of biotic and abiotic conditions surrounding an organism and influencing its life.</p>
+<p>पर्यावरण उन सभी जैविक और अजैविक परिस्थितियों का समग्र रूप है जो जीवों के जीवन और विकास को प्रभावित करती हैं।</p>
+<ul class="bullet-list"><li>Components</li><li>A. Biotic Components — जैविक घटक</li><li>Plants — Producers</li><li>Animals — Consumers</li><li>Microorganisms — Decomposers</li><li>B. Abiotic Components — अजैविक घटक</li><li>Air</li><li>Water</li><li>Soil</li><li>Sunlight</li><li>Temperature</li><li>Minerals</li><li>Climate</li><li>Environmental Spheres</li><li>Ecosystem Formula</li></ul>
+<div class="formula">Ecosystem = Biotic Community + Abiotic Environment + Interaction</div>
+</section>
+<section id="en-Development-and-Environment" class="topic-section lang-en" data-slug="Development-and-Environment" data-lang="en" data-title="Development and Environment">
+<div class="sec-head"><span class="sec-num">2</span><h2>Development and Environment</h2></div>
+<p>Development means improvement in economic, social and human well-being.</p>
+<p>केवल GDP बढ़ना complete development नहीं है। Development में health, education, equality, dignity, environmental quality और opportunities भी शामिल हैं।</p>
+<ul class="bullet-list"><li>Conventional Development</li><li>Economic growth</li><li>Industrialisation</li><li>Infrastructure</li><li>Urbanisation</li><li>Higher production and consumption</li><li>Environmental Concern</li></ul>
+<p>अगर development के कारण:</p>
+<ul class="bullet-list"><li>Natural resources का excessive exploitation हो</li><li>Pollution बढ़े</li><li>Biodiversity decline हो</li><li>Climate change तेज हो</li><li>Vulnerable communities displace हों</li></ul>
+<p>तो वह development long-term में sustainable नहीं होगा।</p>
+</section>
+<section id="en-Sustainable-Development" class="topic-section lang-en" data-slug="Sustainable-Development" data-lang="en" data-title="Sustainable Development">
+<div class="sec-head"><span class="sec-num">3</span><h2>Sustainable Development</h2></div>
+<ul class="bullet-list"><li>सतत विकास</li></ul>
+<p>The Brundtland Report, Our Common Future (1987), popularised sustainable development as development that meets present needs without compromising the ability of future generations to meet their needs.</p>
+<p>सरल अर्थ:</p>
+<p>वर्तमान पीढ़ी की आवश्यकताओं को पूरा करना, लेकिन future generations की आवश्यकताओं और resources को नुकसान न पहुँचाना।</p>
+<ul class="bullet-list"><li>Three Pillars</li><li>Economic sustainability — आर्थिक व्यवहार्यता</li><li>Social sustainability — समानता एवं सामाजिक न्याय</li><li>Environmental sustainability — पर्यावरण संरक्षण</li></ul>
+<div class="formula">Formula</div>
+<div class="formula">Sustainable Development = Economy + Society + Environment</div>
+<ul class="bullet-list"><li>Important Principles</li><li>Intergenerational equity</li><li>Intragenerational equity</li><li>Precautionary principle</li><li>Polluter Pays Principle</li><li>Carrying capacity</li><li>Resource efficiency</li><li>Public participation</li><li>Conservation of biodiversity</li><li>Common but Differentiated Responsibilities</li><li>Sustainable consumption and production</li><li>Key Principles Explained</li><li>Intergenerational Equity</li></ul>
+<p>Present और future generations के बीच resource justice।</p>
+<ul class="bullet-list"><li>Intragenerational Equity</li></ul>
+<p>वर्तमान पीढ़ी के अलग-अलग groups और countries के बीच fairness।</p>
+<ul class="bullet-list"><li>Precautionary Principle</li></ul>
+<p>Serious environmental damage की संभावना हो तो complete scientific certainty की प्रतीक्षा action रोकने का आधार नहीं होनी चाहिए।</p>
+<ul class="bullet-list"><li>Polluter Pays Principle</li></ul>
+<p>Pollution करने वाले को prevention, control और restoration की cost वहन करनी चाहिए।</p>
+<ul class="bullet-list"><li>Carrying Capacity</li></ul>
+<p>किसी ecosystem की वह maximum population/activity जिसे वह long-term degradation के बिना support कर सकता है।</p>
+<ul class="bullet-list"><li>Exam Trap</li></ul>
+<p>Sustainable development का अर्थ development रोकना नहीं, बल्कि development को resource-efficient, inclusive और environmentally responsible बनाना है।</p>
+</section>
+<section id="en-Millennium-Development-Goals" class="topic-section lang-en" data-slug="Millennium-Development-Goals" data-lang="en" data-title="Millennium Development Goals">
+<div class="sec-head"><span class="sec-num">4</span><h2>Millennium Development Goals</h2></div>
+<ul class="bullet-list"><li>सहस्राब्दी विकास लक्ष्य</li></ul>
+<p>MDGs were adopted following the United Nations Millennium Declaration in 2000 and had a target period up to 2015.</p>
+<ul class="bullet-list"><li>Eight MDGs</li><li>Recall Pattern</li></ul>
+<div class="formula">Poverty → Education → Gender → Child → Mother → Disease → Environment → Partnership</div>
+</section>
+<section id="en-Sustainable-Development-Goals" class="topic-section lang-en" data-slug="Sustainable-Development-Goals" data-lang="en" data-title="Sustainable Development Goals">
+<div class="sec-head"><span class="sec-num">5</span><h2>Sustainable Development Goals</h2></div>
+<ul class="bullet-list"><li>सतत विकास लक्ष्य</li></ul>
+<p>SDGs were adopted in 2015 under the 2030 Agenda for Sustainable Development and came into effect from 2016.</p>
+<ul class="bullet-list"><li>Goals: 17</li><li>Targets: 169</li><li>Target year: 2030</li><li>Universal applicability</li><li>Central principle: Leave No One Behind</li><li>All 17 SDGs</li><li>5Ps of SDGs</li><li>People + Planet + Prosperity + Peace + Partnership</li><li>Important Environment-related SDGs</li></ul>
+<div class="formula">SDG 6 → Water and sanitation</div>
+<div class="formula">SDG 7 → Clean energy</div>
+<div class="formula">SDG 11 → Sustainable cities</div>
+<div class="formula">SDG 12 → Sustainable consumption and production</div>
+<div class="formula">SDG 13 → Climate action</div>
+<div class="formula">SDG 14 → Life below water</div>
+<div class="formula">SDG 15 → Life on land</div>
+<ul class="bullet-list"><li>MDGs vs SDGs</li><li>Exam Trap</li></ul>
+<div class="formula">MDGs = 8; SDGs = 17.</div>
+<p>SDGs replace/succeed MDGs.</p>
+<p>SDGs केवल developing countries के लिए नहीं हैं।</p>
+<p>“Life Below Water” and “Life on Land” SDGs हैं, MDGs नहीं।</p>
+</section>
+<section id="en-Human–Environment-Interaction" class="topic-section lang-en" data-slug="Human–Environment-Interaction" data-lang="en" data-title="Human–Environment Interaction">
+<div class="sec-head"><span class="sec-num">6</span><h2>Human–Environment Interaction</h2></div>
+<ul class="bullet-list"><li>मानव–पर्यावरण अंतःक्रिया</li></ul>
+<p>Human beings depend on nature for:</p>
+<ul class="bullet-list"><li>Food</li><li>Water</li><li>Energy</li><li>Minerals</li><li>Land</li><li>Forest products</li><li>Ecosystem services</li></ul>
+<p>At the same time, human activities modify the environment.</p>
+<ul class="bullet-list"><li>Positive Interaction</li><li>Afforestation</li><li>Rainwater harvesting</li><li>Renewable energy</li><li>Organic farming</li><li>Waste recycling</li><li>Wetland restoration</li><li>Wildlife conservation</li><li>Negative Interaction</li><li>Deforestation</li><li>Mining</li><li>Fossil-fuel combustion</li><li>Industrial discharge</li><li>Overgrazing</li><li>Excessive groundwater extraction</li><li>Urban sprawl</li><li>Plastic pollution</li></ul>
+</section>
+<section id="en-Anthropogenic-Activities" class="topic-section lang-en" data-slug="Anthropogenic-Activities" data-lang="en" data-title="Anthropogenic Activities">
+<div class="sec-head"><span class="sec-num">7</span><h2>Anthropogenic Activities</h2></div>
+<ul class="bullet-list"><li>मानवजनित गतिविधियाँ</li></ul>
+<p>Anthropogenic means originating from human activities.</p>
+<ul class="bullet-list"><li>IPAT Equation</li></ul>
+<div class="formula">I = P × A × T</div>
+<p>Where:</p>
+<div class="formula">I = Environmental Impact</div>
+<div class="formula">P = Population</div>
+<div class="formula">A = Affluence/consumption per person</div>
+<div class="formula">T = Technology impact per unit of consumption</div>
+<ul class="bullet-list"><li>Interpretation</li></ul>
+<p>Environmental impact केवल population से निर्धारित नहीं होता; consumption pattern और technology भी महत्वपूर्ण हैं।</p>
+</section>
+<section id="en-Environmental-Issues-by-Scale" class="topic-section lang-en" data-slug="Environmental-Issues-by-Scale" data-lang="en" data-title="Environmental Issues by Scale">
+<div class="sec-head"><span class="sec-num">8</span><h2>Environmental Issues by Scale</h2></div>
+<ul class="bullet-list"><li>Local Issues</li></ul>
+<p>सीमित क्षेत्र को प्रभावित करते हैं।</p>
+<ul class="bullet-list"><li>Urban noise</li><li>Local water contamination</li><li>Solid-waste dumping</li><li>Indoor air pollution</li><li>Regional Issues</li></ul>
+<p>कई districts, states या countries को प्रभावित कर सकते हैं।</p>
+<ul class="bullet-list"><li>Acid rain</li><li>River-basin pollution</li><li>Desertification</li><li>Transboundary haze</li><li>Global Issues</li></ul>
+<p>पूरी पृथ्वी या global systems को प्रभावित करते हैं।</p>
+<ul class="bullet-list"><li>Climate change</li><li>Ozone depletion</li><li>Biodiversity loss</li><li>Ocean acidification</li><li>Exam Trap</li></ul>
+<p>Pollutant local source से निकल सकता है, लेकिन उसका impact regional या global हो सकता है।</p>
+</section>
+<section id="en-Air-Pollution" class="topic-section lang-en" data-slug="Air-Pollution" data-lang="en" data-title="Air Pollution">
+<div class="sec-head"><span class="sec-num">9</span><h2>Air Pollution</h2></div>
+<ul class="bullet-list"><li>वायु प्रदूषण</li></ul>
+<p>Air pollution is the presence of substances in the atmosphere at concentrations harmful to health, ecosystems or materials.</p>
+<ul class="bullet-list"><li>Major Air Pollutants</li><li>Primary Pollutants</li></ul>
+<p>Directly emitted.</p>
+<p>Examples: CO, SO₂, NO, particulate matter.</p>
+<ul class="bullet-list"><li>Secondary Pollutants</li></ul>
+<p>Atmosphere में chemical reactions द्वारा बनते हैं।</p>
+<p>Examples: Ground-level ozone, PAN, photochemical smog components.</p>
+<ul class="bullet-list"><li>Smog</li><li>Classical/London Smog</li><li>Cool and humid conditions</li><li>Coal smoke + SO₂</li><li>Reducing/sulphurous smog</li><li>Photochemical/Los Angeles Smog</li><li>Sunlight + NOₓ + VOCs</li><li>Ground-level ozone and PAN</li><li>Oxidising smog</li><li>Exam Formula</li></ul>
+<div class="formula">NOₓ + VOCs + Sunlight → Photochemical Smog</div>
+<ul class="bullet-list"><li>Acid Rain</li></ul>
+<p>Primarily associated with emissions of:</p>
+<ul class="bullet-list"><li>Sulphur dioxide</li><li>Nitrogen oxides</li></ul>
+<p>These form sulphuric and nitric acids in the atmosphere.</p>
+<ul class="bullet-list"><li>Effects</li><li>Soil and water acidification</li><li>Forest damage</li><li>Aquatic-life damage</li><li>Corrosion of buildings and monuments</li><li>Exam Trap</li></ul>
+<p>CO₂ is related to climate change, but SO₂ and NOₓ are the principal precursors of acid rain.</p>
+</section>
+<section id="en-Water-Pollution" class="topic-section lang-en" data-slug="Water-Pollution" data-lang="en" data-title="Water Pollution">
+<div class="sec-head"><span class="sec-num">10</span><h2>Water Pollution</h2></div>
+<ul class="bullet-list"><li>जल प्रदूषण</li></ul>
+<p>Water pollution is the undesirable alteration of physical, chemical or biological characteristics of water.</p>
+<ul class="bullet-list"><li>Sources</li><li>Domestic sewage</li><li>Industrial effluents</li><li>Agricultural runoff</li><li>Oil spills</li><li>Thermal discharge</li><li>Mining waste</li><li>Plastic waste</li><li>Pathogens</li><li>Important Indicators</li><li>Dissolved Oxygen — DO</li></ul>
+<p>Water में dissolved oxygen.</p>
+<div class="formula">High DO → generally better for aquatic life</div>
+<ul class="bullet-list"><li>Severe organic pollution can reduce DO</li><li>Biological Oxygen Demand — BOD</li></ul>
+<p>Microorganisms द्वारा biodegradable organic matter को decompose करने के लिए required oxygen.</p>
+<div class="formula">High BOD = High organic pollution = Generally lower water quality</div>
+<ul class="bullet-list"><li>Chemical Oxygen Demand — COD</li></ul>
+<p>Water में oxidisable matter को chemically oxidise करने के लिए oxygen equivalent।</p>
+<p>COD biodegradable और certain non-biodegradable oxidisable matter को भी reflect कर सकता है।</p>
+<ul class="bullet-list"><li>DO–BOD Relationship</li></ul>
+<div class="formula">Organic pollution ↑ → BOD ↑ → DO ↓</div>
+<ul class="bullet-list"><li>Eutrophication</li></ul>
+<p>Excess nutrients—especially nitrogen and phosphorus—cause rapid algal growth.</p>
+<ul class="bullet-list"><li>Process</li></ul>
+<div class="formula">Nutrient enrichment → Algal bloom → Decomposition → Oxygen depletion → Fish mortality</div>
+<ul class="bullet-list"><li>Biomagnification</li></ul>
+<p>Non-biodegradable toxic substances की concentration food chain के higher trophic levels पर बढ़ती जाती है।</p>
+<p>Examples: Mercury, DDT.</p>
+<ul class="bullet-list"><li>Bioaccumulation</li></ul>
+<p>एक organism के body में pollutant का समय के साथ accumulate होना।</p>
+<ul class="bullet-list"><li>Difference</li></ul>
+<div class="formula">Bioaccumulation → One organism over time</div>
+<div class="formula">Biomagnification → Across trophic levels</div>
+</section>
+<section id="en-Soil-Pollution-and-Land-Degradation" class="topic-section lang-en" data-slug="Soil-Pollution-and-Land-Degradation" data-lang="en" data-title="Soil Pollution and Land Degradation">
+<div class="sec-head"><span class="sec-num">11</span><h2>Soil Pollution and Land Degradation</h2></div>
+<ul class="bullet-list"><li>Causes</li><li>Excessive pesticides and fertilisers</li><li>Industrial waste</li><li>Mining</li><li>Plastic and e-waste</li><li>Salinisation</li><li>Deforestation</li><li>Overgrazing</li><li>Improper irrigation</li><li>Urban construction</li><li>Effects</li><li>Reduced soil fertility</li><li>Groundwater contamination</li><li>Toxicity in food chain</li><li>Soil erosion</li><li>Desertification</li><li>Loss of microorganisms</li><li>Control Measures</li><li>Organic manure</li><li>Integrated pest management</li><li>Crop rotation</li><li>Afforestation</li><li>Controlled grazing</li><li>Scientific waste disposal</li><li>Soil and water conservation</li></ul>
+</section>
+<section id="en-Noise-Pollution" class="topic-section lang-en" data-slug="Noise-Pollution" data-lang="en" data-title="Noise Pollution">
+<div class="sec-head"><span class="sec-num">12</span><h2>Noise Pollution</h2></div>
+<ul class="bullet-list"><li>ध्वनि प्रदूषण</li></ul>
+<p>Noise is unwanted or unpleasant sound.</p>
+<ul class="bullet-list"><li>Unit</li><li>Decibel — dB</li><li>Sources</li><li>Traffic</li><li>Aircraft</li><li>Industries</li><li>Construction</li><li>Loudspeakers</li><li>Generators</li><li>Effects</li><li>Hearing loss</li><li>Stress</li><li>Sleep disturbance</li><li>Hypertension</li><li>Reduced concentration</li><li>Communication interference</li><li>Important Concept</li></ul>
+<p>Decibel scale is logarithmic, not simple linear.</p>
+<ul class="bullet-list"><li>Control</li><li>Sound barriers</li><li>Silencers</li><li>Green belts</li><li>Zoning</li><li>Equipment maintenance</li><li>Restrictions near silence zones</li></ul>
+</section>
+<section id="en-Waste-and-Its-Types" class="topic-section lang-en" data-slug="Waste-and-Its-Types" data-lang="en" data-title="Waste and Its Types">
+<div class="sec-head"><span class="sec-num">13</span><h2>Waste and Its Types</h2></div>
+<ul class="bullet-list"><li>अपशिष्ट एवं प्रकार</li><li>Solid Waste</li><li>Household waste</li><li>Commercial waste</li><li>Construction waste</li><li>Agricultural waste</li><li>Municipal waste</li><li>Liquid Waste</li><li>Sewage</li><li>Industrial effluent</li><li>Chemical discharge</li><li>Oil and wastewater</li><li>Biomedical Waste</li></ul>
+<p>Waste generated during diagnosis, treatment, immunisation or biomedical research.</p>
+<p>Examples: Needles, contaminated dressings, pathological waste.</p>
+<ul class="bullet-list"><li>Hazardous Waste</li></ul>
+<p>Waste with toxic, corrosive, ignitable, reactive or environmentally dangerous properties.</p>
+<ul class="bullet-list"><li>Electronic Waste</li></ul>
+<p>Discarded electrical and electronic equipment.</p>
+<p>Examples: Computers, phones, circuit boards, batteries.</p>
+<ul class="bullet-list"><li>Major E-waste Concerns</li><li>Lead</li><li>Mercury</li><li>Cadmium</li><li>Brominated substances</li><li>Informal burning and acid extraction</li></ul>
+</section>
+<section id="en-Waste-Management-Hierarchy" class="topic-section lang-en" data-slug="Waste-Management-Hierarchy" data-lang="en" data-title="Waste-Management Hierarchy">
+<div class="sec-head"><span class="sec-num">14</span><h2>Waste-Management Hierarchy</h2></div>
+<div class="formula">Refuse → Reduce → Reuse → Repair → Recycle → Recover → Dispose</div>
+<p>Highest preference: waste prevention. Lowest preference: final disposal.</p>
+<ul class="bullet-list"><li>Waste Treatment Methods</li><li>Exam Traps</li></ul>
+<p>Open dumping and sanitary landfill समान नहीं।</p>
+<p>Incineration waste volume घटाता है, लेकिन emission-control system आवश्यक है।</p>
+<p>Biomedical and hazardous waste को mixed municipal waste के साथ नहीं डालना चाहिए।</p>
+</section>
+<section id="en-Climate-Change" class="topic-section lang-en" data-slug="Climate-Change" data-lang="en" data-title="Climate Change">
+<div class="sec-head"><span class="sec-num">15</span><h2>Climate Change</h2></div>
+<p>Climate change refers to long-term changes in temperature and weather patterns. Present rapid warming is strongly linked to anthropogenic greenhouse-gas emissions.</p>
+<ul class="bullet-list"><li>Major Greenhouse Gases</li><li>Carbon dioxide — CO₂</li><li>Methane — CH₄</li><li>Nitrous oxide — N₂O</li><li>Water vapour</li><li>Ozone</li><li>Fluorinated gases</li><li>Sources</li><li>Greenhouse Effect</li></ul>
+<p>Natural greenhouse effect पृथ्वी को habitable रखता है। Human emissions से इसका enhancement warming बढ़ाता है।</p>
+<ul class="bullet-list"><li>Exam Trap</li></ul>
+<p>Greenhouse effect itself entirely harmful नहीं है; enhanced greenhouse effect climate-change concern है।</p>
+<ul class="bullet-list"><li>Climate Change Impacts</li><li>Heatwaves</li><li>Glacier retreat</li><li>Sea-level rise</li><li>Changing rainfall</li><li>Flood and drought risk</li><li>Crop stress</li><li>Water insecurity</li><li>Biodiversity loss</li><li>Health risks</li><li>Climate migration</li><li>Mitigation vs Adaptation</li></ul>
+<p>Mitigation treats causes; adaptation manages consequences.</p>
+</section>
+<section id="en-Socio-economic-Dimensions-of-Climate-Change" class="topic-section lang-en" data-slug="Socio-economic-Dimensions-of-Climate-Change" data-lang="en" data-title="Socio-economic Dimensions of Climate Change">
+<div class="sec-head"><span class="sec-num">16</span><h2>Socio-economic Dimensions of Climate Change</h2></div>
+<ul class="bullet-list"><li>Economic Dimensions</li><li>Crop and livelihood losses</li><li>Infrastructure damage</li><li>Health expenditure</li><li>Insurance risks</li><li>Energy transition cost</li><li>Green jobs and innovation opportunities</li><li>Social Dimensions</li><li>Unequal vulnerability</li><li>Food and water insecurity</li><li>Displacement</li><li>Gendered impacts</li><li>Health inequality</li><li>Threats to indigenous and coastal communities</li><li>Political Dimensions</li><li>Climate negotiations</li><li>Climate finance</li><li>Technology transfer</li><li>Historical responsibility</li><li>Carbon markets</li><li>Energy security</li><li>International cooperation</li><li>Climate Justice</li></ul>
+<p>Those who have contributed least to climate change may face some of its most severe impacts.</p>
+<ul class="bullet-list"><li>CBDR-RC</li><li>Common but Differentiated Responsibilities and Respective Capabilities</li></ul>
+<p>Climate protection is a shared responsibility.</p>
+<p>Countries' historical contributions and capabilities differ.</p>
+<p>Therefore, obligations need differentiation.</p>
+</section>
+<section id="en-Pollution-and-Human-Health" class="topic-section lang-en" data-slug="Pollution-and-Human-Health" data-lang="en" data-title="Pollution and Human Health">
+<div class="sec-head"><span class="sec-num">17</span><h2>Pollution and Human Health</h2></div>
+<ul class="bullet-list"><li>Vulnerable Groups</li><li>Children</li><li>Older persons</li><li>Pregnant women</li><li>Outdoor workers</li><li>Persons with respiratory illness</li><li>Low-income communities</li></ul>
+</section>
+<section id="en-Natural-and-Energy-Resources" class="topic-section lang-en" data-slug="Natural-and-Energy-Resources" data-lang="en" data-title="Natural and Energy Resources">
+<div class="sec-head"><span class="sec-num">18</span><h2>Natural and Energy Resources</h2></div>
+<ul class="bullet-list"><li>Renewable Resources</li></ul>
+<p>Resources that can be replenished naturally on a human timescale.</p>
+<ul class="bullet-list"><li>Solar</li><li>Wind</li><li>Hydropower</li><li>Biomass</li><li>Geothermal</li><li>Non-renewable Resources</li></ul>
+<p>Finite resources formed over geological time.</p>
+<ul class="bullet-list"><li>Coal</li><li>Petroleum</li><li>Natural gas</li><li>Uranium</li><li>Exam Trap</li></ul>
+<p>Nuclear energy is usually classified as non-renewable because uranium is finite, though its operational carbon emissions are comparatively low.</p>
+</section>
+<section id="en-Solar-Energy" class="topic-section lang-en" data-slug="Solar-Energy" data-lang="en" data-title="Solar Energy">
+<div class="sec-head"><span class="sec-num">19</span><h2>Solar Energy</h2></div>
+<p>Solar radiation converted into electricity or heat.</p>
+<ul class="bullet-list"><li>Types</li><li>Solar photovoltaic</li><li>Solar thermal</li><li>Concentrated solar power</li><li>Advantages</li><li>Renewable</li><li>Low operational emissions</li><li>Suitable for decentralised generation</li><li>Limitations</li><li>Intermittency</li><li>Storage requirement</li><li>Land and material requirements</li><li>Initial cost</li></ul>
+</section>
+<section id="en-Wind-Energy" class="topic-section lang-en" data-slug="Wind-Energy" data-lang="en" data-title="Wind Energy">
+<div class="sec-head"><span class="sec-num">20</span><h2>Wind Energy</h2></div>
+<p>Moving air rotates turbines to generate electricity.</p>
+<ul class="bullet-list"><li>Advantages</li><li>Renewable</li><li>Low operational emissions</li><li>Low water use</li><li>Limitations</li><li>Variable output</li><li>Site-specific</li><li>Grid integration required</li><li>Possible bird/bat and landscape impacts</li></ul>
+</section>
+<section id="en-Hydropower" class="topic-section lang-en" data-slug="Hydropower" data-lang="en" data-title="Hydropower">
+<div class="sec-head"><span class="sec-num">21</span><h2>Hydropower</h2></div>
+<p>Energy from moving or falling water.</p>
+<ul class="bullet-list"><li>Advantages</li><li>Renewable</li><li>Flexible electricity generation</li><li>Storage and irrigation benefits possible</li><li>Limitations</li><li>Displacement</li><li>Habitat fragmentation</li><li>Sediment-flow alteration</li><li>Aquatic ecosystem impacts</li><li>Exam Trap</li></ul>
+<p>Renewable does not mean impact-free.</p>
+</section>
+<section id="en-Geothermal-Energy" class="topic-section lang-en" data-slug="Geothermal-Energy" data-lang="en" data-title="Geothermal Energy">
+<div class="sec-head"><span class="sec-num">22</span><h2>Geothermal Energy</h2></div>
+<p>Earth's internal heat का उपयोग electricity या heating के लिए।</p>
+<ul class="bullet-list"><li>Advantages</li><li>Relatively continuous supply</li><li>Low operational emissions</li><li>Limitations</li><li>Location-specific</li><li>High initial drilling cost</li><li>Possible induced seismicity and fluid-management concerns</li></ul>
+</section>
+<section id="en-Biomass-Energy" class="topic-section lang-en" data-slug="Biomass-Energy" data-lang="en" data-title="Biomass Energy">
+<div class="sec-head"><span class="sec-num">23</span><h2>Biomass Energy</h2></div>
+<p>Energy derived from organic material.</p>
+<p>Examples: Crop residue, wood, animal waste, biogas.</p>
+<ul class="bullet-list"><li>Advantages</li><li>Waste utilisation</li><li>Rural-energy potential</li><li>Stored and dispatchable form possible</li><li>Limitations</li><li>Indoor and outdoor pollution if poorly burned</li><li>Land-use pressure</li><li>Deforestation risk</li><li>Not automatically carbon-neutral</li></ul>
+</section>
+<section id="en-Nuclear-Energy" class="topic-section lang-en" data-slug="Nuclear-Energy" data-lang="en" data-title="Nuclear Energy">
+<div class="sec-head"><span class="sec-num">24</span><h2>Nuclear Energy</h2></div>
+<p>Energy obtained through nuclear fission.</p>
+<ul class="bullet-list"><li>Advantages</li><li>High energy density</li><li>Low operational carbon emissions</li><li>Reliable baseload potential</li><li>Challenges</li><li>Radioactive waste</li><li>Accident risk</li><li>High capital cost</li><li>Decommissioning</li><li>Security and proliferation concerns</li></ul>
+</section>
+<section id="en-Forest-Resources" class="topic-section lang-en" data-slug="Forest-Resources" data-lang="en" data-title="Forest Resources">
+<div class="sec-head"><span class="sec-num">25</span><h2>Forest Resources</h2></div>
+<ul class="bullet-list"><li>Ecological Functions</li><li>Carbon sequestration</li><li>Biodiversity conservation</li><li>Soil protection</li><li>Water-cycle regulation</li><li>Local climate regulation</li><li>Socio-economic Functions</li><li>Timber and non-timber products</li><li>Fuelwood</li><li>Livelihoods</li><li>Cultural and recreational values</li><li>Threats</li><li>Deforestation</li><li>Fragmentation</li><li>Fire</li><li>Mining</li><li>Encroachment</li><li>Invasive species</li></ul>
+</section>
+<section id="en-Soil-as-a-Resource" class="topic-section lang-en" data-slug="Soil-as-a-Resource" data-lang="en" data-title="Soil as a Resource">
+<div class="sec-head"><span class="sec-num">26</span><h2>Soil as a Resource</h2></div>
+<p>Soil supports:</p>
+<ul class="bullet-list"><li>Agriculture</li><li>Nutrient cycling</li><li>Water filtration</li><li>Carbon storage</li><li>Biodiversity</li><li>Conservation Measures</li><li>Contour ploughing</li><li>Terracing</li><li>Shelter belts</li><li>Afforestation</li><li>Crop rotation</li><li>Mulching</li><li>Controlled grazing</li></ul>
+</section>
+<section id="en-Natural-Hazards-and-Disasters" class="topic-section lang-en" data-slug="Natural-Hazards-and-Disasters" data-lang="en" data-title="Natural Hazards and Disasters">
+<div class="sec-head"><span class="sec-num">27</span><h2>Natural Hazards and Disasters</h2></div>
+<ul class="bullet-list"><li>Hazard</li></ul>
+<p>Potentially damaging event or condition.</p>
+<ul class="bullet-list"><li>Disaster</li></ul>
+<p>Serious disruption occurring when a hazard affects a vulnerable and exposed community beyond its coping capacity.</p>
+<ul class="bullet-list"><li>Risk Formula</li></ul>
+<div class="formula">Disaster Risk ∝ (Hazard × Exposure × Vulnerability) ÷ Capacity</div>
+<ul class="bullet-list"><li>Important Point</li></ul>
+<p>Every hazard does not necessarily become a disaster.</p>
+<ul class="bullet-list"><li>Types of Hazards</li><li>Geological</li><li>Earthquake</li><li>Tsunami</li><li>Landslide</li><li>Volcanic eruption</li><li>Hydro-meteorological</li><li>Flood</li><li>Cyclone</li><li>Drought</li><li>Heatwave</li><li>Cloudburst</li><li>Biological</li><li>Epidemic</li><li>Pandemic</li><li>Pest attack</li><li>Anthropogenic/Technological</li><li>Industrial accident</li><li>Chemical leak</li><li>Nuclear accident</li><li>Fire</li><li>Oil spill</li></ul>
+</section>
+<section id="en-Disaster-Management-Cycle" class="topic-section lang-en" data-slug="Disaster-Management-Cycle" data-lang="en" data-title="Disaster-Management Cycle">
+<div class="sec-head"><span class="sec-num">28</span><h2>Disaster-Management Cycle</h2></div>
+<ul class="bullet-list"><li>Prevention</li></ul>
+<p>Hazard-related risk को avoid करना।</p>
+<ul class="bullet-list"><li>Mitigation</li></ul>
+<p>Probable damage को reduce करना। Examples: Earthquake-resistant buildings, embankments.</p>
+<ul class="bullet-list"><li>Preparedness</li></ul>
+<p>Disaster से पहले readiness। Examples: Training, drills, early-warning systems.</p>
+<ul class="bullet-list"><li>Response</li></ul>
+<p>Disaster के दौरान और तुरंत बाद action। Examples: Rescue, relief, emergency medical support.</p>
+<ul class="bullet-list"><li>Recovery</li></ul>
+<p>Normal functioning restore करना।</p>
+<ul class="bullet-list"><li>Rehabilitation and Reconstruction</li></ul>
+<p>Long-term livelihood and infrastructure restoration.</p>
+<div class="formula">Before Disaster: Prevention + Mitigation + Preparedness</div>
+<div class="formula">After Disaster: Response + Recovery + Rehabilitation</div>
+</section>
+<section id="en-Hazard-specific-Mitigation" class="topic-section lang-en" data-slug="Hazard-specific-Mitigation" data-lang="en" data-title="Hazard-specific Mitigation">
+<div class="sec-head"><span class="sec-num">29</span><h2>Hazard-specific Mitigation</h2></div>
+<ul class="bullet-list"><li>Structural Measures</li></ul>
+<p>Physical engineering interventions.</p>
+<ul class="bullet-list"><li>Non-structural Measures</li></ul>
+<p>Policies, awareness, insurance, warning, training and land-use planning.</p>
+</section>
+<section id="en-Environment-Protection-Act-1986" class="topic-section lang-en" data-slug="Environment-Protection-Act-1986" data-lang="en" data-title="Environment (Protection) Act, 1986">
+<div class="sec-head"><span class="sec-num">30</span><h2>Environment (Protection) Act, 1986</h2></div>
+<p>The Environment (Protection) Act, 1986 is commonly described as an umbrella legislation for environmental protection in India.</p>
+<ul class="bullet-list"><li>Main Features</li><li>Protection and improvement of environment</li><li>Central Government को broad powers</li><li>Environmental-quality standards</li><li>Regulation of industrial location and operations</li><li>Control of hazardous substances</li><li>Inspection and information powers</li></ul>
+<p>Directions, including regulation or closure in legally appropriate situations</p>
+<ul class="bullet-list"><li>Historical Association</li></ul>
+<p>India's environmental commitments following the Stockholm Conference, 1972</p>
+<ul class="bullet-list"><li>Enacted in the context following the Bhopal gas disaster</li><li>Important Laws and Years</li><li>Chronology Formula</li></ul>
+<div class="formula">Wildlife 1972 → Water 1974 → Forest 1980 → Air 1981 → Environment 1986 → NGT 2010</div>
+</section>
+<section id="en-National-Action-Plan-on-Climate-Change" class="topic-section lang-en" data-slug="National-Action-Plan-on-Climate-Change" data-lang="en" data-title="National Action Plan on Climate Change">
+<div class="sec-head"><span class="sec-num">31</span><h2>National Action Plan on Climate Change</h2></div>
+<ul class="bullet-list"><li>राष्ट्रीय जलवायु परिवर्तन कार्ययोजना</li></ul>
+<p>NAPCC was launched in 2008 and traditionally contains eight national missions.</p>
+<ul class="bullet-list"><li>Eight Missions</li><li>National Solar Mission</li><li>National Mission for Enhanced Energy Efficiency</li><li>National Mission on Sustainable Habitat</li><li>National Water Mission</li><li>National Mission for Sustaining the Himalayan Ecosystem</li><li>Green India Mission</li><li>National Mission for Sustainable Agriculture</li><li>National Mission on Strategic Knowledge for Climate Change</li><li>Recall Sequence</li></ul>
+<div class="formula">Solar → Efficiency → Habitat → Water → Himalaya → Green India → Agriculture → Knowledge</div>
+</section>
+<section id="en-International-Environmental-Agreements" class="topic-section lang-en" data-slug="International-Environmental-Agreements" data-lang="en" data-title="International Environmental Agreements">
+<div class="sec-head"><span class="sec-num">32</span><h2>International Environmental Agreements</h2></div>
+<ul class="bullet-list"><li>A. Stockholm Conference, 1972</li><li>United Nations Conference on the Human Environment</li><li>First major global environmental conference</li><li>Associated with establishment of UNEP</li><li>World Environment Day: 5 June</li><li>B. Montreal Protocol, 1987</li><li>Ozone-depleting substances</li><li>CFCs, halons and related substances</li><li>Ozone-layer protection</li></ul>
+<div class="formula">Montreal → Ozone</div>
+<ul class="bullet-list"><li>C. Rio Earth Summit, 1992</li></ul>
+<p>Officially: United Nations Conference on Environment and Development.</p>
+<p>Major outcomes:</p>
+<ul class="bullet-list"><li>Rio Declaration</li><li>Agenda 21</li><li>UNFCCC</li><li>Convention on Biological Diversity</li><li>Forest Principles</li></ul>
+<div class="formula">Rio → Environment and Development</div>
+<ul class="bullet-list"><li>D. Convention on Biological Diversity, 1992</li><li>Three Objectives</li><li>Conservation of biodiversity</li><li>Sustainable use</li><li>Fair and equitable benefit-sharing from genetic resources</li><li>E. Kyoto Protocol, 1997</li><li>Under UNFCCC</li><li>Binding emission targets primarily for developed countries</li><li>Principle of differentiated responsibility</li><li>Kyoto Mechanisms</li><li>Emissions Trading</li><li>Clean Development Mechanism</li><li>Joint Implementation</li></ul>
+<div class="formula">Kyoto → Binding targets + Market mechanisms</div>
+<ul class="bullet-list"><li>F. Paris Agreement, 2015</li><li>Adopted at COP21</li><li>Under UNFCCC</li><li>Temperature goal: well below 2°C</li><li>Pursue efforts toward 1.5°C</li><li>Nationally Determined Contributions</li><li>Mitigation, adaptation and climate finance</li></ul>
+<div class="formula">Paris → NDCs + Well below 2°C + Pursue 1.5°C</div>
+<ul class="bullet-list"><li>G. International Solar Alliance</li><li>India–France initiative</li><li>Announced during COP21 in 2015</li><li>Promotes international cooperation in solar energy</li><li>Headquarters in India</li></ul>
+</section>
+<section id="en-Chronology-of-International-Efforts" class="topic-section lang-en" data-slug="Chronology-of-International-Efforts" data-lang="en" data-title="Chronology of International Efforts">
+<div class="sec-head"><span class="sec-num">33</span><h2>Chronology of International Efforts</h2></div>
+<div class="formula">Stockholm 1972 → Montreal 1987 → Rio/CBD/UNFCCC 1992 → Kyoto 1997 → Paris/ISA 2015</div>
+<ul class="bullet-list"><li>Exam Trap</li></ul>
+<p>Montreal is about ozone, not primarily climate-emission targets.</p>
+<p>Kyoto and Paris operate under the climate framework.</p>
+<p>CBD emerged from the 1992 Rio process.</p>
+<p>Rio Summit happened before Kyoto Protocol.</p>
+<p>Paris Agreement uses nationally determined commitments; Kyoto emphasised binding targets for specified developed parties.</p>
+</section>
+<section id="en-Verified-Previous-Year-Questions" class="topic-section lang-en" data-slug="Verified-Previous-Year-Questions" data-lang="en" data-title="Verified Previous Year Questions">
+<div class="sec-head"><span class="sec-num">34</span><h2>Verified Previous Year Questions</h2></div>
+<div class="pyq-tag">PYQ 1: UGC NET, 30 November 2021, Shift 1</div>
+<p>Match MDGs with their aims:</p>
+<ul class="bullet-list"><li>Options</li><li>A–I, B–III, C–II, D–IV</li><li>A–II, B–IV, C–III, D–I</li><li>A–III, B–IV, C–I, D–II</li><li>A–IV, B–II, C–I, D–III</li></ul>
+<div class="answer-box">Answer: 3. A–III, B–IV, C–I, D–II</div>
+<p class="explain">Explanation: MDG 1 poverty, MDG 2 primary education, MDG 3 gender equality और MDG 4 child mortality से संबंधित था।</p>
+<div class="pyq-tag">PYQ 2: UGC NET, 23 October 2022, Shift 1</div>
+<p>Arrange from older to newer:</p>
+<p>A. Paris Agreement<br>B. Convention on Biological Diversity<br>C. Kyoto Protocol<br>D. Montreal Protocol<br>E. Stockholm Conference</p>
+<ul class="bullet-list"><li>Options</li><li>B, D, C, E, A</li><li>B, C, D, E, A</li><li>E, D, C, B, A</li><li>E, D, B, C, A</li></ul>
+<div class="answer-box">Answer: 4. E, D, B, C, A</div>
+<div class="formula">Stockholm 1972 → Montreal 1987 → CBD 1992 → Kyoto 1997 → Paris 2015</div>
+<div class="pyq-tag">PYQ 3: UGC NET, 29 September 2020, Shift 1</div>
+<p>Match the agreement/action plan with its provision:</p>
+<ul class="bullet-list"><li>Options</li><li>A–III, B–II, C–I, D–IV</li><li>A–II, B–III, C–I, D–IV</li><li>A–II, B–IV, C–III, D–I</li><li>A–III, B–IV, C–I, D–II</li></ul>
+<div class="answer-box">Answer: 4. A–III, B–IV, C–I, D–II</div>
+<div class="formula">Montreal → Ozone-depleting substances</div>
+<div class="formula">Paris → INDCs/NDCs</div>
+<div class="formula">Climate Action Plan → Integrated water-resource management</div>
+<div class="formula">Kyoto → Emissions trading</div>
+<div class="pyq-tag">PYQ 4: UGC NET, 26 December 2021, Shift 1</div>
+<p>Under which agreement was it decided to hold the increase in global average temperature to well below 2°C?</p>
+<ul class="bullet-list"><li>Paris Agreement</li><li>Kyoto Protocol</li><li>Montreal Protocol</li><li>Rio Summit</li></ul>
+<div class="answer-box">Answer: 1. Paris Agreement</div>
+<p class="explain">Explanation: Paris Agreement का लक्ष्य warming को pre-industrial level से well below 2°C रखना और 1.5°C तक सीमित करने का प्रयास करना है।</p>
+<div class="pyq-tag">PYQ 5: UGC NET, 5 January 2022, Shift 2</div>
+<p>The Environment (Protection) Act, 1986 resulted from India's commitment to environmental protection at:</p>
+<ul class="bullet-list"><li>Vienna Convention for Protection of Ozone Layer, 1985</li><li>Convention on Long-Range Transboundary Air Pollution</li><li>Convention on International Trade in Endangered Species</li><li>UN Conference on the Human Environment, Stockholm, 1972</li></ul>
+<div class="answer-box">Answer: 4. Stockholm Conference, 1972</div>
+<p class="explain">Explanation: Act की preambular background में Stockholm Conference के decisions और India की international commitment महत्वपूर्ण हैं।</p>
+<div class="pyq-tag">PYQ 6: UGC NET, 9 January 2025, Shift 2</div>
+<p>Match the environmental laws with their enactment years:</p>
+<ul class="bullet-list"><li>Options</li><li>A–I, B–III, C–II, D–IV</li><li>A–II, B–IV, C–III, D–I</li><li>A–III, B–II, C–I, D–IV</li><li>A–II, B–III, C–IV, D–I</li></ul>
+<div class="answer-box">Answer: 4. A–II, B–III, C–IV, D–I</div>
+<div class="formula">Air Act → 1981</div>
+<div class="formula">Forest Conservation → 1980</div>
+<div class="formula">Environment Protection → 1986</div>
+<div class="formula">Water Act → 1974</div>
+</section>
+<section id="en-PYQ-Trend-Analysis" class="topic-section lang-en" data-slug="PYQ-Trend-Analysis" data-lang="en" data-title="PYQ Trend Analysis">
+<div class="sec-head"><span class="sec-num">35</span><h2>PYQ Trend Analysis</h2></div>
+<ul class="bullet-list"><li>Increasingly Important Question Style</li><li>Multi-statement correct combination</li><li>Chronological sequencing</li><li>Match List I with List II</li><li>Classroom or policy scenario</li><li>Similar terms का distinction</li><li>Absolute statements को identify करना</li><li>One issue with multiple impacts</li></ul>
+</section>
+<section id="en-December-2026-Expected-MCQs" class="topic-section lang-en" data-slug="December-2026-Expected-MCQs" data-lang="en" data-title="December 2026 Expected MCQs">
+<div class="sec-head"><span class="sec-num">36</span><h2>December 2026 Expected MCQs</h2></div>
+<div class="pyq-tag">Question 1</div>
+<p>Which statement correctly distinguishes MDGs and SDGs?</p>
+<p>A. MDGs had 17 goals and SDGs have 8 goals.<br>B. Both contain exactly the same goals.<br>C. MDGs had 8 goals; SDGs have 17 universal goals.<br>D. SDGs were completed in 2015.</p>
+<div class="answer-box">Answer: C</div>
+<p class="explain">Explanation: MDGs were eight goals up to 2015; SDGs contain 17 goals for the 2030 Agenda.</p>
+<div class="pyq-tag">Question 2</div>
+<p>"Leave No One Behind" is principally associated with:</p>
+<p>A. Kyoto Protocol<br>B. Montreal Protocol<br>C. 2030 Agenda and SDGs<br>D. Wildlife Protection Act</p>
+<div class="answer-box">Answer: C</div>
+<div class="pyq-tag">Question 3</div>
+<p>Which SDG is directly associated with responsible consumption and production?</p>
+<ul class="bullet-list"><li>A. SDG 7</li><li>B. SDG 10</li><li>C. SDG 12</li><li>D. SDG 15</li></ul>
+<div class="answer-box">Answer: C. SDG 12</div>
+<div class="pyq-tag">Question 4</div>
+<p>High BOD in a water body generally indicates:</p>
+<p>A. Absence of organic matter<br>B. High organic pollution<br>C. High dissolved oxygen<br>D. Absence of microorganisms</p>
+<div class="answer-box">Answer: B</div>
+<p class="explain">Explanation: More biodegradable organic matter requires more oxygen for microbial decomposition.</p>
+<div class="pyq-tag">Question 5</div>
+<p>Which combination primarily produces photochemical smog?</p>
+<p>A. SO₂ + fog only<br>B. NOₓ + VOCs + sunlight<br>C. CO₂ + rainfall<br>D. Methane + snow</p>
+<div class="answer-box">Answer: B</div>
+<div class="pyq-tag">Question 6</div>
+<p>Pollutant concentration increases from plankton to small fish and then to large fish. This is:</p>
+<p>A. Bioaccumulation only<br>B. Biomagnification<br>C. Eutrophication<br>D. Desertification</p>
+<div class="answer-box">Answer: B. Biomagnification</div>
+<div class="pyq-tag">Question 7</div>
+<p>Which is primarily a climate-change adaptation measure?</p>
+<p>A. Replacing coal with solar power<br>B. Increasing forest carbon sinks<br>C. Developing drought-resistant crops<br>D. Improving industrial energy efficiency</p>
+<div class="answer-box">Answer: C</div>
+<p class="explain">Explanation: Drought-resistant crops help society adjust to climate impacts; other options mainly reduce emissions.</p>
+<div class="pyq-tag">Question 8</div>
+<p>Statement I: Every renewable-energy project is environmentally impact-free.<br>Statement II: Hydropower can affect habitats and displace communities.</p>
+<p>A. Both statements are true<br>B. Both statements are false<br>C. Statement I true, Statement II false<br>D. Statement I false, Statement II true</p>
+<div class="answer-box">Answer: D</div>
+<div class="pyq-tag">Question 9</div>
+<p>Which mission is not one of the original eight missions under NAPCC?</p>
+<p>A. National Solar Mission<br>B. National Water Mission<br>C. Green India Mission<br>D. National Ocean Cleaning Mission</p>
+<div class="answer-box">Answer: D</div>
+<div class="pyq-tag">Question 10</div>
+<p>Which agreement primarily addresses ozone-depleting substances?</p>
+<p>A. Paris Agreement<br>B. Kyoto Protocol<br>C. Montreal Protocol<br>D. Convention on Biological Diversity</p>
+<div class="answer-box">Answer: C</div>
+<div class="pyq-tag">Question 11</div>
+<p>Which group correctly represents the Kyoto mechanisms?</p>
+<p>A. NDC, adaptation and climate finance<br>B. Emissions Trading, CDM and Joint Implementation<br>C. Agenda 21, CBD and Forest Principles<br>D. Recycling, composting and landfilling</p>
+<div class="answer-box">Answer: B</div>
+<div class="pyq-tag">Question 12</div>
+<p>Earthquake-resistant construction is primarily an example of:</p>
+<p>A. Disaster response<br>B. Rehabilitation<br>C. Mitigation<br>D. Relief distribution</p>
+<div class="answer-box">Answer: C. Mitigation</div>
+<div class="pyq-tag">Question 13</div>
+<p>Which correctly expresses disaster risk?</p>
+<p>A. Risk increases when capacity increases.<br>B. Hazard alone always produces disaster.<br>C. Risk increases with hazard, exposure and vulnerability.<br>D. Vulnerability has no role in disaster.</p>
+<div class="answer-box">Answer: C</div>
+<div class="pyq-tag">Question 14</div>
+<p>Which waste-management option has the highest preference?</p>
+<ul class="bullet-list"><li>A. Disposal</li><li>B. Incineration</li><li>C. Recycling</li><li>D. Refuse/prevention</li></ul>
+<div class="answer-box">Answer: D</div>
+<div class="pyq-tag">Question 15</div>
+<p>Assertion: Climate change is also a social-justice issue.<br>Reason: Vulnerability and historical responsibility are unequally distributed.</p>
+<p>A. Both are true and Reason correctly explains Assertion<br>B. Both are true but Reason does not explain Assertion<br>C. Assertion true, Reason false<br>D. Assertion false, Reason true</p>
+<div class="answer-box">Answer: A</div>
+<div class="pyq-tag">Question 16</div>
+<p>Which pollutant mainly reduces the oxygen-carrying capacity of blood?</p>
+<p>A. Carbon monoxide<br>B. Carbon dioxide<br>C. Sulphur dioxide<br>D. Ground-level ozone</p>
+<div class="answer-box">Answer: A. Carbon monoxide</div>
+<p class="explain">Explanation: CO binds strongly with haemoglobin, interfering with oxygen transport.</p>
+<div class="pyq-tag">Question 17</div>
+<p>Match the law with the year:</p>
+<ul class="bullet-list"><li>Options</li><li>A–II, B–III, C–IV, D–I</li><li>A–III, B–II, C–I, D–IV</li><li>A–IV, B–I, C–II, D–III</li><li>A–I, B–IV, C–III, D–II</li></ul>
+<div class="answer-box">Answer: 1. A–II, B–III, C–IV, D–I</div>
+</section>
+<section id="en-One-Page-Revision-Capsule" class="topic-section lang-en" data-slug="One-Page-Revision-Capsule" data-lang="en" data-title="One-Page Revision Capsule">
+<div class="sec-head"><span class="sec-num">37</span><h2>One-Page Revision Capsule</h2></div>
+<ul class="bullet-list"><li>Development</li></ul>
+<div class="formula">MDGs = 8 Goals, 2000–2015</div>
+<div class="formula">SDGs = 17 Goals, 169 Targets, 2016–2030</div>
+<ul class="bullet-list"><li>Sustainable Development</li><li>Economy + Society + Environment</li><li>Pollution Formulae</li></ul>
+<div class="formula">NOₓ + VOCs + Sunlight → Photochemical Smog</div>
+<div class="formula">SO₂ + NOₓ → Acid Rain</div>
+<div class="formula">Organic Pollution ↑ → BOD ↑ → DO ↓</div>
+<div class="formula">Nutrients ↑ → Algal Bloom → Oxygen ↓</div>
+<ul class="bullet-list"><li>Climate</li></ul>
+<div class="formula">Mitigation = Reduce Causes</div>
+<div class="formula">Adaptation = Manage Impacts</div>
+<ul class="bullet-list"><li>Waste</li></ul>
+<div class="formula">Refuse → Reduce → Reuse → Repair → Recycle → Recover → Dispose</div>
+<ul class="bullet-list"><li>Disaster</li></ul>
+<div class="formula">Risk ∝ Hazard × Exposure × Vulnerability ÷ Capacity</div>
+<ul class="bullet-list"><li>Indian Laws</li></ul>
+<div class="formula">Wildlife 1972 → Water 1974 → Forest 1980 → Air 1981 → EPA 1986 → NGT 2010</div>
+<ul class="bullet-list"><li>International Chronology</li></ul>
+<div class="formula">Stockholm 1972 → Montreal 1987 → Rio/CBD 1992 → Kyoto 1997 → Paris 2015</div>
+<ul class="bullet-list"><li>Agreement Associations</li></ul>
+<div class="formula">Montreal → Ozone</div>
+<div class="formula">Rio → Environment and Development</div>
+<div class="formula">CBD → Biodiversity</div>
+<div class="formula">Kyoto → Binding targets and market mechanisms</div>
+<div class="formula">Paris → NDCs and temperature goal</div>
+<div class="formula">ISA → Solar cooperation</div>
+<ul class="bullet-list"><li>Exam-solving Approach</li></ul>
+<div class="formula">Term → Source/Cause → Impact → Control → Law/Agreement → Application</div>
+</section>
+<section id="hi-पर्यावरण-का-अर्थ-एवं-घटक" class="topic-section lang-hi" data-slug="पर्यावरण-का-अर्थ-एवं-घटक" data-lang="hi" data-title="पर्यावरण का अर्थ एवं घटक">
+<div class="sec-head"><span class="sec-num">1</span><h2>पर्यावरण का अर्थ एवं घटक</h2></div>
+<p>पर्यावरण (Environment) से आशय उन सभी जैविक और अजैविक परिस्थितियों से है जो जीवों के जीवन, विकास और व्यवहार को प्रभावित करती हैं।</p>
+<ul class="bullet-list"><li>पर्यावरण के घटक</li><li>जैविक घटक (Biotic Components)</li><li>पौधे — उत्पादक (Producers)</li><li>पशु — उपभोक्ता (Consumers)</li><li>सूक्ष्मजीव — अपघटक (Decomposers)</li><li>अजैविक घटक (Abiotic Components)</li><li>वायु</li><li>जल</li><li>मिट्टी</li><li>सूर्य का प्रकाश</li><li>तापमान</li><li>खनिज</li><li>जलवायु</li><li>पर्यावरणीय मंडल</li><li>मुख्य सूत्र</li></ul>
+<p>पारितंत्र = जैविक समुदाय + अजैविक पर्यावरण + पारस्परिक क्रिया</p>
+</section>
+<section id="hi-विकास-और-पर्यावरण" class="topic-section lang-hi" data-slug="विकास-और-पर्यावरण" data-lang="hi" data-title="विकास और पर्यावरण">
+<div class="sec-head"><span class="sec-num">2</span><h2>विकास और पर्यावरण</h2></div>
+<p>विकास (Development) का अर्थ केवल आर्थिक वृद्धि या GDP में वृद्धि नहीं है। इसमें स्वास्थ्य, शिक्षा, समानता, गरिमा, अवसर, रोजगार और पर्यावरणीय गुणवत्ता भी शामिल हैं।</p>
+<ul class="bullet-list"><li>परंपरागत विकास के संकेतक</li><li>औद्योगीकरण</li><li>नगरीकरण</li><li>आधारभूत संरचना</li><li>उत्पादन में वृद्धि</li><li>आय और उपभोग में वृद्धि</li><li>पर्यावरणीय चुनौती</li><li>यदि विकास के परिणामस्वरूप:</li><li>प्राकृतिक संसाधनों का अत्यधिक दोहन हो,</li><li>प्रदूषण बढ़े,</li><li>जैव विविधता कम हो,</li><li>जलवायु परिवर्तन तेज हो,</li><li>स्थानीय समुदाय विस्थापित हों,</li></ul>
+<p>तो ऐसा विकास दीर्घकाल में सतत नहीं माना जाएगा।</p>
+</section>
+<section id="hi-सतत-विकास" class="topic-section lang-hi" data-slug="सतत-विकास" data-lang="hi" data-title="सतत विकास">
+<div class="sec-head"><span class="sec-num">3</span><h2>सतत विकास</h2></div>
+<p>सतत विकास (Sustainable Development) की लोकप्रिय परिभाषा ब्रुंटलैंड रिपोर्ट Our Common Future, 1987 से संबंधित है।</p>
+<p>ऐसा विकास जो वर्तमान पीढ़ी की आवश्यकताओं को पूरा करे, लेकिन भविष्य की पीढ़ियों की आवश्यकताएँ पूरी करने की क्षमता से समझौता न करे।</p>
+<ul class="bullet-list"><li>सतत विकास के तीन स्तंभ</li><li>आर्थिक सततता (Economic Sustainability)</li><li>सामाजिक सततता (Social Sustainability)</li><li>पर्यावरणीय सततता (Environmental Sustainability)</li><li>सूत्र</li></ul>
+<div class="formula">सतत विकास = अर्थव्यवस्था + समाज + पर्यावरण</div>
+<ul class="bullet-list"><li>प्रमुख सिद्धांत</li><li>अंतर-पीढ़ीगत समानता</li><li>अंतःपीढ़ीगत समानता</li><li>सावधानी का सिद्धांत</li><li>प्रदूषक भुगतान सिद्धांत</li><li>वहन क्षमता</li><li>संसाधन दक्षता</li><li>जनभागीदारी</li><li>जैव विविधता संरक्षण</li><li>समान किंतु विभेदित उत्तरदायित्व</li><li>सतत उपभोग एवं उत्पादन</li><li>3.1 अंतर-पीढ़ीगत समानता</li></ul>
+<p>अंतर-पीढ़ीगत समानता (Intergenerational Equity) का अर्थ वर्तमान और भविष्य की पीढ़ियों के बीच संसाधनों एवं पर्यावरणीय अवसरों की समानता है।</p>
+<ul class="bullet-list"><li>3.2 अंतःपीढ़ीगत समानता</li></ul>
+<p>अंतःपीढ़ीगत समानता (Intragenerational Equity) का अर्थ वर्तमान पीढ़ी के विभिन्न देशों और सामाजिक समूहों के बीच न्याय है।</p>
+<ul class="bullet-list"><li>3.3 सावधानी का सिद्धांत</li></ul>
+<p>यदि किसी गतिविधि से गंभीर पर्यावरणीय हानि की संभावना है, तो पूर्ण वैज्ञानिक निश्चितता का अभाव रोकथाम संबंधी कार्रवाई को टालने का आधार नहीं होना चाहिए।</p>
+<ul class="bullet-list"><li>3.4 प्रदूषक भुगतान सिद्धांत</li></ul>
+<p>प्रदूषण करने वाले व्यक्ति या संस्था को प्रदूषण की रोकथाम, नियंत्रण और पर्यावरणीय क्षति की भरपाई का खर्च उठाना चाहिए।</p>
+<ul class="bullet-list"><li>3.5 वहन क्षमता</li></ul>
+<p>किसी पारितंत्र की वह अधिकतम जनसंख्या या गतिविधि जिसे वह गंभीर और दीर्घकालीन क्षति के बिना सहन कर सकता है।</p>
+<ul class="bullet-list"><li>परीक्षा में भ्रम</li></ul>
+<p>सतत विकास का अर्थ विकास को रोकना नहीं है। इसका अर्थ विकास को पर्यावरण-सम्मत, समावेशी और संसाधन-दक्ष बनाना है।</p>
+</section>
+<section id="hi-सहस्राब्दी-विकास-लक्ष्य" class="topic-section lang-hi" data-slug="सहस्राब्दी-विकास-लक्ष्य" data-lang="hi" data-title="सहस्राब्दी विकास लक्ष्य">
+<div class="sec-head"><span class="sec-num">4</span><h2>सहस्राब्दी विकास लक्ष्य</h2></div>
+<p>सहस्राब्दी विकास लक्ष्य (Millennium Development Goals—MDGs) संयुक्त राष्ट्र सहस्राब्दी घोषणा, 2000 के बाद निर्धारित किए गए थे।</p>
+<ul class="bullet-list"><li>कुल लक्ष्य: 8</li><li>लक्ष्य अवधि: 2000–2015</li><li>आठ MDGs</li><li>स्मरण सूत्र</li></ul>
+<div class="formula">गरीबी → शिक्षा → महिला → बाल → माता → रोग → पर्यावरण → साझेदारी</div>
+</section>
+<section id="hi-सतत-विकास-लक्ष्य" class="topic-section lang-hi" data-slug="सतत-विकास-लक्ष्य" data-lang="hi" data-title="सतत विकास लक्ष्य">
+<div class="sec-head"><span class="sec-num">5</span><h2>सतत विकास लक्ष्य</h2></div>
+<p>सतत विकास लक्ष्य (Sustainable Development Goals—SDGs) वर्ष 2015 में सतत विकास के लिए 2030 एजेंडा के अंतर्गत अपनाए गए।</p>
+<ul class="bullet-list"><li>कुल लक्ष्य: 17</li><li>कुल लक्ष्य-बिंदु: 169</li><li>प्रभावी अवधि: 2016–2030</li><li>सभी देशों पर लागू</li><li>मुख्य सिद्धांत: किसी को पीछे न छोड़ना</li><li>सभी 17 SDGs</li><li>SDGs के पाँच स्तंभ</li><li>लोग + पृथ्वी + समृद्धि + शांति + साझेदारी</li><li>पर्यावरण से सीधे संबंधित लक्ष्य</li><li>SDG 6 — स्वच्छ जल और स्वच्छता</li><li>SDG 7 — स्वच्छ ऊर्जा</li><li>SDG 11 — सतत शहर</li><li>SDG 12 — उत्तरदायी उपभोग और उत्पादन</li><li>SDG 13 — जलवायु कार्रवाई</li><li>SDG 14 — जल के नीचे जीवन</li><li>SDG 15 — स्थल पर जीवन</li></ul>
+</section>
+<section id="hi-MDGs-और-SDGs-में-अंतर" class="topic-section lang-hi" data-slug="MDGs-और-SDGs-में-अंतर" data-lang="hi" data-title="MDGs और SDGs में अंतर">
+<div class="sec-head"><span class="sec-num">6</span><h2>MDGs और SDGs में अंतर</h2></div>
+<ul class="bullet-list"><li>परीक्षा में भ्रम</li></ul>
+<p>MDGs की संख्या 8 थी।</p>
+<p>SDGs की संख्या 17 है।</p>
+<p>SDGs ने MDGs का स्थान लिया।</p>
+<p>SDGs केवल विकासशील देशों के लिए नहीं हैं।</p>
+<p>“जल के नीचे जीवन” और “स्थल पर जीवन” SDGs हैं, MDGs नहीं।</p>
+</section>
+<section id="hi-मानव–पर्यावरण-अंतःक्रिया" class="topic-section lang-hi" data-slug="मानव–पर्यावरण-अंतःक्रिया" data-lang="hi" data-title="मानव–पर्यावरण अंतःक्रिया">
+<div class="sec-head"><span class="sec-num">7</span><h2>मानव–पर्यावरण अंतःक्रिया</h2></div>
+<ul class="bullet-list"><li>मानव अपनी आवश्यकताओं के लिए पर्यावरण पर निर्भर है:</li><li>भोजन</li><li>जल</li><li>ऊर्जा</li><li>भूमि</li><li>खनिज</li><li>वन उत्पाद</li><li>पारितंत्रीय सेवाएँ</li></ul>
+<p>मानवीय गतिविधियाँ पर्यावरण को सकारात्मक और नकारात्मक—दोनों प्रकार से प्रभावित कर सकती हैं।</p>
+<ul class="bullet-list"><li>सकारात्मक गतिविधियाँ</li><li>वनीकरण</li><li>वर्षा जल संचयन</li><li>नवीकरणीय ऊर्जा</li><li>जैविक खेती</li><li>अपशिष्ट पुनर्चक्रण</li><li>आर्द्रभूमि संरक्षण</li><li>वन्यजीव संरक्षण</li><li>नकारात्मक गतिविधियाँ</li><li>वनों की कटाई</li><li>अत्यधिक खनन</li><li>जीवाश्म ईंधन का दहन</li><li>औद्योगिक अपशिष्ट</li><li>अत्यधिक भूजल दोहन</li><li>प्लास्टिक प्रदूषण</li><li>अनियोजित नगरीकरण</li><li>अत्यधिक मछली पकड़ना</li></ul>
+</section>
+<section id="hi-मानवजनित-गतिविधियाँ" class="topic-section lang-hi" data-slug="मानवजनित-गतिविधियाँ" data-lang="hi" data-title="मानवजनित गतिविधियाँ">
+<div class="sec-head"><span class="sec-num">8</span><h2>मानवजनित गतिविधियाँ</h2></div>
+<p>मानवजनित (Anthropogenic) का अर्थ ऐसी गतिविधियों से है जिनका स्रोत मानव है।</p>
+<ul class="bullet-list"><li>IPAT समीकरण</li></ul>
+<div class="formula">I = P × A × T</div>
+<ul class="bullet-list"><li>जहाँ:</li></ul>
+<div class="formula">II = पर्यावरणीय प्रभाव</div>
+<div class="formula">PP = जनसंख्या</div>
+<div class="formula">AA = समृद्धि या प्रति व्यक्ति उपभोग</div>
+<div class="formula">TT = तकनीक का पर्यावरणीय प्रभाव</div>
+<ul class="bullet-list"><li>अर्थ</li></ul>
+<p>पर्यावरणीय प्रभाव केवल जनसंख्या से निर्धारित नहीं होता। उपभोग के स्तर और उपयोग की जाने वाली तकनीक की भी महत्वपूर्ण भूमिका होती है।</p>
+</section>
+<section id="hi-पर्यावरणीय-समस्याओं-का-स्तर" class="topic-section lang-hi" data-slug="पर्यावरणीय-समस्याओं-का-स्तर" data-lang="hi" data-title="पर्यावरणीय समस्याओं का स्तर">
+<div class="sec-head"><span class="sec-num">9</span><h2>पर्यावरणीय समस्याओं का स्तर</h2></div>
+<ul class="bullet-list"><li>स्थानीय समस्याएँ</li><li>स्थानीय जल प्रदूषण</li><li>शहरी ध्वनि प्रदूषण</li><li>ठोस अपशिष्ट</li><li>घर के अंदर वायु प्रदूषण</li><li>क्षेत्रीय समस्याएँ</li><li>अम्ल वर्षा</li><li>नदी बेसिन प्रदूषण</li><li>मरुस्थलीकरण</li><li>सीमा-पार धुंध</li><li>वैश्विक समस्याएँ</li><li>जलवायु परिवर्तन</li><li>ओजोन परत का क्षरण</li><li>जैव विविधता हानि</li><li>महासागरीय अम्लीकरण</li><li>परीक्षा बिंदु</li></ul>
+<p>प्रदूषक का स्रोत स्थानीय हो सकता है, लेकिन उसका प्रभाव क्षेत्रीय या वैश्विक हो सकता है।</p>
+</section>
+<section id="hi-वायु-प्रदूषण" class="topic-section lang-hi" data-slug="वायु-प्रदूषण" data-lang="hi" data-title="वायु प्रदूषण">
+<div class="sec-head"><span class="sec-num">10</span><h2>वायु प्रदूषण</h2></div>
+<p>वायुमंडल में हानिकारक पदार्थों की ऐसी उपस्थिति या सांद्रता, जो मानव स्वास्थ्य, पारितंत्र या पदार्थों को नुकसान पहुँचाए, वायु प्रदूषण कहलाती है।</p>
+<ul class="bullet-list"><li>प्रमुख प्रदूषक</li><li>प्राथमिक प्रदूषक</li></ul>
+<p>जो सीधे स्रोत से उत्सर्जित होते हैं।</p>
+<p>उदाहरण: CO, SO₂, NO और कण पदार्थ।</p>
+<ul class="bullet-list"><li>द्वितीयक प्रदूषक</li></ul>
+<p>जो वायुमंडल में रासायनिक अभिक्रियाओं से बनते हैं।</p>
+<p>उदाहरण: धरातलीय ओजोन और PAN।</p>
+</section>
+<section id="hi-स्मॉग" class="topic-section lang-hi" data-slug="स्मॉग" data-lang="hi" data-title="स्मॉग">
+<div class="sec-head"><span class="sec-num">11</span><h2>स्मॉग</h2></div>
+<ul class="bullet-list"><li>परंपरागत या लंदन स्मॉग</li><li>ठंडे और आर्द्र वातावरण में</li><li>कोयले का धुआँ और SO₂</li><li>सल्फ्यूरस या अपचायक स्मॉग</li><li>प्रकाश-रासायनिक स्मॉग</li><li>सूर्य का प्रकाश</li><li>नाइट्रोजन ऑक्साइड</li><li>वाष्पशील कार्बनिक यौगिक</li><li>धरातलीय ओजोन और PAN</li><li>सूत्र</li></ul>
+<div class="formula">NOₓ + VOCs + सूर्य का प्रकाश → प्रकाश-रासायनिक स्मॉग</div>
+</section>
+<section id="hi-अम्ल-वर्षा" class="topic-section lang-hi" data-slug="अम्ल-वर्षा" data-lang="hi" data-title="अम्ल वर्षा">
+<div class="sec-head"><span class="sec-num">12</span><h2>अम्ल वर्षा</h2></div>
+<ul class="bullet-list"><li>अम्ल वर्षा मुख्यतः निम्न प्रदूषकों से संबंधित है:</li><li>सल्फर डाइऑक्साइड</li><li>नाइट्रोजन ऑक्साइड</li></ul>
+<p>ये वायुमंडल में सल्फ्यूरिक और नाइट्रिक अम्ल बना सकते हैं।</p>
+<ul class="bullet-list"><li>प्रभाव</li><li>मिट्टी एवं जल का अम्लीकरण</li><li>वनों को नुकसान</li><li>जलीय जीवों को नुकसान</li><li>भवनों एवं स्मारकों का क्षरण</li><li>परीक्षा में भ्रम</li></ul>
+<p>CO₂ जलवायु परिवर्तन से संबंधित प्रमुख गैस है, लेकिन अम्ल वर्षा के मुख्य पूर्वगामी SO₂ और NOₓ हैं।</p>
+</section>
+<section id="hi-जल-प्रदूषण" class="topic-section lang-hi" data-slug="जल-प्रदूषण" data-lang="hi" data-title="जल प्रदूषण">
+<div class="sec-head"><span class="sec-num">13</span><h2>जल प्रदूषण</h2></div>
+<p>जल की भौतिक, रासायनिक या जैविक विशेषताओं में हानिकारक परिवर्तन को जल प्रदूषण कहते हैं।</p>
+<ul class="bullet-list"><li>प्रमुख स्रोत</li><li>घरेलू मल-जल</li><li>औद्योगिक अपशिष्ट</li><li>कृषि अपवाह</li><li>तेल रिसाव</li><li>तापीय अपशिष्ट</li><li>खनन अपशिष्ट</li><li>रोगजनक सूक्ष्मजीव</li><li>प्लास्टिक</li><li>13.1 घुलित ऑक्सीजन</li></ul>
+<p>घुलित ऑक्सीजन (Dissolved Oxygen—DO) जल में उपलब्ध ऑक्सीजन की मात्रा है।</p>
+<p>अधिक DO सामान्यतः जलीय जीवन के लिए बेहतर है।</p>
+<p>अत्यधिक जैविक प्रदूषण से DO कम हो सकती है।</p>
+<ul class="bullet-list"><li>13.2 जैविक ऑक्सीजन माँग</li></ul>
+<p>BOD वह ऑक्सीजन है जिसकी आवश्यकता सूक्ष्मजीवों को जैव-अपघटनीय कार्बनिक पदार्थों को विघटित करने के लिए होती है।</p>
+<div class="formula">अधिक BOD = अधिक जैविक प्रदूषण = सामान्यतः खराब जल गुणवत्ता</div>
+<ul class="bullet-list"><li>13.3 रासायनिक ऑक्सीजन माँग</li></ul>
+<p>COD जल में उपस्थित ऑक्सीकरण योग्य पदार्थों को रासायनिक रूप से oxidise करने के लिए आवश्यक oxygen equivalent है।</p>
+<ul class="bullet-list"><li>मुख्य संबंध</li></ul>
+<div class="formula">कार्बनिक प्रदूषण बढ़ेगा → BOD बढ़ेगा → DO घटेगी</div>
+</section>
+<section id="hi-सुपोषण" class="topic-section lang-hi" data-slug="सुपोषण" data-lang="hi" data-title="सुपोषण">
+<div class="sec-head"><span class="sec-num">14</span><h2>सुपोषण</h2></div>
+<p>जल में नाइट्रोजन और फॉस्फोरस जैसे पोषक तत्त्वों की अधिकता से शैवाल की अत्यधिक वृद्धि को सुपोषण (Eutrophication) कहते हैं।</p>
+<ul class="bullet-list"><li>प्रक्रिया</li></ul>
+<div class="formula">पोषक तत्त्वों की अधिकता → शैवाल प्रस्फुटन → विघटन → ऑक्सीजन की कमी → मछलियों की मृत्यु</div>
+</section>
+<section id="hi-जैव-संचयन-और-जैव-आवर्धन" class="topic-section lang-hi" data-slug="जैव-संचयन-और-जैव-आवर्धन" data-lang="hi" data-title="जैव-संचयन और जैव-आवर्धन">
+<div class="sec-head"><span class="sec-num">15</span><h2>जैव-संचयन और जैव-आवर्धन</h2></div>
+<ul class="bullet-list"><li>जैव-संचयन</li></ul>
+<p>किसी एक जीव के शरीर में समय के साथ विषैले पदार्थ का एकत्रित होना।</p>
+<ul class="bullet-list"><li>जैव-आवर्धन</li></ul>
+<p>खाद्य शृंखला के ऊँचे पोषण स्तरों पर किसी गैर-जैव-अपघटनीय प्रदूषक की सांद्रता का बढ़ना।</p>
+<p>उदाहरण: पारा और DDT।</p>
+<ul class="bullet-list"><li>अंतर</li></ul>
+<div class="formula">जैव-संचयन → एक जीव के शरीर में</div>
+<div class="formula">जैव-आवर्धन → खाद्य शृंखला के अलग-अलग स्तरों पर</div>
+</section>
+<section id="hi-मृदा-प्रदूषण-एवं-भूमि-क्षरण" class="topic-section lang-hi" data-slug="मृदा-प्रदूषण-एवं-भूमि-क्षरण" data-lang="hi" data-title="मृदा प्रदूषण एवं भूमि क्षरण">
+<div class="sec-head"><span class="sec-num">16</span><h2>मृदा प्रदूषण एवं भूमि क्षरण</h2></div>
+<ul class="bullet-list"><li>कारण</li><li>अत्यधिक कीटनाशक और उर्वरक</li><li>औद्योगिक अपशिष्ट</li><li>खनन</li><li>प्लास्टिक और ई-कचरा</li><li>लवणीकरण</li><li>वनों की कटाई</li><li>अत्यधिक चराई</li><li>अनुचित सिंचाई</li><li>प्रभाव</li><li>मृदा उर्वरता में कमी</li><li>भूजल प्रदूषण</li><li>खाद्य शृंखला में विषैले पदार्थ</li><li>मृदा अपरदन</li><li>मरुस्थलीकरण</li><li>सूक्ष्मजीवों की हानि</li><li>नियंत्रण</li><li>जैविक खाद</li><li>समेकित कीट प्रबंधन</li><li>फसल चक्र</li><li>वनीकरण</li><li>नियंत्रित चराई</li><li>वैज्ञानिक अपशिष्ट निपटान</li></ul>
+</section>
+<section id="hi-ध्वनि-प्रदूषण" class="topic-section lang-hi" data-slug="ध्वनि-प्रदूषण" data-lang="hi" data-title="ध्वनि प्रदूषण">
+<div class="sec-head"><span class="sec-num">17</span><h2>ध्वनि प्रदूषण</h2></div>
+<p>अनचाही या अप्रिय ध्वनि को ध्वनि प्रदूषण कहते हैं।</p>
+<ul class="bullet-list"><li>मापन इकाई</li><li>डेसीबल (dB)</li><li>स्रोत</li><li>यातायात</li><li>विमान</li><li>उद्योग</li><li>निर्माण कार्य</li><li>लाउडस्पीकर</li><li>जनरेटर</li><li>स्वास्थ्य प्रभाव</li><li>श्रवण क्षमता में कमी</li><li>तनाव</li><li>नींद में बाधा</li><li>उच्च रक्तचाप</li><li>एकाग्रता में कमी</li><li>संचार में बाधा</li><li>परीक्षा बिंदु</li></ul>
+<p>डेसीबल मापक्रम सरल रेखीय नहीं, बल्कि लघुगणकीय (Logarithmic) है।</p>
+</section>
+<section id="hi-अपशिष्ट-के-प्रकार" class="topic-section lang-hi" data-slug="अपशिष्ट-के-प्रकार" data-lang="hi" data-title="अपशिष्ट के प्रकार">
+<div class="sec-head"><span class="sec-num">18</span><h2>अपशिष्ट के प्रकार</h2></div>
+<ul class="bullet-list"><li>ठोस अपशिष्ट</li><li>घरेलू कचरा</li><li>वाणिज्यिक कचरा</li><li>निर्माण अपशिष्ट</li><li>कृषि अपशिष्ट</li><li>नगरपालिका अपशिष्ट</li><li>तरल अपशिष्ट</li><li>मल-जल</li><li>औद्योगिक द्रव</li><li>रासायनिक अपशिष्ट</li><li>तेलयुक्त अपशिष्ट</li><li>जैव-चिकित्सकीय अपशिष्ट</li></ul>
+<p>निदान, उपचार, टीकाकरण या जैव-चिकित्सकीय अनुसंधान से उत्पन्न अपशिष्ट।</p>
+<p>उदाहरण: सुई, संक्रमित पट्टियाँ और रोग-संबंधी अपशिष्ट।</p>
+<ul class="bullet-list"><li>खतरनाक अपशिष्ट</li></ul>
+<p>विषैला, संक्षारक, ज्वलनशील या प्रतिक्रियाशील अपशिष्ट।</p>
+<ul class="bullet-list"><li>इलेक्ट्रॉनिक अपशिष्ट</li></ul>
+<p>त्यागे गए विद्युत एवं इलेक्ट्रॉनिक उपकरण।</p>
+<p>उदाहरण: मोबाइल, कंप्यूटर, बैटरी और सर्किट बोर्ड।</p>
+<ul class="bullet-list"><li>ई-कचरे के खतरनाक तत्त्व</li><li>सीसा</li><li>पारा</li><li>कैडमियम</li><li>ब्रोमीनयुक्त पदार्थ</li></ul>
+</section>
+<section id="hi-अपशिष्ट-प्रबंधन-पदानुक्रम" class="topic-section lang-hi" data-slug="अपशिष्ट-प्रबंधन-पदानुक्रम" data-lang="hi" data-title="अपशिष्ट प्रबंधन पदानुक्रम">
+<div class="sec-head"><span class="sec-num">19</span><h2>अपशिष्ट प्रबंधन पदानुक्रम</h2></div>
+<div class="formula">अस्वीकार करें → कम करें → पुनः उपयोग करें → मरम्मत करें → पुनर्चक्रण करें → ऊर्जा प्राप्त करें → निपटान करें</div>
+<ul class="bullet-list"><li>प्रमुख विधियाँ</li><li>परीक्षा में भ्रम</li></ul>
+<p>खुले में कचरा डालना और वैज्ञानिक लैंडफिल समान नहीं हैं।</p>
+<p>भस्मीकरण से अपशिष्ट की मात्रा घटती है, लेकिन emission control आवश्यक है।</p>
+<p>जैव-चिकित्सकीय और खतरनाक कचरे को सामान्य कचरे में नहीं मिलाना चाहिए।</p>
+</section>
+<section id="hi-जलवायु-परिवर्तन" class="topic-section lang-hi" data-slug="जलवायु-परिवर्तन" data-lang="hi" data-title="जलवायु परिवर्तन">
+<div class="sec-head"><span class="sec-num">20</span><h2>जलवायु परिवर्तन</h2></div>
+<p>जलवायु परिवर्तन (Climate Change) तापमान और मौसम प्रतिरूपों में दीर्घकालीन परिवर्तन है। वर्तमान तीव्र उष्णता वृद्धि का प्रमुख कारण मानवजनित ग्रीनहाउस गैस उत्सर्जन है।</p>
+<ul class="bullet-list"><li>प्रमुख ग्रीनहाउस गैसें</li><li>कार्बन डाइऑक्साइड</li><li>मीथेन</li><li>नाइट्रस ऑक्साइड</li><li>जलवाष्प</li><li>ओजोन</li><li>फ्लोरीनयुक्त गैसें</li><li>प्रमुख स्रोत</li><li>ग्रीनहाउस प्रभाव</li></ul>
+<p>प्राकृतिक ग्रीनहाउस प्रभाव पृथ्वी को रहने योग्य तापमान प्रदान करता है। मानवजनित उत्सर्जन से इसका बढ़ना वर्धित ग्रीनहाउस प्रभाव कहलाता है।</p>
+<ul class="bullet-list"><li>परीक्षा में भ्रम</li></ul>
+<p>ग्रीनहाउस प्रभाव स्वयं पूर्णतः हानिकारक नहीं है। समस्या इसका मानवजनित रूप से अत्यधिक बढ़ना है।</p>
+</section>
+<section id="hi-जलवायु-परिवर्तन-के-प्रभाव" class="topic-section lang-hi" data-slug="जलवायु-परिवर्तन-के-प्रभाव" data-lang="hi" data-title="जलवायु परिवर्तन के प्रभाव">
+<div class="sec-head"><span class="sec-num">21</span><h2>जलवायु परिवर्तन के प्रभाव</h2></div>
+<ul class="bullet-list"><li>ताप लहरें</li><li>हिमनदों का पीछे हटना</li><li>समुद्र स्तर में वृद्धि</li><li>वर्षा के प्रतिरूप में परिवर्तन</li><li>बाढ़ एवं सूखे का जोखिम</li><li>कृषि उत्पादकता पर प्रभाव</li><li>जल असुरक्षा</li><li>जैव विविधता की हानि</li><li>स्वास्थ्य जोखिम</li><li>जलवायु-प्रेरित विस्थापन</li></ul>
+</section>
+<section id="hi-शमन-और-अनुकूलन" class="topic-section lang-hi" data-slug="शमन-और-अनुकूलन" data-lang="hi" data-title="शमन और अनुकूलन">
+<div class="sec-head"><span class="sec-num">22</span><h2>शमन और अनुकूलन</h2></div>
+<ul class="bullet-list"><li>सूत्र</li></ul>
+<p>शमन कारणों को कम करता है; अनुकूलन परिणामों का सामना करता है।</p>
+</section>
+<section id="hi-जलवायु-परिवर्तन-के-सामाजिक-आर्थिक-आयाम" class="topic-section lang-hi" data-slug="जलवायु-परिवर्तन-के-सामाजिक-आर्थिक-आयाम" data-lang="hi" data-title="जलवायु परिवर्तन के सामाजिक-आर्थिक आयाम">
+<div class="sec-head"><span class="sec-num">23</span><h2>जलवायु परिवर्तन के सामाजिक-आर्थिक आयाम</h2></div>
+<ul class="bullet-list"><li>आर्थिक आयाम</li><li>कृषि और आजीविका की हानि</li><li>आधारभूत संरचना की क्षति</li><li>स्वास्थ्य व्यय में वृद्धि</li><li>ऊर्जा परिवर्तन की लागत</li><li>हरित रोजगार और नवाचार</li><li>सामाजिक आयाम</li><li>असमान संवेदनशीलता</li><li>खाद्य एवं जल असुरक्षा</li><li>विस्थापन</li><li>लैंगिक प्रभाव</li><li>स्वास्थ्य असमानता</li><li>तटीय एवं आदिवासी समुदायों पर प्रभाव</li><li>राजनीतिक आयाम</li><li>अंतरराष्ट्रीय जलवायु वार्ता</li><li>जलवायु वित्त</li><li>प्रौद्योगिकी हस्तांतरण</li><li>ऐतिहासिक उत्तरदायित्व</li><li>कार्बन बाजार</li><li>ऊर्जा सुरक्षा</li><li>अंतरराष्ट्रीय सहयोग</li><li>जलवायु न्याय</li></ul>
+<p>जिन समुदायों और देशों का जलवायु परिवर्तन में योगदान कम है, वे भी इसके गंभीर प्रभावों का सामना कर सकते हैं।</p>
+<ul class="bullet-list"><li>समान किंतु विभेदित उत्तरदायित्व</li></ul>
+<p>पर्यावरण और जलवायु संरक्षण सभी की साझा जिम्मेदारी है।</p>
+<p>सभी देशों की ऐतिहासिक जिम्मेदारी और क्षमता समान नहीं है।</p>
+<p>इसलिए उनकी भूमिकाओं में अंतर हो सकता है।</p>
+</section>
+<section id="hi-प्रदूषक-और-मानव-स्वास्थ्य" class="topic-section lang-hi" data-slug="प्रदूषक-और-मानव-स्वास्थ्य" data-lang="hi" data-title="प्रदूषक और मानव स्वास्थ्य">
+<div class="sec-head"><span class="sec-num">24</span><h2>प्रदूषक और मानव स्वास्थ्य</h2></div>
+
+</section>
+<section id="hi-प्राकृतिक-एवं-ऊर्जा-संसाधन" class="topic-section lang-hi" data-slug="प्राकृतिक-एवं-ऊर्जा-संसाधन" data-lang="hi" data-title="प्राकृतिक एवं ऊर्जा संसाधन">
+<div class="sec-head"><span class="sec-num">25</span><h2>प्राकृतिक एवं ऊर्जा संसाधन</h2></div>
+<ul class="bullet-list"><li>नवीकरणीय संसाधन</li><li>सौर ऊर्जा</li><li>पवन ऊर्जा</li><li>जल विद्युत</li><li>बायोमास</li><li>भू-तापीय ऊर्जा</li><li>अनवीकरणीय संसाधन</li><li>कोयला</li><li>पेट्रोलियम</li><li>प्राकृतिक गैस</li><li>यूरेनियम</li><li>परीक्षा बिंदु</li></ul>
+<p>परमाणु ऊर्जा को सामान्यतः अनवीकरणीय माना जाता है क्योंकि यूरेनियम सीमित संसाधन है, यद्यपि संचालन के दौरान इसका कार्बन उत्सर्जन अपेक्षाकृत कम हो सकता है।</p>
+</section>
+<section id="hi-सौर-ऊर्जा" class="topic-section lang-hi" data-slug="सौर-ऊर्जा" data-lang="hi" data-title="सौर ऊर्जा">
+<div class="sec-head"><span class="sec-num">26</span><h2>सौर ऊर्जा</h2></div>
+<p>सूर्य के विकिरण से प्राप्त ऊर्जा।</p>
+<ul class="bullet-list"><li>प्रकार</li><li>सौर फोटोवोल्टिक</li><li>सौर तापीय</li><li>केंद्रित सौर ऊर्जा</li><li>लाभ</li><li>नवीकरणीय</li><li>कम संचालन उत्सर्जन</li><li>विकेंद्रीकृत उत्पादन में उपयोगी</li><li>सीमाएँ</li><li>मौसम और दिन के समय पर निर्भरता</li><li>ऊर्जा भंडारण की आवश्यकता</li><li>भूमि एवं सामग्री की आवश्यकता</li><li>प्रारंभिक लागत</li></ul>
+</section>
+<section id="hi-पवन-ऊर्जा" class="topic-section lang-hi" data-slug="पवन-ऊर्जा" data-lang="hi" data-title="पवन ऊर्जा">
+<div class="sec-head"><span class="sec-num">27</span><h2>पवन ऊर्जा</h2></div>
+<p>चलती वायु से टरबाइन चलाकर बिजली उत्पन्न की जाती है।</p>
+<ul class="bullet-list"><li>लाभ</li><li>नवीकरणीय</li><li>कम संचालन उत्सर्जन</li><li>कम जल उपयोग</li><li>सीमाएँ</li><li>उत्पादन में परिवर्तनशीलता</li><li>स्थान-विशिष्ट</li><li>ग्रिड एकीकरण की आवश्यकता</li><li>पक्षियों और चमगादड़ों पर संभावित प्रभाव</li></ul>
+</section>
+<section id="hi-जल-विद्युत" class="topic-section lang-hi" data-slug="जल-विद्युत" data-lang="hi" data-title="जल विद्युत">
+<div class="sec-head"><span class="sec-num">28</span><h2>जल विद्युत</h2></div>
+<p>बहते या गिरते जल से ऊर्जा उत्पादन।</p>
+<ul class="bullet-list"><li>लाभ</li><li>नवीकरणीय</li><li>लचीला विद्युत उत्पादन</li><li>सिंचाई एवं जल-संग्रह के लाभ संभव</li><li>सीमाएँ</li><li>समुदायों का विस्थापन</li><li>आवास विखंडन</li><li>नदी के प्राकृतिक प्रवाह में परिवर्तन</li><li>जलीय पारितंत्र पर प्रभाव</li></ul>
+<p>नवीकरणीय ऊर्जा का अर्थ पर्यावरणीय प्रभाव से पूर्णतः मुक्त होना नहीं है।</p>
+</section>
+<section id="hi-भू-तापीय-ऊर्जा" class="topic-section lang-hi" data-slug="भू-तापीय-ऊर्जा" data-lang="hi" data-title="भू-तापीय ऊर्जा">
+<div class="sec-head"><span class="sec-num">29</span><h2>भू-तापीय ऊर्जा</h2></div>
+<p>पृथ्वी की आंतरिक गर्मी से प्राप्त ऊर्जा।</p>
+<ul class="bullet-list"><li>लाभ</li><li>अपेक्षाकृत निरंतर ऊर्जा</li><li>कम संचालन उत्सर्जन</li><li>सीमाएँ</li><li>स्थान-विशिष्ट</li><li>अधिक प्रारंभिक लागत</li><li>द्रव प्रबंधन और प्रेरित भूकंपीयता की संभावना</li></ul>
+</section>
+<section id="hi-बायोमास-ऊर्जा" class="topic-section lang-hi" data-slug="बायोमास-ऊर्जा" data-lang="hi" data-title="बायोमास ऊर्जा">
+<div class="sec-head"><span class="sec-num">30</span><h2>बायोमास ऊर्जा</h2></div>
+<p>जैविक पदार्थों से प्राप्त ऊर्जा।</p>
+<p>उदाहरण: फसल अवशेष, लकड़ी, पशु अपशिष्ट और बायोगैस।</p>
+<ul class="bullet-list"><li>लाभ</li><li>अपशिष्ट का उपयोग</li><li>ग्रामीण ऊर्जा में उपयोगी</li><li>ऊर्जा संग्रहित की जा सकती है</li><li>सीमाएँ</li><li>अनुचित दहन से प्रदूषण</li><li>भूमि पर दबाव</li><li>वनों की कटाई का खतरा</li><li>प्रत्येक बायोमास स्वतः कार्बन-तटस्थ नहीं होता</li></ul>
+</section>
+<section id="hi-परमाणु-ऊर्जा" class="topic-section lang-hi" data-slug="परमाणु-ऊर्जा" data-lang="hi" data-title="परमाणु ऊर्जा">
+<div class="sec-head"><span class="sec-num">31</span><h2>परमाणु ऊर्जा</h2></div>
+<p>नाभिकीय विखंडन से प्राप्त ऊर्जा।</p>
+<ul class="bullet-list"><li>लाभ</li><li>अधिक ऊर्जा घनत्व</li><li>संचालन में अपेक्षाकृत कम कार्बन उत्सर्जन</li><li>निरंतर ऊर्जा उत्पादन</li><li>चुनौतियाँ</li><li>रेडियोधर्मी अपशिष्ट</li><li>दुर्घटना का जोखिम</li><li>अधिक पूँजीगत लागत</li><li>संयंत्र बंद करने की लागत</li><li>सुरक्षा एवं प्रसार संबंधी चिंताएँ</li></ul>
+</section>
+<section id="hi-वन-संसाधन" class="topic-section lang-hi" data-slug="वन-संसाधन" data-lang="hi" data-title="वन संसाधन">
+<div class="sec-head"><span class="sec-num">32</span><h2>वन संसाधन</h2></div>
+<ul class="bullet-list"><li>पारिस्थितिक कार्य</li><li>कार्बन का अवशोषण</li><li>जैव विविधता संरक्षण</li><li>मृदा संरक्षण</li><li>जल चक्र का नियमन</li><li>स्थानीय जलवायु नियंत्रण</li><li>सामाजिक-आर्थिक कार्य</li><li>लकड़ी और गैर-काष्ठ उत्पाद</li><li>ईंधन</li><li>आजीविका</li><li>सांस्कृतिक मूल्य</li><li>प्रमुख खतरे</li><li>वनों की कटाई</li><li>आवास विखंडन</li><li>वनाग्नि</li><li>खनन</li><li>अतिक्रमण</li><li>आक्रामक प्रजातियाँ</li></ul>
+</section>
+<section id="hi-मिट्टी-एक-प्राकृतिक-संसाधन" class="topic-section lang-hi" data-slug="मिट्टी-एक-प्राकृतिक-संसाधन" data-lang="hi" data-title="मिट्टी एक प्राकृतिक संसाधन">
+<div class="sec-head"><span class="sec-num">33</span><h2>मिट्टी एक प्राकृतिक संसाधन</h2></div>
+<ul class="bullet-list"><li>मिट्टी निम्न कार्यों में महत्वपूर्ण है:</li><li>कृषि</li><li>पोषक चक्र</li><li>जल निस्यंदन</li><li>कार्बन संग्रह</li><li>जैव विविधता</li><li>संरक्षण उपाय</li><li>समोच्च जुताई</li><li>सीढ़ीदार खेती</li><li>रक्षक वृक्ष-पंक्तियाँ</li><li>वनीकरण</li><li>फसल चक्र</li><li>मल्चिंग</li><li>नियंत्रित चराई</li></ul>
+</section>
+<section id="hi-प्राकृतिक-संकट-एवं-आपदा" class="topic-section lang-hi" data-slug="प्राकृतिक-संकट-एवं-आपदा" data-lang="hi" data-title="प्राकृतिक संकट एवं आपदा">
+<div class="sec-head"><span class="sec-num">34</span><h2>प्राकृतिक संकट एवं आपदा</h2></div>
+<ul class="bullet-list"><li>संकट</li></ul>
+<p>ऐसी संभावित घटना या परिस्थिति जो नुकसान पहुँचा सकती है।</p>
+<ul class="bullet-list"><li>आपदा</li></ul>
+<p>जब कोई संकट संवेदनशील और उजागर समुदाय को उसकी सामना करने की क्षमता से अधिक प्रभावित करता है, तो वह आपदा बनता है।</p>
+<ul class="bullet-list"><li>आपदा जोखिम सूत्र</li></ul>
+<div class="formula">जोखिम ∝ (संकट × उद्भासन × संवेदनशीलता) ÷ क्षमता</div>
+<ul class="bullet-list"><li>परीक्षा बिंदु</li></ul>
+<p>प्रत्येक प्राकृतिक संकट आवश्यक रूप से आपदा नहीं बनता।</p>
+</section>
+<section id="hi-संकटों-के-प्रकार" class="topic-section lang-hi" data-slug="संकटों-के-प्रकार" data-lang="hi" data-title="संकटों के प्रकार">
+<div class="sec-head"><span class="sec-num">35</span><h2>संकटों के प्रकार</h2></div>
+<ul class="bullet-list"><li>भूगर्भीय</li><li>भूकंप</li><li>सुनामी</li><li>भूस्खलन</li><li>ज्वालामुखी</li><li>जल-मौसम संबंधी</li><li>बाढ़</li><li>चक्रवात</li><li>सूखा</li><li>ताप लहर</li><li>बादल फटना</li><li>जैविक</li><li>महामारी</li><li>संक्रामक रोग</li><li>कीट प्रकोप</li><li>मानवजनित एवं तकनीकी</li><li>औद्योगिक दुर्घटना</li><li>रासायनिक रिसाव</li><li>परमाणु दुर्घटना</li><li>आग</li><li>तेल रिसाव</li></ul>
+</section>
+<section id="hi-आपदा-प्रबंधन-चक्र" class="topic-section lang-hi" data-slug="आपदा-प्रबंधन-चक्र" data-lang="hi" data-title="आपदा प्रबंधन चक्र">
+<div class="sec-head"><span class="sec-num">36</span><h2>आपदा प्रबंधन चक्र</h2></div>
+<ul class="bullet-list"><li>रोकथाम</li></ul>
+<p>आपदा जोखिम को उत्पन्न होने से रोकना।</p>
+<ul class="bullet-list"><li>शमन</li></ul>
+<p>संभावित हानि को कम करना।</p>
+<p>उदाहरण: भूकंप-रोधी भवन।</p>
+<ul class="bullet-list"><li>तैयारी</li></ul>
+<p>आपदा से पहले आवश्यक तैयारी।</p>
+<p>उदाहरण: प्रशिक्षण, अभ्यास और चेतावनी प्रणाली।</p>
+<ul class="bullet-list"><li>प्रतिक्रिया</li></ul>
+<p>आपदा के दौरान और तुरंत बाद की कार्रवाई।</p>
+<p>उदाहरण: बचाव, राहत और चिकित्सा सहायता।</p>
+<ul class="bullet-list"><li>पुनर्प्राप्ति</li></ul>
+<p>सामान्य सेवाओं और कार्यप्रणाली को पुनः स्थापित करना।</p>
+<ul class="bullet-list"><li>पुनर्वास एवं पुनर्निर्माण</li></ul>
+<p>आजीविका और आधारभूत संरचना का दीर्घकालीन पुनर्निर्माण।</p>
+<ul class="bullet-list"><li>सूत्र</li><li>आपदा से पहले: रोकथाम + शमन + तैयारी</li><li>आपदा के बाद: प्रतिक्रिया + पुनर्प्राप्ति + पुनर्वास</li></ul>
+</section>
+<section id="hi-संकट-विशिष्ट-शमन-रणनीतियाँ" class="topic-section lang-hi" data-slug="संकट-विशिष्ट-शमन-रणनीतियाँ" data-lang="hi" data-title="संकट-विशिष्ट शमन रणनीतियाँ">
+<div class="sec-head"><span class="sec-num">37</span><h2>संकट-विशिष्ट शमन रणनीतियाँ</h2></div>
+<ul class="bullet-list"><li>संरचनात्मक उपाय</li></ul>
+<p>भौतिक एवं अभियांत्रिकीय उपाय।</p>
+<ul class="bullet-list"><li>गैर-संरचनात्मक उपाय</li></ul>
+<p>नीति, प्रशिक्षण, जागरूकता, बीमा, चेतावनी और भूमि उपयोग नियोजन।</p>
+</section>
+<section id="hi-पर्यावरण-संरक्षण-अधिनियम-1986" class="topic-section lang-hi" data-slug="पर्यावरण-संरक्षण-अधिनियम-1986" data-lang="hi" data-title="पर्यावरण संरक्षण अधिनियम, 1986">
+<div class="sec-head"><span class="sec-num">38</span><h2>पर्यावरण संरक्षण अधिनियम, 1986</h2></div>
+<p>पर्यावरण संरक्षण अधिनियम, 1986 को भारत का व्यापक या छत्र कानून माना जाता है।</p>
+<ul class="bullet-list"><li>प्रमुख प्रावधान</li><li>पर्यावरण का संरक्षण एवं सुधार</li><li>केंद्र सरकार को व्यापक शक्तियाँ</li><li>पर्यावरणीय गुणवत्ता के मानक</li><li>उद्योगों के स्थान और संचालन का नियमन</li><li>खतरनाक पदार्थों का नियंत्रण</li><li>निरीक्षण और सूचना प्राप्त करने की शक्ति</li><li>उल्लंघन की स्थिति में निर्देश जारी करने की शक्ति</li><li>ऐतिहासिक संबंध</li><li>स्टॉकहोम सम्मेलन, 1972 के प्रति भारत की प्रतिबद्धता</li></ul>
+<p>भोपाल गैस त्रासदी के बाद व्यापक पर्यावरणीय कानून की आवश्यकता</p>
+</section>
+<section id="hi-प्रमुख-पर्यावरणीय-कानून" class="topic-section lang-hi" data-slug="प्रमुख-पर्यावरणीय-कानून" data-lang="hi" data-title="प्रमुख पर्यावरणीय कानून">
+<div class="sec-head"><span class="sec-num">39</span><h2>प्रमुख पर्यावरणीय कानून</h2></div>
+<ul class="bullet-list"><li>स्मरण क्रम</li></ul>
+<div class="formula">वन्यजीव 1972 → जल 1974 → वन 1980 → वायु 1981 → पर्यावरण 1986 → NGT 2010</div>
+</section>
+<section id="hi-राष्ट्रीय-जलवायु-परिवर्तन-कार्ययोजना" class="topic-section lang-hi" data-slug="राष्ट्रीय-जलवायु-परिवर्तन-कार्ययोजना" data-lang="hi" data-title="राष्ट्रीय जलवायु परिवर्तन कार्ययोजना">
+<div class="sec-head"><span class="sec-num">40</span><h2>राष्ट्रीय जलवायु परिवर्तन कार्ययोजना</h2></div>
+<p>राष्ट्रीय जलवायु परिवर्तन कार्ययोजना (NAPCC) वर्ष 2008 में प्रारंभ हुई। इसमें परंपरागत रूप से आठ राष्ट्रीय मिशन शामिल हैं।</p>
+<ul class="bullet-list"><li>आठ राष्ट्रीय मिशन</li><li>राष्ट्रीय सौर मिशन</li><li>संवर्धित ऊर्जा दक्षता हेतु राष्ट्रीय मिशन</li><li>सतत आवास हेतु राष्ट्रीय मिशन</li><li>राष्ट्रीय जल मिशन</li><li>हिमालयी पारितंत्र को बनाए रखने हेतु राष्ट्रीय मिशन</li><li>हरित भारत मिशन</li><li>सतत कृषि हेतु राष्ट्रीय मिशन</li><li>जलवायु परिवर्तन पर रणनीतिक ज्ञान हेतु राष्ट्रीय मिशन</li><li>स्मरण क्रम</li></ul>
+<div class="formula">सौर → दक्षता → आवास → जल → हिमालय → हरित भारत → कृषि → ज्ञान</div>
+</section>
+<section id="hi-अंतरराष्ट्रीय-पर्यावरणीय-समझौते" class="topic-section lang-hi" data-slug="अंतरराष्ट्रीय-पर्यावरणीय-समझौते" data-lang="hi" data-title="अंतरराष्ट्रीय पर्यावरणीय समझौते">
+<div class="sec-head"><span class="sec-num">41</span><h2>अंतरराष्ट्रीय पर्यावरणीय समझौते</h2></div>
+<ul class="bullet-list"><li>स्टॉकहोम सम्मेलन, 1972</li><li>मानव पर्यावरण पर संयुक्त राष्ट्र सम्मेलन</li><li>प्रमुख वैश्विक पर्यावरणीय सम्मेलन</li><li>UNEP की स्थापना से संबंधित</li><li>5 जून को विश्व पर्यावरण दिवस</li><li>मॉन्ट्रियल प्रोटोकॉल, 1987</li><li>ओजोन परत का संरक्षण</li><li>ओजोन-क्षयकारी पदार्थों को चरणबद्ध समाप्त करना</li><li>CFCs और halons से संबंधित</li></ul>
+<div class="formula">मॉन्ट्रियल → ओजोन</div>
+<ul class="bullet-list"><li>रियो पृथ्वी सम्मेलन, 1992</li><li>प्रमुख परिणाम:</li><li>रियो घोषणा</li><li>एजेंडा 21</li><li>UNFCCC</li><li>जैव विविधता अभिसमय</li><li>वन सिद्धांत</li></ul>
+<div class="formula">रियो → पर्यावरण और विकास</div>
+<ul class="bullet-list"><li>जैव विविधता अभिसमय, 1992</li><li>तीन उद्देश्य</li><li>जैव विविधता संरक्षण</li><li>जैव संसाधनों का सतत उपयोग</li><li>आनुवंशिक संसाधनों से प्राप्त लाभों का उचित बँटवारा</li><li>क्योटो प्रोटोकॉल, 1997</li><li>UNFCCC के अंतर्गत</li><li>विकसित देशों के लिए बाध्यकारी उत्सर्जन लक्ष्य</li><li>बाजार-आधारित व्यवस्थाएँ</li><li>क्योटो तंत्र</li><li>उत्सर्जन व्यापार</li><li>स्वच्छ विकास तंत्र</li><li>संयुक्त क्रियान्वयन</li></ul>
+<div class="formula">क्योटो → बाध्यकारी लक्ष्य + बाजार तंत्र</div>
+<ul class="bullet-list"><li>पेरिस समझौता, 2015</li><li>COP21 में अपनाया गया</li><li>वैश्विक ताप वृद्धि को 2°C से काफी नीचे रखना</li><li>1.5°C तक सीमित करने का प्रयास</li><li>राष्ट्रीय स्तर पर निर्धारित योगदान</li><li>शमन, अनुकूलन और जलवायु वित्त</li></ul>
+<div class="formula">पेरिस → NDCs + 2°C से नीचे + 1.5°C का प्रयास</div>
+<ul class="bullet-list"><li>अंतरराष्ट्रीय सौर गठबंधन</li><li>भारत और फ्रांस की पहल</li><li>COP21 के दौरान 2015 में घोषणा</li><li>सौर ऊर्जा सहयोग को बढ़ावा</li><li>मुख्यालय भारत में</li></ul>
+</section>
+<section id="hi-अंतरराष्ट्रीय-प्रयासों-का-कालक्रम" class="topic-section lang-hi" data-slug="अंतरराष्ट्रीय-प्रयासों-का-कालक्रम" data-lang="hi" data-title="अंतरराष्ट्रीय प्रयासों का कालक्रम">
+<div class="sec-head"><span class="sec-num">42</span><h2>अंतरराष्ट्रीय प्रयासों का कालक्रम</h2></div>
+<div class="formula">स्टॉकहोम 1972 → मॉन्ट्रियल 1987 → रियो एवं CBD 1992 → क्योटो 1997 → पेरिस एवं ISA 2015</div>
+<ul class="bullet-list"><li>परीक्षा में भ्रम</li></ul>
+<p>मॉन्ट्रियल प्रोटोकॉल ओजोन से संबंधित है।</p>
+<p>क्योटो और पेरिस जलवायु परिवर्तन से संबंधित हैं।</p>
+<p>जैव विविधता अभिसमय रियो प्रक्रिया से जुड़ा है।</p>
+<p>रियो सम्मेलन क्योटो प्रोटोकॉल से पहले हुआ था।</p>
+<p>पेरिस समझौता राष्ट्रीय स्तर पर निर्धारित योगदान से संबंधित है।</p>
+</section>
+<section id="hi-सत्यापित-पिछले-वर्षों-के-प्रश्न" class="topic-section lang-hi" data-slug="सत्यापित-पिछले-वर्षों-के-प्रश्न" data-lang="hi" data-title="सत्यापित पिछले वर्षों के प्रश्न">
+<div class="sec-head"><span class="sec-num">43</span><h2>सत्यापित पिछले वर्षों के प्रश्न</h2></div>
+<div class="pyq-tag">PYQ 1: UGC NET, 30 नवंबर 2021, Shift 1</div>
+<ul class="bullet-list"><li>MDGs का उनके उद्देश्यों से मिलान कीजिए:</li><li>विकल्प</li><li>A–I, B–III, C–II, D–IV</li><li>A–II, B–IV, C–III, D–I</li><li>A–III, B–IV, C–I, D–II</li><li>A–IV, B–II, C–I, D–III</li></ul>
+<div class="answer-box">उत्तर: 3. A–III, B–IV, C–I, D–II</div>
+<p class="explain">व्याख्या: MDG 1 गरीबी, MDG 2 प्राथमिक शिक्षा, MDG 3 लैंगिक समानता और MDG 4 बाल मृत्यु दर से संबंधित था।</p>
+<div class="pyq-tag">PYQ 2: UGC NET, 23 अक्टूबर 2022, Shift 1</div>
+<ul class="bullet-list"><li>पुराने से नवीन क्रम में व्यवस्थित कीजिए:</li><li>A. पेरिस समझौता</li><li>B. जैव विविधता अभिसमय</li><li>C. क्योटो प्रोटोकॉल</li><li>D. मॉन्ट्रियल प्रोटोकॉल</li><li>E. स्टॉकहोम सम्मेलन</li><li>विकल्प</li><li>B, D, C, E, A</li><li>B, C, D, E, A</li><li>E, D, C, B, A</li><li>E, D, B, C, A</li></ul>
+<div class="answer-box">उत्तर: 4. E, D, B, C, A</div>
+<div class="formula">स्टॉकहोम 1972 → मॉन्ट्रियल 1987 → CBD 1992 → क्योटो 1997 → पेरिस 2015</div>
+<div class="pyq-tag">PYQ 3: UGC NET, 29 सितंबर 2020, Shift 1</div>
+<ul class="bullet-list"><li>समझौते का संबंधित प्रावधान से मिलान कीजिए:</li><li>विकल्प</li><li>A–III, B–II, C–I, D–IV</li><li>A–II, B–III, C–I, D–IV</li><li>A–II, B–IV, C–III, D–I</li><li>A–III, B–IV, C–I, D–II</li></ul>
+<div class="answer-box">उत्तर: 4. A–III, B–IV, C–I, D–II</div>
+<div class="pyq-tag">PYQ 4: UGC NET, 26 दिसंबर 2021, Shift 1</div>
+<p>वैश्विक औसत तापमान वृद्धि को 2°C से काफी नीचे रखने का निर्णय किस समझौते में लिया गया?</p>
+<ul class="bullet-list"><li>पेरिस समझौता</li><li>क्योटो प्रोटोकॉल</li><li>मॉन्ट्रियल प्रोटोकॉल</li><li>रियो सम्मेलन</li></ul>
+<div class="answer-box">उत्तर: 1. पेरिस समझौता</div>
+<p class="explain">व्याख्या: पेरिस समझौते में ताप वृद्धि को 2°C से काफी नीचे रखने तथा 1.5°C तक सीमित करने का प्रयास शामिल है।</p>
+<div class="pyq-tag">PYQ 5: UGC NET, 5 जनवरी 2022, Shift 2</div>
+<p>पर्यावरण संरक्षण अधिनियम, 1986 पर्यावरण संरक्षण के संबंध में भारत की किस अंतरराष्ट्रीय प्रतिबद्धता से जुड़ा है?</p>
+<ul class="bullet-list"><li>वियना अभिसमय, 1985</li><li>लंबी दूरी के सीमा-पार वायु प्रदूषण संबंधी अभिसमय</li><li>CITES</li></ul>
+<p>मानव पर्यावरण पर संयुक्त राष्ट्र सम्मेलन, स्टॉकहोम, 1972</p>
+<div class="answer-box">उत्तर: 4. स्टॉकहोम सम्मेलन, 1972</div>
+<div class="pyq-tag">PYQ 6: UGC NET, 9 जनवरी 2025, Shift 2</div>
+<ul class="bullet-list"><li>कानूनों का उनके वर्ष से मिलान कीजिए:</li><li>विकल्प</li><li>A–I, B–III, C–II, D–IV</li><li>A–II, B–IV, C–III, D–I</li><li>A–III, B–II, C–I, D–IV</li><li>A–II, B–III, C–IV, D–I</li></ul>
+<div class="answer-box">उत्तर: 4. A–II, B–III, C–IV, D–I</div>
+</section>
+<section id="hi-PYQ-प्रवृत्ति-विश्लेषण" class="topic-section lang-hi" data-slug="PYQ-प्रवृत्ति-विश्लेषण" data-lang="hi" data-title="PYQ प्रवृत्ति विश्लेषण">
+<div class="sec-head"><span class="sec-num">44</span><h2>PYQ प्रवृत्ति विश्लेषण</h2></div>
+
+</section>
+<section id="hi-दिसंबर-2026-के-संभावित-प्रश्न" class="topic-section lang-hi" data-slug="दिसंबर-2026-के-संभावित-प्रश्न" data-lang="hi" data-title="दिसंबर 2026 के संभावित प्रश्न">
+<div class="sec-head"><span class="sec-num">45</span><h2>दिसंबर 2026 के संभावित प्रश्न</h2></div>
+<div class="pyq-tag">प्रश्न 1</div>
+<ul class="bullet-list"><li>MDGs और SDGs के संबंध में सही कथन कौन-सा है?</li></ul>
+<p>A. MDGs में 17 और SDGs में 8 लक्ष्य हैं।</p>
+<p>B. दोनों में समान लक्ष्य हैं।</p>
+<p>C. MDGs में 8 और SDGs में 17 लक्ष्य हैं।</p>
+<p>D. SDGs की अवधि 2015 में समाप्त हो गई।</p>
+<div class="answer-box">उत्तर: C</div>
+<div class="pyq-tag">प्रश्न 2</div>
+<ul class="bullet-list"><li>“किसी को पीछे न छोड़ना” किससे संबंधित है?</li><li>A. क्योटो प्रोटोकॉल</li><li>B. मॉन्ट्रियल प्रोटोकॉल</li><li>C. 2030 एजेंडा एवं SDGs</li><li>D. वन्यजीव संरक्षण अधिनियम</li></ul>
+<div class="answer-box">उत्तर: C</div>
+<div class="pyq-tag">प्रश्न 3</div>
+<div class="answer-box">उत्तरदायी उपभोग एवं उत्पादन किस SDG से संबंधित है?</div>
+<ul class="bullet-list"><li>A. SDG 7</li><li>B. SDG 10</li><li>C. SDG 12</li><li>D. SDG 15</li></ul>
+<div class="answer-box">उत्तर: C. SDG 12</div>
+<div class="pyq-tag">प्रश्न 4</div>
+<ul class="bullet-list"><li>जल में उच्च BOD सामान्यतः किसका संकेत है?</li><li>A. कार्बनिक पदार्थ का अभाव</li><li>B. अधिक कार्बनिक प्रदूषण</li><li>C. अत्यधिक घुलित ऑक्सीजन</li><li>D. सूक्ष्मजीवों का अभाव</li></ul>
+<div class="answer-box">उत्तर: B</div>
+<div class="pyq-tag">प्रश्न 5</div>
+<ul class="bullet-list"><li>प्रकाश-रासायनिक स्मॉग मुख्यतः किस संयोजन से बनता है?</li><li>A. SO₂ और कोहरा</li><li>B. NOₓ, VOCs और सूर्य का प्रकाश</li><li>C. CO₂ और वर्षा</li><li>D. मीथेन और हिमपात</li></ul>
+<div class="answer-box">उत्तर: B</div>
+<div class="pyq-tag">प्रश्न 6</div>
+<p>प्रदूषक की सांद्रता प्लवक से छोटी मछली और फिर बड़ी मछली तक बढ़ती है। इसे क्या कहेंगे?</p>
+<ul class="bullet-list"><li>A. केवल जैव-संचयन</li><li>B. जैव-आवर्धन</li><li>C. सुपोषण</li><li>D. मरुस्थलीकरण</li></ul>
+<div class="answer-box">उत्तर: B. जैव-आवर्धन</div>
+<div class="pyq-tag">प्रश्न 7</div>
+<ul class="bullet-list"><li>निम्न में कौन-सा जलवायु अनुकूलन का उदाहरण है?</li><li>A. कोयले के स्थान पर सौर ऊर्जा</li><li>B. औद्योगिक ऊर्जा दक्षता</li><li>C. सूखा-रोधी फसलों का विकास</li><li>D. वन कार्बन भंडार बढ़ाना</li></ul>
+<div class="answer-box">उत्तर: C</div>
+<div class="pyq-tag">प्रश्न 8</div>
+<p>कथन I: प्रत्येक नवीकरणीय ऊर्जा परियोजना पर्यावरणीय प्रभाव से मुक्त होती है।</p>
+<p>कथन II: जल विद्युत परियोजना आवास और स्थानीय समुदायों को प्रभावित कर सकती है।</p>
+<ul class="bullet-list"><li>A. दोनों कथन सही</li><li>B. दोनों कथन गलत</li><li>C. कथन I सही, कथन II गलत</li><li>D. कथन I गलत, कथन II सही</li></ul>
+<div class="answer-box">उत्तर: D</div>
+<div class="pyq-tag">प्रश्न 9</div>
+<p>निम्न में कौन-सा NAPCC के मूल आठ मिशनों में शामिल नहीं है?</p>
+<ul class="bullet-list"><li>A. राष्ट्रीय सौर मिशन</li><li>B. राष्ट्रीय जल मिशन</li><li>C. हरित भारत मिशन</li><li>D. राष्ट्रीय महासागर सफाई मिशन</li></ul>
+<div class="answer-box">उत्तर: D</div>
+<div class="pyq-tag">प्रश्न 10</div>
+<ul class="bullet-list"><li>ओजोन-क्षयकारी पदार्थों से संबंधित समझौता कौन-सा है?</li><li>A. पेरिस समझौता</li><li>B. क्योटो प्रोटोकॉल</li><li>C. मॉन्ट्रियल प्रोटोकॉल</li><li>D. जैव विविधता अभिसमय</li></ul>
+<div class="answer-box">उत्तर: C</div>
+<div class="pyq-tag">प्रश्न 11</div>
+<ul class="bullet-list"><li>क्योटो प्रोटोकॉल के तंत्रों का सही समूह कौन-सा है?</li><li>A. NDC, अनुकूलन और जलवायु वित्त</li><li>B. उत्सर्जन व्यापार, CDM और संयुक्त क्रियान्वयन</li><li>C. एजेंडा 21, CBD और वन सिद्धांत</li><li>D. पुनर्चक्रण, कम्पोस्टिंग और लैंडफिल</li></ul>
+<div class="answer-box">उत्तर: B</div>
+<div class="pyq-tag">प्रश्न 12</div>
+<ul class="bullet-list"><li>भूकंप-रोधी भवन निर्माण किसका उदाहरण है?</li><li>A. आपदा प्रतिक्रिया</li><li>B. पुनर्वास</li><li>C. आपदा शमन</li><li>D. राहत वितरण</li></ul>
+<div class="answer-box">उत्तर: C</div>
+<div class="pyq-tag">प्रश्न 13</div>
+<ul class="bullet-list"><li>आपदा जोखिम के संबंध में कौन-सा कथन सही है?</li></ul>
+<p>A. क्षमता बढ़ने से जोखिम बढ़ता है।</p>
+<p>B. प्रत्येक संकट अनिवार्य रूप से आपदा बनता है।</p>
+<p>C. संकट, उद्भासन और संवेदनशीलता बढ़ने पर जोखिम बढ़ता है।</p>
+<p>D. संवेदनशीलता की कोई भूमिका नहीं है।</p>
+<div class="answer-box">उत्तर: C</div>
+<div class="pyq-tag">प्रश्न 14</div>
+<p>अपशिष्ट प्रबंधन में सबसे अधिक प्राथमिकता किसे दी जाती है?</p>
+<ul class="bullet-list"><li>A. अंतिम निपटान</li><li>B. भस्मीकरण</li><li>C. पुनर्चक्रण</li><li>D. अपशिष्ट उत्पन्न होने से रोकना</li></ul>
+<div class="answer-box">उत्तर: D</div>
+<div class="pyq-tag">प्रश्न 15: कथन–कारण</div>
+<p>कथन: जलवायु परिवर्तन सामाजिक न्याय का भी प्रश्न है।</p>
+<p>कारण: जलवायु संवेदनशीलता और ऐतिहासिक उत्तरदायित्व समान रूप से वितरित नहीं हैं।</p>
+<p>A. दोनों सही हैं और कारण सही व्याख्या है।</p>
+<p>B. दोनों सही हैं, लेकिन कारण सही व्याख्या नहीं है।</p>
+<p>C. कथन सही, कारण गलत है।</p>
+<p>D. कथन गलत, कारण सही है।</p>
+<div class="answer-box">उत्तर: A</div>
+</section>
+<section id="hi-एक-पृष्ठ-त्वरित-पुनरावृत्ति" class="topic-section lang-hi" data-slug="एक-पृष्ठ-त्वरित-पुनरावृत्ति" data-lang="hi" data-title="एक-पृष्ठ त्वरित पुनरावृत्ति">
+<div class="sec-head"><span class="sec-num">46</span><h2>एक-पृष्ठ त्वरित पुनरावृत्ति</h2></div>
+<ul class="bullet-list"><li>विकास</li></ul>
+<div class="formula">MDGs = 8 लक्ष्य, 2000–2015</div>
+<div class="formula">SDGs = 17 लक्ष्य, 169 लक्ष्य-बिंदु, 2016–2030</div>
+<ul class="bullet-list"><li>सतत विकास</li><li>अर्थव्यवस्था + समाज + पर्यावरण</li><li>प्रदूषण</li></ul>
+<div class="formula">NOₓ + VOCs + सूर्य का प्रकाश → प्रकाश-रासायनिक स्मॉग</div>
+<div class="formula">SO₂ + NOₓ → अम्ल वर्षा</div>
+<div class="formula">कार्बनिक प्रदूषण बढ़ेगा → BOD बढ़ेगा → DO घटेगी</div>
+<div class="formula">पोषक तत्त्व बढ़ेंगे → शैवाल बढ़ेंगे → ऑक्सीजन घटेगी</div>
+<ul class="bullet-list"><li>जलवायु परिवर्तन</li></ul>
+<div class="formula">शमन = कारण कम करना</div>
+<div class="formula">अनुकूलन = प्रभावों के अनुसार बदलाव</div>
+<ul class="bullet-list"><li>अपशिष्ट</li></ul>
+<div class="formula">अस्वीकार → कम उपयोग → पुनः उपयोग → मरम्मत → पुनर्चक्रण → ऊर्जा प्राप्ति → निपटान</div>
+<ul class="bullet-list"><li>आपदा</li></ul>
+<div class="formula">जोखिम ∝ (संकट × उद्भासन × संवेदनशीलता) ÷ क्षमता</div>
+<ul class="bullet-list"><li>भारतीय कानूनों का क्रम</li></ul>
+<div class="formula">वन्यजीव 1972 → जल 1974 → वन 1980 → वायु 1981 → पर्यावरण 1986 → NGT 2010</div>
+<ul class="bullet-list"><li>अंतरराष्ट्रीय कालक्रम</li></ul>
+<div class="formula">स्टॉकहोम 1972 → मॉन्ट्रियल 1987 → रियो/CBD 1992 → क्योटो 1997 → पेरिस 2015</div>
+<ul class="bullet-list"><li>प्रमुख संबंध</li></ul>
+<div class="formula">मॉन्ट्रियल → ओजोन</div>
+<div class="formula">रियो → पर्यावरण और विकास</div>
+<div class="formula">CBD → जैव विविधता</div>
+<div class="formula">क्योटो → बाध्यकारी लक्ष्य एवं बाजार तंत्र</div>
+<div class="formula">पेरिस → NDC और तापमान लक्ष्य</div>
+<div class="formula">ISA → सौर ऊर्जा सहयोग</div>
+<ul class="bullet-list"><li>परीक्षा दृष्टिकोण</li></ul>
+<div class="formula">अवधारणा → कारण/स्रोत → प्रभाव → नियंत्रण → कानून/समझौता → प्रयोग</div>
+</section>
+      <div class="topic-pager">
+        <a id="prev-topic" href="#">← <span id="prev-lbl">Previous topic</span></a>
+        <a id="next-topic" class="next" href="#"><span id="next-lbl">Next topic</span> →</a>
+      </div>
+      <div class="enroll-cta">
+        <div>
+          <h3 class="h-display" id="cta-title" data-t-en="Join the Paper-1 Batch" data-t-hi="Paper-1 बैच में शामिल हों">Join the Paper-1 Batch</h3>
+          <p id="cta-sub" data-t-en="Course fee FREE — ₹500 registration &amp; academic/logistics contribution. Classes daily at 6:30 PM." data-t-hi="कोर्स फीस FREE — ₹500 पंजीकरण एवं अकादमिक/लॉजिस्टिक्स योगदान। रोज़ शाम 6:30 बजे क्लास।">Course fee FREE — ₹500 registration &amp; academic/logistics contribution. Classes daily at 6:30 PM.</p>
+        </div>
+        <a href="enroll.html" class="btn-gold" id="cta-btn" data-t-en="✓ JOIN BATCH @ ₹500" data-t-hi="✓ ₹500 में जुड़ें">✓ JOIN BATCH @ ₹500</a>
+      </div>
+    </div>
+  </div>
+</main>
+
+<!-- ================= FOOTER PLACEHOLDER : apna existing footer yahan paste karein ================= -->
+
+<script>
+(function(){
+
+  var BASE_PATH =
+    "/tutorials/people-development-and-environment/people-development-and-environment";
+
+  var ORDER = {
+    en: [
+      "Environment:-Meaning-and-Components",
+      "Development-and-Environment",
+      "Sustainable-Development",
+      "Millennium-Development-Goals",
+      "Sustainable-Development-Goals",
+      "Human–Environment-Interaction",
+      "Anthropogenic-Activities",
+      "Environmental-Issues-by-Scale",
+      "Air-Pollution",
+      "Water-Pollution",
+      "Soil-Pollution-and-Land-Degradation",
+      "Noise-Pollution",
+      "Waste-and-Its-Types",
+      "Waste-Management-Hierarchy",
+      "Climate-Change",
+      "Socio-economic-Dimensions-of-Climate-Change",
+      "Pollution-and-Human-Health",
+      "Natural-and-Energy-Resources",
+      "Solar-Energy",
+      "Wind-Energy",
+      "Hydropower",
+      "Geothermal-Energy",
+      "Biomass-Energy",
+      "Nuclear-Energy",
+      "Forest-Resources",
+      "Soil-as-a-Resource",
+      "Natural-Hazards-and-Disasters",
+      "Disaster-Management-Cycle",
+      "Hazard-specific-Mitigation",
+      "Environment-Protection-Act-1986",
+      "National-Action-Plan-on-Climate-Change",
+      "International-Environmental-Agreements",
+      "Chronology-of-International-Efforts",
+      "Verified-Previous-Year-Questions",
+      "PYQ-Trend-Analysis",
+      "December-2026-Expected-MCQs",
+      "One-Page-Revision-Capsule"
+    ],
+
+    hi: [
+      "पर्यावरण-का-अर्थ-एवं-घटक",
+      "विकास-और-पर्यावरण",
+      "सतत-विकास",
+      "सहस्राब्दी-विकास-लक्ष्य",
+      "सतत-विकास-लक्ष्य",
+      "MDGs-और-SDGs-में-अंतर",
+      "मानव–पर्यावरण-अंतःक्रिया",
+      "मानवजनित-गतिविधियाँ",
+      "पर्यावरणीय-समस्याओं-का-स्तर",
+      "वायु-प्रदूषण",
+      "स्मॉग",
+      "अम्ल-वर्षा",
+      "जल-प्रदूषण",
+      "सुपोषण",
+      "जैव-संचयन-और-जैव-आवर्धन",
+      "मृदा-प्रदूषण-एवं-भूमि-क्षरण",
+      "ध्वनि-प्रदूषण",
+      "अपशिष्ट-के-प्रकार",
+      "अपशिष्ट-प्रबंधन-पदानुक्रम",
+      "जलवायु-परिवर्तन",
+      "जलवायु-परिवर्तन-के-प्रभाव",
+      "शमन-और-अनुकूलन",
+      "जलवायु-परिवर्तन-के-सामाजिक-आर्थिक-आयाम",
+      "प्रदूषक-और-मानव-स्वास्थ्य",
+      "प्राकृतिक-एवं-ऊर्जा-संसाधन",
+      "सौर-ऊर्जा",
+      "पवन-ऊर्जा",
+      "जल-विद्युत",
+      "भू-तापीय-ऊर्जा",
+      "बायोमास-ऊर्जा",
+      "परमाणु-ऊर्जा",
+      "वन-संसाधन",
+      "मिट्टी-एक-प्राकृतिक-संसाधन",
+      "प्राकृतिक-संकट-एवं-आपदा",
+      "संकटों-के-प्रकार",
+      "आपदा-प्रबंधन-चक्र",
+      "संकट-विशिष्ट-शमन-रणनीतियाँ",
+      "पर्यावरण-संरक्षण-अधिनियम-1986",
+      "प्रमुख-पर्यावरणीय-कानून",
+      "राष्ट्रीय-जलवायु-परिवर्तन-कार्ययोजना",
+      "अंतरराष्ट्रीय-पर्यावरणीय-समझौते",
+      "अंतरराष्ट्रीय-प्रयासों-का-कालक्रम",
+      "सत्यापित-पिछले-वर्षों-के-प्रश्न",
+      "PYQ-प्रवृत्ति-विश्लेषण",
+      "दिसंबर-2026-के-संभावित-प्रश्न",
+      "एक-पृष्ठ-त्वरित-पुनरावृत्ति"
+    ]
+  };
+
+
+  var UI = {
+    en: {
+      sidebar: "On this page",
+      menu: "☰ Menu",
+      viewing: "Currently viewing:",
+      prev: "Previous topic",
+      next: "Next topic"
+    },
+
+    hi: {
+      sidebar: "विषय सूची",
+      menu: "☰ मेनू",
+      viewing: "अभी पढ़ रहे हैं:",
+      prev: "पिछला विषय",
+      next: "अगला विषय"
+    }
+  };
+
+
+  var allNav =
+    document.querySelectorAll(".nav-link");
+
+  var allSections =
+    document.querySelectorAll(".topic-section");
+
+  var titleLabel =
+    document.getElementById("current-topic-label");
+
+  var mobileLabel =
+    document.getElementById("mobile-current-topic");
+
+  var prevBtn =
+    document.getElementById("prev-topic");
+
+  var nextBtn =
+    document.getElementById("next-topic");
+
+  var toggleBox =
+    document.getElementById("sidebar-toggle");
+
+  var btnEn =
+    document.getElementById("btn-en");
+
+  var btnHi =
+    document.getElementById("btn-hi");
+
+
+  var currentLang = "hi";
+
+  var currentSlugByLang = {
+    en: ORDER.en[0],
+    hi: ORDER.hi[0]
+  };
+
+
+  // Static translations
+  function applyStaticTranslations(lang) {
+
+    document
+      .querySelectorAll("[data-t-" + lang + "]")
+      .forEach(function(el) {
+
+        el.innerHTML =
+          el.getAttribute("data-t-" + lang);
+
+      });
+
+
+    var sidebarTitle =
+      document.getElementById("sidebar-title-text");
+
+    var mobileMenu =
+      document.getElementById("mobile-menu-lbl");
+
+    var currentTopicLbl =
+      document.getElementById("current-topic-lbl-text");
+
+    var prevLbl =
+      document.getElementById("prev-lbl");
+
+    var nextLbl =
+      document.getElementById("next-lbl");
+
+
+    if (sidebarTitle)
+      sidebarTitle.textContent = UI[lang].sidebar;
+
+    if (mobileMenu)
+      mobileMenu.textContent = UI[lang].menu;
+
+    if (currentTopicLbl)
+      currentTopicLbl.textContent = UI[lang].viewing;
+
+    if (prevLbl)
+      prevLbl.textContent = UI[lang].prev;
+
+    if (nextLbl)
+      nextLbl.textContent = UI[lang].next;
+
+
+    document.documentElement.lang = lang;
+
+  }
+
+
+  // Get topic title
+  function slugTitle(lang, slug) {
+
+    var el =
+      document.getElementById(
+        lang + "-" + slug
+      );
+
+    return el
+      ? el.getAttribute("data-title")
+      : slug;
+
+  }
+
+
+  // Update browser URL
+  function updateUrl(lang, slug, replace) {
+
+    var newPath =
+      BASE_PATH + "/" + slug;
+
+    if (
+      window.location.pathname !== newPath
+    ) {
+
+      if (replace) {
+
+        history.replaceState(
+          null,
+          "",
+          newPath
+        );
+
+      } else {
+
+        history.pushState(
+          null,
+          "",
+          newPath
+        );
+
+      }
+
+    }
+
+  }
+
+
+  // Read language + slug from URL
+  function parsePath() {
+
+    var path =
+      window.location.pathname
+        .replace(/\/+$/, "");
+
+
+    if (
+      path === BASE_PATH ||
+      !path.startsWith(BASE_PATH + "/")
+    ) {
+
+      return {
+        lang: "hi",
+        slug: ORDER.hi[0]
+      };
+
+    }
+
+
+    var slug =
+      path
+        .substring(
+          (BASE_PATH + "/").length
+        )
+        .split("/")[0];
+
+
+    slug =
+      decodeURIComponent(slug);
+
+
+    var lang = "en";
+
+
+    if (
+      ORDER.hi.indexOf(slug) !== -1
+    ) {
+
+      lang = "hi";
+
+    } else if (
+      ORDER.en.indexOf(slug) !== -1
+    ) {
+
+      lang = "en";
+
+    } else {
+
+      return {
+        lang: "hi",
+        slug: ORDER.hi[0]
+      };
+
+    }
+
+
+    return {
+      lang: lang,
+      slug: slug
+    };
+
+  }
+
+
+  // Render current topic
+  function render(
+    updateHistory,
+    replace
+  ) {
+
+    var lang =
+      currentLang;
+
+    var slug =
+      currentSlugByLang[lang];
+
+
+    btnEn.classList.toggle(
+      "active",
+      lang === "en"
+    );
+
+    btnHi.classList.toggle(
+      "active",
+      lang === "hi"
+    );
+
+
+    // Sidebar
+    allNav.forEach(function(l) {
+
+      var isLang =
+        l.getAttribute("data-lang") === lang;
+
+      var navSlug =
+        l.getAttribute("data-slug");
+
+
+      l.classList.toggle(
+        "shown",
+        isLang
+      );
+
+
+      l.classList.toggle(
+        "active",
+        isLang && navSlug === slug
+      );
+
+    });
+
+
+    // Content sections
+    allSections.forEach(function(s) {
+
+      var match =
+        s.getAttribute("data-lang") === lang &&
+        s.getAttribute("data-slug") === slug;
+
+
+      s.classList.toggle(
+        "visible",
+        match
+      );
+
+    });
+
+
+    applyStaticTranslations(lang);
+
+
+    var title =
+      slugTitle(lang, slug);
+
+
+    if (titleLabel)
+      titleLabel.textContent = title;
+
+    if (mobileLabel)
+      mobileLabel.textContent = "📑 " + title;
+
+
+    document.title =
+      title + " | Unit 9 — GS Net Academy";
+
+
+    // Previous / Next
+    var order =
+      ORDER[lang];
+
+    var idx =
+      order.indexOf(slug);
+
+
+    if (idx > 0) {
+
+      prevBtn.style.visibility =
+        "visible";
+
+      prevBtn.href =
+        BASE_PATH +
+        "/" +
+        order[idx - 1];
+
+    } else {
+
+      prevBtn.style.visibility =
+        "hidden";
+
+    }
+
+
+    if (
+      idx < order.length - 1
+    ) {
+
+      nextBtn.style.visibility =
+        "visible";
+
+      nextBtn.href =
+        BASE_PATH +
+        "/" +
+        order[idx + 1];
+
+    } else {
+
+      nextBtn.style.visibility =
+        "hidden";
+
+    }
+
+
+    // Update URL
+    if (updateHistory) {
+
+      updateUrl(
+        lang,
+        slug,
+        replace
+      );
+
+    }
+
+
+    if (toggleBox) {
+
+      toggleBox.checked = false;
+
+    }
+
+  }
+
+
+  // Go to topic
+  function goTo(
+    lang,
+    slug,
+    scrollTop,
+    updateHistory
+  ) {
+
+    if (
+      !ORDER[lang] ||
+      ORDER[lang].indexOf(slug) === -1
+    ) {
+
+      slug =
+        ORDER[lang][0];
+
+    }
+
+
+    currentLang =
+      lang;
+
+    currentSlugByLang[lang] =
+      slug;
+
+
+    render(
+      updateHistory !== false,
+      false
+    );
+
+
+    if (scrollTop !== false) {
+
+      window.scrollTo({
+
+        top: 0,
+
+        behavior:
+          "instant" in window
+            ? "instant"
+            : "auto"
+
+      });
+
+    }
+
+  }
+
+
+  // Sidebar clicks
+  allNav.forEach(function(l) {
+
+    l.addEventListener(
+      "click",
+      function(e) {
+
+        e.preventDefault();
+
+
+        var lang =
+          l.getAttribute("data-lang");
+
+        var slug =
+          l.getAttribute("data-slug");
+
+
+        goTo(
+          lang,
+          slug,
+          true,
+          true
+        );
+
+      }
+    );
+
+  });
+
+
+  // English button
+  if (btnEn) {
+
+    btnEn.addEventListener(
+      "click",
+      function() {
+
+        goTo(
+          "en",
+          currentSlugByLang.en,
+          true,
+          true
+        );
+
+      }
+    );
+
+  }
+
+
+  // Hindi button
+  if (btnHi) {
+
+    btnHi.addEventListener(
+      "click",
+      function() {
+
+        goTo(
+          "hi",
+          currentSlugByLang.hi,
+          true,
+          true
+        );
+
+      }
+    );
+
+  }
+
+
+  // Previous button
+  if (prevBtn) {
+
+    prevBtn.addEventListener(
+      "click",
+      function(e) {
+
+        e.preventDefault();
+
+
+        var order =
+          ORDER[currentLang];
+
+        var idx =
+          order.indexOf(
+            currentSlugByLang[currentLang]
+          );
+
+
+        if (idx > 0) {
+
+          goTo(
+            currentLang,
+            order[idx - 1],
+            true,
+            true
+          );
+
+        }
+
+      }
+    );
+
+  }
+
+
+  // Next button
+  if (nextBtn) {
+
+    nextBtn.addEventListener(
+      "click",
+      function(e) {
+
+        e.preventDefault();
+
+
+        var order =
+          ORDER[currentLang];
+
+        var idx =
+          order.indexOf(
+            currentSlugByLang[currentLang]
+          );
+
+
+        if (
+          idx < order.length - 1
+        ) {
+
+          goTo(
+            currentLang,
+            order[idx + 1],
+            true,
+            true
+          );
+
+        }
+
+      }
+    );
+
+  }
+
+
+  // Browser Back / Forward
+  window.addEventListener(
+    "popstate",
+    function() {
+
+      var p =
+        parsePath();
+
+
+      currentLang =
+        p.lang;
+
+      currentSlugByLang[p.lang] =
+        p.slug;
+
+
+      goTo(
+        p.lang,
+        p.slug,
+        false,
+        false
+      );
+
+    }
+  );
+
+
+  // Initial page load
+  var init =
+    parsePath();
+
+
+  currentLang =
+    init.lang;
+
+  currentSlugByLang[init.lang] =
+    init.slug;
+
+
+  goTo(
+    init.lang,
+    init.slug,
+    false,
+    false
+  );
+
+
+  // If opened on old/base URL,
+  // convert it to the first topic URL
+  if (
+    !window.location.pathname.startsWith(
+      BASE_PATH + "/"
+    )
+  ) {
+
+    updateUrl(
+      currentLang,
+      currentSlugByLang[currentLang],
+      true
+    );
+
+  }
+
+})();
+</script>
+</body>
+</html>

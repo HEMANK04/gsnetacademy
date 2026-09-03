@@ -1,0 +1,1053 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Communication | GS Net Academy</title>
+<meta name="description" content="Complete Unit-IV notes: communication meaning, process, models, types, verbal &amp; non-verbal, barriers, mass communication, media theories &amp; verified PYQs.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@700;800&display=swap" rel="stylesheet">
+<style>
+:root{--navy-950:#0b1330;--navy-900:#101a3d;--navy-700:#33406b;--navy-500:#5b6690;--navy-100:#e7eaf5;--navy-50:#f4f6fc;--gold-400:#e8b74b;--gold-500:#d9a53a;--gold-600:#b9852a;--gold-50:#fdf6e7;--cream:#f8f5ee;--green:#1a7a4c;--orange:#c65b1f;}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{margin:0;font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:var(--cream);color:var(--navy-900);}
+.h-display{font-family:'Poppins',system-ui,sans-serif;font-weight:800;letter-spacing:-.01em;}
+a{text-decoration:none;color:inherit;}
+.container-x{max-width:1360px;margin:0 auto;padding:0 20px;}
+
+.topbar{background:var(--navy-950);color:#fff;padding:9px 0;font-size:12.5px;}
+.topbar .container-x{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;}
+.topbar .target{color:var(--gold-400);font-weight:700;}
+.topbar .right{display:flex;gap:20px;flex-wrap:wrap;color:rgba(255,255,255,.85);}
+
+.mainnav{background:var(--cream);padding:14px 0;border-bottom:1px solid rgba(16,26,61,.08);}
+.mainnav .container-x{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;}
+.brand{display:flex;align-items:center;gap:10px;}
+.brand-badge{width:42px;height:42px;border-radius:9px;background:var(--navy-950);color:var(--gold-400);display:flex;align-items:center;justify-content:center;font-family:'Poppins';font-weight:800;font-size:11px;text-align:center;line-height:1.1;}
+.brand-text .rank{color:var(--gold-600);font-weight:800;font-size:14px;}
+.brand-text .line{font-size:12.5px;color:var(--navy-500);}
+.nav-links{display:flex;gap:26px;font-size:14.5px;font-weight:600;color:var(--navy-900);flex-wrap:wrap;}
+.nav-cta{display:flex;gap:10px;align-items:center;}
+.btn{padding:9px 16px;border-radius:9px;font-size:13.5px;font-weight:700;border:1px solid rgba(16,26,61,.15);}
+.btn.demo{background:#fff;}
+.btn.join{background:var(--gold-400);color:var(--navy-950);border:none;}
+
+.hero{position:relative;background:var(--navy-950);color:#fff;overflow:hidden;}
+.hero:before{content:"";position:absolute;right:-120px;top:-140px;width:380px;height:380px;border-radius:50%;background:radial-gradient(circle,rgba(232,183,75,.25),transparent 70%);}
+.hero-inner{position:relative;padding:42px 0 34px;}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);padding:6px 14px;border-radius:999px;font-size:12.5px;font-weight:700;color:var(--gold-400);}
+.hero h1{font-size:clamp(26px,4vw,42px);margin:16px 0 8px;line-height:1.2;}
+.hero p{color:rgba(255,255,255,.78);max-width:700px;font-size:15px;line-height:1.6;margin:0;}
+.hero-tags{display:flex;gap:12px;margin-top:20px;flex-wrap:wrap;}
+.tag{border:1px solid rgba(255,255,255,.18);border-radius:9px;padding:8px 15px;font-size:12.8px;font-weight:700;color:#cdd2e3;display:flex;gap:7px;align-items:center;}
+.tag b{color:var(--gold-400);}
+
+.layout{display:grid;grid-template-columns:290px 1fr;gap:28px;padding:28px 0 60px;align-items:start;}
+@media (max-width:980px){.layout{grid-template-columns:1fr;}}
+
+.sidebar{position:sticky;top:16px;max-height:calc(100vh - 32px);overflow-y:auto;background:#fff;border:1px solid rgba(16,26,61,.08);border-radius:16px;padding:18px 14px;box-shadow:0 6px 24px rgba(16,26,61,.05);}
+.sidebar::-webkit-scrollbar{width:6px;}
+.sidebar::-webkit-scrollbar-thumb{background:#e2e6f2;border-radius:6px;}
+.sidebar-title{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.14em;color:var(--gold-600);padding:6px 10px 12px;}
+.nav-link{display:flex;align-items:flex-start;gap:10px;padding:9px 10px;border-radius:10px;font-size:13.3px;font-weight:600;color:var(--navy-700);line-height:1.35;cursor:pointer;border:none;background:none;width:100%;text-align:left;}
+.nav-link:hover{background:var(--navy-50);color:var(--navy-900);}
+.nav-link.active{background:var(--gold-50);color:var(--navy-900);}
+.nav-num{flex:none;width:22px;height:22px;border-radius:7px;background:var(--navy-50);color:var(--navy-500);font-size:11px;font-weight:800;display:grid;place-items:center;}
+.nav-link.active .nav-num{background:var(--gold-400);color:var(--navy-950);}
+
+.sb-divider{height:1px;background:rgba(16,26,61,.08);margin:14px 6px;}
+.sb-module{display:flex;align-items:center;gap:10px;padding:9px 10px;border-radius:10px;font-size:13px;color:var(--navy-500);margin-bottom:2px;}
+.sb-module.current{color:var(--gold-600);font-weight:700;background:var(--gold-50);}
+.sb-module .dot{width:6px;height:6px;border-radius:50%;background:var(--navy-100);flex:none;}
+.sb-module.current .dot{background:var(--gold-500);}
+
+#sidebar-toggle{display:none;}
+.mobile-bar{display:none;}
+@media (max-width:980px){
+  .mobile-bar{display:flex;align-items:center;justify-content:space-between;gap:10px;background:#fff;border:1px solid rgba(16,26,61,.1);border-radius:12px;padding:12px 14px;margin-bottom:6px;font-weight:800;font-size:13.5px;color:var(--navy-900);}
+  .sidebar{position:static;max-height:none;display:none;}
+  #sidebar-toggle:checked ~ .layout .sidebar{display:block;}
+}
+
+.content{min-width:0;}
+.topic-section{background:#fff;border:1px solid rgba(16,26,61,.08);border-radius:16px;padding:22px 22px 20px;margin-bottom:18px;scroll-margin-top:18px;}
+.sec-head{display:flex;align-items:center;gap:12px;margin-bottom:12px;}
+.sec-num{flex:none;width:34px;height:34px;border-radius:10px;background:var(--navy-950);color:var(--gold-400);font-weight:800;font-size:14px;display:grid;place-items:center;}
+.sec-head h2{margin:0;font-size:19px;font-weight:800;color:var(--navy-900);}
+.sec-head .hi{font-size:13px;color:var(--navy-500);font-weight:600;margin-left:4px;}
+.topic-section p{font-size:14.5px;line-height:1.75;color:var(--navy-700);margin:6px 0;}
+.topic-section h3{font-size:15.5px;font-weight:800;color:var(--navy-900);margin:16px 0 6px;}
+.bullet-list{margin:8px 0;padding:0;list-style:none;display:grid;gap:6px;}
+.bullet-list li{position:relative;padding-left:20px;font-size:14.3px;line-height:1.6;color:var(--navy-700);}
+.bullet-list li:before{content:"";position:absolute;left:2px;top:9px;width:6px;height:6px;border-radius:50%;background:var(--gold-500);}
+.formula{background:var(--navy-950);color:#fdeec2;font-weight:700;font-size:13.6px;padding:12px 16px;border-radius:10px;margin:10px 0;line-height:1.7;}
+.pyq-tag{display:inline-block;background:var(--gold-50);color:var(--gold-600);font-weight:800;font-size:12px;letter-spacing:.03em;padding:6px 12px;border-radius:8px;margin:14px 0 6px;}
+.answer-box{background:#eefaf2;border:1px solid #bfe8cc;color:var(--green);font-weight:700;font-size:13.6px;padding:8px 14px;border-radius:9px;margin:6px 0;}
+.explain{background:var(--navy-50);border-radius:9px;padding:8px 14px;font-size:13.6px;color:var(--navy-700);}
+.example{background:#fff;border:1px dashed var(--gold-500);border-radius:9px;padding:10px 14px;font-size:13.8px;color:var(--navy-700);margin:8px 0;}
+.example .lbl{color:var(--gold-600);font-weight:800;font-size:11.5px;text-transform:uppercase;letter-spacing:.05em;margin-bottom:4px;display:block;}
+.trap{background:#fdf0e4;border-left:4px solid var(--orange);border-radius:9px;padding:10px 14px;font-size:13.8px;color:#6b3a17;margin:8px 0;}
+.trap .lbl{color:var(--orange);font-weight:800;font-size:11.5px;text-transform:uppercase;letter-spacing:.05em;margin-bottom:4px;display:block;}
+.mini-table{width:100%;border-collapse:collapse;margin:10px 0;font-size:13.3px;}
+.mini-table th{background:var(--navy-950);color:var(--gold-400);text-align:left;padding:8px 12px;font-weight:700;}
+.mini-table td{padding:8px 12px;border-bottom:1px solid var(--navy-100);color:var(--navy-700);}
+.mini-table tr:nth-child(even) td{background:var(--navy-50);}
+
+.enroll-cta{position:relative;overflow:hidden;background:var(--navy-950);color:#fff;border-radius:16px;padding:26px 26px;margin-top:20px;display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between;}
+.enroll-cta:before{content:"";position:absolute;right:-60px;top:-60px;width:200px;height:200px;border-radius:50%;background:radial-gradient(circle,rgba(232,183,75,.25),transparent 70%);}
+.enroll-cta h3{margin:0 0 4px;font-size:20px;}
+.enroll-cta p{margin:0;color:rgba(255,255,255,.75);font-size:13.5px;max-width:480px;}
+.btn-gold{position:relative;background:var(--gold-400);color:var(--navy-950);font-weight:800;padding:11px 22px;border-radius:10px;font-size:13.5px;white-space:nowrap;}
+.footer-note{text-align:center;color:var(--navy-500);font-size:13px;margin-top:20px;}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="container-x">
+    <span class="target">◎ Target December 2026 Exam — Paper-I Batch Started 16 August 2026</span>
+    <div class="right">
+      <span>📞 +91 9266511505</span>
+      <span>📞 +91 9810845327</span>
+      <span>✉ gsnetacademy@gmail.com</span>
+      <span>💬 chat us</span>
+    </div>
+  </div>
+</div>
+
+<nav class="mainnav">
+  <div class="container-x">
+    <div class="brand">
+      <div class="brand-badge">GS<br>Net</div>
+      <div class="brand-text">
+        <div class="rank">#1 A Premier institute for</div>
+        <div class="line">UGC NET Paper-1.</div>
+      </div>
+    </div>
+    <div class="nav-links">
+      <a href="#">UGC NET Paper-I</a>
+      <a href="#">Tutorials</a>
+      <a href="#">Notes</a>
+      <a href="#">Blog</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </div>
+    <div class="nav-cta">
+      <a class="btn demo" href="#">🔒 Exam Portal</a>
+      <a class="btn demo" href="#">Demo</a>
+      <a class="btn join" href="#">Join Now</a>
+    </div>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="container-x hero-inner">
+    <span class="eyebrow">✦ Unit IV · Communication</span>
+    <h1 class="h-display">Unit–IV: Communication</h1>
+    <p>UGC NET/JRF &amp; Assistant Professor Paper-1 — December 2026. Meaning, process, models, types, verbal &amp; non-verbal, barriers, mass communication and media theories.</p>
+    <div class="hero-tags">
+      <div class="tag">📘 <b>28</b> Sections</div>
+      <div class="tag">📝 <b>10</b> Verified PYQs</div>
+      <div class="tag">🎯 <b>10</b> Expected MCQs</div>
+    </div>
+  </div>
+</section>
+
+<main class="container-x">
+  <input type="checkbox" id="sidebar-toggle">
+  <label for="sidebar-toggle" class="mobile-bar">
+    <span>📑 On this page</span>
+    <span>☰ Menu</span>
+  </label>
+
+  <div class="layout">
+    <aside class="sidebar">
+      <p class="sidebar-title">On this page</p>
+  <a href="/tutorials/communication/communication/communication-का-अर्थ" class="nav-link">
+  <span class="nav-num">1</span>Communication का अर्थ
+</a>
+<a href="/tutorials/communication/communication/communication-process" class="nav-link">
+  <span class="nav-num">2</span>Communication Process
+</a>
+<a href="/tutorials/communication/communication/प्रमुख-विशेषताएँ" class="nav-link">
+  <span class="nav-num">3</span>प्रमुख विशेषताएँ
+</a>
+<a href="/tutorials/communication/communication/communication-models" class="nav-link">
+  <span class="nav-num">4</span>Communication Models
+</a>
+<a href="/tutorials/communication/communication/communication-के-प्रमुख-प्रकार" class="nav-link">
+  <span class="nav-num">5</span>Communication के प्रमुख प्रकार
+</a>
+<a href="/tutorials/communication/communication/verbal-communication" class="nav-link">
+  <span class="nav-num">6</span>Verbal Communication
+</a>
+<a href="/tutorials/communication/communication/non-verbal-communication" class="nav-link">
+  <span class="nav-num">7</span>Non-verbal Communication
+</a>
+<a href="/tutorials/communication/communication/non-verbal-characteristics" class="nav-link">
+  <span class="nav-num">8</span>Non-verbal Characteristics
+</a>
+<a href="/tutorials/communication/communication/effective-communication" class="nav-link">
+  <span class="nav-num">9</span>Effective Communication
+</a>
+<a href="/tutorials/communication/communication/listening-और-hearing" class="nav-link">
+  <span class="nav-num">10</span>Listening और Hearing
+</a>
+<a href="/tutorials/communication/communication/intercultural-communication" class="nav-link">
+  <span class="nav-num">11</span>Intercultural Communication
+</a>
+<a href="/tutorials/communication/communication/group-communication" class="nav-link">
+  <span class="nav-num">12</span>Group Communication
+</a>
+<a href="/tutorials/communication/communication/classroom-communication" class="nav-link">
+  <span class="nav-num">13</span>Classroom Communication
+</a>
+<a href="/tutorials/communication/communication/barriers-to-effective-communication" class="nav-link">
+  <span class="nav-num">14</span>Barriers to Effective Communication
+</a>
+<a href="/tutorials/communication/communication/organisational-communication-problems" class="nav-link">
+  <span class="nav-num">15</span>Organisational Communication Problems
+</a>
+<a href="/tutorials/communication/communication/barriers-दूर-करने-के-उपाय" class="nav-link">
+  <span class="nav-num">16</span>Barriers दूर करने के उपाय
+</a>
+<a href="/tutorials/communication/communication/mass-communication" class="nav-link">
+  <span class="nav-num">17</span>Mass Communication
+</a>
+<a href="/tutorials/communication/communication/mass-communication-characteristics" class="nav-link">
+  <span class="nav-num">18</span>Mass Communication Characteristics
+</a>
+<a href="/tutorials/communication/communication/mass-media-के-functions" class="nav-link">
+  <span class="nav-num">19</span>Mass Media के Functions
+</a>
+<a href="/tutorials/communication/communication/प्रमुख-mass-media-theories" class="nav-link">
+  <span class="nav-num">20</span>प्रमुख Mass-Media Theories
+</a>
+<a href="/tutorials/communication/communication/media-and-society" class="nav-link">
+  <span class="nav-num">21</span>Media and Society
+</a>
+<a href="/tutorials/communication/communication/key-digital-media-concepts" class="nav-link">
+  <span class="nav-num">22</span>Key Digital-Media Concepts
+</a>
+<a href="/tutorials/communication/communication/thinker–theory-matching" class="nav-link">
+  <span class="nav-num">23</span>Thinker–Theory Matching
+</a>
+<a href="/tutorials/communication/communication/common-exam-traps" class="nav-link">
+  <span class="nav-num">24</span>Common Exam Traps
+</a>
+<a href="/tutorials/communication/communication/verified-previous-year-questions" class="nav-link">
+  <span class="nav-num">25</span>Verified Previous Year Questions
+</a>
+<a href="/tutorials/communication/communication/pyq-trend-analysis" class="nav-link">
+  <span class="nav-num">26</span>PYQ Trend Analysis
+</a>
+<a href="/tutorials/communication/communication/december-2026-expected-mcqs" class="nav-link">
+  <span class="nav-num">27</span>December 2026 Expected MCQs
+</a>
+<a href="/tutorials/communication/communication/one-page-revision-table" class="nav-link">
+  <span class="nav-num">28</span>One-Page Revision Table
+</a>
+
+      <div class="sb-divider"></div>
+      <p class="sidebar-title">Paper-1 Units</p>
+      <div class="sb-module"><span class="dot"></span> Unit 2 · Research Aptitude</div>
+      <div class="sb-module"><span class="dot"></span> Unit 3 · Comprehension</div>
+      <div class="sb-module current"><span class="dot"></span> Unit 4 · Communication</div>
+      <div class="sb-module"><span class="dot"></span> Unit 9 · People, Development &amp; Environment</div>
+    </aside>
+
+    <div class="content">
+
+      <section id="s1" class="topic-section">
+        <div class="sec-head"><span class="sec-num">1</span><h2>Communication का अर्थ</h2></div>
+        <p>Communication शब्द Latin के <b>Communis/Communicare</b> से बना है, जिसका अर्थ है: <b>To share or make common — साझा करना</b>।</p>
+        <p>Communication वह process है जिसमें sender और receiver symbols, language या behaviour के माध्यम से information, ideas, feelings और meaning share करते हैं।</p>
+        <div class="formula">Communication = Exchange of Meaning</div>
+        <p>केवल message भेजना communication की सफलता नहीं है। Receiver द्वारा intended meaning समझना आवश्यक है।</p>
+        <div class="example"><span class="lbl">Example</span>Teacher ने "critical thinking" की definition बता दी, लेकिन learners उसका meaning नहीं समझे। Information transmitted हुई, लेकिन meaning shared नहीं हुआ — इसलिए communication effective नहीं है।</div>
+      </section>
+
+      <section id="s2" class="topic-section">
+        <div class="sec-head"><span class="sec-num">2</span><h2>Communication Process</h2></div>
+        <p>Communication के प्रमुख elements: Sender/Source, Idea, Encoding, Message, Channel/Medium, Receiver, Decoding, Feedback, Noise, Context।</p>
+        <div class="formula">Sender → Encoding → Message/Channel → Decoding → Receiver → Feedback</div>
+
+        <h3>Sender/Source</h3>
+        <p>जो व्यक्ति या institution communication शुरू करता है। Example: Classroom में teacher।</p>
+        <h3>Encoding</h3>
+        <p>Idea को words, signs, visuals या symbols में बदलना। Example: Teacher statistical concept को graph में बदलता है।</p>
+        <h3>Message</h3>
+        <p>वह content जो communicate किया जाता है।</p>
+        <h3>Channel</h3>
+        <p>Message पहुँचाने का माध्यम: Speech, Book, Email, Telephone, Television, LMS, Social media।</p>
+        <h3>Receiver</h3>
+        <p>जिसके लिए message intended है।</p>
+        <h3>Decoding</h3>
+        <p>Receiver द्वारा symbols या words का meaning समझना।</p>
+        <h3>Feedback</h3>
+        <p>Receiver की response, जो बताती है कि message किस सीमा तक समझा गया। Feedback हो सकती है: Immediate या delayed, Verbal या non-verbal, Positive या negative, Formal या informal।</p>
+        <h3>Noise</h3>
+        <p>कोई भी factor जो intended message के transmission या understanding में interference पैदा करे।</p>
+        <div class="trap"><span class="lbl">Exam Trap</span>Noise ≠ केवल physical sound। Confusing words, anxiety, poor network और cultural differences भी noise हो सकते हैं।</div>
+        <h3>Context</h3>
+        <p>Communication जिस social, cultural, physical और psychological situation में होती है।</p>
+      </section>
+
+      <section id="s3" class="topic-section">
+        <div class="sec-head"><span class="sec-num">3</span><h2>Communication की प्रमुख विशेषताएँ</h2></div>
+        <ul class="bullet-list">
+          <li>Dynamic process — गतिशील प्रक्रिया</li>
+          <li>Continuous process — निरंतर प्रक्रिया</li>
+          <li>Two-way in its complete form</li>
+          <li>Meaning-centred</li>
+          <li>Symbolic process</li>
+          <li>Context-dependent</li>
+          <li>Irreversible</li>
+          <li>Transactional</li>
+          <li>Cultural</li>
+          <li>Purposeful</li>
+          <li>Interactive</li>
+          <li>Verbal और non-verbal दोनों</li>
+          <li>Feedback-oriented</li>
+          <li>Noise से प्रभावित</li>
+        </ul>
+        <div class="trap"><span class="lbl">Important Exam Point</span>Communication को पूर्णतः reverse नहीं किया जा सकता। बोले या भेजे गए message के प्रभाव को बाद में पूरी तरह समाप्त नहीं किया जा सकता।</div>
+      </section>
+
+      <section id="s4" class="topic-section">
+        <div class="sec-head"><span class="sec-num">4</span><h2>Communication Models</h2></div>
+
+        <h3>Aristotle's Model</h3>
+        <div class="formula">Speaker → Speech → Audience → Effect</div>
+        <p><b>Elements:</b> Speaker, Speech, Occasion, Audience, Effect।</p>
+        <p><b>Characteristics:</b> Linear और one-way, Public speaking और persuasion पर केन्द्रित, Feedback का स्पष्ट स्थान नहीं।</p>
+        <div class="example"><span class="lbl">Example</span>Political speech, public lecture या ceremonial address।</div>
+
+        <h3>Lasswell's Model</h3>
+        <p>Harold Lasswell का formula:</p>
+        <div class="formula">Who → Says What → In Which Channel → To Whom → With What Effect?</div>
+        <table class="mini-table">
+          <tr><th>Component</th><th>Analysis</th></tr>
+          <tr><td>Who</td><td>Control analysis</td></tr>
+          <tr><td>Says what</td><td>Content analysis</td></tr>
+          <tr><td>Channel</td><td>Media analysis</td></tr>
+          <tr><td>To whom</td><td>Audience analysis</td></tr>
+          <tr><td>Effect</td><td>Effect analysis</td></tr>
+        </table>
+        <p><b>Characteristics:</b> Linear, Mass communication-oriented, Communication effect पर बल, Explicit feedback नहीं।</p>
+        <div class="formula">Lasswell = 5W + Effect</div>
+
+        <h3>Shannon–Weaver Model</h3>
+        <p>मूलतः telecommunication के लिए विकसित mathematical model।</p>
+        <div class="formula">Information Source → Transmitter → Channel + Noise → Receiver → Destination</div>
+        <p><b>प्रमुख Contribution:</b> Noise की concept, Technical accuracy, Signal transmission।</p>
+        <p><b>Limitation:</b> मूल रूप से linear, Meaning और cultural context पर कम बल।</p>
+        <div class="formula">Shannon–Weaver → Mathematical Model → Noise</div>
+
+        <h3>Berlo's SMCR Model</h3>
+        <p>David Berlo का model:</p>
+        <div class="formula">S–M–C–R = Source–Message–Channel–Receiver</div>
+        <p><b>Source और Receiver को प्रभावित करने वाले factors:</b> Communication skills, Attitudes, Knowledge, Social system, Culture।</p>
+        <p><b>Channel — Five senses से संबंधित:</b> Seeing, Hearing, Touching, Smelling, Tasting।</p>
+        <div class="trap"><span class="lbl">Limitation</span>Feedback का explicit component नहीं।</div>
+
+        <h3>Osgood–Schramm Model</h3>
+        <p>यह circular model है। प्रत्येक participant Encodes, Interprets, Decodes करता है।</p>
+        <p><b>विशेषताएँ:</b> Communication circular है। Participants की roles बदलती रहती हैं। Feedback महत्त्वपूर्ण है। Interpersonal communication के लिए useful है।</p>
+        <div class="formula">Osgood–Schramm = Circular Communication</div>
+
+        <h3>Schramm's Field of Experience</h3>
+        <p>Effective communication के लिए sender और receiver के <b>fields of experience</b> में कुछ overlap आवश्यक है।</p>
+        <p><b>Field of experience में शामिल हैं:</b> Knowledge, Language, Culture, Education, Previous experience, Beliefs।</p>
+        <div class="example"><span class="lbl">Example</span>Teacher अत्यधिक advanced terminology उपयोग करता है, जबकि learners को basic concepts नहीं आते। Common field of experience कम होने से communication कमजोर होगी।</div>
+
+        <h3>Newcomb's ABX Model</h3>
+        <p>Theodore Newcomb का model: A और B = Communicators, X = Common object/topic।</p>
+        <p>Communication A और B के बीच X के प्रति orientation और social balance बनाए रखने में सहायता करती है।</p>
+        <div class="formula">Newcomb = ABX = Social Relationship and Balance</div>
+
+        <h3>Westley and MacLean Model</h3>
+        <p>Mass communication में कई events से communicator/gatekeeper कुछ messages select करके audience तक पहुँचाता है।</p>
+        <p><b>प्रमुख Concept — Gatekeeping:</b> Editor, journalist या media organisation तय कर सकते हैं कि कौन-सी information audience तक पहुँचेगी।</p>
+      </section>
+
+      <section id="s5" class="topic-section">
+        <div class="sec-head"><span class="sec-num">5</span><h2>Communication के प्रमुख प्रकार</h2></div>
+
+        <h3>Participants की संख्या के आधार पर</h3>
+        <p><b>A. Intrapersonal Communication:</b> व्यक्ति का स्वयं से communication। उदाहरण: Self-talk, Reflection, Internal decision-making।</p>
+        <p><b>B. Interpersonal Communication:</b> दो व्यक्तियों के बीच communication। उदाहरण: Teacher और student conversation, Interview, Counselling।</p>
+        <p><b>C. Group Communication:</b> तीन या अधिक members के बीच shared goal के लिए interaction। उदाहरण: Classroom discussion, Committee meeting, Focus group।</p>
+        <p><b>D. Public Communication:</b> एक speaker द्वारा comparatively large, physically present audience को address करना।</p>
+        <p><b>E. Mass Communication:</b> Technology और mass media के माध्यम से large, heterogeneous और dispersed audience तक message पहुँचाना।</p>
+
+        <h3>Direction के आधार पर</h3>
+        <p><b>A. Downward Communication:</b> Higher authority से subordinate की ओर। Principal → Teacher → Student। उदाहरण: Instructions, policies, assignments।</p>
+        <p><b>B. Upward Communication:</b> Lower level से higher authority की ओर। Student → Teacher → Principal। उदाहरण: Feedback, complaint, suggestion।</p>
+        <p><b>C. Horizontal/Lateral Communication:</b> Same organisational level के persons के बीच। Teacher ↔ Teacher।</p>
+        <p><b>D. Diagonal Communication:</b> Different departments और different hierarchical levels के बीच। IT assistant ↔ Department head।</p>
+
+        <h3>Formality के आधार पर</h3>
+        <p><b>Formal Communication:</b> Official channels और prescribed structure के अनुसार। उदाहरण: Official notice, Circular, Departmental meeting, Institutional email।</p>
+        <p><b>Informal Communication:</b> Unofficial social interaction। Organisational informal network को कभी-कभी <b>grapevine</b> कहा जाता है।</p>
+        <p><b>Grapevine Patterns:</b> Single-strand chain, Gossip chain, Probability chain, Cluster chain।</p>
+
+        <h3>Feedback के आधार पर</h3>
+        <p><b>One-way Communication:</b> Sender से receiver की ओर; immediate feedback सीमित या absent। उदाहरण: Recorded lecture, notice, radio broadcast।</p>
+        <p><b>Two-way Communication:</b> Feedback और interaction उपलब्ध। उदाहरण: Discussion, tutorial, live interactive class।</p>
+        <div class="trap"><span class="lbl">Exam Point</span>Two-way communication सामान्यतः clarification और participation बढ़ाती है, लेकिन हर situation में fastest method नहीं होती।</div>
+
+        <h3>Time के आधार पर</h3>
+        <p><b>Synchronous Communication:</b> Participants एक ही समय पर communicate करते हैं — Live class, Telephone, Video conference, Live chat।</p>
+        <p><b>Asynchronous Communication:</b> Communication different time पर access/respond की जा सकती है — Email, Discussion forum, Recorded lecture, LMS assignment।</p>
+      </section>
+
+      <section id="s6" class="topic-section">
+        <div class="sec-head"><span class="sec-num">6</span><h2>Verbal Communication <span class="hi">शाब्दिक संचार</span></h2></div>
+        <p>Words और language के माध्यम से communication।</p>
+        <h3>Oral Communication</h3>
+        <p>Lecture, Discussion, Interview, Speech, Telephone conversation।</p>
+        <h3>Written Communication</h3>
+        <p>Books, Letters, Reports, Emails, Notices, Question papers।</p>
+        <h3>Advantages of Oral Communication</h3>
+        <p>Immediate feedback, Flexibility, Personal connection, Quick clarification, Tone का उपयोग।</p>
+        <h3>Limitations</h3>
+        <p>Permanent record का अभाव, Mishearing, Large complex information के लिए कठिन, Memory पर निर्भरता।</p>
+        <h3>Advantages of Written Communication</h3>
+        <p>Permanent record, Precision, Standardisation, Complex information के लिए useful, Legal/official evidence।</p>
+        <h3>Limitations</h3>
+        <p>Delayed feedback, Time-consuming, Tone unclear हो सकती है, Immediate clarification नहीं।</p>
+      </section>
+
+      <section id="s7" class="topic-section">
+        <div class="sec-head"><span class="sec-num">7</span><h2>Non-verbal Communication <span class="hi">अशाब्दिक संचार</span></h2></div>
+        <p>Spoken या written words के बिना meaning communicate करना non-verbal communication है। यह verbal message को Repeat, Complement, Substitute, Regulate, Emphasise, Contradict कर सकता है।</p>
+        <div class="example"><span class="lbl">Example</span>Teacher कहता है "बहुत अच्छा", लेकिन facial expression irritated है। Non-verbal और verbal messages contradict कर रहे हैं।</div>
+
+        <h3>Kinesics</h3>
+        <p>Body movement और body language का study — Facial expressions, Gestures, Posture, Head movements, Body orientation।</p>
+        <div class="formula">Kinesics = Body Movement</div>
+
+        <h3>Oculesics</h3>
+        <p>Eye behaviour का study — Eye contact, Gaze, Pupil movement, Looking away।</p>
+        <div class="formula">Oculesics = Eyes</div>
+        <p>Eye contact interest दिखा सकता है, लेकिन इसका appropriate level culture-dependent है।</p>
+
+        <h3>Proxemics</h3>
+        <p>Communication में space और physical distance का study। Edward T. Hall से associated।</p>
+        <div class="formula">Proxemics = Space</div>
+        <table class="mini-table">
+          <tr><th>Zone</th><th>Approximate Distance</th><th>सामान्य उपयोग</th></tr>
+          <tr><td>Intimate</td><td>0–18 inches</td><td>Very close relations</td></tr>
+          <tr><td>Personal</td><td>18 inches–4 feet</td><td>Friends/interpersonal</td></tr>
+          <tr><td>Social</td><td>4–12 feet</td><td>Formal/social interaction</td></tr>
+          <tr><td>Public</td><td>12 feet and beyond</td><td>Public speaking</td></tr>
+        </table>
+        <p>Distances culture और context के अनुसार बदल सकती हैं।</p>
+
+        <h3>Haptics</h3>
+        <p>Touch के माध्यम से communication।</p>
+        <div class="formula">Haptics = Touch</div>
+        <p>उदाहरण: Handshake, Pat on the shoulder। Meaning culture, relationship और consent पर निर्भर करता है।</p>
+
+        <h3>Chronemics</h3>
+        <p>Communication में time के use और perception का study।</p>
+        <div class="formula">Chronemics = Time</div>
+        <p>उदाहरण: Punctuality, किसी को wait कराना, Response delay, Speaking time।</p>
+        <p><b>Monochronic Culture:</b> एक समय में एक task, Schedule और punctuality पर जोर। <b>Polychronic Culture:</b> Multiple activities, Relationships और flexibility को अधिक महत्त्व।</p>
+
+        <h3>Paralanguage/Vocalics</h3>
+        <p>Words के अतिरिक्त voice की qualities: Pitch, Tone, Volume, Rate, Pause, Stress, Silence।</p>
+        <p>क्या कहा गया = Verbal; कैसे कहा गया = Paralanguage।</p>
+
+        <h3>Appearance and Artifacts</h3>
+        <p>Dress, Colours, Hairstyle, Objects, Classroom arrangement, Status symbols। इनसे identity, role और attitude communicate हो सकते हैं।</p>
+
+        <h3>Silence</h3>
+        <p>Silence भी communicate कर सकता है: Agreement, Disagreement, Respect, Confusion, Resistance, Reflection। इसका meaning context और culture से निर्धारित होता है।</p>
+      </section>
+
+      <section id="s8" class="topic-section">
+        <div class="sec-head"><span class="sec-num">8</span><h2>Non-verbal Communication की Characteristics</h2></div>
+        <ul class="bullet-list">
+          <li>Continuous हो सकती है।</li>
+          <li>कई संकेत unconscious होते हैं।</li>
+          <li>Context-dependent है।</li>
+          <li>Culture से प्रभावित होती है।</li>
+          <li>Emotions व्यक्त करने में powerful है।</li>
+          <li>Verbal message को support या contradict कर सकती है।</li>
+          <li>Relationships को प्रभावित करती है।</li>
+          <li>Ambiguous हो सकती है।</li>
+          <li>इसका कोई completely universal fixed dictionary नहीं है।</li>
+        </ul>
+        <div class="trap"><span class="lbl">Exam Trap</span>Non-verbal communication "meaningless" या "universally identical" नहीं होती।</div>
+      </section>
+
+      <section id="s9" class="topic-section">
+        <div class="sec-head"><span class="sec-num">9</span><h2>Effective Communication <span class="hi">प्रभावी संचार</span></h2></div>
+        <p>जब intended meaning receiver तक स्पष्ट रूप से पहुँचे और appropriate response उत्पन्न हो, communication effective कहलाती है।</p>
+        <h3>7 Cs of Effective Communication</h3>
+        <table class="mini-table">
+          <tr><th>C</th><th>Meaning</th></tr>
+          <tr><td>Clear</td><td>स्पष्ट</td></tr>
+          <tr><td>Concise</td><td>संक्षिप्त</td></tr>
+          <tr><td>Concrete</td><td>Specific/evidence-based</td></tr>
+          <tr><td>Correct</td><td>सही और accurate</td></tr>
+          <tr><td>Coherent</td><td>Logical</td></tr>
+          <tr><td>Complete</td><td>आवश्यक information सहित</td></tr>
+          <tr><td>Courteous</td><td>Respectful</td></tr>
+        </table>
+        <p>कुछ frameworks में <b>Consideration</b> भी शामिल किया जाता है।</p>
+        <h3>Effective Communication के Elements</h3>
+        <p>Clear objective, Audience analysis, Appropriate language, Suitable channel, Active listening, Congruent verbal और non-verbal cues, Timely feedback, Empathy, Cultural sensitivity, Noise reduction।</p>
+      </section>
+
+      <section id="s10" class="topic-section">
+        <div class="sec-head"><span class="sec-num">10</span><h2>Listening और Hearing</h2></div>
+        <p><b>Hearing:</b> Sound को physiologically receive करना। <b>Listening:</b> Attention देकर message को समझना, interpret करना और respond करना।</p>
+        <div class="formula">Hearing is physiological; listening is psychological and purposeful.</div>
+        <h3>Active Listening</h3>
+        <p>Speaker पर attention, बीच में interruption से बचना, Clarifying questions, Paraphrasing, Appropriate feedback, Empathy, Premature judgement से बचना।</p>
+        <h3>Poor Listening के कारण</h3>
+        <p>Selective listening, Prejudice, Distraction, Fatigue, Information overload, Emotional reaction, जल्दी conclusion निकालना।</p>
+      </section>
+
+      <section id="s11" class="topic-section">
+        <div class="sec-head"><span class="sec-num">11</span><h2>Intercultural Communication <span class="hi">अंतर-सांस्कृतिक संचार</span></h2></div>
+        <p>Different cultural backgrounds के individuals या groups के बीच communication।</p>
+        <p>Culture प्रभावित करती है: Language, Non-verbal cues, Time perception, Personal space, Politeness, Authority, Individualism, Gender roles, Directness/indirectness।</p>
+
+        <h3>High-context Culture</h3>
+        <p>Meaning का बड़ा भाग Context, Relationship, Status, Shared understanding, Non-verbal cues में embedded होता है।</p>
+        <p><b>Characteristics:</b> Indirect communication, Politeness, Relationship-oriented, Context और silence महत्त्वपूर्ण, Non-verbal संकेत strong।</p>
+
+        <h3>Low-context Culture</h3>
+        <p>Meaning मुख्यतः explicit words में व्यक्त होता है।</p>
+        <p><b>Characteristics:</b> Direct communication, Detailed written information, Clarity और explicitness, Task orientation, Contracts/documentation पर जोर।</p>
+        <div class="trap"><span class="lbl">Exam Trap</span>High-context culture का अर्थ superior culture नहीं और low-context का अर्थ uncultured नहीं। यह communication pattern का difference है।</div>
+
+        <h3>Hofstede के प्रमुख Cultural Dimensions</h3>
+        <p><b>Power Distance:</b> Society unequal distribution of power को किस सीमा तक स्वीकार करती है।</p>
+        <p><b>Individualism–Collectivism:</b> Individualism — Personal autonomy और individual goals; Collectivism — Group identity और group goals।</p>
+        <p><b>Uncertainty Avoidance:</b> Ambiguity और uncertainty के प्रति tolerance।</p>
+        <p><b>Masculinity–Femininity:</b> Competition/achievement बनाम care/cooperation orientation।</p>
+        <p><b>Long-term–Short-term Orientation:</b> Future persistence बनाम immediate/traditional focus।</p>
+        <p><b>Indulgence–Restraint:</b> Desires और gratification की social regulation।</p>
+
+        <h3>Intercultural Barriers</h3>
+        <p>Ethnocentrism, Stereotyping, Prejudice, Language difference, Different non-verbal meanings, Cultural assumptions, Anxiety, Lack of empathy।</p>
+        <p><b>Ethnocentrism:</b> अपनी culture को standard या superior मानकर दूसरी cultures को judge करना। <b>Stereotype:</b> किसी group के सभी members के बारे में oversimplified generalisation।</p>
+
+        <h3>Effective Intercultural Communication</h3>
+        <p>Respect, Cultural awareness, Empathy, Simple language, Clarification, Avoiding stereotypes, Active listening, Tolerance of ambiguity, Feedback।</p>
+      </section>
+
+      <section id="s12" class="topic-section">
+        <div class="sec-head"><span class="sec-num">12</span><h2>Group Communication <span class="hi">समूह संचार</span></h2></div>
+        <p>ऐसा interaction जिसमें तीन या अधिक persons shared objective, identity या task के लिए communicate करते हैं।</p>
+        <p><b>Characteristics:</b> Common goal, Interdependence, Roles और norms, Interaction, Leadership, Decision-making, Group cohesion, Conflict की संभावना।</p>
+
+        <h3>Group Communication Networks</h3>
+        <p><b>A. Chain Network:</b> Message क्रमिक रूप से एक member से दूसरे तक।</p>
+        <p><b>B. Wheel Network:</b> एक central leader सभी members से communicate करता है — Centralised, Simple tasks में fast, Members की satisfaction कम हो सकती है।</p>
+        <p><b>C. Circle Network:</b> प्रत्येक member adjacent members से communicate करता है।</p>
+        <p><b>D. All-channel Network:</b> सभी members एक-दूसरे से communicate करते हैं — Decentralised, Complex task और participation के लिए useful, अधिक time लग सकता है।</p>
+        <p><b>E. Y Network:</b> Chain और wheel का मिश्रित structure।</p>
+
+        <h3>Group Communication Problems</h3>
+        <p><b>Groupthink:</b> Group harmony बनाए रखने की इच्छा critical evaluation को suppress कर देती है।</p>
+        <p><b>Social Loafing:</b> Individual group में कम effort करता है।</p>
+        <p><b>Polarisation:</b> Discussion के बाद group का decision अधिक extreme हो सकता है।</p>
+        <p><b>Dominance:</b> कुछ members discussion control करते हैं।</p>
+        <p><b>Conformity Pressure:</b> Member disagreement होने के बावजूद majority से agree करता है।</p>
+      </section>
+
+      <section id="s13" class="topic-section">
+        <div class="sec-head"><span class="sec-num">13</span><h2>Classroom Communication <span class="hi">कक्षा-संचार</span></h2></div>
+        <p>Teacher और learners के बीच instructional, social और emotional messages का purposeful exchange classroom communication है।</p>
+        <div class="formula">Classroom Communication = Instruction + Interaction + Feedback + Classroom Management</div>
+        <p><b>Characteristics:</b> Goal-oriented, Content-centred लेकिन learner-sensitive, Verbal और non-verbal, Formal और informal, Continuous, Contextual, Feedback-based, Affective और cognitive दोनों, Individual differences से प्रभावित।</p>
+
+        <h3>Effective Classroom Communication</h3>
+        <p>स्पष्ट learning objectives, Prior knowledge से connection, सरल और appropriate language, Examples और analogies, Questioning, Reinforcement, Visual aids, Inclusive participation, Immediate feedback, Psychological safety, उचित voice modulation, Learners के non-verbal cues observe करना, Summary और recap।</p>
+        <div class="example"><span class="lbl">Example</span>Weak communication: Teacher केवल technical definitions पढ़ता है। Effective communication: Definition → Example → Visual → Student question → Feedback → Application</div>
+
+        <h3>Modes Useful in Classroom</h3>
+        <p><b>Iconic Mode:</b> Pictures, diagrams, charts और maps से communication। <b>Associational Mode:</b> New knowledge को previous knowledge से जोड़ना। <b>Symbolic Mode:</b> Words, signs, mathematical symbols और conceptual representations।</p>
+        <div class="formula">Effective Classroom Modes = Iconic + Associational + Symbolic</div>
+
+        <h3>Teacher की Communication Competence</h3>
+        <p>Subject knowledge, Pedagogical content knowledge, Language proficiency, Clarity, Listening skill, Questioning skill, Feedback skill, Non-verbal congruence, Cultural sensitivity, Digital communication competence।</p>
+
+        <h3>Classroom Feedback</h3>
+        <p><b>Immediate Feedback:</b> Learning के दौरान दिया जाता है। <b>Delayed Feedback:</b> कुछ समय बाद दिया जाता है। <b>Descriptive Feedback:</b> बताता है क्या सही है, कहाँ error है, कैसे improve करना है। <b>Evaluative Feedback:</b> Marks, grade या general judgement देता है।</p>
+        <div class="formula">Better Feedback Formula = Specific + Timely + Respectful + Actionable</div>
+
+        <h3>Classroom Communication Climate</h3>
+        <p>Positive classroom climate में: Learners questions पूछ सकते हैं, Mistakes को learning opportunity माना जाता है, Public humiliation नहीं होती, Diversity का सम्मान होता है, Participation encouraged होती है।</p>
+        <div class="trap"><span class="lbl">Exam Point</span>Fear-based classroom communication feedback को suppress करती है और communication को one-way बना सकती है।</div>
+      </section>
+
+      <section id="s14" class="topic-section">
+        <div class="sec-head"><span class="sec-num">14</span><h2>Barriers to Effective Communication <span class="hi">प्रभावी संचार की बाधाएँ</span></h2></div>
+        <p>Communication barrier कोई भी factor है जो message की transmission, reception या interpretation को प्रभावित करता है।</p>
+        <div class="formula">Barrier = Distortion, Delay, Loss or Misinterpretation of Meaning</div>
+
+        <h3>Physical/Environmental Barriers</h3>
+        <p>Noise, Poor lighting, Distance, Uncomfortable seating, Faulty equipment, Poor network, Interruptions, Overcrowded classroom।</p>
+        <div class="example"><span class="lbl">Example</span>Online class में unstable internet के कारण teacher की voice बार-बार टूटती है।</div>
+
+        <h3>Semantic/Language Barriers</h3>
+        <p>Ambiguous words, Technical jargon, Faulty translation, Different meanings, Complex sentences, Unfamiliar language, Unqualified assumptions, Poor vocabulary।</p>
+        <div class="example"><span class="lbl">Example</span>Teacher novice learners के सामने बिना explanation "heteroscedasticity" शब्द उपयोग करता है।</div>
+
+        <h3>Psychological Barriers</h3>
+        <p>Anxiety, Fear, Prejudice, Mistrust, Anger, Low motivation, Selective perception, Defensive attitude, Status consciousness।</p>
+        <div class="example"><span class="lbl">Example</span>Student answer जानता है, लेकिन public criticism के डर से response नहीं देता।</div>
+
+        <h3>Physiological Barriers</h3>
+        <p>Hearing impairment, Speech difficulty, Fatigue, Illness, Poor eyesight, Hunger। Appropriate accessibility support communication को improve कर सकता है।</p>
+
+        <h3>Organisational Barriers</h3>
+        <p>Long hierarchical chain, Rigid rules, Status differences, Filtering, Information overload, Inadequate channels, Lack of transparency, Poor coordination।</p>
+
+        <h3>Cultural Barriers</h3>
+        <p>Different values, Gestures का अलग meaning, Stereotyping, Ethnocentrism, Power-distance differences, Direct बनाम indirect communication।</p>
+
+        <h3>Technological Barriers</h3>
+        <p>Poor connectivity, Incompatible software, Low digital literacy, Device failure, Cybersecurity restrictions, Platform unfamiliarity।</p>
+
+        <h3>Perceptual Barriers</h3>
+        <p>Same message को individuals अपने experience, expectations और beliefs के आधार पर अलग-अलग interpret करते हैं।</p>
+      </section>
+
+      <section id="s15" class="topic-section">
+        <div class="sec-head"><span class="sec-num">15</span><h2>Organisational Communication Problems</h2></div>
+        <p><b>Filtering:</b> Sender information को intentionally select, alter या suppress करता है।</p>
+        <p><b>Selective Perception:</b> Receiver केवल वही aspects ग्रहण करता है जो उसके beliefs और expectations के अनुकूल हों।</p>
+        <p><b>Information Overload:</b> Information processing capacity से अधिक messages प्राप्त होना।</p>
+        <p><b>Status Barrier:</b> Lower-level member authority के डर से honest feedback न दे।</p>
+        <p><b>Premature Evaluation:</b> Message पूरा सुने बिना judgement बनाना।</p>
+        <p><b>Loss by Transmission:</b> Message कई levels से गुजरते समय distort होना।</p>
+      </section>
+
+      <section id="s16" class="topic-section">
+        <div class="sec-head"><span class="sec-num">16</span><h2>Barriers दूर करने के उपाय</h2></div>
+        <ul class="bullet-list">
+          <li>Simple और precise language</li>
+          <li>Audience analysis</li>
+          <li>Appropriate medium</li>
+          <li>Active listening</li>
+          <li>Feedback</li>
+          <li>Redundancy जहाँ आवश्यक हो</li>
+          <li>Jargon explanation</li>
+          <li>Inclusive language</li>
+          <li>Translation verification</li>
+          <li>Noise control</li>
+          <li>Empathy</li>
+          <li>Open communication climate</li>
+          <li>Multiple formats</li>
+          <li>Accessibility support</li>
+          <li>Digital training</li>
+          <li>Message summarisation</li>
+        </ul>
+        <div class="formula">Classroom Formula<br>Explain → Demonstrate → Ask → Listen → Clarify → Confirm</div>
+      </section>
+
+      <section id="s17" class="topic-section">
+        <div class="sec-head"><span class="sec-num">17</span><h2>Mass Communication <span class="hi">जनसंचार</span></h2></div>
+        <p>Mass media के माध्यम से large, heterogeneous, anonymous और geographically dispersed audience तक messages पहुँचाने की process।</p>
+        <h3>Mass Media के प्रकार</h3>
+        <p><b>Print Media:</b> Newspapers, Magazines, Books, Journals।</p>
+        <p><b>Electronic Media:</b> Radio, Television, Cinema।</p>
+        <p><b>Digital/New Media:</b> Internet, Websites, Social media, Podcasts, Streaming platforms, Mobile applications।</p>
+      </section>
+
+      <section id="s18" class="topic-section">
+        <div class="sec-head"><span class="sec-num">18</span><h2>Mass Communication की Characteristics</h2></div>
+        <ul class="bullet-list">
+          <li>Large audience</li>
+          <li>Heterogeneous audience</li>
+          <li>Geographically dispersed audience</li>
+          <li>Technology-mediated</li>
+          <li>Institutionalised production</li>
+          <li>Public messages</li>
+          <li>Gatekeeping</li>
+          <li>Traditional media में delayed/limited feedback</li>
+          <li>High reach</li>
+          <li>Standardised message</li>
+          <li>Digital media में increased interactivity</li>
+        </ul>
+        <div class="trap"><span class="lbl">Exam Trap</span>Digital media ने mass और interpersonal communication की boundaries को partially blur किया है।</div>
+      </section>
+
+      <section id="s19" class="topic-section">
+        <div class="sec-head"><span class="sec-num">19</span><h2>Mass Media के Functions</h2></div>
+        <p><b>1. Information/Surveillance:</b> Society को events और developments की जानकारी।</p>
+        <p><b>2. Correlation/Interpretation:</b> Information को explain और contextualise करना।</p>
+        <p><b>3. Education:</b> Knowledge और public awareness बढ़ाना।</p>
+        <p><b>4. Entertainment:</b> Recreation और cultural content।</p>
+        <p><b>5. Socialisation:</b> Norms, values और roles communicate करना।</p>
+        <p><b>6. Cultural Transmission:</b> Culture को एक generation से दूसरी तक पहुँचाना।</p>
+        <p><b>7. Mobilisation:</b> Social campaigns और collective action को support करना।</p>
+        <p><b>8. Watchdog Function:</b> Powerful institutions को scrutinise करना।</p>
+        <p><b>9. Agenda Formation:</b> Public attention को कुछ issues की ओर direct करना।</p>
+      </section>
+
+      <section id="s20" class="topic-section">
+        <div class="sec-head"><span class="sec-num">20</span><h2>प्रमुख Mass-Media Theories</h2></div>
+
+        <h3>Hypodermic Needle/Magic Bullet Theory</h3>
+        <p>Media message audience पर direct, immediate और powerful effect डालता है। Assumption: Audience passive और relatively homogeneous है। Limitation: Audience differences और selective interpretation को underestimate करता है।</p>
+
+        <h3>Two-Step Flow Theory</h3>
+        <p>Paul Lazarsfeld, Bernard Berelson और Hazel Gaudet के research से जुड़ा; Elihu Katz ने आगे विकसित किया।</p>
+        <div class="formula">Mass Media → Opinion Leaders → Wider Audience</div>
+        <p>Key Concept: Opinion leaders media information को interpret करके others तक पहुँचाते हैं।</p>
+
+        <h3>Multi-Step Flow</h3>
+        <p>Information केवल दो steps तक सीमित नहीं; social networks में multiple directions और stages से flow करती है।</p>
+
+        <h3>Agenda-Setting Theory</h3>
+        <p>Maxwell McCombs और Donald Shaw से associated। Media लोगों को हमेशा यह नहीं बताती कि <b>क्या सोचना है</b>, लेकिन यह प्रभावित करती है कि <b>किसके बारे में सोचना है</b>। Media issues की salience बढ़ाती है।</p>
+        <div class="formula">Media Agenda → Public Agenda</div>
+
+        <h3>Uses and Gratifications Theory</h3>
+        <p>Audience active है और अपनी needs के अनुसार media select करती है। Needs: Information, Entertainment, Personal identity, Social interaction, Escape।</p>
+        <div class="formula">Uses and Gratifications = Active Audience</div>
+
+        <h3>Cultivation Theory</h3>
+        <p>George Gerbner से associated। Long-term और repeated television/media exposure audience की social reality perception को shape कर सकता है।</p>
+        <div class="formula">Cultivation = Long-term Exposure → Perceived Reality</div>
+        <div class="example"><span class="lbl">Example</span>Heavy exposure to violent media world को वास्तव में अधिक dangerous समझने की tendency बढ़ा सकता है।</div>
+
+        <h3>Spiral of Silence</h3>
+        <p>Elisabeth Noelle-Neumann से associated। Minority में होने या social isolation के fear से व्यक्ति अपनी opinion publicly express नहीं कर सकता।</p>
+        <div class="formula">Fear of Isolation → Silence → Apparent Majority Stronger</div>
+
+        <h3>Gatekeeping Theory</h3>
+        <p>Information को select, reject, modify और prioritise करने की process। Gatekeepers: Editors, Journalists, Media owners, Algorithms, Platform moderators।</p>
+
+        <h3>Diffusion of Innovations</h3>
+        <p>Everett Rogers से associated। Innovation adoption categories: Innovators, Early adopters, Early majority, Late majority, Laggards।</p>
+        <div class="formula">Adoption Process: Knowledge → Persuasion → Decision → Implementation → Confirmation</div>
+
+        <h3>Public Sphere</h3>
+        <p>Jürgen Habermas से associated। ऐसा social space जहाँ citizens public issues पर discussion और opinion formation करते हैं। Digital platforms public sphere का विस्तार कर सकते हैं, लेकिन misinformation और unequal participation इसे कमजोर भी कर सकते हैं।</p>
+      </section>
+
+      <section id="s21" class="topic-section">
+        <div class="sec-head"><span class="sec-num">21</span><h2>Media and Society <span class="hi">मीडिया और समाज</span></h2></div>
+        <h3>Positive Role</h3>
+        <p>Information access, Education, Democratic debate, Awareness campaigns, Disaster communication, Cultural exchange, Accountability, Marginal voices को platform, Public participation।</p>
+        <h3>Negative Concerns</h3>
+        <p>Misinformation और disinformation, Propaganda, Stereotyping, Sensationalism, Media concentration, Privacy invasion, Digital divide, Echo chambers, Algorithmic bias, Hate speech, Consumerism, Cultural homogenisation।</p>
+      </section>
+
+      <section id="s22" class="topic-section">
+        <div class="sec-head"><span class="sec-num">22</span><h2>Key Digital-Media Concepts</h2></div>
+        <p><b>Misinformation:</b> False information जो necessarily deliberate intention से spread न हुई हो।</p>
+        <p><b>Disinformation:</b> जानबूझकर बनाई और spread की गई false/deceptive information।</p>
+        <p><b>Malinformation:</b> Genuine information को harm करने के उद्देश्य से context से बाहर या malicious तरीके से use करना।</p>
+        <p><b>Echo Chamber:</b> ऐसा communication environment जहाँ व्यक्ति मुख्यतः अपने existing beliefs से मेल खाने वाली information सुनता है।</p>
+        <p><b>Filter Bubble:</b> Algorithmic personalisation के कारण user limited perspective वाली information environment में रह सकता है।</p>
+        <p><b>Media Literacy:</b> Media messages को Access, Analyse, Evaluate, Create, Responsibly share करने की क्षमता।</p>
+      </section>
+
+      <section id="s23" class="topic-section">
+        <div class="sec-head"><span class="sec-num">23</span><h2>Most Important Thinker–Theory Matching</h2></div>
+        <table class="mini-table">
+          <tr><th>Thinker</th><th>Model/Theory</th></tr>
+          <tr><td>Aristotle</td><td>Speaker–Speech–Audience model</td></tr>
+          <tr><td>Harold Lasswell</td><td>5W communication model</td></tr>
+          <tr><td>Shannon and Weaver</td><td>Mathematical model; noise</td></tr>
+          <tr><td>David Berlo</td><td>SMCR model</td></tr>
+          <tr><td>Osgood and Schramm</td><td>Circular model</td></tr>
+          <tr><td>Theodore Newcomb</td><td>ABX model</td></tr>
+          <tr><td>Westley and MacLean</td><td>Gatekeeping-oriented mass communication model</td></tr>
+          <tr><td>Edward T. Hall</td><td>Proxemics; high/low context</td></tr>
+          <tr><td>Paul Lazarsfeld</td><td>Two-step flow</td></tr>
+          <tr><td>McCombs and Shaw</td><td>Agenda-setting</td></tr>
+          <tr><td>George Gerbner</td><td>Cultivation theory</td></tr>
+          <tr><td>Elihu Katz</td><td>Uses and gratifications; two-step flow development</td></tr>
+          <tr><td>Elisabeth Noelle-Neumann</td><td>Spiral of silence</td></tr>
+          <tr><td>Everett Rogers</td><td>Diffusion of innovations</td></tr>
+          <tr><td>Jürgen Habermas</td><td>Public sphere</td></tr>
+        </table>
+      </section>
+
+      <section id="s24" class="topic-section">
+        <div class="sec-head"><span class="sec-num">24</span><h2>Common Exam Traps</h2></div>
+        <ul class="bullet-list">
+          <li>Communication information transfer से अधिक <b>meaning sharing</b> है।</li>
+          <li>Feedback communication की effectiveness बताती है।</li>
+          <li>Noise केवल sound नहीं है।</li>
+          <li>Shannon–Weaver noise से associated है।</li>
+          <li>Lasswell effect analysis पर बल देता है।</li>
+          <li>Berlo का SMCR explicit feedback नहीं देता।</li>
+          <li>Kinesics = body movement; proxemics = space।</li>
+          <li>Haptics = touch; chronemics = time।</li>
+          <li>Paralanguage voice quality है, language के शब्द नहीं।</li>
+          <li>Non-verbal cues culture-dependent हो सकती हैं।</li>
+          <li>Intrapersonal = self-communication।</li>
+          <li>Mass communication audience large, heterogeneous और dispersed होती है।</li>
+          <li>Agenda-setting issue salience से संबंधित है।</li>
+          <li>Uses and gratifications audience को active मानती है।</li>
+          <li>Cultivation long-term media exposure से संबंधित है।</li>
+          <li>Two-step flow में opinion leaders महत्त्वपूर्ण हैं।</li>
+          <li>Semantic barriers meaning और language से संबंधित हैं।</li>
+          <li>An effective classroom feedback-rich और psychologically safe होती है।</li>
+          <li>Groupthink consensus pressure के कारण critical thinking घटाता है।</li>
+          <li>Open digital media copyright, accuracy और ethics से मुक्त नहीं है।</li>
+        </ul>
+      </section>
+
+      <section id="s25" class="topic-section">
+        <div class="sec-head"><span class="sec-num">25</span><h2>Verified Previous Year Questions</h2></div>
+
+        <div class="pyq-tag">PYQ 1: UGC NET, 24 June 2019, Shift 2</div>
+        <p><b>Question:</b> निम्न में कौन essential non-verbal communication को दर्शाता है?</p>
+        <p>A. Question paper पर written instructions &nbsp; B. Learner का online class attend करना &nbsp; C. Individual द्वारा follow किया गया dress code &nbsp; D. Yoga instructor का pupils को poses सिखाना</p>
+        <div class="answer-box">Answer: C. Dress code</div>
+        <p class="explain">Dress और appearance wordless meanings communicate करते हैं। Written instructions verbal-written communication हैं। Yoga teaching में verbal तथा demonstrative cues दोनों हो सकते हैं।</p>
+
+        <div class="pyq-tag">PYQ 2: UGC NET, 4 December 2019, Shift 1</div>
+        <p><b>Question:</b> Effective classroom teaching में कौन-से modes उपयोगी हैं? (A) Top-down (B) Iconic (C) Associational (D) Dissociational (E) Symbolic (F) Abstract</p>
+        <p>A. A, B और F &nbsp; B. C, E और F &nbsp; C. B, C और E &nbsp; D. A, C और D</p>
+        <div class="answer-box">Answer: C. Iconic, Associational and Symbolic</div>
+        <p class="explain">Iconic visuals, associational prior knowledge connection और symbolic representation learning को support करते हैं। Dissociational mode teacher–learner connection को कमजोर करता है।</p>
+
+        <div class="pyq-tag">PYQ 3: UGC NET, 25 November 2021, Shift 2</div>
+        <p><b>Question:</b> Non-verbal communication किनका उपयोग करती है? (A) Behaviour to generate meanings (B) Emotional meanings (C) Non-clear system of rules (D) Verbal finesse (E) Clarity in abstraction</p>
+        <p>A. A, B और C only &nbsp; B. A, B और E only &nbsp; C. B, C और D only &nbsp; D. C, D और E only</p>
+        <div class="answer-box">Answer: A. A, B और C only</div>
+        <p class="explain">Non-verbal communication behaviour और emotional cues से contextual meaning उत्पन्न करती है। इसके rules verbal grammar की तरह fully explicit नहीं होते।</p>
+
+        <div class="pyq-tag">PYQ 4: UGC NET, 24 December 2021, Shift 1</div>
+        <p><b>Question:</b> Non-verbal communication के means कौन-से हैं? (A) Spoken language (B) Time language (C) Sign language (D) Space language (E) Written language</p>
+        <p>A. A, B और C &nbsp; B. B, C और D &nbsp; C. D, C और E &nbsp; D. A, D और E</p>
+        <div class="answer-box">Answer: B. Time, Sign and Space Language</div>
+        <p class="explain">Time language chronemics और space language proxemics से संबंधित है। Spoken और written language verbal categories हैं।</p>
+
+        <div class="pyq-tag">PYQ 5: UGC NET, 26 December 2021, Shift 1</div>
+        <p><b>Question:</b> Intercultural communication में कौन-से factors important हैं? (A) Valuelessness (B) Absence of respect (C) Power distance (D) Individualism (E) Gender roles</p>
+        <p>A. A, B और C only &nbsp; B. B, C और D only &nbsp; C. C, D और E only &nbsp; D. A, B और E only</p>
+        <div class="answer-box">Answer: C. Power Distance, Individualism and Gender Roles</div>
+        <p class="explain">ये cultural value dimensions communication expectations और behaviour को प्रभावित करते हैं। Respect का absence effective intercultural principle नहीं है।</p>
+
+        <div class="pyq-tag">PYQ 6: UGC NET, 1 October 2022, Shift 2</div>
+        <p><b>Question:</b> Non-verbal communication के traits कौन-से हैं? (A) इसका meaning limited होता है। (B) इसका कोई substitution नहीं होता। (C) यह contextual meaning convey कर सकती है। (D) यह receivers को influence कर सकती है। (E) यह personal relationships को affect कर सकती है।</p>
+        <p>A. A, B और C only &nbsp; B. B, C और D only &nbsp; C. C, D और E only &nbsp; D. A, D और E only</p>
+        <div class="answer-box">Answer: C. C, D और E only</div>
+        <p class="explain">Non-verbal cues contextual meaning, influence और relational messages communicate करती हैं। इनके meanings केवल limited नहीं होते।</p>
+
+        <div class="pyq-tag">PYQ 7: UGC NET, 14 March 2023, Shift 1</div>
+        <p><b>Question:</b> Semantic barriers कौन-से हैं? (A) Functional specialisation (B) Organisational policy (C) Faulty translation (D) Technical language (E) Unqualified assumptions</p>
+        <p>A. A, B और C only &nbsp; B. C, D और E only &nbsp; C. B, C और D only &nbsp; D. B, D और E only</p>
+        <div class="answer-box">Answer: B. C, D और E only</div>
+        <p class="explain">Faulty translation, jargon और unsupported assumptions meaning की interpretation बिगाड़ते हैं। Functional specialisation और organisational policy organisational barriers हो सकते हैं।</p>
+
+        <div class="pyq-tag">PYQ 8: UGC NET, 13 March 2023, Shift 2</div>
+        <p><b>Question:</b> Lasswellian model of mass communication media की किस theory का foundation माना जाता है?</p>
+        <p>A. Causal theory &nbsp; B. Effects theory &nbsp; C. Ethical studies &nbsp; D. Culture analysis</p>
+        <div class="answer-box">Answer: B. Effects Theory</div>
+        <p class="explain">Lasswell का "with what effect?" component media message के audience पर impact को analyse करता है।</p>
+
+        <div class="pyq-tag">PYQ 9: UGC NET, 2 January 2026, Shift 2</div>
+        <p><b>Question:</b> Communication में time के effect का study क्या कहलाता है?</p>
+        <p>A. Chronemics &nbsp; B. Polychronic &nbsp; C. Monochronic &nbsp; D. Haptics</p>
+        <div class="answer-box">Answer: A. Chronemics</div>
+        <p class="explain">Chronemics time के communicative use का broader study है। Monochronic और polychronic time orientations हैं; haptics touch है।</p>
+
+        <div class="pyq-tag">PYQ 10: UGC NET, 7 January 2026, Shift 1</div>
+        <p><b>Question:</b> कौन-सी theory यह मानती है कि mass media के dominant symbols और messages को लगातार ग्रहण करने से audience की social reality perception धीरे-धीरे प्रभावित होती है?</p>
+        <p>A. Agenda-setting — McCombs and Shaw &nbsp; B. Cultivation theory — George Gerbner &nbsp; C. Uses and gratifications — Katz &nbsp; D. Soviet Communist theory — Wilbur Schramm</p>
+        <div class="answer-box">Answer: B. Cultivation Theory — George Gerbner</div>
+        <p class="explain">Cultivation theory mass media, विशेषकर long-term television exposure, के cumulative और subtle effects पर बल देती है।</p>
+      </section>
+
+      <section id="s26" class="topic-section">
+        <div class="sec-head"><span class="sec-num">26</span><h2>PYQ Trend Analysis</h2></div>
+        <table class="mini-table">
+          <tr><th>Tested Area</th><th>Common Pattern</th></tr>
+          <tr><td>Communication elements</td><td>Correct sequence/matching</td></tr>
+          <tr><td>Communication models</td><td>Thinker–model association</td></tr>
+          <tr><td>Non-verbal communication</td><td>Term–meaning matching</td></tr>
+          <tr><td>Semantic barriers</td><td>Multiple statements</td></tr>
+          <tr><td>Classroom communication</td><td>Appropriate mode/scenario</td></tr>
+          <tr><td>Intercultural communication</td><td>Cultural dimensions</td></tr>
+          <tr><td>Group communication</td><td>Network/group behaviour</td></tr>
+          <tr><td>Mass-media theories</td><td>Thinker–theory matching</td></tr>
+          <tr><td>Feedback/noise</td><td>Application-based</td></tr>
+          <tr><td>Digital media</td><td>Scenario/statement-based</td></tr>
+        </table>
+        <h3>Emerging Trend</h3>
+        <ul class="bullet-list">
+          <li>Direct definition से अधिक application-based questions</li>
+          <li>Kinesics–proxemics–haptics–chronemics matching</li>
+          <li>High-context बनाम low-context scenarios</li>
+          <li>Media theory और thinker association</li>
+          <li>Classroom communication climate</li>
+          <li>Semantic और psychological barriers में distinction</li>
+          <li>Social media, algorithms, misinformation और echo chambers</li>
+          <li>Assertion–Reason तथा multiple-correct combinations</li>
+        </ul>
+      </section>
+
+      <section id="s27" class="topic-section">
+        <div class="sec-head"><span class="sec-num">27</span><h2>December 2026 Expected MCQs</h2></div>
+
+        <div class="pyq-tag">Question 1</div>
+        <p>Teacher के verbal words supportive हैं, लेकिन उसका facial expression contempt दिखाता है। यह situation क्या दर्शाती है?</p>
+        <p>A. Semantic redundancy &nbsp; B. Verbal–non-verbal incongruence &nbsp; C. Horizontal communication &nbsp; D. Mechanical feedback</p>
+        <div class="answer-box">Answer: B</div>
+        <p class="explain">Spoken message और facial expression contradictory meanings communicate कर रहे हैं।</p>
+
+        <div class="pyq-tag">Question 2</div>
+        <p>Student technical term का अलग अर्थ समझता है। यह मुख्यतः कौन-सी barrier है?</p>
+        <p>A. Physical &nbsp; B. Semantic &nbsp; C. Physiological &nbsp; D. Mechanical</p>
+        <div class="answer-box">Answer: B. Semantic Barrier</div>
+        <p class="explain">शब्द के meaning और interpretation में difference semantic noise है।</p>
+
+        <div class="pyq-tag">Question 3</div>
+        <p>Research seminar में participants एक ही समय पर video platform पर interact करते हैं। यह है:</p>
+        <p>A. Asynchronous mass communication &nbsp; B. Synchronous mediated group communication &nbsp; C. Intrapersonal communication &nbsp; D. Grapevine communication</p>
+        <div class="answer-box">Answer: B</div>
+        <p class="explain">Communication live, technology-mediated और group-based है।</p>
+
+        <div class="pyq-tag">Question 4</div>
+        <p>कौन-सा pair incorrectly matched है?</p>
+        <p>A. Kinesics—Body movements &nbsp; B. Proxemics—Space &nbsp; C. Haptics—Touch &nbsp; D. Chronemics—Eye movements</p>
+        <div class="answer-box">Answer: D</div>
+        <p class="explain">Chronemics time; eye behaviour oculesics है।</p>
+
+        <div class="pyq-tag">Question 5</div>
+        <p>Media repeatedly किसी issue को prominent coverage देती है, जिससे public उस issue को important मानने लगती है। यह है:</p>
+        <p>A. Cultivation &nbsp; B. Agenda-setting &nbsp; C. Cognitive dissonance &nbsp; D. Spiral of silence</p>
+        <div class="answer-box">Answer: B</div>
+        <p class="explain">Agenda-setting issue salience को प्रभावित करती है।</p>
+
+        <div class="pyq-tag">Question 6</div>
+        <p>Individual minority opinion express नहीं करता क्योंकि उसे social isolation का fear है। यह है:</p>
+        <p>A. Two-step flow &nbsp; B. Diffusion of innovation &nbsp; C. Spiral of silence &nbsp; D. Gatekeeping</p>
+        <div class="answer-box">Answer: C</div>
+        <p class="explain">Fear of isolation से public silence spiral of silence का core है।</p>
+
+        <div class="pyq-tag">Question 7</div>
+        <p>Effective classroom feedback की best combination कौन-सी है?</p>
+        <p>A. General + delayed + punitive &nbsp; B. Specific + timely + respectful + actionable &nbsp; C. Public + personal + comparative &nbsp; D. Lengthy + technical + one-way</p>
+        <div class="answer-box">Answer: B</div>
+        <p class="explain">Effective feedback learner को error और improvement path दोनों बताती है।</p>
+
+        <div class="pyq-tag">Question 8 (Assertion–Reason)</div>
+        <p>Assertion: Non-verbal communication को culture से अलग करके interpret नहीं करना चाहिए। Reason: एक ही gesture का meaning विभिन्न cultures में अलग हो सकता है।</p>
+        <p>A. दोनों सही हैं और Reason सही explanation है। &nbsp; B. दोनों सही हैं, लेकिन Reason explanation नहीं है। &nbsp; C. Assertion सही, Reason गलत है। &nbsp; D. Assertion गलत, Reason सही है।</p>
+        <div class="answer-box">Answer: A</div>
+
+        <div class="pyq-tag">Question 9</div>
+        <p>Group के members harmony बनाए रखने के लिए alternative ideas critically evaluate नहीं करते। यह है:</p>
+        <p>A. Social facilitation &nbsp; B. Groupthink &nbsp; C. Semantic noise &nbsp; D. Gatekeeping</p>
+        <div class="answer-box">Answer: B. Groupthink</div>
+        <p class="explain">Consensus pressure critical evaluation और dissent को suppress कर देती है।</p>
+
+        <div class="pyq-tag">Question 10</div>
+        <p>कौन-सी theory audience को active मानती है और कहती है कि लोग अपनी needs पूरी करने के लिए media चुनते हैं?</p>
+        <p>A. Magic bullet theory &nbsp; B. Cultivation theory &nbsp; C. Uses and gratifications theory &nbsp; D. Spiral of silence</p>
+        <div class="answer-box">Answer: C</div>
+        <p class="explain">Uses and gratifications audience choice और needs पर बल देती है।</p>
+      </section>
+
+      <section id="s28" class="topic-section">
+        <div class="sec-head"><span class="sec-num">28</span><h2>One-Page Revision Table</h2></div>
+        <table class="mini-table">
+          <tr><th>Concept</th><th>Quick Recall</th></tr>
+          <tr><td>Communication</td><td>Sharing of meaning</td></tr>
+          <tr><td>Encoding</td><td>Idea को symbols में बदलना</td></tr>
+          <tr><td>Decoding</td><td>Symbols का meaning निकालना</td></tr>
+          <tr><td>Feedback</td><td>Receiver's response</td></tr>
+          <tr><td>Noise</td><td>Message में interference</td></tr>
+          <tr><td>Aristotle</td><td>Speaker–Speech–Audience</td></tr>
+          <tr><td>Lasswell</td><td>Who says what...with what effect</td></tr>
+          <tr><td>Shannon–Weaver</td><td>Mathematical model + noise</td></tr>
+          <tr><td>Berlo</td><td>SMCR</td></tr>
+          <tr><td>Osgood–Schramm</td><td>Circular model</td></tr>
+          <tr><td>Newcomb</td><td>ABX</td></tr>
+          <tr><td>Kinesics</td><td>Body movement</td></tr>
+          <tr><td>Oculesics</td><td>Eye behaviour</td></tr>
+          <tr><td>Proxemics</td><td>Space</td></tr>
+          <tr><td>Haptics</td><td>Touch</td></tr>
+          <tr><td>Chronemics</td><td>Time</td></tr>
+          <tr><td>Paralanguage</td><td>Voice qualities</td></tr>
+          <tr><td>High-context</td><td>Indirect + context-heavy</td></tr>
+          <tr><td>Low-context</td><td>Direct + explicit</td></tr>
+          <tr><td>Groupthink</td><td>Consensus suppresses criticism</td></tr>
+          <tr><td>Semantic barrier</td><td>Meaning/language problem</td></tr>
+          <tr><td>Agenda-setting</td><td>What to think about</td></tr>
+          <tr><td>Cultivation</td><td>Long-term media exposure</td></tr>
+          <tr><td>Two-step flow</td><td>Media → opinion leader → audience</td></tr>
+          <tr><td>Uses and gratifications</td><td>Active audience</td></tr>
+          <tr><td>Spiral of silence</td><td>Fear of isolation</td></tr>
+          <tr><td>Diffusion</td><td>Adoption of innovation</td></tr>
+        </table>
+        <div class="formula">Master Formula<br>Effective Communication = Clear Message + Appropriate Medium + Shared Context + Active Listening + Feedback − Noise</div>
+        <div class="trap"><span class="lbl">GS Net Academy Exam Approach</span>Concept → Model → Example → PYQ → Trap → Application</div>
+      </section>
+
+      <div class="enroll-cta">
+        <div>
+          <h3 class="h-display">Join the Paper-1 Batch</h3>
+          <p>Course fee FREE — ₹500 registration &amp; academic/logistics contribution. Classes daily at 6:30 PM.</p>
+        </div>
+        <a href="enroll.html" class="btn-gold">✓ JOIN BATCH @ ₹500</a>
+      </div>
+
+      <p class="footer-note">GS Net Academy · Research Aptitude · Unit 2 · Target December 2026 Exam</p>
+    </div>
+  </div>
+</main>
+
+<script>
+(function(){
+  var links = document.querySelectorAll('.nav-link');
+  var sections = document.querySelectorAll('.topic-section');
+
+  function onScroll(){
+    var y = window.scrollY + 90;
+    var current = sections[0] && sections[0].id;
+    sections.forEach(function(s){ if (s.offsetTop <= y) current = s.id; });
+    links.forEach(function(l, i){
+      var sec = sections[i];
+      l.classList.toggle('active', sec && sec.id === current);
+    });
+  }
+
+  document.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+
+  links.forEach(function(l, index){
+    l.addEventListener('click', function(e){
+      e.preventDefault();
+
+      // Link ke same position wala section uthao (dono list same order me hain)
+      var target = sections[index];
+
+      if(target){
+        var offset = 90;
+        var position = target.getBoundingClientRect().top + window.pageYOffset - offset;
+        window.scrollTo({ top: position, behavior: 'smooth' });
+
+        links.forEach(function(item){ item.classList.remove('active'); });
+        l.classList.add('active');
+
+        history.pushState(null, '', l.getAttribute('href'));
+      }
+
+      var box = document.getElementById('sidebar-toggle');
+      if (box) box.checked = false;
+    });
+  });
+})();
+</script>
+</body>
+</html>

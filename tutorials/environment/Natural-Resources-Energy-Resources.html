@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Natural Resources & Energy Resources – Full Notes | UGC NET Paper-1</title>
+  <meta name="description" content="Complete tutorial: Natural Resources & Energy Resources - Renewable & Non-renewable, Solar, Wind, Hydropower, Geothermal, Biomass, Nuclear, Forest Resources, Soil & Water Resources, Resource Conservation for UGC NET Paper-1 Environment.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; }
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background: #f8f5ee;
+      color: #101a3d;
+    }
+    .h-display { font-family: 'Poppins', sans-serif; font-weight: 800; letter-spacing: -0.01em; }
+    .container { max-width: 1360px; margin: 0 auto; padding: 0 20px; }
+
+    .hero {
+      background: #0b1330;
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+      padding: 28px 0 22px;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      right: -80px;
+      top: -100px;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(232,183,75,0.2), transparent 70%);
+    }
+    .hero-inner { position: relative; }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      padding: 6px 16px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+      color: #e8b74b;
+    }
+    .hero h1 {
+      font-size: clamp(28px, 4.2vw, 44px);
+      margin: 12px 0 6px;
+    }
+    .hero p {
+      color: rgba(255,255,255,0.78);
+      max-width: 680px;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 28px;
+      padding: 28px 0 50px;
+      align-items: start;
+    }
+    @media (max-width: 980px) {
+      .layout { grid-template-columns: 1fr; }
+    }
+
+    .sidebar {
+      position: sticky;
+      top: 16px;
+      max-height: calc(100vh - 40px);
+      overflow-y: auto;
+      background: #fff;
+      border: 1px solid rgba(16,26,61,0.08);
+      border-radius: 16px;
+      padding: 16px 12px;
+      box-shadow: 0 6px 24px rgba(16,26,61,0.05);
+    }
+    .sidebar::-webkit-scrollbar { width: 5px; }
+    .sidebar::-webkit-scrollbar-thumb { background: #dde2ef; border-radius: 8px; }
+    .sidebar-title {
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: #b9852a;
+      padding: 4px 10px 14px;
+    }
+    .nav-link {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 10px;
+      border-radius: 10px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #33406b;
+      line-height: 1.3;
+      transition: 0.1s;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .nav-link:hover { background: #f4f6fc; color: #0b1330; }
+    .nav-link.active {
+      background: #fdf6e7;
+      color: #0b1330;
+    }
+    .nav-num {
+      flex: none;
+      width: 22px;
+      height: 22px;
+      border-radius: 7px;
+      background: #e7eaf5;
+      color: #5b6690;
+      font-size: 11px;
+      font-weight: 800;
+      display: grid;
+      place-items: center;
+    }
+    .nav-link.active .nav-num {
+      background: #e8b74b;
+      color: #0b1330;
+    }
+
+    #sidebar-toggle { display: none; }
+    .mobile-bar { display: none; }
+    @media (max-width: 980px) {
+      .mobile-bar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: #fff;
+        border: 1px solid rgba(16,26,61,0.1);
+        border-radius: 12px;
+        padding: 12px 16px;
+        margin-bottom: 8px;
+        font-weight: 800;
+        font-size: 13.5px;
+        color: #0b1330;
+      }
+      .sidebar { display: none; position: static; max-height: none; }
+      #sidebar-toggle:checked ~ .layout .sidebar { display: block; }
+    }
+
+    .content { min-width: 0; }
+    .topic-card {
+      background: #fff;
+      border: 1px solid rgba(16,26,61,0.08);
+      border-radius: 16px;
+      padding: 20px 20px 16px;
+      margin-bottom: 18px;
+      scroll-margin-top: 20px;
+      display: block;
+    }
+    .topic-card.hidden { display: none; }
+    .sec-head {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+    .sec-num {
+      flex: none;
+      width: 34px;
+      height: 34px;
+      border-radius: 10px;
+      background: #0b1330;
+      color: #e8b74b;
+      font-weight: 800;
+      font-size: 14px;
+      display: grid;
+      place-items: center;
+    }
+    .sec-head h2 {
+      margin: 0;
+      font-size: 19px;
+      font-weight: 800;
+      color: #0b1330;
+    }
+    .topic-card p {
+      font-size: 14.5px;
+      line-height: 1.75;
+      color: #1a254a;
+      margin: 6px 0;
+    }
+    .bullet-list {
+      margin: 8px 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 5px;
+    }
+    .bullet-list li {
+      position: relative;
+      padding-left: 20px;
+      font-size: 14px;
+      line-height: 1.6;
+      color: #1a254a;
+    }
+    .bullet-list li::before {
+      content: "";
+      position: absolute;
+      left: 2px;
+      top: 9px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #d9a53a;
+    }
+    .formula-box {
+      background: #0b1330;
+      color: #fdeec2;
+      font-weight: 700;
+      font-size: 13.6px;
+      padding: 10px 16px;
+      border-radius: 10px;
+      margin: 10px 0;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 12px 0;
+      font-size: 13.6px;
+      display: block;
+      overflow-x: auto;
+    }
+    .data-table th, .data-table td {
+      border: 1px solid #e7eaf5;
+      padding: 8px 12px;
+      text-align: left;
+      color: #1a254a;
+      white-space: normal;
+    }
+    .data-table th {
+      background: #f4f6fc;
+      color: #0b1330;
+      font-weight: 800;
+    }
+    .pyq-tag {
+      display: inline-block;
+      background: #fdf6e7;
+      color: #b9852a;
+      font-weight: 800;
+      font-size: 12px;
+      padding: 4px 12px;
+      border-radius: 8px;
+      margin: 12px 0 6px;
+    }
+    .answer-box {
+      background: #eefaf2;
+      border: 1px solid #bfe8cc;
+      color: #1a7a4c;
+      font-weight: 700;
+      font-size: 13.6px;
+      padding: 6px 14px;
+      border-radius: 9px;
+      margin: 6px 0;
+    }
+    .explain {
+      background: #f4f6fc;
+      border-radius: 9px;
+      padding: 6px 14px;
+      font-size: 13.6px;
+      color: #1a254a;
+    }
+    .subtopic {
+      padding: 14px 0 6px;
+      border-top: 1px dashed #e7eaf5;
+    }
+    .subtopic:first-of-type { border-top: none; padding-top: 2px; }
+    .subhead {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 6px;
+    }
+    .sub-num {
+      flex: none;
+      width: 26px;
+      height: 26px;
+      border-radius: 8px;
+      background: #fdf6e7;
+      color: #b9852a;
+      font-weight: 800;
+      font-size: 12px;
+      display: grid;
+      place-items: center;
+    }
+    .subhead h3 {
+      margin: 0;
+      font-size: 15.5px;
+      font-weight: 800;
+      color: #0b1330;
+    }
+    .enroll-cta {
+      background: #0b1330;
+      color: #fff;
+      border-radius: 16px;
+      padding: 24px 24px;
+      margin-top: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+      overflow: hidden;
+    }
+    .enroll-cta::before {
+      content: "";
+      position: absolute;
+      right: -40px;
+      top: -40px;
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(232,183,75,0.2), transparent 70%);
+    }
+    .enroll-cta h3 { margin: 0 0 4px; font-size: 20px; }
+    .enroll-cta p { margin: 0; color: rgba(255,255,255,0.75); font-size: 13.5px; max-width: 480px; }
+    .btn-gold {
+      background: #e8b74b;
+      color: #0b1330;
+      font-weight: 800;
+      padding: 10px 22px;
+      border-radius: 10px;
+      font-size: 13.5px;
+      white-space: nowrap;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="container hero-inner">
+    <span class="eyebrow">★ UGC NET Paper-I · Environment</span>
+    <h1 class="h-display">Natural Resources & Energy Resources</h1>
+    <p>Complete tutorial: Renewable & Non-renewable Resources, Solar Energy, Wind Energy, Hydropower, Geothermal Energy, Biomass, Nuclear Energy, Forest Resources, Soil & Water Resources, Resource Conservation.</p>
+  </div>
+</section>
+
+<main class="container">
+  <input type="checkbox" id="sidebar-toggle">
+  <label for="sidebar-toggle" class="mobile-bar">
+    <span>📑 On this page</span>
+    <span>☰ Menu</span>
+  </label>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebarNav">
+      <p class="sidebar-title">On this page</p>
+      <nav>
+       <a href="/tutorials/people-development-and-environment/natural-resources-energy-resources/natural-resources-intro" class="nav-link active"><span class="nav-num">1</span>Natural Resources</a>
+        <a href="/tutorials/people-development-and-environment/natural-resources-energy-resources/renewable-nonrenewable" class="nav-link"><span class="nav-num">2</span>Renewable & Non-renewable</a>
+        <a href="/tutorials/people-development-and-environment/natural-resources-energy-resources/solar-energy" class="nav-link"><span class="nav-num">3</span>Solar Energy</a>
+        <a href="/tutorials/people-development-and-environment/natural-resources-energy-resources/wind-energy" class="nav-link"><span class="nav-num">4</span>Wind Energy</a>
+        <a href="/tutorials/people-development-and-environment/natural-resources-energy-resources/hydropower" class="nav-link"><span class="nav-num">5</span>Hydropower</a>
+        <a href="/tutorials/people-development-and-environment/natural-resources-energy-resources/geothermal-energy" class="nav-link"><span class="nav-num">6</span>Geothermal Energy</a>
+        <a href="/tutorials/people-development-and-environment/natural-resources-energy-resources/biomass-energy" class="nav-link"><span class="nav-num">7</span>Biomass Energy</a>
+        <a href="/tutorials/people-development-and-environment/natural-resources-energy-resources/nuclear-energy" class="nav-link"><span class="nav-num">8</span>Nuclear Energy</a>
+        <a href="/tutorials/people-development-and-environment/natural-resources-energy-resources/forest-resources" class="nav-link"><span class="nav-num">9</span>Forest Resources</a>
+        <a href="/tutorials/people-development-and-environment/natural-resources-energy-resources/soil-resources" class="nav-link"><span class="nav-num">10</span>Soil Resources</a>
+        <a href="/tutorials/people-development-and-environment/natural-resources-energy-resources/water-resources" class="nav-link"><span class="nav-num">11</span>Water Resources</a>
+        <a href="/tutorials/people-development-and-environment/natural-resources-energy-resources/resource-conservation" class="nav-link"><span class="nav-num">12</span>Resource Conservation</a>
+        <a href="/tutorials/people-development-and-environment/natural-resources-energy-resources/energy-comparison" class="nav-link"><span class="nav-num">13</span>Energy Comparison</a>
+        <a href="/tutorials/people-development-and-environment/natural-resources-energy-resources/exam-traps" class="nav-link"><span class="nav-num">14</span>Common Exam Traps</a>
+        <a href="/tutorials/people-development-and-environment/natural-resources-energy-resources/practice-questions" class="nav-link"><span class="nav-num">15</span>Practice Questions</a>
+        <a href="/tutorials/people-development-and-environment/natural-resources-energy-resources/one-page-revision" class="nav-link"><span class="nav-num">16</span>One-Page Revision</a>
+      </nav>
+    </aside>
+
+    <div class="content" id="contentArea">
+      <!-- ===== CARDS ===== -->
+      <div id="natural-resources-intro" class="topic-card"><div class="sec-head"><span class="sec-num">1</span><h2>Natural Resources — प्राकृतिक संसाधन</h2></div><p><strong>Natural Resources</strong> वे materials और substances हैं जो <strong>nature</strong> में naturally पाए जाते हैं और humans द्वारा <strong>use</strong> किए जाते हैं।</p><div class="formula-box">Natural Resources = Materials from Nature + Human Use</div><p><strong>Classification:</strong></p><ul class="bullet-list"><li><strong>Renewable — नवीकरणीय:</strong> Can be replenished naturally (solar, wind, water, biomass)</li><li><strong>Non-renewable — अनवीकरणीय:</strong> Finite, cannot be replenished (fossil fuels, minerals, nuclear)</li><li><strong>Biotic — जैविक:</strong> Living resources (forests, animals)</li><li><strong>Abiotic — अजैविक:</strong> Non-living resources (water, minerals, air)</li></ul></div>
+
+      <div id="renewable-nonrenewable" class="topic-card"><div class="sec-head"><span class="sec-num">2</span><h2>Renewable & Non-renewable Resources — नवीकरणीय एवं अनवीकरणीय संसाधन</h2></div><table class="data-table"><tr><th>Renewable</th><th>Non-renewable</th></tr><tr><td>Solar Energy</td><td>Coal</td></tr><tr><td>Wind Energy</td><td>Petroleum</td></tr><tr><td>Hydropower</td><td>Natural Gas</td></tr><tr><td>Geothermal Energy</td><td>Uranium (Nuclear)</td></tr><tr><td>Biomass</td><td>Minerals</td></tr><tr><td>Forests (sustainable use)</td><td>Groundwater (if overused)</td></tr></table><ul class="bullet-list"><li><strong>Renewable:</strong> Replenish naturally, sustainable, low environmental impact, but may have initial costs</li><li><strong>Non-renewable:</strong> Finite, extraction causes environmental damage, high pollution, high GHG emissions</li></ul></div>
+
+      <div id="solar-energy" class="topic-card"><div class="sec-head"><span class="sec-num">3</span><h2>Solar Energy — सौर ऊर्जा</h2></div><p><strong>Solar Energy</strong> sun से प्राप्त energy है — captured through <strong>solar panels (PV cells)</strong> या <strong>solar thermal</strong> systems.</p><ul class="bullet-list"><li><strong>Source:</strong> Sun</li><li><strong>Technology:</strong> Photovoltaic (PV) cells, Solar thermal collectors</li><li><strong>Advantages:</strong> Clean, abundant, renewable, low operating cost</li><li><strong>Limitations:</strong> Intermittent (depends on sunlight), requires storage, high initial cost</li><li><strong>Applications:</strong> Electricity generation, water heating, cooking, lighting</li></ul></div>
+
+      <div id="wind-energy" class="topic-card"><div class="sec-head"><span class="sec-num">4</span><h2>Wind Energy — पवन ऊर्जा</h2></div><p><strong>Wind Energy</strong> wind की kinetic energy को <strong>wind turbines</strong> के माध्यम से electricity में convert करती है।</p><ul class="bullet-list"><li><strong>Source:</strong> Wind</li><li><strong>Technology:</strong> Wind turbines (onshore, offshore)</li><li><strong>Advantages:</strong> Clean, renewable, low operating cost, no emissions</li><li><strong>Limitations:</strong> Intermittent (wind dependent), visual and noise impact, bird mortality</li><li><strong>Applications:</strong> Electricity generation, water pumping</li></ul></div>
+
+      <div id="hydropower" class="topic-card"><div class="sec-head"><span class="sec-num">5</span><h2>Hydropower — जल विद्युत</h2></div><p><strong>Hydropower</strong> flowing or falling water की energy को electricity में convert करती है — using <strong>dams</strong> or <strong>run-of-river</strong> systems.</p><ul class="bullet-list"><li><strong>Source:</strong> Flowing/falling water</li><li><strong>Technology:</strong> Hydroelectric dams, pumped storage</li><li><strong>Advantages:</strong> Reliable, renewable, low operating cost, flood control (dams)</li><li><strong>Limitations:</strong> Environmental impact (displacement, ecosystem disruption), high initial cost, sedimentation</li><li><strong>Applications:</strong> Electricity generation, irrigation</li></ul></div>
+
+      <div id="geothermal-energy" class="topic-card"><div class="sec-head"><span class="sec-num">6</span><h2>Geothermal Energy — भूतापीय ऊर्जा</h2></div><p><strong>Geothermal Energy</strong> Earth's interior से heat का उपयोग करती है — from <strong>geothermal reservoirs</strong>.</p><ul class="bullet-list"><li><strong>Source:</strong> Earth's internal heat</li><li><strong>Technology:</strong> Geothermal power plants, geothermal heat pumps</li><li><strong>Advantages:</strong> Reliable, constant (baseload), low emissions, small footprint</li><li><strong>Limitations:</strong> Location-specific (volcanic/geothermal areas), high initial cost, potential for induced seismicity</li><li><strong>Applications:</strong> Electricity generation, heating, cooling</li></ul></div>
+
+      <div id="biomass-energy" class="topic-card"><div class="sec-head"><span class="sec-num">7</span><h2>Biomass Energy — जैव-ईंधन/बायोमास</h2></div><p><strong>Biomass Energy</strong> organic matter (plants, agricultural waste, wood) से प्राप्त energy है — through <strong>combustion, gasification, or biogas</strong>.</p><ul class="bullet-list"><li><strong>Source:</strong> Plant material, agricultural residue, animal waste</li><li><strong>Technology:</strong> Combustion, anaerobic digestion (biogas), pyrolysis</li><li><strong>Advantages:</strong> Renewable, uses waste, carbon-neutral (if sustainable)</li><li><strong>Limitations:</strong> Can cause deforestation, air pollution, land use conflict</li><li><strong>Applications:</strong> Electricity generation, heating, cooking, biogas (methane)</li></ul></div>
+
+      <div id="nuclear-energy" class="topic-card"><div class="sec-head"><span class="sec-num">8</span><h2>Nuclear Energy — नाभिकीय ऊर्जा</h2></div><p><strong>Nuclear Energy</strong> atomic nuclei के <strong>fission</strong> (splitting) या <strong>fusion</strong> (combining) से release होने वाली energy है — used in nuclear power plants.</p><ul class="bullet-list"><li><strong>Source:</strong> Uranium, Plutonium (fission); Hydrogen (fusion)</li><li><strong>Technology:</strong> Nuclear fission reactors</li><li><strong>Advantages:</strong> High energy density, low GHG emissions, reliable (baseload)</li><li><strong>Limitations:</strong> Radioactive waste disposal, nuclear accidents (Chernobyl, Fukushima), high cost, non-renewable</li><li><strong>Applications:</strong> Electricity generation, medical isotopes, research</li></ul></div>
+
+      <div id="forest-resources" class="topic-card"><div class="sec-head"><span class="sec-num">9</span><h2>Forest Resources — वन संसाधन</h2></div><p><strong>Forest Resources</strong> forests से प्राप्त resources हैं — wood, timber, medicinal plants, wildlife, ecosystem services.</p><ul class="bullet-list"><li><strong>Types:</strong> Tropical, Temperate, Boreal (Taiga)</li><li><strong>Uses:</strong> Timber, fuelwood, paper, medicines, fodder, habitat</li><li><strong>Ecosystem Services:</strong> Carbon sequestration, oxygen production, water cycle regulation, soil conservation, biodiversity</li><li><strong>Threats:</strong> Deforestation, degradation, forest fires, climate change</li><li><strong>Conservation:</strong> Afforestation, reforestation, sustainable forestry, protected areas</li></ul></div>
+
+      <div id="soil-resources" class="topic-card"><div class="sec-head"><span class="sec-num">10</span><h2>Soil Resources — मृदा संसाधन</h2></div><p><strong>Soil</strong> Earth's surface पर एक natural resource है — supports plant growth, filters water, and provides habitat.</p><ul class="bullet-list"><li><strong>Components:</strong> Minerals, organic matter, water, air, living organisms</li><li><strong>Types:</strong> Alluvial, Black, Red, Laterite, Desert, Mountain</li><li><strong>Importance:</strong> Food production, water filtration, nutrient cycling, biodiversity</li><li><strong>Threats:</strong> Soil erosion, degradation, desertification, pollution, salinisation</li><li><strong>Conservation:</strong> Contour ploughing, terracing, afforestation, organic farming, crop rotation</li></ul></div>
+
+      <div id="water-resources" class="topic-card"><div class="sec-head"><span class="sec-num">11</span><h2>Water Resources — जल संसाधन</h2></div><p><strong>Water Resources</strong> Earth's water is available in various forms — <strong>freshwater</strong> (rivers, lakes, groundwater) and <strong>saltwater</strong> (oceans).</p><ul class="bullet-list"><li><strong>Sources:</strong> Surface water (rivers, lakes), Groundwater (aquifers), Rainwater, Oceans (desalination)</li><li><strong>Importance:</strong> Drinking, irrigation, industry, sanitation, hydropower, ecosystem</li><li><strong>Threats:</strong> Overexploitation (groundwater depletion), pollution, climate change, water scarcity</li><li><strong>Conservation:</strong> Rainwater harvesting, drip irrigation, water recycling, watershed management</li></ul></div>
+
+      <div id="resource-conservation" class="topic-card"><div class="sec-head"><span class="sec-num">12</span><h2>Resource Conservation — संसाधन संरक्षण</h2></div><p><strong>Resource Conservation</strong> resources का <strong>wise and sustainable use</strong> है — to ensure their availability for future generations.</p><div class="formula-box">Resource Conservation = Sustainable Use + Reduce + Reuse + Recycle</div><p><strong>Principles:</strong></p><ul class="bullet-list"><li><strong>Reduce — कम करें:</strong> Minimise consumption</li><li><strong>Reuse — पुन:उपयोग करें:</strong> Use items multiple times</li><li><strong>Recycle — पुनर्चक्रण करें:</strong> Process waste into new products</li><li><strong>Renewable — नवीकरणीय:</strong> Use renewable resources where possible</li><li><strong>Protection — संरक्षण:</strong> Protect resources from degradation</li></ul><p><strong>Methods:</strong></p><ul class="bullet-list"><li>Energy conservation (efficiency, renewables)</li><li>Water conservation (rainwater harvesting, drip irrigation)</li><li>Soil conservation (terracing, afforestation)</li><li>Forest conservation (afforestation, protected areas)</li><li>Waste management (reduce, reuse, recycle)</li></ul></div>
+
+      <div id="energy-comparison" class="topic-card"><div class="sec-head"><span class="sec-num">13</span><h2>Energy Comparison — ऊर्जा तुलना</h2></div><table class="data-table"><tr><th>Energy Source</th><th>Type</th><th>Advantages</th><th>Limitations</th></tr><tr><td>Solar</td><td>Renewable</td><td>Clean, abundant</td><td>Intermittent, storage</td></tr><tr><td>Wind</td><td>Renewable</td><td>Clean, low cost</td><td>Intermittent, visual</td></tr><tr><td>Hydropower</td><td>Renewable</td><td>Reliable, low cost</td><td>Environmental impact</td></tr><tr><td>Geothermal</td><td>Renewable</td><td>Constant, reliable</td><td>Location-specific</td></tr><tr><td>Biomass</td><td>Renewable</td><td>Waste utilization</td><td>Air pollution</td></tr><tr><td>Nuclear</td><td>Non-renewable</td><td>High energy, low GHG</td><td>Waste, accidents</td></tr><tr><td>Fossil Fuels</td><td>Non-renewable</td><td>High energy density</td><td>Pollution, GHGs</td></tr></table></div>
+
+      <div id="exam-traps" class="topic-card"><div class="sec-head"><span class="sec-num">14</span><h2>Common Exam Traps — सामान्य परीक्षा जाल</h2></div><ul class="bullet-list"><li><strong>Trap 1:</strong> Nuclear energy is renewable → ❌ Nuclear energy is non-renewable (uranium is finite).</li><li><strong>Trap 2:</strong> Biomass is carbon-neutral → ✅ Only if sustainably managed; otherwise, it can release CO₂.</li><li><strong>Trap 3:</strong> Hydropower has no environmental impact → ❌ Dams cause displacement, ecosystem disruption.</li><li><strong>Trap 4:</strong> Geothermal energy is available everywhere → ❌ It is location-specific (volcanic/geothermal areas).</li><li><strong>Trap 5:</strong> Solar energy is available 24/7 → ❌ Solar is intermittent (daytime only).</li><li><strong>Trap 6:</strong> Wind energy produces no waste → ❌ Turbines have waste (blades, etc.), and visual/noise impact.</li><li><strong>Trap 7:</strong> All forests are renewable → ❌ Forests can be non-renewable if overexploited faster than regeneration.</li></ul></div>
+
+      <div id="practice-questions" class="topic-card"><div class="sec-head"><span class="sec-num">15</span><h2>Practice Questions — अभ्यास प्रश्न</h2></div>
+      <div class="pyq-tag">Question 1</div>
+      <p>Which of the following is a non-renewable energy source?</p>
+      <ul class="bullet-list"><li>A. Solar</li><li>B. Wind</li><li>C. Nuclear</li><li>D. Geothermal</li></ul>
+      <div class="answer-box">Answer: C. Nuclear</div>
+      <p class="explain">Explanation: Nuclear energy (uranium) is non-renewable. Solar, wind, and geothermal are renewable.</p>
+
+      <div class="pyq-tag">Question 2</div>
+      <p>Which renewable energy source is considered location-specific?</p>
+      <ul class="bullet-list"><li>A. Solar</li><li>B. Wind</li><li>C. Geothermal</li><li>D. Biomass</li></ul>
+      <div class="answer-box">Answer: C. Geothermal</div>
+      <p class="explain">Explanation: Geothermal energy is location-specific (requires volcanic/geothermal areas).</p>
+
+      <div class="pyq-tag">Question 3</div>
+      <p>Which of the following is a method of soil conservation?</p>
+      <ul class="bullet-list"><li>A. Deforestation</li><li>B. Overgrazing</li><li>C. Contour ploughing</li><li>D. Monoculture</li></ul>
+      <div class="answer-box">Answer: C. Contour ploughing</div>
+      <p class="explain">Explanation: Contour ploughing (ploughing along contour lines) helps prevent soil erosion. Deforestation, overgrazing, and monoculture can cause soil degradation.</p>
+
+      <div class="pyq-tag">Question 4</div>
+      <p>Biomass energy is derived from:</p>
+      <ul class="bullet-list"><li>A. Sunlight</li><li>B. Organic matter</li><li>C. Wind</li><li>D. Water</li></ul>
+      <div class="answer-box">Answer: B. Organic matter</div>
+      <p class="explain">Explanation: Biomass energy comes from organic matter (plants, agricultural waste, animal waste).</p>
+
+      <div class="pyq-tag">Question 5</div>
+      <p>Which of the following is a limitation of hydropower?</p>
+      <ul class="bullet-list"><li>A. Low energy density</li><li>B. Intermittent supply</li><li>C. Environmental impact (dams)</li><li>D. High GHG emissions</li></ul>
+      <div class="answer-box">Answer: C. Environmental impact (dams)</div>
+      <p class="explain">Explanation: Dams cause environmental impacts (displacement, ecosystem disruption). Hydropower is reliable and has low GHG emissions.</p>
+
+      <div class="pyq-tag">Question 6</div>
+      <p>Which principle is NOT part of resource conservation?</p>
+      <ul class="bullet-list"><li>A. Reduce</li><li>B. Reuse</li><li>C. Recycle</li><li>D. Overexploit</li></ul>
+      <div class="answer-box">Answer: D. Overexploit</div>
+      <p class="explain">Explanation: Resource conservation promotes reduce, reuse, and recycle. Overexploitation is the opposite of conservation.</p></div>
+
+      <div id="one-page-revision" class="topic-card"><div class="sec-head"><span class="sec-num">16</span><h2>One-Page Revision — एक पेज में पुनरावृत्ति</h2></div>
+      <div class="formula-box">Renewable = Replenishes | Non-renewable = Finite</div>
+
+      <p><strong>Renewable Energy:</strong></p>
+      <ul class="bullet-list"><li>Solar, Wind, Hydropower, Geothermal, Biomass</li></ul>
+
+      <p><strong>Non-renewable Energy:</strong></p>
+      <ul class="bullet-list"><li>Nuclear (Uranium), Fossil fuels (Coal, Oil, Natural Gas)</li></ul>
+
+      <p><strong>Natural Resources:</strong></p>
+      <ul class="bullet-list"><li>Forest, Soil, Water, Minerals, Air</li></ul>
+
+      <p><strong>Resource Conservation:</strong></p>
+      <ul class="bullet-list"><li>Reduce, Reuse, Recycle (3R's)</li>
+      <li>Sustainable use, protection, regeneration</li></ul>
+
+      <p><strong>Soil Conservation:</strong></p>
+      <ul class="bullet-list"><li>Contour ploughing, terracing, afforestation, crop rotation</li></ul>
+
+      <p><strong>Water Conservation:</strong></p>
+      <ul class="bullet-list"><li>Rainwater harvesting, drip irrigation, watershed management</li></ul>
+
+      <p><strong>Energy Comparison:</strong></p>
+      <ul class="bullet-list"><li>Solar/Wind: Intermittent</li>
+      <li>Hydropower/Geothermal: Reliable</li>
+      <li>Nuclear: High energy, waste</li>
+      <li>Biomass: Renewable but can cause pollution</li></ul>
+
+      <p><strong>Exam Formula:</strong></p>
+      <div class="formula-box">Resource = Type + Use + Conservation + Limitation</div>
+      <p><em>UGC NET में Natural Resources & Energy Resources के questions renewable/non-renewable classification, energy sources, and conservation methods पर based होते हैं।</em></p></div>
+
+      <div class="enroll-cta"><div><h3 class="h-display">Join the Paper-1 Batch</h3><p>Course fee FREE — ₹500 registration & academic/logistics contribution. Classes daily at 6:30 PM.</p></div><a href="#" class="btn-gold">✓ JOIN BATCH @ ₹500</a></div>
+    </div>
+  </div>
+</main>
+
+<script>
+  (function() {
+
+    const BASE_PATH =
+      "/tutorials/people-development-and-environment/natural-resources-energy-resources";
+
+    const links =
+      document.querySelectorAll(".nav-link");
+
+    const cards =
+      document.querySelectorAll(".topic-card");
+
+    const content =
+      document.getElementById("contentArea");
+
+    const sidebarToggle =
+      document.getElementById("sidebar-toggle");
+
+
+    // Get topic slug from current URL
+    function getSlugFromPath() {
+
+      const path =
+        window.location.pathname
+          .replace(/\/+$/, "");
+
+      if (
+        path.startsWith(BASE_PATH + "/")
+      ) {
+
+        return path
+          .substring(
+            (BASE_PATH + "/").length
+          )
+          .split("/")[0];
+
+      }
+
+      return null;
+    }
+
+
+    // Update browser URL
+    function updateUrl(
+      slug,
+      replace = false
+    ) {
+
+      const newPath =
+        BASE_PATH + "/" + slug;
+
+      if (
+        window.location.pathname !== newPath
+      ) {
+
+        if (replace) {
+
+          history.replaceState(
+            null,
+            "",
+            newPath
+          );
+
+        } else {
+
+          history.pushState(
+            null,
+            "",
+            newPath
+          );
+
+        }
+
+      }
+
+    }
+
+
+    // Update active sidebar link
+    function updateActiveLink(slug) {
+
+      links.forEach(function(link) {
+
+        const href =
+          link.getAttribute("href");
+
+        if (!href) return;
+
+
+        const linkSlug =
+          href
+            .split("/")
+            .filter(Boolean)
+            .pop();
+
+
+        link.classList.toggle(
+          "active",
+          linkSlug === slug
+        );
+
+      });
+
+    }
+
+
+    // Show selected topic card
+    function showCard(
+      slug,
+      updateHistory = true
+    ) {
+
+      cards.forEach(function(card) {
+
+        card.classList.add("hidden");
+
+      });
+
+
+      const target =
+        document.getElementById(slug);
+
+
+      if (!target) {
+
+        const first =
+          cards[0];
+
+        if (first) {
+
+          first.classList.remove("hidden");
+
+          const firstSlug =
+            first.id;
+
+          updateActiveLink(
+            firstSlug
+          );
+
+          updateUrl(
+            firstSlug,
+            true
+          );
+
+        }
+
+        return;
+      }
+
+
+      target.classList.remove("hidden");
+
+      updateActiveLink(slug);
+
+
+      if (updateHistory) {
+
+        updateUrl(
+          slug,
+          false
+        );
+
+      }
+
+
+      if (sidebarToggle) {
+
+        sidebarToggle.checked = false;
+
+      }
+
+
+      if (content) {
+
+        const top =
+          content.getBoundingClientRect().top +
+          window.pageYOffset -
+          10;
+
+        window.scrollTo({
+
+          top: top,
+
+          behavior: "smooth"
+
+        });
+
+      }
+
+    }
+
+
+    // Sidebar link click
+    links.forEach(function(link) {
+
+      link.addEventListener(
+        "click",
+        function(e) {
+
+          e.preventDefault();
+
+
+          const href =
+            this.getAttribute("href");
+
+          if (!href) return;
+
+
+          const slug =
+            href
+              .split("/")
+              .filter(Boolean)
+              .pop();
+
+
+          if (!slug) return;
+
+
+          showCard(
+            slug,
+            true
+          );
+
+        }
+      );
+
+    });
+
+
+    // Initial page load
+    function initFromPath() {
+
+      let slug =
+        getSlugFromPath();
+
+
+      if (
+        !slug ||
+        !document.getElementById(slug)
+      ) {
+
+        slug =
+          cards[0]?.id ||
+          "natural-resources-intro";
+
+      }
+
+
+      showCard(
+        slug,
+        false
+      );
+
+
+      updateUrl(
+        slug,
+        true
+      );
+
+    }
+
+
+    initFromPath();
+
+
+    // Browser Back / Forward
+    window.addEventListener(
+      "popstate",
+      function() {
+
+        const slug =
+          getSlugFromPath();
+
+
+        if (
+          slug &&
+          document.getElementById(slug)
+        ) {
+
+          showCard(
+            slug,
+            false
+          );
+
+        } else {
+
+          const firstSlug =
+            cards[0]?.id ||
+            "natural-resources-intro";
+
+          showCard(
+            firstSlug,
+            false
+          );
+
+        }
+
+      }
+    );
+
+
+  })();
+</script>
+</body>
+</html>

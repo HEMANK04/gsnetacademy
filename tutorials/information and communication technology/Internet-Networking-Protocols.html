@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Internet, Networking & Protocols – Full Notes | UGC NET Paper-1</title>
+  <meta name="description" content="Complete tutorial: Internet, networking, protocols - TCP/IP, HTTP, HTTPS, FTP, SMTP, POP3, IMAP, DNS, DHCP, UDP, LAN, WAN, MAN, PAN, intranet, extranet, OSI model, IP addressing, subnetting for UGC NET Paper-1 ICT.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; }
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background: #f8f5ee;
+      color: #101a3d;
+    }
+    .h-display { font-family: 'Poppins', sans-serif; font-weight: 800; letter-spacing: -0.01em; }
+    .container { max-width: 1360px; margin: 0 auto; padding: 0 20px; }
+
+    .hero {
+      background: #0b1330;
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+      padding: 28px 0 22px;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      right: -80px;
+      top: -100px;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(232,183,75,0.2), transparent 70%);
+    }
+    .hero-inner { position: relative; }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      padding: 6px 16px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+      color: #e8b74b;
+    }
+    .hero h1 {
+      font-size: clamp(28px, 4.2vw, 44px);
+      margin: 12px 0 6px;
+    }
+    .hero p {
+      color: rgba(255,255,255,0.78);
+      max-width: 680px;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 28px;
+      padding: 28px 0 50px;
+      align-items: start;
+    }
+    @media (max-width: 980px) {
+      .layout { grid-template-columns: 1fr; }
+    }
+
+    .sidebar {
+      position: sticky;
+      top: 16px;
+      max-height: calc(100vh - 40px);
+      overflow-y: auto;
+      background: #fff;
+      border: 1px solid rgba(16,26,61,0.08);
+      border-radius: 16px;
+      padding: 16px 12px;
+      box-shadow: 0 6px 24px rgba(16,26,61,0.05);
+    }
+    .sidebar::-webkit-scrollbar { width: 5px; }
+    .sidebar::-webkit-scrollbar-thumb { background: #dde2ef; border-radius: 8px; }
+    .sidebar-title {
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: #b9852a;
+      padding: 4px 10px 14px;
+    }
+    .nav-link {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 10px;
+      border-radius: 10px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #33406b;
+      line-height: 1.3;
+      transition: 0.1s;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .nav-link:hover { background: #f4f6fc; color: #0b1330; }
+    .nav-link.active {
+      background: #fdf6e7;
+      color: #0b1330;
+    }
+    .nav-num {
+      flex: none;
+      width: 22px;
+      height: 22px;
+      border-radius: 7px;
+      background: #e7eaf5;
+      color: #5b6690;
+      font-size: 11px;
+      font-weight: 800;
+      display: grid;
+      place-items: center;
+    }
+    .nav-link.active .nav-num {
+      background: #e8b74b;
+      color: #0b1330;
+    }
+
+    #sidebar-toggle { display: none; }
+    .mobile-bar { display: none; }
+    @media (max-width: 980px) {
+      .mobile-bar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: #fff;
+        border: 1px solid rgba(16,26,61,0.1);
+        border-radius: 12px;
+        padding: 12px 16px;
+        margin-bottom: 8px;
+        font-weight: 800;
+        font-size: 13.5px;
+        color: #0b1330;
+      }
+      .sidebar { display: none; position: static; max-height: none; }
+      #sidebar-toggle:checked ~ .layout .sidebar { display: block; }
+    }
+
+    .content { min-width: 0; }
+    .topic-card {
+      background: #fff;
+      border: 1px solid rgba(16,26,61,0.08);
+      border-radius: 16px;
+      padding: 20px 20px 16px;
+      margin-bottom: 18px;
+      scroll-margin-top: 20px;
+      display: block;
+    }
+    .topic-card.hidden { display: none; }
+    .sec-head {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+    .sec-num {
+      flex: none;
+      width: 34px;
+      height: 34px;
+      border-radius: 10px;
+      background: #0b1330;
+      color: #e8b74b;
+      font-weight: 800;
+      font-size: 14px;
+      display: grid;
+      place-items: center;
+    }
+    .sec-head h2 {
+      margin: 0;
+      font-size: 19px;
+      font-weight: 800;
+      color: #0b1330;
+    }
+    .topic-card p {
+      font-size: 14.5px;
+      line-height: 1.75;
+      color: #1a254a;
+      margin: 6px 0;
+    }
+    .bullet-list {
+      margin: 8px 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 5px;
+    }
+    .bullet-list li {
+      position: relative;
+      padding-left: 20px;
+      font-size: 14px;
+      line-height: 1.6;
+      color: #1a254a;
+    }
+    .bullet-list li::before {
+      content: "";
+      position: absolute;
+      left: 2px;
+      top: 9px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #d9a53a;
+    }
+    .formula-box {
+      background: #0b1330;
+      color: #fdeec2;
+      font-weight: 700;
+      font-size: 13.6px;
+      padding: 10px 16px;
+      border-radius: 10px;
+      margin: 10px 0;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 12px 0;
+      font-size: 13.6px;
+      display: block;
+      overflow-x: auto;
+    }
+    .data-table th, .data-table td {
+      border: 1px solid #e7eaf5;
+      padding: 8px 12px;
+      text-align: left;
+      color: #1a254a;
+      white-space: normal;
+    }
+    .data-table th {
+      background: #f4f6fc;
+      color: #0b1330;
+      font-weight: 800;
+    }
+    .pyq-tag {
+      display: inline-block;
+      background: #fdf6e7;
+      color: #b9852a;
+      font-weight: 800;
+      font-size: 12px;
+      padding: 4px 12px;
+      border-radius: 8px;
+      margin: 12px 0 6px;
+    }
+    .answer-box {
+      background: #eefaf2;
+      border: 1px solid #bfe8cc;
+      color: #1a7a4c;
+      font-weight: 700;
+      font-size: 13.6px;
+      padding: 6px 14px;
+      border-radius: 9px;
+      margin: 6px 0;
+    }
+    .explain {
+      background: #f4f6fc;
+      border-radius: 9px;
+      padding: 6px 14px;
+      font-size: 13.6px;
+      color: #1a254a;
+    }
+    .subtopic {
+      padding: 14px 0 6px;
+      border-top: 1px dashed #e7eaf5;
+    }
+    .subtopic:first-of-type { border-top: none; padding-top: 2px; }
+    .subhead {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 6px;
+    }
+    .sub-num {
+      flex: none;
+      width: 26px;
+      height: 26px;
+      border-radius: 8px;
+      background: #fdf6e7;
+      color: #b9852a;
+      font-weight: 800;
+      font-size: 12px;
+      display: grid;
+      place-items: center;
+    }
+    .subhead h3 {
+      margin: 0;
+      font-size: 15.5px;
+      font-weight: 800;
+      color: #0b1330;
+    }
+    .enroll-cta {
+      background: #0b1330;
+      color: #fff;
+      border-radius: 16px;
+      padding: 24px 24px;
+      margin-top: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+      overflow: hidden;
+    }
+    .enroll-cta::before {
+      content: "";
+      position: absolute;
+      right: -40px;
+      top: -40px;
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(232,183,75,0.2), transparent 70%);
+    }
+    .enroll-cta h3 { margin: 0 0 4px; font-size: 20px; }
+    .enroll-cta p { margin: 0; color: rgba(255,255,255,0.75); font-size: 13.5px; max-width: 480px; }
+    .btn-gold {
+      background: #e8b74b;
+      color: #0b1330;
+      font-weight: 800;
+      padding: 10px 22px;
+      border-radius: 10px;
+      font-size: 13.5px;
+      white-space: nowrap;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="container hero-inner">
+    <span class="eyebrow">★ UGC NET Paper-I · ICT</span>
+    <h1 class="h-display">Internet, Networking & Protocols</h1>
+    <p>Complete tutorial: Internet, networking, protocols - TCP/IP, HTTP, HTTPS, FTP, SMTP, POP3, IMAP, DNS, DHCP, UDP, LAN, WAN, MAN, PAN, intranet, extranet, OSI model, IP addressing & more.</p>
+  </div>
+</section>
+
+<main class="container">
+  <input type="checkbox" id="sidebar-toggle">
+  <label for="sidebar-toggle" class="mobile-bar">
+    <span>📑 On this page</span>
+    <span>☰ Menu</span>
+  </label>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebarNav">
+      <p class="sidebar-title">On this page</p>
+      <nav>
+       <a href="/tutorials/information-and-communication-technology/internet-networking-protocols/internet-intro" class="nav-link active"><span class="nav-num">1</span>Internet</a>
+        <a href="/tutorials/information-and-communication-technology/internet-networking-protocols/intranet-extranet" class="nav-link"><span class="nav-num">2</span>Intranet & Extranet</a>
+        <a href="/tutorials/information-and-communication-technology/internet-networking-protocols/internet-vs-www" class="nav-link"><span class="nav-num">3</span>Internet vs WWW</a>
+        <a href="/tutorials/information-and-communication-technology/internet-networking-protocols/networking-basics" class="nav-link"><span class="nav-num">4</span>Networking Basics</a>
+        <a href="/tutorials/information-and-communication-technology/internet-networking-protocols/network-types" class="nav-link"><span class="nav-num">5</span>Types of Networks</a>
+        <a href="/tutorials/information-and-communication-technology/internet-networking-protocols/network-topologies" class="nav-link"><span class="nav-num">6</span>Network Topologies</a>
+        <a href="/tutorials/information-and-communication-technology/internet-networking-protocols/network-devices" class="nav-link"><span class="nav-num">7</span>Network Devices</a>
+        <a href="/tutorials/information-and-communication-technology/internet-networking-protocols/osi-model" class="nav-link"><span class="nav-num">8</span>OSI Model</a>
+        <a href="/tutorials/information-and-communication-technology/internet-networking-protocols/tcp-ip-model" class="nav-link"><span class="nav-num">9</span>TCP/IP Model</a>
+        <a href="/tutorials/information-and-communication-technology/internet-networking-protocols/ip-addressing" class="nav-link"><span class="nav-num">10</span>IP Addressing</a>
+        <a href="/tutorials/information-and-communication-technology/internet-networking-protocols/protocols-intro" class="nav-link"><span class="nav-num">11</span>Protocols</a>
+        <a href="/tutorials/information-and-communication-technology/internet-networking-protocols/http-https" class="nav-link"><span class="nav-num">12</span>HTTP & HTTPS</a>
+        <a href="/tutorials/information-and-communication-technology/internet-networking-protocols/ftp" class="nav-link"><span class="nav-num">13</span>FTP & SFTP</a>
+        <a href="/tutorials/information-and-communication-technology/internet-networking-protocols/email-protocols" class="nav-link"><span class="nav-num">14</span>SMTP, POP3 & IMAP</a>
+        <a href="/tutorials/information-and-communication-technology/internet-networking-protocols/dns" class="nav-link"><span class="nav-num">15</span>DNS</a>
+        <a href="/tutorials/information-and-communication-technology/internet-networking-protocols/dhcp" class="nav-link"><span class="nav-num">16</span>DHCP</a>
+        <a href="/tutorials/information-and-communication-technology/internet-networking-protocols/tcp-udp" class="nav-link"><span class="nav-num">17</span>TCP & UDP</a>
+        <a href="/tutorials/information-and-communication-technology/internet-networking-protocols/protocol-functions" class="nav-link"><span class="nav-num">18</span>Protocols Summary</a>
+        <a href="/tutorials/information-and-communication-technology/internet-networking-protocols/exam-traps" class="nav-link"><span class="nav-num">19</span>Common Exam Traps</a>
+        <a href="/tutorials/information-and-communication-technology/internet-networking-protocols/practice-questions" class="nav-link"><span class="nav-num">20</span>Practice Questions</a>
+        <a href="/tutorials/information-and-communication-technology/internet-networking-protocols/one-page-revision" class="nav-link"><span class="nav-num">21</span>One-Page Revision</a>
+      </nav>
+    </aside>
+
+    <div class="content" id="contentArea">
+      <!-- ===== CARDS ===== -->
+      <div id="internet-intro" class="topic-card"><div class="sec-head"><span class="sec-num">1</span><h2>Internet — इंटरनेट</h2></div><p><strong>Internet</strong> एक global public network of interconnected networks है जो <strong>TCP/IP protocol</strong> का उपयोग करता है।</p><div class="formula-box">Internet = Network of Networks</div><p><strong>Key Characteristics:</strong></p><ul class="bullet-list"><li>Global coverage</li><li>Public access</li><li>No single owner</li><li>Uses TCP/IP protocols</li><li>Connects billions of devices</li></ul><p><strong>Major Internet Services:</strong></p><ul class="bullet-list"><li>World Wide Web (WWW)</li><li>E-mail</li><li>FTP (File Transfer Protocol)</li><li>VoIP (Voice over IP)</li><li>Video conferencing</li><li>Instant messaging</li><li>Cloud services</li></ul></div>
+
+      <div id="intranet-extranet" class="topic-card"><div class="sec-head"><span class="sec-num">2</span><h2>Intranet & Extranet — इंट्रानेट एवं एक्स्ट्रानेट</h2></div><ul class="bullet-list"><li><strong>Intranet — इंट्रानेट:</strong> Internet technologies पर आधारित <strong>private organisational network</strong>। Only authorised members (employees, faculty) can access। Example: University internal portal.</li><li><strong>Extranet — एक्स्ट्रानेट:</strong> Private network जिसमें <strong>selected outsiders</strong> (vendors, collaborators) को भी authorised access दिया जाता है। Example: University portal accessed by authorised vendors.</li></ul><table class="data-table"><tr><th>Basis</th><th>Internet</th><th>Intranet</th><th>Extranet</th></tr><tr><td>Access</td><td>Public</td><td>Internal authorised users</td><td>Internal + selected external users</td></tr><tr><td>Ownership</td><td>No single owner</td><td>Organisation</td><td>Organisation/partners</td></tr><tr><td>Security</td><td>Relatively less controlled</td><td>More controlled</td><td>Controlled access</td></tr><tr><td>Scope</td><td>Global</td><td>Organisation</td><td>Collaborating groups</td></tr><tr><td>Example</td><td>Public website</td><td>Employee portal</td><td>Supplier portal</td></tr></table><div class="formula-box">Internet = Everyone | Intranet = Employees | Extranet = Employees + Authorised outsiders</div></div>
+
+      <div id="internet-vs-www" class="topic-card"><div class="sec-head"><span class="sec-num">3</span><h2>Internet vs World Wide Web — इंटरनेट vs वर्ल्ड वाइड वेब</h2></div><ul class="bullet-list"><li><strong>Internet:</strong> Physical और logical network infrastructure connecting devices worldwide. (Infrastructure)</li><li><strong>World Wide Web (WWW):</strong> Internet पर उपलब्ध interlinked web pages और resources की service। (Service running on the infrastructure)</li></ul><div class="formula-box">Internet is the Infrastructure; WWW is a Service running on it.</div><p><strong>Exam Trap:</strong> Internet और WWW समान concepts नहीं हैं। WWW, Internet की services में से एक है।</p></div>
+
+      <div id="networking-basics" class="topic-card"><div class="sec-head"><span class="sec-num">4</span><h2>Networking Basics — नेटवर्किंग के मूल सिद्धांत</h2></div><p><strong>Computer Network:</strong> Interconnected computers का set जो <strong>resources share</strong> और <strong>communicate</strong> करते हैं।</p><p><strong>Key Components:</strong></p><ul class="bullet-list"><li><strong>Nodes:</strong> Devices connected to the network (computers, printers, routers)</li><li><strong>Links:</strong> Connections between nodes (wired or wireless)</li><li><strong>Protocols:</strong> Rules for communication (TCP/IP, HTTP, FTP)</li><li><strong>Bandwidth:</strong> Data carrying capacity of the network</li><li><strong>Latency:</strong> Delay in data transmission</li></ul></div>
+
+      <div id="network-types" class="topic-card"><div class="sec-head"><span class="sec-num">5</span><h2>Types of Networks — नेटवर्क के प्रकार</h2></div><ul class="bullet-list"><li><strong>PAN (Personal Area Network):</strong> एक व्यक्ति के आसपास छोटी range (Bluetooth, smartphone-earbuds)</li><li><strong>LAN (Local Area Network):</strong> छोटे geographical area (office, building, university department)</li><li><strong>MAN (Metropolitan Area Network):</strong> City या metropolitan area तक</li><li><strong>WAN (Wide Area Network):</strong> Large geographical area (country, world) — Internet is a WAN</li><li><strong>WLAN (Wireless LAN):</strong> Wireless version of LAN (Wi-Fi)</li></ul><div class="formula-box">PAN < LAN < MAN < WAN</div></div>
+
+      <div id="network-topologies" class="topic-card"><div class="sec-head"><span class="sec-num">6</span><h2>Network Topologies — नेटवर्क टोपोलॉजी</h2></div><ul class="bullet-list"><li><strong>Bus Topology:</strong> All devices connected to a single central cable (bus). Simple but single point of failure.</li><li><strong>Star Topology:</strong> All devices connected to a central hub/switch. Most common in LANs.</li><li><strong>Ring Topology:</strong> Devices connected in a circular loop. Data travels in one direction.</li><li><strong>Mesh Topology:</strong> Every device connected to every other device. Most reliable but expensive.</li><li><strong>Tree Topology:</strong> Hierarchical structure combining bus and star topologies.</li></ul><p><strong>Exam Point:</strong> Star topology is the most widely used in modern LANs.</p></div>
+
+      <div id="network-devices" class="topic-card"><div class="sec-head"><span class="sec-num">7</span><h2>Network Devices — नेटवर्क डिवाइस</h2></div><ul class="bullet-list"><li><strong>Hub:</strong> Broadcasts data to all devices in the network. (Layer 1 - Physical layer)</li><li><strong>Switch:</strong> Connects devices within a network; forwards data only to the intended device. (Layer 2 - Data Link layer)</li><li><strong>Router:</strong> Connects different networks; routes data between networks. (Layer 3 - Network layer)</li><li><strong>Modem:</strong> Converts digital to analog (and vice versa) for transmission over telephone/cable lines.</li><li><strong>Bridge:</strong> Connects two LAN segments.</li><li><strong>Gateway:</strong> Connects networks with different protocols.</li><li><strong>Access Point (AP):</strong> Allows wireless devices to connect to a wired network (Wi-Fi).</li></ul></div>
+
+      <div id="osi-model" class="topic-card"><div class="sec-head"><span class="sec-num">8</span><h2>OSI Model — OSI मॉडल</h2></div><p><strong>OSI (Open Systems Interconnection) Model:</strong> A reference model for understanding how data travels across a network.</p><p><strong>7 Layers (Bottom to Top):</strong></p><ul class="bullet-list"><li><strong>7. Application:</strong> User interface (HTTP, FTP, SMTP, DNS)</li><li><strong>6. Presentation:</strong> Data formatting, encryption, compression</li><li><strong>5. Session:</strong> Connection establishment, management, termination</li><li><strong>4. Transport:</strong> End-to-end communication, error control (TCP, UDP)</li><li><strong>3. Network:</strong> Routing, addressing (IP)</li><li><strong>2. Data Link:</strong> Framing, error detection (MAC addresses)</li><li><strong>1. Physical:</strong> Physical transmission of raw bits</li></ul><p><strong>Memory Formula:</strong> <strong>All People Seem To Need Data Processing</strong> (Application, Presentation, Session, Transport, Network, Data Link, Physical)</p></div>
+
+      <div id="tcp-ip-model" class="topic-card"><div class="sec-head"><span class="sec-num">9</span><h2>TCP/IP Model — TCP/IP मॉडल</h2></div><p><strong>TCP/IP Model:</strong> The actual protocol suite used by the Internet.</p><p><strong>4 Layers:</strong></p><ul class="bullet-list"><li><strong>Application:</strong> HTTP, FTP, SMTP, DNS, etc.</li><li><strong>Transport:</strong> TCP, UDP</li><li><strong>Internet:</strong> IP (addressing and routing)</li><li><strong>Network Access/Link:</strong> Physical and data link layers</li></ul><p><strong>OSI vs TCP/IP:</strong></p><ul class="bullet-list"><li>OSI has 7 layers; TCP/IP has 4 layers</li><li>OSI is conceptual; TCP/IP is practical/implemented</li><li>TCP/IP is the actual model used on the Internet</li></ul></div>
+
+      <div id="ip-addressing" class="topic-card"><div class="sec-head"><span class="sec-num">10</span><h2>IP Addressing — IP एड्रेसिंग</h2></div><p><strong>IP Address:</strong> Unique identifier for each device on a network.</p><p><strong>IPv4:</strong> 32-bit address, 4 octets (e.g., 192.168.1.1). About 4.3 billion addresses.</p><ul class="bullet-list"><li><strong>Class A:</strong> 0.0.0.0 to 127.255.255.255 (Large networks)</li><li><strong>Class B:</strong> 128.0.0.0 to 191.255.255.255 (Medium networks)</li><li><strong>Class C:</strong> 192.0.0.0 to 223.255.255.255 (Small networks)</li><li><strong>Class D:</strong> 224.0.0.0 to 239.255.255.255 (Multicast)</li><li><strong>Class E:</strong> 240.0.0.0 to 255.255.255.255 (Reserved)</li></ul><p><strong>IPv6:</strong> 128-bit address, 8 groups of 4 hexadecimal digits (e.g., 2001:0db8:85a3:0000:0000:8a2e:0370:7334). Developed to solve IPv4 address exhaustion.</p><p><strong>Public vs Private IP:</strong></p><ul class="bullet-list"><li><strong>Public:</strong> Routable on the Internet</li><li><strong>Private:</strong> Used within local networks (192.168.x.x, 10.x.x.x, 172.16.x.x to 172.31.x.x)</li></ul></div>
+
+      <div id="protocols-intro" class="topic-card"><div class="sec-head"><span class="sec-num">11</span><h2>Protocols — प्रोटोकॉल</h2></div><p><strong>Protocol:</strong> A set of rules that govern communication between devices on a network.</p><div class="formula-box">Protocol = Rules + Standards + Format for Communication</div><p><strong>Major Protocol Categories:</strong></p><ul class="bullet-list"><li><strong>Application Layer:</strong> HTTP, HTTPS, FTP, SMTP, POP3, IMAP, DNS, DHCP</li><li><strong>Transport Layer:</strong> TCP, UDP</li><li><strong>Network Layer:</strong> IP</li></ul></div>
+
+      <div id="http-https" class="topic-card"><div class="sec-head"><span class="sec-num">12</span><h2>HTTP & HTTPS — HTTP एवं HTTPS</h2></div><ul class="bullet-list"><li><strong>HTTP (Hypertext Transfer Protocol):</strong> Transfers web pages from server to browser. Port 80. No encryption (not secure).</li><li><strong>HTTPS (Hypertext Transfer Protocol Secure):</strong> Encrypted version of HTTP using SSL/TLS. Port 443. Secure.</li></ul><div class="formula-box">HTTP = No Encryption | HTTPS = Encrypted (Secure)</div><p><strong>Exam Trap:</strong> HTTPS adds encryption; it does not guarantee that every website is trustworthy.</p></div>
+
+      <div id="ftp" class="topic-card"><div class="sec-head"><span class="sec-num">13</span><h2>FTP & SFTP — FTP एवं SFTP</h2></div><ul class="bullet-list"><li><strong>FTP (File Transfer Protocol):</strong> Transfers files between computers. Ports 20 (data), 21 (control). No encryption.</li><li><strong>SFTP (Secure File Transfer Protocol):</strong> Secure version of FTP using SSH. Encrypted file transfer.</li></ul><p><strong>Exam Point:</strong> FTP is used for file transfer; SFTP is the secure version.</p></div>
+
+      <div id="email-protocols" class="topic-card"><div class="sec-head"><span class="sec-num">14</span><h2>E-mail Protocols — ईमेल प्रोटोकॉल</h2></div><ul class="bullet-list"><li><strong>SMTP (Simple Mail Transfer Protocol):</strong> Sending e-mail from client to server and between servers. Port 25.</li><li><strong>POP3 (Post Office Protocol Version 3):</strong> Retrieving e-mail from server to client. Downloads and removes from server (usually). Port 110.</li><li><strong>IMAP (Internet Message Access Protocol):</strong> Synchronising and managing e-mail on the server. Keeps messages on server; syncs across devices. Port 143.</li></ul><div class="formula-box">SMTP Sends | POP3 Pulls/Downloads | IMAP Synchronises</div><p><strong>POP3 vs IMAP:</strong> POP3 downloads to one device; IMAP syncs across multiple devices.</p></div>
+
+      <div id="dns" class="topic-card"><div class="sec-head"><span class="sec-num">15</span><h2>DNS (Domain Name System) — डोमेन नेम सिस्टम</h2></div><p><strong>DNS</strong> translates human-readable domain names (e.g., google.com) into IP addresses (e.g., 142.250.185.46).</p><div class="formula-box">DNS = Domain Name → IP Address</div><p><strong>Key Points:</strong></p><ul class="bullet-list"><li>Port 53</li><li>Distributed hierarchical system</li><li>Cache stores translations for faster access</li><li>Essential for using domain names instead of numeric IPs</li></ul></div>
+
+      <div id="dhcp" class="topic-card"><div class="sec-head"><span class="sec-num">16</span><h2>DHCP (Dynamic Host Configuration Protocol) — DHCP</h2></div><p><strong>DHCP</strong> automatically assigns IP addresses to devices on a network.</p><div class="formula-box">DHCP = Automatically Assigns IP Addresses</div><p><strong>Key Points:</strong></p><ul class="bullet-list"><li>Reduces manual configuration</li><li>Manages IP address pool</li><li>Assigns temporary/leased IP addresses</li><li>Essential for large networks</li></ul></div>
+
+      <div id="tcp-udp" class="topic-card"><div class="sec-head"><span class="sec-num">17</span><h2>TCP & UDP — TCP एवं UDP</h2></div><table class="data-table"><tr><th>TCP</th><th>UDP</th></tr><tr><td>Connection-oriented</td><td>Connectionless</td></tr><tr><td>Reliable delivery</td><td>Delivery guarantee नहीं</td></tr><tr><td>Error checking and sequencing</td><td>Lower overhead</td></tr><tr><td>Comparatively slower</td><td>Faster</td></tr><tr><td>Web, e-mail, file transfer</td><td>Live streaming, gaming, VoIP</td></tr></table><p><strong>Exam Trap:</strong> UDP का fast होना यह नहीं दर्शाता कि वह TCP से अधिक reliable है।</p></div>
+
+      <div id="protocol-functions" class="topic-card"><div class="sec-head"><span class="sec-num">18</span><h2>Protocols Summary — प्रोटोकॉल सारांश</h2></div><table class="data-table"><tr><th>Protocol</th><th>Function</th><th>Port</th></tr><tr><td>HTTP</td><td>Web pages transfer</td><td>80</td></tr><tr><td>HTTPS</td><td>Secure web communication</td><td>443</td></tr><tr><td>SMTP</td><td>Sending e-mail</td><td>25</td></tr><tr><td>POP3</td><td>Downloading/retrieving e-mail</td><td>110</td></tr><tr><td>IMAP</td><td>Server-based e-mail synchronisation</td><td>143</td></tr><tr><td>FTP</td><td>File transfer</td><td>20, 21</td></tr><tr><td>DNS</td><td>Domain name → IP address</td><td>53</td></tr><tr><td>DHCP</td><td>Auto-assign IP address</td><td>67, 68</td></tr><tr><td>TCP</td><td>Reliable connection-oriented delivery</td><td>-</td></tr><tr><td>UDP</td><td>Fast connectionless delivery</td><td>-</td></tr></table></div>
+
+      <div id="exam-traps" class="topic-card"><div class="sec-head"><span class="sec-num">19</span><h2>Common Exam Traps — सामान्य परीक्षा जाल</h2></div><ul class="bullet-list"><li><strong>Trap 1:</strong> Internet and WWW are not synonymous.</li><li><strong>Trap 2:</strong> Router = connects devices within a network → ❌ Router connects networks; Switch connects devices.</li><li><strong>Trap 3:</strong> SMTP = receiving e-mail → ❌ SMTP sends e-mail; POP3/IMAP retrieve/access it.</li><li><strong>Trap 4:</strong> DNS = assigns IP addresses → ❌ DNS translates domain names to IP addresses; DHCP assigns IP addresses.</li><li><strong>Trap 5:</strong> HTTP = secure → ❌ HTTP is not secure; HTTPS is secure.</li><li><strong>Trap 6:</strong> UDP = more reliable than TCP → ❌ TCP is more reliable; UDP is faster.</li><li><strong>Trap 7:</strong> LAN = large network → ❌ LAN is local; WAN is large.</li><li><strong>Trap 8:</strong> POP3 = syncs across devices → ❌ IMAP syncs across devices; POP3 downloads to one device.</li></ul></div>
+
+      <div id="practice-questions" class="topic-card"><div class="sec-head"><span class="sec-num">20</span><h2>Practice Questions — अभ्यास प्रश्न</h2></div>
+      <div class="pyq-tag">Question 1</div>
+      <p>A university portal accessible only to employees and registered faculty members is an example of:</p>
+      <ul class="bullet-list"><li>A. Internet</li><li>B. Intranet</li><li>C. Extranet</li><li>D. World Wide Web</li></ul>
+      <div class="answer-box">Answer: B. Intranet</div>
+      <p class="explain">Explanation: Restricted organisational network for internal members.</p>
+
+      <div class="pyq-tag">Question 2</div>
+      <p>Which protocol is used to send e-mail?</p>
+      <ul class="bullet-list"><li>A. POP3</li><li>B. IMAP</li><li>C. SMTP</li><li>D. FTP</li></ul>
+      <div class="answer-box">Answer: C. SMTP</div>
+      <p class="explain">Explanation: SMTP is used for sending e-mail. POP3 and IMAP are for receiving/accessing e-mail.</p>
+
+      <div class="pyq-tag">Question 3</div>
+      <p>Which protocol translates domain names to IP addresses?</p>
+      <ul class="bullet-list"><li>A. DHCP</li><li>B. DNS</li><li>C. HTTP</li><li>D. FTP</li></ul>
+      <div class="answer-box">Answer: B. DNS</div>
+      <p class="explain">Explanation: DNS translates domain names to IP addresses. DHCP assigns IP addresses automatically.</p>
+
+      <div class="pyq-tag">Question 4</div>
+      <p>Which network topology is most commonly used in modern LANs?</p>
+      <ul class="bullet-list"><li>A. Bus</li><li>B. Ring</li><li>C. Star</li><li>D. Mesh</li></ul>
+      <div class="answer-box">Answer: C. Star</div>
+      <p class="explain">Explanation: Star topology is the most widely used in modern LANs, with all devices connected to a central switch.</p>
+
+      <div class="pyq-tag">Question 5</div>
+      <p>Which device connects different networks and routes data between them?</p>
+      <ul class="bullet-list"><li>A. Hub</li><li>B. Switch</li><li>C. Router</li><li>D. Modem</li></ul>
+      <div class="answer-box">Answer: C. Router</div>
+      <p class="explain">Explanation: A router connects different networks and routes data between them. A switch connects devices within a network.</p>
+
+      <div class="pyq-tag">Question 6</div>
+      <p>Which layer of the OSI model is responsible for routing and addressing?</p>
+      <ul class="bullet-list"><li>A. Data Link</li><li>B. Transport</li><li>C. Network</li><li>D. Application</li></ul>
+      <div class="answer-box">Answer: C. Network</div>
+      <p class="explain">Explanation: The Network layer (Layer 3) handles routing and addressing (IP).</p>
+
+      <div class="pyq-tag">Question 7</div>
+      <p>What is the default port for HTTPS?</p>
+      <ul class="bullet-list"><li>A. 80</li><li>B. 443</li><li>C. 21</li><li>D. 25</li></ul>
+      <div class="answer-box">Answer: B. 443</div>
+      <p class="explain">Explanation: HTTPS uses port 443; HTTP uses port 80; FTP uses port 21; SMTP uses port 25.</p></div>
+
+      <div id="one-page-revision" class="topic-card"><div class="sec-head"><span class="sec-num">21</span><h2>One-Page Revision — एक पेज में पुनरावृत्ति</h2></div>
+      <div class="formula-box">Internet = Public network of networks | Intranet = Private organisational network | Extranet = Private + authorised outsiders</div>
+      <div class="formula-box">SMTP → Send mail | POP3/IMAP → Receive/access mail | HTTP/HTTPS → Web | FTP → Files | DNS → Name to IP | DHCP → Assign IP</div>
+      <div class="formula-box">TCP = Reliable (connection-oriented) | UDP = Fast (connectionless)</div>
+      <div class="formula-box">LAN < MAN < WAN | Hub < Switch < Router</div>
+      <p><strong>OSI Layers (Memory):</strong> All People Seem To Need Data Processing (Application, Presentation, Session, Transport, Network, Data Link, Physical)</p>
+      <p><strong>Exam Formula:</strong></p>
+      <div class="formula-box">Protocol → Function → Port → Example → Distinction</div>
+      <p><em>UGC NET में Internet, Networking & Protocols के questions protocol functions, port numbers, network types, devices और OSI model पर based होते हैं।</em></p></div>
+
+      <div class="enroll-cta"><div><h3 class="h-display">Join the Paper-1 Batch</h3><p>Course fee FREE — ₹500 registration & academic/logistics contribution. Classes daily at 6:30 PM.</p></div><a href="#" class="btn-gold">✓ JOIN BATCH @ ₹500</a></div>
+    </div>
+  </div>
+</main>
+
+<script>
+  (function() {
+
+    const BASE_PATH =
+      "/tutorials/information-and-communication-technology/internet-networking-protocols";
+
+    const links = document.querySelectorAll(".nav-link");
+    const cards = document.querySelectorAll(".topic-card");
+    const content = document.getElementById("contentArea");
+    const sidebarToggle = document.getElementById("sidebar-toggle");
+
+
+    // Get topic slug from current URL
+    function getSlugFromPath() {
+
+      const path = window.location.pathname
+        .replace(/\/+$/, "");
+
+      if (path.startsWith(BASE_PATH + "/")) {
+
+        return path
+          .substring((BASE_PATH + "/").length)
+          .split("/")[0];
+
+      }
+
+      return null;
+    }
+
+
+    // Update browser URL
+    function updateUrl(slug, replace = false) {
+
+      const newPath =
+        BASE_PATH + "/" + slug;
+
+      if (window.location.pathname !== newPath) {
+
+        if (replace) {
+
+          history.replaceState(
+            null,
+            "",
+            newPath
+          );
+
+        } else {
+
+          history.pushState(
+            null,
+            "",
+            newPath
+          );
+
+        }
+
+      }
+
+    }
+
+
+    // Update active sidebar link
+    function updateActiveLink(slug) {
+
+      links.forEach(function(link) {
+
+        const href =
+          link.getAttribute("href");
+
+        if (!href) return;
+
+        const linkSlug =
+          href
+            .split("/")
+            .filter(Boolean)
+            .pop();
+
+        link.classList.toggle(
+          "active",
+          linkSlug === slug
+        );
+
+      });
+
+    }
+
+
+    // Show selected topic card
+    function showCard(
+      slug,
+      updateHistory = true
+    ) {
+
+      cards.forEach(function(card) {
+
+        card.classList.add("hidden");
+
+      });
+
+
+      const target =
+        document.getElementById(slug);
+
+
+      if (!target) {
+
+        const first = cards[0];
+
+        if (first) {
+
+          first.classList.remove("hidden");
+
+          const firstSlug =
+            first.id;
+
+          updateActiveLink(firstSlug);
+
+          updateUrl(
+            firstSlug,
+            true
+          );
+
+        }
+
+        return;
+
+      }
+
+
+      target.classList.remove("hidden");
+
+      updateActiveLink(slug);
+
+
+      if (updateHistory) {
+
+        updateUrl(
+          slug,
+          false
+        );
+
+      }
+
+
+      if (sidebarToggle) {
+
+        sidebarToggle.checked = false;
+
+      }
+
+
+      if (content) {
+
+        const top =
+          content.getBoundingClientRect().top +
+          window.pageYOffset -
+          10;
+
+        window.scrollTo({
+
+          top: top,
+
+          behavior: "smooth"
+
+        });
+
+      }
+
+    }
+
+
+    // Sidebar link click
+    links.forEach(function(link) {
+
+      link.addEventListener(
+        "click",
+        function(e) {
+
+          e.preventDefault();
+
+
+          const href =
+            this.getAttribute("href");
+
+          if (!href) return;
+
+
+          const slug =
+            href
+              .split("/")
+              .filter(Boolean)
+              .pop();
+
+
+          if (!slug) return;
+
+
+          console.log(
+            "Clicked topic:",
+            slug
+          );
+
+
+          showCard(
+            slug,
+            true
+          );
+
+        }
+      );
+
+    });
+
+
+    // Initial page load
+    function initFromPath() {
+
+      let slug =
+        getSlugFromPath();
+
+
+      if (
+        !slug ||
+        !document.getElementById(slug)
+      ) {
+
+        slug =
+          cards[0]?.id ||
+          "internet-intro";
+
+      }
+
+
+      showCard(
+        slug,
+        false
+      );
+
+
+      updateUrl(
+        slug,
+        true
+      );
+
+    }
+
+
+    initFromPath();
+
+
+    // Browser Back / Forward
+    window.addEventListener(
+      "popstate",
+      function() {
+
+        const slug =
+          getSlugFromPath();
+
+
+        if (
+          slug &&
+          document.getElementById(slug)
+        ) {
+
+          showCard(
+            slug,
+            false
+          );
+
+        } else {
+
+          const firstSlug =
+            cards[0]?.id ||
+            "internet-intro";
+
+          showCard(
+            firstSlug,
+            false
+          );
+
+        }
+
+      }
+    );
+
+
+  })();
+</script>
+</body>
+</html>

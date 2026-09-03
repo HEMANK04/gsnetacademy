@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mass Communication, Media & Society – Full Notes | UGC NET Paper-1</title>
+  <meta name="description" content="Complete tutorial: Mass Communication meaning, characteristics, functions, types of media, mass media and society, media effects, theories, role of media in democracy, media ethics for UGC NET Paper-1.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; }
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background: #f8f5ee;
+      color: #101a3d;
+    }
+    .h-display { font-family: 'Poppins', sans-serif; font-weight: 800; letter-spacing: -0.01em; }
+    .container { max-width: 1360px; margin: 0 auto; padding: 0 20px; }
+
+    .hero {
+      background: #0b1330;
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+      padding: 28px 0 22px;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      right: -80px;
+      top: -100px;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(232,183,75,0.2), transparent 70%);
+    }
+    .hero-inner { position: relative; }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      padding: 6px 16px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+      color: #e8b74b;
+    }
+    .hero h1 {
+      font-size: clamp(28px, 4.2vw, 44px);
+      margin: 12px 0 6px;
+    }
+    .hero p {
+      color: rgba(255,255,255,0.78);
+      max-width: 680px;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 28px;
+      padding: 28px 0 50px;
+      align-items: start;
+    }
+    @media (max-width: 980px) {
+      .layout { grid-template-columns: 1fr; }
+    }
+
+    .sidebar {
+      position: sticky;
+      top: 16px;
+      max-height: calc(100vh - 40px);
+      overflow-y: auto;
+      background: #fff;
+      border: 1px solid rgba(16,26,61,0.08);
+      border-radius: 16px;
+      padding: 16px 12px;
+      box-shadow: 0 6px 24px rgba(16,26,61,0.05);
+    }
+    .sidebar::-webkit-scrollbar { width: 5px; }
+    .sidebar::-webkit-scrollbar-thumb { background: #dde2ef; border-radius: 8px; }
+    .sidebar-title {
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: #b9852a;
+      padding: 4px 10px 14px;
+    }
+    .nav-link {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 10px;
+      border-radius: 10px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #33406b;
+      line-height: 1.3;
+      transition: 0.1s;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .nav-link:hover { background: #f4f6fc; color: #0b1330; }
+    .nav-link.active {
+      background: #fdf6e7;
+      color: #0b1330;
+    }
+    .nav-num {
+      flex: none;
+      width: 22px;
+      height: 22px;
+      border-radius: 7px;
+      background: #e7eaf5;
+      color: #5b6690;
+      font-size: 11px;
+      font-weight: 800;
+      display: grid;
+      place-items: center;
+    }
+    .nav-link.active .nav-num {
+      background: #e8b74b;
+      color: #0b1330;
+    }
+
+    #sidebar-toggle { display: none; }
+    .mobile-bar { display: none; }
+    @media (max-width: 980px) {
+      .mobile-bar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: #fff;
+        border: 1px solid rgba(16,26,61,0.1);
+        border-radius: 12px;
+        padding: 12px 16px;
+        margin-bottom: 8px;
+        font-weight: 800;
+        font-size: 13.5px;
+        color: #0b1330;
+      }
+      .sidebar { display: none; position: static; max-height: none; }
+      #sidebar-toggle:checked ~ .layout .sidebar { display: block; }
+    }
+
+    .content { min-width: 0; }
+    .topic-card {
+      background: #fff;
+      border: 1px solid rgba(16,26,61,0.08);
+      border-radius: 16px;
+      padding: 20px 20px 16px;
+      margin-bottom: 18px;
+      scroll-margin-top: 20px;
+      display: block;
+    }
+    .topic-card.hidden { display: none; }
+    .sec-head {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+    .sec-num {
+      flex: none;
+      width: 34px;
+      height: 34px;
+      border-radius: 10px;
+      background: #0b1330;
+      color: #e8b74b;
+      font-weight: 800;
+      font-size: 14px;
+      display: grid;
+      place-items: center;
+    }
+    .sec-head h2 {
+      margin: 0;
+      font-size: 19px;
+      font-weight: 800;
+      color: #0b1330;
+    }
+    .topic-card p {
+      font-size: 14.5px;
+      line-height: 1.75;
+      color: #1a254a;
+      margin: 6px 0;
+    }
+    .bullet-list {
+      margin: 8px 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 5px;
+    }
+    .bullet-list li {
+      position: relative;
+      padding-left: 20px;
+      font-size: 14px;
+      line-height: 1.6;
+      color: #1a254a;
+    }
+    .bullet-list li::before {
+      content: "";
+      position: absolute;
+      left: 2px;
+      top: 9px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #d9a53a;
+    }
+    .formula-box {
+      background: #0b1330;
+      color: #fdeec2;
+      font-weight: 700;
+      font-size: 13.6px;
+      padding: 10px 16px;
+      border-radius: 10px;
+      margin: 10px 0;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 12px 0;
+      font-size: 13.6px;
+      display: block;
+      overflow-x: auto;
+    }
+    .data-table th, .data-table td {
+      border: 1px solid #e7eaf5;
+      padding: 8px 12px;
+      text-align: left;
+      color: #1a254a;
+      white-space: normal;
+    }
+    .data-table th {
+      background: #f4f6fc;
+      color: #0b1330;
+      font-weight: 800;
+    }
+    .pyq-tag {
+      display: inline-block;
+      background: #fdf6e7;
+      color: #b9852a;
+      font-weight: 800;
+      font-size: 12px;
+      padding: 4px 12px;
+      border-radius: 8px;
+      margin: 12px 0 6px;
+    }
+    .answer-box {
+      background: #eefaf2;
+      border: 1px solid #bfe8cc;
+      color: #1a7a4c;
+      font-weight: 700;
+      font-size: 13.6px;
+      padding: 6px 14px;
+      border-radius: 9px;
+      margin: 6px 0;
+    }
+    .explain {
+      background: #f4f6fc;
+      border-radius: 9px;
+      padding: 6px 14px;
+      font-size: 13.6px;
+      color: #1a254a;
+    }
+    .subtopic {
+      padding: 14px 0 6px;
+      border-top: 1px dashed #e7eaf5;
+    }
+    .subtopic:first-of-type { border-top: none; padding-top: 2px; }
+    .subhead {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 6px;
+    }
+    .sub-num {
+      flex: none;
+      width: 26px;
+      height: 26px;
+      border-radius: 8px;
+      background: #fdf6e7;
+      color: #b9852a;
+      font-weight: 800;
+      font-size: 12px;
+      display: grid;
+      place-items: center;
+    }
+    .subhead h3 {
+      margin: 0;
+      font-size: 15.5px;
+      font-weight: 800;
+      color: #0b1330;
+    }
+    .enroll-cta {
+      background: #0b1330;
+      color: #fff;
+      border-radius: 16px;
+      padding: 24px 24px;
+      margin-top: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+      overflow: hidden;
+    }
+    .enroll-cta::before {
+      content: "";
+      position: absolute;
+      right: -40px;
+      top: -40px;
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(232,183,75,0.2), transparent 70%);
+    }
+    .enroll-cta h3 { margin: 0 0 4px; font-size: 20px; }
+    .enroll-cta p { margin: 0; color: rgba(255,255,255,0.75); font-size: 13.5px; max-width: 480px; }
+    .btn-gold {
+      background: #e8b74b;
+      color: #0b1330;
+      font-weight: 800;
+      padding: 10px 22px;
+      border-radius: 10px;
+      font-size: 13.5px;
+      white-space: nowrap;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="container hero-inner">
+    <span class="eyebrow">★ UGC NET Paper-I · Communication</span>
+    <h1 class="h-display">Mass Communication, Media & Society</h1>
+    <p>Complete tutorial: Mass Communication meaning, characteristics, functions, types of media, mass media and society, media effects, theories, role of media in democracy, media ethics, PYQs & more.</p>
+  </div>
+</section>
+
+<main class="container">
+  <input type="checkbox" id="sidebar-toggle">
+  <label for="sidebar-toggle" class="mobile-bar">
+    <span>📑 On this page</span>
+    <span>☰ Menu</span>
+  </label>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebarNav">
+      <p class="sidebar-title">On this page</p>
+      <nav>
+<a href="/tutorials/communication/mass-communication-media-society/mass-communication-meaning" class="nav-link active">
+  <span class="nav-num">1</span>Mass Communication
+</a>
+<a href="/tutorials/communication/mass-communication-media-society/characteristics-mass-communication" class="nav-link">
+  <span class="nav-num">2</span>Characteristics
+</a>
+<a href="/tutorials/communication/mass-communication-media-society/functions-mass-media" class="nav-link">
+  <span class="nav-num">3</span>Functions of Mass Media
+</a>
+<a href="/tutorials/communication/mass-communication-media-society/types-media" class="nav-link">
+  <span class="nav-num">4</span>Types of Media
+</a>
+<a href="/tutorials/communication/mass-communication-media-society/mass-media-society" class="nav-link">
+  <span class="nav-num">5</span>Mass Media & Society
+</a>
+<a href="/tutorials/communication/mass-communication-media-society/media-effects-theories" class="nav-link">
+  <span class="nav-num">6</span>Media Effects Theories
+</a>
+<a href="/tutorials/communication/mass-communication-media-society/cultivation-theory" class="nav-link">
+  <span class="nav-num">7</span>Cultivation Theory
+</a>
+<a href="/tutorials/communication/mass-communication-media-society/agenda-setting" class="nav-link">
+  <span class="nav-num">8</span>Agenda-Setting Theory
+</a>
+<a href="/tutorials/communication/mass-communication-media-society/uses-gratifications" class="nav-link">
+  <span class="nav-num">9</span>Uses & Gratifications
+</a>
+<a href="/tutorials/communication/mass-communication-media-society/spiral-of-silence" class="nav-link">
+  <span class="nav-num">10</span>Spiral of Silence
+</a>
+<a href="/tutorials/communication/mass-communication-media-society/media-democracy" class="nav-link">
+  <span class="nav-num">11</span>Media & Democracy
+</a>
+<a href="/tutorials/communication/mass-communication-media-society/media-ethics" class="nav-link">
+  <span class="nav-num">12</span>Media Ethics
+</a>
+<a href="/tutorials/communication/mass-communication-media-society/digital-media" class="nav-link">
+  <span class="nav-num">13</span>Digital Media
+</a>
+<a href="/tutorials/communication/mass-communication-media-society/exam-traps" class="nav-link">
+  <span class="nav-num">14</span>Common Exam Traps
+</a>
+<a href="/tutorials/communication/mass-communication-media-society/practice-questions" class="nav-link">
+  <span class="nav-num">15</span>Practice Questions
+</a>
+<a href="/tutorials/communication/mass-communication-media-society/one-page-revision" class="nav-link">
+  <span class="nav-num">16</span>One-Page Revision
+</a>
+</nav>
+    </aside>
+
+    <div class="content" id="contentArea">
+      <!-- ===== CARDS ===== -->
+      <div id="mass-communication-meaning" class="topic-card"><div class="sec-head"><span class="sec-num">1</span><h2>Mass Communication — जनसंचार</h2></div><p><strong>Mass Communication</strong> वह process है जिसमें <strong>large, heterogeneous और anonymous audience</strong> को <strong>mass media (TV, radio, newspapers, Internet)</strong> के माध्यम से <strong>messages</strong> भेजे जाते हैं।</p><div class="formula-box">Mass Communication = Large Audience + Mass Media + Indirect/Delayed Feedback</div><p><strong>Key Definitions:</strong></p><ul class="bullet-list"><li><strong>Mass:</strong> Large, diverse, scattered audience</li><li><strong>Media:</strong> Channels/platforms used (print, broadcast, digital)</li><li><strong>Communication:</strong> Information, ideas, opinions sharing</li></ul><p><strong>Examples:</strong></p><ul class="bullet-list"><li>Newspaper article read by millions</li><li>TV news broadcast</li><li>Radio programme</li><li>Social media content going viral</li><li>Movie released in theatres</li></ul></div>
+
+      <div id="characteristics-mass-communication" class="topic-card"><div class="sec-head"><span class="sec-num">2</span><h2>Characteristics of Mass Communication — विशेषताएँ</h2></div><ul class="bullet-list"><li><strong>Large Audience — बड़ा दर्शक वर्ग:</strong> Messages reach millions of people simultaneously.</li><li><strong>Heterogeneous Audience — विषम दर्शक वर्ग:</strong> Diverse in age, education, culture, interests.</li><li><strong>Anonymous Audience — अज्ञात दर्शक:</strong> Sender does not know the receivers personally.</li><li><strong>Mass Media Channels — जनसंचार माध्यम:</strong> Uses TV, radio, newspapers, magazines, Internet, etc.</li><li><strong>Delayed/Indirect Feedback — विलंबित/अप्रत्यक्ष प्रतिपुष्टि:</strong> Feedback is not immediate; may come through letters, calls, ratings, social media comments.</li><li><strong>Organized Sender — संगठित प्रेषक:</strong> Messages are created by professional organisations or institutions.</li><li><strong>Public Message — सार्वजनिक संदेश:</strong> Messages are meant for public consumption, not private.</li><li><strong>Gatekeeping — द्वारपालन:</strong> Editors and media professionals decide what gets published or broadcast.</li><li><strong>One-Way Communication (mostly) — एकतरफा संचार:</strong> Traditional mass communication is mostly one-way (sender → receiver).</li></ul></div>
+
+      <div id="functions-mass-media" class="topic-card"><div class="sec-head"><span class="sec-num">3</span><h2>Functions of Mass Media — जनसंचार माध्यम के कार्य</h2></div><ul class="bullet-list"><li><strong>Information — सूचना:</strong> News, facts, data, updates about events, politics, economy, society.</li><li><strong>Education — शिक्षा:</strong> Educational programmes, documentaries, knowledge dissemination.</li><li><strong>Entertainment — मनोरंजन:</strong> Movies, music, dramas, sports, comedy shows, serials.</li><li><strong>Persuasion — प्रेरण/रिझाना:</strong> Advertisements, political campaigns, opinion formation.</li><li><strong>Socialization — समाजीकरण:</strong> Transmitting cultural norms, values, traditions, beliefs.</li><li><strong>Correlation — सहसंबंध:</strong> Helping people understand relationships between events and issues.</li><li><strong>Surveillance — निगरानी:</strong> Monitoring and reporting on what is happening in society (news function).</li><li><strong>Public Opinion Formation — जनमत निर्माण:</strong> Shaping public opinion through news and views.</li><li><strong>Advertising — विज्ञापन:</strong> Promoting products, services, ideas.</li><li><strong>Watchdog Function — प्रहरी कार्य:</strong> Exposing wrongdoing, holding power accountable.</li></ul><p><strong>Quick Memory:</strong></p><div class="formula-box">Mass Media Functions = Inform + Educate + Entertain + Persuade + Socialize + Watchdog</div></div>
+
+      <div id="types-media" class="topic-card"><div class="sec-head"><span class="sec-num">4</span><h2>Types of Media — माध्यम के प्रकार</h2></div><ul class="bullet-list"><li><strong>Print Media — मुद्रित माध्यम:</strong> Newspapers, magazines, journals, books, pamphlets, posters.</li><li><strong>Broadcast Media — प्रसारण माध्यम:</strong> Television, radio, cable TV, satellite TV.</li><li><strong>Digital/New Media — डिजिटल/नया माध्यम:</strong> Internet, websites, social media, blogs, podcasts, mobile apps, streaming platforms.</li><li><strong>Outdoor Media — बाहरी माध्यम:</strong> Billboards, hoardings, banners, signboards.</li><li><strong>Traditional Media — पारंपरिक माध्यम:</strong> Folk media, theatre, puppetry, street plays (local, cultural).</li></ul></div>
+
+      <div id="mass-media-society" class="topic-card"><div class="sec-head"><span class="sec-num">5</span><h2>Mass Media & Society — जनसंचार माध्यम एवं समाज</h2></div><p><strong>Positive Roles of Media:</strong></p><ul class="bullet-list"><li>Informs citizens about issues</li><li>Educates and spreads awareness</li><li>Provides entertainment and recreation</li><li>Gives voice to the voiceless</li><li>Holds power accountable (watchdog)</li><li>Promotes democracy and participation</li><li>Bridges gaps between communities</li></ul><p><strong>Negative Aspects/Concerns:</strong></p><ul class="bullet-list"><li>Spreading misinformation (fake news)</li><li>Manipulation of public opinion</li><li>Commercialization and sensationalism</li><li>Invasion of privacy</li><li>Promoting stereotypes and biases</li><li>Excessive violence and inappropriate content</li><li>Digital divide and unequal access</li><li>Echo chambers and polarisation</li><li>Loss of media credibility</li></ul></div>
+
+      <div id="media-effects-theories" class="topic-card"><div class="sec-head"><span class="sec-num">6</span><h2>Media Effects Theories — मीडिया प्रभाव सिद्धांत</h2></div><ul class="bullet-list"><li><strong>Hypodermic Needle/Bullet Theory — सुई/गोली सिद्धांत:</strong> Media has direct, powerful, and immediate effect on passive audiences. (Not widely accepted now)</li><li><strong>Two-Step Flow Theory — दो-चरण प्रवाह:</strong> Media → Opinion Leaders → General Public. Communication flows from media to opinion leaders, who then influence others. (Lazarsfeld & Katz)</li><li><strong>Uses and Gratifications Theory — उपयोग एवं संतुष्टि:</strong> Audiences are active and use media to satisfy specific needs. (Katz, Blumler, Gurevitch)</li><li><strong>Agenda-Setting Theory — एजेंडा-सेटिंग:</strong> Media may not tell us what to think, but tells us what to think about. (McCombs & Shaw)</li><li><strong>Cultivation Theory — संवर्धन सिद्धांत:</strong> Long-term exposure to media shapes viewers' perceptions of reality. (George Gerbner)</li><li><strong>Spiral of Silence Theory — मौन का चक्र:</strong> People hide their opinions if they think they are in the minority. (Elisabeth Noelle-Neumann)</li><li><strong>Uses & Gratifications:</strong> Active audience, uses media to fulfill needs (cognitive, affective, personal integrative, social integrative, tension release).</li></ul></div>
+
+      <div id="cultivation-theory" class="topic-card"><div class="sec-head"><span class="sec-num">7</span><h2>Cultivation Theory — संवर्धन सिद्धांत</h2></div><p><strong>George Gerbner</strong> (1960s-1970s) — Television shapes viewers' perceptions of reality.</p><ul class="bullet-list"><li><strong>Key Idea:</strong> Heavy television viewers are more likely to perceive the world as violent and dangerous than light viewers.</li><li><strong>Cultivation Differential:</strong> The difference in perception between heavy and light viewers.</li><li><strong>Mean World Syndrome:</strong> Heavy viewers develop a belief that the world is more dangerous than it actually is.</li><li><strong>Mainstreaming:</strong> Heavy viewing leads to homogenization of perceptions across different groups.</li><li><strong>Resonance:</strong> When what is seen on TV matches real-life experience, the cultivation effect is stronger.</li></ul><p><strong>Exam Point:</strong> Cultivation theory focuses on <strong>long-term effects</strong> of television viewing, not immediate effects.</p></div>
+
+      <div id="agenda-setting" class="topic-card"><div class="sec-head"><span class="sec-num">8</span><h2>Agenda-Setting Theory — एजेंडा-सेटिंग सिद्धांत</h2></div><p><strong>McCombs & Shaw</strong> (1972) — Media may not tell us what to think, but tells us what to think about.</p><ul class="bullet-list"><li><strong>First Level:</strong> Media tells us which issues are important (what to think about).</li><li><strong>Second Level (Attribute Agenda-Setting):</strong> Media tells us how to think about those issues (what aspects are important).</li><li><strong>Third Level (Network Agenda-Setting):</strong> Media tells us how issues are connected to each other.</li><li><strong>Key Concept:</strong> The more coverage an issue gets, the more important it seems to the public.</li><li><strong>Examples:</strong> Media giving extensive coverage to climate change → public perceives it as a major issue.</li></ul></div>
+
+      <div id="uses-gratifications" class="topic-card"><div class="sec-head"><span class="sec-num">9</span><h2>Uses & Gratifications Theory — उपयोग एवं संतुष्टि</h2></div><p><strong>Katz, Blumler & Gurevitch</strong> — Audiences are <strong>active</strong> and use media to fulfill specific needs.</p><ul class="bullet-list"><li><strong>Cognitive Needs — संज्ञानात्मक:</strong> Information, knowledge, understanding (e.g., watching news).</li><li><strong>Affective Needs — भावात्मक:</strong> Emotional experiences, enjoyment (e.g., watching movies).</li><li><strong>Personal Integrative Needs — व्यक्तिगत एकीकरण:</strong> Self-esteem, credibility, status (e.g., following trends).</li><li><strong>Social Integrative Needs — सामाजिक एकीकरण:</strong> Social interaction, connection (e.g., using social media to connect).</li><li><strong>Tension Release Needs — तनाव मुक्ति:</strong> Escape, relaxation (e.g., listening to music).</li></ul><p><strong>Key Point:</strong> This theory <strong>does not</strong> ask "What does media do to people?" but "What do people do with media?"</p></div>
+
+      <div id="spiral-of-silence" class="topic-card"><div class="sec-head"><span class="sec-num">10</span><h2>Spiral of Silence Theory — मौन का चक्र</h2></div><p><strong>Elisabeth Noelle-Neumann</strong> (1974) — People hide their opinions if they think they are in the minority.</p><ul class="bullet-list"><li><strong>Core Idea:</strong> Fear of isolation leads people to remain silent when they perceive their opinion is in the minority.</li><li><strong>Process:</strong> Media presents dominant opinions → People perceive these as majority views → Those who disagree stay silent → The dominant opinion appears even stronger → Minority shrinks further.</li><li><strong>Key Factors:</strong> Fear of social isolation, perceived public opinion, media coverage.</li><li><strong>Example:</strong> A person with a minority political view may remain silent in a group where the majority opinion is different.</li></ul></div>
+
+      <div id="media-democracy" class="topic-card"><div class="sec-head"><span class="sec-num">11</span><h2>Media & Democracy — मीडिया और लोकतंत्र</h2></div><p><strong>Media plays a crucial role in a democracy:</strong></p><ul class="bullet-list"><li><strong>Fourth Pillar/State — चौथा स्तंभ:</strong> Media is considered the fourth pillar of democracy (along with Legislature, Executive, Judiciary).</li><li><strong>Watchdog Role — प्रहरी कार्य:</strong> Exposes corruption, wrongdoing, and holds power accountable.</li><li><strong>Public Sphere — सार्वजनिक क्षेत्र:</strong> Provides a platform for public debate and discussion.</li><li><strong>Informed Citizenry — सूचित नागरिक:</strong> Provides information needed for citizens to make informed decisions.</li><li><strong>Diverse Voices — विविध आवाज़ें:</strong> Gives voice to different sections of society.</li><li><strong>Agenda-Setter — एजेंडा-सेटर:</strong> Influences what issues are considered important in public discourse.</li></ul><p><strong>Challenges to Media in Democracy:</strong></p><ul class="bullet-list"><li>Media ownership concentration</li><li>Commercialisation and sensationalism</li><li>Fake news and misinformation</li><li>Political bias and partisanship</li><li>Censorship and press freedom issues</li><li>Digital divide and unequal access</li></ul></div>
+
+      <div id="media-ethics" class="topic-card"><div class="sec-head"><span class="sec-num">12</span><h2>Media Ethics — मीडिया नैतिकता</h2></div><ul class="bullet-list"><li><strong>Truthfulness — सत्यता:</strong> Reporting facts accurately, not spreading falsehoods.</li><li><strong>Objectivity — वस्तुनिष्ठता:</strong> Presenting information without bias, avoiding sensationalism.</li><li><strong>Fairness and Balance — निष्पक्षता और संतुलन:</strong> Giving all sides a fair hearing.</li><li><strong>Accountability — उत्तरदायित्व:</strong> Accepting responsibility for what is published or broadcast.</li><li><strong>Privacy — निजता:</strong> Respecting individuals' right to privacy.</li><li><strong>Public Interest — जनहित:</strong> Serving the public interest, not private or commercial interests.</li><li><strong>Conflict of Interest — हितों का टकराव:</strong> Avoiding situations where personal interests conflict with professional duty.</li><li><strong>Verification — सत्यापन:</strong> Checking facts before publishing.</li><li><strong>Correction — सुधार:</strong> Correcting mistakes promptly and transparently.</li><li><strong>Independence — स्वतंत्रता:</strong> Independence from political and commercial pressures.</li><li><strong>Do No Harm — कोई नुकसान न करें:</strong> Avoid causing unnecessary harm to individuals or groups.</li></ul></div>
+
+      <div id="digital-media" class="topic-card"><div class="sec-head"><span class="sec-num">13</span><h2>Digital Media — डिजिटल मीडिया</h2></div><p><strong>Digital/New Media</strong> Internet-based platforms, social media, blogs, podcasts, streaming, and mobile apps.</p><p><strong>Characteristics:</strong></p><ul class="bullet-list"><li><strong>Interactivity — अंतःक्रियाशीलता:</strong> Users can comment, share, and engage.</li><li><strong>Immediacy — तात्कालिकता:</strong> Instantaneous sharing and feedback.</li><li><strong>User-Generated Content — उपयोगकर्ता-निर्मित सामग्री:</strong> Anyone can create and share content.</li><li><strong>Personalization — व्यक्तिगतकरण:</strong> Algorithms tailor content to individual users.</li><li><strong>Global Reach — वैश्विक पहुँच:</strong> Content can reach anyone, anywhere.</li><li><strong>Multimedia — मल्टीमीडिया:</strong> Text, images, video, audio combined.</li><li><strong>Hyperlinks — हाइपरलिंक्स:</strong> Connected information.</li></ul><p><strong>Challenges of Digital Media:</strong></p><ul class="bullet-list"><li>Fake news and misinformation spread faster</li><li>Echo chambers and filter bubbles</li><li>Privacy and data security concerns</li><li>Algorithmic bias</li><li>Digital divide — unequal access</li><li>Online harassment and trolling</li><li>Copyright and intellectual property issues</li></ul></div>
+
+      <div id="exam-traps" class="topic-card"><div class="sec-head"><span class="sec-num">14</span><h2>Common Exam Traps — सामान्य परीक्षा जाल</h2></div><ul class="bullet-list"><li><strong>Trap 1:</strong> Mass communication = interpersonal communication → ❌ Mass communication is to a large, anonymous audience; interpersonal is between individuals.</li><li><strong>Trap 2:</strong> Media always has direct, powerful effects → ❌ Not all effects are direct; audiences are active (Uses & Gratifications).</li><li><strong>Trap 3:</strong> Cultivation theory = immediate effects → ❌ Cultivation is about long-term effects of television viewing.</li><li><strong>Trap 4:</strong> Agenda-setting = telling people what to think → ❌ It tells people what to think about, not what to think.</li><li><strong>Trap 5:</strong> Spiral of Silence = only about media → ❌ It involves media, public opinion, and social psychology.</li><li><strong>Trap 6:</strong> Mass media only includes TV and newspapers → ❌ Mass media includes print, broadcast, digital, outdoor, and traditional media.</li><li><strong>Trap 7:</strong> Media ethics = censorship → ❌ Media ethics is about responsible reporting, not censorship.</li><li><strong>Trap 8:</strong> New media = automatically better → ❌ New media has its own challenges (fake news, echo chambers, privacy).</li></ul></div>
+
+      <div id="practice-questions" class="topic-card"><div class="sec-head"><span class="sec-num">15</span><h2>Practice Questions — अभ्यास प्रश्न</h2></div>
+      <div class="pyq-tag">Question 1</div>
+      <p>Which theory suggests that media tells us what to think about, not what to think?</p>
+      <ul class="bullet-list"><li>A. Cultivation Theory</li><li>B. Agenda-Setting Theory</li><li>C. Uses and Gratifications</li><li>D. Spiral of Silence</li></ul>
+      <div class="answer-box">Answer: B. Agenda-Setting Theory</div>
+      <p class="explain">Explanation: McCombs & Shaw's Agenda-Setting Theory states that media sets the agenda by telling people what issues are important.</p>
+
+      <div class="pyq-tag">Question 2</div>
+      <p>George Gerbner is associated with which theory?</p>
+      <ul class="bullet-list"><li>A. Agenda-Setting</li><li>B. Cultivation Theory</li><li>C. Uses and Gratifications</li><li>D. Spiral of Silence</li></ul>
+      <div class="answer-box">Answer: B. Cultivation Theory</div>
+      <p class="explain">Explanation: George Gerbner developed Cultivation Theory, which studies the long-term effects of television on viewers' perception of reality.</p>
+
+      <div class="pyq-tag">Question 3</div>
+      <p>According to Uses and Gratifications Theory, audiences are:</p>
+      <ul class="bullet-list"><li>A. Passive and easily influenced</li><li>B. Active and use media to satisfy needs</li><li>C. Completely unaffected by media</li><li>D. Only interested in entertainment</li></ul>
+      <div class="answer-box">Answer: B. Active and use media to satisfy needs</div>
+      <p class="explain">Explanation: Uses and Gratifications Theory views audiences as active consumers who use media to fulfill specific needs (cognitive, affective, social, etc.).</p>
+
+      <div class="pyq-tag">Question 4</div>
+      <p>Which theory explains why people may remain silent about opinions they think are in the minority?</p>
+      <ul class="bullet-list"><li>A. Cultivation Theory</li><li>B. Agenda-Setting</li><li>C. Spiral of Silence</li><li>D. Two-Step Flow</li></ul>
+      <div class="answer-box">Answer: C. Spiral of Silence</div>
+      <p class="explain">Explanation: Noelle-Neumann's Spiral of Silence theory explains how fear of isolation leads people to hide minority opinions.</p>
+
+      <div class="pyq-tag">Question 5</div>
+      <p>Which of the following is NOT a function of mass media?</p>
+      <ul class="bullet-list"><li>A. Information</li><li>B. Entertainment</li><li>C. Persuasion</li><li>D. Physical exercise</li></ul>
+      <div class="answer-box">Answer: D. Physical exercise</div>
+      <p class="explain">Explanation: Information, entertainment, and persuasion are functions of mass media. Physical exercise is not a media function.</p>
+
+      <div class="pyq-tag">Question 6</div>
+      <p>Media is considered the ________ pillar of democracy.</p>
+      <ul class="bullet-list"><li>A. First</li><li>B. Second</li><li>C. Third</li><li>D. Fourth</li></ul>
+      <div class="answer-box">Answer: D. Fourth</div>
+      <p class="explain">Explanation: Media is called the Fourth Estate/Fourth Pillar of democracy (along with Legislature, Executive, and Judiciary).</p></div>
+
+      <div id="one-page-revision" class="topic-card"><div class="sec-head"><span class="sec-num">16</span><h2>One-Page Revision — एक पेज में पुनरावृत्ति</h2></div>
+      <div class="formula-box">Mass Communication = Large Audience + Mass Media + Delayed Feedback</div>
+
+      <p><strong>Mass Media Functions:</strong></p>
+      <ul class="bullet-list"><li>Inform + Educate + Entertain + Persuade + Socialize + Watchdog</li></ul>
+
+      <p><strong>Media Types:</strong></p>
+      <ul class="bullet-list"><li>Print, Broadcast, Digital/New, Outdoor, Traditional</li></ul>
+
+      <p><strong>Key Theories:</strong></p>
+      <ul class="bullet-list"><li><strong>Cultivation (Gerbner):</strong> Long-term TV effects → distorted reality perception</li><li><strong>Agenda-Setting (McCombs & Shaw):</strong> Media tells us what to think about</li><li><strong>Uses & Gratifications (Katz et al.):</strong> Active audience uses media to fulfill needs</li><li><strong>Spiral of Silence (Noelle-Neumann):</strong> Fear of isolation → minority opinions hidden</li><li><strong>Two-Step Flow (Lazarsfeld & Katz):</strong> Media → Opinion Leaders → Public</li></ul>
+
+      <p><strong>Media & Democracy:</strong></p>
+      <ul class="bullet-list"><li>Fourth Pillar, Watchdog, Public Sphere, Informed Citizenry</li></ul>
+
+      <p><strong>Media Ethics:</strong></p>
+      <ul class="bullet-list"><li>Truthfulness, Objectivity, Fairness, Accountability, Privacy, Public Interest</li></ul>
+
+      <p><strong>Digital Media:</strong></p>
+      <ul class="bullet-list"><li>Interactivity, Immediacy, UGC, Personalization, Global Reach</li></ul>
+
+      <p><strong>Exam Formula:</strong></p>
+      <div class="formula-box">Mass Communication = Large + Anonymous + Diverse + Media + Delayed Feedback</div>
+      <p><em>UGC NET में Mass Communication के questions theories, functions, types of media, and media effects पर based होते हैं।</em></p></div>
+
+      <div class="enroll-cta"><div><h3 class="h-display">Join the Paper-1 Batch</h3><p>Course fee FREE — ₹500 registration & academic/logistics contribution. Classes daily at 6:30 PM.</p></div><a href="#" class="btn-gold">✓ JOIN BATCH @ ₹500</a></div>
+    </div>
+  </div>
+</main>
+
+<script>
+(function() {
+
+  const BASE_PATH =
+    "/tutorials/communication/mass-communication-media-society";
+
+  const links = document.querySelectorAll(".nav-link");
+  const cards = document.querySelectorAll(".topic-card");
+  const content = document.getElementById("contentArea");
+  const sidebarToggle = document.getElementById("sidebar-toggle");
+
+
+  // Get topic slug from current URL
+  function getSlugFromPath() {
+
+    const path = window.location.pathname
+      .replace(/\/+$/, "");
+
+    if (path.startsWith(BASE_PATH + "/")) {
+
+      return path
+        .substring((BASE_PATH + "/").length)
+        .split("/")[0];
+
+    }
+
+    return null;
+  }
+
+
+  // Update browser URL
+  function updateUrl(slug, replace = false) {
+
+    const newPath =
+      BASE_PATH + "/" + slug;
+
+    if (window.location.pathname !== newPath) {
+
+      if (replace) {
+        history.replaceState(null, "", newPath);
+      } else {
+        history.pushState(null, "", newPath);
+      }
+
+    }
+  }
+
+
+  // Update active sidebar link
+  function updateActiveLink(slug) {
+
+    links.forEach(function(link) {
+
+      const href =
+        link.getAttribute("href");
+
+      if (!href) return;
+
+      const linkSlug =
+        href
+          .split("/")
+          .filter(Boolean)
+          .pop();
+
+      link.classList.toggle(
+        "active",
+        linkSlug === slug
+      );
+
+    });
+  }
+
+
+  // Show selected topic card
+  function showCard(slug, updateHistory = true) {
+
+    cards.forEach(function(card) {
+      card.classList.add("hidden");
+    });
+
+
+    const target =
+      document.getElementById(slug);
+
+
+    // Topic not found
+    if (!target) {
+
+      const first = cards[0];
+
+      if (first) {
+
+        first.classList.remove("hidden");
+
+        const firstSlug = first.id;
+
+        updateActiveLink(firstSlug);
+
+        updateUrl(firstSlug, true);
+
+      }
+
+      return;
+    }
+
+
+    // Show selected topic
+    target.classList.remove("hidden");
+
+    updateActiveLink(slug);
+
+
+    // Update URL
+    if (updateHistory) {
+      updateUrl(slug);
+    }
+
+
+    // Close mobile sidebar
+    if (sidebarToggle) {
+      sidebarToggle.checked = false;
+    }
+
+
+    // Scroll to content
+    if (content) {
+
+      const top =
+        content.getBoundingClientRect().top +
+        window.pageYOffset -
+        10;
+
+      window.scrollTo({
+        top: top,
+        behavior: "smooth"
+      });
+
+    }
+
+  }
+
+
+  // Sidebar link click
+  links.forEach(function(link) {
+
+    link.addEventListener("click", function(e) {
+
+      e.preventDefault();
+
+      const href =
+        this.getAttribute("href");
+
+      if (!href) return;
+
+
+      const slug =
+        href
+          .split("/")
+          .filter(Boolean)
+          .pop();
+
+
+      if (!slug) return;
+
+
+      console.log("Clicked topic:", slug);
+
+      showCard(slug, true);
+
+    });
+
+  });
+
+
+  // Initial page load
+  function initFromPath() {
+
+    let slug =
+      getSlugFromPath();
+
+
+    if (
+      !slug ||
+      !document.getElementById(slug)
+    ) {
+
+      slug =
+        cards[0]?.id ||
+        "mass-communication-meaning";
+
+    }
+
+
+    // Show topic without creating history entry
+    showCard(slug, false);
+
+
+    // Set correct nested URL
+    updateUrl(slug, true);
+
+  }
+
+
+  initFromPath();
+
+
+  // Browser Back / Forward
+  window.addEventListener(
+    "popstate",
+    function() {
+
+      const slug =
+        getSlugFromPath();
+
+
+      if (
+        slug &&
+        document.getElementById(slug)
+      ) {
+
+        showCard(slug, false);
+
+      } else {
+
+        const firstSlug =
+          cards[0]?.id ||
+          "mass-communication-meaning";
+
+        showCard(firstSlug, false);
+
+      }
+
+    }
+  );
+
+
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Methods of Teaching – Full Notes | UGC NET Paper-1</title>
+  <meta name="description" content="Complete methods of teaching tutorial: teacher-centred vs learner-centred, offline vs online, synchronous vs asynchronous, MOOCs, SWAYAM, SWAYAM Prabha for UGC NET Paper-1.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; }
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background: #f8f5ee;
+      color: #101a3d;
+    }
+    .h-display { font-family: 'Poppins', sans-serif; font-weight: 800; letter-spacing: -0.01em; }
+    .container { max-width: 1360px; margin: 0 auto; padding: 0 20px; }
+
+    .hero {
+      background: #0b1330;
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+      padding: 28px 0 22px;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      right: -80px;
+      top: -100px;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(232,183,75,0.2), transparent 70%);
+    }
+    .hero-inner { position: relative; }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      padding: 6px 16px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+      color: #e8b74b;
+    }
+    .hero h1 {
+      font-size: clamp(28px, 4.2vw, 44px);
+      margin: 12px 0 6px;
+    }
+    .hero p {
+      color: rgba(255,255,255,0.78);
+      max-width: 680px;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 28px;
+      padding: 28px 0 50px;
+      align-items: start;
+    }
+    @media (max-width: 980px) {
+      .layout { grid-template-columns: 1fr; }
+    }
+
+    .sidebar {
+      position: sticky;
+      top: 16px;
+      max-height: calc(100vh - 40px);
+      overflow-y: auto;
+      background: #fff;
+      border: 1px solid rgba(16,26,61,0.08);
+      border-radius: 16px;
+      padding: 16px 12px;
+      box-shadow: 0 6px 24px rgba(16,26,61,0.05);
+    }
+    .sidebar::-webkit-scrollbar { width: 5px; }
+    .sidebar::-webkit-scrollbar-thumb { background: #dde2ef; border-radius: 8px; }
+    .sidebar-title {
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: #b9852a;
+      padding: 4px 10px 14px;
+    }
+    .nav-link {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 10px;
+      border-radius: 10px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #33406b;
+      line-height: 1.3;
+      transition: 0.1s;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .nav-link:hover { background: #f4f6fc; color: #0b1330; }
+    .nav-link.active {
+      background: #fdf6e7;
+      color: #0b1330;
+    }
+    .nav-num {
+      flex: none;
+      width: 22px;
+      height: 22px;
+      border-radius: 7px;
+      background: #e7eaf5;
+      color: #5b6690;
+      font-size: 11px;
+      font-weight: 800;
+      display: grid;
+      place-items: center;
+    }
+    .nav-link.active .nav-num {
+      background: #e8b74b;
+      color: #0b1330;
+    }
+
+    #sidebar-toggle { display: none; }
+    .mobile-bar { display: none; }
+    @media (max-width: 980px) {
+      .mobile-bar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: #fff;
+        border: 1px solid rgba(16,26,61,0.1);
+        border-radius: 12px;
+        padding: 12px 16px;
+        margin-bottom: 8px;
+        font-weight: 800;
+        font-size: 13.5px;
+        color: #0b1330;
+      }
+      .sidebar { display: none; position: static; max-height: none; }
+      #sidebar-toggle:checked ~ .layout .sidebar { display: block; }
+    }
+
+    .content { min-width: 0; }
+    .topic-card {
+      background: #fff;
+      border: 1px solid rgba(16,26,61,0.08);
+      border-radius: 16px;
+      padding: 20px 20px 16px;
+      margin-bottom: 18px;
+      scroll-margin-top: 20px;
+      display: block;
+    }
+    .topic-card.hidden { display: none; }
+    .sec-head {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+    .sec-num {
+      flex: none;
+      width: 34px;
+      height: 34px;
+      border-radius: 10px;
+      background: #0b1330;
+      color: #e8b74b;
+      font-weight: 800;
+      font-size: 14px;
+      display: grid;
+      place-items: center;
+    }
+    .sec-head h2 {
+      margin: 0;
+      font-size: 19px;
+      font-weight: 800;
+      color: #0b1330;
+    }
+    .topic-card p {
+      font-size: 14.5px;
+      line-height: 1.75;
+      color: #1a254a;
+      margin: 6px 0;
+    }
+    .bullet-list {
+      margin: 8px 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 5px;
+    }
+    .bullet-list li {
+      position: relative;
+      padding-left: 20px;
+      font-size: 14px;
+      line-height: 1.6;
+      color: #1a254a;
+    }
+    .bullet-list li::before {
+      content: "";
+      position: absolute;
+      left: 2px;
+      top: 9px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #d9a53a;
+    }
+    .formula-box {
+      background: #0b1330;
+      color: #fdeec2;
+      font-weight: 700;
+      font-size: 13.6px;
+      padding: 10px 16px;
+      border-radius: 10px;
+      margin: 10px 0;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 12px 0;
+      font-size: 13.6px;
+      display: block;
+      overflow-x: auto;
+    }
+    .data-table th, .data-table td {
+      border: 1px solid #e7eaf5;
+      padding: 8px 12px;
+      text-align: left;
+      color: #1a254a;
+      white-space: normal;
+    }
+    .data-table th {
+      background: #f4f6fc;
+      color: #0b1330;
+      font-weight: 800;
+    }
+    .pyq-tag {
+      display: inline-block;
+      background: #fdf6e7;
+      color: #b9852a;
+      font-weight: 800;
+      font-size: 12px;
+      padding: 4px 12px;
+      border-radius: 8px;
+      margin: 12px 0 6px;
+    }
+    .answer-box {
+      background: #eefaf2;
+      border: 1px solid #bfe8cc;
+      color: #1a7a4c;
+      font-weight: 700;
+      font-size: 13.6px;
+      padding: 6px 14px;
+      border-radius: 9px;
+      margin: 6px 0;
+    }
+    .explain {
+      background: #f4f6fc;
+      border-radius: 9px;
+      padding: 6px 14px;
+      font-size: 13.6px;
+      color: #1a254a;
+    }
+    .subtopic {
+      padding: 14px 0 6px;
+      border-top: 1px dashed #e7eaf5;
+    }
+    .subtopic:first-of-type { border-top: none; padding-top: 2px; }
+    .subhead {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 6px;
+    }
+    .sub-num {
+      flex: none;
+      width: 26px;
+      height: 26px;
+      border-radius: 8px;
+      background: #fdf6e7;
+      color: #b9852a;
+      font-weight: 800;
+      font-size: 12px;
+      display: grid;
+      place-items: center;
+    }
+    .subhead h3 {
+      margin: 0;
+      font-size: 15.5px;
+      font-weight: 800;
+      color: #0b1330;
+    }
+    .enroll-cta {
+      background: #0b1330;
+      color: #fff;
+      border-radius: 16px;
+      padding: 24px 24px;
+      margin-top: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+      overflow: hidden;
+    }
+    .enroll-cta::before {
+      content: "";
+      position: absolute;
+      right: -40px;
+      top: -40px;
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(232,183,75,0.2), transparent 70%);
+    }
+    .enroll-cta h3 { margin: 0 0 4px; font-size: 20px; }
+    .enroll-cta p { margin: 0; color: rgba(255,255,255,0.75); font-size: 13.5px; max-width: 480px; }
+    .btn-gold {
+      background: #e8b74b;
+      color: #0b1330;
+      font-weight: 800;
+      padding: 10px 22px;
+      border-radius: 10px;
+      font-size: 13.5px;
+      white-space: nowrap;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="container hero-inner">
+    <span class="eyebrow">★ UGC NET Paper-I · Teaching Aptitude</span>
+    <h1 class="h-display">Methods of Teaching in Institutions of Higher Learning</h1>
+    <p>Complete tutorial: teacher-centred vs learner-centred, offline vs online, synchronous vs asynchronous, MOOCs, SWAYAM, SWAYAM Prabha, PYQs & more.</p>
+  </div>
+</section>
+
+<main class="container">
+  <input type="checkbox" id="sidebar-toggle">
+  <label for="sidebar-toggle" class="mobile-bar">
+    <span>📑 On this page</span>
+    <span>☰ Menu</span>
+  </label>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebarNav">
+      <p class="sidebar-title">On this page</p>
+      <nav>
+        <a href="/tutorials/teaching-aptitude/Methods-of-teaching-in-higher-institutions/meaning-teaching-method" class="nav-link active"><span class="nav-num">1</span>Meaning of Teaching Method</a>
+        <a href="/tutorials/teaching-aptitude/Methods-of-teaching-in-higher-institutions/classification-methods" class="nav-link"><span class="nav-num">2</span>Classification of Methods</a>
+        <a href="/tutorials/teaching-aptitude/Methods-of-teaching-in-higher-institutions/teacher-centred" class="nav-link"><span class="nav-num">3</span>Teacher-Centred Method</a>
+        <a href="/tutorials/teaching-aptitude/Methods-of-teaching-in-higher-institutions/lecture-method" class="nav-link"><span class="nav-num">4</span>Lecture Method</a>
+        <a href="/tutorials/teaching-aptitude/Methods-of-teaching-in-higher-institutions/demonstration-method" class="nav-link"><span class="nav-num">5</span>Demonstration Method</a>
+        <a href="/tutorials/teaching-aptitude/Methods-of-teaching-in-higher-institutions/direct-instruction" class="nav-link"><span class="nav-num">6</span>Direct Instruction</a>
+        <a href="/tutorials/teaching-aptitude/Methods-of-teaching-in-higher-institutions/teacher-centred-characteristics" class="nav-link"><span class="nav-num">7</span>Characteristics (Teacher-Centred)</a>
+        <a href="/tutorials/teaching-aptitude/Methods-of-teaching-in-higher-institutions/learner-centred" class="nav-link"><span class="nav-num">8</span>Learner-Centred Method</a>
+        <a href="/tutorials/teaching-aptitude/Methods-of-teaching-in-higher-institutions/learner-centred-methods" class="nav-link"><span class="nav-num">9</span>Learner-Centred Methods</a>
+        <a href="/tutorials/teaching-aptitude/Methods-of-teaching-in-higher-institutions/discussion-method" class="nav-link"><span class="nav-num">10</span>Discussion Method</a>
+        <a href="/tutorials/teaching-aptitude/Methods-of-teaching-in-higher-institutions/project-method" class="nav-link"><span class="nav-num">11</span>Project Method</a>
+        <a href="/tutorials/teaching-aptitude/Methods-of-teaching-in-higher-institutions/problem-solving" class="nav-link"><span class="nav-num">12</span>Problem Solving Method</a>
+        <a href="/tutorials/teaching-aptitude/Methods-of-teaching-in-higher-institutions/case-study" class="nav-link"><span class="nav-num">13</span>Case Study Method</a>
+        <a href="/tutorials/teaching-aptitude/Methods-of-teaching-in-higher-institutions/cooperative-learning" class="nav-link"><span class="nav-num">14</span>Cooperative Learning</a>
+        <a href="/tutorials/teaching-aptitude/Methods-of-teaching-in-higher-institutions/collaborative-learning" class="nav-link"><span class="nav-num">15</span>Collaborative Learning</a>
+        <a href="/tutorials/teaching-aptitude/Methods-of-teaching-in-higher-institutions/seminar-tutorial" class="nav-link"><span class="nav-num">16</span>Seminar & Tutorial</a>
+        <a href="/tutorials/teaching-aptitude/Methods-of-teaching-in-higher-institutions/flipped-classroom" class="nav-link"><span class="nav-num">17</span>Flipped Classroom</a>
+        <a href="/tutorials/teaching-aptitude/Methods-of-teaching-in-higher-institutions/teacher-vs-learner-centred" class="nav-link"><span class="nav-num">18</span>Teacher vs Learner Centred</a>
+        <a href="/tutorials/teaching-aptitude/Methods-of-teaching-in-higher-institutions/offline-teaching" class="nav-link"><span class="nav-num">19</span>Offline Teaching</a>
+        <a href="/tutorials/teaching-aptitude/Methods-of-teaching-in-higher-institutions/online-teaching" class="nav-link"><span class="nav-num">20</span>Online Teaching</a>
+        <a href="/tutorials/teaching-aptitude/Methods-of-teaching-in-higher-institutions/synchronous-asynchronous" class="nav-link"><span class="nav-num">21</span>Synchronous & Asynchronous</a>
+        <a href="/tutorials/teaching-aptitude/Methods-of-teaching-in-higher-institutions/offline-vs-online" class="nav-link"><span class="nav-num">22</span>Offline vs Online</a>
+        <a href="/tutorials/teaching-aptitude/Methods-of-teaching-in-higher-institutions/blended-learning" class="nav-link"><span class="nav-num">23</span>Blended Learning</a>
+        <a href="/tutorials/teaching-aptitude/Methods-of-teaching-in-higher-institutions/mooc" class="nav-link"><span class="nav-num">24</span>MOOC</a>
+        <a href="/tutorials/teaching-aptitude/Methods-of-teaching-in-higher-institutions/swayam" class="nav-link"><span class="nav-num">25</span>SWAYAM</a>
+        <a href="/tutorials/teaching-aptitude/Methods-of-teaching-in-higher-institutions/swayam-coordinators" class="nav-link"><span class="nav-num">26</span>SWAYAM Coordinators</a>
+        <a href="/tutorials/teaching-aptitude/Methods-of-teaching-in-higher-institutions/swayam-prabha" class="nav-link"><span class="nav-num">27</span>SWAYAM Prabha</a>
+        <a href="/tutorials/teaching-aptitude/Methods-of-teaching-in-higher-institutions/applications-higher-education" class="nav-link"><span class="nav-num">28</span>Applications in Higher Education</a>
+        <a href="/tutorials/teaching-aptitude/Methods-of-teaching-in-higher-institutions/important-exam-points" class="nav-link"><span class="nav-num">29</span>Important Exam Points</a>
+        <a href="/tutorials/teaching-aptitude/Methods-of-teaching-in-higher-institutions/common-exam-traps" class="nav-link"><span class="nav-num">30</span>Common Exam Traps</a>
+        <a href="/tutorials/teaching-aptitude/Methods-of-teaching-in-higher-institutions/verified-pyqs" class="nav-link"><span class="nav-num">31</span>Verified PYQs</a>
+        <a href="/tutorials/teaching-aptitude/Methods-of-teaching-in-higher-institutions/pyq-trend-analysis" class="nav-link"><span class="nav-num">32</span>PYQ Trend Analysis</a>
+        <a href="/tutorials/teaching-aptitude/Methods-of-teaching-in-higher-institutions/expected-mcqs" class="nav-link"><span class="nav-num">33</span>Expected MCQs</a>
+        <a href="/tutorials/teaching-aptitude/Methods-of-teaching-in-higher-institutions/one-page-revision" class="nav-link"><span class="nav-num">34</span>One-Page Revision</a>
+      </nav>
+    </aside>
+
+    <div class="content" id="contentArea">
+      <!-- ===== CARDS ===== -->
+      <div id="meaning-teaching-method" class="topic-card"><div class="sec-head"><span class="sec-num">1</span><h2>Meaning of Teaching Method</h2></div><p><strong>Teaching Method</strong> से आशय उस व्यवस्थित प्रक्रिया से है जिसके माध्यम से teacher निर्धारित learning objectives प्राप्त करने के लिए content, activities, resources, communication और assessment को organise करता है।</p><div class="formula-box">Teaching Method = Objectives + Content + Learner Needs + Learning Activities + Assessment</div><p>कोई एक method प्रत्येक subject, learner और situation के लिए best नहीं होता।</p><div class="formula-box">Right Method = Objective + Learner + Content + Class Size + Resources + Context</div></div>
+
+      <div id="classification-methods" class="topic-card"><div class="sec-head"><span class="sec-num">2</span><h2>Classification of Teaching Methods</h2></div><ul class="bullet-list"><li><strong>A. Participation basis:</strong> Teacher-centred vs Learner-centred</li><li><strong>B. Delivery Mode:</strong> Offline/Face-to-face, Online, Blended/Hybrid</li><li><strong>C. Communication Timing:</strong> Synchronous vs Asynchronous</li></ul></div>
+
+      <div id="teacher-centred" class="topic-card"><div class="sec-head"><span class="sec-num">3</span><h2>Teacher-Centred Method</h2></div><div class="formula-box">Teacher-centred = Teacher Control + Content Delivery + Uniform Pace + Learner Reception</div><ul class="bullet-list"><li>Teacher is primary source of content</li><li>Controls classroom activities</li><li>Determines teaching pace</li><li>Explains content</li><li>Expects prescribed responses from learners</li><li>Learner role is comparatively receptive</li></ul><p><strong>Methods:</strong> Lecture, Explanation, Demonstration, Direct instruction, Expository method, Chalk and talk, Teacher-led presentation, Drill and practice</p></div>
+
+      <div id="lecture-method" class="topic-card"><div class="sec-head"><span class="sec-num">4</span><h2>Lecture Method</h2></div><p><strong>व्याख्यान विधि</strong> — Teacher systematically oral presentation through information/explanation.</p><ul class="bullet-list"><li><strong>When useful:</strong> Large class, limited time, new topic introduction, expert knowledge, overview, theoretical subjects</li><li><strong>Advantages:</strong> Large number of learners, economical, systematic content, expert insights</li><li><strong>Limitations:</strong> Learner passive, individual differences ignored, limited critical thinking, one-way communication risk</li></ul><p><strong>Exam Trap:</strong> Lecture method is not always ineffective. Short, interactive, well-structured lecture with examples, questions, feedback can be effective.</p></div>
+
+      <div id="demonstration-method" class="topic-card"><div class="sec-head"><span class="sec-num">5</span><h2>Demonstration Method</h2></div><p>Teacher performs a process/experiment/skill; learner observes.</p><p><strong>Examples:</strong> Lab experiment, statistical software operation, teaching skill demo, machine operation, art technique.</p><p><strong>Important:</strong> If teacher only demonstrates → teacher-directed. If learners practice, discuss, get feedback → becomes learner-centred.</p></div>
+
+      <div id="direct-instruction" class="topic-card"><div class="sec-head"><span class="sec-num">6</span><h2>Direct Instruction</h2></div><ul class="bullet-list"><li>State objective</li><li>Explain concept/skill</li><li>Present model</li><li>Guided practice</li><li>Provide feedback</li><li>Independent practice</li></ul><p>This is structured teaching — not merely passive lecture.</p></div>
+
+      <div id="teacher-centred-characteristics" class="topic-card"><div class="sec-head"><span class="sec-num">7</span><h2>Characteristics of Teacher-Centred Teaching</h2></div><ul class="bullet-list"><li>Teacher dominant position</li><li>Emphasis on content and syllabus</li><li>Same content and pace for all</li><li>More verbal presentation</li><li>Limited learner participation</li><li>External discipline</li><li>Teacher-controlled assessment</li><li>Objective/recall-based exams</li><li>Mainly teacher-to-learner communication</li><li>Knowledge transmission orientation</li></ul></div>
+
+      <div id="learner-centred" class="topic-card"><div class="sec-head"><span class="sec-num">8</span><h2>Learner-Centred Method</h2></div><div class="formula-box">Learner-centred = Active Participation + Choice + Experience + Collaboration + Reflection + Responsibility</div><ul class="bullet-list"><li>Learner is active participant</li><li>Teacher role: Facilitator, Guide, Mentor, Resource person, Learning designer</li><li>Learner constructs meaning through activity, experience, interaction</li></ul></div>
+
+      <div id="learner-centred-methods" class="topic-card"><div class="sec-head"><span class="sec-num">9</span><h2>Learner-Centred Methods</h2></div><ul class="bullet-list"><li>Discussion, Project, Problem-solving, Inquiry, Discovery learning, Case study</li><li>Seminar, Tutorial, Workshop, Cooperative learning, Collaborative learning</li><li>Peer teaching, Role-playing, Simulation, Brainstorming, Experiential learning</li><li>Flipped classroom, Research-based learning</li></ul></div>
+
+      <div id="discussion-method" class="topic-card"><div class="sec-head"><span class="sec-num">10</span><h2>Discussion Method</h2></div><p>Structured exchange on an issue, concept or problem.</p><ul class="bullet-list"><li><strong>Develops:</strong> Communication, listening, reasoning, multiple perspectives, critical thinking, respect for disagreement</li></ul></div>
+
+      <div id="project-method" class="topic-card"><div class="sec-head"><span class="sec-num">11</span><h2>Project Method</h2></div><p>Learners plan, collect data, execute and present on a meaningful task/problem.</p><div class="formula-box">Project = Purpose + Planning + Execution + Evaluation</div><p>Associated with <strong>William H. Kilpatrick</strong>, influenced by John Dewey's pragmatist philosophy.</p><ul class="bullet-list"><li><strong>Advantages:</strong> Learning by doing, collaboration, real-life application, research skills, responsibility, creativity</li><li><strong>Limitations:</strong> Time-consuming, unequal participation, difficult assessment, not all concepts efficient</li></ul></div>
+
+      <div id="problem-solving" class="topic-card"><div class="sec-head"><span class="sec-num">12</span><h2>Problem-Solving Method</h2></div><div class="formula-box">Problem Identification → Hypothesis → Evidence → Analysis → Solution → Evaluation</div></div>
+
+      <div id="case-study" class="topic-card"><div class="sec-head"><span class="sec-num">13</span><h2>Case Study Method</h2></div><ul class="bullet-list"><li>Real/realistic situation description given</li><li>Learner: identifies problem, understands stakeholders, compares alternatives, justifies decision</li><li>Useful in management, law, education, medicine, public policy</li></ul></div>
+
+      <div id="cooperative-learning" class="topic-card"><div class="sec-head"><span class="sec-num">14</span><h2>Cooperative Learning</h2></div><p>Structured small groups working towards common objective.</p><ul class="bullet-list"><li><strong>Key Elements:</strong> Positive interdependence, Individual accountability, Face-to-face interaction, Social skills, Group processing</li></ul><p><strong>Exam Trap:</strong> Just seating students in groups is NOT cooperative learning. Common goal AND individual accountability are required.</p></div>
+
+      <div id="collaborative-learning" class="topic-card"><div class="sec-head"><span class="sec-num">15</span><h2>Collaborative Learning</h2></div><p>Learners construct knowledge together. More flexible structure than cooperative learning.</p><table class="data-table"><tr><th>Cooperative Learning</th><th>Collaborative Learning</th></tr><tr><td>More structured</td><td>Relatively flexible</td></tr><tr><td>Teacher may assign roles</td><td>Group negotiates roles</td></tr><tr><td>Individual accountability clear</td><td>Shared knowledge construction primary</td></tr><tr><td>Defined task division</td><td>Joint exploration</td></tr></table></div>
+
+      <div id="seminar-tutorial" class="topic-card"><div class="sec-head"><span class="sec-num">16</span><h2>Seminar & Tutorial</h2></div><ul class="bullet-list"><li><strong>Seminar:</strong> Presentation on selected topic followed by questions and discussion. Suitable for higher education, research presentation, academic communication</li><li><strong>Tutorial:</strong> Small group/individualised interaction focusing on specific difficulties, doubts, progress</li></ul></div>
+
+      <div id="flipped-classroom" class="topic-card"><div class="sec-head"><span class="sec-num">17</span><h2>Flipped Classroom</h2></div><p><strong>Traditional:</strong> Lecture in class → Homework at home</p><p><strong>Flipped:</strong> Content before class → Discussion, application, problem-solving in class</p><p><strong>Example:</strong> Students watch SWAYAM video at home; solve case study in class.</p><p><strong>Exam Trap:</strong> Just sending recorded video is NOT flipped classroom. In-class active learning with pre-class content is required.</p></div>
+
+      <div id="teacher-vs-learner-centred" class="topic-card"><div class="sec-head"><span class="sec-num">18</span><h2>Teacher-Centred vs Learner-Centred</h2></div><table class="data-table"><tr><th>Basis</th><th>Teacher-Centred</th><th>Learner-Centred</th></tr><tr><td>Main focus</td><td>Content delivery</td><td>Learning and development</td></tr><tr><td>Teacher role</td><td>Authority/knowledge source</td><td>Facilitator and guide</td></tr><tr><td>Learner role</td><td>Receiver</td><td>Active participant</td></tr><tr><td>Decision-making</td><td>Mainly teacher</td><td>Shared/learner participation</td></tr><tr><td>Pace</td><td>Uniform</td><td>Flexible where possible</td></tr><tr><td>Communication</td><td>Mostly one-way</td><td>Multi-directional</td></tr><tr><td>Methods</td><td>Lecture, explanation</td><td>Project, discussion, inquiry</td></tr><tr><td>Motivation</td><td>More external</td><td>More internal and meaningful</td></tr><tr><td>Assessment</td><td>Teacher-controlled, product-oriented</td><td>Formative, self/peer, process-oriented</td></tr><tr><td>Classroom</td><td>Controlled</td><td>Participatory and democratic</td></tr></table><p><strong>Important:</strong> Methods are not mutually exclusive. Effective teaching uses <strong>Eclectic Approach</strong> — combination based on objective and context.</p></div>
+
+      <div id="offline-teaching" class="topic-card"><div class="sec-head"><span class="sec-num">19</span><h2>Offline Teaching</h2></div><p><strong>ऑफलाइन अथवा प्रत्यक्ष शिक्षण</strong> — Teacher and learner in physical learning environment.</p><ul class="bullet-list"><li><strong>Examples:</strong> Classroom lecture, Laboratory, Face-to-face seminar, Field visit, Workshop, Tutorial, Library-based learning</li><li><strong>Advantages:</strong> Direct human interaction, immediate doubt resolution, body language easy, hands-on work, socialisation, discipline</li><li><strong>Limitations:</strong> Time/location restrictions, infrastructure required, individualisation hard in large classes, limited reach</li></ul></div>
+
+      <div id="online-teaching" class="topic-card"><div class="sec-head"><span class="sec-num">20</span><h2>Online Teaching</h2></div><p><strong>ऑनलाइन शिक्षण</strong> — Internet and digital technologies for teaching-learning.</p><ul class="bullet-list"><li><strong>Examples:</strong> Live Meet/Zoom class, LMS, SWAYAM, Recorded lecture, Online quiz, Discussion forum, Virtual lab, Webinar, E-content</li><li><strong>Characteristics:</strong> Geographic flexibility, digital content, synchronous/asynchronous, multimedia, online assessment, wider reach</li></ul></div>
+
+      <div id="synchronous-asynchronous" class="topic-card"><div class="sec-head"><span class="sec-num">21</span><h2>Synchronous and Asynchronous Learning</h2></div><ul class="bullet-list"><li><strong>Synchronous (समकालिक):</strong> Same time participation. Examples: Live online class, webinar, real-time chat, video conference. Advantages: Immediate interaction, instant feedback, social presence. Limitations: Fixed time, stable Internet required, time-zone issues.</li><li><strong>Asynchronous (असमकालिक):</strong> Same-time presence not required. Examples: Recorded lecture, e-mail, discussion board, downloadable notes, self-paced MOOC. Advantages: Time flexibility, self-paced, repeatable. Limitations: Delayed feedback, isolation risk, high self-discipline required.</li></ul></div>
+
+      <div id="offline-vs-online" class="topic-card"><div class="sec-head"><span class="sec-num">22</span><h2>Offline vs Online Teaching</h2></div><table class="data-table"><tr><th>Basis</th><th>Offline</th><th>Online</th></tr><tr><td>Presence</td><td>Physical</td><td>Virtual/digital</td></tr><tr><td>Place</td><td>Fixed location</td><td>Flexible location</td></tr><tr><td>Time</td><td>Usually fixed</td><td>Synchronous or asynchronous</td></tr><tr><td>Interaction</td><td>Direct face-to-face</td><td>Technology-mediated</td></tr><tr><td>Feedback</td><td>Immediate</td><td>Immediate or delayed</td></tr><tr><td>Reach</td><td>Geographically limited</td><td>Potentially large/global</td></tr><tr><td>Resources</td><td>Physical</td><td>Digital/multimedia</td></tr><tr><td>Flexibility</td><td>Comparatively less</td><td>Comparatively more</td></tr></table><p><strong>Exam Trap:</strong> Online is not automatically learner-centred. Long one-way online lecture is teacher-centred. Mode and pedagogy are different concepts.</p></div>
+
+      <div id="blended-learning" class="topic-card"><div class="sec-head"><span class="sec-num">23</span><h2>Blended Learning</h2></div><div class="formula-box">Blended Learning = Offline Interaction + Online Flexibility</div><p>Face-to-face and online learning integrated in planned manner.</p><p><strong>Example:</strong> SWAYAM video/reading at home; classroom discussion/problem-solving; online quiz; face-to-face feedback.</p><p><strong>Exam Trap:</strong> Uploading classroom lecture recording is NOT meaningful blended learning. Purposeful integration of both modes is required.</p></div>
+
+      <div id="mooc" class="topic-card"><div class="sec-head"><span class="sec-num">24</span><h2>MOOC</h2></div><p><strong>Massive Open Online Course</strong></p><ul class="bullet-list"><li><strong>Massive:</strong> Large number of learners</li><li><strong>Open:</strong> Relatively open access (but "open" ≠ always free)</li><li><strong>Online:</strong> Digital platform delivery</li><li><strong>Course:</strong> Structured content, activities, assessment, learning outcomes</li></ul><p><strong>Examples:</strong> SWAYAM, NPTEL, Coursera, edX, FutureLearn</p><ul class="bullet-list"><li><strong>Advantages:</strong> Wider access, flexibility, lifelong learning, self-paced, affordable, repeat viewing</li><li><strong>Limitations:</strong> Digital divide, low completion, isolation, limited personal interaction, self-regulation needed, assessment credibility</li></ul></div>
+
+      <div id="swayam" class="topic-card"><div class="sec-head"><span class="sec-num">25</span><h2>SWAYAM</h2></div><p><strong>Study Webs of Active Learning for Young Aspiring Minds</strong></p><p>Government of India's national online learning platform for access, equity and quality.</p><p><strong>Four Quadrants:</strong></p><div class="formula-box">SWAYAM = Watch + Read + Test + Discuss</div><ul class="bullet-list"><li><strong>Quadrant 1 (Watch):</strong> Video lecture, demonstrations, audio-video, animations</li><li><strong>Quadrant 2 (Read):</strong> E-text, downloadable notes, references, transcripts</li><li><strong>Quadrant 3 (Test):</strong> Quiz, MCQ, assignment, practice test</li><li><strong>Quadrant 4 (Discuss):</strong> Doubt clarification, learner interaction, academic discussion, instructor support</li></ul></div>
+
+      <div id="swayam-coordinators" class="topic-card"><div class="sec-head"><span class="sec-num">26</span><h2>SWAYAM National Coordinators</h2></div><table class="data-table"><tr><th>Coordinator</th><th>Assigned Area</th></tr><tr><td><strong>AICTE</strong></td><td>Self-paced and international courses</td></tr><tr><td><strong>NPTEL</strong></td><td>Engineering</td></tr><tr><td><strong>UGC</strong></td><td>Non-technical postgraduate education</td></tr><tr><td><strong>CEC</strong></td><td>Undergraduate education</td></tr><tr><td><strong>NCERT</strong></td><td>School education</td></tr><tr><td><strong>NIOS</strong></td><td>School education</td></tr><tr><td><strong>IGNOU</strong></td><td>Out-of-school learners</td></tr><tr><td><strong>IIM Bangalore</strong></td><td>Management studies</td></tr><tr><td><strong>NITTTR</strong></td><td>Teacher training</td></tr></table><div class="formula-box">Engineering → NPTEL | UG → CEC | Non-technical PG → UGC | Management → IIM Bangalore | Teacher Training → NITTTR</div></div>
+
+      <div id="swayam-prabha" class="topic-card"><div class="sec-head"><span class="sec-num">27</span><h2>SWAYAM Prabha</h2></div><p>Free DTH-based educational service with 280+ free 24×7 educational DTH channels.</p><ul class="bullet-list"><li>DTH-based delivery</li><li>24×7 educational telecast</li><li>Higher education, school education, competitive examinations</li><li>Useful for remote areas</li><li>Less Internet dependency</li><li>Scheduled broadcast with repeated content</li></ul><table class="data-table"><tr><th>Basis</th><th>SWAYAM</th><th>SWAYAM Prabha</th></tr><tr><td>Nature</td><td>Online MOOC platform</td><td>Educational DTH channels</td></tr><tr><td>Medium</td><td>Internet/web</td><td>Satellite television/DTH</td></tr><tr><td>Interaction</td><td>Quiz, forum, assignments</td><td>Primarily broadcast</td></tr><tr><td>Learning</td><td>On-demand/self-paced</td><td>Scheduled telecast</td></tr><tr><td>Internet</td><td>Generally required</td><td>Not required for core DTH reception</td></tr></table></div>
+
+      <div id="applications-higher-education" class="topic-card"><div class="sec-head"><span class="sec-num">28</span><h2>Applications in Higher Education</h2></div><ul class="bullet-list"><li><strong>Wider Access:</strong> Remote and working learners</li><li><strong>Supplementary Learning:</strong> University teaching with SWAYAM videos, readings, quizzes</li><li><strong>Credit Learning:</strong> Approved SWAYAM courses under UGC framework</li><li><strong>Faculty Development:</strong> Professional knowledge, digital pedagogy, subject updates</li><li><strong>Flipped Classroom:</strong> Pre-class online + in-class application</li><li><strong>Research Training:</strong> Research methodology, statistical software, academic writing, research ethics, data analysis, literature review</li><li><strong>Inclusive & Lifelong Learning:</strong> Working professionals, adult learners, geographically isolated</li></ul></div>
+
+      <div id="important-exam-points" class="topic-card"><div class="sec-head"><span class="sec-num">29</span><h2>Important Exam Points</h2></div><ul class="bullet-list"><li>Teacher-centred: teacher primary decision-maker</li><li>Learner-centred: teacher facilitator</li><li>Project work and group discussion → learner-centred</li><li>Lecture method → generally teacher-centred</li><li>Online is NOT automatically learner-centred</li><li>Offline is NOT automatically teacher-centred</li><li>Synchronous = same time; Asynchronous = own time</li><li>MOOC = Massive Open Online Course</li><li>SWAYAM = Indian online MOOC platform</li><li>SWAYAM four quadrants: Video, Reading, Self-Assessment, Discussion</li><li>SWAYAM Prabha = DTH educational broadcasting</li><li>NPTEL = Engineering; CEC = UG; UGC = Non-technical PG; IIM Bangalore = Management; NITTTR = Teacher Training</li><li>Blended = planned offline + online integration</li><li>Flipped = content before class + application in class</li><li>"Open" ≠ every course certificate/exam is free</li></ul></div>
+
+      <div id="common-exam-traps" class="topic-card"><div class="sec-head"><span class="sec-num">30</span><h2>Common Exam Traps</h2></div><table class="data-table"><tr><th>Misleading Statement</th><th>Correct Position</th></tr><tr><td>Every online class is learner-centred</td><td>Online lecture can be teacher-centred</td></tr><tr><td>Lecture method is always ineffective</td><td>Well-designed interactive lecture can be effective</td></tr><tr><td>Teacher has no role in learner-centred teaching</td><td>Teacher is facilitator, designer, mentor</td></tr><tr><td>Every MOOC offers academic credit</td><td>Only approved courses under regulations</td></tr><tr><td>Every MOOC certificate is free</td><td>Course access and certification fee may differ</td></tr><tr><td>SWAYAM and SWAYAM Prabha are identical</td><td>SWAYAM = online platform; SWAYAM Prabha = DTH service</td></tr><tr><td>Recorded video alone is flipped learning</td><td>In-class active application also required</td></tr><tr><td>Group seating means cooperative learning</td><td>Positive interdependence + accountability required</td></tr><tr><td>Blended learning means adding technology</td><td>Planned pedagogical integration required</td></tr></table></div>
+
+      <div id="verified-pyqs" class="topic-card"><div class="sec-head"><span class="sec-num">31</span><h2>Verified PYQs</h2></div><div class="pyq-tag">PYQ 1: UGC NET, 6 Dec 2019, Shift 2</div><p><strong>Question:</strong> MOOC platform created by MHRD, Government of India?<br> <strong>Answer:</strong> SWAYAM</p><div class="pyq-tag">PYQ 2: UGC NET, 24 Nov 2021, Shift 2</div><p><strong>Question:</strong> In learner-centric approach, teacher should?<br> <strong>Answer:</strong> Facilitate student learning</p><div class="pyq-tag">PYQ 3: UGC NET, 4 Dec 2021, Shift 1</div><p><strong>Question:</strong> In student-centred approach, teacher?<br> <strong>Answer:</strong> Encourages students to take increased responsibility</p><div class="pyq-tag">PYQ 4: UGC NET, 13 Nov 2020, Shift 1</div><p><strong>Question:</strong> Learner-centred strategies?<br> <strong>Answer:</strong> Project work and Group Discussion</p><div class="pyq-tag">PYQ 5: UGC NET, 29 Sep 2022, Shift 2</div><p><strong>Question:</strong> MOOCs?<br> <strong>Answer:</strong> Learner-centric, benefit large numbers, accessible anytime/anywhere/repeatedly. Incorrect: MOOCs only from SWAYAM; all MOOCs are credit-based.</p><div class="pyq-tag">PYQ 6: UGC NET, 30 Sep 2022, Shift 1</div><p><strong>Assertion:</strong> SWAYAM MOOCs can be used for semester credits under regulatory framework.<br> <strong>Reason:</strong> All SWAYAM MOOCs are credit-based.<br> <strong>Answer:</strong> Assertion correct for applicable framework; Reason false.</p><div class="pyq-tag">PYQ 7: UGC NET, 16 Mar 2023, Shift 1</div><p><strong>Statement I:</strong> Teacher-centred learning is non-conventional.<br> <strong>Statement II:</strong> Prescribed curriculum is conventional.<br> <strong>Answer:</strong> Statement I false, Statement II true.</p></div>
+
+      <div id="pyq-trend-analysis" class="topic-card"><div class="sec-head"><span class="sec-num">32</span><h2>PYQ Trend Analysis</h2></div><table class="data-table"><tr><th>Frequently Tested Area</th><th>Common Question Form</th></tr><tr><td>Teacher vs learner-centred</td><td>Method identification</td></tr><tr><td>Teacher's role</td><td>Facilitator vs authority</td></tr><tr><td>Learner responsibility</td><td>Direct MCQ</td></tr><tr><td>SWAYAM</td><td>Full form, purpose, four quadrants</td></tr><tr><td>SWAYAM coordinators</td><td>Match the following</td></tr><tr><td>SWAYAM vs SWAYAM Prabha</td><td>Statement-based comparison</td></tr><tr><td>MOOCs</td><td>Correct/incorrect statements</td></tr><tr><td>MOOC credit</td><td>Assertion–Reason</td></tr><tr><td>Synchronous vs asynchronous</td><td>Example identification</td></tr><tr><td>Online vs offline</td><td>Advantages and limitations</td></tr></table></div>
+
+      <div id="expected-mcqs" class="topic-card"><div class="sec-head"><span class="sec-num">33</span><h2>Expected MCQs (Dec 2026)</h2></div><div class="pyq-tag">Q1</div><p>Teacher gives recorded content before class and does case-solving in class → <strong>Flipped classroom</strong></p><div class="pyq-tag">Q2</div><p>SWAYAM quadrant for doubt clarification → <strong>Discussion forum</strong></p><div class="pyq-tag">Q3</div><p>Match: NPTEL→Engineering, CEC→UG, IIM Bangalore→Management, NITTTR→Teacher Training → <strong>All correct</strong></p><div class="pyq-tag">Q4</div><p>Correct statement → <strong>SWAYAM Prabha is DTH-based service</strong></p><div class="pyq-tag">Q5</div><p>Live Google Meet with immediate questions → <strong>Synchronous Online Learning</strong></p><div class="pyq-tag">Q6</div><p>Recorded lecture watched anytime → <strong>Asynchronous Learning</strong></p><div class="pyq-tag">Q7</div><p>Group project without individual accountability → <strong>Not fully cooperative learning</strong></p><div class="pyq-tag">Q8 Assertion-Reason</div><p>Assertion: Online teaching not necessarily learner-centred. Reason: One-way teacher-controlled lecture can happen online. → <strong>Both true, Reason explains Assertion</strong></p><div class="pyq-tag">Q9</div><p>SWAYAM vs SWAYAM Prabha difference → <strong>SWAYAM = online MOOC; SWAYAM Prabha = DTH broadcasting</strong></p><div class="pyq-tag">Q10</div><p>MOOC "Open" best meaning → <strong>Relatively open and scalable access</strong></p></div>
+
+      <div id="one-page-revision" class="topic-card"><div class="sec-head"><span class="sec-num">34</span><h2>One-Page Revision</h2></div><div class="formula-box">Teacher-centred → Teacher directs, learner receives</div><div class="formula-box">Learner-centred → Learner participates, teacher facilitates</div><div class="formula-box">Offline → Physical co-presence | Online → Technology-mediated</div><div class="formula-box">Synchronous → Same time | Asynchronous → Own time</div><div class="formula-box">Blended → Offline + Online integration</div><div class="formula-box">Flipped → Content before class + Application in class</div><div class="formula-box">MOOC → Massive Open Online Course</div><div class="formula-box">SWAYAM → Online MOOC Platform | SWAYAM Prabha → DTH channels</div><div class="formula-box">SWAYAM Four Quadrants → Watch + Read + Test + Discuss</div><div class="formula-box">Engineering → NPTEL | UG → CEC | Non-technical PG → UGC | Management → IIM Bangalore | Teacher Training → NITTTR</div><p><strong>Final Exam Formula:</strong> Method identification is based on learner–teacher role and learning activity, not just technology.</p></div>
+
+      <div class="enroll-cta"><div><h3 class="h-display">Join the Paper-1 Batch</h3><p>Course fee FREE — ₹500 registration & academic/logistics contribution. Classes daily at 6:30 PM.</p></div><a href="#" class="btn-gold">✓ JOIN BATCH @ ₹500</a></div>
+    </div>
+  </div>
+</main>
+
+<script>
+(function() {
+
+  const BASE_PATH =
+    "/tutorials/teaching-aptitude/Methods-of-teaching-in-higher-institutions";
+
+  const links = document.querySelectorAll('.nav-link');
+  const cards = document.querySelectorAll('.topic-card');
+  const content = document.getElementById('contentArea');
+  const sidebarToggle = document.getElementById('sidebar-toggle');
+
+
+  // Get slug from current URL
+  function getSlugFromPath() {
+
+    let path = window.location.pathname;
+
+    path = path.replace(/\/+$/, "");
+
+    if (path.startsWith(BASE_PATH + "/")) {
+
+      return path
+        .slice((BASE_PATH + "/").length)
+        .split("/")[0];
+
+    }
+
+    return null;
+  }
+
+
+  // Update URL
+  function updateUrl(slug) {
+
+    const newPath =
+      BASE_PATH + "/" + slug;
+
+    if (window.location.pathname !== newPath) {
+
+      history.pushState(
+        null,
+        "",
+        newPath
+      );
+
+    }
+
+  }
+
+
+  // Update active sidebar link
+  function updateActiveLink(slug) {
+
+    links.forEach(function(link) {
+
+      const href =
+        link.getAttribute("href");
+
+      link.classList.toggle(
+        "active",
+        href === BASE_PATH + "/" + slug
+      );
+
+    });
+
+  }
+
+
+  // Show selected topic card
+  function showCard(slug, updateHistory = true) {
+
+    cards.forEach(function(card) {
+
+      card.classList.add("hidden");
+
+    });
+
+
+    const target =
+      document.getElementById(slug);
+
+
+    if (target) {
+
+      target.classList.remove("hidden");
+
+      updateActiveLink(slug);
+
+      if (updateHistory) {
+        updateUrl(slug);
+      }
+
+    }
+
+    else {
+
+      const first = cards[0];
+
+      if (first) {
+
+        first.classList.remove("hidden");
+
+        const firstSlug =
+          first.id;
+
+        updateActiveLink(firstSlug);
+
+        if (updateHistory) {
+          updateUrl(firstSlug);
+        }
+
+      }
+
+    }
+
+
+    if (sidebarToggle) {
+      sidebarToggle.checked = false;
+    }
+
+  }
+
+
+  // Sidebar click
+  links.forEach(function(link) {
+
+    link.addEventListener(
+      "click",
+      function(e) {
+
+        e.preventDefault();
+
+
+        const href =
+          this.getAttribute("href");
+
+        if (!href) return;
+
+
+        const slug =
+          href
+            .replace(BASE_PATH + "/", "")
+            .split("/")[0];
+
+
+        if (!slug) return;
+
+
+        showCard(slug, true);
+
+
+        if (content) {
+
+          const top =
+            content.getBoundingClientRect().top +
+            window.pageYOffset -
+            10;
+
+
+          window.scrollTo({
+
+            top: top,
+            behavior: "smooth"
+
+          });
+
+        }
+
+      }
+    );
+
+  });
+
+
+  // Page load
+  function initFromPath() {
+
+    let slug =
+      getSlugFromPath();
+
+
+    if (
+      !slug ||
+      !document.getElementById(slug)
+    ) {
+
+      slug =
+        cards[0]?.id ||
+        "meaning-teaching-method";
+
+    }
+
+
+    showCard(
+      slug,
+      false
+    );
+
+
+    const expectedPath =
+      BASE_PATH + "/" + slug;
+
+
+    if (
+      window.location.pathname !==
+      expectedPath
+    ) {
+
+      history.replaceState(
+        null,
+        "",
+        expectedPath
+      );
+
+    }
+
+  }
+
+
+  initFromPath();
+
+
+  // Browser Back / Forward
+  window.addEventListener(
+    "popstate",
+    function() {
+
+      const slug =
+        getSlugFromPath();
+
+
+      if (
+        slug &&
+        document.getElementById(slug)
+      ) {
+
+        showCard(
+          slug,
+          false
+        );
+
+      }
+
+      else {
+
+        const firstSlug =
+          cards[0]?.id ||
+          "meaning-teaching-method";
+
+
+        showCard(
+          firstSlug,
+          false
+        );
+
+      }
+
+    }
+  );
+
+
+})();
+</script>
+</body>
+</html>

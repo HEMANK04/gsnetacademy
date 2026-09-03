@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-Governance & Digital Governance – Full Notes | UGC NET Paper-1</title>
+  <meta name="description" content="Complete tutorial: E-Governance meaning, G2C, G2G, G2B, G2E, Digital Governance initiatives (Digital India, UMANG, DigiLocker, Aadhaar, GeM, BharatNet, CSC, DBT), governance models, principles for UGC NET Paper-1 ICT.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; }
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background: #f8f5ee;
+      color: #101a3d;
+    }
+    .h-display { font-family: 'Poppins', sans-serif; font-weight: 800; letter-spacing: -0.01em; }
+    .container { max-width: 1360px; margin: 0 auto; padding: 0 20px; }
+
+    .hero {
+      background: #0b1330;
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+      padding: 28px 0 22px;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      right: -80px;
+      top: -100px;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(232,183,75,0.2), transparent 70%);
+    }
+    .hero-inner { position: relative; }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      padding: 6px 16px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+      color: #e8b74b;
+    }
+    .hero h1 {
+      font-size: clamp(28px, 4.2vw, 44px);
+      margin: 12px 0 6px;
+    }
+    .hero p {
+      color: rgba(255,255,255,0.78);
+      max-width: 680px;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 28px;
+      padding: 28px 0 50px;
+      align-items: start;
+    }
+    @media (max-width: 980px) {
+      .layout { grid-template-columns: 1fr; }
+    }
+
+    .sidebar {
+      position: sticky;
+      top: 16px;
+      max-height: calc(100vh - 40px);
+      overflow-y: auto;
+      background: #fff;
+      border: 1px solid rgba(16,26,61,0.08);
+      border-radius: 16px;
+      padding: 16px 12px;
+      box-shadow: 0 6px 24px rgba(16,26,61,0.05);
+    }
+    .sidebar::-webkit-scrollbar { width: 5px; }
+    .sidebar::-webkit-scrollbar-thumb { background: #dde2ef; border-radius: 8px; }
+    .sidebar-title {
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: #b9852a;
+      padding: 4px 10px 14px;
+    }
+    .nav-link {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 10px;
+      border-radius: 10px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #33406b;
+      line-height: 1.3;
+      transition: 0.1s;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .nav-link:hover { background: #f4f6fc; color: #0b1330; }
+    .nav-link.active {
+      background: #fdf6e7;
+      color: #0b1330;
+    }
+    .nav-num {
+      flex: none;
+      width: 22px;
+      height: 22px;
+      border-radius: 7px;
+      background: #e7eaf5;
+      color: #5b6690;
+      font-size: 11px;
+      font-weight: 800;
+      display: grid;
+      place-items: center;
+    }
+    .nav-link.active .nav-num {
+      background: #e8b74b;
+      color: #0b1330;
+    }
+
+    #sidebar-toggle { display: none; }
+    .mobile-bar { display: none; }
+    @media (max-width: 980px) {
+      .mobile-bar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: #fff;
+        border: 1px solid rgba(16,26,61,0.1);
+        border-radius: 12px;
+        padding: 12px 16px;
+        margin-bottom: 8px;
+        font-weight: 800;
+        font-size: 13.5px;
+        color: #0b1330;
+      }
+      .sidebar { display: none; position: static; max-height: none; }
+      #sidebar-toggle:checked ~ .layout .sidebar { display: block; }
+    }
+
+    .content { min-width: 0; }
+    .topic-card {
+      background: #fff;
+      border: 1px solid rgba(16,26,61,0.08);
+      border-radius: 16px;
+      padding: 20px 20px 16px;
+      margin-bottom: 18px;
+      scroll-margin-top: 20px;
+      display: block;
+    }
+    .topic-card.hidden { display: none; }
+    .sec-head {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+    .sec-num {
+      flex: none;
+      width: 34px;
+      height: 34px;
+      border-radius: 10px;
+      background: #0b1330;
+      color: #e8b74b;
+      font-weight: 800;
+      font-size: 14px;
+      display: grid;
+      place-items: center;
+    }
+    .sec-head h2 {
+      margin: 0;
+      font-size: 19px;
+      font-weight: 800;
+      color: #0b1330;
+    }
+    .topic-card p {
+      font-size: 14.5px;
+      line-height: 1.75;
+      color: #1a254a;
+      margin: 6px 0;
+    }
+    .bullet-list {
+      margin: 8px 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 5px;
+    }
+    .bullet-list li {
+      position: relative;
+      padding-left: 20px;
+      font-size: 14px;
+      line-height: 1.6;
+      color: #1a254a;
+    }
+    .bullet-list li::before {
+      content: "";
+      position: absolute;
+      left: 2px;
+      top: 9px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #d9a53a;
+    }
+    .formula-box {
+      background: #0b1330;
+      color: #fdeec2;
+      font-weight: 700;
+      font-size: 13.6px;
+      padding: 10px 16px;
+      border-radius: 10px;
+      margin: 10px 0;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 12px 0;
+      font-size: 13.6px;
+      display: block;
+      overflow-x: auto;
+    }
+    .data-table th, .data-table td {
+      border: 1px solid #e7eaf5;
+      padding: 8px 12px;
+      text-align: left;
+      color: #1a254a;
+      white-space: normal;
+    }
+    .data-table th {
+      background: #f4f6fc;
+      color: #0b1330;
+      font-weight: 800;
+    }
+    .pyq-tag {
+      display: inline-block;
+      background: #fdf6e7;
+      color: #b9852a;
+      font-weight: 800;
+      font-size: 12px;
+      padding: 4px 12px;
+      border-radius: 8px;
+      margin: 12px 0 6px;
+    }
+    .answer-box {
+      background: #eefaf2;
+      border: 1px solid #bfe8cc;
+      color: #1a7a4c;
+      font-weight: 700;
+      font-size: 13.6px;
+      padding: 6px 14px;
+      border-radius: 9px;
+      margin: 6px 0;
+    }
+    .explain {
+      background: #f4f6fc;
+      border-radius: 9px;
+      padding: 6px 14px;
+      font-size: 13.6px;
+      color: #1a254a;
+    }
+    .subtopic {
+      padding: 14px 0 6px;
+      border-top: 1px dashed #e7eaf5;
+    }
+    .subtopic:first-of-type { border-top: none; padding-top: 2px; }
+    .subhead {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 6px;
+    }
+    .sub-num {
+      flex: none;
+      width: 26px;
+      height: 26px;
+      border-radius: 8px;
+      background: #fdf6e7;
+      color: #b9852a;
+      font-weight: 800;
+      font-size: 12px;
+      display: grid;
+      place-items: center;
+    }
+    .subhead h3 {
+      margin: 0;
+      font-size: 15.5px;
+      font-weight: 800;
+      color: #0b1330;
+    }
+    .enroll-cta {
+      background: #0b1330;
+      color: #fff;
+      border-radius: 16px;
+      padding: 24px 24px;
+      margin-top: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+      overflow: hidden;
+    }
+    .enroll-cta::before {
+      content: "";
+      position: absolute;
+      right: -40px;
+      top: -40px;
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(232,183,75,0.2), transparent 70%);
+    }
+    .enroll-cta h3 { margin: 0 0 4px; font-size: 20px; }
+    .enroll-cta p { margin: 0; color: rgba(255,255,255,0.75); font-size: 13.5px; max-width: 480px; }
+    .btn-gold {
+      background: #e8b74b;
+      color: #0b1330;
+      font-weight: 800;
+      padding: 10px 22px;
+      border-radius: 10px;
+      font-size: 13.5px;
+      white-space: nowrap;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="container hero-inner">
+    <span class="eyebrow">★ UGC NET Paper-I · ICT</span>
+    <h1 class="h-display">E-Governance & Digital Governance</h1>
+    <p>Complete tutorial: E-Governance meaning, G2C, G2G, G2B, G2E, Digital Governance initiatives (Digital India, UMANG, DigiLocker, Aadhaar, GeM, BharatNet, CSC, DBT), governance models, principles.</p>
+  </div>
+</section>
+
+<main class="container">
+  <input type="checkbox" id="sidebar-toggle">
+  <label for="sidebar-toggle" class="mobile-bar">
+    <span>📑 On this page</span>
+    <span>☰ Menu</span>
+  </label>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebarNav">
+      <p class="sidebar-title">On this page</p>
+      <nav>
+        <a href="/tutorials/information-and-communication-technology/E-Governance-Digital-Governance/egovernance-meaning" class="nav-link active"><span class="nav-num">1</span>E-Governance</a>
+        <a href="/tutorials/information-and-communication-technology/E-Governance-Digital-Governance/g2c-g2g-g2b-g2e" class="nav-link"><span class="nav-num">2</span>G2C, G2G, G2B & G2E</a>
+        <a href="/tutorials/information-and-communication-technology/E-Governance-Digital-Governance/governance-models" class="nav-link"><span class="nav-num">3</span>Governance Models</a>
+        <a href="/tutorials/information-and-communication-technology/E-Governance-Digital-Governance/objectives-egovernance" class="nav-link"><span class="nav-num">4</span>Objectives</a>
+        <a href="/tutorials/information-and-communication-technology/E-Governance-Digital-Governance/principles-egovernance" class="nav-link"><span class="nav-num">5</span>Principles</a>
+        <a href="/tutorials/information-and-communication-technology/E-Governance-Digital-Governance/ict-governance-vs-egovernance" class="nav-link"><span class="nav-num">6</span>ICT Governance vs E-Governance</a>
+        <a href="/tutorials/information-and-communication-technology/E-Governance-Digital-Governance/digital-india" class="nav-link"><span class="nav-num">7</span>Digital India</a>
+        <a href="/tutorials/information-and-communication-technology/E-Governance-Digital-Governance/umang" class="nav-link"><span class="nav-num">8</span>UMANG</a>
+        <a href="/tutorials/information-and-communication-technology/E-Governance-Digital-Governance/digilocker" class="nav-link"><span class="nav-num">9</span>DigiLocker</a>
+        <a href="/tutorials/information-and-communication-technology/E-Governance-Digital-Governance/aadhaar" class="nav-link"><span class="nav-num">10</span>Aadhaar</a>
+        <a href="/tutorials/information-and-communication-technology/E-Governance-Digital-Governance/gem" class="nav-link"><span class="nav-num">11</span>GeM</a>
+        <a href="/tutorials/information-and-communication-technology/E-Governance-Digital-Governance/e-office" class="nav-link"><span class="nav-num">12</span>e-Office</a>
+        <a href="/tutorials/information-and-communication-technology/E-Governance-Digital-Governance/mygov" class="nav-link"><span class="nav-num">13</span>MyGov</a>
+        <a href="/tutorials/information-and-communication-technology/E-Governance-Digital-Governance/bharatnet" class="nav-link"><span class="nav-num">14</span>BharatNet</a>
+        <a href="/tutorials/information-and-communication-technology/E-Governance-Digital-Governance/csc" class="nav-link"><span class="nav-num">15</span>Common Service Centres</a>
+        <a href="/tutorials/information-and-communication-technology/E-Governance-Digital-Governance/dbt" class="nav-link"><span class="nav-num">16</span>Direct Benefit Transfer</a>
+        <a href="/tutorials/information-and-communication-technology/E-Governance-Digital-Governance/e-hospital" class="nav-link"><span class="nav-num">17</span>e-Hospital</a>
+        <a href="/tutorials/information-and-communication-technology/E-Governance-Digital-Governance/gstn" class="nav-link"><span class="nav-num">18</span>GSTN</a>
+        <a href="/tutorials/information-and-communication-technology/E-Governance-Digital-Governance/national-scholarship-portal" class="nav-link"><span class="nav-num">19</span>National Scholarship Portal</a>
+        <a href="/tutorials/information-and-communication-technology/E-Governance-Digital-Governance/digital-initiatives-summary" class="nav-link"><span class="nav-num">20</span>Digital Initiatives Summary</a>
+        <a href="/tutorials/information-and-communication-technology/E-Governance-Digital-Governance/exam-traps" class="nav-link"><span class="nav-num">21</span>Common Exam Traps</a>
+        <a href="/tutorials/information-and-communication-technology/E-Governance-Digital-Governance/practice-questions" class="nav-link"><span class="nav-num">22</span>Practice Questions</a>
+        <a href="/tutorials/information-and-communication-technology/E-Governance-Digital-Governance/one-page-revision" class="nav-link"><span class="nav-num">23</span>One-Page Revision</a>
+      </nav>
+    </aside>
+
+    <div class="content" id="contentArea">
+      <!-- ===== CARDS ===== -->
+      <div id="egovernance-meaning" class="topic-card"><div class="sec-head"><span class="sec-num">1</span><h2>E-Governance — ई-गवर्नेंस</h2></div><p><strong>E-Governance</strong> = Government services में ICT का उपयोग करके <strong>administration, service delivery, transparency, participation और accountability</strong> को improve करना।</p><div class="formula-box">E-Governance = ICT + Public Services + Transparency + Accountability</div><p><strong>Key Concepts:</strong></p><ul class="bullet-list"><li><strong>E-Governance:</strong> Use of ICT in government processes and service delivery</li><li><strong>Digital Governance:</strong> Broader concept including digital infrastructure, policies, and citizen engagement</li></ul><p><strong>Objectives:</strong> Faster services, Transparency, Reduced paperwork, Better record management, Citizen participation, Reduced transaction costs, Monitoring and accountability, Wider accessibility</p></div>
+
+      <div id="g2c-g2g-g2b-g2e" class="topic-card"><div class="sec-head"><span class="sec-num">2</span><h2>Types of E-Governance Interaction — G2C, G2G, G2B, G2E</h2></div><ul class="bullet-list"><li><strong>G2C (Government to Citizen):</strong> Services from government to citizens. Examples: Online certificates, tax services, passport services, utility bill payments.</li><li><strong>G2G (Government to Government):</strong> Inter-departmental and inter-government data exchange. Examples: Record sharing between ministries, central-state coordination.</li><li><strong>G2B (Government to Business):</strong> Services from government to businesses. Examples: E-tendering, online licences, GST registration, company registration.</li><li><strong>G2E (Government to Employee):</strong> Services from government to employees. Examples: Payroll, service portal, attendance, leave management, pension.</li></ul><table class="data-table"><tr><th>Type</th><th>Meaning</th><th>Example</th></tr><tr><td><strong>G2C</strong></td><td>Government to Citizen</td><td>Online certificates, tax services</td></tr><tr><td><strong>G2G</strong></td><td>Government to Government</td><td>Interdepartmental data exchange</td></tr><tr><td><strong>G2B</strong></td><td>Government to Business</td><td>E-tendering, online licences</td></tr><tr><td><strong>G2E</strong></td><td>Government to Employee</td><td>Payroll, service portal</td></tr></table></div>
+
+      <div id="governance-models" class="topic-card"><div class="sec-head"><span class="sec-num">3</span><h2>Governance Models — गवर्नेंस मॉडल</h2></div><ul class="bullet-list"><li><strong>Information Model — सूचना मॉडल:</strong> Government information online उपलब्ध कराना। Citizens can access information without interaction.</li><li><strong>Interaction Model — अंतःक्रिया मॉडल:</strong> Citizen feedback, queries and communication. Two-way communication.</li><li><strong>Transaction Model — लेन-देन मॉडल:</strong> Online payment, application, certificate or licence. Complete transactions online.</li><li><strong>Transformation Model — परिवर्तन मॉडल:</strong> Departments और services का integrated digital restructuring. Full digital transformation.</li><li><strong>Participation Model — भागीदारी मॉडल:</strong> Online consultation and citizen involvement in governance. Participatory decision-making.</li></ul></div>
+
+      <div id="objectives-egovernance" class="topic-card"><div class="sec-head"><span class="sec-num">4</span><h2>Objectives of E-Governance — ई-गवर्नेंस के उद्देश्य</h2></div><ul class="bullet-list"><li>Faster and efficient service delivery</li><li>Transparency and accountability</li><li>Reduced paperwork and costs</li><li>Better record management</li><li>Citizen participation and engagement</li><li>Reduced transaction costs</li><li>Monitoring and accountability</li><li>Wider accessibility of services</li><li>Simplified processes</li><li>Real-time information availability</li></ul></div>
+
+      <div id="principles-egovernance" class="topic-card"><div class="sec-head"><span class="sec-num">5</span><h2>Good Digital Governance Principles — सुशासन के सिद्धांत</h2></div><ul class="bullet-list"><li><strong>Transparency — पारदर्शिता:</strong> Open and accessible information</li><li><strong>Accountability — उत्तरदायित्व:</strong> Responsibility for actions and decisions</li><li><strong>Accessibility — पहुँच:</strong> Services available to all citizens</li><li><strong>Responsiveness — प्रतिक्रियाशीलता:</strong> Timely response to citizen needs</li><li><strong>Inclusion — समावेश:</strong> All citizens included regardless of digital literacy</li><li><strong>Efficiency — दक्षता:</strong> Cost-effective and streamlined processes</li><li><strong>Security — सुरक्षा:</strong> Data and system protection</li><li><strong>Privacy — गोपनीयता:</strong> Protection of personal information</li><li><strong>Interoperability — अंतर-संचालनीयता:</strong> Systems work together seamlessly</li><li><strong>Reliability — विश्वसनीयता:</strong> Consistent and dependable services</li><li><strong>Citizen-centricity — नागरिक-केंद्रित:</strong> Focus on citizen needs</li><li><strong>Grievance Redressal — शिकायत निवारण:</strong> Effective complaint handling</li></ul></div>
+
+      <div id="ict-governance-vs-egovernance" class="topic-card"><div class="sec-head"><span class="sec-num">6</span><h2>ICT Governance vs E-Governance — ICT गवर्नेंस vs ई-गवर्नेंस</h2></div><table class="data-table"><tr><th>ICT Governance</th><th>E-Governance</th></tr><tr><td>Organisation में ICT decisions and controls</td><td>Government services में ICT का use</td></tr><tr><td>Alignment, risk, resources and performance</td><td>Service delivery, transparency and participation</td></tr><tr><td>Broader organisational concept</td><td>Public-governance context</td></tr><tr><td>Focus on IT management</td><td>Focus on citizen services</td></tr></table></div>
+
+      <div id="digital-india" class="topic-card"><div class="sec-head"><span class="sec-num">7</span><h2>Digital India — डिजिटल इंडिया</h2></div><p><strong>Digital India:</strong> Digitally empowered society and knowledge economy के लिए flagship programme।</p><p><strong>Vision Areas:</strong></p><ul class="bullet-list"><li><strong>Digital Infrastructure as a Utility:</strong> High-speed Internet, digital identity, mobile phones</li><li><strong>Governance and Services on Demand:</strong> Integrated services, digital documents, cashless transactions</li><li><strong>Digital Empowerment of Citizens:</strong> Digital literacy, universal access to digital resources</li></ul><p><strong>Key Initiatives under Digital India:</strong> DigiLocker, MyGov, UMANG, BharatNet, Common Service Centres, Aadhaar, e-Office, GeM</p></div>
+
+      <div id="umang" class="topic-card"><div class="sec-head"><span class="sec-num">8</span><h2>UMANG — UMANG</h2></div><p><strong>UMANG (Unified Mobile Application for New-age Governance):</strong> एक unified application जो <strong>multiple government services</strong> को एक platform पर उपलब्ध कराता है।</p><ul class="bullet-list"><li>Citizens can access various government services through one app</li><li>Single sign-on for multiple services</li><li>Available on mobile and web</li><li>Services: Aadhaar, passport, PAN, EPFO, etc.</li></ul></div>
+
+      <div id="digilocker" class="topic-card"><div class="sec-head"><span class="sec-num">9</span><h2>DigiLocker — डिजीलॉकर</h2></div><p><strong>DigiLocker:</strong> Personal digital documents और certificates को <strong>store और access</strong> करने की platform।</p><ul class="bullet-list"><li>10 GB free storage</li><li>Issued documents are legally valid</li><li>Shareable and verifiable</li><li>Eliminates physical documents</li><li>Integrated with Aadhaar</li></ul></div>
+
+      <div id="aadhaar" class="topic-card"><div class="sec-head"><span class="sec-num">10</span><h2>Aadhaar — आधार</h2></div><p><strong>Aadhaar:</strong> India's digital identity/authentication framework — 12-digit unique identity number.</p><ul class="bullet-list"><li>Biometric and demographic data</li><li>Identity verification and authentication</li><li>Used for: subsidies (DBT), bank accounts, SIM cards, passport, etc.</li><li>UIDAI (Unique Identification Authority of India) manages Aadhaar</li></ul></div>
+
+      <div id="gem" class="topic-card"><div class="sec-head"><span class="sec-num">11</span><h2>GeM (Government e-Marketplace) — GeM</h2></div><p><strong>GeM:</strong> Government procurement और selling के लिए online platform.</p><ul class="bullet-list"><li>Transparent and efficient public procurement</li><li>Direct purchase and bidding</li><li>Multiple categories of products and services</li><li>Reduces manual procurement delays</li></ul></div>
+
+      <div id="e-office" class="topic-card"><div class="sec-head"><span class="sec-num">12</span><h2>e-Office — ई-ऑफिस</h2></div><p><strong>e-Office:</strong> Digital government-office processes को implement करने वाली initiative।</p><ul class="bullet-list"><li>Paperless office</li><li>Digital file movement</li><li>Electronic records management</li><li>Improved efficiency and transparency</li></ul></div>
+
+      <div id="mygov" class="topic-card"><div class="sec-head"><span class="sec-num">13</span><h2>MyGov — मायगोव</h2></div><p><strong>MyGov:</strong> Citizen engagement and participation platform — citizens और government के बीच सीधा interaction।</p><ul class="bullet-list"><li>Online discussions</li><li>Citizen feedback and suggestions</li><li>Idea sharing and innovation</li><li>Volunteering opportunities</li></ul></div>
+
+      <div id="bharatnet" class="topic-card"><div class="sec-head"><span class="sec-num">14</span><h2>BharatNet — भारतनेट</h2></div><p><strong>BharatNet:</strong> Broadband connectivity infrastructure for rural India.</p><ul class="bullet-list"><li>High-speed optical fibre network</li><li>Connecting gram panchayats</li><li>Bridging the digital divide</li><li>Enabling digital services in rural areas</li></ul></div>
+
+      <div id="csc" class="topic-card"><div class="sec-head"><span class="sec-num">15</span><h2>Common Service Centres (CSC) — CSC</h2></div><p><strong>Common Service Centres (CSC):</strong> Assisted digital public services के लिए access points.</p><ul class="bullet-list"><li>Digital service delivery in rural/remote areas</li><li>CSC operators provide assisted access</li><li>Services: certificates, banking, insurance, utility payments, etc.</li><li>Important for digital inclusion</li></ul></div>
+
+      <div id="dbt" class="topic-card"><div class="sec-head"><span class="sec-num">16</span><h2>Direct Benefit Transfer (DBT) — DBT</h2></div><p><strong>Direct Benefit Transfer:</strong> Subsidies और benefits को <strong>directly</strong> bank accounts में transfer करना।</p><ul class="bullet-list"><li>Reduces leakages and corruption</li><li>Using Aadhaar for identification</li><li>Real-time transfer</li><li>Examples: LPG subsidy, scholarships, welfare schemes</li></ul></div>
+
+      <div id="e-hospital" class="topic-card"><div class="sec-head"><span class="sec-num">17</span><h2>e-Hospital — ई-हॉस्पिटल</h2></div><p><strong>e-Hospital:</strong> Digital hospital-related services के लिए initiative।</p><ul class="bullet-list"><li>Online appointment booking</li><li>Patient records management</li><li>Digital prescriptions</li><li>Hospital management system</li></ul></div>
+
+      <div id="gstn" class="topic-card"><div class="sec-head"><span class="sec-num">18</span><h2>GSTN (Goods and Services Tax Network) — GSTN</h2></div><p><strong>GSTN:</strong> Digital GST-related infrastructure — GST registration, return filing, and compliance platform.</p><ul class="bullet-list"><li>Centralised IT platform for GST</li><li>Connects taxpayers, states, and central government</li><li>Returns, invoices, payments</li></ul></div>
+
+      <div id="national-scholarship-portal" class="topic-card"><div class="sec-head"><span class="sec-num">19</span><h2>National Scholarship Portal — National Scholarship Portal</h2></div><p><strong>National Scholarship Portal:</strong> Scholarship services की unified platform — application, processing और disbursement के लिए।</p><ul class="bullet-list"><li>Multiple scholarships under one portal</li><li>Online application and tracking</li><li>Direct Benefit Transfer (DBT)</li><li>Transparent process</li></ul></div>
+
+      <div id="digital-initiatives-summary" class="topic-card"><div class="sec-head"><span class="sec-num">20</span><h2>Digital Governance Initiatives Summary — डिजिटल गवर्नेंस पहल का सारांश</h2></div><table class="data-table"><tr><th>Initiative</th><th>Purpose</th></tr><tr><td><strong>Digital India</strong></td><td>Digitally empowered society and knowledge economy</td></tr><tr><td><strong>UMANG</strong></td><td>Multiple government services through unified application</td></tr><tr><td><strong>DigiLocker</strong></td><td>Digital documents and certificates</td></tr><tr><td><strong>Aadhaar</strong></td><td>Digital identity/authentication framework</td></tr><tr><td><strong>GeM</strong></td><td>Government e-Marketplace</td></tr><tr><td><strong>e-Office</strong></td><td>Digital government-office processes</td></tr><tr><td><strong>MyGov</strong></td><td>Citizen engagement and participation</td></tr><tr><td><strong>BharatNet</strong></td><td>Broadband connectivity infrastructure</td></tr><tr><td><strong>Common Service Centres</strong></td><td>Assisted digital public services</td></tr><tr><td><strong>DBT</strong></td><td>Direct Benefit Transfer</td></tr><tr><td><strong>e-Hospital</strong></td><td>Digital hospital-related services</td></tr><tr><td><strong>National Scholarship Portal</strong></td><td>Scholarship services</td></tr><tr><td><strong>GSTN</strong></td><td>Digital GST-related infrastructure</td></tr></table></div>
+
+      <div id="exam-traps" class="topic-card"><div class="sec-head"><span class="sec-num">21</span><h2>Common Exam Traps — सामान्य परीक्षा जाल</h2></div><ul class="bullet-list"><li><strong>Trap 1:</strong> E-Governance = only citizen services → ❌ It includes G2G, G2B, and G2E also.</li><li><strong>Trap 2:</strong> ICT Governance = E-Governance → ❌ ICT Governance is broader organisational concept; E-Governance is about government services.</li><li><strong>Trap 3:</strong> G2C = Government to Business → ❌ G2C is Government to Citizen; G2B is Government to Business.</li><li><strong>Trap 4:</strong> Aadhaar = only identity card → ❌ Aadhaar is a digital identity/authentication framework.</li><li><strong>Trap 5:</strong> DigiLocker = only document storage → ❌ It includes document sharing and verification also.</li><li><strong>Trap 6:</strong> UMANG = only one service → ❌ UMANG is a unified platform for multiple services.</li><li><strong>Trap 7:</strong> BharatNet = urban connectivity → ❌ BharatNet is for rural broadband connectivity.</li></ul></div>
+
+      <div id="practice-questions" class="topic-card"><div class="sec-head"><span class="sec-num">22</span><h2>Practice Questions — अभ्यास प्रश्न</h2></div>
+      <div class="pyq-tag">Question 1</div>
+      <p>Citizen applying online for a certificate is an example of:</p>
+      <ul class="bullet-list"><li>A. G2G</li><li>B. G2C</li><li>C. G2B</li><li>D. G2E</li></ul>
+      <div class="answer-box">Answer: B. G2C</div>
+      <p class="explain">Explanation: G2C (Government to Citizen) involves services from government to citizens.</p>
+
+      <div class="pyq-tag">Question 2</div>
+      <p>Which initiative provides a unified platform for multiple government services?</p>
+      <ul class="bullet-list"><li>A. DigiLocker</li><li>B. UMANG</li><li>C. MyGov</li><li>D. GeM</li></ul>
+      <div class="answer-box">Answer: B. UMANG</div>
+      <p class="explain">Explanation: UMANG (Unified Mobile Application for New-age Governance) provides access to multiple government services.</p>
+
+      <div class="pyq-tag">Question 3</div>
+      <p>Which initiative is associated with digital documents and certificates?</p>
+      <ul class="bullet-list"><li>A. Aadhaar</li><li>B. DigiLocker</li><li>C. GeM</li><li>D. BharatNet</li></ul>
+      <div class="answer-box">Answer: B. DigiLocker</div>
+      <p class="explain">Explanation: DigiLocker provides storage and access to personal digital documents and certificates.</p>
+
+      <div class="pyq-tag">Question 4</div>
+      <p>Government e-Marketplace (GeM) is associated with:</p>
+      <ul class="bullet-list"><li>A. Online education</li><li>B. Government procurement</li><li>C. Digital identity</li><li>D. Broadband connectivity</li></ul>
+      <div class="answer-box">Answer: B. Government procurement</div>
+      <p class="explain">Explanation: GeM is a platform for transparent and efficient government procurement.</p>
+
+      <div class="pyq-tag">Question 5</div>
+      <p>Which initiative provides broadband connectivity to rural areas?</p>
+      <ul class="bullet-list"><li>A. UMANG</li><li>B. BharatNet</li><li>C. MyGov</li><li>D. e-Office</li></ul>
+      <div class="answer-box">Answer: B. BharatNet</div>
+      <p class="explain">Explanation: BharatNet provides broadband connectivity infrastructure to rural gram panchayats.</p>
+
+      <div class="pyq-tag">Question 6</div>
+      <p>Direct Benefit Transfer (DBT) is associated with:</p>
+      <ul class="bullet-list"><li>A. Online education</li><li>B. Transferring subsidies directly to bank accounts</li><li>C. Digital identity</li><li>D. Government procurement</li></ul>
+      <div class="answer-box">Answer: B. Transferring subsidies directly to bank accounts</div>
+      <p class="explain">Explanation: DBT transfers subsidies and benefits directly to beneficiaries' bank accounts, reducing leakages.</p></div>
+
+      <div id="one-page-revision" class="topic-card"><div class="sec-head"><span class="sec-num">23</span><h2>One-Page Revision — एक पेज में पुनरावृत्ति</h2></div>
+      <div class="formula-box">E-Governance = ICT + Public Services + Transparency + Accountability</div>
+
+      <p><strong>Types of E-Governance Interaction:</strong></p>
+      <ul class="bullet-list"><li>G2C (Citizen), G2G (Government), G2B (Business), G2E (Employee)</li></ul>
+
+      <p><strong>Governance Models:</strong></p>
+      <ul class="bullet-list"><li>Information, Interaction, Transaction, Transformation, Participation</li></ul>
+
+      <p><strong>Key Initiatives:</strong></p>
+      <ul class="bullet-list"><li>Digital India (Vision), UMANG (Unified app), DigiLocker (Documents), Aadhaar (Identity)</li>
+      <li>GeM (Procurement), e-Office (Digital office), MyGov (Citizen engagement)</li>
+      <li>BharatNet (Rural broadband), CSC (Service centres), DBT (Direct transfer)</li>
+      <li>e-Hospital (Healthcare), GSTN (Tax), National Scholarship Portal (Scholarships)</li></ul>
+
+      <p><strong>Principles:</strong></p>
+      <ul class="bullet-list"><li>Transparency, Accountability, Accessibility, Inclusion, Efficiency, Security, Privacy, Citizen-centricity</li></ul>
+
+      <p><strong>Exam Formula:</strong></p>
+      <div class="formula-box">Initiative → Purpose → Type → Example</div>
+      <p><em>UGC NET में E-Governance & Digital Governance के questions initiative-purpose matching, G2C/G2G/G2B/G2E classification, और principles पर based होते हैं।</em></p></div>
+
+      <div class="enroll-cta"><div><h3 class="h-display">Join the Paper-1 Batch</h3><p>Course fee FREE — ₹500 registration & academic/logistics contribution. Classes daily at 6:30 PM.</p></div><a href="#" class="btn-gold">✓ JOIN BATCH @ ₹500</a></div>
+    </div>
+  </div>
+</main>
+
+<script>
+  (function() {
+
+    const BASE_PATH =
+      "/tutorials/information-and-communication-technology/E-Governance-Digital-Governance";
+
+    const links = document.querySelectorAll(".nav-link");
+    const cards = document.querySelectorAll(".topic-card");
+    const content = document.getElementById("contentArea");
+    const sidebarToggle = document.getElementById("sidebar-toggle");
+
+
+    // Get topic slug from current URL
+    function getSlugFromPath() {
+
+      const path = window.location.pathname
+        .replace(/\/+$/, "");
+
+      if (path.startsWith(BASE_PATH + "/")) {
+
+        return path
+          .substring((BASE_PATH + "/").length)
+          .split("/")[0];
+
+      }
+
+      return null;
+    }
+
+
+    // Update browser URL
+    function updateUrl(slug, replace = false) {
+
+      const newPath =
+        BASE_PATH + "/" + slug;
+
+      if (window.location.pathname !== newPath) {
+
+        if (replace) {
+
+          history.replaceState(
+            null,
+            "",
+            newPath
+          );
+
+        } else {
+
+          history.pushState(
+            null,
+            "",
+            newPath
+          );
+
+        }
+
+      }
+    }
+
+
+    // Update active sidebar link
+    function updateActiveLink(slug) {
+
+      links.forEach(function(link) {
+
+        const href =
+          link.getAttribute("href");
+
+        if (!href) return;
+
+        const linkSlug =
+          href
+            .split("/")
+            .filter(Boolean)
+            .pop();
+
+        link.classList.toggle(
+          "active",
+          linkSlug === slug
+        );
+
+      });
+
+    }
+
+
+    // Show selected topic card
+    function showCard(
+      slug,
+      updateHistory = true
+    ) {
+
+      cards.forEach(function(card) {
+
+        card.classList.add("hidden");
+
+      });
+
+
+      const target =
+        document.getElementById(slug);
+
+
+      if (!target) {
+
+        const first = cards[0];
+
+        if (first) {
+
+          first.classList.remove("hidden");
+
+          const firstSlug =
+            first.id;
+
+          updateActiveLink(firstSlug);
+
+          updateUrl(
+            firstSlug,
+            true
+          );
+
+        }
+
+        return;
+      }
+
+
+      target.classList.remove("hidden");
+
+      updateActiveLink(slug);
+
+
+      if (updateHistory) {
+
+        updateUrl(
+          slug,
+          false
+        );
+
+      }
+
+
+      if (sidebarToggle) {
+
+        sidebarToggle.checked = false;
+
+      }
+
+
+      if (content) {
+
+        const top =
+          content.getBoundingClientRect().top +
+          window.pageYOffset -
+          10;
+
+        window.scrollTo({
+
+          top: top,
+
+          behavior: "smooth"
+
+        });
+
+      }
+
+    }
+
+
+    // Sidebar link click
+    links.forEach(function(link) {
+
+      link.addEventListener(
+        "click",
+        function(e) {
+
+          e.preventDefault();
+
+
+          const href =
+            this.getAttribute("href");
+
+          if (!href) return;
+
+
+          const slug =
+            href
+              .split("/")
+              .filter(Boolean)
+              .pop();
+
+
+          if (!slug) return;
+
+
+          console.log(
+            "Clicked topic:",
+            slug
+          );
+
+
+          showCard(
+            slug,
+            true
+          );
+
+        }
+      );
+
+    });
+
+
+    // Initial page load
+    function initFromPath() {
+
+      let slug =
+        getSlugFromPath();
+
+
+      if (
+        !slug ||
+        !document.getElementById(slug)
+      ) {
+
+        slug =
+          cards[0]?.id ||
+          "egovernance-meaning";
+
+      }
+
+
+      showCard(
+        slug,
+        false
+      );
+
+
+      updateUrl(
+        slug,
+        true
+      );
+
+    }
+
+
+    initFromPath();
+
+
+    // Browser Back / Forward
+    window.addEventListener(
+      "popstate",
+      function() {
+
+        const slug =
+          getSlugFromPath();
+
+
+        if (
+          slug &&
+          document.getElementById(slug)
+        ) {
+
+          showCard(
+            slug,
+            false
+          );
+
+        } else {
+
+          const firstSlug =
+            cards[0]?.id ||
+            "egovernance-meaning";
+
+          showCard(
+            firstSlug,
+            false
+          );
+
+        }
+
+      }
+    );
+
+
+  })();
+</script>
+</body>
+</html>

@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Educational Philosophy & Thinking – Full Notes | UGC NET Paper-1</title>
+  <meta name="description" content="Complete educational philosophy tutorial: Idealism, Naturalism, Pragmatism, Realism, Existentialism, Convergent vs Divergent Thinking for UGC NET Paper-1.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; }
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background: #f8f5ee;
+      color: #101a3d;
+    }
+    .h-display { font-family: 'Poppins', sans-serif; font-weight: 800; letter-spacing: -0.01em; }
+    .container { max-width: 1360px; margin: 0 auto; padding: 0 20px; }
+
+    .hero {
+      background: #0b1330;
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+      padding: 28px 0 22px;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      right: -80px;
+      top: -100px;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(232,183,75,0.2), transparent 70%);
+    }
+    .hero-inner { position: relative; }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      padding: 6px 16px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+      color: #e8b74b;
+    }
+    .hero h1 {
+      font-size: clamp(28px, 4.2vw, 44px);
+      margin: 12px 0 6px;
+    }
+    .hero p {
+      color: rgba(255,255,255,0.78);
+      max-width: 680px;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 28px;
+      padding: 28px 0 50px;
+      align-items: start;
+    }
+    @media (max-width: 980px) {
+      .layout { grid-template-columns: 1fr; }
+    }
+
+    .sidebar {
+      position: sticky;
+      top: 16px;
+      max-height: calc(100vh - 40px);
+      overflow-y: auto;
+      background: #fff;
+      border: 1px solid rgba(16,26,61,0.08);
+      border-radius: 16px;
+      padding: 16px 12px;
+      box-shadow: 0 6px 24px rgba(16,26,61,0.05);
+    }
+    .sidebar::-webkit-scrollbar { width: 5px; }
+    .sidebar::-webkit-scrollbar-thumb { background: #dde2ef; border-radius: 8px; }
+    .sidebar-title {
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: #b9852a;
+      padding: 4px 10px 14px;
+    }
+    .nav-link {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 10px;
+      border-radius: 10px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #33406b;
+      line-height: 1.3;
+      transition: 0.1s;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .nav-link:hover { background: #f4f6fc; color: #0b1330; }
+    .nav-link.active {
+      background: #fdf6e7;
+      color: #0b1330;
+    }
+    .nav-num {
+      flex: none;
+      width: 22px;
+      height: 22px;
+      border-radius: 7px;
+      background: #e7eaf5;
+      color: #5b6690;
+      font-size: 11px;
+      font-weight: 800;
+      display: grid;
+      place-items: center;
+    }
+    .nav-link.active .nav-num {
+      background: #e8b74b;
+      color: #0b1330;
+    }
+
+    #sidebar-toggle { display: none; }
+    .mobile-bar { display: none; }
+    @media (max-width: 980px) {
+      .mobile-bar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: #fff;
+        border: 1px solid rgba(16,26,61,0.1);
+        border-radius: 12px;
+        padding: 12px 16px;
+        margin-bottom: 8px;
+        font-weight: 800;
+        font-size: 13.5px;
+        color: #0b1330;
+      }
+      .sidebar { display: none; position: static; max-height: none; }
+      #sidebar-toggle:checked ~ .layout .sidebar { display: block; }
+    }
+
+    .content { min-width: 0; }
+    .topic-card {
+      background: #fff;
+      border: 1px solid rgba(16,26,61,0.08);
+      border-radius: 16px;
+      padding: 20px 20px 16px;
+      margin-bottom: 18px;
+      scroll-margin-top: 20px;
+      display: block;
+    }
+    .topic-card.hidden { display: none; }
+    .sec-head {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+    .sec-num {
+      flex: none;
+      width: 34px;
+      height: 34px;
+      border-radius: 10px;
+      background: #0b1330;
+      color: #e8b74b;
+      font-weight: 800;
+      font-size: 14px;
+      display: grid;
+      place-items: center;
+    }
+    .sec-head h2 {
+      margin: 0;
+      font-size: 19px;
+      font-weight: 800;
+      color: #0b1330;
+    }
+    .topic-card p {
+      font-size: 14.5px;
+      line-height: 1.75;
+      color: #1a254a;
+      margin: 6px 0;
+    }
+    .bullet-list {
+      margin: 8px 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 5px;
+    }
+    .bullet-list li {
+      position: relative;
+      padding-left: 20px;
+      font-size: 14px;
+      line-height: 1.6;
+      color: #1a254a;
+    }
+    .bullet-list li::before {
+      content: "";
+      position: absolute;
+      left: 2px;
+      top: 9px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #d9a53a;
+    }
+    .formula-box {
+      background: #0b1330;
+      color: #fdeec2;
+      font-weight: 700;
+      font-size: 13.6px;
+      padding: 10px 16px;
+      border-radius: 10px;
+      margin: 10px 0;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 12px 0;
+      font-size: 13.6px;
+      display: block;
+      overflow-x: auto;
+    }
+    .data-table th, .data-table td {
+      border: 1px solid #e7eaf5;
+      padding: 8px 12px;
+      text-align: left;
+      color: #1a254a;
+      white-space: normal;
+    }
+    .data-table th {
+      background: #f4f6fc;
+      color: #0b1330;
+      font-weight: 800;
+    }
+    .pyq-tag {
+      display: inline-block;
+      background: #fdf6e7;
+      color: #b9852a;
+      font-weight: 800;
+      font-size: 12px;
+      padding: 4px 12px;
+      border-radius: 8px;
+      margin: 12px 0 6px;
+    }
+    .answer-box {
+      background: #eefaf2;
+      border: 1px solid #bfe8cc;
+      color: #1a7a4c;
+      font-weight: 700;
+      font-size: 13.6px;
+      padding: 6px 14px;
+      border-radius: 9px;
+      margin: 6px 0;
+    }
+    .explain {
+      background: #f4f6fc;
+      border-radius: 9px;
+      padding: 6px 14px;
+      font-size: 13.6px;
+      color: #1a254a;
+    }
+    .subtopic {
+      padding: 14px 0 6px;
+      border-top: 1px dashed #e7eaf5;
+    }
+    .subtopic:first-of-type { border-top: none; padding-top: 2px; }
+    .subhead {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 6px;
+    }
+    .sub-num {
+      flex: none;
+      width: 26px;
+      height: 26px;
+      border-radius: 8px;
+      background: #fdf6e7;
+      color: #b9852a;
+      font-weight: 800;
+      font-size: 12px;
+      display: grid;
+      place-items: center;
+    }
+    .subhead h3 {
+      margin: 0;
+      font-size: 15.5px;
+      font-weight: 800;
+      color: #0b1330;
+    }
+    .enroll-cta {
+      background: #0b1330;
+      color: #fff;
+      border-radius: 16px;
+      padding: 24px 24px;
+      margin-top: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+      overflow: hidden;
+    }
+    .enroll-cta::before {
+      content: "";
+      position: absolute;
+      right: -40px;
+      top: -40px;
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(232,183,75,0.2), transparent 70%);
+    }
+    .enroll-cta h3 { margin: 0 0 4px; font-size: 20px; }
+    .enroll-cta p { margin: 0; color: rgba(255,255,255,0.75); font-size: 13.5px; max-width: 480px; }
+    .btn-gold {
+      background: #e8b74b;
+      color: #0b1330;
+      font-weight: 800;
+      padding: 10px 22px;
+      border-radius: 10px;
+      font-size: 13.5px;
+      white-space: nowrap;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="container hero-inner">
+    <span class="eyebrow">★ UGC NET Paper-I · Teaching Aptitude</span>
+    <h1 class="h-display">Educational Philosophy & Convergent–Divergent Thinking</h1>
+    <p>Complete tutorial: Idealism, Naturalism, Pragmatism, Realism, Existentialism, Convergent vs Divergent Thinking, Quick MCQs & more.</p>
+  </div>
+</section>
+
+<main class="container">
+  <input type="checkbox" id="sidebar-toggle">
+  <label for="sidebar-toggle" class="mobile-bar">
+    <span>📑 On this page</span>
+    <span>☰ Menu</span>
+  </label>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebarNav">
+      <p class="sidebar-title">On this page</p>
+      <nav>
+        <a href="/tutorials/teaching-aptitude/educational-philosophy-and-thinking/educational-philosophy" class="nav-link active"><span class="nav-num">1</span>Educational Philosophy</a>
+        <a href="/tutorials/teaching-aptitude/educational-philosophy-and-thinking/idealism" class="nav-link"><span class="nav-num">2</span>Idealism</a>
+        <a href="/tutorials/teaching-aptitude/educational-philosophy-and-thinking/naturalism" class="nav-link"><span class="nav-num">3</span>Naturalism</a>
+        <a href="/tutorials/teaching-aptitude/educational-philosophy-and-thinking/pragmatism" class="nav-link"><span class="nav-num">4</span>Pragmatism</a>
+        <a href="/tutorials/teaching-aptitude/educational-philosophy-and-thinking/realism" class="nav-link"><span class="nav-num">5</span>Realism</a>
+        <a href="/tutorials/teaching-aptitude/educational-philosophy-and-thinking/existentialism" class="nav-link"><span class="nav-num">6</span>Existentialism</a>
+        <a href="/tutorials/teaching-aptitude/educational-philosophy-and-thinking/philosophy-comparison" class="nav-link"><span class="nav-num">7</span>Philosophy Comparison</a>
+        <a href="/tutorials/teaching-aptitude/educational-philosophy-and-thinking/convergent-thinking" class="nav-link"><span class="nav-num">8</span>Convergent Thinking</a>
+        <a href="/tutorials/teaching-aptitude/educational-philosophy-and-thinking/divergent-thinking" class="nav-link"><span class="nav-num">9</span>Divergent Thinking</a>
+        <a href="/tutorials/teaching-aptitude/educational-philosophy-and-thinking/divergent-components" class="nav-link"><span class="nav-num">10</span>Components of Divergent Thinking</a>
+        <a href="/tutorials/teaching-aptitude/educational-philosophy-and-thinking/convergent-vs-divergent" class="nav-link"><span class="nav-num">11</span>Convergent vs Divergent</a>
+        <a href="/tutorials/teaching-aptitude/educational-philosophy-and-thinking/exam-traps" class="nav-link"><span class="nav-num">12</span>Exam Traps</a>
+        <a href="/tutorials/teaching-aptitude/educational-philosophy-and-thinking/quick-mcqs" class="nav-link"><span class="nav-num">13</span>Quick MCQs</a>
+        <a href="/tutorials/teaching-aptitude/educational-philosophy-and-thinking/final-recall" class="nav-link"><span class="nav-num">14</span>Final Recall</a>
+      </nav>
+    </aside>
+
+    <div class="content" id="contentArea">
+      <!-- ===== CARDS ===== -->
+      <div id="educational-philosophy" class="topic-card"><div class="sec-head"><span class="sec-num">1</span><h2>Educational Philosophy</h2></div><p><strong>शैक्षिक दर्शन</strong> — education के aims, curriculum, teaching methods, teacher–learner role और values को philosophical principles के आधार पर समझाती है।</p><div class="formula-box">Educational Philosophy = Aim + Curriculum + Method + Teacher–Learner Role + Values</div></div>
+
+      <div id="idealism" class="topic-card"><div class="sec-head"><span class="sec-num">2</span><h2>Idealism — आदर्शवाद</h2></div><div class="formula-box">Idealism → Ideas and Values</div><ul class="bullet-list"><li><strong>Main Focus:</strong> Mind + Ideas + Values + Spiritual Development</li><li><strong>Thinkers:</strong> Plato, Socrates, Hegel</li><li><strong>Educational Features:</strong> Truth, Beauty and Goodness; Moral and spiritual development; Teacher as central and ideal role; Humanities, literature, ethics; Discussion and questioning</li></ul></div>
+
+      <div id="naturalism" class="topic-card"><div class="sec-head"><span class="sec-num">3</span><h2>Naturalism — प्रकृतिवाद</h2></div><div class="formula-box">Naturalism → Nature and Freedom</div><ul class="bullet-list"><li><strong>Main Focus:</strong> Nature + Freedom + Child-Centred Education</li><li><strong>Thinkers:</strong> Jean-Jacques Rousseau, Herbert Spencer</li><li><strong>Educational Features:</strong> Education according to nature; Learner freedom; Direct experience; Minimum external interference; Teacher as observer/facilitator; Natural consequences</li></ul></div>
+
+      <div id="pragmatism" class="topic-card"><div class="sec-head"><span class="sec-num">4</span><h2>Pragmatism — प्रयोजनवाद</h2></div><div class="formula-box">Pragmatism → Experience and Action</div><ul class="bullet-list"><li><strong>Main Focus:</strong> Experience + Utility + Action + Problem-Solving</li><li><strong>Thinkers:</strong> John Dewey, William James, Charles Peirce</li><li><strong>Educational Features:</strong> Learning by Doing; Project and problem-solving methods; Knowledge tested through consequences; Flexible curriculum; Democratic classroom; Teacher as facilitator</li></ul></div>
+
+      <div id="realism" class="topic-card"><div class="sec-head"><span class="sec-num">5</span><h2>Realism — यथार्थवाद</h2></div><div class="formula-box">Realism → Reality, Facts and Science</div><ul class="bullet-list"><li><strong>Main Focus:</strong> Objective Reality + Facts + Scientific Knowledge</li><li><strong>Thinkers:</strong> Aristotle, Francis Bacon, John Locke</li><li><strong>Educational Features:</strong> External world exists independently; Observation and experiment; Science and practical subjects; Inductive method; Sense experience</li></ul></div>
+
+      <div id="existentialism" class="topic-card"><div class="sec-head"><span class="sec-num">6</span><h2>Existentialism — अस्तित्ववाद</h2></div><div class="formula-box">Existentialism → Existence, Choice and Responsibility</div><ul class="bullet-list"><li><strong>Main Focus:</strong> Individual Freedom + Choice + Responsibility + Authenticity</li><li><strong>Thinkers:</strong> Søren Kierkegaard, Jean-Paul Sartre, Martin Heidegger</li><li><strong>Educational Features:</strong> Learner individuality; Personal choice; Self-awareness; Responsibility for decisions; Teacher as facilitator of self-discovery</li></ul></div>
+
+      <div id="philosophy-comparison" class="topic-card"><div class="sec-head"><span class="sec-num">7</span><h2>Philosophy Comparison</h2></div><table class="data-table"><tr><th>Philosophy</th><th>Main Focus</th><th>Teacher's Role</th><th>Preferred Method</th></tr><tr><td>Idealism</td><td>Ideas and values</td><td>Role model</td><td>Dialogue and lecture</td></tr><tr><td>Naturalism</td><td>Nature and freedom</td><td>Observer</td><td>Direct experience</td></tr><tr><td>Pragmatism</td><td>Experience and utility</td><td>Facilitator</td><td>Project/problem-solving</td></tr><tr><td>Realism</td><td>Facts and reality</td><td>Subject expert</td><td>Observation/experiment</td></tr><tr><td>Existentialism</td><td>Choice and individuality</td><td>Guide</td><td>Dialogue/self-exploration</td></tr></table></div>
+
+      <div id="convergent-thinking" class="topic-card"><div class="sec-head"><span class="sec-num">8</span><h2>Convergent Thinking — अभिसारी चिंतन</h2></div><div class="formula-box">Convergent Thinking = Many Facts → One Correct Solution</div><ul class="bullet-list"><li>Logical, focused, rule-based, accuracy-oriented</li><li>One correct answer</li><li>Useful in standardised testing</li></ul><p><strong>Example:</strong> 25% of 400 = ? — One correct answer: <strong>100</strong></p><p><strong>Association:</strong> J. P. Guilford → Convergent and Divergent Production</p></div>
+
+      <div id="divergent-thinking" class="topic-card"><div class="sec-head"><span class="sec-num">9</span><h2>Divergent Thinking — अपसारी चिंतन</h2></div><div class="formula-box">Divergent Thinking = One Problem → Many Possible Solutions</div><ul class="bullet-list"><li>Creative, open-ended, flexible, original</li><li>Multiple answers, exploratory</li></ul><p><strong>Example:</strong> "Maximum alternative uses of a plastic bottle." — No single correct answer.</p></div>
+
+      <div id="divergent-components" class="topic-card"><div class="sec-head"><span class="sec-num">10</span><h2>Components of Divergent Thinking</h2></div><ul class="bullet-list"><li><strong>Fluency:</strong> Generating many ideas</li><li><strong>Flexibility:</strong> Ideas from different categories/perspectives</li><li><strong>Originality:</strong> Unique and uncommon ideas</li><li><strong>Elaboration:</strong> Developing ideas in detail</li></ul><div class="formula-box">Divergent Thinking = Fluency + Flexibility + Originality + Elaboration</div></div>
+
+      <div id="convergent-vs-divergent" class="topic-card"><div class="sec-head"><span class="sec-num">11</span><h2>Convergent vs Divergent Thinking</h2></div><table class="data-table"><tr><th>Basis</th><th>Convergent</th><th>Divergent</th></tr><tr><td>Direction</td><td>Many → One answer</td><td>One → Many answers</td></tr><tr><td>Nature</td><td>Closed-ended</td><td>Open-ended</td></tr><tr><td>Focus</td><td>Accuracy</td><td>Creativity</td></tr><tr><td>Answers</td><td>One best/correct</td><td>Many possible</td></tr><tr><td>Process</td><td>Logical selection</td><td>Idea generation</td></tr><tr><td>Assessment</td><td>Objective test</td><td>Project/open-ended task</td></tr></table><div class="formula-box">Divergent Thinking generates alternatives; Convergent Thinking selects the best alternative.</div></div>
+
+      <div id="exam-traps" class="topic-card"><div class="sec-head"><span class="sec-num">12</span><h2>Exam Traps</h2></div><ul class="bullet-list"><li>Divergent thinking ≠ illogical thinking</li><li>Convergent thinking ≠ rote learning</li><li>Creativity includes fluency, flexibility, originality AND elaboration</li><li>Brainstorming primarily supports divergent thinking</li><li>Final solution selection = convergent thinking</li><li>Guilford → divergent production and Structure of Intellect Model</li><li>Dewey's problem-solving uses both thinking processes</li></ul></div>
+
+      <div id="quick-mcqs" class="topic-card"><div class="sec-head"><span class="sec-num">13</span><h2>Quick MCQs</h2></div><div class="pyq-tag">Q1</div><p>Learner produces ten different solutions to reduce classroom waste → <strong>Divergent Thinking</strong></p>
+      <div class="pyq-tag">Q2</div><p>Selecting the most feasible solution from several alternatives → <strong>Convergent Thinking</strong></p>
+      <div class="pyq-tag">Q3</div><p>Educational philosophy most closely associated with Learning by Doing → <strong>Pragmatism</strong></p>
+      <div class="pyq-tag">Q4</div><p>Individual freedom, choice and responsibility are central to → <strong>Existentialism</strong></p></div>
+
+      <div id="final-recall" class="topic-card"><div class="sec-head"><span class="sec-num">14</span><h2>Final Recall</h2></div><div class="formula-box">Idealism → Ideas</div><div class="formula-box">Naturalism → Nature</div><div class="formula-box">Realism → Reality</div><div class="formula-box">Pragmatism → Practical Experience</div><div class="formula-box">Existentialism → Individual Choice</div><div class="formula-box">Convergent → One Best Answer</div><div class="formula-box">Divergent → Many Original Answers</div></div>
+
+      <div class="enroll-cta"><div><h3 class="h-display">Join the Paper-1 Batch</h3><p>Course fee FREE — ₹500 registration & academic/logistics contribution. Classes daily at 6:30 PM.</p></div><a href="#" class="btn-gold">✓ JOIN BATCH @ ₹500</a></div>
+    </div>
+  </div>
+</main>
+
+<script>
+(function() {
+
+  const BASE_PATH =
+    "/tutorials/teaching-aptitude/educational-philosophy-and-thinking";
+
+  const links = document.querySelectorAll('.nav-link');
+  const cards = document.querySelectorAll('.topic-card');
+  const content = document.getElementById('contentArea');
+  const sidebarToggle = document.getElementById('sidebar-toggle');
+
+
+  // Get slug from current URL
+  function getSlugFromPath() {
+
+    let path = window.location.pathname;
+
+    path = path.replace(/\/+$/, "");
+
+    if (path.startsWith(BASE_PATH + "/")) {
+
+      return path
+        .slice((BASE_PATH + "/").length)
+        .split("/")[0];
+
+    }
+
+    return null;
+  }
+
+
+  // Update URL
+  function updateUrl(slug) {
+
+    const newPath =
+      BASE_PATH + "/" + slug;
+
+    if (window.location.pathname !== newPath) {
+
+      history.pushState(
+        null,
+        "",
+        newPath
+      );
+
+    }
+
+  }
+
+
+  // Update active sidebar link
+  function updateActiveLink(slug) {
+
+    links.forEach(function(link) {
+
+      const href =
+        link.getAttribute("href");
+
+      link.classList.toggle(
+        "active",
+        href === BASE_PATH + "/" + slug
+      );
+
+    });
+
+  }
+
+
+  // Show selected topic card
+  function showCard(slug, updateHistory = true) {
+
+    cards.forEach(function(card) {
+
+      card.classList.add("hidden");
+
+    });
+
+
+    const target =
+      document.getElementById(slug);
+
+
+    if (target) {
+
+      target.classList.remove("hidden");
+
+      updateActiveLink(slug);
+
+      if (updateHistory) {
+        updateUrl(slug);
+      }
+
+    }
+
+    else {
+
+      const first = cards[0];
+
+      if (first) {
+
+        first.classList.remove("hidden");
+
+        const firstSlug =
+          first.id;
+
+        updateActiveLink(firstSlug);
+
+        if (updateHistory) {
+          updateUrl(firstSlug);
+        }
+
+      }
+
+    }
+
+
+    if (sidebarToggle) {
+      sidebarToggle.checked = false;
+    }
+
+  }
+
+
+  // Sidebar click
+  links.forEach(function(link) {
+
+    link.addEventListener(
+      "click",
+      function(e) {
+
+        e.preventDefault();
+
+
+        const href =
+          this.getAttribute("href");
+
+        if (!href) return;
+
+
+        const slug =
+          href
+            .replace(BASE_PATH + "/", "")
+            .split("/")[0];
+
+
+        if (!slug) return;
+
+
+        showCard(slug, true);
+
+
+        if (content) {
+
+          const top =
+            content.getBoundingClientRect().top +
+            window.pageYOffset -
+            10;
+
+
+          window.scrollTo({
+
+            top: top,
+            behavior: "smooth"
+
+          });
+
+        }
+
+      }
+    );
+
+  });
+
+
+  // Page load
+  function initFromPath() {
+
+    let slug =
+      getSlugFromPath();
+
+
+    if (
+      !slug ||
+      !document.getElementById(slug)
+    ) {
+
+      slug =
+        cards[0]?.id ||
+        "educational-philosophy";
+
+    }
+
+
+    showCard(
+      slug,
+      false
+    );
+
+
+    const expectedPath =
+      BASE_PATH + "/" + slug;
+
+
+    if (
+      window.location.pathname !==
+      expectedPath
+    ) {
+
+      history.replaceState(
+        null,
+        "",
+        expectedPath
+      );
+
+    }
+
+  }
+
+
+  initFromPath();
+
+
+  // Browser Back / Forward
+  window.addEventListener(
+    "popstate",
+    function() {
+
+      const slug =
+        getSlugFromPath();
+
+
+      if (
+        slug &&
+        document.getElementById(slug)
+      ) {
+
+        showCard(
+          slug,
+          false
+        );
+
+      }
+
+      else {
+
+        const firstSlug =
+          cards[0]?.id ||
+          "educational-philosophy";
+
+
+        showCard(
+          firstSlug,
+          false
+        );
+
+      }
+
+    }
+  );
+
+
+})();
+</script>
+</body>
+</html>

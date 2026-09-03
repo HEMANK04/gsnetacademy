@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Natural Hazards, Disasters & Disaster Management – Full Notes | UGC NET Paper-1</title>
+  <meta name="description" content="Complete tutorial: Natural Hazards, Disasters & Disaster Management - Hazard vs Disaster, Disaster Risk, Geological Hazards, Flood, Cyclone & Drought, Earthquake & Tsunami, Landslide & Heatwave, Disaster Management Cycle, Prevention, Mitigation, Preparedness, Response, Recovery & Rehabilitation for UGC NET Paper-1 Environment.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; }
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background: #f8f5ee;
+      color: #101a3d;
+    }
+    .h-display { font-family: 'Poppins', sans-serif; font-weight: 800; letter-spacing: -0.01em; }
+    .container { max-width: 1360px; margin: 0 auto; padding: 0 20px; }
+
+    .hero {
+      background: #0b1330;
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+      padding: 28px 0 22px;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      right: -80px;
+      top: -100px;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(232,183,75,0.2), transparent 70%);
+    }
+    .hero-inner { position: relative; }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      padding: 6px 16px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+      color: #e8b74b;
+    }
+    .hero h1 {
+      font-size: clamp(28px, 4.2vw, 44px);
+      margin: 12px 0 6px;
+    }
+    .hero p {
+      color: rgba(255,255,255,0.78);
+      max-width: 680px;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 28px;
+      padding: 28px 0 50px;
+      align-items: start;
+    }
+    @media (max-width: 980px) {
+      .layout { grid-template-columns: 1fr; }
+    }
+
+    .sidebar {
+      position: sticky;
+      top: 16px;
+      max-height: calc(100vh - 40px);
+      overflow-y: auto;
+      background: #fff;
+      border: 1px solid rgba(16,26,61,0.08);
+      border-radius: 16px;
+      padding: 16px 12px;
+      box-shadow: 0 6px 24px rgba(16,26,61,0.05);
+    }
+    .sidebar::-webkit-scrollbar { width: 5px; }
+    .sidebar::-webkit-scrollbar-thumb { background: #dde2ef; border-radius: 8px; }
+    .sidebar-title {
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: #b9852a;
+      padding: 4px 10px 14px;
+    }
+    .nav-link {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 10px;
+      border-radius: 10px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #33406b;
+      line-height: 1.3;
+      transition: 0.1s;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .nav-link:hover { background: #f4f6fc; color: #0b1330; }
+    .nav-link.active {
+      background: #fdf6e7;
+      color: #0b1330;
+    }
+    .nav-num {
+      flex: none;
+      width: 22px;
+      height: 22px;
+      border-radius: 7px;
+      background: #e7eaf5;
+      color: #5b6690;
+      font-size: 11px;
+      font-weight: 800;
+      display: grid;
+      place-items: center;
+    }
+    .nav-link.active .nav-num {
+      background: #e8b74b;
+      color: #0b1330;
+    }
+
+    #sidebar-toggle { display: none; }
+    .mobile-bar { display: none; }
+    @media (max-width: 980px) {
+      .mobile-bar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: #fff;
+        border: 1px solid rgba(16,26,61,0.1);
+        border-radius: 12px;
+        padding: 12px 16px;
+        margin-bottom: 8px;
+        font-weight: 800;
+        font-size: 13.5px;
+        color: #0b1330;
+      }
+      .sidebar { display: none; position: static; max-height: none; }
+      #sidebar-toggle:checked ~ .layout .sidebar { display: block; }
+    }
+
+    .content { min-width: 0; }
+    .topic-card {
+      background: #fff;
+      border: 1px solid rgba(16,26,61,0.08);
+      border-radius: 16px;
+      padding: 20px 20px 16px;
+      margin-bottom: 18px;
+      scroll-margin-top: 20px;
+      display: block;
+    }
+    .topic-card.hidden { display: none; }
+    .sec-head {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+    .sec-num {
+      flex: none;
+      width: 34px;
+      height: 34px;
+      border-radius: 10px;
+      background: #0b1330;
+      color: #e8b74b;
+      font-weight: 800;
+      font-size: 14px;
+      display: grid;
+      place-items: center;
+    }
+    .sec-head h2 {
+      margin: 0;
+      font-size: 19px;
+      font-weight: 800;
+      color: #0b1330;
+    }
+    .topic-card p {
+      font-size: 14.5px;
+      line-height: 1.75;
+      color: #1a254a;
+      margin: 6px 0;
+    }
+    .bullet-list {
+      margin: 8px 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 5px;
+    }
+    .bullet-list li {
+      position: relative;
+      padding-left: 20px;
+      font-size: 14px;
+      line-height: 1.6;
+      color: #1a254a;
+    }
+    .bullet-list li::before {
+      content: "";
+      position: absolute;
+      left: 2px;
+      top: 9px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #d9a53a;
+    }
+    .formula-box {
+      background: #0b1330;
+      color: #fdeec2;
+      font-weight: 700;
+      font-size: 13.6px;
+      padding: 10px 16px;
+      border-radius: 10px;
+      margin: 10px 0;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 12px 0;
+      font-size: 13.6px;
+      display: block;
+      overflow-x: auto;
+    }
+    .data-table th, .data-table td {
+      border: 1px solid #e7eaf5;
+      padding: 8px 12px;
+      text-align: left;
+      color: #1a254a;
+      white-space: normal;
+    }
+    .data-table th {
+      background: #f4f6fc;
+      color: #0b1330;
+      font-weight: 800;
+    }
+    .pyq-tag {
+      display: inline-block;
+      background: #fdf6e7;
+      color: #b9852a;
+      font-weight: 800;
+      font-size: 12px;
+      padding: 4px 12px;
+      border-radius: 8px;
+      margin: 12px 0 6px;
+    }
+    .answer-box {
+      background: #eefaf2;
+      border: 1px solid #bfe8cc;
+      color: #1a7a4c;
+      font-weight: 700;
+      font-size: 13.6px;
+      padding: 6px 14px;
+      border-radius: 9px;
+      margin: 6px 0;
+    }
+    .explain {
+      background: #f4f6fc;
+      border-radius: 9px;
+      padding: 6px 14px;
+      font-size: 13.6px;
+      color: #1a254a;
+    }
+    .subtopic {
+      padding: 14px 0 6px;
+      border-top: 1px dashed #e7eaf5;
+    }
+    .subtopic:first-of-type { border-top: none; padding-top: 2px; }
+    .subhead {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 6px;
+    }
+    .sub-num {
+      flex: none;
+      width: 26px;
+      height: 26px;
+      border-radius: 8px;
+      background: #fdf6e7;
+      color: #b9852a;
+      font-weight: 800;
+      font-size: 12px;
+      display: grid;
+      place-items: center;
+    }
+    .subhead h3 {
+      margin: 0;
+      font-size: 15.5px;
+      font-weight: 800;
+      color: #0b1330;
+    }
+    .enroll-cta {
+      background: #0b1330;
+      color: #fff;
+      border-radius: 16px;
+      padding: 24px 24px;
+      margin-top: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+      overflow: hidden;
+    }
+    .enroll-cta::before {
+      content: "";
+      position: absolute;
+      right: -40px;
+      top: -40px;
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(232,183,75,0.2), transparent 70%);
+    }
+    .enroll-cta h3 { margin: 0 0 4px; font-size: 20px; }
+    .enroll-cta p { margin: 0; color: rgba(255,255,255,0.75); font-size: 13.5px; max-width: 480px; }
+    .btn-gold {
+      background: #e8b74b;
+      color: #0b1330;
+      font-weight: 800;
+      padding: 10px 22px;
+      border-radius: 10px;
+      font-size: 13.5px;
+      white-space: nowrap;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="container hero-inner">
+    <span class="eyebrow">★ UGC NET Paper-I · Environment</span>
+    <h1 class="h-display">Natural Hazards, Disasters & Disaster Management</h1>
+    <p>Complete tutorial: Hazard vs Disaster, Disaster Risk, Geological Hazards, Flood, Cyclone & Drought, Earthquake & Tsunami, Landslide & Heatwave, Disaster Management Cycle, Prevention, Mitigation, Preparedness, Response, Recovery & Rehabilitation.</p>
+  </div>
+</section>
+
+<main class="container">
+  <input type="checkbox" id="sidebar-toggle">
+  <label for="sidebar-toggle" class="mobile-bar">
+    <span>📑 On this page</span>
+    <span>☰ Menu</span>
+  </label>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebarNav">
+      <p class="sidebar-title">On this page</p>
+      <nav>
+    <a href="/tutorials/people-development-and-environment/natural-hazards-disasters-disaster-management/hazard-disaster-intro" class="nav-link active"><span class="nav-num">1</span>Hazard vs Disaster</a>
+        <a href="/tutorials/people-development-and-environment/natural-hazards-disasters-disaster-management/disaster-risk" class="nav-link"><span class="nav-num">2</span>Disaster Risk</a>
+        <a href="/tutorials/people-development-and-environment/natural-hazards-disasters-disaster-management/geological-hazards" class="nav-link"><span class="nav-num">3</span>Geological Hazards</a>
+        <a href="/tutorials/people-development-and-environment/natural-hazards-disasters-disaster-management/flood-cyclone-drought" class="nav-link"><span class="nav-num">4</span>Flood, Cyclone & Drought</a>
+        <a href="/tutorials/people-development-and-environment/natural-hazards-disasters-disaster-management/earthquake-tsunami" class="nav-link"><span class="nav-num">5</span>Earthquake & Tsunami</a>
+        <a href="/tutorials/people-development-and-environment/natural-hazards-disasters-disaster-management/landslide-heatwave" class="nav-link"><span class="nav-num">6</span>Landslide & Heatwave</a>
+        <a href="/tutorials/people-development-and-environment/natural-hazards-disasters-disaster-management/disaster-management-cycle" class="nav-link"><span class="nav-num">7</span>Disaster Management Cycle</a>
+        <a href="/tutorials/people-development-and-environment/natural-hazards-disasters-disaster-management/prevention" class="nav-link"><span class="nav-num">8</span>Prevention</a>
+        <a href="/tutorials/people-development-and-environment/natural-hazards-disasters-disaster-management/mitigation" class="nav-link"><span class="nav-num">9</span>Mitigation</a>
+        <a href="/tutorials/people-development-and-environment/natural-hazards-disasters-disaster-management/preparedness" class="nav-link"><span class="nav-num">10</span>Preparedness</a>
+        <a href="/tutorials/people-development-and-environment/natural-hazards-disasters-disaster-management/response" class="nav-link"><span class="nav-num">11</span>Response</a>
+        <a href="/tutorials/people-development-and-environment/natural-hazards-disasters-disaster-management/recovery-rehabilitation" class="nav-link"><span class="nav-num">12</span>Recovery & Rehabilitation</a>
+        <a href="/tutorials/people-development-and-environment/natural-hazards-disasters-disaster-management/phases-summary" class="nav-link"><span class="nav-num">13</span>Phases Summary</a>
+        <a href="/tutorials/people-development-and-environment/natural-hazards-disasters-disaster-management/exam-traps" class="nav-link"><span class="nav-num">14</span>Common Exam Traps</a>
+        <a href="/tutorials/people-development-and-environment/natural-hazards-disasters-disaster-management/practice-questions" class="nav-link"><span class="nav-num">15</span>Practice Questions</a>
+        <a href="/tutorials/people-development-and-environment/natural-hazards-disasters-disaster-management/one-page-revision" class="nav-link"><span class="nav-num">16</span>One-Page Revision</a>
+      </nav>
+    </aside>
+
+    <div class="content" id="contentArea">
+      <!-- ===== CARDS ===== -->
+      <div id="hazard-disaster-intro" class="topic-card"><div class="sec-head"><span class="sec-num">1</span><h2>Hazard vs Disaster — आपदा जोखिम vs आपदा</h2></div><ul class="bullet-list"><li><strong>Hazard — आपदा जोखिम/खतरा:</strong> A <strong>potential</strong> threat or event that could cause harm. (e.g., an earthquake fault line)</li><li><strong>Disaster — आपदा:</strong> An <strong>actual</strong> event that causes widespread damage, loss, and disruption. (e.g., an earthquake that destroys a city)</li></ul><table class="data-table"><tr><th>Hazard</th><th>Disaster</th></tr><tr><td>Potential threat</td><td>Actual event</td></tr><tr><td>May or may not occur</td><td>Has occurred</td></tr><tr><td>Example: A dormant volcano</td><td>Example: Volcanic eruption</td></tr><tr><td>Exists regardless of human presence</td><td>Causes damage to people/property</td></tr></table><div class="formula-box">Hazard (Potential) + Vulnerability + Exposure = Disaster (Actual)</div></div>
+
+      <div id="disaster-risk" class="topic-card"><div class="sec-head"><span class="sec-num">2</span><h2>Disaster Risk — आपदा जोखिम</h2></div><p><strong>Disaster Risk</strong> = <strong>Hazard × Vulnerability × Exposure</strong></p><div class="formula-box">Disaster Risk = Hazard × Vulnerability × Exposure</div><ul class="bullet-list"><li><strong>Hazard — आपदा जोखिम/खतरा:</strong> Natural event (earthquake, flood, cyclone)</li><li><strong>Vulnerability — संवेदनशीलता/भेद्यता:</strong> How susceptible a community is to damage (poverty, poor infrastructure, lack of awareness)</li><li><strong>Exposure — जोखिम/एक्सपोजर:</strong> How many people/properties are in the hazard zone</li></ul><p><strong>Key Point:</strong> Reducing vulnerability and exposure can <strong>reduce disaster risk</strong> even if the hazard cannot be prevented.</p></div>
+
+      <div id="geological-hazards" class="topic-card"><div class="sec-head"><span class="sec-num">3</span><h2>Geological Hazards — भूगर्भीय आपदा जोखिम</h2></div><p><strong>Geological Hazards</strong> Earth's geological processes से उत्पन्न होने वाले hazards हैं — tectonic, volcanic, mass movement.</p><ul class="bullet-list"><li><strong>Earthquake — भूकंप:</strong> Sudden shaking of the ground due to tectonic plate movement</li><li><strong>Tsunami — सुनामी:</strong> Large ocean waves caused by underwater earthquakes</li><li><strong>Volcano — ज्वालामुखी:</strong> Eruption of magma, ash, and gases</li><li><strong>Landslide — भूस्खलन:</strong> Downward movement of rock/soil on slopes</li><li><strong>Avalanche — हिमस्खलन:</strong> Rapid flow of snow/ice down a slope</li></ul></div>
+
+      <div id="flood-cyclone-drought" class="topic-card"><div class="sec-head"><span class="sec-num">4</span><h2>Flood, Cyclone & Drought — बाढ़, चक्रवात एवं सूखा</h2></div><ul class="bullet-list"><li><strong>Flood — बाढ़:</strong> Overflow of water onto normally dry land — caused by heavy rain, river overflow, coastal storm surges.</li><li><strong>Cyclone — चक्रवात:</strong> Rotating storm system with low pressure — also called hurricanes/typhoons. Causes strong winds, heavy rain, storm surges.</li><li><strong>Drought — सूखा:</strong> Prolonged period of abnormally low rainfall — leading to water shortage, crop failure, food insecurity.</li></ul></div>
+
+      <div id="earthquake-tsunami" class="topic-card"><div class="sec-head"><span class="sec-num">5</span><h2>Earthquake & Tsunami — भूकंप एवं सुनामी</h2></div><ul class="bullet-list"><li><strong>Earthquake — भूकंप:</strong> Caused by tectonic plate movement (fault lines). Measured on <strong>Richter Scale</strong> (magnitude). Effects: ground shaking, building collapse, landslides, fires, tsunamis.</li><li><strong>Tsunami — सुनामी:</strong> Series of large ocean waves caused by underwater earthquakes, volcanic eruptions, or landslides. Travel at high speed across oceans; cause massive coastal destruction.</li></ul><p><strong>Key Points:</strong></p><ul class="bullet-list"><li>Richter Scale measures earthquake magnitude (logarithmic: each unit = 10x increase in amplitude)</li><li>Earthquake early warning systems can provide precious seconds/minutes of warning</li><li>Tsunami warning systems monitor seismic activity and ocean buoys</li></ul></div>
+
+      <div id="landslide-heatwave" class="topic-card"><div class="sec-head"><span class="sec-num">6</span><h2>Landslide & Heatwave — भूस्खलन एवं लू</h2></div><ul class="bullet-list"><li><strong>Landslide — भूस्खलन:</strong> Movement of rock, earth, or debris down a slope. Causes: heavy rain, earthquakes, deforestation, construction on slopes. Effects: damage to infrastructure, loss of life, road blockages.</li><li><strong>Heatwave — लू/ताप लहर:</strong> Prolonged period of excessively hot weather (temperatures above normal). Effects: heat exhaustion, heatstroke, increased mortality, crop damage, increased energy demand.</li></ul></div>
+
+      <div id="disaster-management-cycle" class="topic-card"><div class="sec-head"><span class="sec-num">7</span><h2>Disaster Management Cycle — आपदा प्रबंधन चक्र</h2></div><p><strong>Disaster Management Cycle</strong> disaster management के phases का continuous cycle है — from <strong>pre-disaster</strong> to <strong>during-disaster</strong> to <strong>post-disaster</strong>.</p><div class="formula-box">Disaster Management Cycle = Prevention → Mitigation → Preparedness → Response → Recovery → Rehabilitation</div><p><strong>Three Phases:</strong></p><ul class="bullet-list"><li><strong>Pre-Disaster:</strong> Prevention, Mitigation, Preparedness (before the disaster)</li><li><strong>During-Disaster:</strong> Response (during the disaster)</li><li><strong>Post-Disaster:</strong> Recovery, Rehabilitation (after the disaster)</li></ul></div>
+
+      <div id="prevention" class="topic-card"><div class="sec-head"><span class="sec-num">8</span><h2>Prevention — रोकथाम</h2></div><p><strong>Prevention</strong> disasters को <strong>completely avoid</strong> करने की कोशिश है — eliminating the hazard or stopping it from occurring.</p><div class="formula-box">Prevention = Stop the Disaster from Happening</div><p><strong>Examples:</strong></p><ul class="bullet-list"><li>Building dams to prevent floods</li><li>Stopping construction in high-risk zones</li><li>Enforcing building codes in seismic zones</li><li>Protecting forests to prevent landslides</li></ul><p><strong>Note:</strong> Complete prevention is not always possible for natural hazards (earthquakes, cyclones).</p></div>
+
+      <div id="mitigation" class="topic-card"><div class="sec-head"><span class="sec-num">9</span><h2>Mitigation — शमन</h2></div><p><strong>Mitigation</strong> disaster के <strong>impacts</strong> को reduce करना है — even if the hazard cannot be prevented.</p><div class="formula-box">Mitigation = Reduce the Impact of the Disaster</div><p><strong>Examples:</strong></p><ul class="bullet-list"><li>Earthquake-resistant building design</li><li>Flood shelters and embankments</li><li>Cyclone-resistant housing</li><li>Drought-resistant crops</li><li>Afforestation to prevent landslides</li><li>Building codes and land-use planning</li></ul></div>
+
+      <div id="preparedness" class="topic-card"><div class="sec-head"><span class="sec-num">10</span><h2>Preparedness — तैयारी</h2></div><p><strong>Preparedness</strong> disaster से पहले <strong>pre-planning and preparation</strong> है — to ensure effective response when a disaster strikes.</p><div class="formula-box">Preparedness = Be Ready Before the Disaster</div><p><strong>Examples:</strong></p><ul class="bullet-list"><li>Early warning systems</li><li>Emergency evacuation plans and drills</li><li>Stockpiling emergency supplies (food, water, medicine)</li><li>Training for first responders (police, fire, medical)</li><li>Public awareness campaigns</li><li>Emergency communication systems</li></ul></div>
+
+      <div id="response" class="topic-card"><div class="sec-head"><span class="sec-num">11</span><h2>Response — प्रतिक्रिया</h2></div><p><strong>Response</strong> disaster के <strong>during and immediately after</strong> की actions हैं — saving lives, providing emergency assistance.</p><div class="formula-box">Response = Immediate Actions During/After Disaster</div><p><strong>Examples:</strong></p><ul class="bullet-list"><li>Search and rescue operations</li><li>Medical assistance (first aid, hospitals)</li><li>Evacuation and shelter provision</li><li>Food, water, and supply distribution</li><li>Emergency communication</li><li>Damage assessment (initial)</li><li>Coordination of relief efforts</li></ul></div>
+
+      <div id="recovery-rehabilitation" class="topic-card"><div class="sec-head"><span class="sec-num">12</span><h2>Recovery & Rehabilitation — पुनर्वास एवं पुनर्निर्माण</h2></div><ul class="bullet-list"><li><strong>Recovery — पुनर्प्राप्ति:</strong> Affected communities को <strong>return to normalcy</strong> लाना — restoring essential services, infrastructure, economy.</li><li><strong>Rehabilitation — पुनर्वास:</strong> Long-term rebuilding — houses, infrastructure, livelihoods, psychological support.</li></ul><p><strong>Examples:</strong></p><ul class="bullet-list"><li>Rebuilding damaged houses, schools, hospitals</li><li>Restoring roads, bridges, power, water supply</li><li>Economic recovery (jobs, agriculture)</li><li>Psychological counselling</li><li>Building back better (using mitigation measures)</li><li>Community rebuilding and social support</li></ul></div>
+
+      <div id="phases-summary" class="topic-card"><div class="sec-head"><span class="sec-num">13</span><h2>Phases Summary — चरणों का सारांश</h2></div><table class="data-table"><tr><th>Phase</th><th>Timing</th><th>Action</th><th>Example</th></tr><tr><td><strong>Prevention</strong></td><td>Before</td><td>Avoid hazard</td><td>Dam construction</td></tr><tr><td><strong>Mitigation</strong></td><td>Before</td><td>Reduce impact</td><td>Earthquake-resistant buildings</td></tr><tr><td><strong>Preparedness</strong></td><td>Before</td><td>Plan and train</td><td>Evacuation drills</td></tr><tr><td><strong>Response</strong></td><td>During</td><td>Save lives</td><td>Search and rescue</td></tr><tr><td><strong>Recovery</strong></td><td>After</td><td>Restore normalcy</td><td>Rebuild infrastructure</td></tr><tr><td><strong>Rehabilitation</strong></td><td>After</td><td>Long-term rebuild</td><td>Housing, livelihoods</td></tr></table></div>
+
+      <div id="exam-traps" class="topic-card"><div class="sec-head"><span class="sec-num">14</span><h2>Common Exam Traps — सामान्य परीक्षा जाल</h2></div><ul class="bullet-list"><li><strong>Trap 1:</strong> Hazard and disaster are the same → ❌ Hazard = potential; Disaster = actual event.</li><li><strong>Trap 2:</strong> Disaster Risk = Hazard only → ❌ Risk = Hazard × Vulnerability × Exposure.</li><li><strong>Trap 3:</strong> Prevention = Mitigation → ❌ Prevention = avoid; Mitigation = reduce impact.</li><li><strong>Trap 4:</strong> Preparedness = Response → ❌ Preparedness is before; Response is during/after.</li><li><strong>Trap 5:</strong> Recovery = Rehabilitation → ❌ Recovery = return to normal; Rehabilitation = long-term rebuild.</li><li><strong>Trap 6:</strong> Mitigation happens after the disaster → ❌ Mitigation is pre-disaster (reducing future impact).</li><li><strong>Trap 7:</strong> Response happens after recovery → ❌ Response is during/immediately after; Recovery comes after response.</li></ul></div>
+
+      <div id="practice-questions" class="topic-card"><div class="sec-head"><span class="sec-num">15</span><h2>Practice Questions — अभ्यास प्रश्न</h2></div>
+      <div class="pyq-tag">Question 1</div>
+      <p>An earthquake fault line is an example of:</p>
+      <ul class="bullet-list"><li>A. Disaster</li><li>B. Hazard</li><li>C. Response</li><li>D. Recovery</li></ul>
+      <div class="answer-box">Answer: B. Hazard</div>
+      <p class="explain">Explanation: An earthquake fault line is a potential threat (hazard), not an actual event (disaster).</p>
+
+      <div class="pyq-tag">Question 2</div>
+      <p>Disaster Risk = Hazard × _____ × Exposure</p>
+      <ul class="bullet-list"><li>A. Vulnerability</li><li>B. Response</li><li>C. Recovery</li><li>D. Preparedness</li></ul>
+      <div class="answer-box">Answer: A. Vulnerability</div>
+      <p class="explain">Explanation: Disaster Risk = Hazard × Vulnerability × Exposure.</p>
+
+      <div class="pyq-tag">Question 3</div>
+      <p>Building earthquake-resistant buildings is an example of:</p>
+      <ul class="bullet-list"><li>A. Prevention</li><li>B. Mitigation</li><li>C. Response</li><li>D. Recovery</li></ul>
+      <div class="answer-box">Answer: B. Mitigation</div>
+      <p class="explain">Explanation: Earthquake-resistant buildings reduce the impact of earthquakes — this is mitigation (pre-disaster).</p>
+
+      <div class="pyq-tag">Question 4</div>
+      <p>Search and rescue operations during a disaster are part of:</p>
+      <ul class="bullet-list"><li>A. Preparedness</li><li>B. Mitigation</li><li>C. Response</li><li>D. Rehabilitation</li></ul>
+      <div class="answer-box">Answer: C. Response</div>
+      <p class="explain">Explanation: Search and rescue is an immediate action taken during/after a disaster — response phase.</p>
+
+      <div class="pyq-tag">Question 5</div>
+      <p>Which phase involves rebuilding houses and restoring livelihoods after a disaster?</p>
+      <ul class="bullet-list"><li>A. Prevention</li><li>B. Preparedness</li><li>C. Response</li><li>D. Rehabilitation</li></ul>
+      <div class="answer-box">Answer: D. Rehabilitation</div>
+      <p class="explain">Explanation: Rehabilitation is the long-term rebuilding phase after a disaster — houses, livelihoods, infrastructure.</p>
+
+      <div class="pyq-tag">Question 6</div>
+      <p>An early warning system for cyclones is part of:</p>
+      <ul class="bullet-list"><li>A. Prevention</li><li>B. Preparedness</li><li>C. Mitigation</li><li>D. Recovery</li></ul>
+      <div class="answer-box">Answer: B. Preparedness</div>
+      <p class="explain">Explanation: Early warning systems help communities prepare for an impending disaster — preparedness phase.</p></div>
+
+      <div id="one-page-revision" class="topic-card"><div class="sec-head"><span class="sec-num">16</span><h2>One-Page Revision — एक पेज में पुनरावृत्ति</h2></div>
+      <div class="formula-box">Hazard = Potential | Disaster = Actual Event</div>
+      <div class="formula-box">Disaster Risk = Hazard × Vulnerability × Exposure</div>
+
+      <p><strong>Types of Hazards:</strong></p>
+      <ul class="bullet-list"><li>Geological: Earthquake, Tsunami, Volcano, Landslide</li>
+      <li>Hydrological: Flood, Cyclone, Storm surge</li>
+      <li>Climatic: Drought, Heatwave, Cold wave</li></ul>
+
+      <p><strong>Disaster Management Cycle:</strong></p>
+      <ul class="bullet-list"><li>Prevention → Mitigation → Preparedness → Response → Recovery → Rehabilitation</li></ul>
+
+      <p><strong>Pre-Disaster:</strong></p>
+      <ul class="bullet-list"><li>Prevention (avoid), Mitigation (reduce impact), Preparedness (plan/train)</li></ul>
+
+      <p><strong>During-Disaster:</strong></p>
+      <ul class="bullet-list"><li>Response (save lives, emergency assistance)</li></ul>
+
+      <p><strong>Post-Disaster:</strong></p>
+      <ul class="bullet-list"><li>Recovery (restore normalcy), Rehabilitation (long-term rebuild)</li></ul>
+
+      <p><strong>Key Measures:</strong></p>
+      <ul class="bullet-list"><li>Earthquake: Seismic-resistant buildings, early warning</li>
+      <li>Flood: Dams, embankments, early warning</li>
+      <li>Cyclone: Shelters, early warning, evacuation</li>
+      <li>Drought: Water conservation, drought-resistant crops</li>
+      <li>Landslide: Afforestation, slope stabilisation</li>
+      <li>Heatwave: Early warning, cooling centres</li></ul>
+
+      <p><strong>Exam Formula:</strong></p>
+      <div class="formula-box">Disaster Management = Pre-Disaster + During-Disaster + Post-Disaster</div>
+      <p><em>UGC NET में Natural Hazards, Disasters & Disaster Management के questions hazard/disaster distinction, risk formula, and management cycle phases पर based होते हैं।</em></p></div>
+
+      <div class="enroll-cta"><div><h3 class="h-display">Join the Paper-1 Batch</h3><p>Course fee FREE — ₹500 registration & academic/logistics contribution. Classes daily at 6:30 PM.</p></div><a href="#" class="btn-gold">✓ JOIN BATCH @ ₹500</a></div>
+    </div>
+  </div>
+</main>
+
+<script>
+  (function() {
+
+    const BASE_PATH =
+      "/tutorials/people-development-and-environment/natural-hazards-disasters-disaster-management";
+
+    const links =
+      document.querySelectorAll(".nav-link");
+
+    const cards =
+      document.querySelectorAll(".topic-card");
+
+    const content =
+      document.getElementById("contentArea");
+
+    const sidebarToggle =
+      document.getElementById("sidebar-toggle");
+
+
+    // Get topic slug from current URL
+    function getSlugFromPath() {
+
+      const path =
+        window.location.pathname
+          .replace(/\/+$/, "");
+
+      if (
+        path.startsWith(BASE_PATH + "/")
+      ) {
+
+        return path
+          .substring(
+            (BASE_PATH + "/").length
+          )
+          .split("/")[0];
+
+      }
+
+      return null;
+    }
+
+
+    // Update browser URL
+    function updateUrl(
+      slug,
+      replace = false
+    ) {
+
+      const newPath =
+        BASE_PATH + "/" + slug;
+
+      if (
+        window.location.pathname !== newPath
+      ) {
+
+        if (replace) {
+
+          history.replaceState(
+            null,
+            "",
+            newPath
+          );
+
+        } else {
+
+          history.pushState(
+            null,
+            "",
+            newPath
+          );
+
+        }
+
+      }
+
+    }
+
+
+    // Update active sidebar link
+    function updateActiveLink(slug) {
+
+      links.forEach(function(link) {
+
+        const href =
+          link.getAttribute("href");
+
+        if (!href) return;
+
+
+        const linkSlug =
+          href
+            .split("/")
+            .filter(Boolean)
+            .pop();
+
+
+        link.classList.toggle(
+          "active",
+          linkSlug === slug
+        );
+
+      });
+
+    }
+
+
+    // Show selected topic card
+    function showCard(
+      slug,
+      updateHistory = true
+    ) {
+
+      cards.forEach(function(card) {
+
+        card.classList.add("hidden");
+
+      });
+
+
+      const target =
+        document.getElementById(slug);
+
+
+      if (!target) {
+
+        const first =
+          cards[0];
+
+        if (first) {
+
+          first.classList.remove("hidden");
+
+          const firstSlug =
+            first.id;
+
+          updateActiveLink(
+            firstSlug
+          );
+
+          updateUrl(
+            firstSlug,
+            true
+          );
+
+        }
+
+        return;
+      }
+
+
+      target.classList.remove("hidden");
+
+      updateActiveLink(slug);
+
+
+      if (updateHistory) {
+
+        updateUrl(
+          slug,
+          false
+        );
+
+      }
+
+
+      if (sidebarToggle) {
+
+        sidebarToggle.checked = false;
+
+      }
+
+
+      if (content) {
+
+        const top =
+          content.getBoundingClientRect().top +
+          window.pageYOffset -
+          10;
+
+        window.scrollTo({
+
+          top: top,
+
+          behavior: "smooth"
+
+        });
+
+      }
+
+    }
+
+
+    // Sidebar link click
+    links.forEach(function(link) {
+
+      link.addEventListener(
+        "click",
+        function(e) {
+
+          e.preventDefault();
+
+
+          const href =
+            this.getAttribute("href");
+
+          if (!href) return;
+
+
+          const slug =
+            href
+              .split("/")
+              .filter(Boolean)
+              .pop();
+
+
+          if (!slug) return;
+
+
+          showCard(
+            slug,
+            true
+          );
+
+        }
+      );
+
+    });
+
+
+    // Initial page load
+    function initFromPath() {
+
+      let slug =
+        getSlugFromPath();
+
+
+      if (
+        !slug ||
+        !document.getElementById(slug)
+      ) {
+
+        slug =
+          cards[0]?.id ||
+          "hazard-disaster-intro";
+
+      }
+
+
+      showCard(
+        slug,
+        false
+      );
+
+
+      updateUrl(
+        slug,
+        true
+      );
+
+    }
+
+
+    initFromPath();
+
+
+    // Browser Back / Forward
+    window.addEventListener(
+      "popstate",
+      function() {
+
+        const slug =
+          getSlugFromPath();
+
+
+        if (
+          slug &&
+          document.getElementById(slug)
+        ) {
+
+          showCard(
+            slug,
+            false
+          );
+
+        } else {
+
+          const firstSlug =
+            cards[0]?.id ||
+            "hazard-disaster-intro";
+
+          showCard(
+            firstSlug,
+            false
+          );
+
+        }
+
+      }
+    );
+
+
+  })();
+</script>
+</body>
+</html>

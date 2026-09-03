@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fact, Opinion, Inference & Assumption – Full Notes | UGC NET Paper-1</title>
+  <meta name="description" content="Complete tutorial: Fact vs Opinion, Inference, Assumption, identification techniques, common errors, practice questions for UGC NET Paper-1 Reading Comprehension.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; }
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background: #f8f5ee;
+      color: #101a3d;
+    }
+    .h-display { font-family: 'Poppins', sans-serif; font-weight: 800; letter-spacing: -0.01em; }
+    .container { max-width: 1360px; margin: 0 auto; padding: 0 20px; }
+
+    .hero {
+      background: #0b1330;
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+      padding: 28px 0 22px;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      right: -80px;
+      top: -100px;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(232,183,75,0.2), transparent 70%);
+    }
+    .hero-inner { position: relative; }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      padding: 6px 16px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+      color: #e8b74b;
+    }
+    .hero h1 {
+      font-size: clamp(28px, 4.2vw, 44px);
+      margin: 12px 0 6px;
+    }
+    .hero p {
+      color: rgba(255,255,255,0.78);
+      max-width: 680px;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 28px;
+      padding: 28px 0 50px;
+      align-items: start;
+    }
+    @media (max-width: 980px) {
+      .layout { grid-template-columns: 1fr; }
+    }
+
+    .sidebar {
+      position: sticky;
+      top: 16px;
+      max-height: calc(100vh - 40px);
+      overflow-y: auto;
+      background: #fff;
+      border: 1px solid rgba(16,26,61,0.08);
+      border-radius: 16px;
+      padding: 16px 12px;
+      box-shadow: 0 6px 24px rgba(16,26,61,0.05);
+    }
+    .sidebar::-webkit-scrollbar { width: 5px; }
+    .sidebar::-webkit-scrollbar-thumb { background: #dde2ef; border-radius: 8px; }
+    .sidebar-title {
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: #b9852a;
+      padding: 4px 10px 14px;
+    }
+    .nav-link {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 10px;
+      border-radius: 10px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #33406b;
+      line-height: 1.3;
+      transition: 0.1s;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .nav-link:hover { background: #f4f6fc; color: #0b1330; }
+    .nav-link.active {
+      background: #fdf6e7;
+      color: #0b1330;
+    }
+    .nav-num {
+      flex: none;
+      width: 22px;
+      height: 22px;
+      border-radius: 7px;
+      background: #e7eaf5;
+      color: #5b6690;
+      font-size: 11px;
+      font-weight: 800;
+      display: grid;
+      place-items: center;
+    }
+    .nav-link.active .nav-num {
+      background: #e8b74b;
+      color: #0b1330;
+    }
+
+    #sidebar-toggle { display: none; }
+    .mobile-bar { display: none; }
+    @media (max-width: 980px) {
+      .mobile-bar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: #fff;
+        border: 1px solid rgba(16,26,61,0.1);
+        border-radius: 12px;
+        padding: 12px 16px;
+        margin-bottom: 8px;
+        font-weight: 800;
+        font-size: 13.5px;
+        color: #0b1330;
+      }
+      .sidebar { display: none; position: static; max-height: none; }
+      #sidebar-toggle:checked ~ .layout .sidebar { display: block; }
+    }
+
+    .content { min-width: 0; }
+    .topic-card {
+      background: #fff;
+      border: 1px solid rgba(16,26,61,0.08);
+      border-radius: 16px;
+      padding: 20px 20px 16px;
+      margin-bottom: 18px;
+      scroll-margin-top: 20px;
+      display: block;
+    }
+    .topic-card.hidden { display: none; }
+    .sec-head {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+    .sec-num {
+      flex: none;
+      width: 34px;
+      height: 34px;
+      border-radius: 10px;
+      background: #0b1330;
+      color: #e8b74b;
+      font-weight: 800;
+      font-size: 14px;
+      display: grid;
+      place-items: center;
+    }
+    .sec-head h2 {
+      margin: 0;
+      font-size: 19px;
+      font-weight: 800;
+      color: #0b1330;
+    }
+    .topic-card p {
+      font-size: 14.5px;
+      line-height: 1.75;
+      color: #1a254a;
+      margin: 6px 0;
+    }
+    .bullet-list {
+      margin: 8px 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 5px;
+    }
+    .bullet-list li {
+      position: relative;
+      padding-left: 20px;
+      font-size: 14px;
+      line-height: 1.6;
+      color: #1a254a;
+    }
+    .bullet-list li::before {
+      content: "";
+      position: absolute;
+      left: 2px;
+      top: 9px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #d9a53a;
+    }
+    .formula-box {
+      background: #0b1330;
+      color: #fdeec2;
+      font-weight: 700;
+      font-size: 13.6px;
+      padding: 10px 16px;
+      border-radius: 10px;
+      margin: 10px 0;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 12px 0;
+      font-size: 13.6px;
+      display: block;
+      overflow-x: auto;
+    }
+    .data-table th, .data-table td {
+      border: 1px solid #e7eaf5;
+      padding: 8px 12px;
+      text-align: left;
+      color: #1a254a;
+      white-space: normal;
+    }
+    .data-table th {
+      background: #f4f6fc;
+      color: #0b1330;
+      font-weight: 800;
+    }
+    .pyq-tag {
+      display: inline-block;
+      background: #fdf6e7;
+      color: #b9852a;
+      font-weight: 800;
+      font-size: 12px;
+      padding: 4px 12px;
+      border-radius: 8px;
+      margin: 12px 0 6px;
+    }
+    .answer-box {
+      background: #eefaf2;
+      border: 1px solid #bfe8cc;
+      color: #1a7a4c;
+      font-weight: 700;
+      font-size: 13.6px;
+      padding: 6px 14px;
+      border-radius: 9px;
+      margin: 6px 0;
+    }
+    .explain {
+      background: #f4f6fc;
+      border-radius: 9px;
+      padding: 6px 14px;
+      font-size: 13.6px;
+      color: #1a254a;
+    }
+    .subtopic {
+      padding: 14px 0 6px;
+      border-top: 1px dashed #e7eaf5;
+    }
+    .subtopic:first-of-type { border-top: none; padding-top: 2px; }
+    .subhead {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 6px;
+    }
+    .sub-num {
+      flex: none;
+      width: 26px;
+      height: 26px;
+      border-radius: 8px;
+      background: #fdf6e7;
+      color: #b9852a;
+      font-weight: 800;
+      font-size: 12px;
+      display: grid;
+      place-items: center;
+    }
+    .subhead h3 {
+      margin: 0;
+      font-size: 15.5px;
+      font-weight: 800;
+      color: #0b1330;
+    }
+    .enroll-cta {
+      background: #0b1330;
+      color: #fff;
+      border-radius: 16px;
+      padding: 24px 24px;
+      margin-top: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+      overflow: hidden;
+    }
+    .enroll-cta::before {
+      content: "";
+      position: absolute;
+      right: -40px;
+      top: -40px;
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(232,183,75,0.2), transparent 70%);
+    }
+    .enroll-cta h3 { margin: 0 0 4px; font-size: 20px; }
+    .enroll-cta p { margin: 0; color: rgba(255,255,255,0.75); font-size: 13.5px; max-width: 480px; }
+    .btn-gold {
+      background: #e8b74b;
+      color: #0b1330;
+      font-weight: 800;
+      padding: 10px 22px;
+      border-radius: 10px;
+      font-size: 13.5px;
+      white-space: nowrap;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="container hero-inner">
+    <span class="eyebrow">★ UGC NET Paper-I · Reading Comprehension</span>
+    <h1 class="h-display">Fact, Opinion, Inference & Assumption</h1>
+    <p>Complete tutorial: Fact vs Opinion, Inference, Assumption, identification techniques, common errors, practice questions & exam strategy for UGC NET Paper-1.</p>
+  </div>
+</section>
+
+<main class="container">
+  <input type="checkbox" id="sidebar-toggle">
+  <label for="sidebar-toggle" class="mobile-bar">
+    <span>📑 On this page</span>
+    <span>☰ Menu</span>
+  </label>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebarNav">
+      <p class="sidebar-title">On this page</p>
+      <nav>
+        <a href="/tutorials/comprehension/fact-opinion-inference-and-assumption/meaning-fact" class="nav-link active">
+  <span class="nav-num">1</span>Meaning of Fact
+</a>
+        <a href="/tutorials/comprehension/fact-opinion-inference-and-assumption/meaning-opinion" class="nav-link"><span class="nav-num">2</span>Meaning of Opinion</a>
+        <a href="/tutorials/comprehension/fact-opinion-inference-and-assumption/fact-vs-opinion" class="nav-link"><span class="nav-num">3</span>Fact vs Opinion</a>
+        <a href="/tutorials/comprehension/fact-opinion-inference-and-assumption/meaning-inference" class="nav-link"><span class="nav-num">4</span>Meaning of Inference</a>
+        <a href="/tutorials/comprehension/fact-opinion-inference-and-assumption/types-inference" class="nav-link"><span class="nav-num">5</span>Types of Inference</a>
+        <a href="/tutorials/comprehension/fact-opinion-inference-and-assumption/meaning-assumption" class="nav-link"><span class="nav-num">6</span>Meaning of Assumption</a>
+        <a href="/tutorials/comprehension/fact-opinion-inference-and-assumption/inference-vs-assumption" class="nav-link"><span class="nav-num">7</span>Inference vs Assumption</a>
+        <a href="/tutorials/comprehension/fact-opinion-inference-and-assumption/fact-opinion-inference-assumption" class="nav-link"><span class="nav-num">8</span>Comparison Table</a>
+        <a href="/tutorials/comprehension/fact-opinion-inference-and-assumption/identification-techniques" class="nav-link"><span class="nav-num">9</span>Identification Techniques</a>
+        <a href="/tutorials/comprehension/fact-opinion-inference-and-assumption/common-errors" class="nav-link"><span class="nav-num">10</span>Common Errors</a>
+        <a href="/tutorials/comprehension/fact-opinion-inference-and-assumption/exam-traps" class="nav-link"><span class="nav-num">11</span>Common Exam Traps</a>
+        <a href="/tutorials/comprehension/fact-opinion-inference-and-assumption/practice-questions" class="nav-link"><span class="nav-num">12</span>Practice Questions</a>
+        <a href="/tutorials/comprehension/fact-opinion-inference-and-assumption/one-page-revision" class="nav-link"><span class="nav-num">13</span>One-Page Revision</a>
+      </nav>
+    </aside>
+
+    <div class="content" id="contentArea">
+      <!-- ===== CARDS ===== -->
+      <div id="meaning-fact" class="topic-card"><div class="sec-head"><span class="sec-num">1</span><h2>Meaning of Fact — तथ्य का अर्थ</h2></div><p><strong>Fact</strong> वह <strong>objective और verifiable statement</strong> है जिसे <strong>evidence, data, observation या reliable source</strong> के माध्यम से सत्यापित (verify) किया जा सकता है।</p><div class="formula-box">Fact = Verifiable + Objective + True/False</div><p><strong>सरल उदाहरण:</strong></p><ul class="bullet-list"><li>"Delhi भारत की राजधानी है।" ✅ Verifiable</li><li>"पृथ्वी सूर्य के चारों ओर घूमती है।" ✅ Verifiable</li><li>"भारत की जनसंख्या 1.4 अरब से अधिक है।" ✅ Verifiable</li><li>"Water boils at 100°C at sea level." ✅ Verifiable</li></ul><p><strong>Key Characteristics:</strong></p><ul class="bullet-list"><li>Can be proven true or false</li><li>Based on evidence/observation</li><li>Objective (independent of personal feelings)</li><li>Measurable/observable</li><li>Same for everyone</li></ul></div>
+
+      <div id="meaning-opinion" class="topic-card"><div class="sec-head"><span class="sec-num">2</span><h2>Meaning of Opinion — राय का अर्थ</h2></div><p><strong>Opinion</strong> वह <strong>subjective statement</strong> है जो व्यक्ति के <strong>beliefs, feelings, attitudes, values या personal interpretation</strong> को व्यक्त करता है। इसे <strong>objectively verify</strong> नहीं किया जा सकता।</p><div class="formula-box">Opinion = Subjective + Personal Belief + Cannot Be Verified</div><p><strong>सरल उदाहरण:</strong></p><ul class="bullet-list"><li>"Delhi भारत की सबसे अच्छी राजधानी है।" ❌ Subjective (अच्छा/बुरा — personal)</li><li>"Online education is better than traditional education." ❌ Subjective</li><li>"Summer is the most pleasant season." ❌ Subjective</li><li>"This movie is boring." ❌ Subjective</li></ul><p><strong>Key Characteristics:</strong></p><ul class="bullet-list"><li>Cannot be proven true or false</li><li>Based on personal feelings/beliefs</li><li>Subjective (depends on the person)</li><li>Contains value judgements (good/bad, right/wrong, beautiful/ugly)</li><li>Often uses words like: should, must, best, worst, better, beautiful, ugly, believe, think, feel</li></ul></div>
+
+      <div id="fact-vs-opinion" class="topic-card"><div class="sec-head"><span class="sec-num">3</span><h2>Fact vs Opinion — तथ्य vs राय</h2></div><table class="data-table"><tr><th>Basis</th><th>Fact</th><th>Opinion</th></tr><tr><td>Verifiability</td><td>Can be verified (true/false)</td><td>Cannot be verified</td></tr><tr><td>Nature</td><td>Objective</td><td>Subjective</td></tr><tr><td>Basis</td><td>Evidence, data, observation</td><td>Beliefs, feelings, values</td></tr><tr><td>Universality</td><td>Same for everyone</td><td>Can vary from person to person</td></tr><tr><td>Key Words</td><td>Is, was, are, according to, research shows</td><td>Should, must, best, worst, believe, think, feel</td></tr><tr><td>Example</td><td>"The Earth revolves around the Sun."</td><td>"The Earth is the most beautiful planet."</td></tr></table><p><strong>Exam Point:</strong> UGC NET में अक्सर यह पूछा जाता है कि "Which of the following is a fact?" या "Which of the following is an opinion?" — आपको objective verifiable statements को subjective statements से अलग करना होता है।</p></div>
+
+      <div id="meaning-inference" class="topic-card"><div class="sec-head"><span class="sec-num">4</span><h2>Meaning of Inference — अनुमान का अर्थ</h2></div><p><strong>Inference</strong> text में <strong>explicit रूप से न लिखी गई</strong> information को <strong>clues, evidence और logical reasoning</strong> के आधार पर निकालना है।</p><div class="formula-box">Inference = Reading Between the Lines = Logical Conclusion from Evidence</div><p><strong>Key Points:</strong></p><ul class="bullet-list"><li>Inference <strong>text पर आधारित</strong> होता है</li><li>Inference <strong>logical और evidence-based</strong> होता है</li><li>Inference text में <strong>directly नहीं लिखा</strong> होता</li><li>Inference <strong>must be supported</strong> by text evidence</li><li>Different readers may make different inferences (but should be logical)</li></ul><p><strong>सरल उदाहरण:</strong></p><p><strong>Text:</strong> "राम ने अपना बैग पैक किया, टिकट चेक किया और स्टेशन की ओर चल दिया।"</p><p><strong>Inference:</strong> राम यात्रा पर जा रहा है। (text में explicit नहीं, पर clues से logical conclusion)</p></div>
+
+      <div id="types-inference" class="topic-card"><div class="sec-head"><span class="sec-num">5</span><h2>Types of Inference — अनुमान के प्रकार</h2></div><ul class="bullet-list"><li><strong>Logical Inference — तार्किक अनुमान:</strong> Text के clues और logical reasoning से निकाला गया conclusion।</li><li><strong>Predictive Inference — पूर्वानुमानात्मक अनुमान:</strong> Text के आधार पर भविष्य में क्या हो सकता है, इसका अनुमान।</li><li><strong>Cause-Effect Inference — कारण-प्रभाव अनुमान:</strong> किसी घटना के कारण या प्रभाव का अनुमान।</li><li><strong>Character Inference — पात्र अनुमान:</strong> किसी character के personality, motivation या feelings के बारे में अनुमान।</li><li><strong>Author's Purpose Inference:</strong> Author क्यों लिख रहा है — इसका अनुमान।</li></ul><p><strong>Example:</strong></p><p><strong>Text:</strong> "She checked her watch repeatedly, tapped her foot, and looked at the door."</p><ul class="bullet-list"><li><strong>Inference:</strong> She is waiting for someone and is impatient.</li><li><strong>Type:</strong> Character inference (personality/feeling)</li></ul></div>
+
+      <div id="meaning-assumption" class="topic-card"><div class="sec-head"><span class="sec-num">6</span><h2>Meaning of Assumption — धारणा का अर्थ</h2></div><p><strong>Assumption</strong> वह <strong>belief या idea</strong> है जिसे <strong>बिना साक्ष्य (evidence)</strong> के सत्य मान लिया जाता है। यह वह <strong>unstated belief</strong> है जिस पर argument या inference आधारित होता है।</p><div class="formula-box">Assumption = Unstated Belief + Taken for Granted + No Direct Evidence</div><p><strong>Key Points:</strong></p><ul class="bullet-list"><li>Assumption text में <strong>directly नहीं लिखा</strong> होता</li><li>Assumption <strong>बिना evidence</strong> के स्वीकार किया जाता है</li><li>Assumption <strong>implicit</strong> होता है (अन्तर्निहित)</li><li>Assumption <strong>necessary</strong> हो सकता है (argument को समझने के लिए)</li><li>Assumption को <strong>question</strong> किया जा सकता है</li></ul><p><strong>सरल उदाहरण:</strong></p><p><strong>Statement:</strong> "Since she is a doctor, she must be rich."</p><p><strong>Assumption:</strong> All doctors are rich. (अप्रमाणित belief)</p></div>
+
+      <div id="inference-vs-assumption" class="topic-card"><div class="sec-head"><span class="sec-num">7</span><h2>Inference vs Assumption — अनुमान vs धारणा</h2></div><table class="data-table"><tr><th>Basis</th><th>Inference</th><th>Assumption</th></tr><tr><td>Definition</td><td>Logical conclusion from evidence</td><td>Unstated belief taken for granted</td></tr><tr><td>Basis</td><td>Text evidence/clues</td><td>No direct evidence (unstated)</td></tr><tr><td>Nature</td><td>Logical reasoning</td><td>Belief/Supposition</td></tr><tr><td>Support</td><td>Must be supported by text</td><td>Often unsupported</td></tr><tr><td>Question</td><td>What can we conclude?</td><td>What is taken for granted?</td></tr><tr><td>Example</td><td>She packed bags → She is traveling</td><td>She packed bags → She has money to travel</td></tr></table><p><strong>Exam Point:</strong> UGC NET में inference और assumption में अंतर करना बहुत महत्वपूर्ण है। Inference <strong>evidence-based</strong> होता है; Assumption <strong>evidence-free</strong> होता है।</p></div>
+
+      <div id="fact-opinion-inference-assumption" class="topic-card"><div class="sec-head"><span class="sec-num">8</span><h2>Comparison Table — तुलना तालिका</h2></div><table class="data-table"><tr><th>Concept</th><th>Definition</th><th>Key Question</th><th>Example</th></tr><tr><td><strong>Fact</strong></td><td>Verifiable statement</td><td>Is it true/false?</td><td>"Delhi is the capital of India."</td></tr><tr><td><strong>Opinion</strong></td><td>Personal belief/feeling</td><td>Does someone believe this?</td><td>"Delhi is the best city."</td></tr><tr><td><strong>Inference</strong></td><td>Logical conclusion from evidence</td><td>What can we conclude?</td><td>"She packed bags → She is traveling."</td></tr><tr><td><strong>Assumption</strong></td><td>Unstated belief taken for granted</td><td>What is taken for granted?</td><td>"She packed bags → She has money to travel."</td></tr></table></div>
+
+      <div id="identification-techniques" class="topic-card"><div class="sec-head"><span class="sec-num">9</span><h2>Identification Techniques — पहचानने की तकनीकें</h2></div><p><strong>Fact vs Opinion:</strong></p><ul class="bullet-list"><li>Fact: Can be checked/verified. Look for numbers, dates, statistics, research findings.</li><li>Opinion: Personal. Look for value words (best, worst, beautiful, should, must, believe, think, feel).</li></ul><p><strong>Inference vs Assumption:</strong></p><ul class="bullet-list"><li>Inference: Based on text evidence + logical reasoning. Ask "What can I logically conclude from this?"</li><li>Assumption: Unstated. Ask "What is the author taking for granted here?"</li></ul></div>
+
+      <div id="common-errors" class="topic-card"><div class="sec-head"><span class="sec-num">10</span><h2>Common Errors — सामान्य त्रुटियाँ</h2></div><ul class="bullet-list"><li><strong>Error 1:</strong> Opinion को Fact समझ लेना — "The movie was boring" को fact मानना (यह opinion है)</li><li><strong>Error 2:</strong> Fact को Opinion समझ लेना — "Water boils at 100°C" को opinion मानना (यह fact है)</li><li><strong>Error 3:</strong> Assumption को Inference समझ लेना — बिना evidence के conclusion निकालना</li><li><strong>Error 4:</strong> Inference को Assumption समझ लेना — evidence-based conclusion को unsupported मानना</li><li><strong>Error 5:</strong> Over-inference — evidence से अधिक conclusion निकालना</li><li><strong>Error 6:</strong> Under-inference — obvious conclusions को न निकालना</li><li><strong>Error 7:</strong> Making assumptions without evidence</li><li><strong>Error 8:</strong> Confusing author's opinion with fact</li></ul></div>
+
+      <div id="exam-traps" class="topic-card"><div class="sec-head"><span class="sec-num">11</span><h2>Common Exam Traps — सामान्य परीक्षा जाल</h2></div><ul class="bullet-list"><li><strong>Trap 1:</strong> Opinion statements that look like facts — "Research shows that..." (if citation is given, may be fact; if not, may be opinion)</li><li><strong>Trap 2:</strong> Facts that sound like opinions — "Most students prefer..." (if survey/data supports, it's fact; if not, opinion)</li><li><strong>Trap 3:</strong> Inference options that are too broad or too narrow</li><li><strong>Trap 4:</strong> Assumption options that are actually inferences</li><li><strong>Trap 5:</strong> Options that mix fact and opinion</li><li><strong>Trap 6:</strong> Extreme inference (not supported by enough evidence)</li><li><strong>Trap 7:</strong> Assuming something without textual support</li></ul></div>
+
+      <div id="practice-questions" class="topic-card"><div class="sec-head"><span class="sec-num">12</span><h2>Practice Questions — अभ्यास प्रश्न</h2></div>
+      <p><strong>Passage:</strong> "According to the World Health Organization, more than 2 billion people worldwide do not have access to safe drinking water. This is a serious problem that requires immediate attention. Governments must invest more in water infrastructure to save lives. Clean water is the most basic human right."</p>
+
+      <div class="pyq-tag">Question 1 (Fact)</div>
+      <p>Which of the following is a fact according to the passage?</p>
+      <ul class="bullet-list"><li>A. Clean water is the most basic human right</li><li>B. More than 2 billion people do not have access to safe drinking water</li><li>C. Governments must invest in water infrastructure</li><li>D. This is a serious problem</li></ul>
+      <div class="answer-box">Answer: B. More than 2 billion people do not have access to safe drinking water</div>
+      <p class="explain">Explanation: यह WHO का verified data है — fact है। अन्य options opinions/value judgements हैं।</p>
+
+      <div class="pyq-tag">Question 2 (Opinion)</div>
+      <p>Which of the following is an opinion expressed in the passage?</p>
+      <ul class="bullet-list"><li>A. 2 billion people lack safe water</li><li>B. This is a serious problem</li><li>C. WHO reported the data</li><li>D. Water boils at 100°C</li></ul>
+      <div class="answer-box">Answer: B. This is a serious problem</div>
+      <p class="explain">Explanation: "Serious problem" एक value judgement है — opinion है। Data factual है।</p>
+
+      <div class="pyq-tag">Question 3 (Inference)</div>
+      <p>What can be inferred from the passage?</p>
+      <ul class="bullet-list"><li>A. The WHO is the only organisation working on water issues</li><li>B. Lack of safe water affects health</li><li>C. All countries have safe water</li><li>D. Water is cheap</li></ul>
+      <div class="answer-box">Answer: B. Lack of safe water affects health</div>
+      <p class="explain">Explanation: यह logical inference है — unsafe water से health problems हो सकती हैं, हालाँकि passage में explicit नहीं है।</p>
+
+      <div class="pyq-tag">Question 4 (Assumption)</div>
+      <p>What assumption underlies the statement "Governments must invest more in water infrastructure"?</p>
+      <ul class="bullet-list"><li>A. Governments currently invest enough in water</li><li>B. Water infrastructure requires government investment</li><li>C. All governments have enough money</li><li>D. Private companies will not invest</li></ul>
+      <div class="answer-box">Answer: B. Water infrastructure requires government investment</div>
+      <p class="explain">Explanation: Author यह मान रहा है कि water infrastructure के लिए government investment आवश्यक है — यह assumption है।</p>
+
+      <br>
+
+      <p><strong>Passage 2:</strong> "The new education policy has been praised by many experts. It focuses on skill development and practical learning. However, some teachers have expressed concerns about its implementation. They believe that without proper training, the policy may not achieve its goals."</p>
+
+      <div class="pyq-tag">Question 5 (Fact vs Opinion)</div>
+      <p>Which statement from the passage is a fact?</p>
+      <ul class="bullet-list"><li>A. The policy has been praised by many experts</li><li>B. The policy focuses on skill development</li><li>C. Teachers believe the policy may not succeed</li><li>D. Implementation will be difficult</li></ul>
+      <div class="answer-box">Answer: B. The policy focuses on skill development</div>
+      <p class="explain">Explanation: यह policy का verified feature है। अन्य opinions/beliefs हैं।</p>
+
+      <div class="pyq-tag">Question 6 (Inference)</div>
+      <p>What can be inferred about the author's position?</p>
+      <ul class="bullet-list"><li>A. The author completely opposes the policy</li><li>B. The author supports the policy but acknowledges implementation challenges</li><li>C. The author believes teachers are wrong</li><li>D. The author has no opinion</li></ul>
+      <div class="answer-box">Answer: B. The author supports the policy but acknowledges implementation challenges</div>
+      <p class="explain">Explanation: Author policy को "praised" कहता है, लेकिन teachers' concerns भी report करता है — balanced position।</p></div>
+
+      <div id="one-page-revision" class="topic-card"><div class="sec-head"><span class="sec-num">13</span><h2>One-Page Revision — एक पेज में पुनरावृत्ति</h2></div>
+      <div class="formula-box">Fact = Verifiable + Objective</div>
+      <div class="formula-box">Opinion = Subjective + Personal Belief</div>
+      <div class="formula-box">Inference = Logical Conclusion + Text Evidence</div>
+      <div class="formula-box">Assumption = Unstated Belief + No Evidence</div>
+
+      <p><strong>How to Identify:</strong></p>
+      <ul class="bullet-list"><li><strong>Fact:</strong> Can be verified (numbers, dates, data, research)</li><li><strong>Opinion:</strong> Value words (best, worst, should, must, believe, think, feel)</li><li><strong>Inference:</strong> "Reading between the lines" — logical conclusion from clues</li><li><strong>Assumption:</strong> What is taken for granted — unstated belief</li></ul>
+
+      <p><strong>Key Questions:</strong></p>
+      <ul class="bullet-list"><li><strong>Fact:</strong> Is it true/false? Can we check it?</li><li><strong>Opinion:</strong> Does someone believe this? Is it subjective?</li><li><strong>Inference:</strong> What can we logically conclude from the text?</li><li><strong>Assumption:</strong> What is the author taking for granted?</li></ul>
+
+      <p><strong>Exam Formula:</strong></p>
+      <div class="formula-box">Fact = Can be proven | Opinion = Personal belief | Inference = Evidence-based conclusion | Assumption = Unstated belief</div>
+      <p><em>UGC NET में fact, opinion, inference और assumption के questions passage की deep understanding और logical reasoning को test करते हैं।</em></p></div>
+
+      <div class="enroll-cta"><div><h3 class="h-display">Join the Paper-1 Batch</h3><p>Course fee FREE — ₹500 registration & academic/logistics contribution. Classes daily at 6:30 PM.</p></div><a href="#" class="btn-gold">✓ JOIN BATCH @ ₹500</a></div>
+    </div>
+  </div>
+</main>
+
+<script>
+(function() {
+
+  const BASE_PATH =
+    "/tutorials/comprehension/fact-opinion-inference-and-assumption";
+
+  const links = document.querySelectorAll(".nav-link");
+  const cards = document.querySelectorAll(".topic-card");
+  const content = document.getElementById("contentArea");
+  const sidebarToggle = document.getElementById("sidebar-toggle");
+
+
+  // Get topic slug from current URL
+  function getSlugFromPath() {
+
+    const path = window.location.pathname
+      .replace(/\/+$/, "");
+
+    if (path.startsWith(BASE_PATH + "/")) {
+
+      return path
+        .substring((BASE_PATH + "/").length)
+        .split("/")[0];
+
+    }
+
+    return null;
+  }
+
+
+  // Update browser URL
+  function updateUrl(slug, replace = false) {
+
+    const newPath =
+      BASE_PATH + "/" + slug;
+
+    if (window.location.pathname !== newPath) {
+
+      if (replace) {
+        history.replaceState(null, "", newPath);
+      } else {
+        history.pushState(null, "", newPath);
+      }
+
+    }
+  }
+
+
+  // Update active sidebar link
+  function updateActiveLink(slug) {
+
+    links.forEach(function(link) {
+
+      const href =
+        link.getAttribute("href");
+
+      if (!href) return;
+
+      const linkSlug =
+        href
+          .split("/")
+          .filter(Boolean)
+          .pop();
+
+      link.classList.toggle(
+        "active",
+        linkSlug === slug
+      );
+
+    });
+  }
+
+
+  // Show selected topic card
+  function showCard(slug, updateHistory = true) {
+
+    cards.forEach(function(card) {
+      card.classList.add("hidden");
+    });
+
+
+    const target =
+      document.getElementById(slug);
+
+
+    // Topic not found
+    if (!target) {
+
+      const first = cards[0];
+
+      if (first) {
+
+        first.classList.remove("hidden");
+
+        const firstSlug = first.id;
+
+        updateActiveLink(firstSlug);
+
+        updateUrl(firstSlug, true);
+
+      }
+
+      return;
+    }
+
+
+    // Show selected topic
+    target.classList.remove("hidden");
+
+    updateActiveLink(slug);
+
+
+    // Update URL
+    if (updateHistory) {
+      updateUrl(slug);
+    }
+
+
+    // Close mobile sidebar
+    if (sidebarToggle) {
+      sidebarToggle.checked = false;
+    }
+
+
+    // Scroll to content
+    if (content) {
+
+      const top =
+        content.getBoundingClientRect().top +
+        window.pageYOffset -
+        10;
+
+      window.scrollTo({
+        top: top,
+        behavior: "smooth"
+      });
+
+    }
+
+  }
+
+
+  // Sidebar link click
+  links.forEach(function(link) {
+
+    link.addEventListener("click", function(e) {
+
+      e.preventDefault();
+
+      const href =
+        this.getAttribute("href");
+
+      if (!href) return;
+
+
+      const slug =
+        href
+          .split("/")
+          .filter(Boolean)
+          .pop();
+
+
+      if (!slug) return;
+
+
+      console.log("Clicked topic:", slug);
+
+      showCard(slug, true);
+
+    });
+
+  });
+
+
+  // Initial page load
+  function initFromPath() {
+
+    let slug =
+      getSlugFromPath();
+
+
+    if (
+      !slug ||
+      !document.getElementById(slug)
+    ) {
+
+      slug =
+        cards[0]?.id ||
+        "meaning-fact";
+
+    }
+
+
+    // Show topic without creating history entry
+    showCard(slug, false);
+
+
+    // Set correct nested URL
+    updateUrl(slug, true);
+
+  }
+
+
+  initFromPath();
+
+
+  // Browser Back / Forward
+  window.addEventListener(
+    "popstate",
+    function() {
+
+      const slug =
+        getSlugFromPath();
+
+
+      if (
+        slug &&
+        document.getElementById(slug)
+      ) {
+
+        showCard(slug, false);
+
+      } else {
+
+        const firstSlug =
+          cards[0]?.id ||
+          "meaning-fact";
+
+        showCard(firstSlug, false);
+
+      }
+
+    }
+  );
+
+
+})();
+</script>
+</body>
+</html>

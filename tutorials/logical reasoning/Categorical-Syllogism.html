@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Categorical Syllogism – Full Notes | UGC NET Paper-1</title>
+  <meta name="description" content="Complete tutorial: Categorical Syllogism, Major, Minor & Middle Terms, Mood, Figure, Standard forms, Rules of categorical syllogism, Validity testing, Existential fallacy for UGC NET Paper-1 Logical Reasoning.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; }
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background: #f8f5ee;
+      color: #101a3d;
+    }
+    .h-display { font-family: 'Poppins', sans-serif; font-weight: 800; letter-spacing: -0.01em; }
+    .container { max-width: 1360px; margin: 0 auto; padding: 0 20px; }
+
+    .hero {
+      background: #0b1330;
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+      padding: 28px 0 22px;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      right: -80px;
+      top: -100px;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(232,183,75,0.2), transparent 70%);
+    }
+    .hero-inner { position: relative; }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      padding: 6px 16px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+      color: #e8b74b;
+    }
+    .hero h1 {
+      font-size: clamp(28px, 4.2vw, 44px);
+      margin: 12px 0 6px;
+    }
+    .hero p {
+      color: rgba(255,255,255,0.78);
+      max-width: 680px;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 28px;
+      padding: 28px 0 50px;
+      align-items: start;
+    }
+    @media (max-width: 980px) {
+      .layout { grid-template-columns: 1fr; }
+    }
+
+    .sidebar {
+      position: sticky;
+      top: 16px;
+      max-height: calc(100vh - 40px);
+      overflow-y: auto;
+      background: #fff;
+      border: 1px solid rgba(16,26,61,0.08);
+      border-radius: 16px;
+      padding: 16px 12px;
+      box-shadow: 0 6px 24px rgba(16,26,61,0.05);
+    }
+    .sidebar::-webkit-scrollbar { width: 5px; }
+    .sidebar::-webkit-scrollbar-thumb { background: #dde2ef; border-radius: 8px; }
+    .sidebar-title {
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: #b9852a;
+      padding: 4px 10px 14px;
+    }
+    .nav-link {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 10px;
+      border-radius: 10px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #33406b;
+      line-height: 1.3;
+      transition: 0.1s;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .nav-link:hover { background: #f4f6fc; color: #0b1330; }
+    .nav-link.active {
+      background: #fdf6e7;
+      color: #0b1330;
+    }
+    .nav-num {
+      flex: none;
+      width: 22px;
+      height: 22px;
+      border-radius: 7px;
+      background: #e7eaf5;
+      color: #5b6690;
+      font-size: 11px;
+      font-weight: 800;
+      display: grid;
+      place-items: center;
+    }
+    .nav-link.active .nav-num {
+      background: #e8b74b;
+      color: #0b1330;
+    }
+
+    #sidebar-toggle { display: none; }
+    .mobile-bar { display: none; }
+    @media (max-width: 980px) {
+      .mobile-bar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: #fff;
+        border: 1px solid rgba(16,26,61,0.1);
+        border-radius: 12px;
+        padding: 12px 16px;
+        margin-bottom: 8px;
+        font-weight: 800;
+        font-size: 13.5px;
+        color: #0b1330;
+      }
+      .sidebar { display: none; position: static; max-height: none; }
+      #sidebar-toggle:checked ~ .layout .sidebar { display: block; }
+    }
+
+    .content { min-width: 0; }
+    .topic-card {
+      background: #fff;
+      border: 1px solid rgba(16,26,61,0.08);
+      border-radius: 16px;
+      padding: 20px 20px 16px;
+      margin-bottom: 18px;
+      scroll-margin-top: 20px;
+      display: block;
+    }
+    .topic-card.hidden { display: none; }
+    .sec-head {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+    .sec-num {
+      flex: none;
+      width: 34px;
+      height: 34px;
+      border-radius: 10px;
+      background: #0b1330;
+      color: #e8b74b;
+      font-weight: 800;
+      font-size: 14px;
+      display: grid;
+      place-items: center;
+    }
+    .sec-head h2 {
+      margin: 0;
+      font-size: 19px;
+      font-weight: 800;
+      color: #0b1330;
+    }
+    .topic-card p {
+      font-size: 14.5px;
+      line-height: 1.75;
+      color: #1a254a;
+      margin: 6px 0;
+    }
+    .bullet-list {
+      margin: 8px 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 5px;
+    }
+    .bullet-list li {
+      position: relative;
+      padding-left: 20px;
+      font-size: 14px;
+      line-height: 1.6;
+      color: #1a254a;
+    }
+    .bullet-list li::before {
+      content: "";
+      position: absolute;
+      left: 2px;
+      top: 9px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #d9a53a;
+    }
+    .formula-box {
+      background: #0b1330;
+      color: #fdeec2;
+      font-weight: 700;
+      font-size: 13.6px;
+      padding: 10px 16px;
+      border-radius: 10px;
+      margin: 10px 0;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 12px 0;
+      font-size: 13.6px;
+      display: block;
+      overflow-x: auto;
+    }
+    .data-table th, .data-table td {
+      border: 1px solid #e7eaf5;
+      padding: 8px 12px;
+      text-align: left;
+      color: #1a254a;
+      white-space: normal;
+    }
+    .data-table th {
+      background: #f4f6fc;
+      color: #0b1330;
+      font-weight: 800;
+    }
+    .pyq-tag {
+      display: inline-block;
+      background: #fdf6e7;
+      color: #b9852a;
+      font-weight: 800;
+      font-size: 12px;
+      padding: 4px 12px;
+      border-radius: 8px;
+      margin: 12px 0 6px;
+    }
+    .answer-box {
+      background: #eefaf2;
+      border: 1px solid #bfe8cc;
+      color: #1a7a4c;
+      font-weight: 700;
+      font-size: 13.6px;
+      padding: 6px 14px;
+      border-radius: 9px;
+      margin: 6px 0;
+    }
+    .explain {
+      background: #f4f6fc;
+      border-radius: 9px;
+      padding: 6px 14px;
+      font-size: 13.6px;
+      color: #1a254a;
+    }
+    .subtopic {
+      padding: 14px 0 6px;
+      border-top: 1px dashed #e7eaf5;
+    }
+    .subtopic:first-of-type { border-top: none; padding-top: 2px; }
+    .subhead {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 6px;
+    }
+    .sub-num {
+      flex: none;
+      width: 26px;
+      height: 26px;
+      border-radius: 8px;
+      background: #fdf6e7;
+      color: #b9852a;
+      font-weight: 800;
+      font-size: 12px;
+      display: grid;
+      place-items: center;
+    }
+    .subhead h3 {
+      margin: 0;
+      font-size: 15.5px;
+      font-weight: 800;
+      color: #0b1330;
+    }
+    .enroll-cta {
+      background: #0b1330;
+      color: #fff;
+      border-radius: 16px;
+      padding: 24px 24px;
+      margin-top: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+      overflow: hidden;
+    }
+    .enroll-cta::before {
+      content: "";
+      position: absolute;
+      right: -40px;
+      top: -40px;
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(232,183,75,0.2), transparent 70%);
+    }
+    .enroll-cta h3 { margin: 0 0 4px; font-size: 20px; }
+    .enroll-cta p { margin: 0; color: rgba(255,255,255,0.75); font-size: 13.5px; max-width: 480px; }
+    .btn-gold {
+      background: #e8b74b;
+      color: #0b1330;
+      font-weight: 800;
+      padding: 10px 22px;
+      border-radius: 10px;
+      font-size: 13.5px;
+      white-space: nowrap;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="container hero-inner">
+    <span class="eyebrow">★ UGC NET Paper-I · Logical Reasoning</span>
+    <h1 class="h-display">Categorical Syllogism</h1>
+    <p>Complete tutorial: Categorical Syllogism, Major, Minor & Middle Terms, Mood, Figure, Standard forms, Rules of categorical syllogism, Validity testing, Existential fallacy for UGC NET Paper-1.</p>
+  </div>
+</section>
+
+<main class="container">
+  <input type="checkbox" id="sidebar-toggle">
+  <label for="sidebar-toggle" class="mobile-bar">
+    <span>📑 On this page</span>
+    <span>☰ Menu</span>
+  </label>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebarNav">
+      <p class="sidebar-title">On this page</p>
+      <nav>
+       <a href="/tutorials/logical-reasoning/categorical-syllogism/categorical-syllogism-intro" class="nav-link active">
+  <span class="nav-num">1</span>Categorical Syllogism
+</a>
+<a href="/tutorials/logical-reasoning/categorical-syllogism/major-minor-middle-terms" class="nav-link">
+  <span class="nav-num">2</span>Major, Minor & Middle Terms
+</a>
+<a href="/tutorials/logical-reasoning/categorical-syllogism/mood" class="nav-link">
+  <span class="nav-num">3</span>Mood
+</a>
+<a href="/tutorials/logical-reasoning/categorical-syllogism/figure" class="nav-link">
+  <span class="nav-num">4</span>Figure
+</a>
+<a href="/tutorials/logical-reasoning/categorical-syllogism/standard-forms" class="nav-link">
+  <span class="nav-num">5</span>Standard Forms
+</a>
+<a href="/tutorials/logical-reasoning/categorical-syllogism/rules-categorical-syllogism" class="nav-link">
+  <span class="nav-num">6</span>Rules of Categorical Syllogism
+</a>
+<a href="/tutorials/logical-reasoning/categorical-syllogism/validity-testing" class="nav-link">
+  <span class="nav-num">7</span>Validity Testing
+</a>
+<a href="/tutorials/logical-reasoning/categorical-syllogism/existential-fallacy" class="nav-link">
+  <span class="nav-num">8</span>Existential Fallacy
+</a>
+<a href="/tutorials/logical-reasoning/categorical-syllogism/syllogism-summary" class="nav-link">
+  <span class="nav-num">9</span>Summary
+</a>
+<a href="/tutorials/logical-reasoning/categorical-syllogism/exam-traps" class="nav-link">
+  <span class="nav-num">10</span>Common Exam Traps
+</a>
+<a href="/tutorials/logical-reasoning/categorical-syllogism/practice-questions" class="nav-link">
+  <span class="nav-num">11</span>Practice Questions
+</a>
+<a href="/tutorials/logical-reasoning/categorical-syllogism/one-page-revision" class="nav-link">
+  <span class="nav-num">12</span>One-Page Revision
+</a>
+      </nav>
+    </aside>
+
+    <div class="content" id="contentArea">
+      <!-- ===== CARDS ===== -->
+      <div id="categorical-syllogism-intro" class="topic-card"><div class="sec-head"><span class="sec-num">1</span><h2>Categorical Syllogism — श्रेणीबद्ध न्यायवाक्य</h2></div><p><strong>Categorical Syllogism</strong> एक <strong>deductive argument</strong> है जिसमें <strong>तीन categorical propositions</strong> (two premises + one conclusion) होते हैं, और <strong>three terms</strong> होते हैं, जिनमें से प्रत्येक <strong>exactly two</strong> propositions में आता है।</p><div class="formula-box">Categorical Syllogism = 2 Premises + 1 Conclusion | 3 Terms (each used twice)</div><p><strong>Example:</strong></p><ul class="bullet-list"><li><strong>Premise 1 (Major):</strong> All humans are mortal. (All M are P)</li><li><strong>Premise 2 (Minor):</strong> Socrates is a human. (All S are M)</li><li><strong>Conclusion:</strong> Therefore, Socrates is mortal. (All S are P)</li></ul></div>
+
+      <div id="major-minor-middle-terms" class="topic-card"><div class="sec-head"><span class="sec-num">2</span><h2>Major, Minor & Middle Terms — प्रमुख, गौण एवं मध्य पद</h2></div><ul class="bullet-list"><li><strong>Major Term (P) — प्रमुख पद:</strong> वह term जो <strong>conclusion का predicate</strong> है। (Mortal in the example)</li><li><strong>Minor Term (S) — गौण पद:</strong> वह term जो <strong>conclusion का subject</strong> है। (Socrates in the example)</li><li><strong>Middle Term (M) — मध्य पद:</strong> वह term जो <strong>both premises</strong> में आता है, लेकिन <strong>conclusion में नहीं</strong> आता। (Humans in the example)</li></ul><p><strong>Identification:</strong></p><ul class="bullet-list"><li><strong>Major Premise:</strong> वह premise जिसमें <strong>Major Term (P)</strong> होता है</li><li><strong>Minor Premise:</strong> वह premise जिसमें <strong>Minor Term (S)</strong> होता है</li><li><strong>Middle Term (M):</strong> दोनों premises में आता है, conclusion में नहीं</li></ul><p><strong>Example:</strong></p><ul class="bullet-list"><li><strong>Major Premise:</strong> All <u>humans</u> (M) are <u>mortal</u> (P)</li><li><strong>Minor Premise:</strong> <u>Socrates</u> (S) is a <u>human</u> (M)</li><li><strong>Conclusion:</strong> <u>Socrates</u> (S) is <u>mortal</u> (P)</li></ul></div>
+
+      <div id="mood" class="topic-card"><div class="sec-head"><span class="sec-num">3</span><h2>Mood — स्वरूप (मूड)</h2></div><p><strong>Mood</strong> syllogism में <strong>three propositions</strong> (two premises + one conclusion) के <strong>types</strong> (A, E, I, O) का <strong>sequence</strong> है।</p><div class="formula-box">Mood = Type of Major Premise + Type of Minor Premise + Type of Conclusion</div><p><strong>Example:</strong></p><ul class="bullet-list"><li><strong>All M are P</strong> = A</li><li><strong>All S are M</strong> = A</li><li><strong>All S are P</strong> = A</li><li><strong>Mood = AAA</strong></li></ul><p><strong>Another Example:</strong></p><ul class="bullet-list"><li><strong>All M are P</strong> = A</li><li><strong>Some S are M</strong> = I</li><li><strong>Some S are P</strong> = I</li><li><strong>Mood = AII</strong></li></ul><p><strong>Total Possibilities:</strong> 4×4×4 = 64 possible moods (but only some are valid).</p></div>
+
+      <div id="figure" class="topic-card"><div class="sec-head"><span class="sec-num">4</span><h2>Figure — आकृति</h2></div><p><strong>Figure</strong> syllogism में <strong>middle term (M)</strong> की position को दर्शाता है — M किस term के साथ और कहाँ आता है।</p><p><strong>Four Figures:</strong></p><ul class="bullet-list"><li><strong>Figure 1:</strong> M — P (Major), S — M (Minor) → M is subject of major and predicate of minor</li><li><strong>Figure 2:</strong> P — M (Major), S — M (Minor) → M is predicate of both</li><li><strong>Figure 3:</strong> M — P (Major), M — S (Minor) → M is subject of both</li><li><strong>Figure 4:</strong> P — M (Major), M — S (Minor) → M is predicate of major and subject of minor</li></ul><p><strong>Visual Representation:</strong></p><ul class="bullet-list"><li><strong>Figure 1:</strong> M — P / S — M → ∴ S — P</li><li><strong>Figure 2:</strong> P — M / S — M → ∴ S — P</li><li><strong>Figure 3:</strong> M — P / M — S → ∴ S — P</li><li><strong>Figure 4:</strong> P — M / M — S → ∴ S — P</li></ul></div>
+
+      <div id="standard-forms" class="topic-card"><div class="sec-head"><span class="sec-num">5</span><h2>Standard Forms — मानक रूप</h2></div><p>A syllogism is in <strong>standard form</strong> when:</p><ul class="bullet-list"><li><strong>Premises are in proper order</strong> (Major premise first, then Minor premise)</li><li><strong>Conclusion is stated last</strong></li><li><strong>Propositions are in standard categorical form</strong> (A, E, I, O)</li></ul><p><strong>Standard Form Structure:</strong></p><ul class="bullet-list"><li><strong>Major Premise:</strong> contains Major Term (P) and Middle Term (M)</li><li><strong>Minor Premise:</strong> contains Minor Term (S) and Middle Term (M)</li><li><strong>Conclusion:</strong> contains Minor Term (S) and Major Term (P)</li></ul><div class="formula-box">Major Premise → Minor Premise → Conclusion</div><p><strong>Example:</strong></p><ul class="bullet-list"><li><strong>Major Premise:</strong> All M are P</li><li><strong>Minor Premise:</strong> All S are M</li><li><strong>Conclusion:</strong> All S are P</li><li><strong>Mood and Figure:</strong> AAA-1</li></ul></div>
+
+      <div id="rules-categorical-syllogism" class="topic-card"><div class="sec-head"><span class="sec-num">6</span><h2>Rules of Categorical Syllogism — नियम</h2></div><p>A syllogism is <strong>valid</strong> only if it follows <strong>all</strong> these rules:</p><ul class="bullet-list"><li><strong>Rule 1 (Distribution of Middle Term):</strong> The middle term must be <strong>distributed at least once</strong>. (M must be distributed in at least one premise)</li><li><strong>Rule 2 (Distribution of Terms in Conclusion):</strong> If a term is <strong>distributed in the conclusion</strong>, it must be <strong>distributed in the premise</strong>. (No term can be distributed in conclusion if not distributed in premise)</li><li><strong>Rule 3 (Quality of Premises):</strong> <strong>Two negative premises</strong> are not allowed. (At least one premise must be affirmative)</li><li><strong>Rule 4 (Quality of Conclusion):</strong> If either premise is <strong>negative</strong>, the conclusion must be <strong>negative</strong>. If both premises are affirmative, conclusion must be affirmative.</li><li><strong>Rule 5 (Existential Import):</strong> If both premises are <strong>universal</strong>, the conclusion cannot be <strong>particular</strong> (unless existential import is assumed).</li><li><strong>Rule 6 (From Two Particulars):</strong> <strong>Two particular premises</strong> are not allowed.</li><li><strong>Rule 7 (Particular Premise with Negative):</strong> If one premise is <strong>particular</strong> and the other is <strong>negative</strong>, the conclusion cannot be <strong>universal</strong>.</li></ul></div>
+
+      <div id="validity-testing" class="topic-card"><div class="sec-head"><span class="sec-num">7</span><h2>Validity Testing — वैधता परीक्षण</h2></div><p><strong>Steps to Test Validity:</strong></p><ul class="bullet-list"><li><strong>Step 1:</strong> Identify the <strong>Major, Minor, and Middle Terms</strong></li><li><strong>Step 2:</strong> Identify the <strong>Mood</strong> (A, E, I, O sequence)</li><li><strong>Step 3:</strong> Identify the <strong>Figure</strong> (position of Middle Term)</li><li><strong>Step 4:</strong> Check <strong>all 7 rules</strong> — if any rule is violated, the syllogism is <strong>invalid</strong></li><li><strong>Step 5:</strong> If all rules are satisfied, the syllogism is <strong>valid</strong></li></ul><p><strong>Valid Mood-Figure Combinations (Traditional):</strong></p><ul class="bullet-list"><li><strong>Figure 1:</strong> AAA, EAE, AII, EIO, (AAI), (EAO)</li><li><strong>Figure 2:</strong> EAE, AEE, EIO, AOO, (EAO), (AEO)</li><li><strong>Figure 3:</strong> AII, EIO, IAI, OAO, (AAI), (EAO)</li><li><strong>Figure 4:</strong> AEE, IAI, EIO, (AAI), (EAO), (AEO)</li></ul><p><strong>Note:</strong> Moods in parentheses require <strong>existential import</strong> (valid only if the subject class exists).</p></div>
+
+      <div id="existential-fallacy" class="topic-card"><div class="sec-head"><span class="sec-num">8</span><h2>Existential Fallacy — अस्तित्वगत दोष</h2></div><p><strong>Existential Fallacy</strong> तब होता है जब एक <strong>valid syllogism</strong> में <strong>universal premises</strong> से <strong>particular conclusion</strong> निकाला जाता है, बिना यह माने कि subject class का <strong>existence</strong> confirmed है।</p><div class="formula-box">Existential Fallacy = Universal Premises → Particular Conclusion (without existential import)</div><p><strong>Example (Invalid in Boolean):</strong></p><ul class="bullet-list"><li><strong>Major Premise:</strong> All M are P (A)</li><li><strong>Minor Premise:</strong> All M are S (A)</li><li><strong>Conclusion:</strong> Some S are P (I)</li><li><strong>Mood:</strong> AAI (Figure 3)</li><li>In Traditional logic, this is valid (assuming M exists).</li><li>In <strong>Boolean logic</strong>, this is <strong>invalid</strong> because the conclusion has existential import but premises do not.</li></ul><p><strong>Key Point:</strong></p><ul class="bullet-list"><li>Universal propositions (A and E) <strong>do not</strong> assert existence in Boolean interpretation.</li><li>Particular propositions (I and O) <strong>do</strong> assert existence.</li><li>So, from universal premises, we <strong>cannot</strong> derive a particular conclusion in Boolean logic without a separate existence assumption.</li></ul></div>
+
+      <div id="syllogism-summary" class="topic-card"><div class="sec-head"><span class="sec-num">9</span><h2>Summary — सारांश</h2></div><ul class="bullet-list"><li><strong>Categorical Syllogism:</strong> 3 propositions, 3 terms, each term used twice</li><li><strong>Major Term (P):</strong> Conclusion predicate</li><li><strong>Minor Term (S):</strong> Conclusion subject</li><li><strong>Middle Term (M):</strong> Appears in both premises, not in conclusion</li><li><strong>Mood:</strong> Sequence of A, E, I, O in (Major, Minor, Conclusion)</li><li><strong>Figure:</strong> Position of Middle Term (1-4)</li><li><strong>Standard Form:</strong> Major Premise → Minor Premise → Conclusion</li><li><strong>Rules:</strong> 7 rules to test validity</li><li><strong>Existential Fallacy:</strong> Universal premises → Particular conclusion without existence assumption</li></ul></div>
+
+      <div id="exam-traps" class="topic-card"><div class="sec-head"><span class="sec-num">10</span><h2>Common Exam Traps — सामान्य परीक्षा जाल</h2></div><ul class="bullet-list"><li><strong>Trap 1:</strong> Major Term = Predicate of conclusion → ✅ True</li><li><strong>Trap 2:</strong> Minor Term = Subject of conclusion → ✅ True</li><li><strong>Trap 3:</strong> Middle Term = appears in conclusion → ❌ Middle term does NOT appear in conclusion.</li><li><strong>Trap 4:</strong> Two negative premises are allowed → ❌ Two negative premises are NOT allowed.</li><li><strong>Trap 5:</strong> If conclusion is negative, both premises must be negative → ❌ At least one premise must be negative, but not necessarily both.</li><li><strong>Trap 6:</strong> Existential fallacy = always invalid → ❌ In Traditional logic it's valid; in Boolean logic it's invalid.</li><li><strong>Trap 7:</strong> Mood = Figure → ❌ Mood and Figure are different concepts.</li></ul></div>
+
+      <div id="practice-questions" class="topic-card"><div class="sec-head"><span class="sec-num">11</span><h2>Practice Questions — अभ्यास प्रश्न</h2></div>
+      <div class="pyq-tag">Question 1 (Terms Identification)</div>
+      <p>In the syllogism "All cats are animals. All animals are living things. Therefore, all cats are living things." Identify the Middle Term.</p>
+      <ul class="bullet-list"><li>A. Cats</li><li>B. Animals</li><li>C. Living things</li><li>D. None of these</li></ul>
+      <div class="answer-box">Answer: B. Animals</div>
+      <p class="explain">Explanation: Middle term appears in both premises but not in conclusion — "animals" is the middle term.</p>
+
+      <div class="pyq-tag">Question 2 (Mood)</div>
+      <p>What is the mood of: "All M are P. All S are M. Therefore, All S are P."</p>
+      <ul class="bullet-list"><li>A. AAA</li><li>B. AAE</li><li>C. EAE</li><li>D. AAI</li></ul>
+      <div class="answer-box">Answer: A. AAA</div>
+      <p class="explain">Explanation: All three propositions are A (Universal Affirmative) → Mood = AAA.</p>
+
+      <div class="pyq-tag">Question 3 (Figure)</div>
+      <p>In the syllogism "All M are P. All S are M. Therefore, All S are P." what is the figure?</p>
+      <ul class="bullet-list"><li>A. Figure 1</li><li>B. Figure 2</li><li>C. Figure 3</li><li>D. Figure 4</li></ul>
+      <div class="answer-box">Answer: A. Figure 1</div>
+      <p class="explain">Explanation: M is subject of major (M—P) and predicate of minor (S—M) → Figure 1.</p>
+
+      <div class="pyq-tag">Question 4 (Rule Violation)</div>
+      <p>Which rule is violated by: "All M are P. Some S are not M. Therefore, Some S are not P."</p>
+      <ul class="bullet-list"><li>A. Middle term not distributed</li><li>B. Two negative premises</li><li>C. Illicit major</li><li>D. Illicit minor</li></ul>
+      <div class="answer-box">Answer: A. Middle term not distributed</div>
+      <p class="explain">Explanation: M appears as subject in "All M are P" (distributed) but in "Some S are not M" (predicate — not distributed). M is not distributed in either premise → Rule 1 violated.</p>
+
+      <div class="pyq-tag">Question 5 (Existential Fallacy)</div>
+      <p>Which syllogism commits the existential fallacy in Boolean interpretation?</p>
+      <ul class="bullet-list"><li>A. AAA-1</li><li>B. AAI-3</li><li>C. EAE-1</li><li>D. AEE-2</li></ul>
+      <div class="answer-box">Answer: B. AAI-3</div>
+      <p class="explain">Explanation: AAI-3 has universal premises (A and A) and a particular conclusion (I) → existential fallacy in Boolean logic.</p>
+
+      <div class="pyq-tag">Question 6 (Valid Mood)</div>
+      <p>Which of the following is a valid mood in Figure 1?</p>
+      <ul class="bullet-list"><li>A. AII</li><li>B. EIO</li><li>C. AAA</li><li>D. All of the above</li></ul>
+      <div class="answer-box">Answer: D. All of the above</div>
+      <p class="explain">Explanation: AAA-1, AII-1, and EIO-1 are all valid moods in Figure 1.</p></div>
+
+      <div id="one-page-revision" class="topic-card"><div class="sec-head"><span class="sec-num">12</span><h2>One-Page Revision — एक पेज में पुनरावृत्ति</h2></div>
+      <div class="formula-box">Categorical Syllogism = 3 Propositions + 3 Terms + Deductive</div>
+
+      <p><strong>Terms:</strong></p>
+      <ul class="bullet-list"><li><strong>Major Term (P):</strong> Conclusion Predicate</li>
+      <li><strong>Minor Term (S):</strong> Conclusion Subject</li>
+      <li><strong>Middle Term (M):</strong> In both premises, NOT in conclusion</li></ul>
+
+      <p><strong>Mood & Figure:</strong></p>
+      <ul class="bullet-list"><li><strong>Mood:</strong> A, E, I, O sequence (Major, Minor, Conclusion)</li>
+      <li><strong>Figure:</strong> Position of Middle Term (1-4)</li></ul>
+
+      <p><strong>7 Rules:</strong></p>
+      <ul class="bullet-list"><li>1. M distributed at least once</li>
+      <li>2. If term distributed in conclusion → distributed in premise</li>
+      <li>3. No two negative premises</li>
+      <li>4. Negative premise → Negative conclusion; Affirmative premises → Affirmative conclusion</li>
+      <li>5. Universal premises → No particular conclusion (without existential import)</li>
+      <li>6. No two particular premises</li>
+      <li>7. Particular + Negative → No universal conclusion</li></ul>
+
+      <p><strong>Existential Fallacy:</strong></p>
+      <ul class="bullet-list"><li>Universal premises → Particular conclusion (invalid in Boolean, valid in Traditional if existence assumed)</li></ul>
+
+      <p><strong>Exam Formula:</strong></p>
+      <div class="formula-box">Valid Syllogism = Standard Form + All 7 Rules Satisfied</div>
+      <p><em>UGC NET में Categorical Syllogism के questions terms identification, mood-figure, rules, और existential fallacy पर based होते हैं।</em></p></div>
+
+      <div class="enroll-cta"><div><h3 class="h-display">Join the Paper-1 Batch</h3><p>Course fee FREE — ₹500 registration & academic/logistics contribution. Classes daily at 6:30 PM.</p></div><a href="#" class="btn-gold">✓ JOIN BATCH @ ₹500</a></div>
+    </div>
+  </div>
+</main>
+
+<script>
+  (function() {
+
+    const BASE_PATH =
+      "/tutorials/logical-reasoning/categorical-syllogism";
+
+    const links = document.querySelectorAll(".nav-link");
+    const cards = document.querySelectorAll(".topic-card");
+    const content = document.getElementById("contentArea");
+    const sidebarToggle = document.getElementById("sidebar-toggle");
+
+
+    // Get topic slug from current URL
+    function getSlugFromPath() {
+
+      const path = window.location.pathname
+        .replace(/\/+$/, "");
+
+      if (path.startsWith(BASE_PATH + "/")) {
+
+        return path
+          .substring((BASE_PATH + "/").length)
+          .split("/")[0];
+
+      }
+
+      return null;
+    }
+
+
+    // Update browser URL
+    function updateUrl(slug, replace = false) {
+
+      const newPath =
+        BASE_PATH + "/" + slug;
+
+      if (window.location.pathname !== newPath) {
+
+        if (replace) {
+
+          history.replaceState(
+            null,
+            "",
+            newPath
+          );
+
+        } else {
+
+          history.pushState(
+            null,
+            "",
+            newPath
+          );
+
+        }
+
+      }
+    }
+
+
+    // Update active sidebar link
+    function updateActiveLink(slug) {
+
+      links.forEach(function(link) {
+
+        const href =
+          link.getAttribute("href");
+
+        if (!href) return;
+
+        const linkSlug =
+          href
+            .split("/")
+            .filter(Boolean)
+            .pop();
+
+        link.classList.toggle(
+          "active",
+          linkSlug === slug
+        );
+
+      });
+
+    }
+
+
+    // Show selected topic card
+    function showCard(
+      slug,
+      updateHistory = true
+    ) {
+
+      cards.forEach(function(card) {
+
+        card.classList.add("hidden");
+
+      });
+
+
+      const target =
+        document.getElementById(slug);
+
+
+      if (!target) {
+
+        const first = cards[0];
+
+        if (first) {
+
+          first.classList.remove("hidden");
+
+          const firstSlug =
+            first.id;
+
+          updateActiveLink(firstSlug);
+
+          updateUrl(
+            firstSlug,
+            true
+          );
+
+        }
+
+        return;
+      }
+
+
+      target.classList.remove("hidden");
+
+      updateActiveLink(slug);
+
+
+      if (updateHistory) {
+
+        updateUrl(
+          slug,
+          false
+        );
+
+      }
+
+
+      if (sidebarToggle) {
+
+        sidebarToggle.checked = false;
+
+      }
+
+
+      if (content) {
+
+        const top =
+          content.getBoundingClientRect().top +
+          window.pageYOffset -
+          10;
+
+        window.scrollTo({
+
+          top: top,
+
+          behavior: "smooth"
+
+        });
+
+      }
+
+    }
+
+
+    // Sidebar link click
+    links.forEach(function(link) {
+
+      link.addEventListener(
+        "click",
+        function(e) {
+
+          e.preventDefault();
+
+
+          const href =
+            this.getAttribute("href");
+
+          if (!href) return;
+
+
+          const slug =
+            href
+              .split("/")
+              .filter(Boolean)
+              .pop();
+
+
+          if (!slug) return;
+
+
+          console.log(
+            "Clicked topic:",
+            slug
+          );
+
+
+          showCard(
+            slug,
+            true
+          );
+
+        }
+      );
+
+    });
+
+
+    // Initial page load
+    function initFromPath() {
+
+      let slug =
+        getSlugFromPath();
+
+
+      if (
+        !slug ||
+        !document.getElementById(slug)
+      ) {
+
+        slug =
+          cards[0]?.id ||
+          "categorical-syllogism-intro";
+
+      }
+
+
+      showCard(
+        slug,
+        false
+      );
+
+
+      updateUrl(
+        slug,
+        true
+      );
+
+    }
+
+
+    initFromPath();
+
+
+    // Browser Back / Forward
+    window.addEventListener(
+      "popstate",
+      function() {
+
+        const slug =
+          getSlugFromPath();
+
+
+        if (
+          slug &&
+          document.getElementById(slug)
+        ) {
+
+          showCard(
+            slug,
+            false
+          );
+
+        } else {
+
+          const firstSlug =
+            cards[0]?.id ||
+            "categorical-syllogism-intro";
+
+          showCard(
+            firstSlug,
+            false
+          );
+
+        }
+
+      }
+    );
+
+
+  })();
+</script>
+</body>
+</html>

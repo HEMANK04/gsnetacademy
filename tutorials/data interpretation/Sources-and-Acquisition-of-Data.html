@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sources and Acquisition of Data – Full Notes | UGC NET Paper-1</title>
+  <meta name="description" content="Complete tutorial: Sources and Acquisition of Data, Primary Data, Secondary Data, Census, Sampling & Data Acquisition for UGC NET Paper-1 Data Interpretation.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; }
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background: #f8f5ee;
+      color: #101a3d;
+    }
+    .h-display { font-family: 'Poppins', sans-serif; font-weight: 800; letter-spacing: -0.01em; }
+    .container { max-width: 1360px; margin: 0 auto; padding: 0 20px; }
+
+    .hero {
+      background: #0b1330;
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+      padding: 28px 0 22px;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      right: -80px;
+      top: -100px;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(232,183,75,0.2), transparent 70%);
+    }
+    .hero-inner { position: relative; }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      padding: 6px 16px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+      color: #e8b74b;
+    }
+    .hero h1 {
+      font-size: clamp(28px, 4.2vw, 44px);
+      margin: 12px 0 6px;
+    }
+    .hero p {
+      color: rgba(255,255,255,0.78);
+      max-width: 680px;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 28px;
+      padding: 28px 0 50px;
+      align-items: start;
+    }
+    @media (max-width: 980px) {
+      .layout { grid-template-columns: 1fr; }
+    }
+
+    .sidebar {
+      position: sticky;
+      top: 16px;
+      max-height: calc(100vh - 40px);
+      overflow-y: auto;
+      background: #fff;
+      border: 1px solid rgba(16,26,61,0.08);
+      border-radius: 16px;
+      padding: 16px 12px;
+      box-shadow: 0 6px 24px rgba(16,26,61,0.05);
+    }
+    .sidebar::-webkit-scrollbar { width: 5px; }
+    .sidebar::-webkit-scrollbar-thumb { background: #dde2ef; border-radius: 8px; }
+    .sidebar-title {
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: #b9852a;
+      padding: 4px 10px 14px;
+    }
+    .nav-link {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 10px;
+      border-radius: 10px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #33406b;
+      line-height: 1.3;
+      transition: 0.1s;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .nav-link:hover { background: #f4f6fc; color: #0b1330; }
+    .nav-link.active {
+      background: #fdf6e7;
+      color: #0b1330;
+    }
+    .nav-num {
+      flex: none;
+      width: 22px;
+      height: 22px;
+      border-radius: 7px;
+      background: #e7eaf5;
+      color: #5b6690;
+      font-size: 11px;
+      font-weight: 800;
+      display: grid;
+      place-items: center;
+    }
+    .nav-link.active .nav-num {
+      background: #e8b74b;
+      color: #0b1330;
+    }
+
+    #sidebar-toggle { display: none; }
+    .mobile-bar { display: none; }
+    @media (max-width: 980px) {
+      .mobile-bar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: #fff;
+        border: 1px solid rgba(16,26,61,0.1);
+        border-radius: 12px;
+        padding: 12px 16px;
+        margin-bottom: 8px;
+        font-weight: 800;
+        font-size: 13.5px;
+        color: #0b1330;
+      }
+      .sidebar { display: none; position: static; max-height: none; }
+      #sidebar-toggle:checked ~ .layout .sidebar { display: block; }
+    }
+
+    .content { min-width: 0; }
+    .topic-card {
+      background: #fff;
+      border: 1px solid rgba(16,26,61,0.08);
+      border-radius: 16px;
+      padding: 20px 20px 16px;
+      margin-bottom: 18px;
+      scroll-margin-top: 20px;
+      display: block;
+    }
+    .topic-card.hidden { display: none; }
+    .sec-head {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+    .sec-num {
+      flex: none;
+      width: 34px;
+      height: 34px;
+      border-radius: 10px;
+      background: #0b1330;
+      color: #e8b74b;
+      font-weight: 800;
+      font-size: 14px;
+      display: grid;
+      place-items: center;
+    }
+    .sec-head h2 {
+      margin: 0;
+      font-size: 19px;
+      font-weight: 800;
+      color: #0b1330;
+    }
+    .topic-card p {
+      font-size: 14.5px;
+      line-height: 1.75;
+      color: #1a254a;
+      margin: 6px 0;
+    }
+    .bullet-list {
+      margin: 8px 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 5px;
+    }
+    .bullet-list li {
+      position: relative;
+      padding-left: 20px;
+      font-size: 14px;
+      line-height: 1.6;
+      color: #1a254a;
+    }
+    .bullet-list li::before {
+      content: "";
+      position: absolute;
+      left: 2px;
+      top: 9px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #d9a53a;
+    }
+    .formula-box {
+      background: #0b1330;
+      color: #fdeec2;
+      font-weight: 700;
+      font-size: 13.6px;
+      padding: 10px 16px;
+      border-radius: 10px;
+      margin: 10px 0;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 12px 0;
+      font-size: 13.6px;
+      display: block;
+      overflow-x: auto;
+    }
+    .data-table th, .data-table td {
+      border: 1px solid #e7eaf5;
+      padding: 8px 12px;
+      text-align: left;
+      color: #1a254a;
+      white-space: normal;
+    }
+    .data-table th {
+      background: #f4f6fc;
+      color: #0b1330;
+      font-weight: 800;
+    }
+    .pyq-tag {
+      display: inline-block;
+      background: #fdf6e7;
+      color: #b9852a;
+      font-weight: 800;
+      font-size: 12px;
+      padding: 4px 12px;
+      border-radius: 8px;
+      margin: 12px 0 6px;
+    }
+    .answer-box {
+      background: #eefaf2;
+      border: 1px solid #bfe8cc;
+      color: #1a7a4c;
+      font-weight: 700;
+      font-size: 13.6px;
+      padding: 6px 14px;
+      border-radius: 9px;
+      margin: 6px 0;
+    }
+    .explain {
+      background: #f4f6fc;
+      border-radius: 9px;
+      padding: 6px 14px;
+      font-size: 13.6px;
+      color: #1a254a;
+    }
+    .subtopic {
+      padding: 14px 0 6px;
+      border-top: 1px dashed #e7eaf5;
+    }
+    .subtopic:first-of-type { border-top: none; padding-top: 2px; }
+    .subhead {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 6px;
+    }
+    .sub-num {
+      flex: none;
+      width: 26px;
+      height: 26px;
+      border-radius: 8px;
+      background: #fdf6e7;
+      color: #b9852a;
+      font-weight: 800;
+      font-size: 12px;
+      display: grid;
+      place-items: center;
+    }
+    .subhead h3 {
+      margin: 0;
+      font-size: 15.5px;
+      font-weight: 800;
+      color: #0b1330;
+    }
+    .enroll-cta {
+      background: #0b1330;
+      color: #fff;
+      border-radius: 16px;
+      padding: 24px 24px;
+      margin-top: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+      overflow: hidden;
+    }
+    .enroll-cta::before {
+      content: "";
+      position: absolute;
+      right: -40px;
+      top: -40px;
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(232,183,75,0.2), transparent 70%);
+    }
+    .enroll-cta h3 { margin: 0 0 4px; font-size: 20px; }
+    .enroll-cta p { margin: 0; color: rgba(255,255,255,0.75); font-size: 13.5px; max-width: 480px; }
+    .btn-gold {
+      background: #e8b74b;
+      color: #0b1330;
+      font-weight: 800;
+      padding: 10px 22px;
+      border-radius: 10px;
+      font-size: 13.5px;
+      white-space: nowrap;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="container hero-inner">
+    <span class="eyebrow">★ UGC NET Paper-I · Data Interpretation</span>
+    <h1 class="h-display">Sources and Acquisition of Data</h1>
+    <p>Complete tutorial: Primary Data, Secondary Data, Census, Sampling & Data Acquisition for UGC NET Paper-1 Data Interpretation.</p>
+  </div>
+</section>
+
+<main class="container">
+  <input type="checkbox" id="sidebar-toggle">
+  <label for="sidebar-toggle" class="mobile-bar">
+    <span>📑 On this page</span>
+    <span>☰ Menu</span>
+  </label>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebarNav">
+      <p class="sidebar-title">On this page</p>
+      <nav>
+       <a href="/tutorials/data-interpretation/sources-and-acquisition-of-data/data-meaning" class="nav-link active">
+  <span class="nav-num">1</span>Meaning of Data
+</a>
+<a href="/tutorials/data-interpretation/sources-and-acquisition-of-data/data-acquisition" class="nav-link">
+  <span class="nav-num">2</span>Data Acquisition
+</a>
+<a href="/tutorials/data-interpretation/sources-and-acquisition-of-data/primary-data" class="nav-link">
+  <span class="nav-num">3</span>Primary Data
+</a>
+<a href="/tutorials/data-interpretation/sources-and-acquisition-of-data/secondary-data" class="nav-link">
+  <span class="nav-num">4</span>Secondary Data
+</a>
+<a href="/tutorials/data-interpretation/sources-and-acquisition-of-data/primary-vs-secondary" class="nav-link">
+  <span class="nav-num">5</span>Primary vs Secondary
+</a>
+<a href="/tutorials/data-interpretation/sources-and-acquisition-of-data/census-method" class="nav-link">
+  <span class="nav-num">6</span>Census Method
+</a>
+<a href="/tutorials/data-interpretation/sources-and-acquisition-of-data/sampling-method" class="nav-link">
+  <span class="nav-num">7</span>Sampling Method
+</a>
+<a href="/tutorials/data-interpretation/sources-and-acquisition-of-data/census-vs-sampling" class="nav-link">
+  <span class="nav-num">8</span>Census vs Sampling
+</a>
+<a href="/tutorials/data-interpretation/sources-and-acquisition-of-data/sampling-types" class="nav-link">
+  <span class="nav-num">9</span>Types of Sampling
+</a>
+<a href="/tutorials/data-interpretation/sources-and-acquisition-of-data/probability-sampling" class="nav-link">
+  <span class="nav-num">10</span>Probability Sampling
+</a>
+<a href="/tutorials/data-interpretation/sources-and-acquisition-of-data/non-probability-sampling" class="nav-link">
+  <span class="nav-num">11</span>Non-Probability Sampling
+</a>
+<a href="/tutorials/data-interpretation/sources-and-acquisition-of-data/data-collection-methods" class="nav-link">
+  <span class="nav-num">12</span>Data Collection Methods
+</a>
+<a href="/tutorials/data-interpretation/sources-and-acquisition-of-data/data-sources-examples" class="nav-link">
+  <span class="nav-num">13</span>Data Sources Examples
+</a>
+<a href="/tutorials/data-interpretation/sources-and-acquisition-of-data/exam-traps" class="nav-link">
+  <span class="nav-num">14</span>Common Exam Traps
+</a>
+<a href="/tutorials/data-interpretation/sources-and-acquisition-of-data/practice-questions" class="nav-link">
+  <span class="nav-num">15</span>Practice Questions
+</a>
+<a href="/tutorials/data-interpretation/sources-and-acquisition-of-data/one-page-revision" class="nav-link">
+  <span class="nav-num">16</span>One-Page Revision
+</a>
+      </nav>
+    </aside>
+
+    <div class="content" id="contentArea">
+      <!-- ===== CARDS ===== -->
+      <div id="data-meaning" class="topic-card"><div class="sec-head"><span class="sec-num">1</span><h2>Meaning of Data — डेटा का अर्थ</h2></div><p><strong>Data</strong> raw facts, figures, observations, symbols or responses हैं जिनका analysis करके meaningful conclusions निकाले जाते हैं।</p><div class="formula-box">Data = Raw Facts + Observations + Responses</div><p><strong>Key Point:</strong> Data स्वयं information नहीं है; processing के बाद यह information और knowledge में बदलता है।</p><p><strong>Data Classification:</strong></p><ul class="bullet-list"><li><strong>By Source:</strong> Primary Data, Secondary Data</li><li><strong>By Nature:</strong> Quantitative (numerical), Qualitative (categorical)</li><li><strong>By Collection Method:</strong> Census, Sample</li><li><strong>By Time:</strong> Cross-sectional (one time), Time-series (over time)</li></ul></div>
+
+      <div id="data-acquisition" class="topic-card"><div class="sec-head"><span class="sec-num">2</span><h2>Data Acquisition — डेटा अधिग्रहण</h2></div><p><strong>Data Acquisition</strong> विभिन्न sources से data को systematically obtain करने की process है।</p><div class="formula-box">Data Acquisition = Objective → Source → Collection → Validation → Storage → Processing → Analysis</div><p><strong>Steps in Data Acquisition:</strong></p><ul class="bullet-list"><li><strong>Define Objective:</strong> What data is needed and why</li><li><strong>Identify Sources:</strong> Primary or secondary</li><li><strong>Choose Collection Method:</strong> Survey, observation, experiment, etc.</li><li><strong>Collect Data:</strong> Census or sampling</li><li><strong>Validate Data:</strong> Check accuracy, completeness, consistency</li><li><strong>Store Data:</strong> Organised for analysis</li><li><strong>Process and Analyse:</strong> Convert raw data to information</li></ul></div>
+
+      <div id="primary-data" class="topic-card"><div class="sec-head"><span class="sec-num">3</span><h2>Primary Data — प्राथमिक डेटा</h2></div><p><strong>Primary Data</strong> researcher द्वारा <strong>first-hand</strong> किसी specific research purpose के लिए <strong>directly collected</strong> किया गया data है।</p><div class="formula-box">Primary Data = First-hand + Original + Collected by Researcher</div><p><strong>Methods of Collection:</strong></p><ul class="bullet-list"><li><strong>Observation:</strong> Directly observing behaviour/events</li><li><strong>Interview:</strong> Face-to-face or telephonic conversation</li><li><strong>Questionnaire/Survey:</strong> Structured questions</li><li><strong>Experiment:</strong> Controlled research setting</li><li><strong>Focus Group Discussion:</strong> Group interaction</li><li><strong>Field Survey:</strong> Direct data collection from population</li></ul><p><strong>Advantages:</strong></p><ul class="bullet-list"><li>Purpose-specific and relevant</li><li>Researcher controls methodology</li><li>Current and original</li><li>Detailed information possible</li></ul><p><strong>Disadvantages:</strong></p><ul class="bullet-list"><li>Time-consuming</li><li>Expensive</li><li>Training required</li><li>Non-response and bias possible</li></ul></div>
+
+      <div id="secondary-data" class="topic-card"><div class="sec-head"><span class="sec-num">4</span><h2>Secondary Data — द्वितीयक डेटा</h2></div><p><strong>Secondary Data</strong> वह data है जो <strong>already collected</strong> किया जा चुका है और researcher उसे अपने study के लिए <strong>reuse</strong> करता है।</p><div class="formula-box">Secondary Data = Already Collected + Reused + Existing Sources</div><p><strong>Sources:</strong></p><ul class="bullet-list"><li><strong>Government Publications:</strong> Census, NSSO reports, RBI reports</li><li><strong>Institutional Records:</strong> UGC/AISHE reports, university records</li><li><strong>Research Publications:</strong> Journals, books, theses</li><li><strong>Databases:</strong> Shodhganga, JSTOR, Scopus, Google Scholar</li><li><strong>Organisational Data:</strong> Company reports, NGO surveys</li><li><strong>Historical Records:</strong> Archives, government documents</li></ul><p><strong>Advantages:</strong></p><ul class="bullet-list"><li>Economical and time-saving</li><li>Large geographical/historical coverage</li><li>Comparative and trend analysis possible</li></ul><p><strong>Disadvantages:</strong></p><ul class="bullet-list"><li>May be outdated</li><li>Definitions may differ</li><li>Quality/accuracy questionable</li><li>May not fit research objectives perfectly</li></ul></div>
+
+      <div id="primary-vs-secondary" class="topic-card"><div class="sec-head"><span class="sec-num">5</span><h2>Primary vs Secondary Data — प्राथमिक vs द्वितीयक डेटा</h2></div><table class="data-table"><tr><th>Basis</th><th>Primary Data</th><th>Secondary Data</th></tr><tr><td>Definition</td><td>First-hand, original data</td><td>Already collected data</td></tr><tr><td>Collection</td><td>By researcher</td><td>By someone else</td></tr><tr><td>Purpose</td><td>Specific research objective</td><td>May have been for different purpose</td></tr><tr><td>Time</td><td>Current/real-time</td><td>May be historical/outdated</td></tr><tr><td>Cost</td><td>Expensive</td><td>Economical</td></tr><tr><td>Time</td><td>Time-consuming</td><td>Quick to obtain</td></tr><tr><td>Control</td><td>Researcher has full control</td><td>Limited control</td></tr><tr><td>Accuracy</td><td>Can be ensured</td><td>Cannot always be verified</td></tr><tr><td>Example</td><td>Student survey</td><td>Census data</td></tr></table><p><strong>Exam Trap:</strong> Data का primary/secondary distinction उसके स्वरूप पर नहीं, बल्कि <strong>किसने और किस उद्देश्य से</strong> एकत्र किया है — इस पर निर्भर करता है।</p></div>
+
+      <div id="census-method" class="topic-card"><div class="sec-head"><span class="sec-num">6</span><h2>Census Method — जनगणना विधि</h2></div><p><strong>Census</strong> population की <strong>every unit</strong> से data collect करने की method है।</p><div class="formula-box">Census = Complete Enumeration = Every Unit Covered</div><p><strong>Characteristics:</strong></p><ul class="bullet-list"><li>All units of population are included</li><li>Complete and comprehensive</li><li>No sampling error</li><li>Highly reliable (if done properly)</li><li>Time-consuming and expensive</li></ul><p><strong>Examples:</strong></p><ul class="bullet-list"><li>Indian Census (conducted every 10 years)</li><li>Population count of a university</li><li>Annual student enrolment data</li></ul><p><strong>When to Use:</strong></p><ul class="bullet-list"><li>Small population</li><li>When high accuracy is required</li><li>Legal/administrative requirements</li><li>When resources are available</li></ul></div>
+
+      <div id="sampling-method" class="topic-card"><div class="sec-head"><span class="sec-num">7</span><h2>Sampling Method — प्रतिदर्श विधि</h2></div><p><strong>Sampling</strong> population के <strong>representative subset</strong> (sample) से data collect करने की method है।</p><div class="formula-box">Sampling = Selecting a Representative Part = Studying the Whole through the Part</div><p><strong>Characteristics:</strong></p><ul class="bullet-list"><li>Only selected units are included</li><li>Less time and cost</li><li>Sampling error possible</li><li>Results can be generalised</li><li>Practical for large populations</li></ul><p><strong>Examples:</strong></p><ul class="bullet-list"><li>Survey of 500 students from a university</li><li>Polling for election predictions</li><li>Quality checking of manufactured goods</li></ul><p><strong>When to Use:</strong></p><ul class="bullet-list"><li>Large population</li><li>Limited time/resources</li><li>When detailed study of every unit is impractical</li><li>When destructive testing is involved</li></ul></div>
+
+      <div id="census-vs-sampling" class="topic-card"><div class="sec-head"><span class="sec-num">8</span><h2>Census vs Sampling — जनगणना vs प्रतिदर्श</h2></div><table class="data-table"><tr><th>Basis</th><th>Census</th><th>Sampling</th></tr><tr><td>Coverage</td><td>All units</td><td>Selected units</td></tr><tr><td>Time</td><td>More time</td><td>Less time</td></tr><tr><td>Cost</td><td>Expensive</td><td>Economical</td></tr><tr><td>Accuracy</td><td>More accurate</td><td>Sampling error possible</td></tr><tr><td>Suitability</td><td>Small population</td><td>Large population</td></tr><tr><td>Administration</td><td>More effort</td><td>Easier</td></tr><tr><td>Errors</td><td>Non-sampling errors only</td><td>Sampling + non-sampling errors</td></tr><tr><td>Generalisation</td><td>Direct</td><td>Through estimation</td></tr></table></div>
+
+      <div id="sampling-types" class="topic-card"><div class="sec-head"><span class="sec-num">9</span><h2>Types of Sampling — प्रतिदर्श के प्रकार</h2></div><ul class="bullet-list"><li><strong>Probability Sampling — प्रायिकता प्रतिदर्श:</strong> Every unit has a known probability of selection.</li><li><strong>Non-Probability Sampling — अप्रायिकता प्रतिदर्श:</strong> Selection probability is not known.</li></ul></div>
+
+      <div id="probability-sampling" class="topic-card"><div class="sec-head"><span class="sec-num">10</span><h2>Probability Sampling — प्रायिकता प्रतिदर्श</h2></div><ul class="bullet-list"><li><strong>Simple Random Sampling:</strong> Every unit has equal chance of selection. Lottery method or random number table.</li><li><strong>Systematic Sampling:</strong> Selecting every kth unit from a list. (k = N/n)</li><li><strong>Stratified Sampling:</strong> Population divided into strata (groups), then random sampling from each.</li><li><strong>Cluster Sampling:</strong> Population divided into clusters, random selection of clusters, then all units in selected clusters.</li><li><strong>Multistage Sampling:</strong> Multiple stages of sampling (e.g., state → district → village → household).</li><li><strong>Multiphase Sampling:</strong> Different phases of data collection on different units.</li></ul></div>
+
+      <div id="non-probability-sampling" class="topic-card"><div class="sec-head"><span class="sec-num">11</span><h2>Non-Probability Sampling — अप्रायिकता प्रतिदर्श</h2></div><ul class="bullet-list"><li><strong>Convenience Sampling:</strong> Selecting units that are easily available. (e.g., nearby respondents)</li><li><strong>Purposive/Judgement Sampling:</strong> Researcher selects units based on judgement/purpose.</li><li><strong>Quota Sampling:</strong> Population divided into quotas, then convenient selection within each quota.</li><li><strong>Snowball Sampling:</strong> Initial respondents refer other respondents. Used in hard-to-reach populations.</li><li><strong>Voluntary Sampling:</strong> Self-selection by respondents (e.g., online polls).</li></ul></div>
+
+      <div id="data-collection-methods" class="topic-card"><div class="sec-head"><span class="sec-num">12</span><h2>Data Collection Methods — डेटा संग्रहण विधियाँ</h2></div><ul class="bullet-list"><li><strong>Questionnaire:</strong> Structured set of questions. Self-administered or online (Google Forms).</li><li><strong>Interview Schedule:</strong> Face-to-face or telephonic interview with structured/unstructured questions.</li><li><strong>Observation:</strong> Directly watching and recording behaviour/events.</li><li><strong>Experiment:</strong> Controlled setting to study cause-effect relationships.</li><li><strong>Focus Group Discussion:</strong> Group of people discussing a topic with a moderator.</li><li><strong>Case Study:</strong> In-depth study of a single unit/individual.</li><li><strong>Document Analysis:</strong> Analysis of existing documents and records.</li></ul></div>
+
+      <div id="data-sources-examples" class="topic-card"><div class="sec-head"><span class="sec-num">13</span><h2>Data Sources Examples — डेटा स्रोतों के उदाहरण</h2></div><ul class="bullet-list"><li><strong>Census Data:</strong> Indian Census (2011, 2021), NSSO surveys</li><li><strong>Government Reports:</strong> RBI, UGC/AISHE, Ministry of Education</li><li><strong>International Sources:</strong> UNESCO, WHO, World Bank, IMF</li><li><strong>Research Repositories:</strong> Shodhganga (theses), Google Scholar, JSTOR</li><li><strong>Institutional Data:</strong> Admission records, exam results, attendance</li><li><strong>Public Data:</strong> Open Government Data platform (data.gov.in)</li></ul></div>
+
+      <div id="exam-traps" class="topic-card"><div class="sec-head"><span class="sec-num">14</span><h2>Common Exam Traps — सामान्य परीक्षा जाल</h2></div><ul class="bullet-list"><li><strong>Trap 1:</strong> Primary data = always accurate → ❌ Accuracy depends on methodology and execution.</li><li><strong>Trap 2:</strong> Secondary data = always unreliable → ❌ Many secondary sources are highly reliable (Census, RBI).</li><li><strong>Trap 3:</strong> Census = always better than sampling → ❌ Sampling is often more practical and cost-effective.</li><li><strong>Trap 4:</strong> Sample = always representative → ❌ Representative depends on sampling method and sample size.</li><li><strong>Trap 5:</strong> Probability sampling = no errors → ❌ Sampling errors still exist.</li><li><strong>Trap 6:</strong> Convenience sampling = most reliable → ❌ It is the least reliable due to bias.</li><li><strong>Trap 7:</strong> Data source = data type → ❌ Source and type are different concepts.</li></ul></div>
+
+      <div id="practice-questions" class="topic-card"><div class="sec-head"><span class="sec-num">15</span><h2>Practice Questions — अभ्यास प्रश्न</h2></div>
+      <div class="pyq-tag">Question 1</div>
+      <p>A researcher collects data directly from students using a questionnaire. This is an example of:</p>
+      <ul class="bullet-list"><li>A. Secondary data</li><li>B. Primary data</li><li>C. Census data</li><li>D. Published data</li></ul>
+      <div class="answer-box">Answer: B. Primary data</div>
+      <p class="explain">Explanation: The researcher collected first-hand data for a specific purpose — this is primary data.</p>
+
+      <div class="pyq-tag">Question 2</div>
+      <p>Using Census 2011 data for a research study is an example of:</p>
+      <ul class="bullet-list"><li>A. Primary data</li><li>B. Secondary data</li><li>C. Experimental data</li><li>D. Survey data</li></ul>
+      <div class="answer-box">Answer: B. Secondary data</div>
+      <p class="explain">Explanation: Census data was already collected by the government — researcher is reusing it (secondary data).</p>
+
+      <div class="pyq-tag">Question 3</div>
+      <p>Which sampling method ensures that every unit has an equal chance of selection?</p>
+      <ul class="bullet-list"><li>A. Convenience sampling</li><li>B. Purposive sampling</li><li>C. Simple random sampling</li><li>D. Quota sampling</li></ul>
+      <div class="answer-box">Answer: C. Simple random sampling</div>
+      <p class="explain">Explanation: In simple random sampling, every unit has an equal and independent chance of selection.</p>
+
+      <div class="pyq-tag">Question 4</div>
+      <p>What is the main limitation of census method?</p>
+      <ul class="bullet-list"><li>A. Sampling error</li><li>B. Time and cost</li><li>C. Bias</li><li>D. Lack of accuracy</li></ul>
+      <div class="answer-box">Answer: B. Time and cost</div>
+      <p class="explain">Explanation: Census covers all units, which makes it time-consuming and expensive.</p>
+
+      <div class="pyq-tag">Question 5</div>
+      <p>Which type of sampling is most appropriate for a large, geographically dispersed population?</p>
+      <ul class="bullet-list"><li>A. Simple random sampling</li><li>B. Convenience sampling</li><li>C. Cluster sampling</li><li>D. Purposive sampling</li></ul>
+      <div class="answer-box">Answer: C. Cluster sampling</div>
+      <p class="explain">Explanation: Cluster sampling is cost-effective for large, dispersed populations by sampling clusters (e.g., villages, districts).</p></div>
+
+      <div id="one-page-revision" class="topic-card"><div class="sec-head"><span class="sec-num">16</span><h2>One-Page Revision — एक पेज में पुनरावृत्ति</h2></div>
+      <div class="formula-box">Data = Raw Facts | Primary = First-hand | Secondary = Already collected</div>
+      <div class="formula-box">Census = All Units | Sampling = Selected Units</div>
+
+      <p><strong>Primary Data:</strong> First-hand, original, collected by researcher</p>
+      <ul class="bullet-list"><li>Methods: Observation, Interview, Questionnaire, Experiment</li></ul>
+
+      <p><strong>Secondary Data:</strong> Already collected, reused by researcher</p>
+      <ul class="bullet-list"><li>Sources: Government reports, Research publications, Databases</li></ul>
+
+      <p><strong>Census Method:</strong></p>
+      <ul class="bullet-list"><li>All units, accurate, time-consuming, expensive</li></ul>
+
+      <p><strong>Sampling Method:</strong></p>
+      <ul class="bullet-list"><li>Selected units, economical, sampling error possible</li></ul>
+
+      <p><strong>Probability Sampling:</strong></p>
+      <ul class="bullet-list"><li>Simple Random, Systematic, Stratified, Cluster, Multistage</li></ul>
+
+      <p><strong>Non-Probability Sampling:</strong></p>
+      <ul class="bullet-list"><li>Convenience, Purposive, Quota, Snowball</li></ul>
+
+      <p><strong>Exam Formula:</strong></p>
+      <div class="formula-box">Source + Method + Type + Purpose = Data Acquisition Strategy</div>
+      <p><em>UGC NET में Sources and Acquisition of Data के questions primary/secondary classification, census vs sampling, और sampling types पर based होते हैं।</em></p></div>
+
+      <div class="enroll-cta"><div><h3 class="h-display">Join the Paper-1 Batch</h3><p>Course fee FREE — ₹500 registration & academic/logistics contribution. Classes daily at 6:30 PM.</p></div><a href="#" class="btn-gold">✓ JOIN BATCH @ ₹500</a></div>
+    </div>
+  </div>
+</main>
+
+<script>
+  (function() {
+
+    const BASE_PATH =
+      "/tutorials/data-interpretation/sources-and-acquisition-of-data";
+
+    const links = document.querySelectorAll(".nav-link");
+    const cards = document.querySelectorAll(".topic-card");
+    const content = document.getElementById("contentArea");
+    const sidebarToggle = document.getElementById("sidebar-toggle");
+
+
+    // Get topic slug from current URL
+    function getSlugFromPath() {
+
+      const path = window.location.pathname
+        .replace(/\/+$/, "");
+
+      if (path.startsWith(BASE_PATH + "/")) {
+
+        return path
+          .substring((BASE_PATH + "/").length)
+          .split("/")[0];
+
+      }
+
+      return null;
+    }
+
+
+    // Update browser URL
+    function updateUrl(slug, replace = false) {
+
+      const newPath =
+        BASE_PATH + "/" + slug;
+
+      if (window.location.pathname !== newPath) {
+
+        if (replace) {
+
+          history.replaceState(
+            null,
+            "",
+            newPath
+          );
+
+        } else {
+
+          history.pushState(
+            null,
+            "",
+            newPath
+          );
+
+        }
+
+      }
+    }
+
+
+    // Update active sidebar link
+    function updateActiveLink(slug) {
+
+      links.forEach(function(link) {
+
+        const href =
+          link.getAttribute("href");
+
+        if (!href) return;
+
+        const linkSlug =
+          href
+            .split("/")
+            .filter(Boolean)
+            .pop();
+
+        link.classList.toggle(
+          "active",
+          linkSlug === slug
+        );
+
+      });
+
+    }
+
+
+    // Show selected topic card
+    function showCard(
+      slug,
+      updateHistory = true
+    ) {
+
+      cards.forEach(function(card) {
+
+        card.classList.add("hidden");
+
+      });
+
+
+      const target =
+        document.getElementById(slug);
+
+
+      if (!target) {
+
+        const first = cards[0];
+
+        if (first) {
+
+          first.classList.remove("hidden");
+
+          const firstSlug =
+            first.id;
+
+          updateActiveLink(firstSlug);
+
+          updateUrl(
+            firstSlug,
+            true
+          );
+
+        }
+
+        return;
+      }
+
+
+      target.classList.remove("hidden");
+
+      updateActiveLink(slug);
+
+
+      if (updateHistory) {
+
+        updateUrl(
+          slug,
+          false
+        );
+
+      }
+
+
+      if (sidebarToggle) {
+
+        sidebarToggle.checked = false;
+
+      }
+
+
+      if (content) {
+
+        const top =
+          content.getBoundingClientRect().top +
+          window.pageYOffset -
+          10;
+
+        window.scrollTo({
+
+          top: top,
+
+          behavior: "smooth"
+
+        });
+
+      }
+
+    }
+
+
+    // Sidebar link click
+    links.forEach(function(link) {
+
+      link.addEventListener(
+        "click",
+        function(e) {
+
+          e.preventDefault();
+
+
+          const href =
+            this.getAttribute("href");
+
+          if (!href) return;
+
+
+          const slug =
+            href
+              .split("/")
+              .filter(Boolean)
+              .pop();
+
+
+          if (!slug) return;
+
+
+          console.log(
+            "Clicked topic:",
+            slug
+          );
+
+
+          showCard(
+            slug,
+            true
+          );
+
+        }
+      );
+
+    });
+
+
+    // Initial page load
+    function initFromPath() {
+
+      let slug =
+        getSlugFromPath();
+
+
+      if (
+        !slug ||
+        !document.getElementById(slug)
+      ) {
+
+        slug =
+          cards[0]?.id ||
+          "data-meaning";
+
+      }
+
+
+      showCard(
+        slug,
+        false
+      );
+
+
+      updateUrl(
+        slug,
+        true
+      );
+
+    }
+
+
+    initFromPath();
+
+
+    // Browser Back / Forward
+    window.addEventListener(
+      "popstate",
+      function() {
+
+        const slug =
+          getSlugFromPath();
+
+
+        if (
+          slug &&
+          document.getElementById(slug)
+        ) {
+
+          showCard(
+            slug,
+            false
+          );
+
+        } else {
+
+          const firstSlug =
+            cards[0]?.id ||
+            "data-meaning";
+
+          showCard(
+            firstSlug,
+            false
+          );
+
+        }
+
+      }
+    );
+
+
+  })();
+</script>
+</body>
+</html>

@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Quality, Governance & Ethics – Full Notes | UGC NET Paper-1</title>
+  <meta name="description" content="Complete tutorial: Data Quality, Data Governance, Data Life Cycle, Open Data, Privacy, Security & Data Ethics for UGC NET Paper-1 Data Interpretation.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; }
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background: #f8f5ee;
+      color: #101a3d;
+    }
+    .h-display { font-family: 'Poppins', sans-serif; font-weight: 800; letter-spacing: -0.01em; }
+    .container { max-width: 1360px; margin: 0 auto; padding: 0 20px; }
+
+    .hero {
+      background: #0b1330;
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+      padding: 28px 0 22px;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      right: -80px;
+      top: -100px;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(232,183,75,0.2), transparent 70%);
+    }
+    .hero-inner { position: relative; }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      padding: 6px 16px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+      color: #e8b74b;
+    }
+    .hero h1 {
+      font-size: clamp(28px, 4.2vw, 44px);
+      margin: 12px 0 6px;
+    }
+    .hero p {
+      color: rgba(255,255,255,0.78);
+      max-width: 680px;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 28px;
+      padding: 28px 0 50px;
+      align-items: start;
+    }
+    @media (max-width: 980px) {
+      .layout { grid-template-columns: 1fr; }
+    }
+
+    .sidebar {
+      position: sticky;
+      top: 16px;
+      max-height: calc(100vh - 40px);
+      overflow-y: auto;
+      background: #fff;
+      border: 1px solid rgba(16,26,61,0.08);
+      border-radius: 16px;
+      padding: 16px 12px;
+      box-shadow: 0 6px 24px rgba(16,26,61,0.05);
+    }
+    .sidebar::-webkit-scrollbar { width: 5px; }
+    .sidebar::-webkit-scrollbar-thumb { background: #dde2ef; border-radius: 8px; }
+    .sidebar-title {
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: #b9852a;
+      padding: 4px 10px 14px;
+    }
+    .nav-link {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 10px;
+      border-radius: 10px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #33406b;
+      line-height: 1.3;
+      transition: 0.1s;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .nav-link:hover { background: #f4f6fc; color: #0b1330; }
+    .nav-link.active {
+      background: #fdf6e7;
+      color: #0b1330;
+    }
+    .nav-num {
+      flex: none;
+      width: 22px;
+      height: 22px;
+      border-radius: 7px;
+      background: #e7eaf5;
+      color: #5b6690;
+      font-size: 11px;
+      font-weight: 800;
+      display: grid;
+      place-items: center;
+    }
+    .nav-link.active .nav-num {
+      background: #e8b74b;
+      color: #0b1330;
+    }
+
+    #sidebar-toggle { display: none; }
+    .mobile-bar { display: none; }
+    @media (max-width: 980px) {
+      .mobile-bar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: #fff;
+        border: 1px solid rgba(16,26,61,0.1);
+        border-radius: 12px;
+        padding: 12px 16px;
+        margin-bottom: 8px;
+        font-weight: 800;
+        font-size: 13.5px;
+        color: #0b1330;
+      }
+      .sidebar { display: none; position: static; max-height: none; }
+      #sidebar-toggle:checked ~ .layout .sidebar { display: block; }
+    }
+
+    .content { min-width: 0; }
+    .topic-card {
+      background: #fff;
+      border: 1px solid rgba(16,26,61,0.08);
+      border-radius: 16px;
+      padding: 20px 20px 16px;
+      margin-bottom: 18px;
+      scroll-margin-top: 20px;
+      display: block;
+    }
+    .topic-card.hidden { display: none; }
+    .sec-head {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+    .sec-num {
+      flex: none;
+      width: 34px;
+      height: 34px;
+      border-radius: 10px;
+      background: #0b1330;
+      color: #e8b74b;
+      font-weight: 800;
+      font-size: 14px;
+      display: grid;
+      place-items: center;
+    }
+    .sec-head h2 {
+      margin: 0;
+      font-size: 19px;
+      font-weight: 800;
+      color: #0b1330;
+    }
+    .topic-card p {
+      font-size: 14.5px;
+      line-height: 1.75;
+      color: #1a254a;
+      margin: 6px 0;
+    }
+    .bullet-list {
+      margin: 8px 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 5px;
+    }
+    .bullet-list li {
+      position: relative;
+      padding-left: 20px;
+      font-size: 14px;
+      line-height: 1.6;
+      color: #1a254a;
+    }
+    .bullet-list li::before {
+      content: "";
+      position: absolute;
+      left: 2px;
+      top: 9px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #d9a53a;
+    }
+    .formula-box {
+      background: #0b1330;
+      color: #fdeec2;
+      font-weight: 700;
+      font-size: 13.6px;
+      padding: 10px 16px;
+      border-radius: 10px;
+      margin: 10px 0;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 12px 0;
+      font-size: 13.6px;
+      display: block;
+      overflow-x: auto;
+    }
+    .data-table th, .data-table td {
+      border: 1px solid #e7eaf5;
+      padding: 8px 12px;
+      text-align: left;
+      color: #1a254a;
+      white-space: normal;
+    }
+    .data-table th {
+      background: #f4f6fc;
+      color: #0b1330;
+      font-weight: 800;
+    }
+    .pyq-tag {
+      display: inline-block;
+      background: #fdf6e7;
+      color: #b9852a;
+      font-weight: 800;
+      font-size: 12px;
+      padding: 4px 12px;
+      border-radius: 8px;
+      margin: 12px 0 6px;
+    }
+    .answer-box {
+      background: #eefaf2;
+      border: 1px solid #bfe8cc;
+      color: #1a7a4c;
+      font-weight: 700;
+      font-size: 13.6px;
+      padding: 6px 14px;
+      border-radius: 9px;
+      margin: 6px 0;
+    }
+    .explain {
+      background: #f4f6fc;
+      border-radius: 9px;
+      padding: 6px 14px;
+      font-size: 13.6px;
+      color: #1a254a;
+    }
+    .subtopic {
+      padding: 14px 0 6px;
+      border-top: 1px dashed #e7eaf5;
+    }
+    .subtopic:first-of-type { border-top: none; padding-top: 2px; }
+    .subhead {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 6px;
+    }
+    .sub-num {
+      flex: none;
+      width: 26px;
+      height: 26px;
+      border-radius: 8px;
+      background: #fdf6e7;
+      color: #b9852a;
+      font-weight: 800;
+      font-size: 12px;
+      display: grid;
+      place-items: center;
+    }
+    .subhead h3 {
+      margin: 0;
+      font-size: 15.5px;
+      font-weight: 800;
+      color: #0b1330;
+    }
+    .enroll-cta {
+      background: #0b1330;
+      color: #fff;
+      border-radius: 16px;
+      padding: 24px 24px;
+      margin-top: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+      overflow: hidden;
+    }
+    .enroll-cta::before {
+      content: "";
+      position: absolute;
+      right: -40px;
+      top: -40px;
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(232,183,75,0.2), transparent 70%);
+    }
+    .enroll-cta h3 { margin: 0 0 4px; font-size: 20px; }
+    .enroll-cta p { margin: 0; color: rgba(255,255,255,0.75); font-size: 13.5px; max-width: 480px; }
+    .btn-gold {
+      background: #e8b74b;
+      color: #0b1330;
+      font-weight: 800;
+      padding: 10px 22px;
+      border-radius: 10px;
+      font-size: 13.5px;
+      white-space: nowrap;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="container hero-inner">
+    <span class="eyebrow">★ UGC NET Paper-I · Data Interpretation</span>
+    <h1 class="h-display">Data Quality, Governance & Ethics</h1>
+    <p>Complete tutorial: Data Quality, Data Governance, Data Life Cycle, Open Data, Privacy, Security & Data Ethics for UGC NET Paper-1.</p>
+  </div>
+</section>
+
+<main class="container">
+  <input type="checkbox" id="sidebar-toggle">
+  <label for="sidebar-toggle" class="mobile-bar">
+    <span>📑 On this page</span>
+    <span>☰ Menu</span>
+  </label>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebarNav">
+      <p class="sidebar-title">On this page</p>
+      <nav>
+       <a href="/tutorials/data-interpretation/data-quality-governance-ethics/data-quality-intro" class="nav-link active"><span class="nav-num">1</span>Data Quality</a>
+        <a href="/tutorials/data-interpretation/data-quality-governance-ethics/dimensions-quality" class="nav-link"><span class="nav-num">2</span>Dimensions of Data Quality</a>
+        <a href="/tutorials/data-interpretation/data-quality-governance-ethics/data-governance" class="nav-link"><span class="nav-num">3</span>Data Governance</a>
+        <a href="/tutorials/data-interpretation/data-quality-governance-ethics/data-governance-vs-management" class="nav-link"><span class="nav-num">4</span>Governance vs Management</a>
+        <a href="/tutorials/data-interpretation/data-quality-governance-ethics/data-life-cycle" class="nav-link"><span class="nav-num">5</span>Data Life Cycle</a>
+        <a href="/tutorials/data-interpretation/data-quality-governance-ethics/open-data" class="nav-link"><span class="nav-num">6</span>Open Data</a>
+        <a href="/tutorials/data-interpretation/data-quality-governance-ethics/open-data-principles" class="nav-link"><span class="nav-num">7</span>Open Data Principles</a>
+        <a href="/tutorials/data-interpretation/data-quality-governance-ethics/data-privacy" class="nav-link"><span class="nav-num">8</span>Data Privacy</a>
+        <a href="/tutorials/data-interpretation/data-quality-governance-ethics/data-security" class="nav-link"><span class="nav-num">9</span>Data Security</a>
+        <a href="/tutorials/data-interpretation/data-quality-governance-ethics/data-ethics" class="nav-link"><span class="nav-num">10</span>Data Ethics</a>
+        <a href="/tutorials/data-interpretation/data-quality-governance-ethics/ethical-principles" class="nav-link"><span class="nav-num">11</span>Ethical Principles</a>
+        <a href="/tutorials/data-interpretation/data-quality-governance-ethics/digital-personal-data-protection" class="nav-link"><span class="nav-num">12</span>Digital Personal Data Protection Act</a>
+        <a href="/tutorials/data-interpretation/data-quality-governance-ethics/exam-traps" class="nav-link"><span class="nav-num">13</span>Common Exam Traps</a>
+        <a href="/tutorials/data-interpretation/data-quality-governance-ethics/practice-questions" class="nav-link"><span class="nav-num">14</span>Practice Questions</a>
+        <a href="/tutorials/data-interpretation/data-quality-governance-ethics/one-page-revision" class="nav-link"><span class="nav-num">15</span>One-Page Revision</a>
+      </nav>
+    </aside>
+
+    <div class="content" id="contentArea">
+      <!-- ===== CARDS ===== -->
+      <div id="data-quality-intro" class="topic-card"><div class="sec-head"><span class="sec-num">1</span><h2>Data Quality — डेटा गुणवत्ता</h2></div><p><strong>Data Quality</strong> data की <strong>fitness for use</strong> को दर्शाता है — data कितना <strong>accurate, complete, consistent, reliable</strong> और <strong>relevant</strong> है।</p><div class="formula-box">Data Quality = Accuracy + Completeness + Consistency + Reliability + Relevance</div><p><strong>Key Point:</strong> "Garbage In, Garbage Out" — poor quality input data leads to unreliable conclusions.</p></div>
+
+      <div id="dimensions-quality" class="topic-card"><div class="sec-head"><span class="sec-num">2</span><h2>Dimensions of Data Quality — डेटा गुणवत्ता के आयाम</h2></div><ul class="bullet-list"><li><strong>Accuracy — सटीकता:</strong> Data factual और error-free है। Correct values.</li><li><strong>Completeness — पूर्णता:</strong> All required data is present. No missing values.</li><li><strong>Consistency — संगति:</strong> Data is consistent across different records and sources.</li><li><strong>Timeliness — समयानुकूलता:</strong> Data is up-to-date and available when needed.</li><li><strong>Validity — वैधता:</strong> Data conforms to defined formats and rules.</li><li><strong>Uniqueness — अद्वितीयता:</strong> No duplicate records.</li><li><strong>Relevance — प्रासंगिकता:</strong> Data is appropriate for the intended purpose.</li><li><strong>Reliability — विश्वसनीयता:</strong> Data is trustworthy and can be depended upon.</li></ul></div>
+
+      <div id="data-governance" class="topic-card"><div class="sec-head"><span class="sec-num">3</span><h2>Data Governance — डेटा गवर्नेंस</h2></div><p><strong>Data Governance</strong> policies, rules, roles, standards और accountability का framework है जो data को <strong>manage, protect, share</strong> और <strong>use</strong> करने के तरीके को नियंत्रित करता है।</p><div class="formula-box">Data Governance = Policies + Roles + Standards + Accountability + Control</div><p><strong>Core Elements:</strong></p><ul class="bullet-list"><li><strong>Data Ownership — डेटा स्वामित्व:</strong> Who is responsible for the data</li><li><strong>Data Stewardship — डेटा प्रबंधन:</strong> Day-to-day management and quality</li><li><strong>Data Standards — डेटा मानक:</strong> Consistent formats and definitions</li><li><strong>Metadata Management — मेटाडेटा प्रबंधन:</strong> Data about data</li><li><strong>Data Quality — डेटा गुणवत्ता:</strong> Ensuring accuracy and completeness</li><li><strong>Access Control — पहुँच नियंत्रण:</strong> Who can access what data</li><li><strong>Privacy and Security — गोपनीयता एवं सुरक्षा:</strong> Protecting data</li><li><strong>Interoperability — अंतर-संचालनीयता:</strong> Systems working together</li><li><strong>Accountability and Audit — उत्तरदायित्व एवं लेखापरीक्षा:</strong> Monitoring compliance</li><li><strong>Retention and Disposal — प्रतिधारण एवं निपटान:</strong> How long to keep data</li><li><strong>Ethical Data Use — नैतिक डेटा उपयोग:</strong> Responsible use of data</li></ul></div>
+
+      <div id="data-governance-vs-management" class="topic-card"><div class="sec-head"><span class="sec-num">4</span><h2>Data Governance vs Data Management — गवर्नेंस vs प्रबंधन</h2></div><table class="data-table"><tr><th>Data Governance</th><th>Data Management</th></tr><tr><td>Policies तय करता है</td><td>Policies implement करता है</td></tr><tr><td>Who can do what?</td><td>How will it be done?</td></tr><tr><td>Authority and accountability</td><td>Operational processes</td></tr><tr><td>Standards and control</td><td>Storage, cleaning, processing</td></tr><tr><td>Strategic</td><td>Tactical/Operational</td></tr></table><div class="formula-box">Governance decides; Management executes.</div></div>
+
+      <div id="data-life-cycle" class="topic-card"><div class="sec-head"><span class="sec-num">5</span><h2>Data Life Cycle — डेटा जीवन चक्र</h2></div><div class="formula-box">Create/Collect → Store → Process → Use/Share → Archive → Dispose</div><ul class="bullet-list"><li><strong>Create/Collect — निर्माण/संग्रह:</strong> Data is generated or collected from sources.</li><li><strong>Store — भंडारण:</strong> Data is saved in databases or storage systems.</li><li><strong>Process — प्रसंस्करण:</strong> Data is cleaned, transformed, and analysed.</li><li><strong>Use/Share — उपयोग/साझा:</strong> Data is used for analysis, reporting, or sharing.</li><li><strong>Archive — संग्रहीत:</strong> Data is archived for long-term preservation.</li><li><strong>Dispose — निपटान:</strong> Data is securely deleted when no longer needed.</li></ul><p><strong>Governance applies across the entire life cycle.</strong></p></div>
+
+      <div id="open-data" class="topic-card"><div class="sec-head"><span class="sec-num">6</span><h2>Open Data — खुला डेटा</h2></div><p><strong>Open Data</strong> वह data है जो <strong>publicly available</strong> है — anyone can <strong>access, use, share</strong> and <strong>republish</strong> it without restrictions (subject to open licenses).</p><div class="formula-box">Open Data = Accessible + Usable + Shareable + Reusable</div><p><strong>Open Government Data in India:</strong></p><ul class="bullet-list"><li>Platform: <strong>data.gov.in</strong> (Open Government Data Platform India)</li><li>Developed and hosted by NIC under MeitY</li><li>Purpose: Access to government-owned shareable data in machine-readable form</li><li>Supports transparency and citizen engagement</li></ul><p><strong>Exam Trap:</strong> Open Data ≠ Personal Data. सभी government datasets public नहीं किए जा सकते। Personal, confidential, security-sensitive data को protect करना आवश्यक है।</p></div>
+
+      <div id="open-data-principles" class="topic-card"><div class="sec-head"><span class="sec-num">7</span><h2>Open Data Principles — खुले डेटा के सिद्धांत</h2></div><ul class="bullet-list"><li><strong>Availability — उपलब्धता:</strong> Data is available in a convenient format.</li><li><strong>Accessibility — पहुँच:</strong> Data is easy to access and retrieve.</li><li><strong>Machine Readability — मशीन-पठनीयता:</strong> Data can be processed by computers.</li><li><strong>Reusability — पुन:उपयोग:</strong> Data can be reused for different purposes.</li><li><strong>Timeliness — समयानुकूलता:</strong> Data is updated regularly.</li><li><strong>Non-discrimination — अभेद्यता:</strong> Anyone can access the data.</li><li><strong>Appropriate Licensing — उपयुक्त लाइसेंस:</strong> Clear terms for use.</li><li><strong>Privacy and Security Protection — गोपनीयता एवं सुरक्षा:</strong> Personal/confidential data protected.</li></ul></div>
+
+      <div id="data-privacy" class="topic-card"><div class="sec-head"><span class="sec-num">8</span><h2>Data Privacy — डेटा गोपनीयता</h2></div><p><strong>Data Privacy</strong> individuals का यह <strong>right</strong> है कि उनकी <strong>personal information</strong> कैसे <strong>collected, used, stored</strong> और <strong>shared</strong> की जाती है — यह उनके control में हो।</p><div class="formula-box">Data Privacy = Personal Data + Control + Consent + Protection</div><p><strong>Key Concepts:</strong></p><ul class="bullet-list"><li><strong>Privacy — गोपनीयता:</strong> Personal information पर individual का control</li><li><strong>Anonymisation — अज्ञातीकरण:</strong> Removing identifiers so individuals cannot be identified</li><li><strong>Pseudonymisation — छद्मनामीकरण:</strong> Replacing identifiers with codes</li><li><strong>Informed Consent — सूचित सहमति:</strong> User agrees with full understanding</li><li><strong>Purpose Limitation — उद्देश्य सीमा:</strong> Data used only for declared purpose</li><li><strong>Data Minimisation — डेटा न्यूनीकरण:</strong> Only necessary data collected</li></ul><p><strong>Exam Trap:</strong> Pseudonymised data को हमेशा fully anonymous नहीं माना जा सकता — re-identification possible है।</p></div>
+
+      <div id="data-security" class="topic-card"><div class="sec-head"><span class="sec-num">9</span><h2>Data Security — डेटा सुरक्षा</h2></div><p><strong>Data Security</strong> data को <strong>unauthorised access, breaches, corruption, theft</strong> से protect करना है।</p><div class="formula-box">Data Security = Confidentiality + Integrity + Availability (CIA Triad)</div><p><strong>Security Measures:</strong></p><ul class="bullet-list"><li><strong>Encryption — एन्क्रिप्शन:</strong> Data को unreadable format में convert करना</li><li><strong>Access Control — पहुँच नियंत्रण:</strong> Role-based permissions</li><li><strong>Authentication — प्रमाणीकरण:</strong> Verifying identity (password, biometrics)</li><li><strong>Firewall — फ़ायरवॉल:</strong> Blocking unauthorised access</li><li><strong>Regular Backups — नियमित बैकअप:</strong> Data recovery in case of loss</li><li><strong>Audit Trails — लेखापरीक्षा निशान:</strong> Tracking data access and changes</li><li><strong>Secure Data Disposal — सुरक्षित निपटान:</strong> Proper deletion when no longer needed</li></ul></div>
+
+      <div id="data-ethics" class="topic-card"><div class="sec-head"><span class="sec-num">10</span><h2>Data Ethics — डेटा नैतिकता</h2></div><p><strong>Data Ethics</strong> data के <strong>collection, use, sharing</strong> और <strong>analysis</strong> में <strong>moral principles</strong> का application है।</p><div class="formula-box">Data Ethics = Moral Principles + Responsible Data Use + Fairness</div><p><strong>Major Ethical Concerns:</strong></p><ul class="bullet-list"><li><strong>Privacy Violation — गोपनीयता उल्लंघन:</strong> Unauthorised use of personal data</li><li><strong>Informed Consent — सूचित सहमति:</strong> Lack of proper consent</li><li><strong>Surveillance — निगरानी:</strong> Excessive monitoring</li><li><strong>Algorithmic Bias — एल्गोरिदमिक पक्षपात:</strong> Biased algorithms leading to discrimination</li><li><strong>Data Manipulation — डेटा हेरफेर:</strong> Misrepresenting data</li><li><strong>Selective Reporting — चयनात्मक रिपोर्टिंग:</strong> Only favourable results shown</li><li><strong>Misleading Visualisation — भ्रामक दृश्यीकरण:</strong> Distorting data visually</li><li><strong>Unauthorised Sharing — अनधिकृत साझा:</strong> Sharing data without consent</li><li><strong>Re-identification — पुन:पहचान:</strong> Identifying individuals from anonymised data</li><li><strong>Digital Exclusion — डिजिटल बहिष्कार:</strong> Excluding certain groups</li></ul></div>
+
+      <div id="ethical-principles" class="topic-card"><div class="sec-head"><span class="sec-num">11</span><h2>Ethical Principles — नैतिक सिद्धांत</h2></div><ul class="bullet-list"><li><strong>Respect for Persons — व्यक्तियों का सम्मान:</strong> Autonomy and dignity of individuals</li><li><strong>Beneficence — कल्याण:</strong> Maximising benefits</li><li><strong>Non-maleficence — हानि न पहुँचाना:</strong> Avoiding harm (Do no harm)</li><li><strong>Justice — न्याय:</strong> Fair distribution of benefits and burdens</li><li><strong>Honesty — ईमानदारी:</strong> Truthful representation of data</li><li><strong>Objectivity — वस्तुनिष्ठता:</strong> Avoiding personal bias</li><li><strong>Transparency — पारदर्शिता:</strong> Open about methods and limitations</li><li><strong>Accountability — उत्तरदायित्व:</strong> Responsibility for data practices</li><li><strong>Confidentiality — गोपनीयता:</strong> Protecting sensitive information</li></ul></div>
+
+      <div id="digital-personal-data-protection" class="topic-card"><div class="sec-head"><span class="sec-num">12</span><h2>Digital Personal Data Protection Act, 2023 — डिजिटल व्यक्तिगत डेटा संरक्षण अधिनियम</h2></div><p><strong>Digital Personal Data Protection Act, 2023</strong> digital personal data के <strong>processing</strong> से संबंधित है — personal-data protection और lawful processing दोनों को recognise करता है।</p><p><strong>Key Terms:</strong></p><ul class="bullet-list"><li><strong>Data Principal — डेटा प्रिंसिपल:</strong> वह individual जिससे personal data संबंधित है।</li><li><strong>Data Fiduciary — डेटा फिड्यूशियरी:</strong> वह entity जो processing का purpose और means तय करती है।</li><li><strong>Consent — सहमति:</strong> Specific, informed, and unambiguous permission.</li><li><strong>Purpose Limitation — उद्देश्य सीमा:</strong> Data केवल declared lawful purpose के लिए use हो।</li><li><strong>Data Minimisation — डेटा न्यूनीकरण:</strong> केवल आवश्यक data collect किया जाए।</li><li><strong>Security Safeguards — सुरक्षा उपाय:</strong> Unauthorised access and breach से protection।</li></ul></div>
+
+      <div id="exam-traps" class="topic-card"><div class="sec-head"><span class="sec-num">13</span><h2>Common Exam Traps — सामान्य परीक्षा जाल</h2></div><ul class="bullet-list"><li><strong>Trap 1:</strong> Open data = unrestricted disclosure of personal data → ❌ Personal data is protected.</li><li><strong>Trap 2:</strong> Data governance = only cybersecurity → ❌ Includes quality, access, standards, ownership, accountability.</li><li><strong>Trap 3:</strong> Anonymisation = pseudonymisation → ❌ Anonymisation is irreversible; pseudonymisation can be reversed.</li><li><strong>Trap 4:</strong> Data quality = only accuracy → ❌ Includes completeness, consistency, timeliness, validity, uniqueness, relevance.</li><li><strong>Trap 5:</strong> Data management = data governance → ❌ Governance sets policies; management executes them.</li><li><strong>Trap 6:</strong> Open data = copyright-free → ❌ Open data has licensing terms (attribution, share-alike).</li></ul></div>
+
+      <div id="practice-questions" class="topic-card"><div class="sec-head"><span class="sec-num">14</span><h2>Practice Questions — अभ्यास प्रश्न</h2></div>
+      <div class="pyq-tag">Question 1</div>
+      <p>Which data quality dimension ensures that data is up-to-date and available when needed?</p>
+      <ul class="bullet-list"><li>A. Accuracy</li><li>B. Completeness</li><li>C. Timeliness</li><li>D. Consistency</li></ul>
+      <div class="answer-box">Answer: C. Timeliness</div>
+      <p class="explain">Explanation: Timeliness means data is current and available when required.</p>
+
+      <div class="pyq-tag">Question 2</div>
+      <p>Data Governance primarily deals with:</p>
+      <ul class="bullet-list"><li>A. Only data storage</li><li>B. Policies, roles, standards, and accountability</li><li>C. Only cybersecurity</li><li>D. Only data analysis</li></ul>
+      <div class="answer-box">Answer: B. Policies, roles, standards, and accountability</div>
+      <p class="explain">Explanation: Data governance is about policies, roles, standards, and accountability — not just storage or security.</p>
+
+      <div class="pyq-tag">Question 3</div>
+      <p>Which is the correct sequence of the data life cycle?</p>
+      <ul class="bullet-list"><li>A. Store → Create → Process → Share → Dispose</li><li>B. Create → Store → Process → Use/Share → Archive → Dispose</li><li>C. Process → Create → Store → Share → Dispose</li><li>D. Create → Process → Store → Use → Dispose</li></ul>
+      <div class="answer-box">Answer: B. Create → Store → Process → Use/Share → Archive → Dispose</div>
+      <p class="explain">Explanation: The correct data life cycle sequence is Create/Collect → Store → Process → Use/Share → Archive → Dispose.</p>
+
+      <div class="pyq-tag">Question 4</div>
+      <p>In the context of data ethics, "purpose limitation" means:</p>
+      <ul class="bullet-list"><li>A. Data can be used for any purpose</li><li>B. Data can only be used for the declared lawful purpose</li><li>C. Data must be stored indefinitely</li><li>D. Data must be shared with everyone</li></ul>
+      <div class="answer-box">Answer: B. Data can only be used for the declared lawful purpose</div>
+      <p class="explain">Explanation: Purpose limitation means data is used only for the declared purpose for which it was collected.</p>
+
+      <div class="pyq-tag">Question 5</div>
+      <p>Which of the following is NOT a dimension of data quality?</p>
+      <ul class="bullet-list"><li>A. Accuracy</li><li>B. Completeness</li><li>C. Creativity</li><li>D. Consistency</li></ul>
+      <div class="answer-box">Answer: C. Creativity</div>
+      <p class="explain">Explanation: Creativity is not a data quality dimension. Accuracy, completeness, and consistency are.</p>
+
+      <div class="pyq-tag">Question 6</div>
+      <p>The Digital Personal Data Protection Act, 2023 deals with:</p>
+      <ul class="bullet-list"><li>A. Processing of digital personal data</li><li>B. Open government data</li><li>C. Data visualisation</li><li>D. Data storage hardware</li></ul>
+      <div class="answer-box">Answer: A. Processing of digital personal data</div>
+      <p class="explain">Explanation: The DPDP Act, 2023 regulates the processing of digital personal data.</p></div>
+
+      <div id="one-page-revision" class="topic-card"><div class="sec-head"><span class="sec-num">15</span><h2>One-Page Revision — एक पेज में पुनरावृत्ति</h2></div>
+      <div class="formula-box">Data Quality = Accuracy + Completeness + Consistency + Timeliness + Validity + Uniqueness + Relevance + Reliability</div>
+      <div class="formula-box">Data Governance = Policies + Roles + Standards + Accountability + Control</div>
+
+      <p><strong>Data Life Cycle:</strong></p>
+      <ul class="bullet-list"><li>Create/Collect → Store → Process → Use/Share → Archive → Dispose</li></ul>
+
+      <p><strong>Open Data:</strong></p>
+      <ul class="bullet-list"><li>Available, Accessible, Machine-readable, Reusable</li>
+      <li>India: data.gov.in (Open Government Data Platform)</li>
+      <li>Open Data ≠ Personal Data</li></ul>
+
+      <p><strong>Privacy & Security:</strong></p>
+      <ul class="bullet-list"><li>Privacy = Control over personal data</li>
+      <li>Security = CIA Triad (Confidentiality, Integrity, Availability)</li>
+      <li>Anonymisation (irreversible) vs Pseudonymisation (reversible)</li></ul>
+
+      <p><strong>Data Ethics:</strong></p>
+      <ul class="bullet-list"><li>Principles: Respect, Beneficence, Non-maleficence, Justice, Honesty, Objectivity, Transparency, Accountability</li>
+      <li>Concerns: Bias, Privacy, Misleading visualisation, Selective reporting</li></ul>
+
+      <p><strong>DPDP Act, 2023:</strong></p>
+      <ul class="bullet-list"><li>Data Principal (individual), Data Fiduciary (entity)</li>
+      <li>Consent, Purpose limitation, Data minimisation, Security safeguards</li></ul>
+
+      <p><strong>Exam Formula:</strong></p>
+      <div class="formula-box">Quality + Governance + Life Cycle + Open Data + Privacy + Security + Ethics = Responsible Data Management</div>
+      <p><em>UGC NET में Data Quality, Governance & Ethics के questions dimensions, governance vs management, privacy concepts, और ethics concerns पर based होते हैं।</em></p></div>
+
+      <div class="enroll-cta"><div><h3 class="h-display">Join the Paper-1 Batch</h3><p>Course fee FREE — ₹500 registration & academic/logistics contribution. Classes daily at 6:30 PM.</p></div><a href="#" class="btn-gold">✓ JOIN BATCH @ ₹500</a></div>
+    </div>
+  </div>
+</main>
+
+<script>
+  (function() {
+
+    const BASE_PATH =
+      "/tutorials/data-interpretation/data-quality-governance-ethics";
+
+    const links = document.querySelectorAll(".nav-link");
+    const cards = document.querySelectorAll(".topic-card");
+    const content = document.getElementById("contentArea");
+    const sidebarToggle = document.getElementById("sidebar-toggle");
+
+
+    // Get topic slug from current URL
+    function getSlugFromPath() {
+
+      const path = window.location.pathname
+        .replace(/\/+$/, "");
+
+      if (path.startsWith(BASE_PATH + "/")) {
+
+        return path
+          .substring((BASE_PATH + "/").length)
+          .split("/")[0];
+
+      }
+
+      return null;
+    }
+
+
+    // Update browser URL
+    function updateUrl(slug, replace = false) {
+
+      const newPath =
+        BASE_PATH + "/" + slug;
+
+      if (window.location.pathname !== newPath) {
+
+        if (replace) {
+
+          history.replaceState(
+            null,
+            "",
+            newPath
+          );
+
+        } else {
+
+          history.pushState(
+            null,
+            "",
+            newPath
+          );
+
+        }
+
+      }
+
+    }
+
+
+    // Update active sidebar link
+    function updateActiveLink(slug) {
+
+      links.forEach(function(link) {
+
+        const href =
+          link.getAttribute("href");
+
+        if (!href) return;
+
+        const linkSlug =
+          href
+            .split("/")
+            .filter(Boolean)
+            .pop();
+
+        link.classList.toggle(
+          "active",
+          linkSlug === slug
+        );
+
+      });
+
+    }
+
+
+    // Show selected topic card
+    function showCard(
+      slug,
+      updateHistory = true
+    ) {
+
+      cards.forEach(function(card) {
+
+        card.classList.add("hidden");
+
+      });
+
+
+      const target =
+        document.getElementById(slug);
+
+
+      if (!target) {
+
+        const first = cards[0];
+
+        if (first) {
+
+          first.classList.remove("hidden");
+
+          const firstSlug =
+            first.id;
+
+          updateActiveLink(firstSlug);
+
+          updateUrl(
+            firstSlug,
+            true
+          );
+
+        }
+
+        return;
+
+      }
+
+
+      target.classList.remove("hidden");
+
+      updateActiveLink(slug);
+
+
+      if (updateHistory) {
+
+        updateUrl(
+          slug,
+          false
+        );
+
+      }
+
+
+      if (sidebarToggle) {
+
+        sidebarToggle.checked = false;
+
+      }
+
+
+      if (content) {
+
+        const top =
+          content.getBoundingClientRect().top +
+          window.pageYOffset -
+          10;
+
+        window.scrollTo({
+
+          top: top,
+
+          behavior: "smooth"
+
+        });
+
+      }
+
+    }
+
+
+    // Sidebar link click
+    links.forEach(function(link) {
+
+      link.addEventListener(
+        "click",
+        function(e) {
+
+          e.preventDefault();
+
+
+          const href =
+            this.getAttribute("href");
+
+          if (!href) return;
+
+
+          const slug =
+            href
+              .split("/")
+              .filter(Boolean)
+              .pop();
+
+
+          if (!slug) return;
+
+
+          console.log(
+            "Clicked topic:",
+            slug
+          );
+
+
+          showCard(
+            slug,
+            true
+          );
+
+        }
+      );
+
+    });
+
+
+    // Initial page load
+    function initFromPath() {
+
+      let slug =
+        getSlugFromPath();
+
+
+      if (
+        !slug ||
+        !document.getElementById(slug)
+      ) {
+
+        slug =
+          cards[0]?.id ||
+          "data-quality-intro";
+
+      }
+
+
+      showCard(
+        slug,
+        false
+      );
+
+
+      updateUrl(
+        slug,
+        true
+      );
+
+    }
+
+
+    initFromPath();
+
+
+    // Browser Back / Forward
+    window.addEventListener(
+      "popstate",
+      function() {
+
+        const slug =
+          getSlugFromPath();
+
+
+        if (
+          slug &&
+          document.getElementById(slug)
+        ) {
+
+          showCard(
+            slug,
+            false
+          );
+
+        } else {
+
+          const firstSlug =
+            cards[0]?.id ||
+            "data-quality-intro";
+
+          showCard(
+            firstSlug,
+            false
+          );
+
+        }
+
+      }
+    );
+
+
+  })();
+</script>
+</body>
+</html>

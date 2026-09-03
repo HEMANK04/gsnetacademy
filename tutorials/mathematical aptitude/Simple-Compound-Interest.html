@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple & Compound Interest – Full Notes | UGC NET Paper-1</title>
+  <meta name="description" content="Complete tutorial: Simple Interest (SI), Compound Interest (CI), difference between SI and CI, formulae, half-yearly/quarterly compounding, practice questions for UGC NET Paper-1 Mathematical Aptitude.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; }
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background: #f8f5ee;
+      color: #101a3d;
+    }
+    .h-display { font-family: 'Poppins', sans-serif; font-weight: 800; letter-spacing: -0.01em; }
+    .container { max-width: 1360px; margin: 0 auto; padding: 0 20px; }
+
+    .hero {
+      background: #0b1330;
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+      padding: 28px 0 22px;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      right: -80px;
+      top: -100px;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(232,183,75,0.2), transparent 70%);
+    }
+    .hero-inner { position: relative; }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      padding: 6px 16px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+      color: #e8b74b;
+    }
+    .hero h1 {
+      font-size: clamp(28px, 4.2vw, 44px);
+      margin: 12px 0 6px;
+    }
+    .hero p {
+      color: rgba(255,255,255,0.78);
+      max-width: 680px;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 28px;
+      padding: 28px 0 50px;
+      align-items: start;
+    }
+    @media (max-width: 980px) {
+      .layout { grid-template-columns: 1fr; }
+    }
+
+    .sidebar {
+      position: sticky;
+      top: 16px;
+      max-height: calc(100vh - 40px);
+      overflow-y: auto;
+      background: #fff;
+      border: 1px solid rgba(16,26,61,0.08);
+      border-radius: 16px;
+      padding: 16px 12px;
+      box-shadow: 0 6px 24px rgba(16,26,61,0.05);
+    }
+    .sidebar::-webkit-scrollbar { width: 5px; }
+    .sidebar::-webkit-scrollbar-thumb { background: #dde2ef; border-radius: 8px; }
+    .sidebar-title {
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: #b9852a;
+      padding: 4px 10px 14px;
+    }
+    .nav-link {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 10px;
+      border-radius: 10px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #33406b;
+      line-height: 1.3;
+      transition: 0.1s;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .nav-link:hover { background: #f4f6fc; color: #0b1330; }
+    .nav-link.active {
+      background: #fdf6e7;
+      color: #0b1330;
+    }
+    .nav-num {
+      flex: none;
+      width: 22px;
+      height: 22px;
+      border-radius: 7px;
+      background: #e7eaf5;
+      color: #5b6690;
+      font-size: 11px;
+      font-weight: 800;
+      display: grid;
+      place-items: center;
+    }
+    .nav-link.active .nav-num {
+      background: #e8b74b;
+      color: #0b1330;
+    }
+
+    #sidebar-toggle { display: none; }
+    .mobile-bar { display: none; }
+    @media (max-width: 980px) {
+      .mobile-bar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: #fff;
+        border: 1px solid rgba(16,26,61,0.1);
+        border-radius: 12px;
+        padding: 12px 16px;
+        margin-bottom: 8px;
+        font-weight: 800;
+        font-size: 13.5px;
+        color: #0b1330;
+      }
+      .sidebar { display: none; position: static; max-height: none; }
+      #sidebar-toggle:checked ~ .layout .sidebar { display: block; }
+    }
+
+    .content { min-width: 0; }
+    .topic-card {
+      background: #fff;
+      border: 1px solid rgba(16,26,61,0.08);
+      border-radius: 16px;
+      padding: 20px 20px 16px;
+      margin-bottom: 18px;
+      scroll-margin-top: 20px;
+      display: block;
+    }
+    .topic-card.hidden { display: none; }
+    .sec-head {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+    .sec-num {
+      flex: none;
+      width: 34px;
+      height: 34px;
+      border-radius: 10px;
+      background: #0b1330;
+      color: #e8b74b;
+      font-weight: 800;
+      font-size: 14px;
+      display: grid;
+      place-items: center;
+    }
+    .sec-head h2 {
+      margin: 0;
+      font-size: 19px;
+      font-weight: 800;
+      color: #0b1330;
+    }
+    .topic-card p {
+      font-size: 14.5px;
+      line-height: 1.75;
+      color: #1a254a;
+      margin: 6px 0;
+    }
+    .bullet-list {
+      margin: 8px 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 5px;
+    }
+    .bullet-list li {
+      position: relative;
+      padding-left: 20px;
+      font-size: 14px;
+      line-height: 1.6;
+      color: #1a254a;
+    }
+    .bullet-list li::before {
+      content: "";
+      position: absolute;
+      left: 2px;
+      top: 9px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #d9a53a;
+    }
+    .formula-box {
+      background: #0b1330;
+      color: #fdeec2;
+      font-weight: 700;
+      font-size: 13.6px;
+      padding: 10px 16px;
+      border-radius: 10px;
+      margin: 10px 0;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 12px 0;
+      font-size: 13.6px;
+      display: block;
+      overflow-x: auto;
+    }
+    .data-table th, .data-table td {
+      border: 1px solid #e7eaf5;
+      padding: 8px 12px;
+      text-align: left;
+      color: #1a254a;
+      white-space: normal;
+    }
+    .data-table th {
+      background: #f4f6fc;
+      color: #0b1330;
+      font-weight: 800;
+    }
+    .pyq-tag {
+      display: inline-block;
+      background: #fdf6e7;
+      color: #b9852a;
+      font-weight: 800;
+      font-size: 12px;
+      padding: 4px 12px;
+      border-radius: 8px;
+      margin: 12px 0 6px;
+    }
+    .answer-box {
+      background: #eefaf2;
+      border: 1px solid #bfe8cc;
+      color: #1a7a4c;
+      font-weight: 700;
+      font-size: 13.6px;
+      padding: 6px 14px;
+      border-radius: 9px;
+      margin: 6px 0;
+    }
+    .explain {
+      background: #f4f6fc;
+      border-radius: 9px;
+      padding: 6px 14px;
+      font-size: 13.6px;
+      color: #1a254a;
+    }
+    .subtopic {
+      padding: 14px 0 6px;
+      border-top: 1px dashed #e7eaf5;
+    }
+    .subtopic:first-of-type { border-top: none; padding-top: 2px; }
+    .subhead {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 6px;
+    }
+    .sub-num {
+      flex: none;
+      width: 26px;
+      height: 26px;
+      border-radius: 8px;
+      background: #fdf6e7;
+      color: #b9852a;
+      font-weight: 800;
+      font-size: 12px;
+      display: grid;
+      place-items: center;
+    }
+    .subhead h3 {
+      margin: 0;
+      font-size: 15.5px;
+      font-weight: 800;
+      color: #0b1330;
+    }
+    .enroll-cta {
+      background: #0b1330;
+      color: #fff;
+      border-radius: 16px;
+      padding: 24px 24px;
+      margin-top: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+      overflow: hidden;
+    }
+    .enroll-cta::before {
+      content: "";
+      position: absolute;
+      right: -40px;
+      top: -40px;
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(232,183,75,0.2), transparent 70%);
+    }
+    .enroll-cta h3 { margin: 0 0 4px; font-size: 20px; }
+    .enroll-cta p { margin: 0; color: rgba(255,255,255,0.75); font-size: 13.5px; max-width: 480px; }
+    .btn-gold {
+      background: #e8b74b;
+      color: #0b1330;
+      font-weight: 800;
+      padding: 10px 22px;
+      border-radius: 10px;
+      font-size: 13.5px;
+      white-space: nowrap;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="container hero-inner">
+    <span class="eyebrow">★ UGC NET Paper-I · Mathematical Aptitude</span>
+    <h1 class="h-display">Simple & Compound Interest</h1>
+    <p>Complete tutorial: Simple Interest (SI), Compound Interest (CI), difference between SI and CI, formulae, half-yearly/quarterly compounding, practice questions for UGC NET Paper-1.</p>
+  </div>
+</section>
+
+<main class="container">
+  <input type="checkbox" id="sidebar-toggle">
+  <label for="sidebar-toggle" class="mobile-bar">
+    <span>📑 On this page</span>
+    <span>☰ Menu</span>
+  </label>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebarNav">
+      <p class="sidebar-title">On this page</p>
+      <nav>
+        <a href="/tutorials/mathematical-reasoning-and-aptitude/simple-compound-interest/interest-meaning" class="nav-link active">
+  <span class="nav-num">1</span>Meaning of Interest
+</a>
+<a href="/tutorials/mathematical-reasoning-and-aptitude/simple-compound-interest/simple-interest" class="nav-link">
+  <span class="nav-num">2</span>Simple Interest
+</a>
+<a href="/tutorials/mathematical-reasoning-and-aptitude/simple-compound-interest/simple-interest-formula" class="nav-link">
+  <span class="nav-num">3</span>Simple Interest Formulae
+</a>
+<a href="/tutorials/mathematical-reasoning-and-aptitude/simple-compound-interest/compound-interest" class="nav-link">
+  <span class="nav-num">4</span>Compound Interest
+</a>
+<a href="/tutorials/mathematical-reasoning-and-aptitude/simple-compound-interest/compound-interest-formula" class="nav-link">
+  <span class="nav-num">5</span>Compound Interest Formulae
+</a>
+<a href="/tutorials/mathematical-reasoning-and-aptitude/simple-compound-interest/half-yearly-quarterly" class="nav-link">
+  <span class="nav-num">6</span>Half-Yearly & Quarterly Compounding
+</a>
+<a href="/tutorials/mathematical-reasoning-and-aptitude/simple-compound-interest/si-vs-ci" class="nav-link">
+  <span class="nav-num">7</span>SI vs CI
+</a>
+<a href="/tutorials/mathematical-reasoning-and-aptitude/simple-compound-interest/difference-si-ci" class="nav-link">
+  <span class="nav-num">8</span>Difference between SI & CI
+</a>
+<a href="/tutorials/mathematical-reasoning-and-aptitude/simple-compound-interest/formulae-summary" class="nav-link">
+  <span class="nav-num">9</span>Formulae Summary
+</a>
+<a href="/tutorials/mathematical-reasoning-and-aptitude/simple-compound-interest/exam-traps" class="nav-link">
+  <span class="nav-num">10</span>Common Exam Traps
+</a>
+<a href="/tutorials/mathematical-reasoning-and-aptitude/simple-compound-interest/practice-questions" class="nav-link">
+  <span class="nav-num">11</span>Practice Questions
+</a>
+<a href="/tutorials/mathematical-reasoning-and-aptitude/simple-compound-interest/one-page-revision" class="nav-link">
+  <span class="nav-num">12</span>One-Page Revision
+</a>
+      </nav>
+    </aside>
+
+    <div class="content" id="contentArea">
+      <!-- ===== CARDS ===== -->
+      <div id="interest-meaning" class="topic-card"><div class="sec-head"><span class="sec-num">1</span><h2>Meaning of Interest — ब्याज का अर्थ</h2></div><p><strong>Interest</strong> वह <strong>extra money</strong> है जो borrower lender को <strong>principal amount</strong> (मूलधन) के उपयोग के बदले में देता है।</p><ul class="bullet-list"><li><strong>Principal (P) — मूलधन:</strong> वह मूल राशि जो उधार ली/जमा की जाती है।</li><li><strong>Rate (R) — दर:</strong> प्रति वर्ष प्रतिशत ब्याज दर।</li><li><strong>Time (T) — समय:</strong> वह अवधि जिसके लिए पैसा उधार लिया/जमा किया जाता है।</li><li><strong>Amount (A) — मिश्रधन:</strong> Principal + Interest (A = P + I)</li></ul><p><strong>Two Types of Interest:</strong></p><ul class="bullet-list"><li><strong>Simple Interest (SI) — साधारण ब्याज:</strong> Interest केवल Principal पर calculate होता है।</li><li><strong>Compound Interest (CI) — चक्रवृद्धि ब्याज:</strong> Interest Principal + accrued interest पर calculate होता है।</li></ul></div>
+
+      <div id="simple-interest" class="topic-card"><div class="sec-head"><span class="sec-num">2</span><h2>Simple Interest — साधारण ब्याज</h2></div><p><strong>Simple Interest</strong> वह ब्याज है जो केवल <strong>Original Principal</strong> पर calculate होता है, न कि पहले accrued interest पर।</p><div class="formula-box">SI = (P × R × T) / 100</div><p><strong>Key Points:</strong></p><ul class="bullet-list"><li>Interest हर साल <strong>same</strong> रहता है (constant) — जब तक P, R, T same हैं।</li><li>Principal <strong>constant</strong> रहता है।</li><li>Amount = P + SI</li></ul><p><strong>Example:</strong></p><ul class="bullet-list"><li>Principal = ₹1000, Rate = 10% p.a., Time = 3 years</li><li>SI = (1000 × 10 × 3) / 100 = ₹300</li><li>Amount = 1000 + 300 = ₹1300</li></ul></div>
+
+      <div id="simple-interest-formula" class="topic-card"><div class="sec-head"><span class="sec-num">3</span><h2>Simple Interest Formulae — साधारण ब्याज सूत्र</h2></div><div class="formula-box">SI = (P × R × T) / 100</div><ul class="bullet-list"><li><strong>To find P:</strong> P = (SI × 100) / (R × T)</li><li><strong>To find R:</strong> R = (SI × 100) / (P × T)</li><li><strong>To find T:</strong> T = (SI × 100) / (P × R)</li><li><strong>Amount:</strong> A = P + SI = P × (1 + RT/100)</li></ul><p><strong>Example 1:</strong> SI = ₹300, R = 10%, T = 3 years, find P.</p><ul class="bullet-list"><li>P = (300 × 100) / (10 × 3) = 30000/30 = ₹1000</li></ul><p><strong>Example 2:</strong> P = ₹2000, R = 8%, T = 2 years, find SI and Amount.</p><ul class="bullet-list"><li>SI = (2000 × 8 × 2) / 100 = ₹320</li><li>A = 2000 + 320 = ₹2320</li></ul></div>
+
+      <div id="compound-interest" class="topic-card"><div class="sec-head"><span class="sec-num">4</span><h2>Compound Interest — चक्रवृद्धि ब्याज</h2></div><p><strong>Compound Interest</strong> वह ब्याज है जो <strong>Principal + previously earned interest</strong> पर calculate होता है। इसे <strong>"interest on interest"</strong> भी कहा जाता है।</p><div class="formula-box">A = P × (1 + R/100)ⁿ  (Annual Compounding)</div><div class="formula-box">CI = A − P</div><p><strong>Key Points:</strong></p><ul class="bullet-list"><li>Interest हर साल <strong>increasing</strong> होता है।</li><li>Principal <strong>changes</strong> each year (P + interest).</li><li>CI हमेशा same time/rate पर SI से <strong>greater</strong> होता है (for T > 1 year).</li></ul><p><strong>Example:</strong></p><ul class="bullet-list"><li>Principal = ₹1000, Rate = 10% p.a., Time = 3 years</li><li>A = 1000 × (1 + 10/100)³ = 1000 × (1.1)³ = 1000 × 1.331 = ₹1331</li><li>CI = 1331 − 1000 = ₹331</li><li>SI = ₹300 (comparison: CI > SI)</li></ul></div>
+
+      <div id="compound-interest-formula" class="topic-card"><div class="sec-head"><span class="sec-num">5</span><h2>Compound Interest Formulae — चक्रवृद्धि ब्याज सूत्र</h2></div><div class="formula-box">A = P × (1 + R/100)ⁿ</div><div class="formula-box">CI = A − P = P × [(1 + R/100)ⁿ − 1]</div><ul class="bullet-list"><li><strong>To find P:</strong> P = A / (1 + R/100)ⁿ</li><li><strong>To find R:</strong> R = 100 × [(A/P)¹⁄ⁿ − 1]</li><li><strong>To find n:</strong> n = log(A/P) / log(1 + R/100)</li></ul><p><strong>Example:</strong> A = ₹1331, R = 10%, n = 3 years, find P.</p><ul class="bullet-list"><li>P = 1331 / (1.1)³ = 1331 / 1.331 = ₹1000</li></ul><p><strong>Important:</strong> For Compound Interest, always calculate <strong>Amount first</strong>, then CI = A − P.</p></div>
+
+      <div id="half-yearly-quarterly" class="topic-card"><div class="sec-head"><span class="sec-num">6</span><h2>Half-Yearly & Quarterly Compounding — अर्धवार्षिक एवं त्रैमासिक चक्रवृद्धि</h2></div><p>When interest is compounded <strong>more than once</strong> in a year:</p><ul class="bullet-list"><li><strong>Half-Yearly Compounding:</strong> Rate = R/2, Time = 2n (n = number of years)</li><li><strong>Quarterly Compounding:</strong> Rate = R/4, Time = 4n</li><li><strong>Monthly Compounding:</strong> Rate = R/12, Time = 12n</li></ul><div class="formula-box">A = P × (1 + r/m)ⁿᵐ</div><p>Where m = number of compounding periods per year.</p><p><strong>Example 1 (Half-Yearly):</strong> P = ₹1000, R = 10% p.a., n = 2 years, compounded half-yearly.</p><ul class="bullet-list"><li>Rate = 10/2 = 5% per half-year, Time = 2×2 = 4 half-years</li><li>A = 1000 × (1 + 5/100)⁴ = 1000 × (1.05)⁴ = 1000 × 1.2155 = ₹1215.50</li></ul><p><strong>Example 2 (Quarterly):</strong> P = ₹1000, R = 12% p.a., n = 1 year, compounded quarterly.</p><ul class="bullet-list"><li>Rate = 12/4 = 3% per quarter, Time = 1×4 = 4 quarters</li><li>A = 1000 × (1 + 3/100)⁴ = 1000 × (1.03)⁴ = ₹1125.51</li></ul></div>
+
+      <div id="si-vs-ci" class="topic-card"><div class="sec-head"><span class="sec-num">7</span><h2>SI vs CI — साधारण एवं चक्रवृद्धि ब्याज में अंतर</h2></div><table class="data-table"><tr><th>Basis</th><th>Simple Interest (SI)</th><th>Compound Interest (CI)</th></tr><tr><td>Calculation Base</td><td>Only Principal</td><td>Principal + Accrued Interest</td></tr><tr><td>Growth Pattern</td><td>Linear (constant each year)</td><td>Exponential (increasing each year)</td></tr><tr><td>Principal</td><td>Constant</td><td>Changes (increases each year)</td></tr><tr><td>Amount Formula</td><td>A = P(1 + RT/100)</td><td>A = P(1 + R/100)ⁿ</td></tr><tr><td>For T=1 year</td><td>SI = CI</td><td>CI = SI</td></tr><tr><td>For T > 1 year</td><td>SI < CI</td><td>CI > SI</td></tr><tr><td>For T < 1 year</td><td>SI > CI</td><td>CI < SI</td></tr></table></div>
+
+      <div id="difference-si-ci" class="topic-card"><div class="sec-head"><span class="sec-num">8</span><h2>Difference between SI & CI — SI और CI में अंतर</h2></div><p><strong>For 2 years:</strong></p><div class="formula-box">Difference (CI − SI) = P × (R/100)²</div><p><strong>For 3 years:</strong></p><div class="formula-box">Difference (CI − SI) = P × (R/100)² × (300 + R)/100</div><p><strong>Example:</strong> P = ₹1000, R = 10%, T = 2 years</p><ul class="bullet-list"><li>SI = (1000 × 10 × 2)/100 = ₹200</li><li>CI = 1000 × [(1.1)² − 1] = 1000 × 0.21 = ₹210</li><li>Difference = ₹10</li><li>Formula: 1000 × (10/100)² = 1000 × 0.01 = ₹10 ✓</li></ul></div>
+
+      <div id="formulae-summary" class="topic-card"><div class="sec-head"><span class="sec-num">9</span><h2>Formulae Summary — सूत्र सारांश</h2></div><ul class="bullet-list"><li><strong>Simple Interest:</strong> SI = (P × R × T) / 100</li><li><strong>SI Amount:</strong> A = P + SI = P × (1 + RT/100)</li><li><strong>Compound Interest (Annual):</strong> A = P × (1 + R/100)ⁿ</li><li><strong>CI:</strong> CI = A − P = P × [(1 + R/100)ⁿ − 1]</li><li><strong>Half-Yearly:</strong> A = P × (1 + R/200)²ⁿ</li><li><strong>Quarterly:</strong> A = P × (1 + R/400)⁴ⁿ</li><li><strong>CI − SI (2 years):</strong> P × (R/100)²</li><li><strong>CI − SI (3 years):</strong> P × (R/100)² × (300 + R)/100</li></ul></div>
+
+      <div id="exam-traps" class="topic-card"><div class="sec-head"><span class="sec-num">10</span><h2>Common Exam Traps — सामान्य परीक्षा जाल</h2></div><ul class="bullet-list"><li><strong>Trap 1:</strong> For T=1 year, SI = CI → True. For T>1, CI > SI.</li><li><strong>Trap 2:</strong> Half-yearly compounding: don't forget to adjust both Rate (R/2) and Time (2n).</li><li><strong>Trap 3:</strong> CI formula: A = P(1 + R/100)ⁿ — always calculate Amount first, then CI = A − P.</li><li><strong>Trap 4:</strong> Difference formula for 2 years: P × (R/100)² — not P × R²/100.</li><li><strong>Trap 5:</strong> Simple Interest: Principal remains constant — don't add interest to principal.</li><li><strong>Trap 6:</strong> Rate और Time की units match होनी चाहिए — if time is in months, convert to years.</li></ul></div>
+
+      <div id="practice-questions" class="topic-card"><div class="sec-head"><span class="sec-num">11</span><h2>Practice Questions — अभ्यास प्रश्न</h2></div>
+      <div class="pyq-tag">Question 1 (Simple Interest)</div>
+      <p>Find the simple interest on ₹5000 at 8% p.a. for 3 years.</p>
+      <ul class="bullet-list"><li>A. ₹1000</li><li>B. ₹1200</li><li>C. ₹1500</li><li>D. ₹1800</li></ul>
+      <div class="answer-box">Answer: B. ₹1200</div>
+      <p class="explain">Explanation: SI = (5000 × 8 × 3)/100 = ₹1200.</p>
+
+      <div class="pyq-tag">Question 2 (Compound Interest)</div>
+      <p>Find the compound interest on ₹5000 at 10% p.a. for 2 years (compounded annually).</p>
+      <ul class="bullet-list"><li>A. ₹1000</li><li>B. ₹1025</li><li>C. ₹1050</li><li>D. ₹1100</li></ul>
+      <div class="answer-box">Answer: C. ₹1050</div>
+      <p class="explain">Explanation: A = 5000 × (1.1)² = 5000 × 1.21 = ₹6050; CI = 6050 − 5000 = ₹1050.</p>
+
+      <div class="pyq-tag">Question 3 (Half-Yearly Compounding)</div>
+      <p>Find the amount on ₹2000 at 10% p.a. for 1 year, compounded half-yearly.</p>
+      <ul class="bullet-list"><li>A. ₹2100</li><li>B. ₹2150</li><li>C. ₹2200</li><li>D. ₹2205</li></ul>
+      <div class="answer-box">Answer: D. ₹2205</div>
+      <p class="explain">Explanation: Rate = 10/2 = 5%, Time = 2 half-years; A = 2000 × (1.05)² = 2000 × 1.1025 = ₹2205.</p>
+
+      <div class="pyq-tag">Question 4 (SI vs CI Difference)</div>
+      <p>The difference between CI and SI on ₹10000 for 2 years at 10% p.a. is:</p>
+      <ul class="bullet-list"><li>A. ₹50</li><li>B. ₹100</li><li>C. ₹150</li><li>D. ₹200</li></ul>
+      <div class="answer-box">Answer: B. ₹100</div>
+      <p class="explain">Explanation: Difference = P × (R/100)² = 10000 × (10/100)² = 10000 × 0.01 = ₹100.</p>
+
+      <div class="pyq-tag">Question 5 (Finding Principal from CI)</div>
+      <p>At 10% p.a., the amount after 2 years (compounded annually) is ₹12100. Find the principal.</p>
+      <ul class="bullet-list"><li>A. ₹9000</li><li>B. ₹10000</li><li>C. ₹11000</li><li>D. ₹12000</li></ul>
+      <div class="answer-box">Answer: B. ₹10000</div>
+      <p class="explain">Explanation: P = A / (1.1)² = 12100 / 1.21 = ₹10000.</p>
+
+      <div class="pyq-tag">Question 6 (Quarterly Compounding)</div>
+      <p>Find the amount on ₹10000 at 12% p.a. for 1 year, compounded quarterly.</p>
+      <ul class="bullet-list"><li>A. ₹11200</li><li>B. ₹11250</li><li>C. ₹11255</li><li>D. ₹11300</li></ul>
+      <div class="answer-box">Answer: C. ₹11255</div>
+      <p class="explain">Explanation: Rate = 12/4 = 3%, Time = 4 quarters; A = 10000 × (1.03)⁴ = 10000 × 1.1255 = ₹11255.</p></div>
+
+      <div id="one-page-revision" class="topic-card"><div class="sec-head"><span class="sec-num">12</span><h2>One-Page Revision — एक पेज में पुनरावृत्ति</h2></div>
+      <div class="formula-box">SI = (P × R × T) / 100 | CI = P × [(1 + R/100)ⁿ − 1]</div>
+
+      <p><strong>Key Formulae:</strong></p>
+      <ul class="bullet-list"><li>SI = (P×R×T)/100</li><li>A (SI) = P + SI = P(1 + RT/100)</li><li>A (CI) = P(1 + R/100)ⁿ</li><li>CI = A − P</li></ul>
+
+      <p><strong>Compounding Periods:</strong></p>
+      <ul class="bullet-list"><li>Half-Yearly: R/2, 2n</li><li>Quarterly: R/4, 4n</li><li>Monthly: R/12, 12n</li></ul>
+
+      <p><strong>SI vs CI:</strong></p>
+      <ul class="bullet-list"><li>T=1: SI = CI</li><li>T>1: CI > SI</li><li>T<1: SI > CI</li></ul>
+
+      <p><strong>Difference Formulae:</strong></p>
+      <ul class="bullet-list"><li>2 years: P × (R/100)²</li><li>3 years: P × (R/100)² × (300+R)/100</li></ul>
+
+      <p><strong>Exam Formula:</strong></p>
+      <div class="formula-box">SI = Simple & Constant | CI = Interest on Interest (Exponential)</div>
+      <p><em>UGC NET में Simple & Compound Interest के questions formula-based और application-based होते हैं। Compounding periods और SI-CI difference पर विशेष ध्यान दें।</em></p></div>
+
+      <div class="enroll-cta"><div><h3 class="h-display">Join the Paper-1 Batch</h3><p>Course fee FREE — ₹500 registration & academic/logistics contribution. Classes daily at 6:30 PM.</p></div><a href="#" class="btn-gold">✓ JOIN BATCH @ ₹500</a></a></div>
+    </div>
+  </div>
+</main>
+
+<script>
+(function() {
+
+  const BASE_PATH =
+    "/tutorials/mathematical-reasoning-and-aptitude/simple-compound-interest";
+
+  const links = document.querySelectorAll(".nav-link");
+  const cards = document.querySelectorAll(".topic-card");
+  const content = document.getElementById("contentArea");
+  const sidebarToggle = document.getElementById("sidebar-toggle");
+
+
+  // Get topic slug from current URL
+  function getSlugFromPath() {
+
+    const path = window.location.pathname
+      .replace(/\/+$/, "");
+
+    if (path.startsWith(BASE_PATH + "/")) {
+
+      return path
+        .substring((BASE_PATH + "/").length)
+        .split("/")[0];
+
+    }
+
+    return null;
+  }
+
+
+  // Update browser URL
+  function updateUrl(slug, replace = false) {
+
+    const newPath =
+      BASE_PATH + "/" + slug;
+
+    if (window.location.pathname !== newPath) {
+
+      if (replace) {
+        history.replaceState(null, "", newPath);
+      } else {
+        history.pushState(null, "", newPath);
+      }
+
+    }
+  }
+
+
+  // Update active sidebar link
+  function updateActiveLink(slug) {
+
+    links.forEach(function(link) {
+
+      const href =
+        link.getAttribute("href");
+
+      if (!href) return;
+
+      const linkSlug =
+        href
+          .split("/")
+          .filter(Boolean)
+          .pop();
+
+      link.classList.toggle(
+        "active",
+        linkSlug === slug
+      );
+
+    });
+  }
+
+
+  // Show selected topic card
+  function showCard(slug, updateHistory = true) {
+
+    cards.forEach(function(card) {
+      card.classList.add("hidden");
+    });
+
+
+    const target =
+      document.getElementById(slug);
+
+
+    if (!target) {
+
+      const first = cards[0];
+
+      if (first) {
+
+        first.classList.remove("hidden");
+
+        const firstSlug = first.id;
+
+        updateActiveLink(firstSlug);
+
+        updateUrl(firstSlug, true);
+
+      }
+
+      return;
+    }
+
+
+    target.classList.remove("hidden");
+
+    updateActiveLink(slug);
+
+
+    if (updateHistory) {
+      updateUrl(slug);
+    }
+
+
+    if (sidebarToggle) {
+      sidebarToggle.checked = false;
+    }
+
+
+    if (content) {
+
+      const top =
+        content.getBoundingClientRect().top +
+        window.pageYOffset -
+        10;
+
+      window.scrollTo({
+        top: top,
+        behavior: "smooth"
+      });
+
+    }
+
+  }
+
+
+  // Sidebar link click
+  links.forEach(function(link) {
+
+    link.addEventListener("click", function(e) {
+
+      e.preventDefault();
+
+      const href =
+        this.getAttribute("href");
+
+      if (!href) return;
+
+
+      const slug =
+        href
+          .split("/")
+          .filter(Boolean)
+          .pop();
+
+
+      if (!slug) return;
+
+
+      console.log("Clicked topic:", slug);
+
+      showCard(slug, true);
+
+    });
+
+  });
+
+
+  // Initial page load
+  function initFromPath() {
+
+    let slug =
+      getSlugFromPath();
+
+
+    if (
+      !slug ||
+      !document.getElementById(slug)
+    ) {
+
+      slug =
+        cards[0]?.id ||
+        "interest-meaning";
+
+    }
+
+
+    showCard(slug, false);
+
+    updateUrl(slug, true);
+
+  }
+
+
+  initFromPath();
+
+
+  // Browser Back / Forward
+  window.addEventListener(
+    "popstate",
+    function() {
+
+      const slug =
+        getSlugFromPath();
+
+
+      if (
+        slug &&
+        document.getElementById(slug)
+      ) {
+
+        showCard(slug, false);
+
+      } else {
+
+        const firstSlug =
+          cards[0]?.id ||
+          "interest-meaning";
+
+        showCard(firstSlug, false);
+
+      }
+
+    }
+  );
+
+
+})();
+</script>
+</body>
+</html>

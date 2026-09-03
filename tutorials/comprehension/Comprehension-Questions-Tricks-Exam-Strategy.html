@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comprehension Questions, Tricks & Exam Strategy – Full Notes | UGC NET Paper-1</title>
+  <meta name="description" content="Complete tutorial: Types of comprehension questions, tricks, time management, elimination strategies, passage reading techniques, exam strategy for UGC NET Paper-1 Reading Comprehension.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; }
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background: #f8f5ee;
+      color: #101a3d;
+    }
+    .h-display { font-family: 'Poppins', sans-serif; font-weight: 800; letter-spacing: -0.01em; }
+    .container { max-width: 1360px; margin: 0 auto; padding: 0 20px; }
+
+    .hero {
+      background: #0b1330;
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+      padding: 28px 0 22px;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      right: -80px;
+      top: -100px;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(232,183,75,0.2), transparent 70%);
+    }
+    .hero-inner { position: relative; }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      padding: 6px 16px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+      color: #e8b74b;
+    }
+    .hero h1 {
+      font-size: clamp(28px, 4.2vw, 44px);
+      margin: 12px 0 6px;
+    }
+    .hero p {
+      color: rgba(255,255,255,0.78);
+      max-width: 680px;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 28px;
+      padding: 28px 0 50px;
+      align-items: start;
+    }
+    @media (max-width: 980px) {
+      .layout { grid-template-columns: 1fr; }
+    }
+
+    .sidebar {
+      position: sticky;
+      top: 16px;
+      max-height: calc(100vh - 40px);
+      overflow-y: auto;
+      background: #fff;
+      border: 1px solid rgba(16,26,61,0.08);
+      border-radius: 16px;
+      padding: 16px 12px;
+      box-shadow: 0 6px 24px rgba(16,26,61,0.05);
+    }
+    .sidebar::-webkit-scrollbar { width: 5px; }
+    .sidebar::-webkit-scrollbar-thumb { background: #dde2ef; border-radius: 8px; }
+    .sidebar-title {
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: #b9852a;
+      padding: 4px 10px 14px;
+    }
+    .nav-link {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 10px;
+      border-radius: 10px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #33406b;
+      line-height: 1.3;
+      transition: 0.1s;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .nav-link:hover { background: #f4f6fc; color: #0b1330; }
+    .nav-link.active {
+      background: #fdf6e7;
+      color: #0b1330;
+    }
+    .nav-num {
+      flex: none;
+      width: 22px;
+      height: 22px;
+      border-radius: 7px;
+      background: #e7eaf5;
+      color: #5b6690;
+      font-size: 11px;
+      font-weight: 800;
+      display: grid;
+      place-items: center;
+    }
+    .nav-link.active .nav-num {
+      background: #e8b74b;
+      color: #0b1330;
+    }
+
+    #sidebar-toggle { display: none; }
+    .mobile-bar { display: none; }
+    @media (max-width: 980px) {
+      .mobile-bar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: #fff;
+        border: 1px solid rgba(16,26,61,0.1);
+        border-radius: 12px;
+        padding: 12px 16px;
+        margin-bottom: 8px;
+        font-weight: 800;
+        font-size: 13.5px;
+        color: #0b1330;
+      }
+      .sidebar { display: none; position: static; max-height: none; }
+      #sidebar-toggle:checked ~ .layout .sidebar { display: block; }
+    }
+
+    .content { min-width: 0; }
+    .topic-card {
+      background: #fff;
+      border: 1px solid rgba(16,26,61,0.08);
+      border-radius: 16px;
+      padding: 20px 20px 16px;
+      margin-bottom: 18px;
+      scroll-margin-top: 20px;
+      display: block;
+    }
+    .topic-card.hidden { display: none; }
+    .sec-head {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+    .sec-num {
+      flex: none;
+      width: 34px;
+      height: 34px;
+      border-radius: 10px;
+      background: #0b1330;
+      color: #e8b74b;
+      font-weight: 800;
+      font-size: 14px;
+      display: grid;
+      place-items: center;
+    }
+    .sec-head h2 {
+      margin: 0;
+      font-size: 19px;
+      font-weight: 800;
+      color: #0b1330;
+    }
+    .topic-card p {
+      font-size: 14.5px;
+      line-height: 1.75;
+      color: #1a254a;
+      margin: 6px 0;
+    }
+    .bullet-list {
+      margin: 8px 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 5px;
+    }
+    .bullet-list li {
+      position: relative;
+      padding-left: 20px;
+      font-size: 14px;
+      line-height: 1.6;
+      color: #1a254a;
+    }
+    .bullet-list li::before {
+      content: "";
+      position: absolute;
+      left: 2px;
+      top: 9px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #d9a53a;
+    }
+    .formula-box {
+      background: #0b1330;
+      color: #fdeec2;
+      font-weight: 700;
+      font-size: 13.6px;
+      padding: 10px 16px;
+      border-radius: 10px;
+      margin: 10px 0;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 12px 0;
+      font-size: 13.6px;
+      display: block;
+      overflow-x: auto;
+    }
+    .data-table th, .data-table td {
+      border: 1px solid #e7eaf5;
+      padding: 8px 12px;
+      text-align: left;
+      color: #1a254a;
+      white-space: normal;
+    }
+    .data-table th {
+      background: #f4f6fc;
+      color: #0b1330;
+      font-weight: 800;
+    }
+    .pyq-tag {
+      display: inline-block;
+      background: #fdf6e7;
+      color: #b9852a;
+      font-weight: 800;
+      font-size: 12px;
+      padding: 4px 12px;
+      border-radius: 8px;
+      margin: 12px 0 6px;
+    }
+    .answer-box {
+      background: #eefaf2;
+      border: 1px solid #bfe8cc;
+      color: #1a7a4c;
+      font-weight: 700;
+      font-size: 13.6px;
+      padding: 6px 14px;
+      border-radius: 9px;
+      margin: 6px 0;
+    }
+    .explain {
+      background: #f4f6fc;
+      border-radius: 9px;
+      padding: 6px 14px;
+      font-size: 13.6px;
+      color: #1a254a;
+    }
+    .subtopic {
+      padding: 14px 0 6px;
+      border-top: 1px dashed #e7eaf5;
+    }
+    .subtopic:first-of-type { border-top: none; padding-top: 2px; }
+    .subhead {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 6px;
+    }
+    .sub-num {
+      flex: none;
+      width: 26px;
+      height: 26px;
+      border-radius: 8px;
+      background: #fdf6e7;
+      color: #b9852a;
+      font-weight: 800;
+      font-size: 12px;
+      display: grid;
+      place-items: center;
+    }
+    .subhead h3 {
+      margin: 0;
+      font-size: 15.5px;
+      font-weight: 800;
+      color: #0b1330;
+    }
+    .enroll-cta {
+      background: #0b1330;
+      color: #fff;
+      border-radius: 16px;
+      padding: 24px 24px;
+      margin-top: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+      overflow: hidden;
+    }
+    .enroll-cta::before {
+      content: "";
+      position: absolute;
+      right: -40px;
+      top: -40px;
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(232,183,75,0.2), transparent 70%);
+    }
+    .enroll-cta h3 { margin: 0 0 4px; font-size: 20px; }
+    .enroll-cta p { margin: 0; color: rgba(255,255,255,0.75); font-size: 13.5px; max-width: 480px; }
+    .btn-gold {
+      background: #e8b74b;
+      color: #0b1330;
+      font-weight: 800;
+      padding: 10px 22px;
+      border-radius: 10px;
+      font-size: 13.5px;
+      white-space: nowrap;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="container hero-inner">
+    <span class="eyebrow">★ UGC NET Paper-I · Reading Comprehension</span>
+    <h1 class="h-display">Comprehension Questions, Tricks & Exam Strategy</h1>
+    <p>Complete tutorial: Types of comprehension questions, tricks, time management, elimination strategies, passage reading techniques, exam strategy for UGC NET Paper-1.</p>
+  </div>
+</section>
+
+<main class="container">
+  <input type="checkbox" id="sidebar-toggle">
+  <label for="sidebar-toggle" class="mobile-bar">
+    <span>📑 On this page</span>
+    <span>☰ Menu</span>
+  </label>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebarNav">
+      <p class="sidebar-title">On this page</p>
+      <nav>
+        <a href="/tutorials/comprehension/comprehension-questions-tricks-exam-strategy/types-questions" class="nav-link active">
+  <span class="nav-num">1</span>Types of Comprehension Questions
+</a>
+        <a href="/tutorials/comprehension/comprehension-questions-tricks-exam-strategy/factual-questions" class="nav-link"><span class="nav-num">2</span>Factual/Literal Questions</a>
+        <a href="/tutorials/comprehension/comprehension-questions-tricks-exam-strategy/inferential-questions" class="nav-link"><span class="nav-num">3</span>Inferential Questions</a>
+        <a href="/tutorials/comprehension/comprehension-questions-tricks-exam-strategy/main-idea-questions" class="nav-link"><span class="nav-num">4</span>Main Idea Questions</a>
+        <a href="/tutorials/comprehension/comprehension-questions-tricks-exam-strategy/title-questions" class="nav-link"><span class="nav-num">5</span>Title Questions</a>
+        <a href="/tutorials/comprehension/comprehension-questions-tricks-exam-strategy/purpose-tone-questions" class="nav-link"><span class="nav-num">6</span>Purpose & Tone Questions</a>
+        <a href="/tutorials/comprehension/comprehension-questions-tricks-exam-strategy/vocabulary-questions" class="nav-link"><span class="nav-num">7</span>Vocabulary Questions</a>
+        <a href="/tutorials/comprehension/comprehension-questions-tricks-exam-strategy/pronoun-connector-questions" class="nav-link"><span class="nav-num">8</span>Pronoun & Connector Questions</a>
+        <a href="/tutorials/comprehension/comprehension-questions-tricks-exam-strategy/passage-reading-techniques" class="nav-link"><span class="nav-num">9</span>Passage Reading Techniques</a>
+        <a href="/tutorials/comprehension/comprehension-questions-tricks-exam-strategy/elimination-strategies" class="nav-link"><span class="nav-num">10</span>Elimination Strategies</a>
+        <a href="/tutorials/comprehension/comprehension-questions-tricks-exam-strategy/time-management" class="nav-link"><span class="nav-num">11</span>Time Management</a>
+        <a href="/tutorials/comprehension/comprehension-questions-tricks-exam-strategy/common-errors" class="nav-link"><span class="nav-num">12</span>Common Errors & How to Avoid</a>
+        <a href="/tutorials/comprehension/comprehension-questions-tricks-exam-strategy/quick-tricks" class="nav-link"><span class="nav-num">13</span>Quick Tricks & Tips</a>
+        <a href="/tutorials/comprehension/comprehension-questions-tricks-exam-strategy/exam-day-strategy" class="nav-link"><span class="nav-num">14</span>Exam Day Strategy</a>
+        <a href="/tutorials/comprehension/comprehension-questions-tricks-exam-strategy/practice-questions" class="nav-link"><span class="nav-num">15</span>Practice Questions</a>
+        <a href="/tutorials/comprehension/comprehension-questions-tricks-exam-strategy/one-page-revision" class="nav-link"><span class="nav-num">16</span>One-Page Revision</a>
+      </nav>
+    </aside>
+
+    <div class="content" id="contentArea">
+      <!-- ===== CARDS ===== -->
+      <div id="types-questions" class="topic-card"><div class="sec-head"><span class="sec-num">1</span><h2>Types of Comprehension Questions — प्रश्नों के प्रकार</h2></div><p>UGC NET Paper-1 में Comprehension से निम्न प्रकार के questions पूछे जाते हैं:</p><ul class="bullet-list"><li><strong>Factual/Literal Questions — तथ्यात्मक/शाब्दिक प्रश्न:</strong> Passage में directly लिखी information पर आधारित</li><li><strong>Inferential Questions — अनुमानात्मक प्रश्न:</strong> Passage में explicit न लिखी, पर logically inferred जानकारी</li><li><strong>Main Idea Questions — मुख्य विचार:</strong> Passage का central point</li><li><strong>Title Questions — शीर्षक:</strong> Passage के लिए सबसे उपयुक्त title</li><li><strong>Purpose Questions — उद्देश्य:</strong> Author क्यों लिख रहा है</li><li><strong>Tone Questions — स्वर:</strong> Author का attitude या feeling</li><li><strong>Vocabulary Questions — शब्दावली:</strong> Unfamiliar word का contextual meaning</li><li><strong>Pronoun Reference Questions — सर्वनाम संदर्भ:</strong> Pronoun किस noun को refer कर रहा है</li><li><strong>Connector Questions — संयोजक:</strong> Connector का function/what it indicates</li><li><strong>Author's Argument Questions — लेखक का तर्क:</strong> Author का claim और उसका support</li></ul></div>
+
+      <div id="factual-questions" class="topic-card"><div class="sec-head"><span class="sec-num">2</span><h2>Factual/Literal Questions — तथ्यात्मक/शाब्दिक प्रश्न</h2></div><div class="formula-box">Factual Questions = Answer is directly in the passage</div><p><strong>Strategy:</strong></p><ul class="bullet-list"><li>Question में दिए गए keywords को passage में <strong>locate</strong> करें</li><li>Passage के <strong>exact or paraphrased</strong> portion को पढ़ें</li><li>उस portion से <strong>directly</strong> answer निकालें</li><li>अपना अनुमान या personal opinion <strong>न लगाएँ</strong></li></ul><p><strong>Example Question:</strong> "According to the passage, when was the first education policy introduced?" — Passage में date/event देखें।</p><p><strong>Key Words in Questions:</strong> According to the passage, states that, mentions, according to, as per the passage, the passage says</p><p><strong>Trick:</strong> Factual questions के answers passage में <strong>directly</strong> होते हैं। बस सही location खोजनी है।</p></div>
+
+      <div id="inferential-questions" class="topic-card"><div class="sec-head"><span class="sec-num">3</span><h2>Inferential Questions — अनुमानात्मक प्रश्न</h2></div><div class="formula-box">Inferential Questions = Answer is implied, not directly stated</div><p><strong>Strategy:</strong></p><ul class="bullet-list"><li>Passage में <strong>clues</strong> और <strong>hints</strong> खोजें</li><li><strong>Logical connection</strong> बनाएँ</li><li>Author ने <strong>क्या छुपाया/सुझाया</strong> है — यह समझें</li><li><strong>Evidence-based conclusion</strong> निकालें</li></ul><p><strong>Example Question:</strong> "The author implies that..." — Author ने indirectly क्या कहा है?</p><p><strong>Key Words in Questions:</strong> Implies, suggests, can be inferred, indicates, it can be concluded, most likely, probably</p><p><strong>Trick:</strong> Inference केवल <strong>passage पर आधारित</strong> होना चाहिए। Personal knowledge/opinion <strong>नहीं</strong> use करें।</p></div>
+
+      <div id="main-idea-questions" class="topic-card"><div class="sec-head"><span class="sec-num">4</span><h2>Main Idea Questions — मुख्य विचार</h2></div><div class="formula-box">Main Idea = What the passage is mostly about</div><p><strong>Strategy:</strong></p><ul class="bullet-list"><li>Passage का <strong>central theme</strong> पहचानें</li><li>Passage को एक वाक्य में <strong>summarise</strong> करने की कोशिश करें</li><li>Supporting details को <strong>ignore</strong> करें</li><li>Passage के <strong>introduction और conclusion</strong> पर ध्यान दें</li></ul><p><strong>Example Question:</strong> "What is the main idea of the passage?"</p><p><strong>Key Words in Questions:</strong> Main idea, central idea, primarily concerned with, mainly discusses, overall theme</p><p><strong>Trick:</strong> वह option जो <strong>all paragraphs</strong> को cover करता है — वही main idea है। Only one paragraph/detail वाला option <strong>नहीं</strong> है।</p></div>
+
+      <div id="title-questions" class="topic-card"><div class="sec-head"><span class="sec-num">5</span><h2>Title Questions — शीर्षक</h2></div><div class="formula-box">Suitable Title = Concise summary of main idea</div><p><strong>Strategy:</strong></p><ul class="bullet-list"><li>Main idea को <strong>short phrase</strong> में express करें</li><li>Title <strong>not too broad, not too narrow</strong> होना चाहिए</li><li>All key aspects को cover करना चाहिए</li></ul><p><strong>Example Question:</strong> "Which of the following is the most suitable title for the passage?"</p><p><strong>Trick:</strong></p><ul class="bullet-list"><li><strong>Too Broad:</strong> "Education" (जब passage "Online Education in India" पर हो)</li><li><strong>Too Narrow:</strong> "Teacher Training" (जब passage whole online education system पर हो)</li><li><strong>Correct:</strong> "Online Education in India: Challenges and Opportunities"</li></ul></div>
+
+      <div id="purpose-tone-questions" class="topic-card"><div class="sec-head"><span class="sec-num">6</span><h2>Purpose & Tone Questions — उद्देश्य और स्वर</h2></div><div class="formula-box">Purpose = Why author wrote | Tone = How author feels</div><p><strong>Purpose Strategy:</strong></p><ul class="bullet-list"><li>Passage का <strong>overall goal</strong> पहचानें</li><li>Is author trying to <strong>inform, persuade, entertain, or explain</strong>?</li><li>Look at the <strong>language and content</strong> of the passage</li></ul><p><strong>Tone Strategy:</strong></p><ul class="bullet-list"><li>Author का <strong>attitude</strong> पहचानें</li><li>Look at <strong>word choice</strong> (positive/negative words, formal/informal language)</li><li>Consider <strong>sentence structure and style</strong></li></ul><p><strong>Common Tones:</strong> Critical, optimistic, pessimistic, neutral, concerned, sarcastic, enthusiastic, formal, informal, sympathetic, apathetic</p></div>
+
+      <div id="vocabulary-questions" class="topic-card"><div class="sec-head"><span class="sec-num">7</span><h2>Vocabulary Questions — शब्दावली</h2></div><div class="formula-box">Vocabulary = Word meaning in context, not dictionary meaning</div><p><strong>Strategy:</strong></p><ul class="bullet-list"><li>Word के आस-पास के <strong>context clues</strong> देखें</li><li>Look for <strong>synonyms, definitions, examples, contrasts</strong> around the word</li><li>Word को <strong>replace</strong> करके check करें — क्या sentence का meaning same रहता है?</li></ul><p><strong>Example Question:</strong> "The word 'lauded' in the passage most nearly means..."</p><p><strong>Trick:</strong> Word का dictionary meaning विकल्प में हो सकता है, लेकिन <strong>contextual meaning</strong> को select करें।</p></div>
+
+      <div id="pronoun-connector-questions" class="topic-card"><div class="sec-head"><span class="sec-num">8</span><h2>Pronoun & Connector Questions — सर्वनाम और संयोजक</h2></div><p><strong>Pronoun Reference Strategy:</strong></p><ul class="bullet-list"><li>Pronoun से <strong>immediately पहले</strong> के nouns को देखें</li><li>Number (singular/plural) और <strong>gender agreement</strong> check करें</li><li><strong>Logical</strong> noun को select करें</li></ul><p><strong>Connector Strategy:</strong></p><ul class="bullet-list"><li>Connector के <strong>function</strong> को समझें (contrast, addition, cause-effect, etc.)</li><li>Passage में connector <strong>क्या relationship</strong> दिखा रहा है — यह पहचानें</li></ul><p><strong>Example Questions:</strong></p><ul class="bullet-list"><li>"The pronoun 'they' refers to..."</li><li>"What does the connector 'however' indicate?"</li></ul></div>
+
+      <div id="passage-reading-techniques" class="topic-card"><div class="sec-head"><span class="sec-num">9</span><h2>Passage Reading Techniques — पैसेज पढ़ने की तकनीकें</h2></div><ul class="bullet-list"><li><strong>Skim First — पहले स्किम करें:</strong> Passage को <strong>quickly</strong> पढ़ें (2-3 minutes). Focus on: Introduction, first sentence of each paragraph, conclusion.</li><li><strong>Read Questions — फिर questions पढ़ें:</strong> Questions पढ़कर समझें कि <strong>क्या खोजना</strong> है।</li><li><strong>Scan — स्कैन करें:</strong> Questions में keywords को passage में <strong>locate</strong> करें।</li><li><strong>Read Carefully — ध्यान से पढ़ें:</strong> उस specific portion को <strong>carefully</strong> पढ़ें और answer निकालें।</li></ul><p><strong>Alternative Approach (Question-First):</strong></p><ul class="bullet-list"><li>पहले <strong>questions</strong> पढ़ें</li><li>फिर passage <strong>scan</strong> करें</li><li>Questions के answers को <strong>locate</strong> करें</li><li>यह approach <strong>time-saving</strong> हो सकती है</li></ul><p><strong>Which approach to use?</strong></p><ul class="bullet-list"><li>यदि passage <strong>short</strong> है → <strong>Skim first</strong></li><li>यदि passage <strong>long</strong> है → <strong>Questions first</strong></li><li>Practice में <strong>both approaches</strong> try करें और जो <strong>faster</strong> लगे वो use करें</li></ul></div>
+
+      <div id="elimination-strategies" class="topic-card"><div class="sec-head"><span class="sec-num">10</span><h2>Elimination Strategies — विकल्पों को हटाने की रणनीतियाँ</h2></div><ul class="bullet-list"><li><strong>Too Broad:</strong> Option passage से व्यापक है → <strong>Eliminate</strong></li><li><strong>Too Narrow:</strong> Option केवल एक detail को cover करता है → <strong>Eliminate</strong></li><li><strong>Contradictory:</strong> Option passage से विपरीत है → <strong>Eliminate</strong></li><li><strong>Out of Scope:</strong> Option passage में mention नहीं है → <strong>Eliminate</strong></li><li><strong>Half Truth:</strong> Option partially correct पर incomplete है → <strong>Eliminate</strong></li><li><strong>Extreme Language:</strong> "Always", "Never", "All", "None" वाले options से सावधान → अक्सर <strong>incorrect</strong></li><li><strong>Absolute Statements:</strong> "Completely", "Entirely", "Absolutely" — often <strong>too extreme</strong></li><li><strong>Personal Opinion:</strong> Option passage से unrelated personal view है → <strong>Eliminate</strong></li></ul><p><strong>Elimination Formula:</strong></p><div class="formula-box">Correct Answer = Only option that is true + relevant + supported by passage</div></div>
+
+      <div id="time-management" class="topic-card"><div class="sec-head"><span class="sec-num">11</span><h2>Time Management — समय प्रबंधन</h2></div><ul class="bullet-list"><li><strong>Total Time:</strong> UGC NET Paper-1 में Comprehension के लिए <strong>15-20 minutes</strong></li><li><strong>Passage Reading:</strong> <strong>3-4 minutes</strong> (skimming)</li><li><strong>Questions Solving:</strong> <strong>1-1.5 minutes per question</strong></li><li><strong>Easy Questions First:</strong> Factual questions को पहले solve करें (fast)</li><li><strong>Difficult Questions Later:</strong> Inference/main idea questions को बाद में solve करें (more time)</li><li><strong>Don't Get Stuck:</strong> यदि कोई question 1.5 minutes से अधिक लग रहा है → <strong>skip</strong> and come back later</li><li><strong>Review:</strong> अंत में 2-3 minutes बचाकर <strong>review</strong> करें</li></ul></div>
+
+      <div id="common-errors" class="topic-card"><div class="sec-head"><span class="sec-num">12</span><h2>Common Errors & How to Avoid — सामान्य त्रुटियाँ एवं बचाव</h2></div><ul class="bullet-list"><li><strong>Error 1:</strong> Passage को <strong>completely न पढ़ना</strong> → <strong>Solution:</strong> At least skim the passage.</li><li><strong>Error 2:</strong> अपने <strong>personal knowledge</strong> का उपयोग करना → <strong>Solution:</strong> Answer हमेशा <strong>passage-based</strong> होना चाहिए।</li><li><strong>Error 3:</strong> Factual question में <strong>inference</strong> लगाना → <strong>Solution:</strong> Factual = direct answer.</li><li><strong>Error 4:</strong> Inference question में <strong>direct answer</strong> ढूँढना → <strong>Solution:</strong> Inference = logical conclusion.</li><li><strong>Error 5:</strong> Options को <strong>not comparing</strong> करना → <strong>Solution:</strong> Always compare all options before selecting.</li><li><strong>Error 6:</strong> Extreme options को <strong>eliminate नहीं करना</strong> → <strong>Solution:</strong> Always check for extreme language.</li><li><strong>Error 7:</strong> Vocabulary question में <strong>dictionary meaning</strong> select करना → <strong>Solution:</strong> Contextual meaning is the answer.</li><li><strong>Error 8:</strong> Time management में <strong>getting stuck</strong> → <strong>Solution:</strong> Skip and come back.</li></ul></div>
+
+      <div id="quick-tricks" class="topic-card"><div class="sec-head"><span class="sec-num">13</span><h2>Quick Tricks & Tips — त्वरित ट्रिक्स एवं टिप्स</h2></div><ul class="bullet-list"><li><strong>Trick 1:</strong> Main Idea → <strong>Introduction & Conclusion</strong> पर focus करें</li><li><strong>Trick 2:</strong> Factual Questions → <strong>Keywords</strong> को passage में locate करें</li><li><strong>Trick 3:</strong> Inference Questions → <strong>Clues & Evidence</strong> खोजें</li><li><strong>Trick 4:</strong> Title Questions → <strong>Main Idea</strong> को short phrase में express करें</li><li><strong>Trick 5:</strong> Tone Questions → <strong>Word Choice</strong> पर ध्यान दें (positive/negative words)</li><li><strong>Trick 6:</strong> Purpose Questions → <strong>Is author informing, persuading, or entertaining?</strong></li><li><strong>Trick 7:</strong> Vocabulary Questions → <strong>Context Clues</strong> देखें (synonyms, examples, contrasts)</li><li><strong>Trick 8:</strong> Pronoun Questions → <strong>Immediately preceding</strong> nouns को देखें</li><li><strong>Trick 9:</strong> Connector Questions → <strong>Function</strong> समझें (contrast, addition, cause-effect)</li><li><strong>Trick 10:</strong> Elimination → <strong>Too Broad, Too Narrow, Contradictory, Out of Scope</strong> को हटाएँ</li></ul><div class="formula-box">Smart Reading = Skim + Scan + Eliminate + Select</div></div>
+
+      <div id="exam-day-strategy" class="topic-card"><div class="sec-head"><span class="sec-num">14</span><h2>Exam Day Strategy — परीक्षा के दिन की रणनीति</h2></div><ul class="bullet-list"><li><strong>Before Exam:</strong> Practice at least <strong>5-10 passages</strong> before the exam</li><li><strong>During Exam:</strong><ul><li>पहले <strong>easy sections</strong> को solve करें (Teaching Aptitude, etc.)</li><li>Comprehension को <strong>middle</strong> में solve करें (not first, not last)</li><li><strong>Don't panic</strong> if passage topic is unfamiliar</li><li>Focus on <strong>what the passage says</strong>, not your knowledge</li></ul></li><li><strong>After Solving:</strong><ul><li><strong>Review</strong> any questions you skipped</li><li>Check for <strong>obvious errors</strong></li><li>Don't change answers <strong>without strong reason</strong></li></ul></li></ul><p><strong>Last Minute Tips:</strong></p><ul class="bullet-list"><li>Passage को <strong>speed reading</strong> न करें — सही reading speed रखें</li><li><strong>Mark</strong> key points while reading (if allowed)</li><li><strong>Extreme options</strong> से बचें</li><li><strong>Context</strong> को हमेशा ध्यान में रखें</li><li><strong>Trust your practice</strong></li></ul></div>
+
+      <div id="practice-questions" class="topic-card"><div class="sec-head"><span class="sec-num">15</span><h2>Practice Questions — अभ्यास प्रश्न</h2></div>
+      <p><strong>Passage:</strong> "Artificial Intelligence (AI) is transforming the education sector in unprecedented ways. Personalized learning platforms use AI algorithms to adapt content according to individual student needs. However, the integration of AI in education is not without challenges. Many educators worry about data privacy and the potential loss of human connection in classrooms. Despite these concerns, the potential benefits of AI — such as instant feedback and 24/7 accessibility — cannot be ignored."</p>
+
+      <div class="pyq-tag">Question 1 (Factual)</div>
+      <p>According to the passage, what do personalized learning platforms use AI algorithms for?</p>
+      <ul class="bullet-list"><li>A. To replace teachers</li><li>B. To adapt content according to individual student needs</li><li>C. To monitor student behaviour</li><li>D. To create new subjects</li></ul>
+      <div class="answer-box">Answer: B. To adapt content according to individual student needs</div>
+      <p class="explain">Explanation: Passage में directly लिखा है — "Personalized learning platforms use AI algorithms to adapt content according to individual student needs."</p>
+
+      <div class="pyq-tag">Question 2 (Inference)</div>
+      <p>What can be inferred about AI in education from the passage?</p>
+      <ul class="bullet-list"><li>A. AI will completely replace teachers</li><li>B. AI has both benefits and challenges</li><li>C. AI is only useful for personalized learning</li><li>D. All educators support AI</li></ul>
+      <div class="answer-box">Answer: B. AI has both benefits and challenges</div>
+      <p class="explain">Explanation: Passage mentions benefits (personalized learning, instant feedback) and challenges (data privacy, loss of human connection) — both are discussed.</p>
+
+      <div class="pyq-tag">Question 3 (Main Idea)</div>
+      <p>What is the main idea of the passage?</p>
+      <ul class="bullet-list"><li>A. AI is transforming education</li><li>B. AI in education has benefits and challenges</li><li>C. Personalized learning is important</li><li>D. Data privacy is a concern</li></ul>
+      <div class="answer-box">Answer: B. AI in education has benefits and challenges</div>
+      <p class="explain">Explanation: Passage balances both sides — transformation/benefits (para 1 & 3) and challenges/concerns (para 2).</p>
+
+      <div class="pyq-tag">Question 4 (Suitable Title)</div>
+      <p>Which of the following is the most suitable title for the passage?</p>
+      <ul class="bullet-list"><li>A. The Future of AI</li><li>B. Artificial Intelligence: Transforming Education</li><li>C. AI in Education: Opportunities and Challenges</li><li>D. The Benefits of Technology</li></ul>
+      <div class="answer-box">Answer: C. AI in Education: Opportunities and Challenges</div>
+      <p class="explain">Explanation: Passage both benefits और challenges को cover करता है — यह title सबसे appropriate है।</p>
+
+      <div class="pyq-tag">Question 5 (Tone)</div>
+      <p>The author's tone in the passage is best described as:</p>
+      <ul class="bullet-list"><li>A. Completely optimistic</li><li>B. Completely pessimistic</li><li>C. Balanced and objective</li><li>D. Sarcastic</li></ul>
+      <div class="answer-box">Answer: C. Balanced and objective</div>
+      <p class="explain">Explanation: Author benefits और challenges दोनों present करता है — balanced approach।</p>
+
+      <div class="pyq-tag">Question 6 (Vocabulary)</div>
+      <p>The word <strong>"unprecedented"</strong> in the passage most nearly means:</p>
+      <ul class="bullet-list"><li>A. Ordinary</li><li>B. Without previous example</li><li>C. Predictable</li><li>D. Disappointing</li></ul>
+      <div class="answer-box">Answer: B. Without previous example</div>
+      <p class="explain">Explanation: Unprecedented = never done or known before — transforming education in ways never seen before।</p></div>
+
+      <div id="one-page-revision" class="topic-card"><div class="sec-head"><span class="sec-num">16</span><h2>One-Page Revision — एक पेज में पुनरावृत्ति</h2></div>
+      <div class="formula-box">Smart Reading = Skim + Scan + Eliminate + Select</div>
+      <div class="formula-box">Factual = Direct Answer | Inference = Logical Conclusion</div>
+      <div class="formula-box">Main Idea = Central Point | Title = Concise Summary</div>
+
+      <p><strong>Question Types:</strong></p>
+      <ul class="bullet-list"><li>Factual → Find in text</li><li>Inference → Connect clues</li><li>Main Idea → Overall theme</li><li>Title → Short summary</li><li>Purpose → Why author wrote</li><li>Tone → Author's attitude</li><li>Vocabulary → Contextual meaning</li><li>Pronoun → Find antecedent</li><li>Connector → Identify function</li></ul>
+
+      <p><strong>Elimination Rules:</strong></p>
+      <ul class="bullet-list"><li>Too Broad → Eliminate</li><li>Too Narrow → Eliminate</li><li>Contradictory → Eliminate</li><li>Out of Scope → Eliminate</li><li>Half Truth → Eliminate</li><li>Extreme Language → Eliminate</li></ul>
+
+      <p><strong>Time Management:</strong></p>
+      <ul class="bullet-list"><li>Skim: 3-4 minutes</li><li>Questions: 1-1.5 minutes each</li><li>Easy first, difficult later</li><li>Review at the end</li></ul>
+
+      <p><strong>Exam Formula:</strong></p>
+      <div class="formula-box">Comprehension Success = Smart Reading + Elimination + Time Management + Practice</div>
+      <p><em>UGC NET में Comprehension section practice और strategy पर निर्भर करता है। Regularly practice passages and apply these techniques.</em></p></div>
+
+      <div class="enroll-cta"><div><h3 class="h-display">Join the Paper-1 Batch</h3><p>Course fee FREE — ₹500 registration & academic/logistics contribution. Classes daily at 6:30 PM.</p></div><a href="#" class="btn-gold">✓ JOIN BATCH @ ₹500</a></div>
+    </div>
+  </div>
+</main>
+
+<script>
+(function() {
+
+  const BASE_PATH =
+    "/tutorials/comprehension/comprehension-questions-tricks-exam-strategy";
+
+  const links = document.querySelectorAll(".nav-link");
+  const cards = document.querySelectorAll(".topic-card");
+  const content = document.getElementById("contentArea");
+  const sidebarToggle = document.getElementById("sidebar-toggle");
+
+
+  // Get topic slug from current URL
+  function getSlugFromPath() {
+
+    const path = window.location.pathname
+      .replace(/\/+$/, "");
+
+    if (path.startsWith(BASE_PATH + "/")) {
+
+      return path
+        .substring((BASE_PATH + "/").length)
+        .split("/")[0];
+
+    }
+
+    return null;
+  }
+
+
+  // Update browser URL
+  function updateUrl(slug, replace = false) {
+
+    const newPath =
+      BASE_PATH + "/" + slug;
+
+    if (window.location.pathname !== newPath) {
+
+      if (replace) {
+        history.replaceState(null, "", newPath);
+      } else {
+        history.pushState(null, "", newPath);
+      }
+
+    }
+  }
+
+
+  // Update active sidebar link
+  function updateActiveLink(slug) {
+
+    links.forEach(function(link) {
+
+      const href =
+        link.getAttribute("href");
+
+      if (!href) return;
+
+      const linkSlug =
+        href
+          .split("/")
+          .filter(Boolean)
+          .pop();
+
+      link.classList.toggle(
+        "active",
+        linkSlug === slug
+      );
+
+    });
+  }
+
+
+  // Show selected topic card
+  function showCard(slug, updateHistory = true) {
+
+    cards.forEach(function(card) {
+      card.classList.add("hidden");
+    });
+
+
+    const target =
+      document.getElementById(slug);
+
+
+    // Topic not found
+    if (!target) {
+
+      const first = cards[0];
+
+      if (first) {
+
+        first.classList.remove("hidden");
+
+        const firstSlug = first.id;
+
+        updateActiveLink(firstSlug);
+
+        updateUrl(firstSlug, true);
+
+      }
+
+      return;
+    }
+
+
+    // Show selected topic
+    target.classList.remove("hidden");
+
+    updateActiveLink(slug);
+
+
+    // Update URL
+    if (updateHistory) {
+      updateUrl(slug);
+    }
+
+
+    // Close mobile sidebar
+    if (sidebarToggle) {
+      sidebarToggle.checked = false;
+    }
+
+
+    // Scroll to content
+    if (content) {
+
+      const top =
+        content.getBoundingClientRect().top +
+        window.pageYOffset -
+        10;
+
+      window.scrollTo({
+        top: top,
+        behavior: "smooth"
+      });
+
+    }
+
+  }
+
+
+  // Sidebar link click
+  links.forEach(function(link) {
+
+    link.addEventListener("click", function(e) {
+
+      e.preventDefault();
+
+      const href =
+        this.getAttribute("href");
+
+      if (!href) return;
+
+
+      const slug =
+        href
+          .split("/")
+          .filter(Boolean)
+          .pop();
+
+
+      if (!slug) return;
+
+
+      console.log("Clicked topic:", slug);
+
+      showCard(slug, true);
+
+    });
+
+  });
+
+
+  // Initial page load
+  function initFromPath() {
+
+    let slug =
+      getSlugFromPath();
+
+
+    if (
+      !slug ||
+      !document.getElementById(slug)
+    ) {
+
+      slug =
+        cards[0]?.id ||
+        "types-questions";
+
+    }
+
+
+    // Show topic without creating history entry
+    showCard(slug, false);
+
+
+    // Set correct nested URL
+    updateUrl(slug, true);
+
+  }
+
+
+  initFromPath();
+
+
+  // Browser Back / Forward
+  window.addEventListener(
+    "popstate",
+    function() {
+
+      const slug =
+        getSlugFromPath();
+
+
+      if (
+        slug &&
+        document.getElementById(slug)
+      ) {
+
+        showCard(slug, false);
+
+      } else {
+
+        const firstSlug =
+          cards[0]?.id ||
+          "types-questions";
+
+        showCard(firstSlug, false);
+
+      }
+
+    }
+  );
+
+
+})();
+</script>
+</body>
+</html>

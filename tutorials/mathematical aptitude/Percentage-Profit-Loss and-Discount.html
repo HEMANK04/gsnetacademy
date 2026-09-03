@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Percentage, Profit & Loss and Discount – Full Notes | UGC NET Paper-1</title>
+  <meta name="description" content="Complete tutorial: Percentage, Profit & Loss and Discount - meaning, formulae, successive percentage, profit/loss percentage, marked price, discount, successive discount, practice questions for UGC NET Paper-1 Mathematical Aptitude.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; }
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background: #f8f5ee;
+      color: #101a3d;
+    }
+    .h-display { font-family: 'Poppins', sans-serif; font-weight: 800; letter-spacing: -0.01em; }
+    .container { max-width: 1360px; margin: 0 auto; padding: 0 20px; }
+
+    .hero {
+      background: #0b1330;
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+      padding: 28px 0 22px;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      right: -80px;
+      top: -100px;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(232,183,75,0.2), transparent 70%);
+    }
+    .hero-inner { position: relative; }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      padding: 6px 16px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+      color: #e8b74b;
+    }
+    .hero h1 {
+      font-size: clamp(28px, 4.2vw, 44px);
+      margin: 12px 0 6px;
+    }
+    .hero p {
+      color: rgba(255,255,255,0.78);
+      max-width: 680px;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 28px;
+      padding: 28px 0 50px;
+      align-items: start;
+    }
+    @media (max-width: 980px) {
+      .layout { grid-template-columns: 1fr; }
+    }
+
+    .sidebar {
+      position: sticky;
+      top: 16px;
+      max-height: calc(100vh - 40px);
+      overflow-y: auto;
+      background: #fff;
+      border: 1px solid rgba(16,26,61,0.08);
+      border-radius: 16px;
+      padding: 16px 12px;
+      box-shadow: 0 6px 24px rgba(16,26,61,0.05);
+    }
+    .sidebar::-webkit-scrollbar { width: 5px; }
+    .sidebar::-webkit-scrollbar-thumb { background: #dde2ef; border-radius: 8px; }
+    .sidebar-title {
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: #b9852a;
+      padding: 4px 10px 14px;
+    }
+    .nav-link {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 10px;
+      border-radius: 10px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #33406b;
+      line-height: 1.3;
+      transition: 0.1s;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .nav-link:hover { background: #f4f6fc; color: #0b1330; }
+    .nav-link.active {
+      background: #fdf6e7;
+      color: #0b1330;
+    }
+    .nav-num {
+      flex: none;
+      width: 22px;
+      height: 22px;
+      border-radius: 7px;
+      background: #e7eaf5;
+      color: #5b6690;
+      font-size: 11px;
+      font-weight: 800;
+      display: grid;
+      place-items: center;
+    }
+    .nav-link.active .nav-num {
+      background: #e8b74b;
+      color: #0b1330;
+    }
+
+    #sidebar-toggle { display: none; }
+    .mobile-bar { display: none; }
+    @media (max-width: 980px) {
+      .mobile-bar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: #fff;
+        border: 1px solid rgba(16,26,61,0.1);
+        border-radius: 12px;
+        padding: 12px 16px;
+        margin-bottom: 8px;
+        font-weight: 800;
+        font-size: 13.5px;
+        color: #0b1330;
+      }
+      .sidebar { display: none; position: static; max-height: none; }
+      #sidebar-toggle:checked ~ .layout .sidebar { display: block; }
+    }
+
+    .content { min-width: 0; }
+    .topic-card {
+      background: #fff;
+      border: 1px solid rgba(16,26,61,0.08);
+      border-radius: 16px;
+      padding: 20px 20px 16px;
+      margin-bottom: 18px;
+      scroll-margin-top: 20px;
+      display: block;
+    }
+    .topic-card.hidden { display: none; }
+    .sec-head {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+    .sec-num {
+      flex: none;
+      width: 34px;
+      height: 34px;
+      border-radius: 10px;
+      background: #0b1330;
+      color: #e8b74b;
+      font-weight: 800;
+      font-size: 14px;
+      display: grid;
+      place-items: center;
+    }
+    .sec-head h2 {
+      margin: 0;
+      font-size: 19px;
+      font-weight: 800;
+      color: #0b1330;
+    }
+    .topic-card p {
+      font-size: 14.5px;
+      line-height: 1.75;
+      color: #1a254a;
+      margin: 6px 0;
+    }
+    .bullet-list {
+      margin: 8px 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 5px;
+    }
+    .bullet-list li {
+      position: relative;
+      padding-left: 20px;
+      font-size: 14px;
+      line-height: 1.6;
+      color: #1a254a;
+    }
+    .bullet-list li::before {
+      content: "";
+      position: absolute;
+      left: 2px;
+      top: 9px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #d9a53a;
+    }
+    .formula-box {
+      background: #0b1330;
+      color: #fdeec2;
+      font-weight: 700;
+      font-size: 13.6px;
+      padding: 10px 16px;
+      border-radius: 10px;
+      margin: 10px 0;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 12px 0;
+      font-size: 13.6px;
+      display: block;
+      overflow-x: auto;
+    }
+    .data-table th, .data-table td {
+      border: 1px solid #e7eaf5;
+      padding: 8px 12px;
+      text-align: left;
+      color: #1a254a;
+      white-space: normal;
+    }
+    .data-table th {
+      background: #f4f6fc;
+      color: #0b1330;
+      font-weight: 800;
+    }
+    .pyq-tag {
+      display: inline-block;
+      background: #fdf6e7;
+      color: #b9852a;
+      font-weight: 800;
+      font-size: 12px;
+      padding: 4px 12px;
+      border-radius: 8px;
+      margin: 12px 0 6px;
+    }
+    .answer-box {
+      background: #eefaf2;
+      border: 1px solid #bfe8cc;
+      color: #1a7a4c;
+      font-weight: 700;
+      font-size: 13.6px;
+      padding: 6px 14px;
+      border-radius: 9px;
+      margin: 6px 0;
+    }
+    .explain {
+      background: #f4f6fc;
+      border-radius: 9px;
+      padding: 6px 14px;
+      font-size: 13.6px;
+      color: #1a254a;
+    }
+    .subtopic {
+      padding: 14px 0 6px;
+      border-top: 1px dashed #e7eaf5;
+    }
+    .subtopic:first-of-type { border-top: none; padding-top: 2px; }
+    .subhead {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 6px;
+    }
+    .sub-num {
+      flex: none;
+      width: 26px;
+      height: 26px;
+      border-radius: 8px;
+      background: #fdf6e7;
+      color: #b9852a;
+      font-weight: 800;
+      font-size: 12px;
+      display: grid;
+      place-items: center;
+    }
+    .subhead h3 {
+      margin: 0;
+      font-size: 15.5px;
+      font-weight: 800;
+      color: #0b1330;
+    }
+    .enroll-cta {
+      background: #0b1330;
+      color: #fff;
+      border-radius: 16px;
+      padding: 24px 24px;
+      margin-top: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+      overflow: hidden;
+    }
+    .enroll-cta::before {
+      content: "";
+      position: absolute;
+      right: -40px;
+      top: -40px;
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(232,183,75,0.2), transparent 70%);
+    }
+    .enroll-cta h3 { margin: 0 0 4px; font-size: 20px; }
+    .enroll-cta p { margin: 0; color: rgba(255,255,255,0.75); font-size: 13.5px; max-width: 480px; }
+    .btn-gold {
+      background: #e8b74b;
+      color: #0b1330;
+      font-weight: 800;
+      padding: 10px 22px;
+      border-radius: 10px;
+      font-size: 13.5px;
+      white-space: nowrap;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="container hero-inner">
+    <span class="eyebrow">★ UGC NET Paper-I · Mathematical Aptitude</span>
+    <h1 class="h-display">Percentage, Profit & Loss and Discount</h1>
+    <p>Complete tutorial: Percentage (meaning, formulae, successive percentage), Profit & Loss (CP, SP, profit%, loss%), Discount (MP, discount%, successive discount) for UGC NET Paper-1.</p>
+  </div>
+</section>
+
+<main class="container">
+  <input type="checkbox" id="sidebar-toggle">
+  <label for="sidebar-toggle" class="mobile-bar">
+    <span>📑 On this page</span>
+    <span>☰ Menu</span>
+  </label>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebarNav">
+      <p class="sidebar-title">On this page</p>
+      <nav>
+        <a href="/tutorials/mathematical-reasoning-and-aptitude/percentage-profit-loss-and-discount/percentage-meaning" class="nav-link active">
+  <span class="nav-num">1</span>Meaning of Percentage
+</a>
+<a href="/tutorials/mathematical-reasoning-and-aptitude/percentage-profit-loss-and-discount/percentage-formulae" class="nav-link">
+  <span class="nav-num">2</span>Percentage Formulae
+</a>
+<a href="/tutorials/mathematical-reasoning-and-aptitude/percentage-profit-loss-and-discount/percentage-increase-decrease" class="nav-link">
+  <span class="nav-num">3</span>Increase & Decrease
+</a>
+<a href="/tutorials/mathematical-reasoning-and-aptitude/percentage-profit-loss-and-discount/successive-percentage" class="nav-link">
+  <span class="nav-num">4</span>Successive Percentage
+</a>
+<a href="/tutorials/mathematical-reasoning-and-aptitude/percentage-profit-loss-and-discount/profit-loss-meaning" class="nav-link">
+  <span class="nav-num">5</span>Profit & Loss
+</a>
+<a href="/tutorials/mathematical-reasoning-and-aptitude/percentage-profit-loss-and-discount/profit-loss-formulae" class="nav-link">
+  <span class="nav-num">6</span>Profit & Loss Formulae
+</a>
+<a href="/tutorials/mathematical-reasoning-and-aptitude/percentage-profit-loss-and-discount/profit-loss-percentage" class="nav-link">
+  <span class="nav-num">7</span>Profit & Loss Percentage
+</a>
+<a href="/tutorials/mathematical-reasoning-and-aptitude/percentage-profit-loss-and-discount/discount-meaning" class="nav-link">
+  <span class="nav-num">8</span>Meaning of Discount
+</a>
+<a href="/tutorials/mathematical-reasoning-and-aptitude/percentage-profit-loss-and-discount/discount-formulae" class="nav-link">
+  <span class="nav-num">9</span>Discount Formulae
+</a>
+<a href="/tutorials/mathematical-reasoning-and-aptitude/percentage-profit-loss-and-discount/successive-discount" class="nav-link">
+  <span class="nav-num">10</span>Successive Discount
+</a>
+<a href="/tutorials/mathematical-reasoning-and-aptitude/percentage-profit-loss-and-discount/formulae-summary" class="nav-link">
+  <span class="nav-num">11</span>Formulae Summary
+</a>
+<a href="/tutorials/mathematical-reasoning-and-aptitude/percentage-profit-loss-and-discount/exam-traps" class="nav-link">
+  <span class="nav-num">12</span>Common Exam Traps
+</a>
+<a href="/tutorials/mathematical-reasoning-and-aptitude/percentage-profit-loss-and-discount/practice-questions" class="nav-link">
+  <span class="nav-num">13</span>Practice Questions
+</a>
+<a href="/tutorials/mathematical-reasoning-and-aptitude/percentage-profit-loss-and-discount/one-page-revision" class="nav-link">
+  <span class="nav-num">14</span>One-Page Revision
+</a>
+      </nav>
+    </aside>
+
+    <div class="content" id="contentArea">
+      <!-- ===== CARDS ===== -->
+      <div id="percentage-meaning" class="topic-card"><div class="sec-head"><span class="sec-num">1</span><h2>Meaning of Percentage — प्रतिशत का अर्थ</h2></div><p><strong>Percentage</strong> का अर्थ है <strong>"per hundred" (प्रति सौ)</strong>। यह किसी संख्या को <strong>100 के आधार</strong> पर व्यक्त करने का तरीका है।</p><div class="formula-box">Percentage = (Part / Whole) × 100</div><p><strong>Example:</strong></p><ul class="bullet-list"><li>25% means 25 out of 100 = 25/100 = 1/4</li><li>50% means 50 out of 100 = 50/100 = 1/2</li><li>75% means 75 out of 100 = 75/100 = 3/4</li></ul><p><strong>Key Point:</strong> Percentage <strong>always</strong> compares a part to a whole (100).</p></div>
+
+      <div id="percentage-formulae" class="topic-card"><div class="sec-head"><span class="sec-num">2</span><h2>Percentage Formulae — प्रतिशत सूत्र</h2></div><ul class="bullet-list"><li><strong>To find X% of Y:</strong> (X/100) × Y</li><li><strong>To find what % of Y is X:</strong> (X/Y) × 100</li><li><strong>To find value after X% increase:</strong> Original × (100 + X)/100</li><li><strong>To find value after X% decrease:</strong> Original × (100 − X)/100</li><li><strong>To find original value before X% increase:</strong> New × 100/(100 + X)</li><li><strong>To find original value before X% decrease:</strong> New × 100/(100 − X)</li></ul><p><strong>Example 1:</strong> What is 20% of 500? → (20/100) × 500 = 100</p><p><strong>Example 2:</strong> What % is 30 of 150? → (30/150) × 100 = 20%</p></div>
+
+      <div id="percentage-increase-decrease" class="topic-card"><div class="sec-head"><span class="sec-num">3</span><h2>Percentage Increase & Decrease — प्रतिशत वृद्धि एवं कमी</h2></div><div class="formula-box">Percentage Change = (Change / Original Value) × 100</div><ul class="bullet-list"><li><strong>Percentage Increase:</strong> (New − Original) / Original × 100</li><li><strong>Percentage Decrease:</strong> (Original − New) / Original × 100</li></ul><p><strong>Important:</strong> Always use <strong>Original Value</strong> as the denominator.</p><p><strong>Example 1:</strong> A price increases from ₹200 to ₹250. What is the percentage increase?</p><ul class="bullet-list"><li>Change = 250 − 200 = 50</li><li>% Increase = (50/200) × 100 = 25%</li></ul><p><strong>Example 2:</strong> A price decreases from ₹250 to ₹200. What is the percentage decrease?</p><ul class="bullet-list"><li>Change = 250 − 200 = 50</li><li>% Decrease = (50/250) × 100 = 20%</li></ul></div>
+
+      <div id="successive-percentage" class="topic-card"><div class="sec-head"><span class="sec-num">4</span><h2>Successive Percentage — क्रमिक प्रतिशत</h2></div><p>When two or more percentage changes are applied <strong>one after another</strong>, we use successive percentage formula.</p><div class="formula-box">Net Change = A + B + (A × B)/100</div><p>Where A and B are percentage changes (positive for increase, negative for decrease).</p><p><strong>Example 1:</strong> A number is increased by 10% and then by 20%. What is the net percentage change?</p><ul class="bullet-list"><li>Net = 10 + 20 + (10×20)/100 = 30 + 2 = 32% increase</li></ul><p><strong>Example 2:</strong> A number is increased by 10% and then decreased by 10%. What is the net change?</p><ul class="bullet-list"><li>Net = 10 + (−10) + (10×−10)/100 = 0 − 1 = −1% (1% decrease)</li></ul><p><strong>For three successive changes:</strong> Apply formula twice: First combine two, then with the third.</p></div>
+
+      <div id="profit-loss-meaning" class="topic-card"><div class="sec-head"><span class="sec-num">5</span><h2>Profit & Loss — लाभ एवं हानि</h2></div><ul class="bullet-list"><li><strong>Cost Price (CP) — क्रय मूल्य:</strong> वह मूल्य जिस पर कोई वस्तु खरीदी जाती है।</li><li><strong>Selling Price (SP) — विक्रय मूल्य:</strong> वह मूल्य जिस पर कोई वस्तु बेची जाती है।</li><li><strong>Profit (Gain) — लाभ:</strong> SP > CP → Profit = SP − CP</li><li><strong>Loss — हानि:</strong> CP > SP → Loss = CP − SP</li></ul><div class="formula-box">Profit = SP − CP (when SP > CP) | Loss = CP − SP (when CP > SP)</div></div>
+
+      <div id="profit-loss-formulae" class="topic-card"><div class="sec-head"><span class="sec-num">6</span><h2>Profit & Loss Formulae — लाभ-हानि सूत्र</h2></div><ul class="bullet-list"><li><strong>If Profit% is given:</strong> SP = CP × (100 + Profit%)/100</li><li><strong>If Loss% is given:</strong> SP = CP × (100 − Loss%)/100</li><li><strong>To find CP when SP and Profit% are given:</strong> CP = SP × 100/(100 + Profit%)</li><li><strong>To find CP when SP and Loss% are given:</strong> CP = SP × 100/(100 − Loss%)</li></ul><p><strong>Example 1:</strong> CP = ₹200, Profit% = 25% → SP = 200 × 125/100 = ₹250</p><p><strong>Example 2:</strong> CP = ₹200, Loss% = 20% → SP = 200 × 80/100 = ₹160</p></div>
+
+      <div id="profit-loss-percentage" class="topic-card"><div class="sec-head"><span class="sec-num">7</span><h2>Profit & Loss Percentage — लाभ-हानि प्रतिशत</h2></div><div class="formula-box">Profit% = (Profit / CP) × 100 | Loss% = (Loss / CP) × 100</div><p><strong>Important:</strong> Profit/Loss percentage is <strong>always</strong> calculated on <strong>Cost Price (CP)</strong>, unless otherwise specified.</p><p><strong>Example 1:</strong> CP = ₹200, SP = ₹250 → Profit = ₹50 → Profit% = (50/200) × 100 = 25%</p><p><strong>Example 2:</strong> CP = ₹200, SP = ₹160 → Loss = ₹40 → Loss% = (40/200) × 100 = 20%</p><p><strong>Example 3:</strong> If an article is sold at a profit of 20%, and the profit is ₹40, find CP.</p><ul class="bullet-list"><li>20% of CP = 40 → CP = 40 × 100/20 = ₹200</li></ul></div>
+
+      <div id="discount-meaning" class="topic-card"><div class="sec-head"><span class="sec-num">8</span><h2>Meaning of Discount — छूट का अर्थ</h2></div><ul class="bullet-list"><li><strong>Marked Price (MP) — अंकित मूल्य:</strong> वह मूल्य जो किसी वस्तु पर लिखा/अंकित होता है। (List Price)</li><li><strong>Discount — छूट:</strong> MP पर दी जाने वाली कटौती। Discount = MP − SP</li><li><strong>Discount% — छूट प्रतिशत:</strong> (Discount / MP) × 100</li></ul><div class="formula-box">Discount = MP − SP | Discount% = (Discount / MP) × 100</div><p><strong>Example:</strong> MP = ₹500, Discount% = 20%</p><ul class="bullet-list"><li>Discount = 20% of 500 = (20/100) × 500 = ₹100</li><li>SP = MP − Discount = 500 − 100 = ₹400</li></ul></div>
+
+      <div id="discount-formulae" class="topic-card"><div class="sec-head"><span class="sec-num">9</span><h2>Discount Formulae — छूट सूत्र</h2></div><ul class="bullet-list"><li><strong>SP after Discount:</strong> SP = MP × (100 − Discount%)/100</li><li><strong>MP when SP and Discount% given:</strong> MP = SP × 100/(100 − Discount%)</li><li><strong>Discount when MP and SP given:</strong> Discount = MP − SP</li><li><strong>Discount% when MP and SP given:</strong> Discount% = (MP − SP)/MP × 100</li></ul><p><strong>Example 1:</strong> MP = ₹600, Discount% = 15% → SP = 600 × 85/100 = ₹510</p><p><strong>Example 2:</strong> SP = ₹850, Discount% = 15% → MP = 850 × 100/85 = ₹1000</p></div>
+
+      <div id="successive-discount" class="topic-card"><div class="sec-head"><span class="sec-num">10</span><h2>Successive Discount — क्रमिक छूट</h2></div><p>When two or more discounts are applied <strong>one after another</strong>, they are called successive discounts.</p><p><strong>Formula:</strong></p><div class="formula-box">Net Discount = A + B − (A × B)/100</div><p>Where A and B are discount percentages.</p><p><strong>Example 1:</strong> Two successive discounts of 10% and 20%. What is the net discount?</p><ul class="bullet-list"><li>Net = 10 + 20 − (10×20)/100 = 30 − 2 = 28%</li></ul><p><strong>Example 2:</strong> MP = ₹1000, discounts of 10% and 20% applied successively.</p><ul class="bullet-list"><li>After 10%: SP1 = 1000 × 90/100 = ₹900</li><li>After 20%: SP2 = 900 × 80/100 = ₹720</li><li>Net Discount = 1000 − 720 = ₹280 → 28%</li></ul><p><strong>Important:</strong> Successive discounts are <strong>not additive</strong> (10% + 20% ≠ 30% discount).</p></div>
+
+      <div id="formulae-summary" class="topic-card"><div class="sec-head"><span class="sec-num">11</span><h2>Formulae Summary — सूत्र सारांश</h2></div><ul class="bullet-list"><li><strong>Percentage:</strong> (Part/Whole) × 100</li><li><strong>Percentage Change:</strong> (Change/Original) × 100</li><li><strong>Successive Percentage:</strong> A + B + (A×B)/100</li><li><strong>Profit:</strong> SP − CP (when SP > CP)</li><li><strong>Loss:</strong> CP − SP (when CP > SP)</li><li><strong>Profit%:</strong> (Profit/CP) × 100</li><li><strong>Loss%:</strong> (Loss/CP) × 100</li><li><strong>SP from Profit%:</strong> CP × (100 + P%)/100</li><li><strong>SP from Loss%:</strong> CP × (100 − L%)/100</li><li><strong>Discount:</strong> MP − SP</li><li><strong>Discount%:</strong> (Discount/MP) × 100</li><li><strong>SP after Discount:</strong> MP × (100 − D%)/100</li><li><strong>Successive Discount:</strong> A + B − (A×B)/100</li></ul></div>
+
+      <div id="exam-traps" class="topic-card"><div class="sec-head"><span class="sec-num">12</span><h2>Common Exam Traps — सामान्य परीक्षा जाल</h2></div><ul class="bullet-list"><li><strong>Trap 1:</strong> Percentage increase and decrease of same percentage are equal → ❌ 10% increase + 10% decrease = 1% net decrease (not 0%)</li><li><strong>Trap 2:</strong> Profit% = (Profit/SP) × 100 → ❌ Always Profit% = (Profit/CP) × 100</li><li><strong>Trap 3:</strong> Discount% = (Discount/SP) × 100 → ❌ Always Discount% = (Discount/MP) × 100</li><li><strong>Trap 4:</strong> Successive discounts are additive → ❌ 10% + 20% ≠ 30% (actual = 28%)</li><li><strong>Trap 5:</strong> SP = MP − Discount% → ❌ SP = MP × (100 − D%)/100</li><li><strong>Trap 6:</strong> CP = SP × (100 + P%)/100 → ❌ CP = SP × 100/(100 + P%)</li></ul></div>
+
+      <div id="practice-questions" class="topic-card"><div class="sec-head"><span class="sec-num">13</span><h2>Practice Questions — अभ्यास प्रश्न</h2></div>
+      <div class="pyq-tag">Question 1 (Percentage)</div>
+      <p>What is 15% of 200?</p>
+      <ul class="bullet-list"><li>A. 15</li><li>B. 20</li><li>C. 30</li><li>D. 35</li></ul>
+      <div class="answer-box">Answer: C. 30</div>
+      <p class="explain">Explanation: (15/100) × 200 = 30.</p>
+
+      <div class="pyq-tag">Question 2 (Percentage Increase/Decrease)</div>
+      <p>A price increases from ₹80 to ₹100. What is the percentage increase?</p>
+      <ul class="bullet-list"><li>A. 20%</li><li>B. 25%</li><li>C. 30%</li><li>D. 40%</li></ul>
+      <div class="answer-box">Answer: B. 25%</div>
+      <p class="explain">Explanation: Change = 20, Original = 80 → (20/80) × 100 = 25%.</p>
+
+      <div class="pyq-tag">Question 3 (Successive Percentage)</div>
+      <p>A number is increased by 10% and then decreased by 10%. What is the net change?</p>
+      <ul class="bullet-list"><li>A. 0%</li><li>B. 1% increase</li><li>C. 1% decrease</li><li>D. 10% decrease</li></ul>
+      <div class="answer-box">Answer: C. 1% decrease</div>
+      <p class="explain">Explanation: 10 + (−10) + (10×−10)/100 = 0 − 1 = −1%.</p>
+
+      <div class="pyq-tag">Question 4 (Profit & Loss)</div>
+      <p>An article is bought for ₹200 and sold for ₹250. What is the profit percentage?</p>
+      <ul class="bullet-list"><li>A. 20%</li><li>B. 25%</li><li>C. 30%</li><li>D. 40%</li></ul>
+      <div class="answer-box">Answer: B. 25%</div>
+      <p class="explain">Explanation: Profit = 250−200 = 50; Profit% = (50/200)×100 = 25%.</p>
+
+      <div class="pyq-tag">Question 5 (Profit & Loss)</div>
+      <p>An article is bought for ₹400 and sold at a loss of 20%. What is the SP?</p>
+      <ul class="bullet-list"><li>A. ₹320</li><li>B. ₹360</li><li>C. ₹400</li><li>D. ₹480</li></ul>
+      <div class="answer-box">Answer: A. ₹320</div>
+      <p class="explain">Explanation: SP = 400 × (100−20)/100 = 400 × 80/100 = ₹320.</p>
+
+      <div class="pyq-tag">Question 6 (Discount)</div>
+      <p>An article marked at ₹500 is sold for ₹400. What is the discount percentage?</p>
+      <ul class="bullet-list"><li>A. 10%</li><li>B. 15%</li><li>C. 20%</li><li>D. 25%</li></ul>
+      <div class="answer-box">Answer: C. 20%</div>
+      <p class="explain">Explanation: Discount = 500−400 = 100; Discount% = (100/500)×100 = 20%.</p>
+
+      <div class="pyq-tag">Question 7 (Successive Discount)</div>
+      <p>Two successive discounts of 10% and 20% are given. What is the net discount percentage?</p>
+      <ul class="bullet-list"><li>A. 28%</li><li>B. 30%</li><li>C. 22%</li><li>D. 25%</li></ul>
+      <div class="answer-box">Answer: A. 28%</div>
+      <p class="explain">Explanation: Net = 10 + 20 − (10×20)/100 = 30 − 2 = 28%.</p>
+
+      <div class="pyq-tag">Question 8 (Combined Profit & Discount)</div>
+      <p>An article is marked at ₹600. After a discount of 20%, it is sold. If the profit is 20%, find the CP.</p>
+      <ul class="bullet-list"><li>A. ₹360</li><li>B. ₹400</li><li>C. ₹450</li><li>D. ₹480</li></ul>
+      <div class="answer-box">Answer: B. ₹400</div>
+      <p class="explain">Explanation: SP after discount = 600 × 80/100 = ₹480. Profit% = 20% → CP = SP × 100/(100+20) = 480 × 100/120 = ₹400.</p></div>
+
+      <div id="one-page-revision" class="topic-card"><div class="sec-head"><span class="sec-num">14</span><h2>One-Page Revision — एक पेज में पुनरावृत्ति</h2></div>
+      <div class="formula-box">Percentage = (Part/Whole) × 100 | Profit% = (Profit/CP) × 100 | Discount% = (Discount/MP) × 100</div>
+
+      <p><strong>Successive Percentage:</strong></p>
+      <ul class="bullet-list"><li>Net = A + B + (A×B)/100 (with signs)</li></ul>
+
+      <p><strong>Profit & Loss:</strong></p>
+      <ul class="bullet-list"><li>Profit = SP − CP | Loss = CP − SP</li><li>SP = CP × (100+P%)/100 | SP = CP × (100−L%)/100</li></ul>
+
+      <p><strong>Discount:</strong></p>
+      <ul class="bullet-list"><li>Discount = MP − SP | Discount% = (Discount/MP) × 100</li><li>SP = MP × (100−D%)/100</li><li>Successive Discount = A + B − (A×B)/100</li></ul>
+
+      <p><strong>Exam Formula:</strong></p>
+      <div class="formula-box">Always calculate on the right base: % on CP for profit/loss, % on MP for discount</div>
+      <p><em>UGC NET में Percentage, Profit & Loss और Discount के questions application-based और formula-based होते हैं।</em></p></div>
+
+      <div class="enroll-cta"><div><h3 class="h-display">Join the Paper-1 Batch</h3><p>Course fee FREE — ₹500 registration & academic/logistics contribution. Classes daily at 6:30 PM.</p></div><a href="#" class="btn-gold">✓ JOIN BATCH @ ₹500</a></div>
+    </div>
+  </div>
+</main>
+
+<script>
+(function() {
+
+  const BASE_PATH =
+    "/tutorials/mathematical-reasoning-and-aptitude/percentage-profit-loss-and-discount";
+
+  const links = document.querySelectorAll(".nav-link");
+  const cards = document.querySelectorAll(".topic-card");
+  const content = document.getElementById("contentArea");
+  const sidebarToggle = document.getElementById("sidebar-toggle");
+
+
+  // Get topic slug from current URL
+  function getSlugFromPath() {
+
+    const path = window.location.pathname
+      .replace(/\/+$/, "");
+
+    if (path.startsWith(BASE_PATH + "/")) {
+
+      return path
+        .substring((BASE_PATH + "/").length)
+        .split("/")[0];
+
+    }
+
+    return null;
+  }
+
+
+  // Update browser URL
+  function updateUrl(slug, replace = false) {
+
+    const newPath =
+      BASE_PATH + "/" + slug;
+
+    if (window.location.pathname !== newPath) {
+
+      if (replace) {
+        history.replaceState(null, "", newPath);
+      } else {
+        history.pushState(null, "", newPath);
+      }
+
+    }
+  }
+
+
+  // Update active sidebar link
+  function updateActiveLink(slug) {
+
+    links.forEach(function(link) {
+
+      const href =
+        link.getAttribute("href");
+
+      if (!href) return;
+
+      const linkSlug =
+        href
+          .split("/")
+          .filter(Boolean)
+          .pop();
+
+      link.classList.toggle(
+        "active",
+        linkSlug === slug
+      );
+
+    });
+  }
+
+
+  // Show selected topic card
+  function showCard(slug, updateHistory = true) {
+
+    cards.forEach(function(card) {
+      card.classList.add("hidden");
+    });
+
+
+    const target =
+      document.getElementById(slug);
+
+
+    if (!target) {
+
+      const first = cards[0];
+
+      if (first) {
+
+        first.classList.remove("hidden");
+
+        const firstSlug = first.id;
+
+        updateActiveLink(firstSlug);
+
+        updateUrl(firstSlug, true);
+
+      }
+
+      return;
+    }
+
+
+    target.classList.remove("hidden");
+
+    updateActiveLink(slug);
+
+
+    if (updateHistory) {
+      updateUrl(slug);
+    }
+
+
+    if (sidebarToggle) {
+      sidebarToggle.checked = false;
+    }
+
+
+    if (content) {
+
+      const top =
+        content.getBoundingClientRect().top +
+        window.pageYOffset -
+        10;
+
+      window.scrollTo({
+        top: top,
+        behavior: "smooth"
+      });
+
+    }
+
+  }
+
+
+  // Sidebar link click
+  links.forEach(function(link) {
+
+    link.addEventListener("click", function(e) {
+
+      e.preventDefault();
+
+      const href =
+        this.getAttribute("href");
+
+      if (!href) return;
+
+
+      const slug =
+        href
+          .split("/")
+          .filter(Boolean)
+          .pop();
+
+
+      if (!slug) return;
+
+
+      console.log("Clicked topic:", slug);
+
+      showCard(slug, true);
+
+    });
+
+  });
+
+
+  // Initial page load
+  function initFromPath() {
+
+    let slug =
+      getSlugFromPath();
+
+
+    if (
+      !slug ||
+      !document.getElementById(slug)
+    ) {
+
+      slug =
+        cards[0]?.id ||
+        "percentage-meaning";
+
+    }
+
+
+    showCard(slug, false);
+
+    updateUrl(slug, true);
+
+  }
+
+
+  initFromPath();
+
+
+  // Browser Back / Forward
+  window.addEventListener(
+    "popstate",
+    function() {
+
+      const slug =
+        getSlugFromPath();
+
+
+      if (
+        slug &&
+        document.getElementById(slug)
+      ) {
+
+        showCard(slug, false);
+
+      } else {
+
+        const firstSlug =
+          cards[0]?.id ||
+          "percentage-meaning";
+
+        showCard(firstSlug, false);
+
+      }
+
+    }
+  );
+
+
+})();
+</script>
+</body>
+</html>

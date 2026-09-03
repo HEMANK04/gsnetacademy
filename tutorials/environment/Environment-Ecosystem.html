@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Environment & Ecosystem – Full Notes | UGC NET Paper-1</title>
+  <meta name="description" content="Complete tutorial: Environment meaning & components, Biotic & Abiotic Components, Ecosystem & its Structure, Food Chain & Food Web, Ecological Pyramids, Energy Flow, Biogeochemical Cycles for UGC NET Paper-1 Environment.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; }
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background: #f8f5ee;
+      color: #101a3d;
+    }
+    .h-display { font-family: 'Poppins', sans-serif; font-weight: 800; letter-spacing: -0.01em; }
+    .container { max-width: 1360px; margin: 0 auto; padding: 0 20px; }
+
+    .hero {
+      background: #0b1330;
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+      padding: 28px 0 22px;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      right: -80px;
+      top: -100px;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(232,183,75,0.2), transparent 70%);
+    }
+    .hero-inner { position: relative; }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      padding: 6px 16px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+      color: #e8b74b;
+    }
+    .hero h1 {
+      font-size: clamp(28px, 4.2vw, 44px);
+      margin: 12px 0 6px;
+    }
+    .hero p {
+      color: rgba(255,255,255,0.78);
+      max-width: 680px;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 28px;
+      padding: 28px 0 50px;
+      align-items: start;
+    }
+    @media (max-width: 980px) {
+      .layout { grid-template-columns: 1fr; }
+    }
+
+    .sidebar {
+      position: sticky;
+      top: 16px;
+      max-height: calc(100vh - 40px);
+      overflow-y: auto;
+      background: #fff;
+      border: 1px solid rgba(16,26,61,0.08);
+      border-radius: 16px;
+      padding: 16px 12px;
+      box-shadow: 0 6px 24px rgba(16,26,61,0.05);
+    }
+    .sidebar::-webkit-scrollbar { width: 5px; }
+    .sidebar::-webkit-scrollbar-thumb { background: #dde2ef; border-radius: 8px; }
+    .sidebar-title {
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: #b9852a;
+      padding: 4px 10px 14px;
+    }
+    .nav-link {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 10px;
+      border-radius: 10px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #33406b;
+      line-height: 1.3;
+      transition: 0.1s;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .nav-link:hover { background: #f4f6fc; color: #0b1330; }
+    .nav-link.active {
+      background: #fdf6e7;
+      color: #0b1330;
+    }
+    .nav-num {
+      flex: none;
+      width: 22px;
+      height: 22px;
+      border-radius: 7px;
+      background: #e7eaf5;
+      color: #5b6690;
+      font-size: 11px;
+      font-weight: 800;
+      display: grid;
+      place-items: center;
+    }
+    .nav-link.active .nav-num {
+      background: #e8b74b;
+      color: #0b1330;
+    }
+
+    #sidebar-toggle { display: none; }
+    .mobile-bar { display: none; }
+    @media (max-width: 980px) {
+      .mobile-bar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: #fff;
+        border: 1px solid rgba(16,26,61,0.1);
+        border-radius: 12px;
+        padding: 12px 16px;
+        margin-bottom: 8px;
+        font-weight: 800;
+        font-size: 13.5px;
+        color: #0b1330;
+      }
+      .sidebar { display: none; position: static; max-height: none; }
+      #sidebar-toggle:checked ~ .layout .sidebar { display: block; }
+    }
+
+    .content { min-width: 0; }
+    .topic-card {
+      background: #fff;
+      border: 1px solid rgba(16,26,61,0.08);
+      border-radius: 16px;
+      padding: 20px 20px 16px;
+      margin-bottom: 18px;
+      scroll-margin-top: 20px;
+      display: block;
+    }
+    .topic-card.hidden { display: none; }
+    .sec-head {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+    .sec-num {
+      flex: none;
+      width: 34px;
+      height: 34px;
+      border-radius: 10px;
+      background: #0b1330;
+      color: #e8b74b;
+      font-weight: 800;
+      font-size: 14px;
+      display: grid;
+      place-items: center;
+    }
+    .sec-head h2 {
+      margin: 0;
+      font-size: 19px;
+      font-weight: 800;
+      color: #0b1330;
+    }
+    .topic-card p {
+      font-size: 14.5px;
+      line-height: 1.75;
+      color: #1a254a;
+      margin: 6px 0;
+    }
+    .bullet-list {
+      margin: 8px 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 5px;
+    }
+    .bullet-list li {
+      position: relative;
+      padding-left: 20px;
+      font-size: 14px;
+      line-height: 1.6;
+      color: #1a254a;
+    }
+    .bullet-list li::before {
+      content: "";
+      position: absolute;
+      left: 2px;
+      top: 9px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #d9a53a;
+    }
+    .formula-box {
+      background: #0b1330;
+      color: #fdeec2;
+      font-weight: 700;
+      font-size: 13.6px;
+      padding: 10px 16px;
+      border-radius: 10px;
+      margin: 10px 0;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 12px 0;
+      font-size: 13.6px;
+      display: block;
+      overflow-x: auto;
+    }
+    .data-table th, .data-table td {
+      border: 1px solid #e7eaf5;
+      padding: 8px 12px;
+      text-align: left;
+      color: #1a254a;
+      white-space: normal;
+    }
+    .data-table th {
+      background: #f4f6fc;
+      color: #0b1330;
+      font-weight: 800;
+    }
+    .pyq-tag {
+      display: inline-block;
+      background: #fdf6e7;
+      color: #b9852a;
+      font-weight: 800;
+      font-size: 12px;
+      padding: 4px 12px;
+      border-radius: 8px;
+      margin: 12px 0 6px;
+    }
+    .answer-box {
+      background: #eefaf2;
+      border: 1px solid #bfe8cc;
+      color: #1a7a4c;
+      font-weight: 700;
+      font-size: 13.6px;
+      padding: 6px 14px;
+      border-radius: 9px;
+      margin: 6px 0;
+    }
+    .explain {
+      background: #f4f6fc;
+      border-radius: 9px;
+      padding: 6px 14px;
+      font-size: 13.6px;
+      color: #1a254a;
+    }
+    .subtopic {
+      padding: 14px 0 6px;
+      border-top: 1px dashed #e7eaf5;
+    }
+    .subtopic:first-of-type { border-top: none; padding-top: 2px; }
+    .subhead {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 6px;
+    }
+    .sub-num {
+      flex: none;
+      width: 26px;
+      height: 26px;
+      border-radius: 8px;
+      background: #fdf6e7;
+      color: #b9852a;
+      font-weight: 800;
+      font-size: 12px;
+      display: grid;
+      place-items: center;
+    }
+    .subhead h3 {
+      margin: 0;
+      font-size: 15.5px;
+      font-weight: 800;
+      color: #0b1330;
+    }
+    .enroll-cta {
+      background: #0b1330;
+      color: #fff;
+      border-radius: 16px;
+      padding: 24px 24px;
+      margin-top: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+      overflow: hidden;
+    }
+    .enroll-cta::before {
+      content: "";
+      position: absolute;
+      right: -40px;
+      top: -40px;
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(232,183,75,0.2), transparent 70%);
+    }
+    .enroll-cta h3 { margin: 0 0 4px; font-size: 20px; }
+    .enroll-cta p { margin: 0; color: rgba(255,255,255,0.75); font-size: 13.5px; max-width: 480px; }
+    .btn-gold {
+      background: #e8b74b;
+      color: #0b1330;
+      font-weight: 800;
+      padding: 10px 22px;
+      border-radius: 10px;
+      font-size: 13.5px;
+      white-space: nowrap;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="container hero-inner">
+    <span class="eyebrow">★ UGC NET Paper-I · Environment</span>
+    <h1 class="h-display">Environment & Ecosystem</h1>
+    <p>Complete tutorial: Environment meaning & components, Biotic & Abiotic Components, Ecosystem & its Structure, Food Chain & Food Web, Ecological Pyramids, Energy Flow, Biogeochemical Cycles for UGC NET Paper-1.</p>
+  </div>
+</section>
+
+<main class="container">
+  <input type="checkbox" id="sidebar-toggle">
+  <label for="sidebar-toggle" class="mobile-bar">
+    <span>📑 On this page</span>
+    <span>☰ Menu</span>
+  </label>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebarNav">
+      <p class="sidebar-title">On this page</p>
+      <nav>
+       <a href="/tutorials/people-development-and-environment/environment-ecosystem/environment-meaning" class="nav-link active"><span class="nav-num">1</span>Environment: Meaning</a>
+        <a href="/tutorials/people-development-and-environment/environment-ecosystem/components-environment" class="nav-link"><span class="nav-num">2</span>Components of Environment</a>
+        <a href="/tutorials/people-development-and-environment/environment-ecosystem/biotic-abiotic" class="nav-link"><span class="nav-num">3</span>Biotic & Abiotic Components</a>
+        <a href="/tutorials/people-development-and-environment/environment-ecosystem/ecosystem" class="nav-link"><span class="nav-num">4</span>Ecosystem</a>
+        <a href="/tutorials/people-development-and-environment/environment-ecosystem/ecosystem-structure" class="nav-link"><span class="nav-num">5</span>Structure of Ecosystem</a>
+        <a href="/tutorials/people-development-and-environment/environment-ecosystem/food-chain" class="nav-link"><span class="nav-num">6</span>Food Chain</a>
+        <a href="/tutorials/people-development-and-environment/environment-ecosystem/food-web" class="nav-link"><span class="nav-num">7</span>Food Web</a>
+        <a href="/tutorials/people-development-and-environment/environment-ecosystem/food-chain-vs-web" class="nav-link"><span class="nav-num">8</span>Food Chain vs Food Web</a>
+        <a href="/tutorials/people-development-and-environment/environment-ecosystem/ecological-pyramids" class="nav-link"><span class="nav-num">9</span>Ecological Pyramids</a>
+        <a href="/tutorials/people-development-and-environment/environment-ecosystem/pyramid-types" class="nav-link"><span class="nav-num">10</span>Types of Pyramids</a>
+        <a href="/tutorials/people-development-and-environment/environment-ecosystem/energy-flow" class="nav-link"><span class="nav-num">11</span>Energy Flow</a>
+        <a href="/tutorials/people-development-and-environment/environment-ecosystem/biogeochemical-cycles" class="nav-link"><span class="nav-num">12</span>Biogeochemical Cycles</a>
+        <a href="/tutorials/people-development-and-environment/environment-ecosystem/carbon-cycle" class="nav-link"><span class="nav-num">13</span>Carbon Cycle</a>
+        <a href="/tutorials/people-development-and-environment/environment-ecosystem/nitrogen-cycle" class="nav-link"><span class="nav-num">14</span>Nitrogen Cycle</a>
+        <a href="/tutorials/people-development-and-environment/environment-ecosystem/water-cycle" class="nav-link"><span class="nav-num">15</span>Water Cycle</a>
+        <a href="/tutorials/people-development-and-environment/environment-ecosystem/oxygen-cycle" class="nav-link"><span class="nav-num">16</span>Oxygen Cycle</a>
+        <a href="/tutorials/people-development-and-environment/environment-ecosystem/exam-traps" class="nav-link"><span class="nav-num">17</span>Common Exam Traps</a>
+        <a href="/tutorials/people-development-and-environment/environment-ecosystem/practice-questions" class="nav-link"><span class="nav-num">18</span>Practice Questions</a>
+        <a href="/tutorials/people-development-and-environment/environment-ecosystem/one-page-revision" class="nav-link"><span class="nav-num">19</span>One-Page Revision</a>
+      </nav>
+    </aside>
+
+    <div class="content" id="contentArea">
+      <!-- ===== CARDS ===== -->
+      <div id="environment-meaning" class="topic-card"><div class="sec-head"><span class="sec-num">1</span><h2>Environment — पर्यावरण</h2></div><p><strong>Environment</strong> वह <strong>surrounding</strong> है जो living organisms को <strong>influence</strong> करती है और उनसे <strong>interact</strong> करती है। इसमें <strong>physical, chemical, biological</strong> और <strong>social</strong> factors शामिल हैं।</p><div class="formula-box">Environment = Physical + Chemical + Biological + Social Factors</div><p><strong>Key Definitions:</strong></p><ul class="bullet-list"><li><strong>Environment (Physical):</strong> All external conditions affecting an organism — air, water, land, temperature, etc.</li><li><strong>Environment (Ecological):</strong> The sum total of all living (biotic) and non-living (abiotic) factors.</li></ul><p><strong>Types of Environment:</strong></p><ul class="bullet-list"><li><strong>Natural Environment:</strong> Forests, rivers, mountains, atmosphere (created by nature)</li><li><strong>Human-made Environment:</strong> Buildings, roads, industries (modified by humans)</li><li><strong>Social Environment:</strong> Culture, traditions, economic conditions</li></ul></div>
+
+      <div id="components-environment" class="topic-card"><div class="sec-head"><span class="sec-num">2</span><h2>Components of Environment — पर्यावरण के घटक</h2></div><ul class="bullet-list"><li><strong>Physical Environment — भौतिक पर्यावरण:</strong><ul><li>Lithosphere (land/earth)</li><li>Hydrosphere (water bodies)</li><li>Atmosphere (air/gases)</li></ul></li><li><strong>Biological Environment — जैविक पर्यावरण:</strong><ul><li>Plants (flora)</li><li>Animals (fauna)</li><li>Microorganisms</li></ul></li><li><strong>Social/Cultural Environment — सामाजिक पर्यावरण:</strong><ul><li>Population, culture, economy, technology, institutions</li></ul></li></ul></div>
+
+      <div id="biotic-abiotic" class="topic-card"><div class="sec-head"><span class="sec-num">3</span><h2>Biotic & Abiotic Components — जैविक एवं अजैविक घटक</h2></div><ul class="bullet-list"><li><strong>Biotic Components — जैविक घटक (Living):</strong> All living organisms in an ecosystem.<ul><li><strong>Producers (Autotrophs):</strong> Plants, algae, cyanobacteria — make their own food</li><li><strong>Consumers (Heterotrophs):</strong> Animals — depend on others for food<ul><li><strong>Primary Consumers:</strong> Herbivores (deer, rabbit)</li><li><strong>Secondary Consumers:</strong> Carnivores (fox, frog)</li><li><strong>Tertiary Consumers:</strong> Top carnivores (lion, eagle)</li></ul></li><li><strong>Decomposers (Saprotrophs):</strong> Bacteria, fungi — break down dead organic matter</li></ul></li><li><strong>Abiotic Components — अजैविक घटक (Non-living):</strong><ul><li><strong>Physical:</strong> Sunlight, temperature, rainfall, wind, water, soil, topography</li><li><strong>Chemical:</strong> Oxygen, carbon dioxide, nitrogen, minerals, pH, salinity</li></ul></li></ul></div>
+
+      <div id="ecosystem" class="topic-card"><div class="sec-head"><span class="sec-num">4</span><h2>Ecosystem — पारिस्थितिकी तंत्र</h2></div><p><strong>Ecosystem</strong> living organisms (biotic) और non-living environment (abiotic) का <strong>functional unit</strong> है जो <strong>energy flow</strong> और <strong>nutrient cycling</strong> के माध्यम से interact करते हैं।</p><div class="formula-box">Ecosystem = Biotic Community + Abiotic Environment + Interaction + Energy Flow</div><p><strong>Key Points:</strong></p><ul class="bullet-list"><li>Coined by <strong>A.G. Tansley</strong> (1935)</li><li>Ecosystem = <strong>Community + Environment</strong></li><li>Ecosystems can be <strong>natural</strong> (forest, pond) or <strong>artificial</strong> (crop field, aquarium)</li></ul><p><strong>Types of Ecosystems:</strong></p><ul class="bullet-list"><li><strong>Terrestrial:</strong> Forest, grassland, desert, tundra</li><li><strong>Aquatic:</strong> Freshwater (pond, river, lake), Marine (ocean, sea), Estuarine</li></ul></div>
+
+      <div id="ecosystem-structure" class="topic-card"><div class="sec-head"><span class="sec-num">5</span><h2>Structure of Ecosystem — पारिस्थितिकी तंत्र की संरचना</h2></div><ul class="bullet-list"><li><strong>Biotic Structure — जैविक संरचना:</strong><ul><li><strong>Producers (Autotrophs):</strong> Primary producers — plants, algae</li><li><strong>Consumers (Heterotrophs):</strong> Primary, Secondary, Tertiary</li><li><strong>Decomposers:</strong> Bacteria, fungi</li></ul></li><li><strong>Abiotic Structure — अजैविक संरचना:</strong><ul><li>Physical factors: Sunlight, temperature, humidity, water, soil</li><li>Chemical factors: Oxygen, CO₂, nitrogen, minerals</li></ul></li><li><strong>Functional Aspects — कार्यात्मक पहलू:</strong><ul><li><strong>Energy Flow:</strong> Sun → Producers → Consumers → Decomposers</li><li><strong>Nutrient Cycling:</strong> Biogeochemical cycles (C, N, O, P, Water)</li><li><strong>Food Chain & Food Web:</strong> Feeding relationships</li></ul></li></ul></div>
+
+      <div id="food-chain" class="topic-card"><div class="sec-head"><span class="sec-num">6</span><h2>Food Chain — खाद्य श्रृंखला</h2></div><p><strong>Food Chain</strong> organisms का एक <strong>linear sequence</strong> है जिसमें energy और nutrients एक organism से दूसरे में <strong>transfer</strong> होते हैं — जब एक organism दूसरे को <strong>eats</strong> करता है।</p><div class="formula-box">Food Chain = Sun → Producer → Primary Consumer → Secondary Consumer → Tertiary Consumer → Decomposer</div><p><strong>Example:</strong></p><ul class="bullet-list"><li><strong>Grassland:</strong> Sun → Grass → Deer → Lion</li><li><strong>Pond:</strong> Sun → Algae → Fish → Heron</li><li><strong>Forest:</strong> Sun → Tree → Caterpillar → Bird → Eagle</li></ul><p><strong>Trophic Levels — पोषण स्तर:</strong></p><ul class="bullet-list"><li><strong>T₁ (Producers):</strong> Plants, algae</li><li><strong>T₂ (Primary Consumers):</strong> Herbivores</li><li><strong>T₃ (Secondary Consumers):</strong> Carnivores eating herbivores</li><li><strong>T₄ (Tertiary Consumers):</strong> Top carnivores</li><li><strong>Decomposers:</strong> Bacteria, fungi</li></ul></div>
+
+      <div id="food-web" class="topic-card"><div class="sec-head"><span class="sec-num">7</span><h2>Food Web — खाद्य जाल</h2></div><p><strong>Food Web</strong> <strong>interconnected food chains</strong> का network है — एक organism कई organisms को eat कर सकता है और कई organisms द्वारा eat किया जा सकता है।</p><div class="formula-box">Food Web = Multiple Interconnected Food Chains</div><p><strong>Key Points:</strong></p><ul class="bullet-list"><li>More <strong>complex</strong> and <strong>realistic</strong> than food chain</li><li>Shows <strong>multiple feeding relationships</strong></li><li>Provides <strong>stability</strong> to the ecosystem</li><li>If one species is removed, others can still survive</li></ul><p><strong>Example:</strong></p><ul class="bullet-list"><li>Grass → Grasshopper → Frog → Snake → Eagle</li><li>Grass → Rabbit → Fox</li><li>Seeds → Mouse → Snake → Hawk</li><li>These interconnected chains form a food web</li></ul></div>
+
+      <div id="food-chain-vs-web" class="topic-card"><div class="sec-head"><span class="sec-num">8</span><h2>Food Chain vs Food Web — खाद्य श्रृंखला vs खाद्य जाल</h2></div><table class="data-table"><tr><th>Basis</th><th>Food Chain</th><th>Food Web</th></tr><tr><td>Nature</td><td>Linear, single path</td><td>Complex, multiple paths</td></tr><tr><td>Organisms</td><td>One organism per trophic level</td><td>Multiple organisms per trophic level</td></tr><tr><td>Stability</td><td>Less stable</td><td>More stable</td></tr><tr><td>Interactions</td><td>Simple</td><td>Complex</td></tr><tr><td>Energy Flow</td><td>One direction</td><td>Multiple directions</td></tr></table></div>
+
+      <div id="ecological-pyramids" class="topic-card"><div class="sec-head"><span class="sec-num">9</span><h2>Ecological Pyramids — पारिस्थितिक पिरामिड</h2></div><p><strong>Ecological Pyramids</strong> trophic levels में organisms के <strong>number, biomass</strong> या <strong>energy</strong> को graphically represent करते हैं।</p><div class="formula-box">Ecological Pyramid = Trophic Levels + Number/Biomass/Energy</div><p><strong>Types:</strong></p><ul class="bullet-list"><li><strong>Pyramid of Numbers — संख्या पिरामिड:</strong> Number of individuals at each trophic level</li><li><strong>Pyramid of Biomass — बायोमास पिरामिड:</strong> Total dry weight of organisms at each trophic level</li><li><strong>Pyramid of Energy — ऊर्जा पिरामिड:</strong> Amount of energy at each trophic level</li></ul><p><strong>Key Point:</strong> Energy pyramid is <strong>always upright</strong> (10% law — only 10% energy transferred to next level).</p></div>
+
+      <div id="pyramid-types" class="topic-card"><div class="sec-head"><span class="sec-num">10</span><h2>Types of Pyramids — पिरामिड के प्रकार</h2></div><ul class="bullet-list"><li><strong>Pyramid of Numbers:</strong><ul><li><strong>Upright:</strong> Grassland ecosystem (grass → rabbit → fox)</li><li><strong>Inverted:</strong> Tree ecosystem (one tree → many insects → many birds)</li></ul></li><li><strong>Pyramid of Biomass:</strong><ul><li><strong>Upright:</strong> Most terrestrial ecosystems (plants have max biomass)</li><li><strong>Inverted:</strong> Aquatic ecosystems (phytoplankton → zooplankton → fish — phytoplankton biomass less but more productive)</li></ul></li><li><strong>Pyramid of Energy:</strong><ul><li><strong>Always upright</strong> (energy decreases at each trophic level due to 10% law)</li></ul></li></ul><div class="formula-box">10% Law: Only 10% of energy from one trophic level is transferred to the next (Lindeman)</div></div>
+
+      <div id="energy-flow" class="topic-card"><div class="sec-head"><span class="sec-num">11</span><h2>Energy Flow — ऊर्जा प्रवाह</h2></div><p><strong>Energy Flow</strong> ecosystem में energy का <strong>one-way movement</strong> है — sun से producers तक, फिर consumers और decomposers तक।</p><div class="formula-box">Sun → Producers → Consumers → Decomposers (One-way flow)</div><p><strong>Key Points:</strong></p><ul class="bullet-list"><li><strong>Energy enters</strong> through <strong>photosynthesis</strong> (sun → producers)</li><li>Energy flows in a <strong>single direction</strong> (not recycled)</li><li><strong>10% Law (Lindeman):</strong> Only 10% of energy passes to next trophic level</li><li>90% energy is lost as <strong>heat</strong> (respiration, metabolism, etc.)</li></ul><p><strong>Energy Flow vs Nutrient Cycling:</strong></p><ul class="bullet-list"><li><strong>Energy Flow:</strong> One-way, not recycled</li><li><strong>Nutrient Cycling:</strong> Cyclic, recycled (C, N, O, P, Water)</li></ul></div>
+
+      <div id="biogeochemical-cycles" class="topic-card"><div class="sec-head"><span class="sec-num">12</span><h2>Biogeochemical Cycles — जैव-भू-रासायनिक चक्र</h2></div><p><strong>Biogeochemical Cycles</strong> nutrients का <strong>movement and recycling</strong> है — between <strong>biotic (living)</strong> and <strong>abiotic (non-living)</strong> components of the ecosystem.</p><div class="formula-box">Biogeochemical Cycle = Biological + Geological + Chemical = Nutrient Recycling</div><p><strong>Types:</strong></p><ul class="bullet-list"><li><strong>Gaseous Cycles — गैसीय चक्र:</strong> Carbon, Nitrogen, Oxygen, Water</li><li><strong>Sedimentary Cycles — तलछटी चक्र:</strong> Phosphorus, Sulphur, Calcium</li></ul></div>
+
+      <div id="carbon-cycle" class="topic-card"><div class="sec-head"><span class="sec-num">13</span><h2>Carbon Cycle — कार्बन चक्र</h2></div><p><strong>Carbon Cycle</strong> carbon के <strong>atmosphere, organisms, oceans, soil, rocks</strong> के बीच movement को दर्शाता है।</p><ul class="bullet-list"><li><strong>Sources of CO₂:</strong> Respiration, decomposition, combustion (fossil fuels, forests), volcanic activity</li><li><strong>Sinks (Removal):</strong> Photosynthesis (plants absorb CO₂), oceans (dissolve CO₂), fossil fuel formation</li><li><strong>Human Impact:</strong> Burning fossil fuels increases atmospheric CO₂ → global warming</li></ul></div>
+
+      <div id="nitrogen-cycle" class="topic-card"><div class="sec-head"><span class="sec-num">14</span><h2>Nitrogen Cycle — नाइट्रोजन चक्र</h2></div><p><strong>Nitrogen Cycle</strong> nitrogen का <strong>atmosphere, soil, organisms</strong> के बीच conversion और movement है।</p><ul class="bullet-list"><li><strong>Nitrogen Fixation — नाइट्रोजन स्थिरीकरण:</strong> Atmospheric N₂ → ammonia (NH₃) by bacteria (Rhizobium), lightning, industrial</li><li><strong>Nitrification — नाइट्रीकरण:</strong> Ammonia (NH₃) → Nitrites (NO₂⁻) → Nitrates (NO₃⁻) (by bacteria: Nitrosomonas, Nitrobacter)</li><li><strong>Assimilation — आत्मसात:</strong> Plants absorb nitrates; animals eat plants</li><li><strong>Ammonification — अमोनीकरण:</strong> Dead organisms → ammonia (NH₃) (by decomposers)</li><li><strong>Denitrification — विनाइट्रीकरण:</strong> Nitrates → N₂ gas (by bacteria: Pseudomonas)</li></ul></div>
+
+      <div id="water-cycle" class="topic-card"><div class="sec-head"><span class="sec-num">15</span><h2>Water Cycle — जल चक्र</h2></div><p><strong>Water Cycle (Hydrological Cycle)</strong> water का <strong>atmosphere, land, oceans</strong> के बीच continuous movement है।</p><ul class="bullet-list"><li><strong>Evaporation — वाष्पीकरण:</strong> Water changes from liquid to vapour (oceans, lakes, rivers)</li><li><strong>Transpiration — वाष्पोत्सर्जन:</strong> Water loss from plants through leaves</li><li><strong>Condensation — संघनन:</strong> Water vapour → clouds (liquid droplets)</li><li><strong>Precipitation — वर्षण:</strong> Rain, snow, hail (water returns to earth)</li><li><strong>Runoff — अपवाह:</strong> Water flows over land surface</li><li><strong>Infiltration — अंतःस्रावण:</strong> Water seeps into soil/groundwater</li></ul></div>
+
+      <div id="oxygen-cycle" class="topic-card"><div class="sec-head"><span class="sec-num">16</span><h2>Oxygen Cycle — ऑक्सीजन चक्र</h2></div><p><strong>Oxygen Cycle</strong> oxygen का <strong>atmosphere, organisms, water</strong> के बीच movement है।</p><ul class="bullet-list"><li><strong>Photosynthesis:</strong> Plants release O₂ (6CO₂ + 6H₂O → C₆H₁₂O₆ + 6O₂)</li><li><strong>Respiration:</strong> Organisms consume O₂ and release CO₂</li><li><strong>Decomposition:</strong> Decomposers use O₂ during decomposition</li><li><strong>Combustion:</strong> Burning of fossil fuels uses O₂</li></ul></div>
+
+      <div id="exam-traps" class="topic-card"><div class="sec-head"><span class="sec-num">17</span><h2>Common Exam Traps — सामान्य परीक्षा जाल</h2></div><ul class="bullet-list"><li><strong>Trap 1:</strong> Ecosystem = only biotic components → ❌ Ecosystem = Biotic + Abiotic + Interaction</li><li><strong>Trap 2:</strong> Food chain = food web → ❌ Food chain is linear; food web is complex network</li><li><strong>Trap 3:</strong> Energy pyramid can be inverted → ❌ Energy pyramid is always upright (10% law)</li><li><strong>Trap 4:</strong> Energy is recycled in ecosystem → ❌ Energy flows one-way; nutrients are recycled</li><li><strong>Trap 5:</strong> Carbon cycle = only photosynthesis → ❌ Includes respiration, decomposition, combustion, etc.</li><li><strong>Trap 6:</strong> Nitrogen fixation = only industrial → ❌ Biological fixation (Rhizobium) is major</li><li><strong>Trap 7:</strong> Pyramid of numbers is always upright → ❌ Can be inverted in tree ecosystems</li></ul></div>
+
+      <div id="practice-questions" class="topic-card"><div class="sec-head"><span class="sec-num">18</span><h2>Practice Questions — अभ्यास प्रश्न</h2></div>
+      <div class="pyq-tag">Question 1</div>
+      <p>Which of the following is an abiotic component of an ecosystem?</p>
+      <ul class="bullet-list"><li>A. Plants</li><li>B. Animals</li><li>C. Bacteria</li><li>D. Sunlight</li></ul>
+      <div class="answer-box">Answer: D. Sunlight</div>
+      <p class="explain">Explanation: Sunlight is a non-living (abiotic) component. Plants, animals, and bacteria are biotic components.</p>
+
+      <div class="pyq-tag">Question 2</div>
+      <p>In a food chain, grass → deer → lion, the deer is a:</p>
+      <ul class="bullet-list"><li>A. Producer</li><li>B. Primary consumer</li><li>C. Secondary consumer</li><li>D. Decomposer</li></ul>
+      <div class="answer-box">Answer: B. Primary consumer</div>
+      <p class="explain">Explanation: Deer is a herbivore (primary consumer) eating grass (producer). Lion is the secondary/tertiary consumer.</p>
+
+      <div class="pyq-tag">Question 3</div>
+      <p>The pyramid of energy in an ecosystem is always:</p>
+      <ul class="bullet-list"><li>A. Inverted</li><li>B. Upright</li><li>C. Spindle-shaped</li><li>D. Irregular</li></ul>
+      <div class="answer-box">Answer: B. Upright</div>
+      <p class="explain">Explanation: The pyramid of energy is always upright because energy decreases at each trophic level (10% law).</p>
+
+      <div class="pyq-tag">Question 4</div>
+      <p>Which bacteria is responsible for nitrogen fixation in root nodules of legumes?</p>
+      <ul class="bullet-list"><li>A. Nitrosomonas</li><li>B. Rhizobium</li><li>C. Nitrobacter</li><li>D. Pseudomonas</li></ul>
+      <div class="answer-box">Answer: B. Rhizobium</div>
+      <p class="explain">Explanation: Rhizobium is the nitrogen-fixing bacteria found in root nodules of legumes. Nitrosomonas and Nitrobacter are nitrifying bacteria; Pseudomonas is denitrifying.</p>
+
+      <div class="pyq-tag">Question 5</div>
+      <p>Which of the following is NOT a biogeochemical cycle?</p>
+      <ul class="bullet-list"><li>A. Carbon cycle</li><li>B. Nitrogen cycle</li><li>C. Energy cycle</li><li>D. Water cycle</li></ul>
+      <div class="answer-box">Answer: C. Energy cycle</div>
+      <p class="explain">Explanation: Energy flows one-way and is not recycled. Carbon, Nitrogen, and Water are biogeochemical cycles where nutrients are recycled.</p>
+
+      <div class="pyq-tag">Question 6</div>
+      <p>The term 'ecosystem' was coined by:</p>
+      <ul class="bullet-list"><li>A. Charles Darwin</li><li>B. A.G. Tansley</li><li>C. E.P. Odum</li><li>D. John Muir</li></ul>
+      <div class="answer-box">Answer: B. A.G. Tansley</div>
+      <p class="explain">Explanation: A.G. Tansley coined the term 'ecosystem' in 1935.</p></div>
+
+      <div id="one-page-revision" class="topic-card"><div class="sec-head"><span class="sec-num">19</span><h2>One-Page Revision — एक पेज में पुनरावृत्ति</h2></div>
+      <div class="formula-box">Environment = Physical + Biological + Social</div>
+      <div class="formula-box">Ecosystem = Biotic + Abiotic + Interaction + Energy Flow</div>
+
+      <p><strong>Biotic Components:</strong></p>
+      <ul class="bullet-list"><li>Producers (Autotrophs), Consumers (Heterotrophs), Decomposers (Saprotrophs)</li></ul>
+
+      <p><strong>Abiotic Components:</strong></p>
+      <ul class="bullet-list"><li>Physical: Sunlight, temperature, water, soil</li>
+      <li>Chemical: O₂, CO₂, N₂, minerals</li></ul>
+
+      <p><strong>Food Chain & Food Web:</strong></p>
+      <ul class="bullet-list"><li>Food Chain = Linear (single path)</li>
+      <li>Food Web = Network (multiple paths)</li></ul>
+
+      <p><strong>Ecological Pyramids:</strong></p>
+      <ul class="bullet-list"><li>Numbers (can be upright/inverted)</li>
+      <li>Biomass (upright in terrestrial; inverted in aquatic)</li>
+      <li>Energy (always upright — 10% law)</li></ul>
+
+      <p><strong>Energy Flow:</strong></p>
+      <ul class="bullet-list"><li>One-way (Sun → Producers → Consumers → Decomposers)</li>
+      <li>10% Law: Only 10% energy transferred to next trophic level</li></ul>
+
+      <p><strong>Biogeochemical Cycles:</strong></p>
+      <ul class="bullet-list"><li>Gaseous: Carbon, Nitrogen, Oxygen, Water</li>
+      <li>Sedimentary: Phosphorus, Sulphur</li></ul>
+
+      <p><strong>Exam Formula:</strong></p>
+      <div class="formula-box">Ecosystem = Structure + Function = (Biotic + Abiotic) + (Energy Flow + Nutrient Cycling)</div>
+      <p><em>UGC NET में Environment & Ecosystem के questions components, trophic levels, pyramids, cycles, and energy flow पर based होते हैं।</em></p></div>
+
+      <div class="enroll-cta"><div><h3 class="h-display">Join the Paper-1 Batch</h3><p>Course fee FREE — ₹500 registration & academic/logistics contribution. Classes daily at 6:30 PM.</p></div><a href="#" class="btn-gold">✓ JOIN BATCH @ ₹500</a></div>
+    </div>
+  </div>
+</main>
+
+<script>
+  (function() {
+
+    const BASE_PATH =
+      "/tutorials/people-development-and-environment/environment-ecosystem";
+
+    const links =
+      document.querySelectorAll(".nav-link");
+
+    const cards =
+      document.querySelectorAll(".topic-card");
+
+    const content =
+      document.getElementById("contentArea");
+
+    const sidebarToggle =
+      document.getElementById("sidebar-toggle");
+
+
+    // Get topic slug from current URL
+    function getSlugFromPath() {
+
+      const path =
+        window.location.pathname
+          .replace(/\/+$/, "");
+
+      if (path.startsWith(BASE_PATH + "/")) {
+
+        return path
+          .substring((BASE_PATH + "/").length)
+          .split("/")[0];
+
+      }
+
+      return null;
+    }
+
+
+    // Update browser URL
+    function updateUrl(slug, replace = false) {
+
+      const newPath =
+        BASE_PATH + "/" + slug;
+
+      if (
+        window.location.pathname !== newPath
+      ) {
+
+        if (replace) {
+
+          history.replaceState(
+            null,
+            "",
+            newPath
+          );
+
+        } else {
+
+          history.pushState(
+            null,
+            "",
+            newPath
+          );
+
+        }
+
+      }
+
+    }
+
+
+    // Update active sidebar link
+    function updateActiveLink(slug) {
+
+      links.forEach(function(link) {
+
+        const href =
+          link.getAttribute("href");
+
+        if (!href) return;
+
+
+        const linkSlug =
+          href
+            .split("/")
+            .filter(Boolean)
+            .pop();
+
+
+        link.classList.toggle(
+          "active",
+          linkSlug === slug
+        );
+
+      });
+
+    }
+
+
+    // Show selected topic
+    function showCard(
+      slug,
+      updateHistory = true
+    ) {
+
+      cards.forEach(function(card) {
+
+        card.classList.add("hidden");
+
+      });
+
+
+      const target =
+        document.getElementById(slug);
+
+
+      if (!target) {
+
+        const first =
+          cards[0];
+
+        if (first) {
+
+          first.classList.remove("hidden");
+
+          const firstSlug =
+            first.id;
+
+          updateActiveLink(
+            firstSlug
+          );
+
+          updateUrl(
+            firstSlug,
+            true
+          );
+
+        }
+
+        return;
+      }
+
+
+      target.classList.remove("hidden");
+
+      updateActiveLink(slug);
+
+
+      if (updateHistory) {
+
+        updateUrl(
+          slug,
+          false
+        );
+
+      }
+
+
+      if (sidebarToggle) {
+
+        sidebarToggle.checked = false;
+
+      }
+
+
+      if (content) {
+
+        const top =
+          content.getBoundingClientRect().top +
+          window.pageYOffset -
+          10;
+
+        window.scrollTo({
+
+          top: top,
+
+          behavior: "smooth"
+
+        });
+
+      }
+
+    }
+
+
+    // Sidebar link click
+    links.forEach(function(link) {
+
+      link.addEventListener(
+        "click",
+        function(e) {
+
+          e.preventDefault();
+
+
+          const href =
+            this.getAttribute("href");
+
+          if (!href) return;
+
+
+          const slug =
+            href
+              .split("/")
+              .filter(Boolean)
+              .pop();
+
+
+          if (!slug) return;
+
+
+          showCard(
+            slug,
+            true
+          );
+
+        }
+      );
+
+    });
+
+
+    // Initial page load
+    function initFromPath() {
+
+      let slug =
+        getSlugFromPath();
+
+
+      if (
+        !slug ||
+        !document.getElementById(slug)
+      ) {
+
+        slug =
+          cards[0]?.id ||
+          "environment-meaning";
+
+      }
+
+
+      showCard(
+        slug,
+        false
+      );
+
+
+      updateUrl(
+        slug,
+        true
+      );
+
+    }
+
+
+    initFromPath();
+
+
+    // Browser Back / Forward
+    window.addEventListener(
+      "popstate",
+      function() {
+
+        const slug =
+          getSlugFromPath();
+
+
+        if (
+          slug &&
+          document.getElementById(slug)
+        ) {
+
+          showCard(
+            slug,
+            false
+          );
+
+        } else {
+
+          const firstSlug =
+            cards[0]?.id ||
+            "environment-meaning";
+
+          showCard(
+            firstSlug,
+            false
+          );
+
+        }
+
+      }
+    );
+
+
+  })();
+</script>
+</body>
+</html>

@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Main Idea, Central Idea & Suitable Title – Full Notes | UGC NET Paper-1</title>
+  <meta name="description" content="Complete tutorial: Main Idea, Central Idea & Suitable Title - meaning, identification techniques, characteristics, common errors, practice questions for UGC NET Paper-1 Reading Comprehension.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; }
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background: #f8f5ee;
+      color: #101a3d;
+    }
+    .h-display { font-family: 'Poppins', sans-serif; font-weight: 800; letter-spacing: -0.01em; }
+    .container { max-width: 1360px; margin: 0 auto; padding: 0 20px; }
+
+    .hero {
+      background: #0b1330;
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+      padding: 28px 0 22px;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      right: -80px;
+      top: -100px;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(232,183,75,0.2), transparent 70%);
+    }
+    .hero-inner { position: relative; }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      padding: 6px 16px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+      color: #e8b74b;
+    }
+    .hero h1 {
+      font-size: clamp(28px, 4.2vw, 44px);
+      margin: 12px 0 6px;
+    }
+    .hero p {
+      color: rgba(255,255,255,0.78);
+      max-width: 680px;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 28px;
+      padding: 28px 0 50px;
+      align-items: start;
+    }
+    @media (max-width: 980px) {
+      .layout { grid-template-columns: 1fr; }
+    }
+
+    .sidebar {
+      position: sticky;
+      top: 16px;
+      max-height: calc(100vh - 40px);
+      overflow-y: auto;
+      background: #fff;
+      border: 1px solid rgba(16,26,61,0.08);
+      border-radius: 16px;
+      padding: 16px 12px;
+      box-shadow: 0 6px 24px rgba(16,26,61,0.05);
+    }
+    .sidebar::-webkit-scrollbar { width: 5px; }
+    .sidebar::-webkit-scrollbar-thumb { background: #dde2ef; border-radius: 8px; }
+    .sidebar-title {
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: #b9852a;
+      padding: 4px 10px 14px;
+    }
+    .nav-link {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 10px;
+      border-radius: 10px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #33406b;
+      line-height: 1.3;
+      transition: 0.1s;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .nav-link:hover { background: #f4f6fc; color: #0b1330; }
+    .nav-link.active {
+      background: #fdf6e7;
+      color: #0b1330;
+    }
+    .nav-num {
+      flex: none;
+      width: 22px;
+      height: 22px;
+      border-radius: 7px;
+      background: #e7eaf5;
+      color: #5b6690;
+      font-size: 11px;
+      font-weight: 800;
+      display: grid;
+      place-items: center;
+    }
+    .nav-link.active .nav-num {
+      background: #e8b74b;
+      color: #0b1330;
+    }
+
+    #sidebar-toggle { display: none; }
+    .mobile-bar { display: none; }
+    @media (max-width: 980px) {
+      .mobile-bar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: #fff;
+        border: 1px solid rgba(16,26,61,0.1);
+        border-radius: 12px;
+        padding: 12px 16px;
+        margin-bottom: 8px;
+        font-weight: 800;
+        font-size: 13.5px;
+        color: #0b1330;
+      }
+      .sidebar { display: none; position: static; max-height: none; }
+      #sidebar-toggle:checked ~ .layout .sidebar { display: block; }
+    }
+
+    .content { min-width: 0; }
+    .topic-card {
+      background: #fff;
+      border: 1px solid rgba(16,26,61,0.08);
+      border-radius: 16px;
+      padding: 20px 20px 16px;
+      margin-bottom: 18px;
+      scroll-margin-top: 20px;
+      display: block;
+    }
+    .topic-card.hidden { display: none; }
+    .sec-head {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+    .sec-num {
+      flex: none;
+      width: 34px;
+      height: 34px;
+      border-radius: 10px;
+      background: #0b1330;
+      color: #e8b74b;
+      font-weight: 800;
+      font-size: 14px;
+      display: grid;
+      place-items: center;
+    }
+    .sec-head h2 {
+      margin: 0;
+      font-size: 19px;
+      font-weight: 800;
+      color: #0b1330;
+    }
+    .topic-card p {
+      font-size: 14.5px;
+      line-height: 1.75;
+      color: #1a254a;
+      margin: 6px 0;
+    }
+    .bullet-list {
+      margin: 8px 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 5px;
+    }
+    .bullet-list li {
+      position: relative;
+      padding-left: 20px;
+      font-size: 14px;
+      line-height: 1.6;
+      color: #1a254a;
+    }
+    .bullet-list li::before {
+      content: "";
+      position: absolute;
+      left: 2px;
+      top: 9px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #d9a53a;
+    }
+    .formula-box {
+      background: #0b1330;
+      color: #fdeec2;
+      font-weight: 700;
+      font-size: 13.6px;
+      padding: 10px 16px;
+      border-radius: 10px;
+      margin: 10px 0;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 12px 0;
+      font-size: 13.6px;
+      display: block;
+      overflow-x: auto;
+    }
+    .data-table th, .data-table td {
+      border: 1px solid #e7eaf5;
+      padding: 8px 12px;
+      text-align: left;
+      color: #1a254a;
+      white-space: normal;
+    }
+    .data-table th {
+      background: #f4f6fc;
+      color: #0b1330;
+      font-weight: 800;
+    }
+    .pyq-tag {
+      display: inline-block;
+      background: #fdf6e7;
+      color: #b9852a;
+      font-weight: 800;
+      font-size: 12px;
+      padding: 4px 12px;
+      border-radius: 8px;
+      margin: 12px 0 6px;
+    }
+    .answer-box {
+      background: #eefaf2;
+      border: 1px solid #bfe8cc;
+      color: #1a7a4c;
+      font-weight: 700;
+      font-size: 13.6px;
+      padding: 6px 14px;
+      border-radius: 9px;
+      margin: 6px 0;
+    }
+    .explain {
+      background: #f4f6fc;
+      border-radius: 9px;
+      padding: 6px 14px;
+      font-size: 13.6px;
+      color: #1a254a;
+    }
+    .subtopic {
+      padding: 14px 0 6px;
+      border-top: 1px dashed #e7eaf5;
+    }
+    .subtopic:first-of-type { border-top: none; padding-top: 2px; }
+    .subhead {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 6px;
+    }
+    .sub-num {
+      flex: none;
+      width: 26px;
+      height: 26px;
+      border-radius: 8px;
+      background: #fdf6e7;
+      color: #b9852a;
+      font-weight: 800;
+      font-size: 12px;
+      display: grid;
+      place-items: center;
+    }
+    .subhead h3 {
+      margin: 0;
+      font-size: 15.5px;
+      font-weight: 800;
+      color: #0b1330;
+    }
+    .enroll-cta {
+      background: #0b1330;
+      color: #fff;
+      border-radius: 16px;
+      padding: 24px 24px;
+      margin-top: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+      overflow: hidden;
+    }
+    .enroll-cta::before {
+      content: "";
+      position: absolute;
+      right: -40px;
+      top: -40px;
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(232,183,75,0.2), transparent 70%);
+    }
+    .enroll-cta h3 { margin: 0 0 4px; font-size: 20px; }
+    .enroll-cta p { margin: 0; color: rgba(255,255,255,0.75); font-size: 13.5px; max-width: 480px; }
+    .btn-gold {
+      background: #e8b74b;
+      color: #0b1330;
+      font-weight: 800;
+      padding: 10px 22px;
+      border-radius: 10px;
+      font-size: 13.5px;
+      white-space: nowrap;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="container hero-inner">
+    <span class="eyebrow">★ UGC NET Paper-I · Reading Comprehension</span>
+    <h1 class="h-display">Main Idea, Central Idea & Suitable Title</h1>
+    <p>Complete tutorial: meaning, identification techniques, characteristics of a good title, common errors, practice questions & exam strategy for UGC NET Paper-1.</p>
+  </div>
+</section>
+
+<main class="container">
+  <input type="checkbox" id="sidebar-toggle">
+  <label for="sidebar-toggle" class="mobile-bar">
+    <span>📑 On this page</span>
+    <span>☰ Menu</span>
+  </label>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebarNav">
+      <p class="sidebar-title">On this page</p>
+      <nav>
+        <a href="/tutorials/comprehension/main-idea-central-idea-suitable-title/meaning-main-idea" class="nav-link active"><span class="nav-num">1</span>Meaning of Main Idea</a>
+        <a href="/tutorials/comprehension/main-idea-central-idea-suitable-title/central-idea" class="nav-link"><span class="nav-num">2</span>Central Idea</a>
+        <a href="/tutorials/comprehension/main-idea-central-idea-suitable-title/main-idea-vs-central-idea" class="nav-link"><span class="nav-num">3</span>Main Idea vs Central Idea</a>
+        <a href="/tutorials/comprehension/main-idea-central-idea-suitable-title/suitable-title" class="nav-link"><span class="nav-num">4</span>Suitable Title</a>
+        <a href="/tutorials/comprehension/main-idea-central-idea-suitable-title/identify-main-idea" class="nav-link"><span class="nav-num">5</span>How to Identify Main Idea</a>
+        <a href="/tutorials/comprehension/main-idea-central-idea-suitable-title/characteristics-title" class="nav-link"><span class="nav-num">6</span>Characteristics of Good Title</a>
+        <a href="/tutorials/comprehension/main-idea-central-idea-suitable-title/title-vs-main-idea" class="nav-link"><span class="nav-num">7</span>Title vs Main Idea</a>
+        <a href="/tutorials/comprehension/main-idea-central-idea-suitable-title/common-errors" class="nav-link"><span class="nav-num">8</span>Common Errors</a>
+        <a href="/tutorials/comprehension/main-idea-central-idea-suitable-title/identification-techniques" class="nav-link"><span class="nav-num">9</span>Identification Techniques</a>
+        <a href="/tutorials/comprehension/main-idea-central-idea-suitable-title/exam-traps" class="nav-link"><span class="nav-num">10</span>Common Exam Traps</a>
+        <a href="/tutorials/comprehension/main-idea-central-idea-suitable-title/practice-questions" class="nav-link"><span class="nav-num">11</span>Practice Questions</a>
+        <a href="/tutorials/comprehension/main-idea-central-idea-suitable-title/one-page-revision" class="nav-link"><span class="nav-num">12</span>One-Page Revision</a>
+      </nav>
+    </aside>
+
+    <div class="content" id="contentArea">
+      <!-- ===== CARDS ===== -->
+      <div id="meaning-main-idea" class="topic-card"><div class="sec-head"><span class="sec-num">1</span><h2>Meaning of Main Idea — मुख्य विचार का अर्थ</h2></div><p><strong>Main Idea</strong> किसी paragraph, passage या text का <strong>central point या most important thought</strong> होता है। यह वह message है जिसे author reader तक पहुँचाना चाहता है।</p><div class="formula-box">Main Idea = What the passage is mostly about</div><p>Main Idea वह <strong>umbrella statement</strong> है जो passage के सभी details को cover करता है।</p><p><strong>सरल उदाहरण:</strong></p><p><strong>Passage:</strong> "Regular exercise improves heart health, strengthens muscles, helps maintain weight, and reduces stress. It is one of the best things you can do for your overall health."</p><p><strong>Main Idea:</strong> Regular exercise is beneficial for overall health.</p></div>
+
+      <div id="central-idea" class="topic-card"><div class="sec-head"><span class="sec-num">2</span><h2>Central Idea — केंद्रीय विचार</h2></div><p><strong>Central Idea</strong> और <strong>Main Idea</strong> अक्सर interchangeable terms हैं, लेकिन कुछ contexts में:</p><ul class="bullet-list"><li><strong>Central Idea</strong> का उपयोग <strong>poetry, drama या creative writing</strong> के लिए अधिक किया जाता है।</li><li><strong>Main Idea</strong> का उपयोग <strong>prose, essays और informational texts</strong> के लिए अधिक किया जाता है।</li><li>दोनों का अर्थ <strong>text का core message</strong> है।</li></ul><div class="formula-box">Central Idea = The core message or underlying theme</div><p><strong>Example:</strong></p><p><strong>Poem (Robert Frost):</strong> "Two roads diverged in a yellow wood..."</p><p><strong>Central Idea:</strong> Life is about choices and the paths we choose define who we become.</p></div>
+
+      <div id="main-idea-vs-central-idea" class="topic-card"><div class="sec-head"><span class="sec-num">3</span><h2>Main Idea vs Central Idea</h2></div><table class="data-table"><tr><th>Basis</th><th>Main Idea</th><th>Central Idea</th></tr><tr><td>Used for</td><td>Prose, essays, informational texts</td><td>Poetry, drama, creative writing</td></tr><tr><td>Nature</td><td>More explicit, often stated</td><td>More implicit, often inferred</td></tr><tr><td>Purpose</td><td>To inform or argue</td><td>To evoke emotion or convey theme</td></tr><tr><td>Expression</td><td>Can be a complete sentence</td><td>Often a thematic statement</td></tr></table><p><strong>Important:</strong> In UGC NET questions, both terms are often used interchangeably. The key is to identify the <strong>core message</strong> of the passage.</p></div>
+
+      <div id="suitable-title" class="topic-card"><div class="sec-head"><span class="sec-num">4</span><h2>Suitable Title — उपयुक्त शीर्षक</h2></div><p><strong>Suitable Title</strong> वह <strong>short, catchy और representative phrase</strong> है जो passage के main idea को <strong>संक्षेप में</strong> प्रस्तुत करता है।</p><div class="formula-box">Suitable Title = Main Idea expressed concisely</div><p><strong>Example:</strong></p><p><strong>Passage Main Idea:</strong> Regular exercise is beneficial for overall health.</p><p><strong>Suitable Title:</strong> "The Benefits of Regular Exercise" या "Why Exercise Matters"</p></div>
+
+      <div id="identify-main-idea" class="topic-card"><div class="sec-head"><span class="sec-num">5</span><h2>How to Identify Main Idea — मुख्य विचार कैसे पहचानें</h2></div><ul class="bullet-list"><li><strong>Read the entire passage carefully</strong> — पूरा passage पढ़ें</li><li><strong>Look for repeated words/ideas</strong> — बार-बार आने वाले words/ideas पर ध्यान दें</li><li><strong>Check the introduction and conclusion</strong> — अक्सर main idea introduction या conclusion में होती है</li><li><strong>Ask: "What is this passage mostly about?"</strong> — यह passage किस बारे में है?</li><li><strong>Eliminate details</strong> — supporting details को हटाकर core message खोजें</li><li><strong>Look for topic sentences</strong> — अक्सर paragraph के पहले वाक्य में main idea होती है</li></ul><p><strong>Topic Sentence vs Main Idea:</strong></p><ul class="bullet-list"><li><strong>Topic Sentence:</strong> Paragraph का वाक्य जो main idea बताता है</li><li><strong>Main Idea:</strong> पूरे passage का central point (topic sentence से broader हो सकती है)</li></ul></div>
+
+      <div id="characteristics-title" class="topic-card"><div class="sec-head"><span class="sec-num">6</span><h2>Characteristics of a Good Title — अच्छे शीर्षक की विशेषताएँ</h2></div><ul class="bullet-list"><li><strong>Concise — संक्षिप्त:</strong> Short और to-the-point होना चाहिए</li><li><strong>Relevant — प्रासंगिक:</strong> Passage के content से directly related हो</li><li><strong>Descriptive — वर्णनात्मक:</strong> Passage के topic को clearly दर्शाए</li><li><strong>Not too broad — अत्यधिक व्यापक न हो:</strong> पूरे passage को cover करे, उससे अधिक नहीं</li><li><strong>Not too narrow — अत्यधिक संकीर्ण न हो:</strong> केवल एक detail को reflect न करे</li><li><strong>Engaging — आकर्षक:</strong> पाठक का attention खींचे (जहाँ appropriate हो)</li><li><strong>Accurate — सटीक:</strong> Passage का सही प्रतिनिधित्व करे</li></ul></div>
+
+      <div id="title-vs-main-idea" class="topic-card"><div class="sec-head"><span class="sec-num">7</span><h2>Title vs Main Idea — शीर्षक vs मुख्य विचार</h2></div><table class="data-table"><tr><th>Basis</th><th>Main Idea</th><th>Title</th></tr><tr><td>Length</td><td>Complete sentence</td><td>Short phrase (2-6 words)</td></tr><tr><td>Format</td><td>Full sentence with subject + predicate</td><td>Phrase or short clause</td></tr><tr><td>Detail</td><td>More detailed</td><td>Concise summary</td></tr><tr><td>Example</td><td>"Regular exercise improves overall health."</td><td>"Benefits of Exercise"</td></tr></table><p><strong>Exam Point:</strong> UGC NET में title-based questions में विकल्प छोटे phrases में होते हैं। आपको वह विकल्प चुनना है जो passage का <strong>सबसे अच्छा summary</strong> हो।</p></div>
+
+      <div id="common-errors" class="topic-card"><div class="sec-head"><span class="sec-num">8</span><h2>Common Errors in Identifying Main Idea & Title — सामान्य त्रुटियाँ</h2></div><ul class="bullet-list"><li><strong>Too Broad:</strong> Title passage से अधिक व्यापक है (जैसे "Education" vs "Online Education in India")</li><li><strong>Too Narrow:</strong> Title केवल one detail पर focus करता है (जैसे "12th Pass Percentage" vs "Education System in India")</li><li><strong>Contradictory:</strong> Title passage की main idea से opposite है</li><li><strong>Out of Scope:</strong> Title passage में discuss नहीं हुआ है</li><li><strong>Misleading:</strong> Title आंशिक सही है पर main idea को reflect नहीं करता</li><li><strong>Overgeneralisation:</strong> एक specific passage से universal claim बनाना</li></ul></div>
+
+      <div id="identification-techniques" class="topic-card"><div class="sec-head"><span class="sec-num">9</span><h2>Identification Techniques — पहचानने की तकनीकें</h2></div><ul class="bullet-list"><li><strong>Read First and Last Sentences:</strong> अक्सर main idea यहाँ होती है</li><li><strong>Look for Repeated Words/Concepts:</strong> जो idea बार-बार आ रहा है वही main idea हो सकती है</li><li><strong>Ask 5W Questions:</strong> Who, What, When, Where, Why — इनमें से कौन-सा central है?</li><li><strong>Summarise in One Sentence:</strong> Passage को एक वाक्य में summarise करने की कोशिश करें</li><li><strong>Eliminate Details:</strong> Supporting details और examples को हटाकर core idea खोजें</li><li><strong>Check the Title (if given):</strong> कभी-कभी title ही main idea को सुझाता है</li><li><strong>Look for Signal Words:</strong> "In conclusion", "Thus", "Therefore", "The main point is" — ये words main idea के indicators हो सकते हैं</li></ul></div>
+
+      <div id="exam-traps" class="topic-card"><div class="sec-head"><span class="sec-num">10</span><h2>Common Exam Traps — सामान्य परीक्षा जाल</h2></div><ul class="bullet-list"><li><strong>Trap 1: Too Broad Options</strong> — Option passage से व्यापक है → eliminate करें</li><li><strong>Trap 2: Too Narrow Options</strong> — Option केवल एक supporting detail है → eliminate करें</li><li><strong>Trap 3: Contradictory Options</strong> — Option passage से विपरीत है → eliminate करें</li><li><strong>Trap 4: Out of Scope Options</strong> — Option passage में mention नहीं है → eliminate करें</li><li><strong>Trap 5: Half Truth Options</strong> — Option partially correct है पर incomplete है → eliminate करें</li><li><strong>Trap 6: Opinion vs Fact</strong> — Author का opinion vs passage का factual main idea</li><li><strong>Trap 7: Extreme Language</strong> — "Always", "Never", "All", "None" वाले options से सावधान</li></ul></div>
+
+      <div id="practice-questions" class="topic-card"><div class="sec-head"><span class="sec-num">11</span><h2>Practice Questions — अभ्यास प्रश्न</h2></div>
+      <p><strong>Passage 1:</strong> "Democracy is more than just a system of government; it is a way of life. It requires citizens who are informed, engaged, and willing to participate in the decision-making process. Education plays a crucial role in preparing citizens for democratic participation. Without educated citizens, democracy cannot function effectively. Therefore, investing in education is investing in the future of democracy itself."</p>
+
+      <div class="pyq-tag">Question 1 (Main Idea)</div>
+      <p>What is the main idea of the passage?</p>
+      <ul class="bullet-list"><li>A. Democracy is a system of government</li><li>B. Education is essential for democracy to function effectively</li><li>C. Citizens should participate in decision-making</li><li>D. Democracy is a way of life</li></ul>
+      <div class="answer-box">Answer: B. Education is essential for democracy to function effectively</div>
+      <p class="explain">Explanation: Passage के सभी sentences इस core idea को support करते हैं — democracy को citizens की participation चाहिए, और participation के लिए education आवश्यक है।</p>
+
+      <div class="pyq-tag">Question 2 (Suitable Title)</div>
+      <p>Which of the following is the most suitable title for the passage?</p>
+      <ul class="bullet-list"><li>A. Democracy and Its Challenges</li><li>B. The Role of Education in Democracy</li><li>C. Citizens of the World</li><li>D. How to Vote</li></ul>
+      <div class="answer-box">Answer: B. The Role of Education in Democracy</div>
+      <p class="explain">Explanation: Title passage के main idea को accurately reflect करता है — democracy और education के बीच relationship।</p>
+
+      <div class="pyq-tag">Question 3 (Central Idea)</div>
+      <p>What is the central idea of the passage?</p>
+      <ul class="bullet-list"><li>A. Democracy requires informed citizens</li><li>B. Education is the foundation of a functioning democracy</li><li>C. Governments should focus on education</li><li>D. Democracy is better than other systems</li></ul>
+      <div class="answer-box">Answer: B. Education is the foundation of a functioning democracy</div>
+      <p class="explain">Explanation: यह main idea का more nuanced version है — education को democracy का foundation बताया गया है।</p>
+
+      <br>
+
+      <p><strong>Passage 2:</strong> "The invention of the printing press in the 15th century revolutionized the spread of knowledge. Before the printing press, books were hand-copied and extremely expensive. Only the wealthy and the clergy had access to knowledge. With the printing press, books became more affordable and accessible. This led to an increase in literacy rates across Europe and fueled the Renaissance and the Scientific Revolution."</p>
+
+      <div class="pyq-tag">Question 4 (Main Idea)</div>
+      <p>What is the main idea of the passage?</p>
+      <ul class="bullet-list"><li>A. Books were hand-copied before the printing press</li><li>B. The printing press made books affordable</li><li>C. The printing press revolutionized knowledge and learning</li><li>D. The Renaissance was caused by the printing press</li></ul>
+      <div class="answer-box">Answer: C. The printing press revolutionized knowledge and learning</div>
+      <p class="explain">Explanation: Passage का focus printing press के impact पर है — knowledge का spread और literacy में increase।</p>
+
+      <div class="pyq-tag">Question 5 (Suitable Title)</div>
+      <p>Which title best suits the passage?</p>
+      <ul class="bullet-list"><li>A. The History of Books</li><li>B. The Printing Press and the Spread of Knowledge</li><li>C. The Renaissance Era</li><li>D. The Cost of Books</li></ul>
+      <div class="answer-box">Answer: B. The Printing Press and the Spread of Knowledge</div>
+      <p class="explain">Explanation: Title passage के core theme को capture करता है — printing press और knowledge का spread।</p></div>
+
+      <div id="one-page-revision" class="topic-card"><div class="sec-head"><span class="sec-num">12</span><h2>One-Page Revision — एक पेज में पुनरावृत्ति</h2></div>
+      <div class="formula-box">Main Idea = What the passage is mostly about</div>
+      <div class="formula-box">Central Idea = Core message or underlying theme</div>
+      <div class="formula-box">Suitable Title = Concise summary of main idea</div>
+
+      <p><strong>How to Identify Main Idea:</strong></p>
+      <ul class="bullet-list"><li>Read first and last sentences</li><li>Look for repeated words/concepts</li><li>Eliminate supporting details</li><li>Summarise in one sentence</li></ul>
+
+      <p><strong>Characteristics of Good Title:</strong></p>
+      <ul class="bullet-list"><li>Concise</li><li>Relevant</li><li>Accurate</li><li>Not too broad / not too narrow</li></ul>
+
+      <p><strong>Common Traps:</strong></p>
+      <ul class="bullet-list"><li>Too Broad</li><li>Too Narrow</li><li>Contradictory</li><li>Out of Scope</li><li>Half Truth</li><li>Extreme Language</li></ul>
+
+      <p><strong>Quick Formula:</strong></p>
+      <div class="formula-box">Main Idea = Core Message = Best Title = Most Complete Summary</div>
+      <p><em>UGC NET में main idea और title के questions passage की core understanding को test करते हैं। Practice with diverse passages is essential.</em></p></div>
+
+      <div class="enroll-cta"><div><h3 class="h-display">Join the Paper-1 Batch</h3><p>Course fee FREE — ₹500 registration & academic/logistics contribution. Classes daily at 6:30 PM.</p></div><a href="#" class="btn-gold">✓ JOIN BATCH @ ₹500</a></div>
+    </div>
+  </div>
+</main>
+
+<script>
+(function() {
+
+  const BASE_PATH =
+    "/tutorials/comprehension/main-idea-central-idea-suitable-title";
+
+  const links = document.querySelectorAll(".nav-link");
+  const cards = document.querySelectorAll(".topic-card");
+  const content = document.getElementById("contentArea");
+  const sidebarToggle = document.getElementById("sidebar-toggle");
+
+
+  // Get topic slug from current URL
+  function getSlugFromPath() {
+
+    const path = window.location.pathname
+      .replace(/\/+$/, "");
+
+    if (path.startsWith(BASE_PATH + "/")) {
+
+      return path
+        .substring((BASE_PATH + "/").length)
+        .split("/")[0];
+
+    }
+
+    return null;
+  }
+
+
+  // Update browser URL
+  function updateUrl(slug, replace = false) {
+
+    const newPath =
+      BASE_PATH + "/" + slug;
+
+    if (window.location.pathname !== newPath) {
+
+      if (replace) {
+        history.replaceState(null, "", newPath);
+      } else {
+        history.pushState(null, "", newPath);
+      }
+
+    }
+  }
+
+
+  // Update active sidebar link
+  function updateActiveLink(slug) {
+
+    links.forEach(function(link) {
+
+      const href =
+        link.getAttribute("href");
+
+      if (!href) return;
+
+      const linkSlug =
+        href
+          .split("/")
+          .filter(Boolean)
+          .pop();
+
+      link.classList.toggle(
+        "active",
+        linkSlug === slug
+      );
+
+    });
+  }
+
+
+  // Show selected topic card
+  function showCard(slug, updateHistory = true) {
+
+    cards.forEach(function(card) {
+      card.classList.add("hidden");
+    });
+
+
+    const target =
+      document.getElementById(slug);
+
+
+    if (!target) {
+
+      const first = cards[0];
+
+      if (first) {
+
+        first.classList.remove("hidden");
+
+        const firstSlug = first.id;
+
+        updateActiveLink(firstSlug);
+
+        updateUrl(firstSlug, true);
+
+      }
+
+      return;
+    }
+
+
+    target.classList.remove("hidden");
+
+    updateActiveLink(slug);
+
+
+    if (updateHistory) {
+      updateUrl(slug);
+    }
+
+
+    if (sidebarToggle) {
+      sidebarToggle.checked = false;
+    }
+
+
+    // Scroll to content
+    if (content) {
+
+      const top =
+        content.getBoundingClientRect().top +
+        window.pageYOffset -
+        10;
+
+      window.scrollTo({
+        top: top,
+        behavior: "smooth"
+      });
+
+    }
+
+  }
+
+
+  // Sidebar link click
+  links.forEach(function(link) {
+
+    link.addEventListener("click", function(e) {
+
+      e.preventDefault();
+
+      const href =
+        this.getAttribute("href");
+
+      if (!href) return;
+
+
+      const slug =
+        href
+          .split("/")
+          .filter(Boolean)
+          .pop();
+
+
+      if (!slug) return;
+
+
+      console.log("Clicked topic:", slug);
+
+      showCard(slug, true);
+
+    });
+
+  });
+
+
+  // Initial page load
+  function initFromPath() {
+
+    let slug =
+      getSlugFromPath();
+
+
+    if (
+      !slug ||
+      !document.getElementById(slug)
+    ) {
+
+      slug =
+        cards[0]?.id ||
+        "meaning-main-idea";
+
+    }
+
+
+    // Show topic without creating history entry
+    showCard(slug, false);
+
+
+    // Set correct nested URL
+    updateUrl(slug, true);
+
+  }
+
+
+  initFromPath();
+
+
+  // Browser Back / Forward
+  window.addEventListener(
+    "popstate",
+    function() {
+
+      const slug =
+        getSlugFromPath();
+
+
+      if (
+        slug &&
+        document.getElementById(slug)
+      ) {
+
+        showCard(slug, false);
+
+      } else {
+
+        const firstSlug =
+          cards[0]?.id ||
+          "meaning-main-idea";
+
+        showCard(firstSlug, false);
+
+      }
+
+    }
+  );
+
+
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Human–Environment Interaction & Sustainable Development – Full Notes | UGC NET Paper-1</title>
+  <meta name="description" content="Complete tutorial: Human–Environment Interaction, Anthropogenic Activities, Development & Environment, Sustainable Development, Intergenerational & Intragenerational Equity, Carrying Capacity, Polluter Pays & Precautionary Principle for UGC NET Paper-1 Environment.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; }
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background: #f8f5ee;
+      color: #101a3d;
+    }
+    .h-display { font-family: 'Poppins', sans-serif; font-weight: 800; letter-spacing: -0.01em; }
+    .container { max-width: 1360px; margin: 0 auto; padding: 0 20px; }
+
+    .hero {
+      background: #0b1330;
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+      padding: 28px 0 22px;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      right: -80px;
+      top: -100px;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(232,183,75,0.2), transparent 70%);
+    }
+    .hero-inner { position: relative; }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      padding: 6px 16px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+      color: #e8b74b;
+    }
+    .hero h1 {
+      font-size: clamp(28px, 4.2vw, 44px);
+      margin: 12px 0 6px;
+    }
+    .hero p {
+      color: rgba(255,255,255,0.78);
+      max-width: 680px;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 28px;
+      padding: 28px 0 50px;
+      align-items: start;
+    }
+    @media (max-width: 980px) {
+      .layout { grid-template-columns: 1fr; }
+    }
+
+    .sidebar {
+      position: sticky;
+      top: 16px;
+      max-height: calc(100vh - 40px);
+      overflow-y: auto;
+      background: #fff;
+      border: 1px solid rgba(16,26,61,0.08);
+      border-radius: 16px;
+      padding: 16px 12px;
+      box-shadow: 0 6px 24px rgba(16,26,61,0.05);
+    }
+    .sidebar::-webkit-scrollbar { width: 5px; }
+    .sidebar::-webkit-scrollbar-thumb { background: #dde2ef; border-radius: 8px; }
+    .sidebar-title {
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: #b9852a;
+      padding: 4px 10px 14px;
+    }
+    .nav-link {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 10px;
+      border-radius: 10px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #33406b;
+      line-height: 1.3;
+      transition: 0.1s;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .nav-link:hover { background: #f4f6fc; color: #0b1330; }
+    .nav-link.active {
+      background: #fdf6e7;
+      color: #0b1330;
+    }
+    .nav-num {
+      flex: none;
+      width: 22px;
+      height: 22px;
+      border-radius: 7px;
+      background: #e7eaf5;
+      color: #5b6690;
+      font-size: 11px;
+      font-weight: 800;
+      display: grid;
+      place-items: center;
+    }
+    .nav-link.active .nav-num {
+      background: #e8b74b;
+      color: #0b1330;
+    }
+
+    #sidebar-toggle { display: none; }
+    .mobile-bar { display: none; }
+    @media (max-width: 980px) {
+      .mobile-bar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: #fff;
+        border: 1px solid rgba(16,26,61,0.1);
+        border-radius: 12px;
+        padding: 12px 16px;
+        margin-bottom: 8px;
+        font-weight: 800;
+        font-size: 13.5px;
+        color: #0b1330;
+      }
+      .sidebar { display: none; position: static; max-height: none; }
+      #sidebar-toggle:checked ~ .layout .sidebar { display: block; }
+    }
+
+    .content { min-width: 0; }
+    .topic-card {
+      background: #fff;
+      border: 1px solid rgba(16,26,61,0.08);
+      border-radius: 16px;
+      padding: 20px 20px 16px;
+      margin-bottom: 18px;
+      scroll-margin-top: 20px;
+      display: block;
+    }
+    .topic-card.hidden { display: none; }
+    .sec-head {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+    .sec-num {
+      flex: none;
+      width: 34px;
+      height: 34px;
+      border-radius: 10px;
+      background: #0b1330;
+      color: #e8b74b;
+      font-weight: 800;
+      font-size: 14px;
+      display: grid;
+      place-items: center;
+    }
+    .sec-head h2 {
+      margin: 0;
+      font-size: 19px;
+      font-weight: 800;
+      color: #0b1330;
+    }
+    .topic-card p {
+      font-size: 14.5px;
+      line-height: 1.75;
+      color: #1a254a;
+      margin: 6px 0;
+    }
+    .bullet-list {
+      margin: 8px 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 5px;
+    }
+    .bullet-list li {
+      position: relative;
+      padding-left: 20px;
+      font-size: 14px;
+      line-height: 1.6;
+      color: #1a254a;
+    }
+    .bullet-list li::before {
+      content: "";
+      position: absolute;
+      left: 2px;
+      top: 9px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #d9a53a;
+    }
+    .formula-box {
+      background: #0b1330;
+      color: #fdeec2;
+      font-weight: 700;
+      font-size: 13.6px;
+      padding: 10px 16px;
+      border-radius: 10px;
+      margin: 10px 0;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 12px 0;
+      font-size: 13.6px;
+      display: block;
+      overflow-x: auto;
+    }
+    .data-table th, .data-table td {
+      border: 1px solid #e7eaf5;
+      padding: 8px 12px;
+      text-align: left;
+      color: #1a254a;
+      white-space: normal;
+    }
+    .data-table th {
+      background: #f4f6fc;
+      color: #0b1330;
+      font-weight: 800;
+    }
+    .pyq-tag {
+      display: inline-block;
+      background: #fdf6e7;
+      color: #b9852a;
+      font-weight: 800;
+      font-size: 12px;
+      padding: 4px 12px;
+      border-radius: 8px;
+      margin: 12px 0 6px;
+    }
+    .answer-box {
+      background: #eefaf2;
+      border: 1px solid #bfe8cc;
+      color: #1a7a4c;
+      font-weight: 700;
+      font-size: 13.6px;
+      padding: 6px 14px;
+      border-radius: 9px;
+      margin: 6px 0;
+    }
+    .explain {
+      background: #f4f6fc;
+      border-radius: 9px;
+      padding: 6px 14px;
+      font-size: 13.6px;
+      color: #1a254a;
+    }
+    .subtopic {
+      padding: 14px 0 6px;
+      border-top: 1px dashed #e7eaf5;
+    }
+    .subtopic:first-of-type { border-top: none; padding-top: 2px; }
+    .subhead {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 6px;
+    }
+    .sub-num {
+      flex: none;
+      width: 26px;
+      height: 26px;
+      border-radius: 8px;
+      background: #fdf6e7;
+      color: #b9852a;
+      font-weight: 800;
+      font-size: 12px;
+      display: grid;
+      place-items: center;
+    }
+    .subhead h3 {
+      margin: 0;
+      font-size: 15.5px;
+      font-weight: 800;
+      color: #0b1330;
+    }
+    .enroll-cta {
+      background: #0b1330;
+      color: #fff;
+      border-radius: 16px;
+      padding: 24px 24px;
+      margin-top: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+      overflow: hidden;
+    }
+    .enroll-cta::before {
+      content: "";
+      position: absolute;
+      right: -40px;
+      top: -40px;
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(232,183,75,0.2), transparent 70%);
+    }
+    .enroll-cta h3 { margin: 0 0 4px; font-size: 20px; }
+    .enroll-cta p { margin: 0; color: rgba(255,255,255,0.75); font-size: 13.5px; max-width: 480px; }
+    .btn-gold {
+      background: #e8b74b;
+      color: #0b1330;
+      font-weight: 800;
+      padding: 10px 22px;
+      border-radius: 10px;
+      font-size: 13.5px;
+      white-space: nowrap;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="container hero-inner">
+    <span class="eyebrow">★ UGC NET Paper-I · Environment</span>
+    <h1 class="h-display">Human–Environment Interaction & Sustainable Development</h1>
+    <p>Complete tutorial: Human–Environment Interaction, Anthropogenic Activities, Development & Environment, Sustainable Development, Intergenerational & Intragenerational Equity, Carrying Capacity, Polluter Pays & Precautionary Principle.</p>
+  </div>
+</section>
+
+<main class="container">
+  <input type="checkbox" id="sidebar-toggle">
+  <label for="sidebar-toggle" class="mobile-bar">
+    <span>📑 On this page</span>
+    <span>☰ Menu</span>
+  </label>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebarNav">
+      <p class="sidebar-title">On this page</p>
+      <nav>
+        <a href="/tutorials/people-development-and-environment/human-environment-interaction-sustainable-development/human-environment-intro" class="nav-link active"><span class="nav-num">1</span>Human–Environment Interaction</a>
+        <a href="/tutorials/people-development-and-environment/human-environment-interaction-sustainable-development/anthropogenic-activities" class="nav-link"><span class="nav-num">2</span>Anthropogenic Activities</a>
+        <a href="/tutorials/people-development-and-environment/human-environment-interaction-sustainable-development/development-environment" class="nav-link"><span class="nav-num">3</span>Development & Environment</a>
+        <a href="/tutorials/people-development-and-environment/human-environment-interaction-sustainable-development/sustainable-development" class="nav-link"><span class="nav-num">4</span>Sustainable Development</a>
+        <a href="/tutorials/people-development-and-environment/human-environment-interaction-sustainable-development/sdg-goals" class="nav-link"><span class="nav-num">5</span>Sustainable Development Goals</a>
+        <a href="/tutorials/people-development-and-environment/human-environment-interaction-sustainable-development/intergenerational-equity" class="nav-link"><span class="nav-num">6</span>Intergenerational Equity</a>
+        <a href="/tutorials/people-development-and-environment/human-environment-interaction-sustainable-development/intragenerational-equity" class="nav-link"><span class="nav-num">7</span>Intragenerational Equity</a>
+        <a href="/tutorials/people-development-and-environment/human-environment-interaction-sustainable-development/carrying-capacity" class="nav-link"><span class="nav-num">8</span>Carrying Capacity</a>
+        <a href="/tutorials/people-development-and-environment/human-environment-interaction-sustainable-development/polluter-pays-principle" class="nav-link"><span class="nav-num">9</span>Polluter Pays Principle</a>
+        <a href="/tutorials/people-development-and-environment/human-environment-interaction-sustainable-development/precautionary-principle" class="nav-link"><span class="nav-num">10</span>Precautionary Principle</a>
+        <a href="/tutorials/people-development-and-environment/human-environment-interaction-sustainable-development/environmental-principles" class="nav-link"><span class="nav-num">11</span>Environmental Principles</a>
+        <a href="/tutorials/people-development-and-environment/human-environment-interaction-sustainable-development/environmental-impact" class="nav-link"><span class="nav-num">12</span>Environmental Impact Assessment</a>
+        <a href="/tutorials/people-development-and-environment/human-environment-interaction-sustainable-development/exam-traps" class="nav-link"><span class="nav-num">13</span>Common Exam Traps</a>
+        <a href="/tutorials/people-development-and-environment/human-environment-interaction-sustainable-development/practice-questions" class="nav-link"><span class="nav-num">14</span>Practice Questions</a>
+        <a href="/tutorials/people-development-and-environment/human-environment-interaction-sustainable-development/one-page-revision" class="nav-link"><span class="nav-num">15</span>One-Page Revision</a>
+      </nav>
+    </aside>
+
+    <div class="content" id="contentArea">
+      <!-- ===== CARDS ===== -->
+      <div id="human-environment-intro" class="topic-card"><div class="sec-head"><span class="sec-num">1</span><h2>Human–Environment Interaction — मानव-पर्यावरण अंतःक्रिया</h2></div><p><strong>Human–Environment Interaction</strong> humans और environment के बीच <strong>mutual relationship</strong> है — humans environment को <strong>modify</strong> करते हैं और environment humans को <strong>influence</strong> करता है।</p><div class="formula-box">Human–Environment Interaction = Humans Modify + Environment Influences</div><p><strong>Key Aspects:</strong></p><ul class="bullet-list"><li><strong>Humans depend on environment:</strong> Air, water, food, resources</li><li><strong>Humans modify environment:</strong> Deforestation, pollution, urbanization</li><li><strong>Environment affects humans:</strong> Climate, disasters, resource availability</li></ul></div>
+
+      <div id="anthropogenic-activities" class="topic-card"><div class="sec-head"><span class="sec-num">2</span><h2>Anthropogenic Activities — मानवजनित गतिविधियाँ</h2></div><p><strong>Anthropogenic Activities</strong> humans द्वारा की गई वे activities हैं जो environment को <strong>impact</strong> करती हैं।</p><div class="formula-box">Anthropogenic = Human-Induced + Environmental Impact</div><p><strong>Major Anthropogenic Activities:</strong></p><ul class="bullet-list"><li><strong>Deforestation — वनोन्मूलन:</strong> Clearing forests for agriculture, urbanisation, industries</li><li><strong>Industrialisation — औद्योगीकरण:</strong> Air, water, land pollution; resource depletion</li><li><strong>Urbanisation — नगरीकरण:</strong> Land use change, heat island effect, waste generation</li><li><strong>Agriculture — कृषि:</strong> Use of fertilisers, pesticides, irrigation, monoculture</li><li><strong>Fossil Fuel Burning — जीवाश्म ईंधन जलाना:</strong> CO₂ emissions, air pollution, climate change</li><li><strong>Mining — खनन:</strong> Land degradation, water pollution, loss of biodiversity</li><li><strong>Overfishing — अत्यधिक मछली पकड़ना:</strong> Marine ecosystem imbalance</li><li><strong>Waste Generation — अपशिष्ट उत्पादन:</strong> Plastic pollution, e-waste, landfill issues</li><li><strong>Transportation — परिवहन:</strong> Emissions, noise pollution, habitat fragmentation</li></ul></div>
+
+      <div id="development-environment" class="topic-card"><div class="sec-head"><span class="sec-num">3</span><h2>Development & Environment — विकास एवं पर्यावरण</h2></div><p><strong>Development</strong> और <strong>Environment</strong> के बीच <strong>trade-off</strong> है — development के लिए resources चाहिए, जो environment से आते हैं।</p><div class="formula-box">Development = Economic Growth + Social Progress (but may impact environment)</div><p><strong>Key Issues:</strong></p><ul class="bullet-list"><li><strong>Resource Depletion — संसाधनों की कमी:</strong> Natural resources are finite</li><li><strong>Environmental Degradation — पर्यावरणीय क्षरण:</strong> Pollution, deforestation, biodiversity loss</li><li><strong>Climate Change — जलवायु परिवर्तन:</strong> Greenhouse gas emissions from development activities</li><li><strong>Displacement — विस्थापन:</strong> Development projects often displace communities</li></ul><p><strong>Approaches:</strong></p><ul class="bullet-list"><li><strong>Economic Growth vs Environmental Protection:</strong> Need balance</li><li><strong>Sustainable Development:</strong> Meeting present needs without compromising future</li></ul></div>
+
+      <div id="sustainable-development" class="topic-card"><div class="sec-head"><span class="sec-num">4</span><h2>Sustainable Development — सतत विकास</h2></div><p><strong>Sustainable Development</strong> वह development है जो <strong>present</strong> generation की needs को <strong>future generations</strong> की ability से समझौता किए बिना पूरा करता है।</p><div class="formula-box">Sustainable Development = Present Needs + Future Generations + Balance</div><p><strong>Brundtland Report (1987):</strong></p><ul class="bullet-list"><li>First defined sustainable development</li><li>Report of the World Commission on Environment and Development (WCED)</li><li>Also known as "Our Common Future"</li></ul><p><strong>Three Pillars of Sustainable Development:</strong></p><ul class="bullet-list"><li><strong>Economic — आर्थिक:</strong> Growth, efficiency, innovation</li><li><strong>Social — सामाजिक:</strong> Equity, inclusion, participation</li><li><strong>Environmental — पर्यावरणीय:</strong> Conservation, resource management</li></ul></div>
+
+      <div id="sdg-goals" class="topic-card"><div class="sec-head"><span class="sec-num">5</span><h2>Sustainable Development Goals (SDGs) — SDG</h2></div><p><strong>Sustainable Development Goals (SDGs)</strong> 17 global goals हैं — adopted by UN in <strong>2015</strong> — to be achieved by <strong>2030</strong>.</p><ul class="bullet-list"><li><strong>SDG 1:</strong> No Poverty</li><li><strong>SDG 2:</strong> Zero Hunger</li><li><strong>SDG 3:</strong> Good Health and Well-being</li><li><strong>SDG 4:</strong> Quality Education</li><li><strong>SDG 5:</strong> Gender Equality</li><li><strong>SDG 6:</strong> Clean Water and Sanitation</li><li><strong>SDG 7:</strong> Affordable and Clean Energy</li><li><strong>SDG 8:</strong> Decent Work and Economic Growth</li><li><strong>SDG 9:</strong> Industry, Innovation and Infrastructure</li><li><strong>SDG 10:</strong> Reduced Inequality</li><li><strong>SDG 11:</strong> Sustainable Cities and Communities</li><li><strong>SDG 12:</strong> Responsible Consumption and Production</li><li><strong>SDG 13:</strong> Climate Action</li><li><strong>SDG 14:</strong> Life Below Water</li><li><strong>SDG 15:</strong> Life on Land</li><li><strong>SDG 16:</strong> Peace, Justice and Strong Institutions</li><li><strong>SDG 17:</strong> Partnerships for the Goals</li></ul></div>
+
+      <div id="intergenerational-equity" class="topic-card"><div class="sec-head"><span class="sec-num">6</span><h2>Intergenerational Equity — अंतर-पीढ़ी न्याय</h2></div><p><strong>Intergenerational Equity</strong> का अर्थ है <strong>present generation</strong> को environment और resources का उपयोग इस प्रकार करना चाहिए कि <strong>future generations</strong> भी अपनी needs पूरी कर सकें।</p><div class="formula-box">Intergenerational Equity = Fairness between Present and Future Generations</div><p><strong>Key Points:</strong></p><ul class="bullet-list"><li>Resources should be <strong>sustainable</strong> — not exhausted</li><li>Environment should be <strong>protected</strong> for future</li><li>Future generations should have <strong>same opportunities</strong></li><li>Core principle of <strong>Sustainable Development</strong></li></ul></div>
+
+      <div id="intragenerational-equity" class="topic-card"><div class="sec-head"><span class="sec-num">7</span><h2>Intragenerational Equity — अंतर-पीढ़ी न्याय (वर्तमान)</h2></div><p><strong>Intragenerational Equity</strong> का अर्थ है <strong>current generation</strong> के भीतर <strong>fairness and justice</strong> — resources और benefits का equitable distribution.</p><div class="formula-box">Intragenerational Equity = Fairness within the Present Generation</div><p><strong>Key Points:</strong></p><ul class="bullet-list"><li>Resources should be <strong>equitably shared</strong> among all people</li><li>Developing and developed countries should have <strong>fair responsibility</strong></li><li>Marginalised and vulnerable groups should be <strong>protected</strong></li><li>Climate justice is part of intragenerational equity</li></ul></div>
+
+      <div id="carrying-capacity" class="topic-card"><div class="sec-head"><span class="sec-num">8</span><h2>Carrying Capacity — वहन क्षमता</h2></div><p><strong>Carrying Capacity</strong> किसी environment की <strong>maximum population size</strong> है जिसे वह <strong>sustain</strong> कर सकता है — बिना degradation के।</p><div class="formula-box">Carrying Capacity = Maximum Population + Resources + Sustainability</div><p><strong>Key Points:</strong></p><ul class="bullet-list"><li>Determined by <strong>resources</strong> (food, water, space)</li><li>Exceeding carrying capacity leads to <strong>degradation</strong></li><li>Human activities can <strong>increase or decrease</strong> carrying capacity</li><li>Population growth must respect carrying capacity</li></ul></div>
+
+      <div id="polluter-pays-principle" class="topic-card"><div class="sec-head"><span class="sec-num">9</span><h2>Polluter Pays Principle — प्रदूषक भुगतान सिद्धांत</h2></div><p><strong>Polluter Pays Principle (PPP)</strong> के अनुसार जो <strong>pollutes</strong> (प्रदूषण फैलाता है) उसे <strong>cost</strong> (cleanup, compensation, damage) भी वहन करनी चाहिए।</p><div class="formula-box">PPP = Polluter + Pays + Cost</div><p><strong>Key Points:</strong></p><ul class="bullet-list"><li><strong>Polluter</strong> should bear the <strong>cost</strong> of pollution</li><li>Encourages <strong>prevention</strong> and <strong>cleaner technologies</strong></li><li>Internalises <strong>external costs</strong></li><li>Recognised in <strong>environmental law</strong> (national and international)</li></ul></div>
+
+      <div id="precautionary-principle" class="topic-card"><div class="sec-head"><span class="sec-num">10</span><h2>Precautionary Principle — एहतियाती सिद्धांत</h2></div><p><strong>Precautionary Principle</strong> के अनुसार यदि किसी activity से <strong>environmental harm</strong> का <strong>risk</strong> है, तो scientific certainty न होने पर भी <strong>preventive measures</strong> लिए जाने चाहिए।</p><div class="formula-box">Precautionary Principle = Risk + Uncertainty + Prevention</div><p><strong>Key Points:</strong></p><ul class="bullet-list"><li>Lack of scientific certainty is <strong>not an excuse</strong> for inaction</li><li>Preventive action should be taken <strong>before</strong> damage occurs</li><li>Burden of proof lies with the <strong>proponent</strong> (activity proposer)</li><li>Widely used in <strong>environmental policy</strong> and <strong>climate change</strong></li></ul></div>
+
+      <div id="environmental-principles" class="topic-card"><div class="sec-head"><span class="sec-num">11</span><h2>Environmental Principles — पर्यावरणीय सिद्धांत</h2></div><ul class="bullet-list"><li><strong>Polluter Pays Principle:</strong> Polluter bears the cost</li><li><strong>Precautionary Principle:</strong> Prevention despite scientific uncertainty</li><li><strong>Intergenerational Equity:</strong> Fairness to future generations</li><li><strong>Intragenerational Equity:</strong> Fairness within current generation</li><li><strong>Common But Differentiated Responsibilities (CBDR):</strong> Developed countries should take more responsibility</li><li><strong>Public Trust Doctrine:</strong> Natural resources are held in trust by the state for the public</li><li><strong>Principle of Sustainable Development:</strong> Balance economy, society, environment</li></ul></div>
+
+      <div id="environmental-impact" class="topic-card"><div class="sec-head"><span class="sec-num">12</span><h2>Environmental Impact Assessment (EIA) — पर्यावरणीय प्रभाव आकलन</h2></div><p><strong>EIA</strong> एक process है जो किसी proposed project/activity के <strong>environmental consequences</strong> का assessment करता है — before approval.</p><div class="formula-box">EIA = Project + Impact Assessment + Mitigation + Decision</div><p><strong>Steps:</strong></p><ul class="bullet-list"><li><strong>Screening:</strong> Whether EIA is required</li><li><strong>Scoping:</strong> Which impacts to study</li><li><strong>Impact Assessment:</strong> Identifying and predicting impacts</li><li><strong>Mitigation:</strong> Measures to reduce negative impacts</li><li><strong>Reporting:</strong> EIA report/document</li><li><strong>Review:</strong> Independent review of EIA</li><li><strong>Decision:</strong> Approval or rejection</li></ul></div>
+
+      <div id="exam-traps" class="topic-card"><div class="sec-head"><span class="sec-num">13</span><h2>Common Exam Traps — सामान्य परीक्षा जाल</h2></div><ul class="bullet-list"><li><strong>Trap 1:</strong> Sustainable development = only environmental protection → ❌ It includes economic and social dimensions too.</li><li><strong>Trap 2:</strong> Intergenerational = intragenerational → ❌ Intergenerational is between generations; intragenerational is within the same generation.</li><li><strong>Trap 3:</strong> Polluter Pays = polluter pays only for cleanup → ❌ Includes compensation, prevention, and restoration costs.</li><li><strong>Trap 4:</strong> Precautionary Principle = always stop all activities → ❌ It requires preventive action, not necessarily a ban.</li><li><strong>Trap 5:</strong> Carrying capacity = fixed number → ❌ Can change with technology, resource management.</li><li><strong>Trap 6:</strong> SDGs adopted in 2000 → ❌ SDGs adopted in 2015 (MDGs were 2000).</li><li><strong>Trap 7:</strong> Brundtland Report = 1992 → ❌ Brundtland Report was 1987 (Rio Summit was 1992).</li></ul></div>
+
+      <div id="practice-questions" class="topic-card"><div class="sec-head"><span class="sec-num">14</span><h2>Practice Questions — अभ्यास प्रश्न</h2></div>
+      <div class="pyq-tag">Question 1</div>
+      <p>Sustainable Development was first defined in which report?</p>
+      <ul class="bullet-list"><li>A. Rio Summit 1992</li><li>B. Brundtland Report 1987</li><li>C. Stockholm Conference 1972</li><li>D. Kyoto Protocol 1997</li></ul>
+      <div class="answer-box">Answer: B. Brundtland Report 1987</div>
+      <p class="explain">Explanation: The Brundtland Report (Our Common Future) first defined sustainable development in 1987.</p>
+
+      <div class="pyq-tag">Question 2</div>
+      <p>Which principle states that future generations should have the same access to resources as the present generation?</p>
+      <ul class="bullet-list"><li>A. Polluter Pays Principle</li><li>B. Precautionary Principle</li><li>C. Intergenerational Equity</li><li>D. Intragenerational Equity</li></ul>
+      <div class="answer-box">Answer: C. Intergenerational Equity</div>
+      <p class="explain">Explanation: Intergenerational equity is about fairness between present and future generations.</p>
+
+      <div class="pyq-tag">Question 3</div>
+      <p>The Polluter Pays Principle means:</p>
+      <ul class="bullet-list"><li>A. Polluters should be exempt from costs</li><li>B. Polluters should bear the cost of pollution</li><li>C. Victims should pay for pollution</li><li>D. Government should pay for cleanup</li></ul>
+      <div class="answer-box">Answer: B. Polluters should bear the cost of pollution</div>
+      <p class="explain">Explanation: The Polluter Pays Principle states that those who pollute should bear the costs of pollution control and remediation.</p>
+
+      <div class="pyq-tag">Question 4</div>
+      <p>The Precautionary Principle is applied when:</p>
+      <ul class="bullet-list"><li>A. There is no risk</li><li>B. There is scientific certainty about harm</li><li>C. There is risk but scientific uncertainty</li><li>D. Harm has already occurred</li></ul>
+      <div class="answer-box">Answer: C. There is risk but scientific uncertainty</div>
+      <p class="explain">Explanation: The Precautionary Principle applies when there is a risk of harm, even if scientific evidence is not yet complete.</p>
+
+      <div class="pyq-tag">Question 5</div>
+      <p>Which of the following is NOT one of the three pillars of sustainable development?</p>
+      <ul class="bullet-list"><li>A. Economic</li><li>B. Social</li><li>C. Political</li><li>D. Environmental</li></ul>
+      <div class="answer-box">Answer: C. Political</div>
+      <p class="explain">Explanation: The three pillars of sustainable development are Economic, Social, and Environmental.</p>
+
+      <div class="pyq-tag">Question 6</div>
+      <p>The Sustainable Development Goals (SDGs) were adopted in:</p>
+      <ul class="bullet-list"><li>A. 2000</li><li>B. 2010</li><li>C. 2015</li><li>D. 2020</li></ul>
+      <div class="answer-box">Answer: C. 2015</div>
+      <p class="explain">Explanation: The SDGs were adopted by the UN in 2015, with a target year of 2030.</p></div>
+
+      <div id="one-page-revision" class="topic-card"><div class="sec-head"><span class="sec-num">15</span><h2>One-Page Revision — एक पेज में पुनरावृत्ति</h2></div>
+      <div class="formula-box">Sustainable Development = Present Needs + Future Needs + Balance</div>
+      <div class="formula-box">Three Pillars = Economic + Social + Environmental</div>
+
+      <p><strong>Anthropogenic Activities:</strong></p>
+      <ul class="bullet-list"><li>Deforestation, Industrialisation, Urbanisation, Agriculture, Fossil fuel burning, Mining, Overfishing, Waste generation</li></ul>
+
+      <p><strong>Equity:</strong></p>
+      <ul class="bullet-list"><li>Intergenerational: Fairness between generations</li>
+      <li>Intragenerational: Fairness within current generation</li></ul>
+
+      <p><strong>Environmental Principles:</strong></p>
+      <ul class="bullet-list"><li>Polluter Pays (polluter bears cost)</li>
+      <li>Precautionary (prevent despite uncertainty)</li>
+      <li>Carrying Capacity (maximum sustainable population)</li>
+      <li>CBDR (differentiated responsibilities)</li></ul>
+
+      <p><strong>SDGs:</strong></p>
+      <ul class="bullet-list"><li>17 goals, adopted 2015, target 2030</li></ul>
+
+      <p><strong>Key Reports/Events:</strong></p>
+      <ul class="bullet-list"><li>Brundtland Report (1987): Sustainable Development defined</li>
+      <li>Rio Summit (1992): Agenda 21, UNFCCC, CBD</li>
+      <li>SDGs (2015): 17 goals</li></ul>
+
+      <p><strong>Exam Formula:</strong></p>
+      <div class="formula-box">Sustainable Development = Environment + Development + Equity (Present & Future)</div>
+      <p><em>UGC NET में Human–Environment Interaction & Sustainable Development के questions principles, equity, SDGs, and carrying capacity पर based होते हैं।</em></p></div>
+
+      <div class="enroll-cta"><div><h3 class="h-display">Join the Paper-1 Batch</h3><p>Course fee FREE — ₹500 registration & academic/logistics contribution. Classes daily at 6:30 PM.</p></div><a href="#" class="btn-gold">✓ JOIN BATCH @ ₹500</a></div>
+    </div>
+  </div>
+</main>
+
+<script>
+  (function() {
+
+    const BASE_PATH =
+      "/tutorials/people-development-and-environment/human-environment-interaction-sustainable-development";
+
+    const links =
+      document.querySelectorAll(".nav-link");
+
+    const cards =
+      document.querySelectorAll(".topic-card");
+
+    const content =
+      document.getElementById("contentArea");
+
+    const sidebarToggle =
+      document.getElementById("sidebar-toggle");
+
+
+    // Get topic slug from current URL
+    function getSlugFromPath() {
+
+      const path =
+        window.location.pathname
+          .replace(/\/+$/, "");
+
+      if (
+        path.startsWith(BASE_PATH + "/")
+      ) {
+
+        return path
+          .substring(
+            (BASE_PATH + "/").length
+          )
+          .split("/")[0];
+
+      }
+
+      return null;
+    }
+
+
+    // Update browser URL
+    function updateUrl(
+      slug,
+      replace = false
+    ) {
+
+      const newPath =
+        BASE_PATH + "/" + slug;
+
+      if (
+        window.location.pathname !== newPath
+      ) {
+
+        if (replace) {
+
+          history.replaceState(
+            null,
+            "",
+            newPath
+          );
+
+        } else {
+
+          history.pushState(
+            null,
+            "",
+            newPath
+          );
+
+        }
+
+      }
+
+    }
+
+
+    // Update active sidebar link
+    function updateActiveLink(slug) {
+
+      links.forEach(function(link) {
+
+        const href =
+          link.getAttribute("href");
+
+        if (!href) return;
+
+
+        const linkSlug =
+          href
+            .split("/")
+            .filter(Boolean)
+            .pop();
+
+
+        link.classList.toggle(
+          "active",
+          linkSlug === slug
+        );
+
+      });
+
+    }
+
+
+    // Show selected topic card
+    function showCard(
+      slug,
+      updateHistory = true
+    ) {
+
+      cards.forEach(function(card) {
+
+        card.classList.add("hidden");
+
+      });
+
+
+      const target =
+        document.getElementById(slug);
+
+
+      if (!target) {
+
+        const first =
+          cards[0];
+
+        if (first) {
+
+          first.classList.remove("hidden");
+
+          const firstSlug =
+            first.id;
+
+          updateActiveLink(
+            firstSlug
+          );
+
+          updateUrl(
+            firstSlug,
+            true
+          );
+
+        }
+
+        return;
+      }
+
+
+      target.classList.remove("hidden");
+
+      updateActiveLink(slug);
+
+
+      if (updateHistory) {
+
+        updateUrl(
+          slug,
+          false
+        );
+
+      }
+
+
+      if (sidebarToggle) {
+
+        sidebarToggle.checked = false;
+
+      }
+
+
+      if (content) {
+
+        const top =
+          content.getBoundingClientRect().top +
+          window.pageYOffset -
+          10;
+
+        window.scrollTo({
+
+          top: top,
+
+          behavior: "smooth"
+
+        });
+
+      }
+
+    }
+
+
+    // Sidebar link click
+    links.forEach(function(link) {
+
+      link.addEventListener(
+        "click",
+        function(e) {
+
+          e.preventDefault();
+
+
+          const href =
+            this.getAttribute("href");
+
+          if (!href) return;
+
+
+          const slug =
+            href
+              .split("/")
+              .filter(Boolean)
+              .pop();
+
+
+          if (!slug) return;
+
+
+          showCard(
+            slug,
+            true
+          );
+
+        }
+      );
+
+    });
+
+
+    // Initial page load
+    function initFromPath() {
+
+      let slug =
+        getSlugFromPath();
+
+
+      if (
+        !slug ||
+        !document.getElementById(slug)
+      ) {
+
+        slug =
+          cards[0]?.id ||
+          "human-environment-intro";
+
+      }
+
+
+      showCard(
+        slug,
+        false
+      );
+
+
+      updateUrl(
+        slug,
+        true
+      );
+
+    }
+
+
+    initFromPath();
+
+
+    // Browser Back / Forward
+    window.addEventListener(
+      "popstate",
+      function() {
+
+        const slug =
+          getSlugFromPath();
+
+
+        if (
+          slug &&
+          document.getElementById(slug)
+        ) {
+
+          showCard(
+            slug,
+            false
+          );
+
+        } else {
+
+          const firstSlug =
+            cards[0]?.id ||
+            "human-environment-intro";
+
+          showCard(
+            firstSlug,
+            false
+          );
+
+        }
+
+      }
+    );
+
+
+  })();
+</script>
+</body>
+</html>

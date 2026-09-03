@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pratyakṣa, Upamāna, Śabda, Arthāpatti & Anupalabdhi – Full Notes | UGC NET Paper-1</title>
+  <meta name="description" content="Complete tutorial: Pratyakṣa (Perception) and its types/stages, Upamāna (Comparison), Śabda & Āpta (Verbal Testimony), Arthāpatti (Postulation), Anupalabdhi (Non-apprehension) - examples and distinctions for UGC NET Paper-1 Logical Reasoning.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; }
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background: #f8f5ee;
+      color: #101a3d;
+    }
+    .h-display { font-family: 'Poppins', sans-serif; font-weight: 800; letter-spacing: -0.01em; }
+    .container { max-width: 1360px; margin: 0 auto; padding: 0 20px; }
+
+    .hero {
+      background: #0b1330;
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+      padding: 28px 0 22px;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      right: -80px;
+      top: -100px;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(232,183,75,0.2), transparent 70%);
+    }
+    .hero-inner { position: relative; }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      padding: 6px 16px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+      color: #e8b74b;
+    }
+    .hero h1 {
+      font-size: clamp(28px, 4.2vw, 44px);
+      margin: 12px 0 6px;
+    }
+    .hero p {
+      color: rgba(255,255,255,0.78);
+      max-width: 680px;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 28px;
+      padding: 28px 0 50px;
+      align-items: start;
+    }
+    @media (max-width: 980px) {
+      .layout { grid-template-columns: 1fr; }
+    }
+
+    .sidebar {
+      position: sticky;
+      top: 16px;
+      max-height: calc(100vh - 40px);
+      overflow-y: auto;
+      background: #fff;
+      border: 1px solid rgba(16,26,61,0.08);
+      border-radius: 16px;
+      padding: 16px 12px;
+      box-shadow: 0 6px 24px rgba(16,26,61,0.05);
+    }
+    .sidebar::-webkit-scrollbar { width: 5px; }
+    .sidebar::-webkit-scrollbar-thumb { background: #dde2ef; border-radius: 8px; }
+    .sidebar-title {
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: #b9852a;
+      padding: 4px 10px 14px;
+    }
+    .nav-link {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 10px;
+      border-radius: 10px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #33406b;
+      line-height: 1.3;
+      transition: 0.1s;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .nav-link:hover { background: #f4f6fc; color: #0b1330; }
+    .nav-link.active {
+      background: #fdf6e7;
+      color: #0b1330;
+    }
+    .nav-num {
+      flex: none;
+      width: 22px;
+      height: 22px;
+      border-radius: 7px;
+      background: #e7eaf5;
+      color: #5b6690;
+      font-size: 11px;
+      font-weight: 800;
+      display: grid;
+      place-items: center;
+    }
+    .nav-link.active .nav-num {
+      background: #e8b74b;
+      color: #0b1330;
+    }
+
+    #sidebar-toggle { display: none; }
+    .mobile-bar { display: none; }
+    @media (max-width: 980px) {
+      .mobile-bar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: #fff;
+        border: 1px solid rgba(16,26,61,0.1);
+        border-radius: 12px;
+        padding: 12px 16px;
+        margin-bottom: 8px;
+        font-weight: 800;
+        font-size: 13.5px;
+        color: #0b1330;
+      }
+      .sidebar { display: none; position: static; max-height: none; }
+      #sidebar-toggle:checked ~ .layout .sidebar { display: block; }
+    }
+
+    .content { min-width: 0; }
+    .topic-card {
+      background: #fff;
+      border: 1px solid rgba(16,26,61,0.08);
+      border-radius: 16px;
+      padding: 20px 20px 16px;
+      margin-bottom: 18px;
+      scroll-margin-top: 20px;
+      display: block;
+    }
+    .topic-card.hidden { display: none; }
+    .sec-head {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+    .sec-num {
+      flex: none;
+      width: 34px;
+      height: 34px;
+      border-radius: 10px;
+      background: #0b1330;
+      color: #e8b74b;
+      font-weight: 800;
+      font-size: 14px;
+      display: grid;
+      place-items: center;
+    }
+    .sec-head h2 {
+      margin: 0;
+      font-size: 19px;
+      font-weight: 800;
+      color: #0b1330;
+    }
+    .topic-card p {
+      font-size: 14.5px;
+      line-height: 1.75;
+      color: #1a254a;
+      margin: 6px 0;
+    }
+    .bullet-list {
+      margin: 8px 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 5px;
+    }
+    .bullet-list li {
+      position: relative;
+      padding-left: 20px;
+      font-size: 14px;
+      line-height: 1.6;
+      color: #1a254a;
+    }
+    .bullet-list li::before {
+      content: "";
+      position: absolute;
+      left: 2px;
+      top: 9px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #d9a53a;
+    }
+    .formula-box {
+      background: #0b1330;
+      color: #fdeec2;
+      font-weight: 700;
+      font-size: 13.6px;
+      padding: 10px 16px;
+      border-radius: 10px;
+      margin: 10px 0;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 12px 0;
+      font-size: 13.6px;
+      display: block;
+      overflow-x: auto;
+    }
+    .data-table th, .data-table td {
+      border: 1px solid #e7eaf5;
+      padding: 8px 12px;
+      text-align: left;
+      color: #1a254a;
+      white-space: normal;
+    }
+    .data-table th {
+      background: #f4f6fc;
+      color: #0b1330;
+      font-weight: 800;
+    }
+    .pyq-tag {
+      display: inline-block;
+      background: #fdf6e7;
+      color: #b9852a;
+      font-weight: 800;
+      font-size: 12px;
+      padding: 4px 12px;
+      border-radius: 8px;
+      margin: 12px 0 6px;
+    }
+    .answer-box {
+      background: #eefaf2;
+      border: 1px solid #bfe8cc;
+      color: #1a7a4c;
+      font-weight: 700;
+      font-size: 13.6px;
+      padding: 6px 14px;
+      border-radius: 9px;
+      margin: 6px 0;
+    }
+    .explain {
+      background: #f4f6fc;
+      border-radius: 9px;
+      padding: 6px 14px;
+      font-size: 13.6px;
+      color: #1a254a;
+    }
+    .subtopic {
+      padding: 14px 0 6px;
+      border-top: 1px dashed #e7eaf5;
+    }
+    .subtopic:first-of-type { border-top: none; padding-top: 2px; }
+    .subhead {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 6px;
+    }
+    .sub-num {
+      flex: none;
+      width: 26px;
+      height: 26px;
+      border-radius: 8px;
+      background: #fdf6e7;
+      color: #b9852a;
+      font-weight: 800;
+      font-size: 12px;
+      display: grid;
+      place-items: center;
+    }
+    .subhead h3 {
+      margin: 0;
+      font-size: 15.5px;
+      font-weight: 800;
+      color: #0b1330;
+    }
+    .enroll-cta {
+      background: #0b1330;
+      color: #fff;
+      border-radius: 16px;
+      padding: 24px 24px;
+      margin-top: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+      overflow: hidden;
+    }
+    .enroll-cta::before {
+      content: "";
+      position: absolute;
+      right: -40px;
+      top: -40px;
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(232,183,75,0.2), transparent 70%);
+    }
+    .enroll-cta h3 { margin: 0 0 4px; font-size: 20px; }
+    .enroll-cta p { margin: 0; color: rgba(255,255,255,0.75); font-size: 13.5px; max-width: 480px; }
+    .btn-gold {
+      background: #e8b74b;
+      color: #0b1330;
+      font-weight: 800;
+      padding: 10px 22px;
+      border-radius: 10px;
+      font-size: 13.5px;
+      white-space: nowrap;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="container hero-inner">
+    <span class="eyebrow">★ UGC NET Paper-I · Logical Reasoning</span>
+    <h1 class="h-display">Pratyakṣa, Upamāna, Śabda, Arthāpatti & Anupalabdhi</h1>
+    <p>Complete tutorial: Pratyakṣa (Perception) and its types/stages, Upamāna (Comparison), Śabda & Āpta (Verbal Testimony), Arthāpatti (Postulation), Anupalabdhi (Non-apprehension) — examples and distinctions.</p>
+  </div>
+</section>
+
+<main class="container">
+  <input type="checkbox" id="sidebar-toggle">
+  <label for="sidebar-toggle" class="mobile-bar">
+    <span>📑 On this page</span>
+    <span>☰ Menu</span>
+  </label>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebarNav">
+      <p class="sidebar-title">On this page</p>
+      <nav>
+        <a href="/tutorials/logical-reasoning/pratyaksha-upamana-shabda-arthapatti-anupalabdhi/pratyaksha-intro" class="nav-link active">
+  <span class="nav-num">1</span>Pratyakṣa (Perception)
+</a>
+<a href="/tutorials/logical-reasoning/pratyaksha-upamana-shabda-arthapatti-anupalabdhi/types-pratyaksha" class="nav-link">
+  <span class="nav-num">2</span>Types of Pratyakṣa
+</a>
+<a href="/tutorials/logical-reasoning/pratyaksha-upamana-shabda-arthapatti-anupalabdhi/stages-pratyaksha" class="nav-link">
+  <span class="nav-num">3</span>Stages of Pratyakṣa
+</a>
+<a href="/tutorials/logical-reasoning/pratyaksha-upamana-shabda-arthapatti-anupalabdhi/upamana" class="nav-link">
+  <span class="nav-num">4</span>Upamāna (Comparison)
+</a>
+<a href="/tutorials/logical-reasoning/pratyaksha-upamana-shabda-arthapatti-anupalabdhi/sabda" class="nav-link">
+  <span class="nav-num">5</span>Śabda (Verbal Testimony)
+</a>
+<a href="/tutorials/logical-reasoning/pratyaksha-upamana-shabda-arthapatti-anupalabdhi/apta" class="nav-link">
+  <span class="nav-num">6</span>Āpta (Reliable Authority)
+</a>
+<a href="/tutorials/logical-reasoning/pratyaksha-upamana-shabda-arthapatti-anupalabdhi/arthapatti" class="nav-link">
+  <span class="nav-num">7</span>Arthāpatti (Postulation)
+</a>
+<a href="/tutorials/logical-reasoning/pratyaksha-upamana-shabda-arthapatti-anupalabdhi/anupalabdhi" class="nav-link">
+  <span class="nav-num">8</span>Anupalabdhi (Non-apprehension)
+</a>
+<a href="/tutorials/logical-reasoning/pratyaksha-upamana-shabda-arthapatti-anupalabdhi/examples-distinctions" class="nav-link">
+  <span class="nav-num">9</span>Examples & Distinctions
+</a>
+<a href="/tutorials/logical-reasoning/pratyaksha-upamana-shabda-arthapatti-anupalabdhi/comparison-table" class="nav-link">
+  <span class="nav-num">10</span>Comparison Table
+</a>
+<a href="/tutorials/logical-reasoning/pratyaksha-upamana-shabda-arthapatti-anupalabdhi/exam-traps" class="nav-link">
+  <span class="nav-num">11</span>Common Exam Traps
+</a>
+<a href="/tutorials/logical-reasoning/pratyaksha-upamana-shabda-arthapatti-anupalabdhi/practice-questions" class="nav-link">
+  <span class="nav-num">12</span>Practice Questions
+</a>
+<a href="/tutorials/logical-reasoning/pratyaksha-upamana-shabda-arthapatti-anupalabdhi/one-page-revision" class="nav-link">
+  <span class="nav-num">13</span>One-Page Revision
+</a>
+      </nav>
+    </aside>
+
+    <div class="content" id="contentArea">
+      <!-- ===== CARDS ===== -->
+      <div id="pratyaksha-intro" class="topic-card"><div class="sec-head"><span class="sec-num">1</span><h2>Pratyakṣa (प्रत्यक्ष) — Perception</h2></div><p><strong>Pratyakṣa</strong> = Knowledge obtained through <strong>direct sense perception</strong>. It is the most fundamental and immediate source of knowledge.</p><div class="formula-box">Pratyakṣa = Direct Sense Perception</div><p><strong>Key Characteristics:</strong></p><ul class="bullet-list"><li><strong>Direct:</strong> No intermediary — immediate contact between sense organ and object.</li><li><strong>Valid:</strong> When senses are functioning properly and conditions are normal.</li><li><strong>Universal:</strong> Accepted by <strong>all</strong> Indian philosophical schools.</li><li><strong>Foundation:</strong> All other pramāṇas ultimately depend on perception.</li></ul><p><strong>Example:</strong> Seeing a tree, hearing a sound, touching a table.</p></div>
+
+      <div id="types-pratyaksha" class="topic-card"><div class="sec-head"><span class="sec-num">2</span><h2>Types of Pratyakṣa — प्रत्यक्ष के प्रकार</h2></div><ul class="bullet-list"><li><strong>Laukika (लौकिक) — Ordinary Perception:</strong> Normal perception through the five senses under normal conditions. Further divided into:<ul><li><strong>Nirvikalpaka (निर्विकल्पक) — Indeterminate:</strong> First moment of perception — object is perceived without any identification or categorization. "Something is there."</li><li><strong>Savikalpaka (सविकल्पक) — Determinate:</strong> Perception with identification — recognizing "This is a tree."</li></ul></li><li><strong>Alaukika (अलौकिक) — Extraordinary Perception:</strong> Perception beyond ordinary sense limits. Includes:<ul><li><strong>Sāmānyalakṣaṇa:</strong> Perception of universal properties</li><li><strong>Jñānalakṣaṇa:</strong> Perception of objects through previous knowledge</li><li><strong>Yogaja:</strong> Yogic/supernatural perception</li></ul></li></ul></div>
+
+      <div id="stages-pratyaksha" class="topic-card"><div class="sec-head"><span class="sec-num">3</span><h2>Stages of Pratyakṣa — प्रत्यक्ष के चरण</h2></div><ul class="bullet-list"><li><strong>Stage 1: Sense-Object Contact (इन्द्रियार्थ-संयोग):</strong> The sense organ comes into contact with the object.</li><li><strong>Stage 2: Nirvikalpaka (Indeterminate Perception — निर्विकल्पक प्रत्यक्ष):</strong> The first, undifferentiated apprehension of the object. No naming or categorization yet. "Something is present."</li><li><strong>Stage 3: Savikalpaka (Determinate Perception — सविकल्पक प्रत्यक्ष):</strong> The object is identified, named, and categorized. "This is a tree."</li><li><strong>Stage 4: Judgment/Recognition:</strong> The perceived object is related to previous knowledge and experience.</li></ul><p><strong>Example:</strong></p><ul class="bullet-list"><li><strong>Nirvikalpaka:</strong> Seeing something brown and tall (just sensation).</li><li><strong>Savikalpaka:</strong> Recognizing "This is a mango tree."</li></ul><p><strong>Distinction:</strong></p><ul class="bullet-list"><li><strong>Nirvikalpaka = Preconceptual — बिना विकल्प के</strong></li><li><strong>Savikalpaka = Conceptual — विकल्प सहित</strong></li></ul></div>
+
+      <div id="upamana" class="topic-card"><div class="sec-head"><span class="sec-num">4</span><h2>Upamāna (उपमान) — Comparison</h2></div><p><strong>Upamāna</strong> = Knowledge obtained through <strong>comparison</strong> or <strong>resemblance</strong> between two objects.</p><div class="formula-box">Upamāna = Knowledge by Similarity/Comparison</div><p><strong>Key Characteristics:</strong></p><ul class="bullet-list"><li>Knowledge of an unknown object through its <strong>similarity</strong> to a known object.</li><li>Involves <strong>analogy</strong> and <strong>comparison</strong>.</li><li>Accepted by: <strong>Nyāya, Vaiśeṣika, Mīmāṃsā, Vedānta</strong>.</li><li>Rejected by: <strong>Buddhism, Jainism, Sāṃkhya, Yoga</strong>.</li></ul><p><strong>Example:</strong></p><ul class="bullet-list"><li>A person who has never seen a <strong>gavaya</strong> (wild ox) is told it is similar to a cow.</li><li>When the person later sees a gavaya, they recognize it by comparing it to the cow.</li><li>Knowledge: "This is a gavaya, similar to a cow."</li></ul></div>
+
+      <div id="sabda" class="topic-card"><div class="sec-head"><span class="sec-num">5</span><h2>Śabda (शब्द) — Verbal Testimony</h2></div><p><strong>Śabda</strong> = Knowledge obtained through <strong>words, testimony, or reliable authority</strong>.</p><div class="formula-box">Śabda = Verbal Testimony / Word</div><p><strong>Key Characteristics:</strong></p><ul class="bullet-list"><li>Knowledge from <strong>trustworthy sources</strong> (scriptures, experts, teachers).</li><li>Two types:<ul><li><strong>Vaidika (वैदिक) — Scriptural:</strong> Vedic/scriptural testimony.</li><li><strong>Laukika (लौकिक) — Worldly:</strong> Ordinary trustworthy persons.</li></ul></li><li>Accepted by: <strong>Nyāya, Mīmāṃsā, Vedānta, Sāṃkhya, Yoga</strong>.</li><li>Rejected by: <strong>Buddhism, Jainism, Vaiśeṣika</strong> (as independent pramāṇa).</li></ul><p><strong>Example:</strong></p><ul class="bullet-list"><li>Learning about historical events from a trustworthy history book.</li><li>"The Ganges flows from the Himalayas" — knowledge from a reliable source.</li></ul></div>
+
+      <div id="apta" class="topic-card"><div class="sec-head"><span class="sec-num">6</span><h2>Āpta (आप्त) — Reliable Authority</h2></div><p><strong>Āpta</strong> = A <strong>trustworthy, reliable person</strong> whose testimony can be accepted as valid knowledge.</p><div class="formula-box">Āpta = Reliable / Trustworthy Authority</div><p><strong>Characteristics of Āpta:</strong></p><ul class="bullet-list"><li><strong>Direct knowledge (Sākṣāt-kṛta-dharma):</strong> Has direct knowledge or access to truth.</li><li><strong>Free from bias (Anāśrita):</strong> Not influenced by personal desires or prejudices.</li><li><strong>Truthful (Satya-vādin):</strong> Always speaks the truth.</li><li><strong>Free from defects (Doṣa-rahita):</strong> Free from attachment, aversion, and ignorance.</li></ul><p><strong>Types of Āpta:</strong></p><ul class="bullet-list"><li><strong>Āpta in Vedic context:</strong> Rishis (sages) who directly perceived the Vedic truths.</li><li><strong>Āpta in worldly context:</strong> Trustworthy experts, teachers, or reliable individuals.</li></ul><p><strong>Example:</strong></p><ul class="bullet-list"><li>A trusted medical doctor's diagnosis is accepted as Śabda (verbal testimony).</li><li>A teacher's statement about a historical event.</li></ul></div>
+
+      <div id="arthapatti" class="topic-card"><div class="sec-head"><span class="sec-num">7</span><h2>Arthāpatti (अर्थापत्ति) — Postulation</h2></div><p><strong>Arthāpatti</strong> = Knowledge derived by <strong>postulation</strong> — when a fact cannot be explained without assuming another fact.</p><div class="formula-box">Arthāpatti = Postulation / Implication</div><p><strong>Key Characteristics:</strong></p><ul class="bullet-list"><li>If observed fact cannot be explained without assuming another fact → That fact is known.</li><li>It is <strong>presupposition</strong> — something must be assumed to make sense of what is observed.</li><li>Accepted by: <strong>Mīmāṃsā, Vedānta</strong> (some accept).</li><li>Rejected by: <strong>Nyāya, Buddhism, Jainism, Sāṃkhya, Yoga</strong>.</li></ul><p><strong>Example 1:</strong></p><ul class="bullet-list"><li>Observing that a person who is known to be alive is not found in the house → Postulate that the person has gone outside.</li><li><strong>Known:</strong> Devadatta is alive and not in the house.</li><li><strong>Postulation:</strong> Devadatta must be outside.</li></ul><p><strong>Example 2:</strong></p><ul class="bullet-list"><li>"Devadatta is fat. He does not eat during the day. Therefore, he must eat at night."</li><li>The fatness cannot be explained without postulating night eating.</li></ul></div>
+
+      <div id="anupalabdhi" class="topic-card"><div class="sec-head"><span class="sec-num">8</span><h2>Anupalabdhi (अनुपलब्धि) — Non-apprehension</h2></div><p><strong>Anupalabdhi</strong> = Knowledge through <strong>non-perception</strong> or <strong>absence</strong> — knowing that something does not exist.</p><div class="formula-box">Anupalabdhi = Knowledge of Absence / Non-perception</div><p><strong>Key Characteristics:</strong></p><ul class="bullet-list"><li>Knowledge of the <strong>absence</strong> of something because it is not perceived.</li><li>Direct perception of <strong>non-existence</strong>.</li><li>Also known as <strong>Abhāva (अभाव)</strong> — non-existence.</li><li>Accepted by: <strong>Mīmāṃsā, Vedānta</strong> (some schools).</li><li>Rejected by: <strong>Nyāya, Vaiśeṣika, Buddhism, Jainism, Sāṃkhya, Yoga</strong>.</li></ul><p><strong>Example:</strong></p><ul class="bullet-list"><li>"There is no pot on the table."</li><li>Knowing the absence of a pot because one does not see it.</li><li>"There is no sound in this room." (Knowing silence — absence of sound)</li></ul></div>
+
+      <div id="examples-distinctions" class="topic-card"><div class="sec-head"><span class="sec-num">9</span><h2>Examples & Distinctions — उदाहरण एवं अंतर</h2></div><table class="data-table"><tr><th>Pramāṇa</th><th>Definition</th><th>Example</th><th>Key Distinction</th></tr><tr><td><strong>Pratyakṣa</strong></td><td>Direct sense perception</td><td>Seeing fire</td><td>Direct, immediate, no intermediary</td></tr><tr><td><strong>Upamāna</strong></td><td>Comparison/Similarity</td><td>Gavaya like cow</td><td>Knowledge through resemblance</td></tr><tr><td><strong>Śabda</strong></td><td>Verbal testimony</td><td>Trustworthy authority</td><td>Knowledge from reliable words</td></tr><tr><td><strong>Arthāpatti</strong></td><td>Postulation</td><td>Fat person eats at night</td><td>Presupposition to explain observation</td></tr><tr><td><strong>Anupalabdhi</strong></td><td>Non-apprehension</td><td>No pot on table</td><td>Knowledge of absence</td></tr></table></div>
+
+      <div id="comparison-table" class="topic-card"><div class="sec-head"><span class="sec-num">10</span><h2>Comparison Table — तुलना तालिका</h2></div><table class="data-table"><tr><th>Basis</th><th>Pratyakṣa</th><th>Upamāna</th><th>Śabda</th><th>Arthāpatti</th><th>Anupalabdhi</th></tr><tr><td><strong>Source</strong></td><td>Senses</td><td>Comparison</td><td>Words/Authority</td><td>Postulation</td><td>Non-perception</td></tr><tr><td><strong>Nature</strong></td><td>Direct</td><td>Indirect</td><td>Indirect</td><td>Indirect</td><td>Direct (absence)</td></tr><tr><td><strong>Accepted By</strong></td><td>All</td><td>Nyāya, Vaiśeṣika, Mīmāṃsā, Vedānta</td><td>Nyāya, Mīmāṃsā, Vedānta, Sāṃkhya, Yoga</td><td>Mīmāṃsā, Vedānta</td><td>Mīmāṃsā, Vedānta</td></tr><tr><td><strong>Example</strong></td><td>Seeing a tree</td><td>Gavaya like cow</td><td>Scriptural statement</td><td>Fat person eats at night</td><td>No pot on table</td></tr></table></div>
+
+      <div id="exam-traps" class="topic-card"><div class="sec-head"><span class="sec-num">11</span><h2>Common Exam Traps — सामान्य परीक्षा जाल</h2></div><ul class="bullet-list"><li><strong>Trap 1:</strong> Pratyakṣa = only visual perception → ❌ It includes all five senses.</li><li><strong>Trap 2:</strong> Nirvikalpaka = perception of the object's name → ❌ It is perception without any identification/name.</li><li><strong>Trap 3:</strong> Savikalpaka = the first moment of perception → ❌ Savikalpaka comes after Nirvikalpaka.</li><li><strong>Trap 4:</strong> Upamāna = any comparison → ❌ It is specifically knowledge of an unknown object through similarity to a known object.</li><li><strong>Trap 5:</strong> Śabda = only Vedic testimony → ❌ It includes both scriptural and worldly testimony.</li><li><strong>Trap 6:</strong> Āpta = any person → ❌ Āpta must be reliable, truthful, and free from defects.</li><li><strong>Trap 7:</strong> Arthāpatti = inference (anumāna) → ❌ Arthāpatti is postulation/presupposition, different from inference.</li><li><strong>Trap 8:</strong> Anupalabdhi = just absence → ❌ It is the <strong>knowledge</strong> of absence, not just the absence itself.</li><li><strong>Trap 9:</strong> All schools accept all five pramāṇas → ❌ Different schools accept different pramāṇas.</li></ul></div>
+
+      <div id="practice-questions" class="topic-card"><div class="sec-head"><span class="sec-num">12</span><h2>Practice Questions — अभ्यास प्रश्न</h2></div>
+      <div class="pyq-tag">Question 1 (Pratyakṣa Types)</div>
+      <p>Recognizing "This is a rose" is an example of which type of perception?</p>
+      <ul class="bullet-list"><li>A. Nirvikalpaka</li><li>B. Savikalpaka</li><li>C. Yogaja</li><li>D. Sāmānyalakṣaṇa</li></ul>
+      <div class="answer-box">Answer: B. Savikalpaka</div>
+      <p class="explain">Explanation: Savikalpaka is determinate perception with identification and categorization.</p>
+
+      <div class="pyq-tag">Question 2 (Upamāna)</div>
+      <p>Recognizing a gavaya by comparing it to a cow is an example of:</p>
+      <ul class="bullet-list"><li>A. Pratyakṣa</li><li>B. Anumāna</li><li>C. Upamāna</li><li>D. Śabda</li></ul>
+      <div class="answer-box">Answer: C. Upamāna</div>
+      <p class="explain">Explanation: Knowledge through comparison/similarity is Upamāna.</p>
+
+      <div class="pyq-tag">Question 3 (Śabda & Āpta)</div>
+      <p>Knowledge from a trustworthy teacher is an example of which pramāṇa?</p>
+      <ul class="bullet-list"><li>A. Pratyakṣa</li><li>B. Anumāna</li><li>C. Upamāna</li><li>D. Śabda</li></ul>
+      <div class="answer-box">Answer: D. Śabda</div>
+      <p class="explain">Explanation: Verbal testimony from a reliable source is Śabda.</p>
+
+      <div class="pyq-tag">Question 4 (Arthāpatti)</div>
+      <p>"Devadatta is fat. He does not eat during the day. Therefore, he eats at night." This is:</p>
+      <ul class="bullet-list"><li>A. Anumāna</li><li>B. Arthāpatti</li><li>C. Upamāna</li><li>D. Anupalabdhi</li></ul>
+      <div class="answer-box">Answer: B. Arthāpatti</div>
+      <p class="explain">Explanation: Postulation — explaining the observed fact (fatness) by postulating night eating.</p>
+
+      <div class="pyq-tag">Question 5 (Anupalabdhi)</div>
+      <p>Knowing "There is no water in this glass" is an example of:</p>
+      <ul class="bullet-list"><li>A. Pratyakṣa</li><li>B. Anumāna</li><li>C. Anupalabdhi</li><li>D. Śabda</li></ul>
+      <div class="answer-box">Answer: C. Anupalabdhi</div>
+      <p class="explain">Explanation: Knowledge of absence through non-perception is Anupalabdhi.</p>
+
+      <div class="pyq-tag">Question 6 (Stages)</div>
+      <p>The first moment of perception without any identification is called:</p>
+      <ul class="bullet-list"><li>A. Savikalpaka</li><li>B. Nirvikalpaka</li><li>C. Laukika</li><li>D. Alaukika</li></ul>
+      <div class="answer-box">Answer: B. Nirvikalpaka</div>
+      <p class="explain">Explanation: Nirvikalpaka is indeterminate perception before identification.</p></div>
+
+      <div id="one-page-revision" class="topic-card"><div class="sec-head"><span class="sec-num">13</span><h2>One-Page Revision — एक पेज में पुनरावृत्ति</h2></div>
+      <div class="formula-box">Pratyakṣa = Direct Perception | Upamāna = Comparison | Śabda = Testimony | Arthāpatti = Postulation | Anupalabdhi = Non-apprehension</div>
+
+      <p><strong>Pratyakṣa Types:</strong></p>
+      <ul class="bullet-list"><li>Laukika (Ordinary): Nirvikalpaka (Indeterminate) → Savikalpaka (Determinate)</li>
+      <li>Alaukika (Extraordinary): Sāmānyalakṣaṇa, Jñānalakṣaṇa, Yogaja</li></ul>
+
+      <p><strong>Śabda & Āpta:</strong></p>
+      <ul class="bullet-list"><li>Śabda = Verbal testimony (Vaidika + Laukika)</li>
+      <li>Āpta = Reliable authority — truthful, unbiased, has direct knowledge</li></ul>
+
+      <p><strong>Arthāpatti:</strong></p>
+      <ul class="bullet-list"><li>Postulation — explaining an observed fact by assuming another fact</li></ul>
+
+      <p><strong>Anupalabdhi:</strong></p>
+      <ul class="bullet-list"><li>Knowledge of absence/non-existence</li></ul>
+
+      <p><strong>Exam Formula:</strong></p>
+      <div class="formula-box">Pratyakṣa = Direct | Upamāna = Similarity | Śabda = Words | Arthāpatti = Postulation | Anupalabdhi = Absence</div>
+      <p><em>UGC NET में इन pramāṇas के questions identification, types, stages, और distinctions पर based होते हैं।</em></p></div>
+
+      <div class="enroll-cta"><div><h3 class="h-display">Join the Paper-1 Batch</h3><p>Course fee FREE — ₹500 registration & academic/logistics contribution. Classes daily at 6:30 PM.</p></div><a href="#" class="btn-gold">✓ JOIN BATCH @ ₹500</a></div>
+    </div>
+  </div>
+</main>
+
+<script>
+  (function() {
+
+    const BASE_PATH =
+      "/tutorials/logical-reasoning/pratyaksha-upamana-shabda-arthapatti-anupalabdhi";
+
+    const links = document.querySelectorAll(".nav-link");
+    const cards = document.querySelectorAll(".topic-card");
+    const content = document.getElementById("contentArea");
+    const sidebarToggle = document.getElementById("sidebar-toggle");
+
+
+    // Get topic slug from current URL
+    function getSlugFromPath() {
+
+      const path = window.location.pathname
+        .replace(/\/+$/, "");
+
+      if (path.startsWith(BASE_PATH + "/")) {
+
+        return path
+          .substring((BASE_PATH + "/").length)
+          .split("/")[0];
+
+      }
+
+      return null;
+    }
+
+
+    // Update browser URL
+    function updateUrl(slug, replace = false) {
+
+      const newPath =
+        BASE_PATH + "/" + slug;
+
+      if (window.location.pathname !== newPath) {
+
+        if (replace) {
+
+          history.replaceState(
+            null,
+            "",
+            newPath
+          );
+
+        } else {
+
+          history.pushState(
+            null,
+            "",
+            newPath
+          );
+
+        }
+
+      }
+    }
+
+
+    // Update active sidebar link
+    function updateActiveLink(slug) {
+
+      links.forEach(function(link) {
+
+        const href =
+          link.getAttribute("href");
+
+        if (!href) return;
+
+        const linkSlug =
+          href
+            .split("/")
+            .filter(Boolean)
+            .pop();
+
+        link.classList.toggle(
+          "active",
+          linkSlug === slug
+        );
+
+      });
+
+    }
+
+
+    // Show selected topic card
+    function showCard(
+      slug,
+      updateHistory = true
+    ) {
+
+      cards.forEach(function(card) {
+
+        card.classList.add("hidden");
+
+      });
+
+
+      const target =
+        document.getElementById(slug);
+
+
+      if (!target) {
+
+        const first = cards[0];
+
+        if (first) {
+
+          first.classList.remove("hidden");
+
+          const firstSlug =
+            first.id;
+
+          updateActiveLink(firstSlug);
+
+          updateUrl(
+            firstSlug,
+            true
+          );
+
+        }
+
+        return;
+      }
+
+
+      target.classList.remove("hidden");
+
+      updateActiveLink(slug);
+
+
+      if (updateHistory) {
+
+        updateUrl(
+          slug,
+          false
+        );
+
+      }
+
+
+      if (sidebarToggle) {
+
+        sidebarToggle.checked = false;
+
+      }
+
+
+      if (content) {
+
+        const top =
+          content.getBoundingClientRect().top +
+          window.pageYOffset -
+          10;
+
+        window.scrollTo({
+
+          top: top,
+
+          behavior: "smooth"
+
+        });
+
+      }
+
+    }
+
+
+    // Sidebar link click
+    links.forEach(function(link) {
+
+      link.addEventListener(
+        "click",
+        function(e) {
+
+          e.preventDefault();
+
+
+          const href =
+            this.getAttribute("href");
+
+          if (!href) return;
+
+
+          const slug =
+            href
+              .split("/")
+              .filter(Boolean)
+              .pop();
+
+
+          if (!slug) return;
+
+
+          console.log(
+            "Clicked topic:",
+            slug
+          );
+
+
+          showCard(
+            slug,
+            true
+          );
+
+        }
+      );
+
+    });
+
+
+    // Initial page load
+    function initFromPath() {
+
+      let slug =
+        getSlugFromPath();
+
+
+      if (
+        !slug ||
+        !document.getElementById(slug)
+      ) {
+
+        slug =
+          cards[0]?.id ||
+          "pratyaksha-intro";
+
+      }
+
+
+      showCard(
+        slug,
+        false
+      );
+
+
+      updateUrl(
+        slug,
+        true
+      );
+
+    }
+
+
+    initFromPath();
+
+
+    // Browser Back / Forward
+    window.addEventListener(
+      "popstate",
+      function() {
+
+        const slug =
+          getSlugFromPath();
+
+
+        if (
+          slug &&
+          document.getElementById(slug)
+        ) {
+
+          showCard(
+            slug,
+            false
+          );
+
+        } else {
+
+          const firstSlug =
+            cards[0]?.id ||
+            "pratyaksha-intro";
+
+          showCard(
+            firstSlug,
+            false
+          );
+
+        }
+
+      }
+    );
+
+
+  })();
+</script>
+</body>
+</html>

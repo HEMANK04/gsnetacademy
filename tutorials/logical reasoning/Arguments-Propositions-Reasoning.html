@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arguments, Propositions & Reasoning – Full Notes | UGC NET Paper-1</title>
+  <meta name="description" content="Complete tutorial: Argument and its structure, Premise & Conclusion, Argument vs Explanation, Proposition vs Sentence, Deductive Reasoning, Inductive Reasoning, Validity, Soundness, Strength & Cogency for UGC NET Paper-1 Logical Reasoning.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; }
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background: #f8f5ee;
+      color: #101a3d;
+    }
+    .h-display { font-family: 'Poppins', sans-serif; font-weight: 800; letter-spacing: -0.01em; }
+    .container { max-width: 1360px; margin: 0 auto; padding: 0 20px; }
+
+    .hero {
+      background: #0b1330;
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+      padding: 28px 0 22px;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      right: -80px;
+      top: -100px;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(232,183,75,0.2), transparent 70%);
+    }
+    .hero-inner { position: relative; }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      padding: 6px 16px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+      color: #e8b74b;
+    }
+    .hero h1 {
+      font-size: clamp(28px, 4.2vw, 44px);
+      margin: 12px 0 6px;
+    }
+    .hero p {
+      color: rgba(255,255,255,0.78);
+      max-width: 680px;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 28px;
+      padding: 28px 0 50px;
+      align-items: start;
+    }
+    @media (max-width: 980px) {
+      .layout { grid-template-columns: 1fr; }
+    }
+
+    .sidebar {
+      position: sticky;
+      top: 16px;
+      max-height: calc(100vh - 40px);
+      overflow-y: auto;
+      background: #fff;
+      border: 1px solid rgba(16,26,61,0.08);
+      border-radius: 16px;
+      padding: 16px 12px;
+      box-shadow: 0 6px 24px rgba(16,26,61,0.05);
+    }
+    .sidebar::-webkit-scrollbar { width: 5px; }
+    .sidebar::-webkit-scrollbar-thumb { background: #dde2ef; border-radius: 8px; }
+    .sidebar-title {
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: #b9852a;
+      padding: 4px 10px 14px;
+    }
+    .nav-link {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 10px;
+      border-radius: 10px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #33406b;
+      line-height: 1.3;
+      transition: 0.1s;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .nav-link:hover { background: #f4f6fc; color: #0b1330; }
+    .nav-link.active {
+      background: #fdf6e7;
+      color: #0b1330;
+    }
+    .nav-num {
+      flex: none;
+      width: 22px;
+      height: 22px;
+      border-radius: 7px;
+      background: #e7eaf5;
+      color: #5b6690;
+      font-size: 11px;
+      font-weight: 800;
+      display: grid;
+      place-items: center;
+    }
+    .nav-link.active .nav-num {
+      background: #e8b74b;
+      color: #0b1330;
+    }
+
+    #sidebar-toggle { display: none; }
+    .mobile-bar { display: none; }
+    @media (max-width: 980px) {
+      .mobile-bar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: #fff;
+        border: 1px solid rgba(16,26,61,0.1);
+        border-radius: 12px;
+        padding: 12px 16px;
+        margin-bottom: 8px;
+        font-weight: 800;
+        font-size: 13.5px;
+        color: #0b1330;
+      }
+      .sidebar { display: none; position: static; max-height: none; }
+      #sidebar-toggle:checked ~ .layout .sidebar { display: block; }
+    }
+
+    .content { min-width: 0; }
+    .topic-card {
+      background: #fff;
+      border: 1px solid rgba(16,26,61,0.08);
+      border-radius: 16px;
+      padding: 20px 20px 16px;
+      margin-bottom: 18px;
+      scroll-margin-top: 20px;
+      display: block;
+    }
+    .topic-card.hidden { display: none; }
+    .sec-head {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+    .sec-num {
+      flex: none;
+      width: 34px;
+      height: 34px;
+      border-radius: 10px;
+      background: #0b1330;
+      color: #e8b74b;
+      font-weight: 800;
+      font-size: 14px;
+      display: grid;
+      place-items: center;
+    }
+    .sec-head h2 {
+      margin: 0;
+      font-size: 19px;
+      font-weight: 800;
+      color: #0b1330;
+    }
+    .topic-card p {
+      font-size: 14.5px;
+      line-height: 1.75;
+      color: #1a254a;
+      margin: 6px 0;
+    }
+    .bullet-list {
+      margin: 8px 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 5px;
+    }
+    .bullet-list li {
+      position: relative;
+      padding-left: 20px;
+      font-size: 14px;
+      line-height: 1.6;
+      color: #1a254a;
+    }
+    .bullet-list li::before {
+      content: "";
+      position: absolute;
+      left: 2px;
+      top: 9px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #d9a53a;
+    }
+    .formula-box {
+      background: #0b1330;
+      color: #fdeec2;
+      font-weight: 700;
+      font-size: 13.6px;
+      padding: 10px 16px;
+      border-radius: 10px;
+      margin: 10px 0;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 12px 0;
+      font-size: 13.6px;
+      display: block;
+      overflow-x: auto;
+    }
+    .data-table th, .data-table td {
+      border: 1px solid #e7eaf5;
+      padding: 8px 12px;
+      text-align: left;
+      color: #1a254a;
+      white-space: normal;
+    }
+    .data-table th {
+      background: #f4f6fc;
+      color: #0b1330;
+      font-weight: 800;
+    }
+    .pyq-tag {
+      display: inline-block;
+      background: #fdf6e7;
+      color: #b9852a;
+      font-weight: 800;
+      font-size: 12px;
+      padding: 4px 12px;
+      border-radius: 8px;
+      margin: 12px 0 6px;
+    }
+    .answer-box {
+      background: #eefaf2;
+      border: 1px solid #bfe8cc;
+      color: #1a7a4c;
+      font-weight: 700;
+      font-size: 13.6px;
+      padding: 6px 14px;
+      border-radius: 9px;
+      margin: 6px 0;
+    }
+    .explain {
+      background: #f4f6fc;
+      border-radius: 9px;
+      padding: 6px 14px;
+      font-size: 13.6px;
+      color: #1a254a;
+    }
+    .subtopic {
+      padding: 14px 0 6px;
+      border-top: 1px dashed #e7eaf5;
+    }
+    .subtopic:first-of-type { border-top: none; padding-top: 2px; }
+    .subhead {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 6px;
+    }
+    .sub-num {
+      flex: none;
+      width: 26px;
+      height: 26px;
+      border-radius: 8px;
+      background: #fdf6e7;
+      color: #b9852a;
+      font-weight: 800;
+      font-size: 12px;
+      display: grid;
+      place-items: center;
+    }
+    .subhead h3 {
+      margin: 0;
+      font-size: 15.5px;
+      font-weight: 800;
+      color: #0b1330;
+    }
+    .enroll-cta {
+      background: #0b1330;
+      color: #fff;
+      border-radius: 16px;
+      padding: 24px 24px;
+      margin-top: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+      overflow: hidden;
+    }
+    .enroll-cta::before {
+      content: "";
+      position: absolute;
+      right: -40px;
+      top: -40px;
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(232,183,75,0.2), transparent 70%);
+    }
+    .enroll-cta h3 { margin: 0 0 4px; font-size: 20px; }
+    .enroll-cta p { margin: 0; color: rgba(255,255,255,0.75); font-size: 13.5px; max-width: 480px; }
+    .btn-gold {
+      background: #e8b74b;
+      color: #0b1330;
+      font-weight: 800;
+      padding: 10px 22px;
+      border-radius: 10px;
+      font-size: 13.5px;
+      white-space: nowrap;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="container hero-inner">
+    <span class="eyebrow">★ UGC NET Paper-I · Logical Reasoning</span>
+    <h1 class="h-display">Arguments, Propositions & Reasoning</h1>
+    <p>Complete tutorial: Argument and its structure, Premise & Conclusion, Argument vs Explanation, Proposition vs Sentence, Deductive Reasoning, Inductive Reasoning, Validity, Soundness, Strength & Cogency.</p>
+  </div>
+</section>
+
+<main class="container">
+  <input type="checkbox" id="sidebar-toggle">
+  <label for="sidebar-toggle" class="mobile-bar">
+    <span>📑 On this page</span>
+    <span>☰ Menu</span>
+  </label>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebarNav">
+      <p class="sidebar-title">On this page</p>
+      <nav>
+       <a href="/tutorials/logical-reasoning/arguments-propositions-reasoning/argument-meaning" class="nav-link active">
+  <span class="nav-num">1</span>Meaning of Argument
+</a>
+<a href="/tutorials/logical-reasoning/arguments-propositions-reasoning/argument-structure" class="nav-link">
+  <span class="nav-num">2</span>Structure of Argument
+</a>
+<a href="/tutorials/logical-reasoning/arguments-propositions-reasoning/premise-conclusion" class="nav-link">
+  <span class="nav-num">3</span>Premise & Conclusion
+</a>
+<a href="/tutorials/logical-reasoning/arguments-propositions-reasoning/argument-vs-explanation" class="nav-link">
+  <span class="nav-num">4</span>Argument vs Explanation
+</a>
+<a href="/tutorials/logical-reasoning/arguments-propositions-reasoning/proposition-vs-sentence" class="nav-link">
+  <span class="nav-num">5</span>Proposition vs Sentence
+</a>
+<a href="/tutorials/logical-reasoning/arguments-propositions-reasoning/types-propositions" class="nav-link">
+  <span class="nav-num">6</span>Types of Propositions
+</a>
+<a href="/tutorials/logical-reasoning/arguments-propositions-reasoning/deductive-reasoning" class="nav-link">
+  <span class="nav-num">7</span>Deductive Reasoning
+</a>
+<a href="/tutorials/logical-reasoning/arguments-propositions-reasoning/inductive-reasoning" class="nav-link">
+  <span class="nav-num">8</span>Inductive Reasoning
+</a>
+<a href="/tutorials/logical-reasoning/arguments-propositions-reasoning/deductive-vs-inductive" class="nav-link">
+  <span class="nav-num">9</span>Deductive vs Inductive
+</a>
+<a href="/tutorials/logical-reasoning/arguments-propositions-reasoning/validity" class="nav-link">
+  <span class="nav-num">10</span>Validity
+</a>
+<a href="/tutorials/logical-reasoning/arguments-propositions-reasoning/soundness" class="nav-link">
+  <span class="nav-num">11</span>Soundness
+</a>
+<a href="/tutorials/logical-reasoning/arguments-propositions-reasoning/strength" class="nav-link">
+  <span class="nav-num">12</span>Strength
+</a>
+<a href="/tutorials/logical-reasoning/arguments-propositions-reasoning/cogency" class="nav-link">
+  <span class="nav-num">13</span>Cogency
+</a>
+<a href="/tutorials/logical-reasoning/arguments-propositions-reasoning/evaluation-summary" class="nav-link">
+  <span class="nav-num">14</span>Evaluation Summary
+</a>
+<a href="/tutorials/logical-reasoning/arguments-propositions-reasoning/exam-traps" class="nav-link">
+  <span class="nav-num">15</span>Common Exam Traps
+</a>
+<a href="/tutorials/logical-reasoning/arguments-propositions-reasoning/practice-questions" class="nav-link">
+  <span class="nav-num">16</span>Practice Questions
+</a>
+<a href="/tutorials/logical-reasoning/arguments-propositions-reasoning/one-page-revision" class="nav-link">
+  <span class="nav-num">17</span>One-Page Revision
+</a>
+      </nav>
+    </aside>
+
+    <div class="content" id="contentArea">
+      <!-- ===== CARDS ===== -->
+      <div id="argument-meaning" class="topic-card"><div class="sec-head"><span class="sec-num">1</span><h2>Meaning of Argument — तर्क का अर्थ</h2></div><p><strong>Argument</strong> statements (propositions) का एक <strong>set</strong> है जिसमें एक statement (conclusion) को दूसरी statements (premises) के <strong>support</strong> में प्रस्तुत किया जाता है।</p><div class="formula-box">Argument = Premises + Conclusion</div><p><strong>Key Points:</strong></p><ul class="bullet-list"><li>Argument में कम-से-कम <strong>two statements</strong> होते हैं (at least one premise + one conclusion)</li><li>Argument का उद्देश्य conclusion को <strong>justify</strong> (सही साबित) करना है</li><li>Argument <strong>reasoning</strong> की process है</li></ul><p><strong>Example:</strong></p><ul class="bullet-list"><li><strong>Premise 1:</strong> All humans are mortal.</li><li><strong>Premise 2:</strong> Socrates is a human.</li><li><strong>Conclusion:</strong> Therefore, Socrates is mortal.</li></ul><p><strong>NOT an Argument (Just a Statement):</strong></p><ul class="bullet-list"><li>"The sky is blue." — यह केवल एक statement है, argument नहीं (क्योंकि कोई premise नहीं है)।</li></ul></div>
+
+      <div id="argument-structure" class="topic-card"><div class="sec-head"><span class="sec-num">2</span><h2>Structure of Argument — तर्क की संरचना</h2></div><p><strong>Basic Structure:</strong></p><div class="formula-box">Premise(s) → Conclusion</div><p><strong>Components:</strong></p><ul class="bullet-list"><li><strong>Premises — आधार/पूर्वपद:</strong> वे statements जो conclusion को <strong>support</strong> (समर्थन) करते हैं।</li><li><strong>Conclusion — निष्कर्ष:</strong> वह statement जिसे premises से <strong>derive</strong> (प्राप्त) किया जाता है।</li><li><strong>Inference — अनुमान:</strong> Premises से conclusion तक पहुँचने की <strong>logical process</strong>।</li></ul><p><strong>Indicator Words (Signal Words):</strong></p><ul class="bullet-list"><li><strong>Premise Indicators:</strong> because, since, for, as, given that, in that, assuming that</li><li><strong>Conclusion Indicators:</strong> therefore, thus, hence, so, consequently, accordingly, it follows that, we can conclude that</li></ul><p><strong>Example with Indicators:</strong></p><ul class="bullet-list"><li>"<strong>Since</strong> all teachers are educated (premise), and Mr. Sharma is a teacher (premise), <strong>therefore</strong>, Mr. Sharma is educated (conclusion)."</li></ul></div>
+
+      <div id="premise-conclusion" class="topic-card"><div class="sec-head"><span class="sec-num">3</span><h2>Premise & Conclusion — आधार एवं निष्कर्ष</h2></div><ul class="bullet-list"><li><strong>Premise — आधार:</strong> वह statement जो <strong>evidence, reason या support</strong> प्रदान करता है।</li><li><strong>Conclusion — निष्कर्ष:</strong> वह statement जो <strong>premises से logically follow</strong> करता है।</li></ul><p><strong>Identifying Premises and Conclusions:</strong></p><ul class="bullet-list"><li>Look for <strong>indicator words</strong> (because, since → premises; therefore, hence → conclusion)</li><li>Ask: "What is the main claim being made?" → Conclusion</li><li>Ask: "What evidence is being provided?" → Premises</li></ul><p><strong>Example:</strong></p><ul class="bullet-list"><li>"The roads are wet (<strong>premise</strong>). Therefore, it must have rained (<strong>conclusion</strong>)."</li><li>"It must have rained (<strong>conclusion</strong>) because the roads are wet (<strong>premise</strong>)."</li></ul></div>
+
+      <div id="argument-vs-explanation" class="topic-card"><div class="sec-head"><span class="sec-num">4</span><h2>Argument vs Explanation — तर्क vs व्याख्या</h2></div><table class="data-table"><tr><th>Basis</th><th>Argument</th><th>Explanation</th></tr><tr><td>Purpose</td><td>To <strong>prove/justify</strong> a claim</td><td>To <strong>clarify/account for</strong> why something happened</td></tr><tr><td>Direction</td><td>Premises → Conclusion (unknown to known)</td><td>Known phenomenon → Cause/Reason</td></tr><tr><td>Audience</td><td>Someone who <strong>disagrees/doesn't believe</strong></td><td>Someone who <strong>doesn't understand</strong></td></tr><tr><td>Example</td><td>"It rained because the forecast predicted it." (Proving)</td><td>"The roads are wet because it rained." (Explaining)</td></tr></table><p><strong>Key Distinction:</strong></p><ul class="bullet-list"><li><strong>Argument:</strong> "X is true <strong>because</strong> Y" — Y साबित करता है कि X true है।</li><li><strong>Explanation:</strong> "X happened <strong>because</strong> Y" — Y बताता है कि X क्यों happened (X already accepted as true).</li></ul><p><strong>Example:</strong></p><ul class="bullet-list"><li><strong>Argument:</strong> "The teacher must be competent <strong>because</strong> all students scored well." (Scoring well proves competency)</li><li><strong>Explanation:</strong> "The students scored well <strong>because</strong> the teacher is competent." (Competency explains the score — score is already known)</li></ul></div>
+
+      <div id="proposition-vs-sentence" class="topic-card"><div class="sec-head"><span class="sec-num">5</span><h2>Proposition vs Sentence — प्रस्ताव vs वाक्य</h2></div><ul class="bullet-list"><li><strong>Proposition — प्रस्ताव:</strong> वह <strong>meaning/content</strong> जो एक declarative sentence व्यक्त करता है। यह <strong>true या false</strong> हो सकता है।</li><li><strong>Sentence — वाक्य:</strong> वह <strong>grammatical structure</strong> जिसके माध्यम से proposition व्यक्त किया जाता है।</li></ul><div class="formula-box">Proposition = Meaning/Content | Sentence = Grammatical Expression</div><p><strong>Key Differences:</strong></p><ul class="bullet-list"><li>Same proposition can be expressed by <strong>different sentences</strong> (different languages, different words).</li><li>Not all sentences express propositions (questions, commands, exclamations do NOT).</li><li>Propositions are <strong>truth-evaluable</strong> (can be true or false).</li></ul><p><strong>Example:</strong></p><ul class="bullet-list"><li><strong>Same Proposition:</strong> "The sky is blue." / "आकाश नीला है।" (same meaning, different sentences)</li><li><strong>Not a Proposition:</strong> "Where are you going?" (question — not true/false)</li><li><strong>Not a Proposition:</strong> "Please close the door." (command — not true/false)</li></ul></div>
+
+      <div id="types-propositions" class="topic-card"><div class="sec-head"><span class="sec-num">6</span><h2>Types of Propositions — प्रस्तावों के प्रकार</h2></div><ul class="bullet-list"><li><strong>Categorical Proposition — श्रेणीबद्ध प्रस्ताव:</strong> Two classes/categories के बीच relationship बताता है। (All S are P, Some S are P, etc.)</li><li><strong>Conditional Proposition — सशर्त प्रस्ताव:</strong> "If...then..." statement. (If P, then Q)</li><li><strong>Disjunctive Proposition — वियोजक प्रस्ताव:</strong> "Either...or..." statement. (Either P or Q)</li><li><strong>Conjunctive Proposition — संयोजक प्रस्ताव:</strong> "And" statement. (P and Q)</li></ul><p><strong>Categorical Proposition Forms:</strong></p><ul class="bullet-list"><li><strong>Universal Affirmative (A):</strong> All S are P (e.g., All humans are mortal)</li><li><strong>Universal Negative (E):</strong> No S are P (e.g., No humans are perfect)</li><li><strong>Particular Affirmative (I):</strong> Some S are P (e.g., Some students are intelligent)</li><li><strong>Particular Negative (O):</strong> Some S are not P (e.g., Some students are not intelligent)</li></ul></div>
+
+      <div id="deductive-reasoning" class="topic-card"><div class="sec-head"><span class="sec-num">7</span><h2>Deductive Reasoning — निगमनात्मक तर्क</h2></div><div class="formula-box">Deductive = General → Specific | Conclusion is Certain</div><p><strong>Key Points:</strong></p><ul class="bullet-list"><li>Moves from <strong>general premises to specific conclusion</strong></li><li>If premises are true, conclusion <strong>must</strong> be true (certainty)</li><li>Argues from <strong>rules/principles to specific cases</strong></li><li>Example: All humans are mortal → Socrates is human → Socrates is mortal</li></ul><p><strong>Evaluation Criteria:</strong></p><ul class="bullet-list"><li><strong>Validity:</strong> If premises are true, conclusion must be true (structural correctness)</li><li><strong>Soundness:</strong> Valid argument with <strong>true premises</strong></li></ul></div>
+
+      <div id="inductive-reasoning" class="topic-card"><div class="sec-head"><span class="sec-num">8</span><h2>Inductive Reasoning — आगमनात्मक तर्क</h2></div><div class="formula-box">Inductive = Specific → General | Conclusion is Probable</div><p><strong>Key Points:</strong></p><ul class="bullet-list"><li>Moves from <strong>specific observations to general conclusion</strong></li><li>Conclusion is <strong>probable</strong>, not certain</li><li>Used in <strong>science, research, everyday reasoning</strong></li><li>Example: Swan 1 is white, Swan 2 is white, Swan 3 is white → All swans are white (probable)</li></ul><p><strong>Evaluation Criteria:</strong></p><ul class="bullet-list"><li><strong>Strength:</strong> How strongly the premises support the conclusion (degree of probability)</li><li><strong>Cogency:</strong> Strong argument with <strong>true premises</strong></li></ul></div>
+
+      <div id="deductive-vs-inductive" class="topic-card"><div class="sec-head"><span class="sec-num">9</span><h2>Deductive vs Inductive — निगमनात्मक vs आगमनात्मक</h2></div><table class="data-table"><tr><th>Basis</th><th>Deductive</th><th>Inductive</th></tr><tr><td>Direction</td><td>General → Specific</td><td>Specific → General</td></tr><tr><td>Certainty</td><td>Certain (if valid)</td><td>Probable</td></tr><tr><td>Evaluation</td><td>Validity, Soundness</td><td>Strength, Cogency</td></tr><tr><td>Example</td><td>All men are mortal. Socrates is a man. → Socrates is mortal.</td><td>Swan 1 white, Swan 2 white → All swans are white.</td></tr><tr><td>Nature</td><td>Truth-preserving</td><td>Probability-increasing</td></tr></table></div>
+
+      <div id="validity" class="topic-card"><div class="sec-head"><span class="sec-num">10</span><h2>Validity — वैधता</h2></div><p><strong>Validity</strong> एक <strong>deductive argument</strong> की <strong>structural/logical property</strong> है।</p><div class="formula-box">Valid = If premises are true, conclusion MUST be true</div><p><strong>Key Points:</strong></p><ul class="bullet-list"><li>Validity <strong>only applies to deductive arguments</strong></li><li>Validity <strong>does NOT depend on actual truth</strong> of premises</li><li>A valid argument can have <strong>false premises</strong></li><li>An invalid argument can have <strong>true premises and true conclusion</strong></li></ul><p><strong>Examples:</strong></p><ul class="bullet-list"><li><strong>Valid (True Premises):</strong> All men are mortal. Socrates is a man. → Socrates is mortal.</li><li><strong>Valid (False Premises):</strong> All birds can fly. Penguins are birds. → Penguins can fly. (Valid structure, but false premise → unsound)</li><li><strong>Invalid:</strong> All dogs are animals. Cats are animals. → Cats are dogs. (Structural flaw)</li></ul></div>
+
+      <div id="soundness" class="topic-card"><div class="sec-head"><span class="sec-num">11</span><h2>Soundness — सत्यता (साधुता)</h2></div><p><strong>Soundness</strong> एक <strong>deductive argument</strong> की अतिरिक्त property है।</p><div class="formula-box">Sound = Valid + All Premises are True</div><p><strong>Key Points:</strong></p><ul class="bullet-list"><li>Soundness <strong>requires</strong> validity</li><li>Sound argument का conclusion <strong>definitely true</strong> होता है</li><li>An unsound argument can be: (a) invalid, OR (b) valid with at least one false premise</li></ul><p><strong>Examples:</strong></p><ul class="bullet-list"><li><strong>Sound:</strong> All men are mortal. Socrates is a man. → Socrates is mortal. (Valid + true premises)</li><li><strong>Unsound (Valid but false premise):</strong> All birds can fly. Penguins are birds. → Penguins can fly. (Valid structure, but premise false → unsound)</li><li><strong>Unsound (Invalid):</strong> All dogs are animals. Cats are animals. → Cats are dogs. (Invalid → unsound)</li></ul></div>
+
+      <div id="strength" class="topic-card"><div class="sec-head"><span class="sec-num">12</span><h2>Strength — बल/प्रबलता</h2></div><p><strong>Strength</strong> एक <strong>inductive argument</strong> की quality है।</p><div class="formula-box">Strong = Premises make the conclusion highly probable</div><p><strong>Key Points:</strong></p><ul class="bullet-list"><li>Strength <strong>only applies to inductive arguments</strong></li><li>Strength is a <strong>matter of degree</strong> (more or less strong)</li><li>Strong argument = premises provide <strong>strong support</strong> for conclusion</li><li>Weak argument = premises provide <strong>little support</strong> for conclusion</li></ul><p><strong>Examples:</strong></p><ul class="bullet-list"><li><strong>Strong:</strong> 10,000 swans observed; all white → All swans are white. (Strong inductive support)</li><li><strong>Weak:</strong> 2 swans observed; both white → All swans are white. (Weak inductive support)</li><li><strong>Strong:</strong> 90% of students passed after using this method → This method helps students pass.</li></ul></div>
+
+      <div id="cogency" class="topic-card"><div class="sec-head"><span class="sec-num">13</span><h2>Cogency — सुसंगतता/युक्तियुक्तता</h2></div><p><strong>Cogency</strong> एक <strong>inductive argument</strong> की अतिरिक्त property है।</p><div class="formula-box">Cogent = Strong + All Premises are True</div><p><strong>Key Points:</strong></p><ul class="bullet-list"><li>Cogency <strong>requires</strong> strength</li><li>Cogent argument का conclusion <strong>probably true</strong> होता है</li><li>Uncogent argument = (a) weak, OR (b) strong with at least one false premise</li></ul><p><strong>Examples:</strong></p><ul class="bullet-list"><li><strong>Cogent:</strong> 90% of students passed with this method (based on reliable data) → This method is effective. (Strong + true premises)</li><li><strong>Uncogent (Strong but false premise):</strong> Based on fabricated data showing 90% pass rate → This method is effective. (Strong structure, but false premise → uncogent)</li><li><strong>Uncogent (Weak):</strong> 2 students passed with this method → This method is effective. (Weak → uncogent)</li></ul></div>
+
+      <div id="evaluation-summary" class="topic-card"><div class="sec-head"><span class="sec-num">14</span><h2>Evaluation Summary — मूल्यांकन सारांश</h2></div><table class="data-table"><tr><th>Argument Type</th><th>Structural Criteria</th><th>Full Criteria</th></tr><tr><td><strong>Deductive</strong></td><td>Validity (if premises true → conclusion must be true)</td><td>Soundness (Valid + True premises)</td></tr><tr><td><strong>Inductive</strong></td><td>Strength (premises make conclusion probable)</td><td>Cogency (Strong + True premises)</td></tr></table><p><strong>Quick Memory Formula:</strong></p><div class="formula-box">Deductive → Valid → Sound (with true premises)</div><div class="formula-box">Inductive → Strong → Cogent (with true premises)</div></div>
+
+      <div id="exam-traps" class="topic-card"><div class="sec-head"><span class="sec-num">15</span><h2>Common Exam Traps — सामान्य परीक्षा जाल</h2></div><ul class="bullet-list"><li><strong>Trap 1:</strong> Validity = true premises → ❌ Validity is about logical structure, not truth of premises.</li><li><strong>Trap 2:</strong> Soundness = only validity → ❌ Soundness = validity + true premises.</li><li><strong>Trap 3:</strong> Strength = truth of conclusion → ❌ Strength is about how well premises support the conclusion.</li><li><strong>Trap 4:</strong> Cogency = only strength → ❌ Cogency = strength + true premises.</li><li><strong>Trap 5:</strong> Argument and explanation are the same → ❌ Argument proves; explanation clarifies.</li><li><strong>Trap 6:</strong> Proposition = sentence → ❌ Proposition is meaning; sentence is grammatical expression.</li><li><strong>Trap 7:</strong> Inductive reasoning = certain → ❌ Inductive reasoning is probabilistic, not certain.</li></ul></div>
+
+      <div id="practice-questions" class="topic-card"><div class="sec-head"><span class="sec-num">16</span><h2>Practice Questions — अभ्यास प्रश्न</h2></div>
+      <div class="pyq-tag">Question 1 (Argument Structure)</div>
+      <p>Identify the conclusion: "All students must pass the exam. Rahul is a student. Therefore, Rahul must pass the exam."</p>
+      <ul class="bullet-list"><li>A. All students must pass the exam</li><li>B. Rahul is a student</li><li>C. Rahul must pass the exam</li><li>D. None of the above</li></ul>
+      <div class="answer-box">Answer: C. Rahul must pass the exam</div>
+      <p class="explain">Explanation: "Therefore" indicates the conclusion. Premises: "All students must pass" and "Rahul is a student".</p>
+
+      <div class="pyq-tag">Question 2 (Argument vs Explanation)</div>
+      <p>"The ground is wet because it rained." This is an example of:</p>
+      <ul class="bullet-list"><li>A. Argument</li><li>B. Explanation</li><li>C. Proposition</li><li>D. Sentence</li></ul>
+      <div class="answer-box">Answer: B. Explanation</div>
+      <p class="explain">Explanation: "The ground is wet" is accepted as true; "it rained" explains why it is wet — this is an explanation, not an argument.</p>
+
+      <div class="pyq-tag">Question 3 (Proposition vs Sentence)</div>
+      <p>Which of the following is NOT a proposition?</p>
+      <ul class="bullet-list"><li>A. The sky is blue</li><li>B. 2+2=4</li><li>C. Please close the door</li><li>D. All humans are mortal</li></ul>
+      <div class="answer-box">Answer: C. Please close the door</div>
+      <p class="explain">Explanation: A command is not a proposition because it cannot be true or false. Propositions are declarative statements that can be true/false.</p>
+
+      <div class="pyq-tag">Question 4 (Deductive vs Inductive)</div>
+      <p>"Every swan I have seen is white. Therefore, all swans are white." This is an example of:</p>
+      <ul class="bullet-list"><li>A. Deductive reasoning</li><li>B. Inductive reasoning</li><li>C. Validity</li><li>D. Soundness</li></ul>
+      <div class="answer-box">Answer: B. Inductive reasoning</div>
+      <p class="explain">Explanation: It moves from specific observations (some swans) to a general conclusion (all swans) — inductive reasoning.</p>
+
+      <div class="pyq-tag">Question 5 (Validity)</div>
+      <p>An argument is valid if:</p>
+      <ul class="bullet-list"><li>A. All premises are true</li><li>B. The conclusion is true</li><li>C. If premises are true, the conclusion must be true</li><li>D. The conclusion is probable</li></ul>
+      <div class="answer-box">Answer: C. If premises are true, the conclusion must be true</div>
+      <p class="explain">Explanation: Validity is about logical structure — truth-preserving relationship from premises to conclusion.</p>
+
+      <div class="pyq-tag">Question 6 (Soundness)</div>
+      <p>A sound argument must be:</p>
+      <ul class="bullet-list"><li>A. Valid</li><li>B. Have true premises</li><li>C. Both valid and have true premises</li><li>D. Strong</li></ul>
+      <div class="answer-box">Answer: C. Both valid and have true premises</div>
+      <p class="explain">Explanation: Soundness = Validity + True premises.</p>
+
+      <div class="pyq-tag">Question 7 (Cogency)</div>
+      <p>A cogent argument is:</p>
+      <ul class="bullet-list"><li>A. A valid deductive argument</li><li>B. A strong inductive argument with true premises</li><li>C. A weak inductive argument</li><li>D. An invalid deductive argument</li></ul>
+      <div class="answer-box">Answer: B. A strong inductive argument with true premises</div>
+      <p class="explain">Explanation: Cogency = Strength + True premises (applies to inductive arguments).</p></div>
+
+      <div id="one-page-revision" class="topic-card"><div class="sec-head"><span class="sec-num">17</span><h2>One-Page Revision — एक पेज में पुनरावृत्ति</h2></div>
+      <div class="formula-box">Argument = Premises → Conclusion</div>
+
+      <p><strong>Key Concepts:</strong></p>
+      <ul class="bullet-list"><li><strong>Premise:</strong> Evidence/support for conclusion</li><li><strong>Conclusion:</strong> Claim being supported</li><li><strong>Proposition:</strong> Meaning/content (true/false)</li><li><strong>Sentence:</strong> Grammatical expression</li></ul>
+
+      <p><strong>Argument vs Explanation:</strong></p>
+      <ul class="bullet-list"><li>Argument → Proves/justifies</li><li>Explanation → Clarifies/accounts for</li></ul>
+
+      <p><strong>Deductive Reasoning:</strong></p>
+      <ul class="bullet-list"><li>General → Specific, Certain</li><li>Evaluation: Validity, Soundness</li></ul>
+
+      <p><strong>Inductive Reasoning:</strong></p>
+      <ul class="bullet-list"><li>Specific → General, Probable</li><li>Evaluation: Strength, Cogency</li></ul>
+
+      <p><strong>Evaluation Criteria:</strong></p>
+      <ul class="bullet-list"><li><strong>Validity:</strong> Deductive (if premises true → conclusion must be true)</li><li><strong>Soundness:</strong> Deductive (Valid + True premises)</li><li><strong>Strength:</strong> Inductive (premises support conclusion strongly)</li><li><strong>Cogency:</strong> Inductive (Strong + True premises)</li></ul>
+
+      <p><strong>Exam Formula:</strong></p>
+      <div class="formula-box">Valid ≠ True | Sound = Valid + True | Strong ≠ Cogent | Cogent = Strong + True</div>
+      <p><em>UGC NET में Arguments, Propositions & Reasoning के questions logical structure, classification, और evaluation criteria पर based होते हैं।</em></p></div>
+
+      <div class="enroll-cta"><div><h3 class="h-display">Join the Paper-1 Batch</h3><p>Course fee FREE — ₹500 registration & academic/logistics contribution. Classes daily at 6:30 PM.</p></div><a href="#" class="btn-gold">✓ JOIN BATCH @ ₹500</a></div>
+    </div>
+  </div>
+</main>
+
+<script>
+(function() {
+
+  const BASE_PATH =
+    "/tutorials/logical-reasoning/arguments-propositions-reasoning";
+
+  const links = document.querySelectorAll(".nav-link");
+  const cards = document.querySelectorAll(".topic-card");
+  const content = document.getElementById("contentArea");
+  const sidebarToggle = document.getElementById("sidebar-toggle");
+
+
+  // Get topic slug from current URL
+  function getSlugFromPath() {
+
+    const path = window.location.pathname
+      .replace(/\/+$/, "");
+
+    if (path.startsWith(BASE_PATH + "/")) {
+
+      return path
+        .substring((BASE_PATH + "/").length)
+        .split("/")[0];
+
+    }
+
+    return null;
+  }
+
+
+  // Update browser URL
+  function updateUrl(slug, replace = false) {
+
+    const newPath =
+      BASE_PATH + "/" + slug;
+
+    if (window.location.pathname !== newPath) {
+
+      if (replace) {
+        history.replaceState(null, "", newPath);
+      } else {
+        history.pushState(null, "", newPath);
+      }
+
+    }
+  }
+
+
+  // Update active sidebar link
+  function updateActiveLink(slug) {
+
+    links.forEach(function(link) {
+
+      const href =
+        link.getAttribute("href");
+
+      if (!href) return;
+
+      const linkSlug =
+        href
+          .split("/")
+          .filter(Boolean)
+          .pop();
+
+      link.classList.toggle(
+        "active",
+        linkSlug === slug
+      );
+
+    });
+  }
+
+
+  // Show selected topic card
+  function showCard(slug, updateHistory = true) {
+
+    cards.forEach(function(card) {
+      card.classList.add("hidden");
+    });
+
+
+    const target =
+      document.getElementById(slug);
+
+
+    if (!target) {
+
+      const first = cards[0];
+
+      if (first) {
+
+        first.classList.remove("hidden");
+
+        const firstSlug = first.id;
+
+        updateActiveLink(firstSlug);
+
+        updateUrl(firstSlug, true);
+
+      }
+
+      return;
+    }
+
+
+    target.classList.remove("hidden");
+
+    updateActiveLink(slug);
+
+
+    if (updateHistory) {
+      updateUrl(slug);
+    }
+
+
+    if (sidebarToggle) {
+      sidebarToggle.checked = false;
+    }
+
+
+    if (content) {
+
+      const top =
+        content.getBoundingClientRect().top +
+        window.pageYOffset -
+        10;
+
+      window.scrollTo({
+        top: top,
+        behavior: "smooth"
+      });
+
+    }
+
+  }
+
+
+  // Sidebar link click
+  links.forEach(function(link) {
+
+    link.addEventListener("click", function(e) {
+
+      e.preventDefault();
+
+      const href =
+        this.getAttribute("href");
+
+      if (!href) return;
+
+
+      const slug =
+        href
+          .split("/")
+          .filter(Boolean)
+          .pop();
+
+
+      if (!slug) return;
+
+
+      console.log("Clicked topic:", slug);
+
+      showCard(slug, true);
+
+    });
+
+  });
+
+
+  // Initial page load
+  function initFromPath() {
+
+    let slug =
+      getSlugFromPath();
+
+
+    if (
+      !slug ||
+      !document.getElementById(slug)
+    ) {
+
+      slug =
+        cards[0]?.id ||
+        "argument-meaning";
+
+    }
+
+
+    showCard(slug, false);
+
+    updateUrl(slug, true);
+
+  }
+
+
+  initFromPath();
+
+
+  // Browser Back / Forward
+  window.addEventListener(
+    "popstate",
+    function() {
+
+      const slug =
+        getSlugFromPath();
+
+
+      if (
+        slug &&
+        document.getElementById(slug)
+      ) {
+
+        showCard(slug, false);
+
+      } else {
+
+        const firstSlug =
+          cards[0]?.id ||
+          "argument-meaning";
+
+        showCard(firstSlug, false);
+
+      }
+
+    }
+  );
+
+
+})();
+</script>
+</body>
+</html>

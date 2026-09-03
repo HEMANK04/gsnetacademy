@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Indian Logic: Pramāṇa – Full Notes | UGC NET Paper-1</title>
+  <meta name="description" content="Complete tutorial: Indian Logic - Pramā, Apramā, Pramāṇa, Six Pramāṇas (Pratyakṣa, Anumāna, Upamāna, Śabda, Arthāpatti, Anupalabdhi), Different schools & accepted Pramāṇas for UGC NET Paper-1 Logical Reasoning.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; }
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background: #f8f5ee;
+      color: #101a3d;
+    }
+    .h-display { font-family: 'Poppins', sans-serif; font-weight: 800; letter-spacing: -0.01em; }
+    .container { max-width: 1360px; margin: 0 auto; padding: 0 20px; }
+
+    .hero {
+      background: #0b1330;
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+      padding: 28px 0 22px;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      right: -80px;
+      top: -100px;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(232,183,75,0.2), transparent 70%);
+    }
+    .hero-inner { position: relative; }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      padding: 6px 16px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+      color: #e8b74b;
+    }
+    .hero h1 {
+      font-size: clamp(28px, 4.2vw, 44px);
+      margin: 12px 0 6px;
+    }
+    .hero p {
+      color: rgba(255,255,255,0.78);
+      max-width: 680px;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 28px;
+      padding: 28px 0 50px;
+      align-items: start;
+    }
+    @media (max-width: 980px) {
+      .layout { grid-template-columns: 1fr; }
+    }
+
+    .sidebar {
+      position: sticky;
+      top: 16px;
+      max-height: calc(100vh - 40px);
+      overflow-y: auto;
+      background: #fff;
+      border: 1px solid rgba(16,26,61,0.08);
+      border-radius: 16px;
+      padding: 16px 12px;
+      box-shadow: 0 6px 24px rgba(16,26,61,0.05);
+    }
+    .sidebar::-webkit-scrollbar { width: 5px; }
+    .sidebar::-webkit-scrollbar-thumb { background: #dde2ef; border-radius: 8px; }
+    .sidebar-title {
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: #b9852a;
+      padding: 4px 10px 14px;
+    }
+    .nav-link {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 10px;
+      border-radius: 10px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #33406b;
+      line-height: 1.3;
+      transition: 0.1s;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .nav-link:hover { background: #f4f6fc; color: #0b1330; }
+    .nav-link.active {
+      background: #fdf6e7;
+      color: #0b1330;
+    }
+    .nav-num {
+      flex: none;
+      width: 22px;
+      height: 22px;
+      border-radius: 7px;
+      background: #e7eaf5;
+      color: #5b6690;
+      font-size: 11px;
+      font-weight: 800;
+      display: grid;
+      place-items: center;
+    }
+    .nav-link.active .nav-num {
+      background: #e8b74b;
+      color: #0b1330;
+    }
+
+    #sidebar-toggle { display: none; }
+    .mobile-bar { display: none; }
+    @media (max-width: 980px) {
+      .mobile-bar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: #fff;
+        border: 1px solid rgba(16,26,61,0.1);
+        border-radius: 12px;
+        padding: 12px 16px;
+        margin-bottom: 8px;
+        font-weight: 800;
+        font-size: 13.5px;
+        color: #0b1330;
+      }
+      .sidebar { display: none; position: static; max-height: none; }
+      #sidebar-toggle:checked ~ .layout .sidebar { display: block; }
+    }
+
+    .content { min-width: 0; }
+    .topic-card {
+      background: #fff;
+      border: 1px solid rgba(16,26,61,0.08);
+      border-radius: 16px;
+      padding: 20px 20px 16px;
+      margin-bottom: 18px;
+      scroll-margin-top: 20px;
+      display: block;
+    }
+    .topic-card.hidden { display: none; }
+    .sec-head {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+    .sec-num {
+      flex: none;
+      width: 34px;
+      height: 34px;
+      border-radius: 10px;
+      background: #0b1330;
+      color: #e8b74b;
+      font-weight: 800;
+      font-size: 14px;
+      display: grid;
+      place-items: center;
+    }
+    .sec-head h2 {
+      margin: 0;
+      font-size: 19px;
+      font-weight: 800;
+      color: #0b1330;
+    }
+    .topic-card p {
+      font-size: 14.5px;
+      line-height: 1.75;
+      color: #1a254a;
+      margin: 6px 0;
+    }
+    .bullet-list {
+      margin: 8px 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 5px;
+    }
+    .bullet-list li {
+      position: relative;
+      padding-left: 20px;
+      font-size: 14px;
+      line-height: 1.6;
+      color: #1a254a;
+    }
+    .bullet-list li::before {
+      content: "";
+      position: absolute;
+      left: 2px;
+      top: 9px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #d9a53a;
+    }
+    .formula-box {
+      background: #0b1330;
+      color: #fdeec2;
+      font-weight: 700;
+      font-size: 13.6px;
+      padding: 10px 16px;
+      border-radius: 10px;
+      margin: 10px 0;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 12px 0;
+      font-size: 13.6px;
+      display: block;
+      overflow-x: auto;
+    }
+    .data-table th, .data-table td {
+      border: 1px solid #e7eaf5;
+      padding: 8px 12px;
+      text-align: left;
+      color: #1a254a;
+      white-space: normal;
+    }
+    .data-table th {
+      background: #f4f6fc;
+      color: #0b1330;
+      font-weight: 800;
+    }
+    .pyq-tag {
+      display: inline-block;
+      background: #fdf6e7;
+      color: #b9852a;
+      font-weight: 800;
+      font-size: 12px;
+      padding: 4px 12px;
+      border-radius: 8px;
+      margin: 12px 0 6px;
+    }
+    .answer-box {
+      background: #eefaf2;
+      border: 1px solid #bfe8cc;
+      color: #1a7a4c;
+      font-weight: 700;
+      font-size: 13.6px;
+      padding: 6px 14px;
+      border-radius: 9px;
+      margin: 6px 0;
+    }
+    .explain {
+      background: #f4f6fc;
+      border-radius: 9px;
+      padding: 6px 14px;
+      font-size: 13.6px;
+      color: #1a254a;
+    }
+    .subtopic {
+      padding: 14px 0 6px;
+      border-top: 1px dashed #e7eaf5;
+    }
+    .subtopic:first-of-type { border-top: none; padding-top: 2px; }
+    .subhead {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 6px;
+    }
+    .sub-num {
+      flex: none;
+      width: 26px;
+      height: 26px;
+      border-radius: 8px;
+      background: #fdf6e7;
+      color: #b9852a;
+      font-weight: 800;
+      font-size: 12px;
+      display: grid;
+      place-items: center;
+    }
+    .subhead h3 {
+      margin: 0;
+      font-size: 15.5px;
+      font-weight: 800;
+      color: #0b1330;
+    }
+    .enroll-cta {
+      background: #0b1330;
+      color: #fff;
+      border-radius: 16px;
+      padding: 24px 24px;
+      margin-top: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+      overflow: hidden;
+    }
+    .enroll-cta::before {
+      content: "";
+      position: absolute;
+      right: -40px;
+      top: -40px;
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(232,183,75,0.2), transparent 70%);
+    }
+    .enroll-cta h3 { margin: 0 0 4px; font-size: 20px; }
+    .enroll-cta p { margin: 0; color: rgba(255,255,255,0.75); font-size: 13.5px; max-width: 480px; }
+    .btn-gold {
+      background: #e8b74b;
+      color: #0b1330;
+      font-weight: 800;
+      padding: 10px 22px;
+      border-radius: 10px;
+      font-size: 13.5px;
+      white-space: nowrap;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="container hero-inner">
+    <span class="eyebrow">★ UGC NET Paper-I · Logical Reasoning</span>
+    <h1 class="h-display">Indian Logic: Pramāṇa</h1>
+    <p>Complete tutorial: Pramā, Apramā, Pramāṇa, Six Pramāṇas (Pratyakṣa, Anumāna, Upamāna, Śabda, Arthāpatti, Anupalabdhi), Different schools & accepted Pramāṇas for UGC NET Paper-1.</p>
+  </div>
+</section>
+
+<main class="container">
+  <input type="checkbox" id="sidebar-toggle">
+  <label for="sidebar-toggle" class="mobile-bar">
+    <span>📑 On this page</span>
+    <span>☰ Menu</span>
+  </label>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebarNav">
+      <p class="sidebar-title">On this page</p>
+      <nav>
+       <a href="/tutorials/logical-reasoning/indian-logic-pramāṇa/prama-aprama-pramana" class="nav-link active">
+  <span class="nav-num">1</span>Pramā, Apramā, Pramāṇa
+</a>
+<a href="/tutorials/logical-reasoning/indian-logic-pramāṇa/six-pramanas" class="nav-link">
+  <span class="nav-num">2</span>Six Pramāṇas
+</a>
+<a href="/tutorials/logical-reasoning/indian-logic-pramāṇa/pratyaksha" class="nav-link">
+  <span class="nav-num">3</span>Pratyakṣa (Perception)
+</a>
+<a href="/tutorials/logical-reasoning/indian-logic-pramāṇa/anumana" class="nav-link">
+  <span class="nav-num">4</span>Anumāna (Inference)
+</a>
+<a href="/tutorials/logical-reasoning/indian-logic-pramāṇa/upamana" class="nav-link">
+  <span class="nav-num">5</span>Upamāna (Comparison)
+</a>
+<a href="/tutorials/logical-reasoning/indian-logic-pramāṇa/sabda" class="nav-link">
+  <span class="nav-num">6</span>Śabda (Verbal Testimony)
+</a>
+<a href="/tutorials/logical-reasoning/indian-logic-pramāṇa/arthapatti" class="nav-link">
+  <span class="nav-num">7</span>Arthāpatti (Postulation)
+</a>
+<a href="/tutorials/logical-reasoning/indian-logic-pramāṇa/anupalabdhi" class="nav-link">
+  <span class="nav-num">8</span>Anupalabdhi (Non-apprehension)
+</a>
+<a href="/tutorials/logical-reasoning/indian-logic-pramāṇa/schools-accepted" class="nav-link">
+  <span class="nav-num">9</span>Schools & Accepted Pramāṇas
+</a>
+<a href="/tutorials/logical-reasoning/indian-logic-pramāṇa/comparison-table" class="nav-link">
+  <span class="nav-num">10</span>Comparison Table
+</a>
+<a href="/tutorials/logical-reasoning/indian-logic-pramāṇa/exam-traps" class="nav-link">
+  <span class="nav-num">11</span>Common Exam Traps
+</a>
+<a href="/tutorials/logical-reasoning/indian-logic-pramāṇa/practice-questions" class="nav-link">
+  <span class="nav-num">12</span>Practice Questions
+</a>
+<a href="/tutorials/logical-reasoning/indian-logic-pramāṇa/one-page-revision" class="nav-link">
+  <span class="nav-num">13</span>One-Page Revision
+</a>
+      </nav>
+    </aside>
+
+    <div class="content" id="contentArea">
+      <!-- ===== CARDS ===== -->
+      <div id="prama-aprama-pramana" class="topic-card"><div class="sec-head"><span class="sec-num">1</span><h2>Pramā, Apramā, Pramāṇa — प्रमा, अप्रमा, प्रमाण</h2></div><ul class="bullet-list"><li><strong>Pramā (प्रमा) — Valid Knowledge:</strong> Correct, true knowledge. Knowledge that corresponds to reality.</li><li><strong>Apramā (अप्रमा) — Invalid Knowledge:</strong> Incorrect, false knowledge. Knowledge that does not correspond to reality.</li><li><strong>Pramāṇa (प्रमाण) — Means of Valid Knowledge:</strong> The instrument or source through which valid knowledge (pramā) is obtained.</li></ul><div class="formula-box">Pramāṇa → Pramā (Valid Knowledge) | Apramā = Invalid Knowledge</div><p><strong>Key Concept:</strong> Pramāṇa is the <strong>means</strong> (source), Pramā is the <strong>result</strong> (valid knowledge).</p><p><strong>Example:</strong></p><ul class="bullet-list"><li><strong>Pramāṇa:</strong> Seeing the fire (Perception)</li><li><strong>Pramā:</strong> The knowledge that "There is a fire" (Valid knowledge)</li><li><strong>Apramā:</strong> Mistaking a rope for a snake (Illusion — Invalid knowledge)</li></ul></div>
+
+      <div id="six-pramanas" class="topic-card"><div class="sec-head"><span class="sec-num">2</span><h2>Six Pramāṇas — छह प्रमाण</h2></div><p>Indian Philosophy recognizes <strong>six</strong> main means of valid knowledge (Pramāṇas):</p><ul class="bullet-list"><li><strong>1. Pratyakṣa (प्रत्यक्ष) — Perception</strong></li><li><strong>2. Anumāna (अनुमान) — Inference</strong></li><li><strong>3. Upamāna (उपमान) — Comparison</strong></li><li><strong>4. Śabda (शब्द) — Verbal Testimony</strong></li><li><strong>5. Arthāpatti (अर्थापत्ति) — Postulation</strong></li><li><strong>6. Anupalabdhi (अनुपलब्धि) — Non-apprehension</strong></li></ul><div class="formula-box">Six Pramāṇas = PAUSAA (Pratyakṣa, Anumāna, Upamāna, Śabda, Arthāpatti, Anupalabdhi)</div></div>
+
+      <div id="pratyaksha" class="topic-card"><div class="sec-head"><span class="sec-num">3</span><h2>Pratyakṣa (प्रत्यक्ष) — Perception</h2></div><p><strong>Pratyakṣa</strong> = Knowledge obtained through <strong>direct sense perception</strong> (seeing, hearing, touching, tasting, smelling).</p><div class="formula-box">Pratyakṣa = Sense Perception</div><p><strong>Key Points:</strong></p><ul class="bullet-list"><li>Most <strong>fundamental</strong> and <strong>direct</strong> source of knowledge</li><li>Involves <strong>senses</strong> (eyes, ears, skin, tongue, nose)</li><li>Two types:<ul><li><strong>Laukika (Ordinary):</strong> Normal sense perception</li><li><strong>Alaukika (Extraordinary):</strong> Yogic/supernatural perception</li></ul></li><li>Accepted by <strong>all</strong> Indian philosophical schools</li></ul><p><strong>Example:</strong> Seeing the fire directly — "I see the fire burning."</p></div>
+
+      <div id="anumana" class="topic-card"><div class="sec-head"><span class="sec-num">4</span><h2>Anumāna (अनुमान) — Inference</h2></div><p><strong>Anumāna</strong> = Knowledge derived through <strong>logical inference</strong> — from a known sign (hetu) to the unknown (sādhya).</p><div class="formula-box">Anumāna = Inference from Sign to Inferred</div><p><strong>Key Points:</strong></p><ul class="bullet-list"><li>Based on <strong>logical reasoning</strong> from observed to unobserved</li><li>Structure: <strong>Pakṣa (Subject) → Hetu (Reason) → Sādhya (Inferred)</strong></li><li><strong>Vyāpti (Invariable Concomitance):</strong> The universal relationship between hetu and sādhya</li><li>Accepted by <strong>all</strong> Indian philosophical schools</li></ul><p><strong>Example:</strong></p><ul class="bullet-list"><li>Seeing smoke on a hill → There is fire on the hill.</li><li><strong>Pakṣa:</strong> The hill</li><li><strong>Hetu:</strong> Smoke</li><li><strong>Sādhya:</strong> Fire</li><li><strong>Vyāpti:</strong> Wherever there is smoke, there is fire.</li></ul></div>
+
+      <div id="upamana" class="topic-card"><div class="sec-head"><span class="sec-num">5</span><h2>Upamāna (उपमान) — Comparison</h2></div><p><strong>Upamāna</strong> = Knowledge through <strong>comparison</strong> or <strong>similarity</strong> between two things.</p><div class="formula-box">Upamāna = Knowledge by Comparison/Resemblance</div><p><strong>Key Points:</strong></p><ul class="bullet-list"><li>Knowledge of an unknown object through its <strong>similarity</strong> to a known object</li><li>Involves <strong>analogy</strong> and <strong>comparison</strong></li><li>Accepted by: <strong>Nyāya, Vaiśeṣika, Mīmāṃsā, Vedānta</strong></li><li>Rejected by: <strong>Buddhism, Jainism, Sāṃkhya, Yoga</strong></li></ul><p><strong>Example:</strong></p><ul class="bullet-list"><li>A person who has never seen a <strong>gavaya</strong> (wild ox) is told it is similar to a cow.</li><li>When the person later sees a gavaya, they recognize it by comparison to the cow.</li></ul></div>
+
+      <div id="sabda" class="topic-card"><div class="sec-head"><span class="sec-num">6</span><h2>Śabda (शब्द) — Verbal Testimony</h2></div><p><strong>Śabda</strong> = Knowledge obtained through <strong>words, testimony, or reliable authority</strong> (verbal communication).</p><div class="formula-box">Śabda = Verbal Testimony / Word</div><p><strong>Key Points:</strong></p><ul class="bullet-list"><li>Knowledge from <strong>trustworthy sources</strong> (scriptures, experts, teachers)</li><li>Two types:<ul><li><strong>Vaidika (Scriptural):</strong> Vedic/scriptural testimony</li><li><strong>Laukika (Worldly):</strong> Ordinary trustworthy persons</li></ul></li><li>Accepted by: <strong>Nyāya, Mīmāṃsā, Vedānta, Sāṃkhya, Yoga</strong></li><li>Rejected by: <strong>Buddhism, Jainism, Vaiśeṣika</strong> (as independent pramāṇa)</li></ul><p><strong>Example:</strong></p><ul class="bullet-list"><li>Learning about historical events from a trustworthy history book.</li><li>Knowledge of "The Ganges flows from the Himalayas" from a reliable source.</li></ul></div>
+
+      <div id="arthapatti" class="topic-card"><div class="sec-head"><span class="sec-num">7</span><h2>Arthāpatti (अर्थापत्ति) — Postulation</h2></div><p><strong>Arthāpatti</strong> = Knowledge derived by <strong>postulation</strong> — when a fact cannot be explained without postulating another fact.</p><div class="formula-box">Arthāpatti = Postulation / Implication</div><p><strong>Key Points:</strong></p><ul class="bullet-list"><li>Knowledge of one thing is <strong>presupposed</strong> to explain another</li><li>If observed fact cannot be explained without assuming another fact → That fact is known</li><li>Accepted by: <strong>Mīmāṃsā, Vedānta, Vaiśeṣika</strong> (some accept)</li><li>Rejected by: <strong>Nyāya, Buddhism, Jainism, Sāṃkhya, Yoga</strong></li></ul><p><strong>Example:</strong></p><ul class="bullet-list"><li>Observing that a person who is known to be alive is not found in the house → Postulate that the person has gone outside.</li><li>"Devadatta is fat. He does not eat during the day. Therefore, he must eat at night."</li></ul></div>
+
+      <div id="anupalabdhi" class="topic-card"><div class="sec-head"><span class="sec-num">8</span><h2>Anupalabdhi (अनुपलब्धि) — Non-apprehension</h2></div><p><strong>Anupalabdhi</strong> = Knowledge through <strong>non-perception</strong> or <strong>absence</strong> — knowing that something does not exist.</p><div class="formula-box">Anupalabdhi = Knowledge of Absence / Non-perception</div><p><strong>Key Points:</strong></p><ul class="bullet-list"><li>Knowledge of the <strong>absence</strong> of something because it is not perceived</li><li>Direct perception of <strong>non-existence</strong></li><li>Accepted by: <strong>Mīmāṃsā, Vedānta</strong> (some schools)</li><li>Rejected by: <strong>Nyāya, Vaiśeṣika, Buddhism, Jainism, Sāṃkhya, Yoga</strong></li></ul><p><strong>Example:</strong></p><ul class="bullet-list"><li>"There is no pot on the table."</li><li>Knowing the absence of a pot because one does not see it.</li></ul></div>
+
+      <div id="schools-accepted" class="topic-card"><div class="sec-head"><span class="sec-num">9</span><h2>Schools & Accepted Pramāṇas — दर्शन एवं स्वीकृत प्रमाण</h2></div><table class="data-table"><tr><th>School (Darśana)</th><th>Accepted Pramāṇas</th></tr><tr><td><strong>Nyāya</strong></td><td>Pratyakṣa, Anumāna, Upamāna, Śabda (4)</td></tr><tr><td><strong>Vaiśeṣika</strong></td><td>Pratyakṣa, Anumāna (2)</td></tr><tr><td><strong>Sāṃkhya</strong></td><td>Pratyakṣa, Anumāna, Śabda (3)</td></tr><tr><td><strong>Yoga</strong></td><td>Pratyakṣa, Anumāna, Śabda (3)</td></tr><tr><td><strong>Mīmāṃsā</strong></td><td>Pratyakṣa, Anumāna, Upamāna, Śabda, Arthāpatti, Anupalabdhi (6)</td></tr><tr><td><strong>Vedānta</strong></td><td>Pratyakṣa, Anumāna, Upamāna, Śabda, Arthāpatti, Anupalabdhi (6)</td></tr><tr><td><strong>Buddhism</strong></td><td>Pratyakṣa, Anumāna (2)</td></tr><tr><td><strong>Jainism</strong></td><td>Pratyakṣa, Anumāna, Śabda (3)</td></tr></table></div>
+
+      <div id="comparison-table" class="topic-card"><div class="sec-head"><span class="sec-num">10</span><h2>Comparison Table — तुलना तालिका</h2></div><table class="data-table"><tr><th>Pramāṇa</th><th>Meaning</th><th>Accepted By</th><th>Example</th></tr><tr><td><strong>Pratyakṣa</strong></td><td>Perception</td><td>All Schools</td><td>Seeing fire</td></tr><tr><td><strong>Anumāna</strong></td><td>Inference</td><td>All Schools</td><td>Smoke → Fire</td></tr><tr><td><strong>Upamāna</strong></td><td>Comparison</td><td>Nyāya, Vaiśeṣika, Mīmāṃsā, Vedānta</td><td>Gavaya like cow</td></tr><tr><td><strong>Śabda</strong></td><td>Verbal Testimony</td><td>Nyāya, Mīmāṃsā, Vedānta, Sāṃkhya, Yoga</td><td>Scriptural authority</td></tr><tr><td><strong>Arthāpatti</strong></td><td>Postulation</td><td>Mīmāṃsā, Vedānta</td><td>Fat person eating at night</td></tr><tr><td><strong>Anupalabdhi</strong></td><td>Non-apprehension</td><td>Mīmāṃsā, Vedānta (some)</td><td>Absence of pot</td></tr></table></div>
+
+      <div id="exam-traps" class="topic-card"><div class="sec-head"><span class="sec-num">11</span><h2>Common Exam Traps — सामान्य परीक्षा जाल</h2></div><ul class="bullet-list"><li><strong>Trap 1:</strong> Pramāṇa = Pramā → ❌ Pramāṇa is the <strong>means</strong>; Pramā is the <strong>result</strong> (valid knowledge).</li><li><strong>Trap 2:</strong> Apramā = invalid means → ❌ Apramā is invalid <strong>knowledge</strong>, not invalid means.</li><li><strong>Trap 3:</strong> All schools accept all six pramāṇas → ❌ Different schools accept different numbers (2 to 6).</li><li><strong>Trap 4:</strong> Pratyakṣa = only visual perception → ❌ It includes all five senses.</li><li><strong>Trap 5:</strong> Anumāna = only deductive → ❌ It includes both deductive and inductive inference.</li><li><strong>Trap 6:</strong> Upamāna = same as analogy → ❌ It is similarity/comparison specifically.</li><li><strong>Trap 7:</strong> Śabda = only Vedic scripture → ❌ It includes both scriptural and worldly testimony.</li><li><strong>Trap 8:</strong> Anupalabdhi = absence of perception → ❌ It is the knowledge of absence, not just the absence itself.</li></ul></div>
+
+      <div id="practice-questions" class="topic-card"><div class="sec-head"><span class="sec-num">12</span><h2>Practice Questions — अभ्यास प्रश्न</h2></div>
+      <div class="pyq-tag">Question 1</div>
+      <p>Seeing a fire directly is an example of which pramāṇa?</p>
+      <ul class="bullet-list"><li>A. Anumāna</li><li>B. Pratyakṣa</li><li>C. Upamāna</li><li>D. Śabda</li></ul>
+      <div class="answer-box">Answer: B. Pratyakṣa</div>
+      <p class="explain">Explanation: Direct sensory perception (seeing) is Pratyakṣa.</p>
+
+      <div class="pyq-tag">Question 2</div>
+      <p>Inferring fire from smoke is an example of which pramāṇa?</p>
+      <ul class="bullet-list"><li>A. Pratyakṣa</li><li>B. Anumāna</li><li>C. Upamāna</li><li>D. Arthāpatti</li></ul>
+      <div class="answer-box">Answer: B. Anumāna</div>
+      <p class="explain">Explanation: Inference from a sign (smoke) to the inferred (fire) is Anumāna.</p>
+
+      <div class="pyq-tag">Question 3</div>
+      <p>Recognizing a gavaya by comparing it to a cow is an example of which pramāṇa?</p>
+      <ul class="bullet-list"><li>A. Pratyakṣa</li><li>B. Anumāna</li><li>C. Upamāna</li><li>D. Śabda</li></ul>
+      <div class="answer-box">Answer: C. Upamāna</div>
+      <p class="explain">Explanation: Knowledge through comparison/similarity is Upamāna.</p>
+
+      <div class="pyq-tag">Question 4</div>
+      <p>Which school accepts all six pramāṇas?</p>
+      <ul class="bullet-list"><li>A. Nyāya</li><li>B. Sāṃkhya</li><li>C. Mīmāṃsā</li><li>D. Buddhism</li></ul>
+      <div class="answer-box">Answer: C. Mīmāṃsā</div>
+      <p class="explain">Explanation: Mīmāṃsā accepts all six pramāṇas: Pratyakṣa, Anumāna, Upamāna, Śabda, Arthāpatti, Anupalabdhi.</p>
+
+      <div class="pyq-tag">Question 5</div>
+      <p>"Devadatta is fat. He does not eat during the day. Therefore, he eats at night." This is an example of:</p>
+      <ul class="bullet-list"><li>A. Anumāna</li><li>B. Arthāpatti</li><li>C. Upamāna</li><li>D. Anupalabdhi</li></ul>
+      <div class="answer-box">Answer: B. Arthāpatti</div>
+      <p class="explain">Explanation: Postulation — the observed fact (fatness) is explained by postulating eating at night.</p>
+
+      <div class="pyq-tag">Question 6</div>
+      <p>"There is no pot on the table" is an example of which pramāṇa?</p>
+      <ul class="bullet-list"><li>A. Pratyakṣa</li><li>B. Anumāna</li><li>C. Anupalabdhi</li><li>D. Śabda</li></ul>
+      <div class="answer-box">Answer: C. Anupalabdhi</div>
+      <p class="explain">Explanation: Knowledge of absence (non-perception) is Anupalabdhi.</p>
+
+      <div class="pyq-tag">Question 7</div>
+      <p>Which pramāṇa is accepted by all Indian philosophical schools?</p>
+      <ul class="bullet-list"><li>A. Upamāna</li><li>B. Śabda</li><li>C. Pratyakṣa and Anumāna</li><li>D. Arthāpatti</li></ul>
+      <div class="answer-box">Answer: C. Pratyakṣa and Anumāna</div>
+      <p class="explain">Explanation: Pratyakṣa (Perception) and Anumāna (Inference) are accepted by all schools.</p></div>
+
+      <div id="one-page-revision" class="topic-card"><div class="sec-head"><span class="sec-num">13</span><h2>One-Page Revision — एक पेज में पुनरावृत्ति</h2></div>
+      <div class="formula-box">Pramāṇa = Means | Pramā = Valid Knowledge | Apramā = Invalid Knowledge</div>
+
+      <p><strong>Six Pramāṇas:</strong></p>
+      <ul class="bullet-list"><li><strong>Pratyakṣa:</strong> Perception (All schools)</li>
+      <li><strong>Anumāna:</strong> Inference (All schools)</li>
+      <li><strong>Upamāna:</strong> Comparison (Nyāya, Vaiśeṣika, Mīmāṃsā, Vedānta)</li>
+      <li><strong>Śabda:</strong> Verbal Testimony (Nyāya, Mīmāṃsā, Vedānta, Sāṃkhya, Yoga)</li>
+      <li><strong>Arthāpatti:</strong> Postulation (Mīmāṃsā, Vedānta)</li>
+      <li><strong>Anupalabdhi:</strong> Non-apprehension (Mīmāṃsā, Vedānta)</li></ul>
+
+      <p><strong>Schools & Count:</strong></p>
+      <ul class="bullet-list"><li>Nyāya: 4 (Pratyakṣa, Anumāna, Upamāna, Śabda)</li>
+      <li>Vaiśeṣika: 2 (Pratyakṣa, Anumāna)</li>
+      <li>Sāṃkhya/Yoga/Jainism: 3</li>
+      <li>Mīmāṃsā/Vedānta: 6 (All)</li>
+      <li>Buddhism: 2 (Pratyakṣa, Anumāna)</li></ul>
+
+      <p><strong>Exam Formula:</strong></p>
+      <div class="formula-box">Pramāṇa → Pramā (Valid) | Apramā = Invalid | Different schools = Different counts</div>
+      <p><em>UGC NET में Indian Logic के questions pramāṇa identification, school matching, और application पर based होते हैं।</em></p></div>
+
+      <div class="enroll-cta"><div><h3 class="h-display">Join the Paper-1 Batch</h3><p>Course fee FREE — ₹500 registration & academic/logistics contribution. Classes daily at 6:30 PM.</p></div><a href="#" class="btn-gold">✓ JOIN BATCH @ ₹500</a></div>
+    </div>
+  </div>
+</main>
+
+<script>
+  (function() {
+
+    const BASE_PATH =
+      "/tutorials/logical-reasoning/indian-logic-pramana";
+
+    const links = document.querySelectorAll(".nav-link");
+    const cards = document.querySelectorAll(".topic-card");
+    const content = document.getElementById("contentArea");
+    const sidebarToggle = document.getElementById("sidebar-toggle");
+
+
+    // Get topic slug from current URL
+    function getSlugFromPath() {
+
+      const path = window.location.pathname
+        .replace(/\/+$/, "");
+
+      if (path.startsWith(BASE_PATH + "/")) {
+
+        return path
+          .substring((BASE_PATH + "/").length)
+          .split("/")[0];
+
+      }
+
+      return null;
+    }
+
+
+    // Update browser URL
+    function updateUrl(slug, replace = false) {
+
+      const newPath =
+        BASE_PATH + "/" + slug;
+
+      if (window.location.pathname !== newPath) {
+
+        if (replace) {
+
+          history.replaceState(
+            null,
+            "",
+            newPath
+          );
+
+        } else {
+
+          history.pushState(
+            null,
+            "",
+            newPath
+          );
+
+        }
+
+      }
+    }
+
+
+    // Update active sidebar link
+    function updateActiveLink(slug) {
+
+      links.forEach(function(link) {
+
+        const href =
+          link.getAttribute("href");
+
+        if (!href) return;
+
+        const linkSlug =
+          href
+            .split("/")
+            .filter(Boolean)
+            .pop();
+
+        link.classList.toggle(
+          "active",
+          linkSlug === slug
+        );
+
+      });
+
+    }
+
+
+    // Show selected topic card
+    function showCard(
+      slug,
+      updateHistory = true
+    ) {
+
+      cards.forEach(function(card) {
+
+        card.classList.add("hidden");
+
+      });
+
+
+      const target =
+        document.getElementById(slug);
+
+
+      if (!target) {
+
+        const first = cards[0];
+
+        if (first) {
+
+          first.classList.remove("hidden");
+
+          const firstSlug =
+            first.id;
+
+          updateActiveLink(firstSlug);
+
+          updateUrl(
+            firstSlug,
+            true
+          );
+
+        }
+
+        return;
+      }
+
+
+      target.classList.remove("hidden");
+
+      updateActiveLink(slug);
+
+
+      if (updateHistory) {
+
+        updateUrl(
+          slug,
+          false
+        );
+
+      }
+
+
+      if (sidebarToggle) {
+
+        sidebarToggle.checked = false;
+
+      }
+
+
+      if (content) {
+
+        const top =
+          content.getBoundingClientRect().top +
+          window.pageYOffset -
+          10;
+
+        window.scrollTo({
+
+          top: top,
+
+          behavior: "smooth"
+
+        });
+
+      }
+
+    }
+
+
+    // Sidebar link click
+    links.forEach(function(link) {
+
+      link.addEventListener(
+        "click",
+        function(e) {
+
+          e.preventDefault();
+
+
+          const href =
+            this.getAttribute("href");
+
+          if (!href) return;
+
+
+          const slug =
+            href
+              .split("/")
+              .filter(Boolean)
+              .pop();
+
+
+          if (!slug) return;
+
+
+          console.log(
+            "Clicked topic:",
+            slug
+          );
+
+
+          showCard(
+            slug,
+            true
+          );
+
+        }
+      );
+
+    });
+
+
+    // Initial page load
+    function initFromPath() {
+
+      let slug =
+        getSlugFromPath();
+
+
+      if (
+        !slug ||
+        !document.getElementById(slug)
+      ) {
+
+        slug =
+          cards[0]?.id ||
+          "prama-aprama-pramana";
+
+      }
+
+
+      showCard(
+        slug,
+        false
+      );
+
+
+      updateUrl(
+        slug,
+        true
+      );
+
+    }
+
+
+    initFromPath();
+
+
+    // Browser Back / Forward
+    window.addEventListener(
+      "popstate",
+      function() {
+
+        const slug =
+          getSlugFromPath();
+
+
+        if (
+          slug &&
+          document.getElementById(slug)
+        ) {
+
+          showCard(
+            slug,
+            false
+          );
+
+        } else {
+
+          const firstSlug =
+            cards[0]?.id ||
+            "prama-aprama-pramana";
+
+          showCard(
+            firstSlug,
+            false
+          );
+
+        }
+
+      }
+    );
+
+
+  })();
+</script>
+</body>
+</html>

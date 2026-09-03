@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Environmental Laws, Policies & International Agreements – Full Notes | UGC NET Paper-1</title>
+  <meta name="description" content="Complete tutorial: Environmental Laws, Policies & International Agreements - Environment Protection Act, Water Act, Air Act, Wildlife Protection Act, Forest Conservation Act, Biological Diversity Act, NGT, NAPCC, Stockholm Conference, Montreal Protocol, Rio Earth Summit, Kyoto Protocol, Paris Agreement, International Solar Alliance, MDGs & SDGs for UGC NET Paper-1 Environment.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; }
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background: #f8f5ee;
+      color: #101a3d;
+    }
+    .h-display { font-family: 'Poppins', sans-serif; font-weight: 800; letter-spacing: -0.01em; }
+    .container { max-width: 1360px; margin: 0 auto; padding: 0 20px; }
+
+    .hero {
+      background: #0b1330;
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+      padding: 28px 0 22px;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      right: -80px;
+      top: -100px;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(232,183,75,0.2), transparent 70%);
+    }
+    .hero-inner { position: relative; }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      padding: 6px 16px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+      color: #e8b74b;
+    }
+    .hero h1 {
+      font-size: clamp(28px, 4.2vw, 44px);
+      margin: 12px 0 6px;
+    }
+    .hero p {
+      color: rgba(255,255,255,0.78);
+      max-width: 680px;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 28px;
+      padding: 28px 0 50px;
+      align-items: start;
+    }
+    @media (max-width: 980px) {
+      .layout { grid-template-columns: 1fr; }
+    }
+
+    .sidebar {
+      position: sticky;
+      top: 16px;
+      max-height: calc(100vh - 40px);
+      overflow-y: auto;
+      background: #fff;
+      border: 1px solid rgba(16,26,61,0.08);
+      border-radius: 16px;
+      padding: 16px 12px;
+      box-shadow: 0 6px 24px rgba(16,26,61,0.05);
+    }
+    .sidebar::-webkit-scrollbar { width: 5px; }
+    .sidebar::-webkit-scrollbar-thumb { background: #dde2ef; border-radius: 8px; }
+    .sidebar-title {
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: #b9852a;
+      padding: 4px 10px 14px;
+    }
+    .nav-link {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 10px;
+      border-radius: 10px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #33406b;
+      line-height: 1.3;
+      transition: 0.1s;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .nav-link:hover { background: #f4f6fc; color: #0b1330; }
+    .nav-link.active {
+      background: #fdf6e7;
+      color: #0b1330;
+    }
+    .nav-num {
+      flex: none;
+      width: 22px;
+      height: 22px;
+      border-radius: 7px;
+      background: #e7eaf5;
+      color: #5b6690;
+      font-size: 11px;
+      font-weight: 800;
+      display: grid;
+      place-items: center;
+    }
+    .nav-link.active .nav-num {
+      background: #e8b74b;
+      color: #0b1330;
+    }
+
+    #sidebar-toggle { display: none; }
+    .mobile-bar { display: none; }
+    @media (max-width: 980px) {
+      .mobile-bar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: #fff;
+        border: 1px solid rgba(16,26,61,0.1);
+        border-radius: 12px;
+        padding: 12px 16px;
+        margin-bottom: 8px;
+        font-weight: 800;
+        font-size: 13.5px;
+        color: #0b1330;
+      }
+      .sidebar { display: none; position: static; max-height: none; }
+      #sidebar-toggle:checked ~ .layout .sidebar { display: block; }
+    }
+
+    .content { min-width: 0; }
+    .topic-card {
+      background: #fff;
+      border: 1px solid rgba(16,26,61,0.08);
+      border-radius: 16px;
+      padding: 20px 20px 16px;
+      margin-bottom: 18px;
+      scroll-margin-top: 20px;
+      display: block;
+    }
+    .topic-card.hidden { display: none; }
+    .sec-head {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+    .sec-num {
+      flex: none;
+      width: 34px;
+      height: 34px;
+      border-radius: 10px;
+      background: #0b1330;
+      color: #e8b74b;
+      font-weight: 800;
+      font-size: 14px;
+      display: grid;
+      place-items: center;
+    }
+    .sec-head h2 {
+      margin: 0;
+      font-size: 19px;
+      font-weight: 800;
+      color: #0b1330;
+    }
+    .topic-card p {
+      font-size: 14.5px;
+      line-height: 1.75;
+      color: #1a254a;
+      margin: 6px 0;
+    }
+    .bullet-list {
+      margin: 8px 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 5px;
+    }
+    .bullet-list li {
+      position: relative;
+      padding-left: 20px;
+      font-size: 14px;
+      line-height: 1.6;
+      color: #1a254a;
+    }
+    .bullet-list li::before {
+      content: "";
+      position: absolute;
+      left: 2px;
+      top: 9px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #d9a53a;
+    }
+    .formula-box {
+      background: #0b1330;
+      color: #fdeec2;
+      font-weight: 700;
+      font-size: 13.6px;
+      padding: 10px 16px;
+      border-radius: 10px;
+      margin: 10px 0;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 12px 0;
+      font-size: 13.6px;
+      display: block;
+      overflow-x: auto;
+    }
+    .data-table th, .data-table td {
+      border: 1px solid #e7eaf5;
+      padding: 8px 12px;
+      text-align: left;
+      color: #1a254a;
+      white-space: normal;
+    }
+    .data-table th {
+      background: #f4f6fc;
+      color: #0b1330;
+      font-weight: 800;
+    }
+    .pyq-tag {
+      display: inline-block;
+      background: #fdf6e7;
+      color: #b9852a;
+      font-weight: 800;
+      font-size: 12px;
+      padding: 4px 12px;
+      border-radius: 8px;
+      margin: 12px 0 6px;
+    }
+    .answer-box {
+      background: #eefaf2;
+      border: 1px solid #bfe8cc;
+      color: #1a7a4c;
+      font-weight: 700;
+      font-size: 13.6px;
+      padding: 6px 14px;
+      border-radius: 9px;
+      margin: 6px 0;
+    }
+    .explain {
+      background: #f4f6fc;
+      border-radius: 9px;
+      padding: 6px 14px;
+      font-size: 13.6px;
+      color: #1a254a;
+    }
+    .subtopic {
+      padding: 14px 0 6px;
+      border-top: 1px dashed #e7eaf5;
+    }
+    .subtopic:first-of-type { border-top: none; padding-top: 2px; }
+    .subhead {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 6px;
+    }
+    .sub-num {
+      flex: none;
+      width: 26px;
+      height: 26px;
+      border-radius: 8px;
+      background: #fdf6e7;
+      color: #b9852a;
+      font-weight: 800;
+      font-size: 12px;
+      display: grid;
+      place-items: center;
+    }
+    .subhead h3 {
+      margin: 0;
+      font-size: 15.5px;
+      font-weight: 800;
+      color: #0b1330;
+    }
+    .enroll-cta {
+      background: #0b1330;
+      color: #fff;
+      border-radius: 16px;
+      padding: 24px 24px;
+      margin-top: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+      overflow: hidden;
+    }
+    .enroll-cta::before {
+      content: "";
+      position: absolute;
+      right: -40px;
+      top: -40px;
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(232,183,75,0.2), transparent 70%);
+    }
+    .enroll-cta h3 { margin: 0 0 4px; font-size: 20px; }
+    .enroll-cta p { margin: 0; color: rgba(255,255,255,0.75); font-size: 13.5px; max-width: 480px; }
+    .btn-gold {
+      background: #e8b74b;
+      color: #0b1330;
+      font-weight: 800;
+      padding: 10px 22px;
+      border-radius: 10px;
+      font-size: 13.5px;
+      white-space: nowrap;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="container hero-inner">
+    <span class="eyebrow">★ UGC NET Paper-I · Environment</span>
+    <h1 class="h-display">Environmental Laws, Policies & International Agreements</h1>
+    <p>Complete tutorial: Environment (Protection) Act, 1986, Water Act, 1974, Air Act, 1981, Wildlife Protection Act, 1972, Forest Conservation Act, 1980, Biological Diversity Act, 2002, National Green Tribunal, NAPCC, Stockholm Conference, Montreal Protocol, Rio Earth Summit, Kyoto Protocol, Paris Agreement, International Solar Alliance, MDGs & SDGs.</p>
+  </div>
+</section>
+
+<main class="container">
+  <input type="checkbox" id="sidebar-toggle">
+  <label for="sidebar-toggle" class="mobile-bar">
+    <span>📑 On this page</span>
+    <span>☰ Menu</span>
+  </label>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebarNav">
+      <p class="sidebar-title">On this page</p>
+      <nav>
+       <a href="/tutorials/people-development-and-environment/environmental-laws-policies-international-agreements/epa-1986" class="nav-link active"><span class="nav-num">1</span>Environment Protection Act, 1986</a>
+        <a href="/tutorials/people-development-and-environment/environmental-laws-policies-international-agreements/water-act-1974" class="nav-link"><span class="nav-num">2</span>Water Act, 1974</a>
+        <a href="/tutorials/people-development-and-environment/environmental-laws-policies-international-agreements/air-act-1981" class="nav-link"><span class="nav-num">3</span>Air Act, 1981</a>
+        <a href="/tutorials/people-development-and-environment/environmental-laws-policies-international-agreements/wildlife-act-1972" class="nav-link"><span class="nav-num">4</span>Wildlife Protection Act, 1972</a>
+        <a href="/tutorials/people-development-and-environment/environmental-laws-policies-international-agreements/forest-act-1980" class="nav-link"><span class="nav-num">5</span>Forest Conservation Act, 1980</a>
+        <a href="/tutorials/people-development-and-environment/environmental-laws-policies-international-agreements/biodiversity-act-2002" class="nav-link"><span class="nav-num">6</span>Biological Diversity Act, 2002</a>
+        <a href="/tutorials/people-development-and-environment/environmental-laws-policies-international-agreements/national-green-tribunal" class="nav-link"><span class="nav-num">7</span>National Green Tribunal</a>
+        <a href="/tutorials/people-development-and-environment/environmental-laws-policies-international-agreements/napcc" class="nav-link"><span class="nav-num">8</span>National Action Plan on Climate Change</a>
+        <a href="/tutorials/people-development-and-environment/environmental-laws-policies-international-agreements/stockholm-1972" class="nav-link"><span class="nav-num">9</span>Stockholm Conference, 1972</a>
+        <a href="/tutorials/people-development-and-environment/environmental-laws-policies-international-agreements/montreal-protocol" class="nav-link"><span class="nav-num">10</span>Montreal Protocol, 1987</a>
+        <a href="/tutorials/people-development-and-environment/environmental-laws-policies-international-agreements/rio-summit-1992" class="nav-link"><span class="nav-num">11</span>Rio Earth Summit, 1992</a>
+        <a href="/tutorials/people-development-and-environment/environmental-laws-policies-international-agreements/kyoto-protocol" class="nav-link"><span class="nav-num">12</span>Kyoto Protocol, 1997</a>
+        <a href="/tutorials/people-development-and-environment/environmental-laws-policies-international-agreements/paris-agreement" class="nav-link"><span class="nav-num">13</span>Paris Agreement, 2015</a>
+        <a href="/tutorials/people-development-and-environment/environmental-laws-policies-international-agreements/international-solar-alliance" class="nav-link"><span class="nav-num">14</span>International Solar Alliance</a>
+        <a href="/tutorials/people-development-and-environment/environmental-laws-policies-international-agreements/mdgs-sdgs" class="nav-link"><span class="nav-num">15</span>MDGs & SDGs</a>
+        <a href="/tutorials/people-development-and-environment/environmental-laws-policies-international-agreements/summary-table" class="nav-link"><span class="nav-num">16</span>Summary Table</a>
+        <a href="/tutorials/people-development-and-environment/environmental-laws-policies-international-agreements/exam-traps" class="nav-link"><span class="nav-num">17</span>Common Exam Traps</a>
+        <a href="/tutorials/people-development-and-environment/environmental-laws-policies-international-agreements/practice-questions" class="nav-link"><span class="nav-num">18</span>Practice Questions</a>
+        <a href="/tutorials/people-development-and-environment/environmental-laws-policies-international-agreements/one-page-revision" class="nav-link"><span class="nav-num">19</span>One-Page Revision</a>
+      </nav>
+    </aside>
+
+    <div class="content" id="contentArea">
+      <!-- ===== CARDS ===== -->
+      <div id="epa-1986" class="topic-card"><div class="sec-head"><span class="sec-num">1</span><h2>Environment (Protection) Act, 1986 — पर्यावरण (संरक्षण) अधिनियम, 1986</h2></div><p><strong>Environment (Protection) Act, 1986</strong> India का एक umbrella legislation है — Bhopal Gas Tragedy के बाद enacted।</p><ul class="bullet-list"><li><strong>Purpose:</strong> Protection and improvement of the environment</li><li><strong>Key Provisions:</strong> Central government can take measures to protect environment; standards for emissions/effluents; regulation of hazardous substances</li><li><strong>Significance:</strong> Provides framework for environmental protection in India</li><li><strong>Amendments:</strong> Includes provisions for environmental impact assessment (EIA)</li></ul></div>
+
+      <div id="water-act-1974" class="topic-card"><div class="sec-head"><span class="sec-num">2</span><h2>Water (Prevention and Control of Pollution) Act, 1974 — जल अधिनियम, 1974</h2></div><p><strong>Water Act, 1974</strong> India's first comprehensive law for water pollution control.</p><ul class="bullet-list"><li><strong>Purpose:</strong> Prevention and control of water pollution; maintaining or restoring water quality</li><li><strong>Key Provisions:</strong> Establishment of Central and State Pollution Control Boards; consent mechanism for industries discharging effluents</li><li><strong>Amendments:</strong> 1988 amendments strengthened provisions</li><li><strong>Significance:</strong> First pollution control legislation in India</li></ul></div>
+
+      <div id="air-act-1981" class="topic-card"><div class="sec-head"><span class="sec-num">3</span><h2>Air (Prevention and Control of Pollution) Act, 1981 — वायु अधिनियम, 1981</h2></div><p><strong>Air Act, 1981</strong> was enacted to control air pollution in India (based on the Stockholm Conference recommendations).</p><ul class="bullet-list"><li><strong>Purpose:</strong> Prevention, control, and abatement of air pollution</li><li><strong>Key Provisions:</strong> Standards for emissions; consent mechanism for industries; monitoring of air quality</li><li><strong>Significance:</strong> Provides legal framework for air quality management</li></ul></div>
+
+      <div id="wildlife-act-1972" class="topic-card"><div class="sec-head"><span class="sec-num">4</span><h2>Wildlife Protection Act, 1972 — वन्य जीव संरक्षण अधिनियम, 1972</h2></div><p><strong>Wildlife Protection Act, 1972</strong> provides legal protection to wild animals and birds.</p><ul class="bullet-list"><li><strong>Purpose:</strong> Protection of wild animals, birds, and plants</li><li><strong>Key Provisions:</strong> Establishment of protected areas (National Parks, Sanctuaries); prohibition of hunting; trade restrictions; schedules for protected species</li><li><strong>Schedules:</strong> Schedule I (highest protection — tigers, elephants, etc.), Schedule II-V (varying protection)</li><li><strong>Project Tiger:</strong> Launched in 1973 under this Act</li></ul></div>
+
+      <div id="forest-act-1980" class="topic-card"><div class="sec-head"><span class="sec-num">5</span><h2>Forest Conservation Act, 1980 — वन संरक्षण अधिनियम, 1980</h2></div><p><strong>Forest Conservation Act, 1980</strong> restricts the conversion of forest land for non-forest purposes.</p><ul class="bullet-list"><li><strong>Purpose:</strong> Conservation of forests and regulation of deforestation</li><li><strong>Key Provisions:</strong> Prior approval of Central Government required for de-reservation of forests, diversion of forest land</li><li><strong>Significance:</strong> Has helped control deforestation; important for forest conservation</li><li><strong>2005 Amendment:</strong> Strengthened provisions and penalties</li></ul></div>
+
+      <div id="biodiversity-act-2002" class="topic-card"><div class="sec-head"><span class="sec-num">6</span><h2>Biological Diversity Act, 2002 — जैव विविधता अधिनियम, 2002</h2></div><p><strong>Biological Diversity Act, 2002</strong> implements the CBD (Convention on Biological Diversity) in India.</p><ul class="bullet-list"><li><strong>Purpose:</strong> Conservation of biological diversity, sustainable use, and equitable sharing of benefits</li><li><strong>Key Provisions:</strong> Regulation of access to biological resources; benefit-sharing with local communities; establishment of National Biodiversity Authority (NBA), State Biodiversity Boards (SBBs), Biodiversity Management Committees (BMCs)</li><li><strong>Significance:</strong> Protects India's biodiversity and indigenous knowledge</li></ul></div>
+
+      <div id="national-green-tribunal" class="topic-card"><div class="sec-head"><span class="sec-num">7</span><h2>National Green Tribunal (NGT) — राष्ट्रीय हरित अधिकरण</h2></div><p><strong>National Green Tribunal (NGT)</strong> is a specialised judicial body for environmental disputes in India.</p><ul class="bullet-list"><li><strong>Established:</strong> 2010 under the National Green Tribunal Act, 2010</li><li><strong>Purpose:</strong> Speedy disposal of environment-related cases</li><li><strong>Jurisdiction:</strong> Civil cases relating to environmental protection and conservation; issues concerning forest and biodiversity</li><li><strong>Key Principle:</strong> Applies the Precautionary Principle and Polluter Pays Principle</li><li><strong>Benches:</strong> Principal Bench in Delhi; Regional Benches in various cities</li></ul></div>
+
+      <div id="napcc" class="topic-card"><div class="sec-head"><span class="sec-num">8</span><h2>National Action Plan on Climate Change (NAPCC) — राष्ट्रीय जलवायु परिवर्तन कार्य योजना</h2></div><p><strong>NAPCC</strong> is India's comprehensive climate change action plan — launched in 2008.</p><ul class="bullet-list"><li><strong>Purpose:</strong> Address climate change through eight national missions</li><li><strong>Eight Missions:</strong><ul><li>1. National Solar Mission</li><li>2. National Mission for Enhanced Energy Efficiency</li><li>3. National Mission on Sustainable Habitat</li><li>4. National Water Mission</li><li>5. National Mission for Sustaining the Himalayan Ecosystem</li><li>6. National Mission for a Green India</li><li>7. National Mission for Sustainable Agriculture</li><li>8. National Mission on Strategic Knowledge for Climate Change</li></ul></li><li><strong>Significance:</strong> India's framework for climate action; focuses on both mitigation and adaptation</li></ul></div>
+
+      <div id="stockholm-1972" class="topic-card"><div class="sec-head"><span class="sec-num">9</span><h2>Stockholm Conference, 1972 — स्टॉकहोम सम्मेलन, 1972</h2></div><p><strong>United Nations Conference on the Human Environment (Stockholm Conference), 1972</strong> was the first major international conference on environmental issues.</p><ul class="bullet-list"><li><strong>Also known as:</strong> Stockholm Conference on the Human Environment</li><li><strong>Date:</strong> June 5-16, 1972</li><li><strong>Key Outcomes:</strong><ul><li>Declaration on the Human Environment (Stockholm Declaration) — 26 principles</li><li>Establishment of UNEP (United Nations Environment Programme)</li><li>June 5 declared as World Environment Day</li></ul></li><li><strong>Significance:</strong> Marked the beginning of international environmental governance</li></ul></div>
+
+      <div id="montreal-protocol" class="topic-card"><div class="sec-head"><span class="sec-num">10</span><h2>Montreal Protocol, 1987 — मॉन्ट्रियल प्रोटोकॉल, 1987</h2></div><p><strong>Montreal Protocol on Substances that Deplete the Ozone Layer, 1987</strong> is an international treaty to protect the ozone layer.</p><ul class="bullet-list"><li><strong>Purpose:</strong> Phase out ozone-depleting substances (ODS) — CFCs, halons, etc.</li><li><strong>Date:</strong> Signed in 1987, entered into force in 1989</li><li><strong>Key Features:</strong><ul><li>Legally binding phase-out schedule for developed and developing countries</li><li>Multilateral Fund to assist developing countries</li><li>Kigali Amendment (2016) — phase down HFCs (hydrofluorocarbons)</li></ul></li><li><strong>Significance:</strong> Most successful environmental treaty; ozone layer is recovering</li></ul></div>
+
+      <div id="rio-summit-1992" class="topic-card"><div class="sec-head"><span class="sec-num">11</span><h2>Rio Earth Summit, 1992 — रियो पृथ्वी शिखर सम्मेलन, 1992</h2></div><p><strong>United Nations Conference on Environment and Development (UNCED), 1992</strong> — also known as the Rio Earth Summit.</p><ul class="bullet-list"><li><strong>Also known as:</strong> Rio Earth Summit (1992)</li><li><strong>Date:</strong> June 3-14, 1992</li><li><strong>Key Outcomes:</strong><ul><li><strong>Agenda 21:</strong> Comprehensive plan of action for sustainable development</li><li><strong>Rio Declaration:</strong> 27 principles on environment and development</li><li><strong>UNFCCC:</strong> Framework Convention on Climate Change</li><li><strong>CBD:</strong> Convention on Biological Diversity</li><li><strong>Forest Principles:</strong> Non-legally binding statement on forests</li></ul></li><li><strong>Significance:</strong> Major milestone in international environmental governance</li></ul></div>
+
+      <div id="kyoto-protocol" class="topic-card"><div class="sec-head"><span class="sec-num">12</span><h2>Kyoto Protocol, 1997 — क्योटो प्रोटोकॉल, 1997</h2></div><p><strong>Kyoto Protocol</strong> is an international treaty to reduce greenhouse gas emissions.</p><ul class="bullet-list"><li><strong>Date:</strong> Adopted in 1997, entered into force in 2005</li><li><strong>Purpose:</strong> Legally binding emission reduction targets for developed countries (Annex I countries)</li><li><strong>Key Features:</strong><ul><li>5% reduction from 1990 levels (for Annex I countries)</li><li>Flexibility mechanisms: CDM, JI, Emissions Trading</li><li>Commitment periods: 2008-2012 (first), 2013-2020 (second/Doha Amendment)</li></ul></li><li><strong>Significance:</strong> First legally binding climate agreement; but the US did not ratify; Canada withdrew</li></ul></div>
+
+      <div id="paris-agreement" class="topic-card"><div class="sec-head"><span class="sec-num">13</span><h2>Paris Agreement, 2015 — पेरिस समझौता, 2015</h2></div><p><strong>Paris Agreement</strong> is the current global climate change agreement under UNFCCC.</p><ul class="bullet-list"><li><strong>Date:</strong> Adopted in December 2015, entered into force in November 2016</li><li><strong>Purpose:</strong> Limit global temperature rise to well below 2°C (and pursue 1.5°C)</li><li><strong>Key Features:</strong><ul><li><strong>NDCs:</strong> Nationally Determined Contributions — voluntary targets by all countries</li><li><strong>Global Stocktake:</strong> Review progress every 5 years</li><li><strong>Transparency:</strong> Reporting and review mechanism</li><li><strong>Finance:</strong> Developed countries to provide climate finance</li><li><strong>CBDR-RC:</strong> Common But Differentiated Responsibilities and Respective Capabilities</li></ul></li><li><strong>Significance:</strong> Universal agreement (all countries); NDCs are voluntary (not legally binding targets)</li></ul></div>
+
+      <div id="international-solar-alliance" class="topic-card"><div class="sec-head"><span class="sec-num">14</span><h2>International Solar Alliance (ISA) — अंतर्राष्ट्रीय सौर गठबंधन</h2></div><p><strong>International Solar Alliance (ISA)</strong> is an initiative by India to promote solar energy globally.</p><ul class="bullet-list"><li><strong>Launched:</strong> 2015 (at COP21 in Paris), jointly by India and France</li><li><strong>Purpose:</strong> Promote solar energy, reduce dependence on fossil fuels</li><li><strong>Headquarters:</strong> India (National Institute of Solar Energy, Gurugram)</li><li><strong>Membership:</strong> Countries between the Tropic of Cancer and Tropic of Capricorn (solar-rich countries)</li><li><strong>Significance:</strong> India's leadership in renewable energy; global cooperation for solar energy</li></ul></div>
+
+      <div id="mdgs-sdgs" class="topic-card"><div class="sec-head"><span class="sec-num">15</span><h2>MDGs & SDGs — सहस्राब्दि विकास लक्ष्य एवं सतत विकास लक्ष्य</h2></div><ul class="bullet-list"><li><strong>MDGs (Millennium Development Goals) — सहस्राब्दि विकास लक्ष्य:</strong><ul><li>Adopted in 2000 (8 goals)</li><li>Target: 2015</li><li>Focused on poverty, health, education, gender equality, environmental sustainability</li><li>Successor: SDGs</li></ul></li><li><strong>SDGs (Sustainable Development Goals) — सतत विकास लक्ष्य:</strong><ul><li>Adopted in 2015 (17 goals)</li><li>Target: 2030</li><li>Broader than MDGs — includes economic, social, environmental dimensions</li><li>All 17 goals: No Poverty, Zero Hunger, Good Health, Quality Education, Gender Equality, Clean Water, Clean Energy, Decent Work, Industry & Innovation, Reduced Inequality, Sustainable Cities, Responsible Consumption, Climate Action, Life Below Water, Life on Land, Peace & Justice, Partnerships</li></ul></li></ul></div>
+
+      <div id="summary-table" class="topic-card"><div class="sec-head"><span class="sec-num">16</span><h2>Summary Table — सारांश तालिका</h2></div><table class="data-table"><tr><th>Act/Agreement</th><th>Year</th><th>Purpose</th></tr><tr><td>Environment Protection Act</td><td>1986</td><td>Umbrella environmental legislation</td></tr><tr><td>Water Act</td><td>1974</td><td>Water pollution control</td></tr><tr><td>Air Act</td><td>1981</td><td>Air pollution control</td></tr><tr><td>Wildlife Protection Act</td><td>1972</td><td>Wildlife conservation</td></tr><tr><td>Forest Conservation Act</td><td>1980</td><td>Forest protection</td></tr><tr><td>Biological Diversity Act</td><td>2002</td><td>Biodiversity conservation</td></tr><tr><td>NGT</td><td>2010</td><td>Environmental disputes</td></tr><tr><td>NAPCC</td><td>2008</td><td>Climate action (8 missions)</td></tr><tr><td>Stockholm Conference</td><td>1972</td><td>First global environment conference</td></tr><tr><td>Montreal Protocol</td><td>1987</td><td>Ozone layer protection</td></tr><tr><td>Rio Summit</td><td>1992</td><td>UNCED, Agenda 21, UNFCCC, CBD</td></tr><tr><td>Kyoto Protocol</td><td>1997</td><td>GHG emission targets (developed)</td></tr><tr><td>Paris Agreement</td><td>2015</td><td>Global climate action (NDCs)</td></tr><tr><td>ISA</td><td>2015</td><td>Solar energy promotion</td></tr><tr><td>MDGs</td><td>2000</td><td>8 development goals (2000-2015)</td></tr><tr><td>SDGs</td><td>2015</td><td>17 sustainable development goals</td></tr></table></div>
+
+      <div id="exam-traps" class="topic-card"><div class="sec-head"><span class="sec-num">17</span><h2>Common Exam Traps — सामान्य परीक्षा जाल</h2></div><ul class="bullet-list"><li><strong>Trap 1:</strong> EPA 1986 was enacted after the Bhopal Gas Tragedy → ✅ Correct.</li><li><strong>Trap 2:</strong> Water Act 1974 came before Air Act 1981 → ✅ Correct.</li><li><strong>Trap 3:</strong> Montreal Protocol = climate change → ❌ Montreal Protocol is for ozone depletion (CFCs).</li><li><strong>Trap 4:</strong> Kyoto Protocol = all countries → ❌ Kyoto Protocol had targets only for developed countries.</li><li><strong>Trap 5:</strong> Paris Agreement = legally binding targets → ❌ NDCs are voluntary (not legally binding).</li><li><strong>Trap 6:</strong> NGT = 1990 → ❌ NGT was established in 2010.</li><li><strong>Trap 7:</strong> Rio Summit = 1972 → ❌ Rio Summit was 1992 (Stockholm was 1972).</li><li><strong>Trap 8:</strong> MDGs = 17 goals → ❌ MDGs = 8 goals; SDGs = 17 goals.</li></ul></div>
+
+      <div id="practice-questions" class="topic-card"><div class="sec-head"><span class="sec-num">18</span><h2>Practice Questions — अभ्यास प्रश्न</h2></div>
+      <div class="pyq-tag">Question 1</div>
+      <p>The Environment (Protection) Act, 1986 was enacted after which incident?</p>
+      <ul class="bullet-list"><li>A. Chernobyl disaster</li><li>B. Bhopal Gas Tragedy</li><li>C. Fukushima disaster</li><li>D. Exxon Valdez oil spill</li></ul>
+      <div class="answer-box">Answer: B. Bhopal Gas Tragedy</div>
+      <p class="explain">Explanation: The Environment (Protection) Act, 1986 was enacted after the Bhopal Gas Tragedy (1984).</p>
+
+      <div class="pyq-tag">Question 2</div>
+      <p>Which protocol is associated with the protection of the ozone layer?</p>
+      <ul class="bullet-list"><li>A. Kyoto Protocol</li><li>B. Montreal Protocol</li><li>C. Paris Agreement</li><li>D. Cartagena Protocol</li></ul>
+      <div class="answer-box">Answer: B. Montreal Protocol</div>
+      <p class="explain">Explanation: The Montreal Protocol (1987) is for the protection of the ozone layer by phasing out CFCs.</p>
+
+      <div class="pyq-tag">Question 3</div>
+      <p>The National Green Tribunal (NGT) was established in:</p>
+      <ul class="bullet-list"><li>A. 2000</li><li>B. 2005</li><li>C. 2010</li><li>D. 2015</li></ul>
+      <div class="answer-box">Answer: C. 2010</div>
+      <p class="explain">Explanation: The National Green Tribunal was established in 2010 under the NGT Act, 2010.</p>
+
+      <div class="pyq-tag">Question 4</div>
+      <p>Which agreement introduced Nationally Determined Contributions (NDCs)?</p>
+      <ul class="bullet-list"><li>A. Kyoto Protocol</li><li>B. Paris Agreement</li><li>C. Montreal Protocol</li><li>D. Rio Summit</li></ul>
+      <div class="answer-box">Answer: B. Paris Agreement</div>
+      <p class="explain">Explanation: The Paris Agreement (2015) introduced NDCs — voluntary climate targets by countries.</p>
+
+      <div class="pyq-tag">Question 5</div>
+      <p>How many Sustainable Development Goals (SDGs) are there?</p>
+      <ul class="bullet-list"><li>A. 8</li><li>B. 12</li><li>C. 15</li><li>D. 17</li></ul>
+      <div class="answer-box">Answer: D. 17</div>
+      <p class="explain">Explanation: There are 17 Sustainable Development Goals (SDGs), adopted in 2015, target 2030.</p>
+
+      <div class="pyq-tag">Question 6</div>
+      <p>The International Solar Alliance (ISA) was launched jointly by India and:</p>
+      <ul class="bullet-list"><li>A. USA</li><li>B. France</li><li>C. Germany</li><li>D. UK</li></ul>
+      <div class="answer-box">Answer: B. France</div>
+      <p class="explain">Explanation: The ISA was launched in 2015 by India and France at COP21 in Paris.</p></div>
+
+      <div id="one-page-revision" class="topic-card"><div class="sec-head"><span class="sec-num">19</span><h2>One-Page Revision — एक पेज में पुनरावृत्ति</h2></div>
+      <p><strong>Indian Acts:</strong></p>
+      <ul class="bullet-list"><li>Water Act (1974) — Water pollution</li>
+      <li>Air Act (1981) — Air pollution</li>
+      <li>Wildlife Act (1972) — Wildlife protection</li>
+      <li>Forest Act (1980) — Forest conservation</li>
+      <li>EPA (1986) — Umbrella environmental law</li>
+      <li>Biodiversity Act (2002) — Biodiversity conservation</li>
+      <li>NGT (2010) — Environmental disputes tribunal</li></ul>
+
+      <p><strong>International Agreements:</strong></p>
+      <ul class="bullet-list"><li>Stockholm 1972 — First environment conference (UNEP)</li>
+      <li>Montreal 1987 — Ozone layer (CFCs)</li>
+      <li>Rio 1992 — UNCED, Agenda 21, UNFCCC, CBD</li>
+      <li>Kyoto 1997 — GHG targets (developed countries)</li>
+      <li>Paris 2015 — NDCs, all countries, 1.5-2°C</li>
+      <li>ISA 2015 — Solar energy (India + France)</li></ul>
+
+      <p><strong>Development Goals:</strong></p>
+      <ul class="bullet-list"><li>MDGs (2000-2015) — 8 goals</li>
+      <li>SDGs (2015-2030) — 17 goals</li></ul>
+
+      <p><strong>NAPCC (2008):</strong></p>
+      <ul class="bullet-list"><li>8 national missions (Solar, Energy Efficiency, Water, Himalayas, Green India, Agriculture, Sustainable Habitat, Knowledge)</li></ul>
+
+      <p><strong>Exam Formula:</strong></p>
+      <div class="formula-box">Law/Agreement → Year → Purpose → Key Features</div>
+      <p><em>UGC NET में Environmental Laws, Policies & International Agreements के questions acts, protocols, summits, and their purposes पर based होते हैं।</em></p></div>
+
+      <div class="enroll-cta"><div><h3 class="h-display">Join the Paper-1 Batch</h3><p>Course fee FREE — ₹500 registration & academic/logistics contribution. Classes daily at 6:30 PM.</p></div><a href="#" class="btn-gold">✓ JOIN BATCH @ ₹500</a></div>
+    </div>
+  </div>
+</main>
+
+<script>
+  (function() {
+
+    const BASE_PATH =
+      "/tutorials/people-development-and-environment/environmental-laws-policies-international-agreements";
+
+    const links =
+      document.querySelectorAll(".nav-link");
+
+    const cards =
+      document.querySelectorAll(".topic-card");
+
+    const content =
+      document.getElementById("contentArea");
+
+    const sidebarToggle =
+      document.getElementById("sidebar-toggle");
+
+
+    // Get topic slug from current URL
+    function getSlugFromPath() {
+
+      const path =
+        window.location.pathname
+          .replace(/\/+$/, "");
+
+      if (
+        path.startsWith(BASE_PATH + "/")
+      ) {
+
+        return path
+          .substring(
+            (BASE_PATH + "/").length
+          )
+          .split("/")[0];
+
+      }
+
+      return null;
+    }
+
+
+    // Update browser URL
+    function updateUrl(
+      slug,
+      replace = false
+    ) {
+
+      const newPath =
+        BASE_PATH + "/" + slug;
+
+      if (
+        window.location.pathname !== newPath
+      ) {
+
+        if (replace) {
+
+          history.replaceState(
+            null,
+            "",
+            newPath
+          );
+
+        } else {
+
+          history.pushState(
+            null,
+            "",
+            newPath
+          );
+
+        }
+
+      }
+
+    }
+
+
+    // Update active sidebar link
+    function updateActiveLink(slug) {
+
+      links.forEach(function(link) {
+
+        const href =
+          link.getAttribute("href");
+
+        if (!href) return;
+
+
+        const linkSlug =
+          href
+            .split("/")
+            .filter(Boolean)
+            .pop();
+
+
+        link.classList.toggle(
+          "active",
+          linkSlug === slug
+        );
+
+      });
+
+    }
+
+
+    // Show selected topic card
+    function showCard(
+      slug,
+      updateHistory = true
+    ) {
+
+      cards.forEach(function(card) {
+
+        card.classList.add("hidden");
+
+      });
+
+
+      const target =
+        document.getElementById(slug);
+
+
+      if (!target) {
+
+        const first =
+          cards[0];
+
+        if (first) {
+
+          first.classList.remove("hidden");
+
+          const firstSlug =
+            first.id;
+
+          updateActiveLink(
+            firstSlug
+          );
+
+          updateUrl(
+            firstSlug,
+            true
+          );
+
+        }
+
+        return;
+      }
+
+
+      target.classList.remove("hidden");
+
+      updateActiveLink(slug);
+
+
+      if (updateHistory) {
+
+        updateUrl(
+          slug,
+          false
+        );
+
+      }
+
+
+      if (sidebarToggle) {
+
+        sidebarToggle.checked = false;
+
+      }
+
+
+      if (content) {
+
+        const top =
+          content.getBoundingClientRect().top +
+          window.pageYOffset -
+          10;
+
+        window.scrollTo({
+
+          top: top,
+
+          behavior: "smooth"
+
+        });
+
+      }
+
+    }
+
+
+    // Sidebar link click
+    links.forEach(function(link) {
+
+      link.addEventListener(
+        "click",
+        function(e) {
+
+          e.preventDefault();
+
+
+          const href =
+            this.getAttribute("href");
+
+          if (!href) return;
+
+
+          const slug =
+            href
+              .split("/")
+              .filter(Boolean)
+              .pop();
+
+
+          if (!slug) return;
+
+
+          showCard(
+            slug,
+            true
+          );
+
+        }
+      );
+
+    });
+
+
+    // Initial page load
+    function initFromPath() {
+
+      let slug =
+        getSlugFromPath();
+
+
+      if (
+        !slug ||
+        !document.getElementById(slug)
+      ) {
+
+        slug =
+          cards[0]?.id ||
+          "epa-1986";
+
+      }
+
+
+      showCard(
+        slug,
+        false
+      );
+
+
+      updateUrl(
+        slug,
+        true
+      );
+
+    }
+
+
+    initFromPath();
+
+
+    // Browser Back / Forward
+    window.addEventListener(
+      "popstate",
+      function() {
+
+        const slug =
+          getSlugFromPath();
+
+
+        if (
+          slug &&
+          document.getElementById(slug)
+        ) {
+
+          showCard(
+            slug,
+            false
+          );
+
+        } else {
+
+          const firstSlug =
+            cards[0]?.id ||
+            "epa-1986";
+
+          showCard(
+            firstSlug,
+            false
+          );
+
+        }
+
+      }
+    );
+
+
+  })();
+</script>
+</body>
+</html>
