@@ -358,23 +358,23 @@
   <p class="sidebar-title">On this page</p>
 <nav>
         <a href="/tutorials/teaching-aptitude/teaching-concept/concept-of-teaching" class="nav-link active"><span class="nav-num">1</span>Concept of Teaching</a>
-        <a href="/teaching-vs-training" class="nav-link"><span class="nav-num">2</span>Teaching vs Training etc.</a>
-        <a href="/nature-characteristics" class="nav-link"><span class="nav-num">3</span>Nature & Characteristics</a>
-        <a href="/objectives-of-teaching" class="nav-link"><span class="nav-num">4</span>Objectives of Teaching</a>
-        <a href="/domains-of-objectives" class="nav-link"><span class="nav-num">5</span>Domains of Objectives</a>
-        <a href="/levels-of-teaching" class="nav-link"><span class="nav-num">6</span>Levels of Teaching</a>
-        <a href="/memory-level" class="nav-link"><span class="nav-num">7</span>Memory Level</a>
-        <a href="/understanding-level" class="nav-link"><span class="nav-num">8</span>Understanding Level</a>
-        <a href="/reflective-level" class="nav-link"><span class="nav-num">9</span>Reflective Level</a>
-        <a href="/comparison-of-levels" class="nav-link"><span class="nav-num">10</span>Comparison of Levels</a>
-        <a href="/autonomous-level" class="nav-link"><span class="nav-num">11</span>Autonomous Level</a>
-        <a href="/basic-requirements" class="nav-link"><span class="nav-num">12</span>Basic Requirements</a>
-        <a href="/important-exam-points" class="nav-link"><span class="nav-num">13</span>Important Exam Points</a>
-        <a href="/common-exam-traps" class="nav-link"><span class="nav-num">14</span>Common Exam Traps</a>
-        <a href="/verified-pyqs" class="nav-link"><span class="nav-num">15</span>Verified PYQs</a>
-        <a href="/pyq-trend-analysis" class="nav-link"><span class="nav-num">16</span>PYQ Trend Analysis</a>
-        <a href="/expected-mcqs" class="nav-link"><span class="nav-num">17</span>Expected MCQs (Dec 2026)</a>
-        <a href="/final-revision" class="nav-link"><span class="nav-num">18</span>Final Revision Formula</a>
+        <a href="/tutorials/teaching-aptitude/teaching-concept/teaching-vs-training" class="nav-link"><span class="nav-num">2</span>Teaching vs Training etc.</a>
+        <a href="/tutorials/teaching-aptitude/teaching-concept/nature-characteristics" class="nav-link"><span class="nav-num">3</span>Nature & Characteristics</a>
+        <a href="/tutorials/teaching-aptitude/teaching-concept/objectives-of-teaching" class="nav-link"><span class="nav-num">4</span>Objectives of Teaching</a>
+        <a href="/tutorials/teaching-aptitude/teaching-concept/domains-of-objectives" class="nav-link"><span class="nav-num">5</span>Domains of Objectives</a>
+        <a href="/tutorials/teaching-aptitude/teaching-concept/levels-of-teaching" class="nav-link"><span class="nav-num">6</span>Levels of Teaching</a>
+        <a href="/tutorials/teaching-aptitude/teaching-concept/memory-level" class="nav-link"><span class="nav-num">7</span>Memory Level</a>
+        <a href="/tutorials/teaching-aptitude/teaching-concept/understanding-level" class="nav-link"><span class="nav-num">8</span>Understanding Level</a>
+        <a href="/tutorials/teaching-aptitude/teaching-concept/reflective-level" class="nav-link"><span class="nav-num">9</span>Reflective Level</a>
+        <a href="/tutorials/teaching-aptitude/teaching-concept/comparison-of-levels" class="nav-link"><span class="nav-num">10</span>Comparison of Levels</a>
+        <a href="/tutorials/teaching-aptitude/teaching-concept/autonomous-level" class="nav-link"><span class="nav-num">11</span>Autonomous Level</a>
+        <a href="/tutorials/teaching-aptitude/teaching-concept/basic-requirements" class="nav-link"><span class="nav-num">12</span>Basic Requirements</a>
+        <a href="/tutorials/teaching-aptitude/teaching-concept/important-exam-points" class="nav-link"><span class="nav-num">13</span>Important Exam Points</a>
+        <a href="/tutorials/teaching-aptitude/teaching-concept/common-exam-traps" class="nav-link"><span class="nav-num">14</span>Common Exam Traps</a>
+        <a href="/tutorials/teaching-aptitude/teaching-concept/verified-pyqs" class="nav-link"><span class="nav-num">15</span>Verified PYQs</a>
+        <a href="/tutorials/teaching-aptitude/teaching-concept/pyq-trend-analysis" class="nav-link"><span class="nav-num">16</span>PYQ Trend Analysis</a>
+        <a href="/tutorials/teaching-aptitude/teaching-concept/expected-mcqs" class="nav-link"><span class="nav-num">17</span>Expected MCQs (Dec 2026)</a>
+        <a href="/tutorials/teaching-aptitude/teaching-concept/final-revision" class="nav-link"><span class="nav-num">18</span>Final Revision Formula</a>
       </nav>
 </aside>
 
@@ -422,115 +422,209 @@
 </main>
 
 <script>
-  (function() {
-    const links = document.querySelectorAll('.nav-link');
-    const cards = document.querySelectorAll('.topic-card');
-    const content = document.getElementById('contentArea');
-    const sidebarToggle = document.getElementById('sidebar-toggle');
+(function () {
+  const links = document.querySelectorAll('.nav-link');
+  const cards = document.querySelectorAll('.topic-card');
+  const content = document.getElementById('contentArea');
+  const sidebarToggle = document.getElementById('sidebar-toggle');
 
-    // Get slug from path: /concept-of-teaching -> concept-of-teaching
-function getSlugFromPath() {
-  const parts = window.location.pathname
-    .split('/')
-    .filter(Boolean);
+  // Base URL
+  const basePath =
+    '/tutorials/teaching-aptitude/teaching-concept/';
 
-  // /tutorials/teaching-aptitude/teaching-concept/concept-of-teaching
-  if (
-    parts.length >= 4 &&
-    parts[0] === 'tutorials'
-  ) {
-    return parts[parts.length - 1];
+
+  // =========================================
+  // CURRENT URL SE SLUG NIKALNA
+  // =========================================
+  function getSlugFromPath() {
+    const parts = window.location.pathname
+      .split('/')
+      .filter(Boolean);
+
+    return parts[parts.length - 1] || null;
   }
 
-  return null;
-}
 
-    function showCard(slug) {
-      // hide all cards
-      cards.forEach(c => c.classList.add('hidden'));
-      // show target
-      const target = document.getElementById(slug);
-      if (target) {
-        target.classList.remove('hidden');
-      } else {
-        // fallback: show first card
-        const first = cards[0];
-        if (first) {
-          first.classList.remove('hidden');
-          const firstSlug = first.id;
-          updateUrl(firstSlug);
-          updateActiveLink(firstSlug);
-        }
-        return;
-      }
-      updateUrl(slug);
-      updateActiveLink(slug);
-      if (sidebarToggle) sidebarToggle.checked = false;
-    }
+  // =========================================
+  // HREF SE SLUG NIKALNA
+  // =========================================
+  function getSlugFromHref(href) {
+    if (!href) return null;
 
-function updateUrl(slug) {
-  const newPath =
-    '/tutorials/teaching-aptitude/teaching-concept/' + slug;
+    const parts = href
+      .split('/')
+      .filter(Boolean);
 
-  if (window.location.pathname !== newPath) {
-    history.pushState(null, '', newPath);
+    return parts[parts.length - 1] || null;
   }
-}
 
-function updateActiveLink(slug) {
-  links.forEach(link => {
-    const href = link.getAttribute('href');
 
-    link.classList.toggle(
-      'active',
-      href ===
-        '/tutorials/teaching-aptitude/teaching-concept/' + slug
-    );
-  });
-}
-
-    // click handler
+  // =========================================
+  // ACTIVE LINK UPDATE
+  // =========================================
+  function updateActiveLink(slug) {
     links.forEach(link => {
-      link.addEventListener('click', function(e) {
-        e.preventDefault();
-        const slug = this.getAttribute('href').slice(1); // remove leading /
-        showCard(slug);
-        const top = content.getBoundingClientRect().top + window.pageYOffset - 10;
-        window.scrollTo({ top, behavior: 'smooth' });
-      });
+      const href = link.getAttribute('href');
+      const linkSlug = getSlugFromHref(href);
+
+      if (linkSlug === slug) {
+        link.classList.add('active');
+      } else {
+        link.classList.remove('active');
+      }
+    });
+  }
+
+
+  // =========================================
+  // URL UPDATE
+  // =========================================
+  function updateUrl(slug, replace = false) {
+    const newPath = basePath + slug;
+
+    if (window.location.pathname !== newPath) {
+      if (replace) {
+        history.replaceState(null, '', newPath);
+      } else {
+        history.pushState(null, '', newPath);
+      }
+    }
+  }
+
+
+  // =========================================
+  // CARD SHOW KARNA
+  // =========================================
+  function showCard(slug, updateHistory = true) {
+
+    // Pehle saare cards hide karo
+    cards.forEach(card => {
+      card.classList.add('hidden');
     });
 
-    // initial load: read path or default to first
-    function initFromPath() {
-      let slug = getSlugFromPath();
-      if (!slug || !document.getElementById(slug)) {
-        slug = cards[0]?.id || 'concept-of-teaching';
+    // Required card find karo
+    const target = document.getElementById(slug);
+
+    if (target) {
+      target.classList.remove('hidden');
+
+      // Active nav update
+      updateActiveLink(slug);
+
+      // URL update
+      if (updateHistory) {
+        updateUrl(slug);
       }
-      showCard(slug);
-      // Update URL to match the slug if it's different
-const currentPath = window.location.pathname;
 
-const expectedPath =
-  '/tutorials/teaching-aptitude/teaching-concept/' + slug;
+    } else {
 
-if (currentPath !== expectedPath) {
-  history.replaceState(null, '', expectedPath);
-}
+      // Agar card nahi mila to first card show karo
+      const firstCard = cards[0];
+
+      if (firstCard) {
+        const firstSlug = firstCard.id;
+
+        firstCard.classList.remove('hidden');
+
+        updateActiveLink(firstSlug);
+
+        if (updateHistory) {
+          updateUrl(firstSlug);
+        }
+      }
     }
 
-    initFromPath();
+    // Mobile sidebar close
+    if (sidebarToggle) {
+      sidebarToggle.checked = false;
+    }
+  }
 
-    // when popstate (back/forward), update view
-    window.addEventListener('popstate', function() {
-      const slug = getSlugFromPath();
-      if (slug && document.getElementById(slug)) {
-        showCard(slug);
-      } else {
-        const firstSlug = cards[0]?.id || 'concept-of-teaching';
-        showCard(firstSlug);
+
+  // =========================================
+  // NAV LINK CLICK
+  // =========================================
+  links.forEach(link => {
+
+    link.addEventListener('click', function (e) {
+      e.preventDefault();
+
+      const href = this.getAttribute('href');
+      const slug = getSlugFromHref(href);
+
+      if (!slug) return;
+
+      // Card show + active class + URL update
+      showCard(slug, true);
+
+
+      // Content section par scroll
+      if (content) {
+        const top =
+          content.getBoundingClientRect().top +
+          window.pageYOffset -
+          10;
+
+        window.scrollTo({
+          top: top,
+          behavior: 'smooth'
+        });
       }
     });
-  })();
+
+  });
+
+
+  // =========================================
+  // INITIAL PAGE LOAD
+  // =========================================
+  function initFromPath() {
+
+    let slug = getSlugFromPath();
+
+    // Agar URL invalid hai ya card exist nahi karta
+    if (!slug || !document.getElementById(slug)) {
+      slug = cards[0]?.id || 'concept-of-teaching';
+
+      // Invalid URL ko replace karo
+      showCard(slug, false);
+      updateUrl(slug, true);
+
+    } else {
+
+      // Correct URL hai
+      showCard(slug, false);
+    }
+  }
+
+
+  // Page load
+  initFromPath();
+
+
+  // =========================================
+  // BROWSER BACK / FORWARD
+  // =========================================
+  window.addEventListener('popstate', function () {
+
+    let slug = getSlugFromPath();
+
+    if (slug && document.getElementById(slug)) {
+
+      // URL ko dobara update nahi karna
+      showCard(slug, false);
+
+    } else {
+
+      const firstSlug =
+        cards[0]?.id || 'concept-of-teaching';
+
+      showCard(firstSlug, false);
+    }
+
+  });
+
+})();
 </script>
 </body>
 </html>
