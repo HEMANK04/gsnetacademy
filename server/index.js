@@ -3,6 +3,7 @@ import express from "express";
 import cors from "cors";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import fs from "node:fs";
 import { connectDB } from "./config/db.js";
 import leadRoutes from "./routes/leadRoutes.js";
 
@@ -40,6 +41,50 @@ app.get("/api", (_req, res) => {
 app.get("/api/health", (_req, res) => res.json({ ok: true }));
 
 app.use("/api/leads", leadRoutes);
+
+/* ------------------------------------------------------------------ *
+ * Tutorial pages ke andar JS pushState() se fake sub-routes banti hain
+ * (jaise /tutorials/.../topic-slug/practice-questions). In URLs par
+ * directly reload/navigate karne par asli file nahi milti (404 aata),
+ * kyunki actual HTML file root pe hi hai, alag naam/case ke saath.
+ * Ye middleware us case ko handle karta hai: agar exact path na mile,
+ * to ek-ek segment hata ke dekhta hai ki koi matching .html file
+ * (case-insensitive) milti hai kya, aur wahi serve kar deta hai.
+ * ------------------------------------------------------------------ */
+
+// Startup par saari .html files ka case-insensitive index bana lo
+const htmlIndex = new Map(); // lowercase-relative-path (no .html) -> actual relative path
+(function buildHtmlIndex(dir, base = "") {
+  if (!fs.existsSync(dir)) return; // prevent crash if public dir isn't fully ready
+  for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+    const rel = base ? `${base}/${entry.name}` : entry.name;
+    const full = path.join(dir, entry.name);
+    if (entry.isDirectory()) {
+      buildHtmlIndex(full, rel);
+    } else if (entry.isFile() && entry.name.toLowerCase().endsWith(".html")) {
+      const withoutExt = rel.slice(0, -5); // remove ".html"
+      htmlIndex.set(withoutExt.toLowerCase(), rel);
+    }
+  }
+})(PUBLIC_DIR);
+
+app.use((req, res, next) => {
+  if (req.method !== "GET") return next();
+
+  const decodedPath = decodeURIComponent(req.path).replace(/\/+$/, "");
+  const segments = decodedPath.split("/").filter(Boolean);
+
+  // Ek-ek segment hata ke check karo (max 3 levels tak, taaki loop na ho)
+  for (let cut = 1; cut <= 3 && segments.length - cut >= 1; cut++) {
+    const candidate = segments.slice(0, segments.length - cut).join("/").toLowerCase();
+    const match = htmlIndex.get(candidate);
+    if (match) {
+      return res.sendFile(path.join(PUBLIC_DIR, match));
+    }
+  }
+
+  next();
+});
 
 /* ------------------------------------------------------------------ *
  * Static site — index.html, about.html, unit-1.html, css/, js/, assets/
