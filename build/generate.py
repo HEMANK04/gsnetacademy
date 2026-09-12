@@ -108,7 +108,7 @@ def navbar(current):
                % (SITE["exam_portal"], ic("clipboard", "h-3.5 w-3.5")))
               if SITE["exam_portal"] else
               ('<span title="Coming soon" class="hidden items-center gap-1.5 whitespace-nowrap rounded-lg border '
-               'border-navy-900/12 px-3 py-2 text-[13px] font-bold text-navy-400 lg:inline-flex">%s Exam Portal</span>'
+               'border-navy-900/12 px-3 py-2 text-[13px] font-bold text-navy-700 lg:inline-flex">%s Exam Portal</span>'
                % ic("clipboard", "h-3.5 w-3.5")))
     broch = ('<a href="%s" download class="btn-outline btn-sm hidden 2xl:inline-flex">Brochure</a>' % SITE["brochure"]) if SITE["brochure"] else ""
 
