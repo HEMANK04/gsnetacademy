@@ -87,16 +87,29 @@
     d.textContent = s == null ? "" : String(s);
     return d.innerHTML;
   }
-  function openFile(url) {
-    if (!url || url === "#") return;
-    var a = document.createElement("a");
-    a.href = url;
-    a.target = "_blank";
-    a.rel = "noreferrer noopener";
-    document.body.appendChild(a);
-    a.click();
-    a.remove();
-  }
+//   function openFile(url, filename) {
+//   if (!url || url === "#") return;
+//   var a = document.createElement("a");
+//   a.href = url;
+//   a.download = filename || "";   // ★ download force, custom naam optional
+//   a.rel = "noreferrer noopener";
+//   document.body.appendChild(a);
+//   a.click();
+//   a.remove();
+// }
+
+function openFile(url, filename) {
+  if (!url || url === "#") return;
+
+  var link = document.createElement("a");
+
+  link.href = url;
+  link.download = filename || "UGC-NET-Brochure.pdf";
+
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+}
   function closeModal() {
     if (!overlay) return;
     overlay.remove();
@@ -201,13 +214,26 @@
         consentAt: new Date().toISOString()
       };
 
+      // sendToServer(leadData, type, title)["catch"](function () {
+      //   /* server down ho to bhi content khulna chahiye */
+      // }).then(function () {
+      //   saveLead(leadData);   // ★ ab agli baar form nahi dikhega
+      //   closeModal();
+      //   openFile(file);
+      // });
+
       sendToServer(leadData, type, title)["catch"](function () {
-        /* server down ho to bhi content khulna chahiye */
-      }).then(function () {
-        saveLead(leadData);   // ★ ab agli baar form nahi dikhega
-        closeModal();
-        openFile(file);
-      });
+  // Lead API fail ho tab bhi PDF download hogi
+}).then(function () {
+
+  saveLead(leadData);
+
+  closeModal();
+
+  var filename = file.split("/").pop();
+
+  openFile(file, filename);
+});
     });
 
     overlay.addEventListener("keydown", function (e) {
@@ -244,26 +270,39 @@
   /* ------------------------------------------------------------------ *
    *  Wiring
    * ------------------------------------------------------------------ */
-  document.addEventListener("click", function (e) {
-    var t = e.target;
-    var btn = t && t.closest ? t.closest(".gate-btn") : null;
-    if (!btn) return;
-    e.preventDefault();
+//   document.addEventListener("click", function (e) {
+//     var t = e.target;
+//     var btn = t && t.closest ? t.closest(".gate-btn") : null;
+//     if (!btn) return;
+//     e.preventDefault();
 
-    var saved = getSavedLead();
-    var file = btn.getAttribute("data-gate-file") || "#";
+//     var saved = getSavedLead();
+//     var file = btn.getAttribute("data-gate-file") || "#";
 
-    if (saved) {
-      // pehle se details bhari hui hain — form dobara mat dikhao,
-      // seedha file kholo, aur DB ko is naye click ka bhi record bhej do.
-      sendToServer(saved, btn.getAttribute("data-gate-type") || "download", btn.getAttribute("data-gate-title") || "Study Material");
-      openFile(file);
-      return;
-    }
-    buildModal(btn);
-  });
+//     if (saved) {
+//       // pehle se details bhari hui hain — form dobara mat dikhao,
+//       // seedha file kholo, aur DB ko is naye click ka bhi record bhej do.
+//       sendToServer(saved, btn.getAttribute("data-gate-type") || "download", btn.getAttribute("data-gate-title") || "Study Material");
+//       openFile(file);
+//       return;
+//     }
+//     buildModal(btn);
+//   });
 
-  document.addEventListener("keydown", function (e) {
-    if (e.key === "Escape") closeModal();
-  });
-})();
+//   document.addEventListener("keydown", function (e) {
+//     if (e.key === "Escape") closeModal();
+//   });
+document.addEventListener("click", function (e) {
+  var t = e.target;
+  var btn = t && t.closest ? t.closest(".gate-btn") : null;
+
+  if (!btn) return;
+
+  e.preventDefault();
+
+  // Download Brochure button click hone par
+  // hamesha form/modal open hoga
+  buildModal(btn);
+});
+
+ })();

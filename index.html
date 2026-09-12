@@ -1,851 +1,863 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="en">
+
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>JRF @ ₹500 — Mission 2026 | UGC NET Paper-1 Mentorship | GS Net Academy</title>
-<meta name="description" content="UGC NET Paper-1 Special Mentorship + Foundation Program. Course fee FREE with a ₹500 registration contribution. Live classes on Google Meet at 6:30 PM, notes, PYQs, tests and mentorship.">
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>GS Net Academy | Premier Higher Ed Mentorship</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&amp;family=Outfit:wght@600;700;800&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <style>
+        @layer base {
 
-<!-- ===== SEO FIX #2: canonical + duplicate-page control =====
-     /index.html ko server par 301 se / par bhejein (server/nginx-gsnetacademy.conf dekhein)
-     aur ye canonical tag har page par uske apne URL ke saath lagayein. -->
-<link rel="canonical" href="https://gsnetacademy.com/">
-<meta name="robots" content="index, follow, max-image-preview:large">
+            html,
+            body {
+                margin: 0;
+                padding: 0;
+            }
 
-<!-- Open Graph / social preview -->
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="GS Net Academy">
-<meta property="og:url" content="https://gsnetacademy.com/">
-<meta property="og:title" content="JRF @ ₹500 — Mission 2026 | UGC NET Paper-1 Mentorship">
-<meta property="og:description" content="Course fee FREE. ₹500 registration contribution. Live classes 6:30 PM on Google Meet — notes, PYQs, tests aur mentorship ke saath.">
-<meta property="og:image" content="https://gsnetacademy.com/assets/images/logo.png">
-<meta name="twitter:card" content="summary_large_image">
+            body {
+                overscroll-behavior: none;
+            }
 
-<link rel="icon" href="assets/images/logo.png">
-<link rel="stylesheet" href="css/tailwind.css">
-<link rel="stylesheet" href="css/style.css">
+            main>:first-child {
+                margin-top: 0 !important;
+            }
 
-<style>
-  /* ---- Demo category tabs (self-contained, style.css par depend nahi karta) ---- */
-  .demo-tabs .dt-radio{position:absolute;width:1px;height:1px;opacity:0;pointer-events:none}
-  .demo-tabs .dt-nav{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1rem}
-  .demo-tabs .dt-label{cursor:pointer;border-radius:.75rem;border:1px solid rgba(255,255,255,.18);
-    background:rgba(255,255,255,.06);padding:.6rem 1rem;font-size:13px;font-weight:800;color:#fff;
-    transition:background .18s,border-color .18s,color .18s}
-  .demo-tabs .dt-label:hover{background:rgba(255,255,255,.12)}
-  .demo-tabs .dt-panel{display:none}
-  #dt-teaching:checked  ~ .dt-nav .dt-label[for="dt-teaching"],
-  #dt-research:checked  ~ .dt-nav .dt-label[for="dt-research"],
-  #dt-logical:checked   ~ .dt-nav .dt-label[for="dt-logical"]{
-    background:#F5C518;border-color:#F5C518;color:#0B1B34}
-  #dt-teaching:checked ~ .dt-stage .dt-panel--teaching,
-  #dt-research:checked ~ .dt-stage .dt-panel--research,
-  #dt-logical:checked  ~ .dt-stage .dt-panel--logical{display:block}
-  .demo-tabs .dt-radio:focus-visible + .dt-nav .dt-label{outline:2px solid #F5C518;outline-offset:2px}
-</style>
+            main>:last-child {
+                margin-bottom: 0 !important;
+            }
+        }
+
+        ::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+        id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-primary-container": "#7d8399", "on-primary": "#ffffff", "on-surface": "#0b1c30", "primary": "#000000", "on-primary-fixed-variant": "#40465a", "background": "#f8f9ff", "inverse-primary": "#c0c6dd", "on-secondary": "#ffffff", "secondary-container": "#feae2c", "secondary-fixed-dim": "#ffb955", "outline": "#76767d", "emerald-accent": "#10B981", "surface-container-highest": "#d3e4fe", "on-secondary-fixed": "#291800", "navy-surface": "#1E293B", "primary-container": "#151b2d", "error": "#ba1a1a", "surface": "#f8f9ff", "primary-fixed-dim": "#c0c6dd", "surface-bright": "#f8f9ff", "primary-fixed": "#dce1fa", "gold-deep": "#D97706", "surface-container": "#e5eeff", "emerald-success": "#059669", "secondary-fixed": "#ffddb4", "emerald-subtle": "#ECFDF5", "gold-amber": "#F5A623", "navy-darkest": "#070D1E", "paper-white": "#FFFFFF", "error-container": "#ffdad6", "surface-tint": "#585e72", "surface-container-lowest": "#ffffff", "on-error": "#ffffff", "on-error-container": "#93000a", "on-surface-variant": "#46464c", "on-tertiary-fixed": "#002114", "inverse-on-surface": "#eaf1ff", "on-tertiary": "#ffffff", "on-tertiary-container": "#069669", "on-secondary-fixed-variant": "#633f00", "tertiary-container": "#002114", "inverse-surface": "#213145", "surface-variant": "#d3e4fe", "outline-variant": "#c6c6cd", "paper-muted": "#F1F5F9", "on-tertiary-fixed-variant": "#005137", "on-primary-fixed": "#151b2d", "surface-container-low": "#eff4ff", "surface-dim": "#cbdbf5", "secondary": "#835500", "tertiary": "#000000", "tertiary-fixed-dim": "#68dba9", "gold-light": "#FDE68A", "on-background": "#0b1c30", "tertiary-fixed": "#85f8c4", "paper-warm": "#FDFBF7", "surface-container-high": "#dce9ff", "navy-deep": "#0B1329" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "gutter-desktop": "2rem", "space-2xl": "3rem", "space-md": "1rem", "space-xl": "2rem", "space-xs": "0.5rem", "space-2xs": "0.25rem", "space-3xl": "4.5rem", "space-sm": "0.75rem", "space-lg": "1.5rem", "gutter-mobile": "1rem", "container-max": "1240px" }, "fontFamily": { "headline-2xl-mobile": ["Outfit"], "headline-xl-mobile": ["Outfit"], "headline-xl": ["Outfit"], "headline-md": ["Outfit"], "label-lg": ["Barlow Condensed"], "body-md": ["Plus Jakarta Sans"], "headline-lg": ["Outfit"], "headline-2xl": ["Outfit"], "headline-sm": ["Outfit"], "label-md": ["Barlow Condensed"], "body-sm": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "label-sm": ["Barlow Condensed"] }, "fontSize": { "headline-2xl-mobile": ["34px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "800" }], "headline-xl-mobile": ["28px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "headline-xl": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "headline-md": ["20px", { "lineHeight": "28px", "fontWeight": "600" }], "label-lg": ["16px", { "lineHeight": "20px", "letterSpacing": "0.06em", "fontWeight": "700" }], "body-md": ["15px", { "lineHeight": "24px", "fontWeight": "400" }], "headline-lg": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "headline-2xl": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800" }], "headline-sm": ["18px", { "lineHeight": "24px", "fontWeight": "600" }], "label-md": ["14px", { "lineHeight": "18px", "letterSpacing": "0.05em", "fontWeight": "600" }], "body-sm": ["13px", { "lineHeight": "20px", "fontWeight": "400" }], "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }], "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.08em", "fontWeight": "600" }] } } } };</script>
 </head>
-<body>
 
-<input type="checkbox" id="nav-toggle" class="nav-toggle">
-<div class="hidden bg-navy-950 text-white lg:block">
-  <div class="container-wide flex h-9 items-center justify-between text-[12px]">
-    <p class="flex min-w-0 items-center gap-2 truncate font-semibold text-navy-100/80"><svg viewBox="0 0 24 24" class="h-3.5 w-3.5 shrink-0 icon-gold" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1"/></svg><span class="truncate">Target December 2026 Exam — Paper-I Batch Started 16 August 2026</span></p>
-    <div class="flex shrink-0 items-center gap-5 font-semibold">
-      <a href="tel:+919266511505" class="flex items-center gap-1.5 hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-3.5 w-3.5" fill="currentColor" stroke="none" aria-hidden="true"><path d="M5 3h3.5l1.6 4-2 1.4a12 12 0 0 0 5.5 5.5l1.4-2 4 1.6V19a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 3 5.2 2 2 0 0 1 5 3Z"/></svg> +91 9266511505</a>
-      <a href="tel:+919810845327" class="flex items-center gap-1.5 hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-3.5 w-3.5" fill="currentColor" stroke="none" aria-hidden="true"><path d="M5 3h3.5l1.6 4-2 1.4a12 12 0 0 0 5.5 5.5l1.4-2 4 1.6V19a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 3 5.2 2 2 0 0 1 5 3Z"/></svg> +91 9810845327</a>
-      <a href="mailto:gsnetacademy@gmail.com" class="flex items-center gap-1.5 hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="m3.5 6.5 8.5 6 8.5-6"/></svg> gsnetacademy@gmail.com</a>
-      <a href="https://api.whatsapp.com/send/?phone=919810845327&text=Hello%2C+can+I+get+more+info+about+joining+the+mentorship+batch+and+classes+for+UGC+NET+JRF+Paper+1%3F&type=phone_number&app_absent=0" target="_blank" rel="noreferrer noopener" class="flex items-center gap-1.5 rounded-md bg-white/10 px-2.5 py-1 transition hover:bg-emerald-500/25 hover:text-white"><svg viewBox="0 0 24 24" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.2 20.8 4.6 16A8.4 8.4 0 1 1 8 19.4l-4.8 1.4Z"/><path d="M9 8.4c.3-.7.6-.7.9-.7h.6c.2 0 .5 0 .7.6l.8 1.9c.1.2.1.4 0 .6l-.5.7c-.1.2-.2.4 0 .7a7 7 0 0 0 3 2.6c.3.1.5.1.7-.1l.7-.8c.2-.2.4-.2.6-.1l1.8.9c.3.1.5.3.5.5v.6c0 .4-.2.9-.9 1.2-.6.3-1.5.4-2.5.1a10 10 0 0 1-6.5-6.2c-.3-1-.1-1.9.1-2.5Z"/></svg> chat us</a>
-    </div>
-  </div>
-</div>
+<body class="bg-surface font-body-md text-on-surface antialiased">
+    
+    <main class="w-full pt-29 bg-surface min-h-[calc(100vh-320px)]">
+        <div class="flex flex-col w-full">
+            <!-- HERO SECTION -->
+            <section
+                class="relative w-full bg-navy-darkest text-paper-white overflow-hidden py-space-3xl px-gutter-mobile md:px-gutter-desktop">
+                <div
+                    class="absolute -top-32 -left-32 w-96 h-96 bg-gold-amber/10 rounded-full blur-3xl pointer-events-none">
+                </div>
+                <div
+                    class="absolute top-1/2 -right-32 w-[32rem] h-[32rem] bg-emerald-accent/10 rounded-full blur-3xl pointer-events-none">
+                </div>
+                <div class="max-w-[1240px] mx-auto relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-space-xl lg:gap-space-2xl items-center">
+                    <div class="lg:col-span-7 flex flex-col items-start text-left">
+                        <div
+                            class="inline-flex items-center gap-space-xs px-space-md py-space-xs rounded-full bg-gold-light/10 border border-gold-amber/40 shadow-sm mb-space-lg backdrop-blur-md">
+                            <span class="material-symbols-outlined text-gold-amber text-[20px]"
+                                style="font-variation-settings: 'FILL' 1;">stars</span>
+                            <span class="font-headline-sm text-label-md text-gold-amber tracking-wider uppercase font-bold">
+                                भारत का #1 डेडिकेटेड HIGHER EDUCATION MENTORSHIP PORTAL • 2025-26 ADMISSIONS OPEN
+                            </span>
+                        </div>
+                        <h1
+                            class="font-headline-2xl text-4xl md:text-5xl lg:text-[56px] leading-[1.12] font-extrabold tracking-tight text-paper-white max-w-2xl mb-space-md">
+                            दो High-Impact Programs.<br />
+                            <span
+                                class="text-transparent bg-clip-text bg-gradient-to-r from-gold-amber via-secondary-fixed to-gold-light">
+                                एक Proven Academic Standard.
+                            </span>
+                        </h1>
+                        <p
+                            class="font-body-lg text-base md:text-xl text-surface-container-highest max-w-xl leading-relaxed mb-space-xl font-medium">
+                            Qualified university educators dwara direct, syllabus-strict mentorship. ना कोई generic lectures, ना कोई 500-page bloated PDFs. Apna decisive exam track neeche select karein aur apne dedicated study portal me enter karein.
+                        </p>
+                        <div class="w-full grid grid-cols-2 gap-space-md max-w-lg">
+                            <div
+                                class="bg-navy-surface/90 border border-navy-surface p-space-md rounded-xl text-left flex items-center gap-space-sm shadow-md hover:border-gold-amber/40 transition-all">
+                                <div
+                                    class="w-11 h-11 rounded-lg bg-gold-amber/20 flex items-center justify-center shrink-0 text-gold-amber">
+                                    <span class="material-symbols-outlined text-[24px]">groups</span>
+                                </div>
+                                <div>
+                                    <div class="font-headline-lg text-xl font-bold text-paper-white leading-tight">1,200+</div>
+                                    <div class="font-body-sm text-xs text-surface-variant font-medium">मार्गदर्शित Aspirants</div>
+                                </div>
+                            </div>
+                            <div
+                                class="bg-navy-surface/90 border border-navy-surface p-space-md rounded-xl text-left flex items-center gap-space-sm shadow-md hover:border-emerald-accent/40 transition-all">
+                                <div
+                                    class="w-11 h-11 rounded-lg bg-emerald-accent/20 flex items-center justify-center shrink-0 text-emerald-accent">
+                                    <span class="material-symbols-outlined text-[24px]">verified</span>
+                                </div>
+                                <div>
+                                    <div class="font-headline-lg text-xl font-bold text-emerald-accent leading-tight">85%+</div>
+                                    <div class="font-body-sm text-xs text-surface-variant font-medium">NET / JRF सिलेक्शन रेट</div>
+                                </div>
+                            </div>
+                            <div
+                                class="bg-navy-surface/90 border border-navy-surface p-space-md rounded-xl text-left flex items-center gap-space-sm shadow-md hover:border-gold-amber/40 transition-all">
+                                <div
+                                    class="w-11 h-11 rounded-lg bg-gold-amber/20 flex items-center justify-center shrink-0 text-gold-amber">
+                                    <span class="material-symbols-outlined text-[24px]">target</span>
+                                </div>
+                                <div>
+                                    <div class="font-headline-lg text-xl font-bold text-paper-white leading-tight">25+ / 30</div>
+                                    <div class="font-body-sm text-xs text-surface-variant font-medium">टारगेट स्कोर (UP GK)</div>
+                                </div>
+                            </div>
+                            <div
+                                class="bg-navy-surface/90 border border-navy-surface p-space-md rounded-xl text-left flex items-center gap-space-sm shadow-md hover:border-emerald-accent/40 transition-all">
+                                <div
+                                    class="w-11 h-11 rounded-lg bg-emerald-accent/20 flex items-center justify-center shrink-0 text-emerald-accent">
+                                    <span class="material-symbols-outlined text-[24px]">translate</span>
+                                </div>
+                                <div>
+                                    <div class="font-headline-lg text-xl font-bold text-paper-white leading-tight">100%</div>
+                                    <div class="font-body-sm text-xs text-surface-variant font-medium">Bilingual Live Notes</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-<header class="sticky top-0 z-50 border-b border-navy-900/8 bg-white/95 backdrop-blur-md">
-  <nav class="container-wide flex h-[76px] items-center gap-4" aria-label="Main">
-    <a href="/" class="flex shrink-0 items-center gap-3" aria-label="Home">
-      <span class="inline-flex shrink-0 items-center justify-center overflow-hidden rounded-lg bg-navy-950 ring-1 ring-navy-900/10">
-        <img src="assets/images/logo.png" alt="GS Net Academy" class="h-11 w-auto" width="120" height="44">
-      </span>
-      <img src="assets/images/tagline.png" alt="#1 A Premier institute for UGC NET Paper-1" class="h-11 hidden w-auto lg:block">
-    </a>
-    <ul class="mx-auto hidden items-center gap-5 xl:flex">
-      <li><a href="courses.html" class="relative block whitespace-nowrap rounded-lg px-3 py-2 text-[13.5px] font-bold transition-colors text-navy-700/75 hover:text-navy-900">UGC NET Paper-I</a></li>
-      <li><a href="results.html" class="relative block whitespace-nowrap rounded-lg px-3 py-2 text-[13.5px] font-bold transition-colors text-navy-700/75 hover:text-navy-900">Results</a></li>
-      <li><a href="tutorial.html" class="relative block whitespace-nowrap rounded-lg px-3 py-2 text-[13.5px] font-bold transition-colors text-navy-700/75 hover:text-navy-900">Tutorials</a></li>
-      <li><a href="notes.html" class="relative block whitespace-nowrap rounded-lg px-3 py-2 text-[13.5px] font-bold transition-colors text-navy-700/75 hover:text-navy-900">Notes</a></li>
-      <li><a href="blog.html" class="relative block whitespace-nowrap rounded-lg px-3 py-2 text-[13.5px] font-bold transition-colors text-navy-700/75 hover:text-navy-900">Blog</a></li>
-      <li><a href="about.html" class="relative block whitespace-nowrap rounded-lg px-3 py-2 text-[13.5px] font-bold transition-colors text-navy-700/75 hover:text-navy-900">About</a></li>
-      <li><a href="contact.html" class="relative block whitespace-nowrap rounded-lg px-3 py-2 text-[13.5px] font-bold transition-colors text-navy-700/75 hover:text-navy-900">Contact</a></li>
-    </ul>
-    <div class="ml-auto flex items-center gap-2 xl:ml-0">
-      <span title="Coming soon" class="hidden items-center gap-1.5 whitespace-nowrap rounded-lg border border-navy-900/12 px-3 py-2 text-[13px] font-bold text-navy-400 lg:inline-flex"><svg viewBox="0 0 24 24" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="4.5" width="14" height="16" rx="2.5"/><path d="M9 4.5a3 3 0 0 1 6 0"/><path d="M9 11h6M9 15h4"/></svg> Exam Portal</span>
-      <a href="/#free-demo" class="btn-outline btn-sm hidden 2xl:inline-flex">Demo</a>
-      <a href="enroll.html" class="btn-primary btn-sm hidden sm:inline-flex">Join Now</a>
-      <label for="nav-toggle" class="cursor-pointer rounded-lg border border-navy-900/12 p-2 text-navy-800 xl:hidden" aria-label="Menu"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></label>
-    </div>
-  </nav>
-</header>
-
-<div class="drawer xl:hidden">
-  <label for="nav-toggle" class="drawer-scrim" aria-hidden="true"></label>
-  <div class="drawer-panel">
-    <div class="flex h-[72px] shrink-0 items-center justify-between border-b border-navy-900/10 px-5">
-      <img src="assets/images/logo.png" alt="GS Net Academy" class="h-9 w-auto rounded-lg bg-navy-950">
-      <label for="nav-toggle" class="cursor-pointer p-2 text-navy-800" aria-label="Close"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></label>
-    </div>
-    <div class="flex-1 overflow-y-auto p-5">
-      <ul class="flex flex-col gap-1">
-      <li><a href="/" class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold bg-navy-50 text-navy-900">Home</a></li>
-      <li><a href="courses.html" class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold text-navy-700">UGC NET Paper-I</a></li>
-      <li><a href="results.html" class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold text-navy-700">Our Results</a></li>
-      <li><span class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold text-navy-400">UG / PG (Paper-2)<span class="rounded-md bg-navy-50 px-2 py-0.5 text-[10.5px] font-extrabold uppercase tracking-wider">Coming soon</span></span></li>
-      <li><a href="tutorial.html" class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold text-navy-700">Tutorials</a></li>
-      <li><a href="notes.html" class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold text-navy-700">Notes</a></li>
-      <li><a href="blog.html" class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold text-navy-700">Blog</a></li>
-      <li><a href="about.html" class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold text-navy-700">About</a></li>
-      <li><a href="contact.html" class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold text-navy-700">Contact</a></li>
-      </ul>
-      <p class="mt-3 rounded-xl bg-gold-50 px-4 py-3 text-[12.5px] font-extrabold uppercase tracking-wider text-gold-700">AI-Powered Career Guidance — Coming soon</p>
-      <div class="mt-5 grid gap-2.5">
-        <a href="enroll.html" class="btn-primary w-full">✓ JOIN BATCH @ ₹500</a>
-        <a href="/#free-demo" class="btn-outline w-full">▶ WATCH FREE DEMO</a>
-        <a href="https://chat.whatsapp.com/KeaQUhOFz0UGAKtLmsM7oU" target="_blank" rel="noreferrer noopener" class="btn-outline w-full"><svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.2 20.8 4.6 16A8.4 8.4 0 1 1 8 19.4l-4.8 1.4Z"/><path d="M9 8.4c.3-.7.6-.7.9-.7h.6c.2 0 .5 0 .7.6l.8 1.9c.1.2.1.4 0 .6l-.5.7c-.1.2-.2.4 0 .7a7 7 0 0 0 3 2.6c.3.1.5.1.7-.1l.7-.8c.2-.2.4-.2.6-.1l1.8.9c.3.1.5.3.5.5v.6c0 .4-.2.9-.9 1.2-.6.3-1.5.4-2.5.1a10 10 0 0 1-6.5-6.2c-.3-1-.1-1.9.1-2.5Z"/></svg> WhatsApp Group</a>
-        <a href="tel:+919266511505" class="btn-dark w-full"><svg viewBox="0 0 24 24" class="h-4 w-4" fill="currentColor" stroke="none" aria-hidden="true"><path d="M5 3h3.5l1.6 4-2 1.4a12 12 0 0 0 5.5 5.5l1.4-2 4 1.6V19a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 3 5.2 2 2 0 0 1 5 3Z"/></svg> Call 9266511505</a>
-      </div>
-    </div>
-  </div>
-</div>
-
-<main id="main">
-
-<!-- ============================= HERO ============================= -->
-<section class="relative overflow-hidden bg-navy-950 text-white">
-  <div class="grid-paper absolute inset-0 opacity-50" aria-hidden="true"></div>
-  <div class="absolute -right-40 -top-40 h-[560px] w-[560px] rounded-full bg-gold-500/15 blur-3xl" aria-hidden="true"></div>
-  <div class="absolute -bottom-48 -left-32 h-[420px] w-[420px] rounded-full bg-navy-400/20 blur-3xl" aria-hidden="true"></div>
-  <div class="container-x relative grid items-start gap-10 py-10 lg:grid-cols-[60fr_40fr] lg:gap-12 lg:py-14">
-    <div>
-      <p class="text-[10.5px] font-extrabold uppercase tracking-[0.22em] text-gold-400 sm:text-[11px]">UGC NET | SET | JRF | PH.D. | ASSISTANT PROFESSOR</p>
-      <h1 class="h-display mt-3 text-[42px] leading-[0.92] sm:text-[56px] lg:text-[64px]">JRF <span class="text-gold-400">@ ₹500</span><span> — MISSION 2026</span></h1>
-      <p class="mt-3.5 text-[15px] font-extrabold uppercase leading-snug tracking-wide text-white sm:text-[17px]">UGC NET PAPER-1 SPECIAL MENTORSHIP + FOUNDATION PROGRAM</p>
-      <p class="mt-1.5 text-[13.5px] font-semibold text-gold-300">JNU &amp; DU Expert Faculty Guidance में Designed Course</p>
-      <p class="hind mt-4 text-[16px] font-semibold leading-relaxed text-navy-100">अब पैसे और सही guidance की कमी JRF के लिए barrier नहीं बनेगी।</p>
-
-      <div class="mt-6 grid grid-cols-2 gap-2.5 sm:grid-cols-3">
-        <div class="rounded-xl border border-white/12 bg-white/[0.07] px-3.5 py-3 transition hover:border-gold-400/50">
-          <p class="flex items-center gap-1.5 text-[10px] font-bold uppercase leading-tight tracking-wider text-navy-200/70"><svg viewBox="0 0 24 24" class="h-3.5 w-3.5 shrink-0 icon-gold" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4 2.5 8.6 12 13.2l9.5-4.6L12 4Z"/><path d="M6.4 10.6V16c0 1.4 2.5 2.8 5.6 2.8s5.6-1.4 5.6-2.8v-5.4"/><path d="M21.5 8.6v5"/></svg>Course Fee</p>
-          <p class="mt-1 text-[16px] font-extrabold leading-tight text-white">FREE</p>
-        </div>
-        <div class="rounded-xl border border-white/12 bg-white/[0.07] px-3.5 py-3 transition hover:border-gold-400/50">
-          <p class="flex items-center gap-1.5 text-[10px] font-bold uppercase leading-tight tracking-wider text-navy-200/70"><svg viewBox="0 0 24 24" class="h-3.5 w-3.5 shrink-0 icon-gold" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4h10M7 8.5h10M16.5 4c0 3-2.2 4.5-5 4.5H7l7.5 11.5"/></svg>Registration &amp; Academic/Logistics</p>
-          <p class="mt-1 text-[16px] font-extrabold leading-tight text-white">₹500 Only</p>
-        </div>
-        <div class="rounded-xl border border-white/12 bg-white/[0.07] px-3.5 py-3 transition hover:border-gold-400/50">
-          <p class="flex items-center gap-1.5 text-[10px] font-bold uppercase leading-tight tracking-wider text-navy-200/70"><svg viewBox="0 0 24 24" class="h-3.5 w-3.5 shrink-0 icon-gold" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5.2l3.2 2"/></svg>Class Time</p>
-          <p class="mt-1 text-[16px] font-extrabold leading-tight text-white">6:30 PM</p>
-        </div>
-        <div class="rounded-xl border border-white/12 bg-white/[0.07] px-3.5 py-3 transition hover:border-gold-400/50">
-          <p class="flex items-center gap-1.5 text-[10px] font-bold uppercase leading-tight tracking-wider text-navy-200/70"><svg viewBox="0 0 24 24" class="h-3.5 w-3.5 shrink-0 icon-gold" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17"/><path d="M12 3.5c2.4 2.6 3.5 5.4 3.5 8.5S14.4 17.9 12 20.5c-2.4-2.6-3.5-5.4-3.5-8.5S9.6 6.1 12 3.5Z"/></svg>Platform</p>
-          <p class="mt-1 text-[16px] font-extrabold leading-tight text-white">Google Meet</p>
-        </div>
-        <div class="rounded-xl border border-white/12 bg-white/[0.07] px-3.5 py-3 transition hover:border-gold-400/50">
-          <p class="flex items-center gap-1.5 text-[10px] font-bold uppercase leading-tight tracking-wider text-navy-200/70"><svg viewBox="0 0 24 24" class="h-3.5 w-3.5 shrink-0 icon-gold" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1"/></svg>Target</p>
-          <p class="mt-1 text-[16px] font-extrabold leading-tight text-white">UGC NET/JRF 2026</p>
-        </div>
-        <div class="rounded-xl border border-white/12 bg-white/[0.07] px-3.5 py-3 transition hover:border-gold-400/50">
-          <p class="flex items-center gap-1.5 text-[10px] font-bold uppercase leading-tight tracking-wider text-navy-200/70"><svg viewBox="0 0 24 24" class="h-3.5 w-3.5 shrink-0 icon-gold" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H19v15H6.5A2.5 2.5 0 0 0 4 20.5v-15Z"/><path d="M4 20.5A2.5 2.5 0 0 1 6.5 18H19v3H6.5A2.5 2.5 0 0 1 4 20.5Z"/></svg>Medium</p>
-          <p class="mt-1 text-[16px] font-extrabold leading-tight text-white">Hindi + English</p>
-        </div>
-      </div>
-
-      <ul class="mt-4 flex flex-wrap gap-1.5"><li class="rounded-lg border border-gold-400/25 bg-gold-400/10 px-2.5 py-1.5 text-[12px] font-bold text-gold-200">Live Classes</li><li class="rounded-lg border border-gold-400/25 bg-gold-400/10 px-2.5 py-1.5 text-[12px] font-bold text-gold-200">Recorded Sessions</li><li class="rounded-lg border border-gold-400/25 bg-gold-400/10 px-2.5 py-1.5 text-[12px] font-bold text-gold-200">PDF Notes</li><li class="rounded-lg border border-gold-400/25 bg-gold-400/10 px-2.5 py-1.5 text-[12px] font-bold text-gold-200">PYQs</li><li class="rounded-lg border border-gold-400/25 bg-gold-400/10 px-2.5 py-1.5 text-[12px] font-bold text-gold-200">Practice</li><li class="rounded-lg border border-gold-400/25 bg-gold-400/10 px-2.5 py-1.5 text-[12px] font-bold text-gold-200">Tests</li><li class="rounded-lg border border-gold-400/25 bg-gold-400/10 px-2.5 py-1.5 text-[12px] font-bold text-gold-200">Mentorship</li></ul>
-
-      <p class="mt-5 flex flex-wrap items-center gap-2 rounded-xl border border-brick/40 bg-brick/15 px-4 py-3 text-[13.5px] font-bold text-white"><span class="inline-flex items-center gap-1.5 rounded-md bg-brick px-2 py-0.5 text-[10.5px] font-extrabold uppercase tracking-wider"><span class="h-1.5 w-1.5 rounded-full bg-white"></span> Batch Status</span>Classes 16 August 2026 से शुरू — Live + Recorded Support के साथ अभी join करें।</p>
-
-      <div class="mt-6"><div class="flex flex-col gap-3 sm:flex-row sm:flex-wrap"><a href="/#free-demo" class="btn-primary">▶ WATCH FREE DEMO</a><a href="#" class="btn-primary gate-btn" data-gate-title="UGC NET Paper-1 Brochure" data-gate-type="brochure" data-gate-file="assets/pdf/brochure.pdf">⬇ DOWNLOAD BROCHURE</a><a href="enroll.html" class="btn-primary">✓ JOIN BATCH @ ₹500</a></div></div>
-      <p class="hind mt-4 text-[13.5px] font-semibold text-navy-200/75">पहले Demo Class देखें → Program समझें → फिर Enrollment का informed decision लें।</p>
-    </div>
-
-    <div class="mx-auto w-full max-w-[420px] lg:sticky lg:top-24">
-      <div class="rounded-3xl border border-white/12 bg-white/[0.05] p-4 backdrop-blur-sm sm:p-5">
-        <!-- ===== FIX #1: placeholder note hata diya gaya (ph-wrap / ph-note) ===== -->
-        <div class="relative">
-          <img src="assets/images/faculty.jpg" alt="Dr. Shardool Sir — UGC NET Paper-1 Faculty, GS Net Academy" class="aspect-[4/5] w-full rounded-2xl object-cover" width="420" height="525">
-          <span class="absolute left-3 top-3 rounded-lg bg-gold-400 px-2.5 py-1 text-[10.5px] font-extrabold uppercase tracking-wider text-navy-950">Faculty</span>
-        </div>
-        <p class="mt-3.5 font-display text-[24px] font-extrabold leading-none tracking-tight text-gold-400">Dr. Shardool Sir</p>
-        <ul class="mt-3 grid gap-1.5 border-t border-white/10 pt-3">
-          <li class="flex items-start gap-2 text-[12.5px] leading-snug text-navy-100/85"><svg viewBox="0 0 24 24" class="mt-0.5 h-3.5 w-3.5 shrink-0 icon-gold" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7"/></svg>14+ Years of Teaching &amp; Research Experience</li>
-          <li class="flex items-start gap-2 text-[12.5px] leading-snug text-navy-100/85"><svg viewBox="0 0 24 24" class="mt-0.5 h-3.5 w-3.5 shrink-0 icon-gold" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7"/></svg>Ex-Employee, Ministry of Social Justice &amp; Empowerment, Government of India</li>
-          <li class="flex items-start gap-2 text-[12.5px] leading-snug text-navy-100/85"><svg viewBox="0 0 24 24" class="mt-0.5 h-3.5 w-3.5 shrink-0 icon-gold" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7"/></svg>M.A. – Jawaharlal Nehru University (JNUEE AIR-1)</li>
-          <li class="flex items-start gap-2 text-[12.5px] leading-snug text-navy-100/85"><svg viewBox="0 0 24 24" class="mt-0.5 h-3.5 w-3.5 shrink-0 icon-gold" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7"/></svg>M.Phil. &amp; Ph.D. – University of Delhi</li>
-          <li class="flex items-start gap-2 text-[12.5px] leading-snug text-navy-100/85"><svg viewBox="0 0 24 24" class="mt-0.5 h-3.5 w-3.5 shrink-0 icon-gold" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7"/></svg>UGC NET-JRF Qualified</li>
-          <li class="flex items-start gap-2 text-[12.5px] leading-snug text-navy-100/85"><svg viewBox="0 0 24 24" class="mt-0.5 h-3.5 w-3.5 shrink-0 icon-gold" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7"/></svg>UPSC/IBPS/SSC Expert</li>
-          <li class="flex items-start gap-2 text-[12.5px] leading-snug text-navy-100/85"><svg viewBox="0 0 24 24" class="mt-0.5 h-3.5 w-3.5 shrink-0 icon-gold" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7"/></svg>Qualified multiple Govt. Exam &amp; Assistant Professor</li>
-        </ul>
-        <a href="enroll.html" class="btn-primary mt-4 w-full"><svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4h10M7 8.5h10M16.5 4c0 3-2.2 4.5-5 4.5H7l7.5 11.5"/></svg> For Mentorship &amp; Guidance</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="container-x relative pb-12 lg:pb-16">
-    <div class="overflow-hidden rounded-3xl border border-white/12 bg-navy-900/80 backdrop-blur">
-      <ul class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6">
-      <li class="flex flex-col items-center gap-3 border-white/12 px-5 py-8 text-center transition-colors hover:bg-white/[0.06] sm:px-6 sm:py-10">
-        <span class="grid h-14 w-14 shrink-0 place-items-center rounded-2xl bg-gold-400/15 ring-1 ring-gold-400/30 sm:h-16 sm:w-16"><svg viewBox="0 0 24 24" class="icon-gold h-8 w-8 sm:h-9 sm:w-9" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4 2.5 8.6 12 13.2l9.5-4.6L12 4Z"/><path d="M6.4 10.6V16c0 1.4 2.5 2.8 5.6 2.8s5.6-1.4 5.6-2.8v-5.4"/><path d="M21.5 8.6v5"/></svg></span>
-        <p class="text-[16px] font-extrabold leading-tight text-white sm:text-[17.5px]">Free Course</p>
-        <p class="max-w-[19ch] text-[13px] font-semibold leading-snug text-navy-200/80 sm:text-[13.5px]">Full Paper-I course fee is FREE</p>
-      </li>
-      <li class="flex flex-col items-center gap-3 border-white/12 px-5 py-8 text-center transition-colors hover:bg-white/[0.06] sm:px-6 sm:py-10 lg:border-l">
-        <span class="grid h-14 w-14 shrink-0 place-items-center rounded-2xl bg-gold-400/15 ring-1 ring-gold-400/30 sm:h-16 sm:w-16"><svg viewBox="0 0 24 24" class="icon-gold h-8 w-8 sm:h-9 sm:w-9" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6.5" width="12" height="11" rx="2.5"/><path d="m15 11 5.5-3v8L15 13"/></svg></span>
-        <p class="text-[16px] font-extrabold leading-tight text-white sm:text-[17.5px]">Live Classes</p>
-        <p class="max-w-[19ch] text-[13px] font-semibold leading-snug text-navy-200/80 sm:text-[13.5px]">Daily 6:30 PM on Google Meet</p>
-      </li>
-      <li class="flex flex-col items-center gap-3 border-white/12 px-5 py-8 text-center transition-colors hover:bg-white/[0.06] sm:px-6 sm:py-10 lg:border-l">
-        <span class="grid h-14 w-14 shrink-0 place-items-center rounded-2xl bg-gold-400/15 ring-1 ring-gold-400/30 sm:h-16 sm:w-16"><svg viewBox="0 0 24 24" class="icon-gold h-8 w-8 sm:h-9 sm:w-9" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 12a8 8 0 1 1-2.6-5.9"/><path d="M20 4v4.5h-4.5"/></svg></span>
-        <p class="text-[16px] font-extrabold leading-tight text-white sm:text-[17.5px]">Recorded Sessions</p>
-        <p class="max-w-[19ch] text-[13px] font-semibold leading-snug text-navy-200/80 sm:text-[13.5px]">Miss a class, watch it later</p>
-      </li>
-      <li class="flex flex-col items-center gap-3 border-white/12 px-5 py-8 text-center transition-colors hover:bg-white/[0.06] sm:px-6 sm:py-10 lg:border-l">
-        <span class="grid h-14 w-14 shrink-0 place-items-center rounded-2xl bg-gold-400/15 ring-1 ring-gold-400/30 sm:h-16 sm:w-16"><svg viewBox="0 0 24 24" class="icon-gold h-8 w-8 sm:h-9 sm:w-9" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h8l4 4v14H6V3Z"/><path d="M14 3v4h4"/><path d="M9 13.5h1.4a1.1 1.1 0 0 1 0 2.2H9v-2.2Zm0 2.2V18"/><path d="M13.4 13.5h1.2a1.4 1.4 0 0 1 1.4 1.4v1.7a1.4 1.4 0 0 1-1.4 1.4h-1.2v-4.5Z"/></svg></span>
-        <p class="text-[16px] font-extrabold leading-tight text-white sm:text-[17.5px]">PDF Notes</p>
-        <p class="max-w-[19ch] text-[13px] font-semibold leading-snug text-navy-200/80 sm:text-[13.5px]">Unit-wise notes for every topic</p>
-      </li>
-      <li class="flex flex-col items-center gap-3 border-white/12 px-5 py-8 text-center transition-colors hover:bg-white/[0.06] sm:px-6 sm:py-10 lg:border-l">
-        <span class="grid h-14 w-14 shrink-0 place-items-center rounded-2xl bg-gold-400/15 ring-1 ring-gold-400/30 sm:h-16 sm:w-16"><svg viewBox="0 0 24 24" class="icon-gold h-8 w-8 sm:h-9 sm:w-9" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2.5"/><path d="m8 10 1.6 1.6L13 8.2"/><path d="M8 16h8"/></svg></span>
-        <p class="text-[16px] font-extrabold leading-tight text-white sm:text-[17.5px]">PYQs &amp; Tests</p>
-        <p class="max-w-[19ch] text-[13px] font-semibold leading-snug text-navy-200/80 sm:text-[13.5px]">Practice questions with tests</p>
-      </li>
-      <li class="flex flex-col items-center gap-3 border-white/12 px-5 py-8 text-center transition-colors hover:bg-white/[0.06] sm:px-6 sm:py-10 lg:border-l">
-        <span class="grid h-14 w-14 shrink-0 place-items-center rounded-2xl bg-gold-400/15 ring-1 ring-gold-400/30 sm:h-16 sm:w-16"><svg viewBox="0 0 24 24" class="icon-gold h-8 w-8 sm:h-9 sm:w-9" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.2"/><path d="M3.5 20a5.5 5.5 0 0 1 11 0"/><path d="M16.5 8.5h5M16.5 12h5M16.5 15.5h3"/></svg></span>
-        <p class="text-[16px] font-extrabold leading-tight text-white sm:text-[17.5px]">Mentorship</p>
-        <p class="max-w-[19ch] text-[13px] font-semibold leading-snug text-navy-200/80 sm:text-[13.5px]">Guidance till the exam</p>
-      </li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<!-- ========================= APPROACH ========================= -->
-<section class="bg-cream py-14 lg:py-16"><div class="container-x">
-  <span class="eyebrow"><svg viewBox="0 0 24 24" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5 13.8 9l5.5 1.8-5.5 1.8L12 18.1l-1.8-5.5L4.7 10.8 10.2 9 12 3.5Z"/></svg> GS Net Academy Approach</span>
-  <h2 class="h-display mt-4 max-w-3xl text-[30px] sm:text-[40px]">Concept → PYQ → Practice → Test → Analysis → Revision → Mentorship</h2>
-  <div class="rule-gold mt-4"></div>
-  <ul class="mt-8 grid gap-4 sm:grid-cols-2 lg:flex lg:gap-5">
-    <li class="relative flex-1"><div class="card h-full p-5 text-center"><p class="text-[10.5px] font-extrabold uppercase tracking-[0.16em] text-gold-600">Step 01</p><p class="mt-1.5 text-[16px] font-extrabold text-navy-900">Concept</p><p class="hind mt-2 text-[12.5px] leading-relaxed text-navy-700">Basic से exam-oriented explanation</p></div></li>
-    <li class="relative flex-1"><div class="card h-full p-5 text-center"><p class="text-[10.5px] font-extrabold uppercase tracking-[0.16em] text-gold-600">Step 02</p><p class="mt-1.5 text-[16px] font-extrabold text-navy-900">PYQ</p><p class="hind mt-2 text-[12.5px] leading-relaxed text-navy-700">Question कैसे बनता है, यह समझना</p></div></li>
-    <li class="relative flex-1"><div class="card h-full p-5 text-center"><p class="text-[10.5px] font-extrabold uppercase tracking-[0.16em] text-gold-600">Step 03</p><p class="mt-1.5 text-[16px] font-extrabold text-navy-900">Practice</p><p class="hind mt-2 text-[12.5px] leading-relaxed text-navy-700">Topic के तुरंत बाद questions</p></div></li>
-    <li class="relative flex-1"><div class="card h-full p-5 text-center"><p class="text-[10.5px] font-extrabold uppercase tracking-[0.16em] text-gold-600">Step 04</p><p class="mt-1.5 text-[16px] font-extrabold text-navy-900">Test</p><p class="hind mt-2 text-[12.5px] leading-relaxed text-navy-700">Unit-wise tests</p></div></li>
-    <li class="relative flex-1"><div class="card h-full p-5 text-center"><p class="text-[10.5px] font-extrabold uppercase tracking-[0.16em] text-gold-600">Step 05</p><p class="mt-1.5 text-[16px] font-extrabold text-navy-900">Analysis</p><p class="hind mt-2 text-[12.5px] leading-relaxed text-navy-700">Mistakes की classification</p></div></li>
-    <li class="relative flex-1"><div class="card h-full p-5 text-center"><p class="text-[10.5px] font-extrabold uppercase tracking-[0.16em] text-gold-600">Step 06</p><p class="mt-1.5 text-[16px] font-extrabold text-navy-900">Revision</p><p class="hind mt-2 text-[12.5px] leading-relaxed text-navy-700">Continuous process</p></div></li>
-    <li class="relative flex-1"><div class="card h-full p-5 text-center"><p class="text-[10.5px] font-extrabold uppercase tracking-[0.16em] text-gold-600">Step 07</p><p class="mt-1.5 text-[16px] font-extrabold text-navy-900">Mentorship</p><p class="hind mt-2 text-[12.5px] leading-relaxed text-navy-700">Direction, planning, consistency</p></div></li>
-  </ul>
-</div></section>
-
-<!-- =================== FIX #3: RESULTS — 12 BEST ONLY ===================
-     Pehle homepage par ~81 poster the (88 images). Ab sirf 12 top results,
-     3 statistics aur 3 success stories. Baaki sab results.html par. -->
-<section class="bg-white py-14 lg:py-16"><div class="container-x">
-  <div class="mx-auto max-w-3xl text-center">
-    <span class="eyebrow"><svg viewBox="0 0 24 24" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5 13.8 9l5.5 1.8-5.5 1.8L12 18.1l-1.8-5.5L4.7 10.8 10.2 9 12 3.5Z"/></svg> Student Voices</span>
-    <h2 class="h-display mt-4 text-[30px] sm:text-[38px]">Our Students' Results</h2>
-    <div class="rule-gold mx-auto mt-4"></div>
-    <p class="hind mt-4 text-[15px] leading-relaxed text-navy-700">GS Net Academy के students के official NTA results.</p>
-  </div>
-
-  <!-- 3 result statistics -->
-  <ul class="mx-auto mt-8 grid max-w-4xl grid-cols-1 gap-4 sm:grid-cols-3">
-    <li class="rounded-2xl border border-navy-900/10 bg-cream p-6 text-center">
-      <p class="font-display text-[40px] font-extrabold leading-none text-navy-900">57<span class="text-gold-500">+</span></p>
-      <p class="mt-2 text-[12.5px] font-extrabold uppercase tracking-wider text-navy-600">NET / JRF Qualified</p>
-    </li>
-    <li class="rounded-2xl border border-navy-900/10 bg-cream p-6 text-center">
-      <p class="font-display text-[40px] font-extrabold leading-none text-navy-900">20<span class="text-gold-500">+</span></p>
-      <p class="mt-2 text-[12.5px] font-extrabold uppercase tracking-wider text-navy-600">Ph.D Admission &amp; Research</p>
-    </li>
-    <li class="rounded-2xl border border-navy-900/10 bg-cream p-6 text-center">
-      <p class="font-display text-[40px] font-extrabold leading-none text-navy-900">4<span class="text-gold-500">+</span></p>
-      <p class="mt-2 text-[12.5px] font-extrabold uppercase tracking-wider text-navy-600">Teacher &amp; Assistant Professor</p>
-    </li>
-  </ul>
-
-  <!-- 12 best result posters -->
-  <ul class="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4 lg:grid-cols-4">
-    <li><figure class="overflow-hidden rounded-2xl border border-navy-900/12 bg-white shadow-card"><img src="assets/results/netjrf/01_Anita_Devi_99.98.jpeg" alt="Anita Devi — 99.98 percentile, UGC NET/JRF" loading="lazy" decoding="async" width="600" height="600" class="block aspect-square w-full object-cover"><figcaption class="px-3 py-2 text-[12px] font-bold text-navy-800">Anita Devi — 99.98</figcaption></figure></li>
-    <li><figure class="overflow-hidden rounded-2xl border border-navy-900/12 bg-white shadow-card"><img src="assets/results/netjrf/b3_07_Pawan_99.98.jpeg" alt="Pawan — 99.98 percentile, UGC NET/JRF" loading="lazy" decoding="async" width="600" height="600" class="block aspect-square w-full object-cover"><figcaption class="px-3 py-2 text-[12px] font-bold text-navy-800">Pawan — 99.98</figcaption></figure></li>
-    <li><figure class="overflow-hidden rounded-2xl border border-navy-900/12 bg-white shadow-card"><img src="assets/results/netjrf/b3_06_Neha_Upadhayay_99.94.jpeg" alt="Neha Upadhayay — 99.94 percentile, UGC NET/JRF" loading="lazy" decoding="async" width="600" height="600" class="block aspect-square w-full object-cover"><figcaption class="px-3 py-2 text-[12px] font-bold text-navy-800">Neha Upadhayay — 99.94</figcaption></figure></li>
-    <li><figure class="overflow-hidden rounded-2xl border border-navy-900/12 bg-white shadow-card"><img src="assets/results/netjrf/b3_09_Arti_Vats_99.83.jpeg" alt="Arti Vats — 99.83 percentile, UGC NET/JRF" loading="lazy" decoding="async" width="600" height="600" class="block aspect-square w-full object-cover"><figcaption class="px-3 py-2 text-[12px] font-bold text-navy-800">Arti Vats — 99.83</figcaption></figure></li>
-    <li><figure class="overflow-hidden rounded-2xl border border-navy-900/12 bg-white shadow-card"><img src="assets/results/netjrf/02_Poonam_Verma_99.71.jpeg" alt="Poonam Verma — 99.71 percentile, UGC NET/JRF" loading="lazy" decoding="async" width="600" height="600" class="block aspect-square w-full object-cover"><figcaption class="px-3 py-2 text-[12px] font-bold text-navy-800">Poonam Verma — 99.71</figcaption></figure></li>
-    <li><figure class="overflow-hidden rounded-2xl border border-navy-900/12 bg-white shadow-card"><img src="assets/results/netjrf/03_Vaishali_Singh_99.50.jpeg" alt="Vaishali Singh — 99.50 percentile, UGC NET/JRF" loading="lazy" decoding="async" width="600" height="600" class="block aspect-square w-full object-cover"><figcaption class="px-3 py-2 text-[12px] font-bold text-navy-800">Vaishali Singh — 99.50</figcaption></figure></li>
-    <li><figure class="overflow-hidden rounded-2xl border border-navy-900/12 bg-white shadow-card"><img src="assets/results/netjrf/b3_08_Lali_Kumari_99.42.jpeg" alt="Lali Kumari — 99.42 percentile, UGC NET/JRF" loading="lazy" decoding="async" width="600" height="600" class="block aspect-square w-full object-cover"><figcaption class="px-3 py-2 text-[12px] font-bold text-navy-800">Lali Kumari — 99.42</figcaption></figure></li>
-    <li><figure class="overflow-hidden rounded-2xl border border-navy-900/12 bg-white shadow-card"><img src="assets/results/netjrf/04_Satyendra_Ary_99.39.jpeg" alt="Satyendra Ary — 99.39 percentile, UGC NET/JRF" loading="lazy" decoding="async" width="600" height="600" class="block aspect-square w-full object-cover"><figcaption class="px-3 py-2 text-[12px] font-bold text-navy-800">Satyendra Ary — 99.39</figcaption></figure></li>
-    <li><figure class="overflow-hidden rounded-2xl border border-navy-900/12 bg-white shadow-card"><img src="assets/results/netjrf/b3_01_Rohit_Yadav_98.05.jpeg" alt="Rohit Yadav — 98.05 percentile, UGC NET/JRF" loading="lazy" decoding="async" width="600" height="600" class="block aspect-square w-full object-cover"><figcaption class="px-3 py-2 text-[12px] font-bold text-navy-800">Rohit Yadav — 98.05</figcaption></figure></li>
-    <li><figure class="overflow-hidden rounded-2xl border border-navy-900/12 bg-white shadow-card"><img src="assets/results/netjrf/05_Abhishek_Tiwari_97.73.jpeg" alt="Abhishek Tiwari — 97.73 percentile, UGC NET/JRF" loading="lazy" decoding="async" width="600" height="600" class="block aspect-square w-full object-cover"><figcaption class="px-3 py-2 text-[12px] font-bold text-navy-800">Abhishek Tiwari — 97.73</figcaption></figure></li>
-    <li><figure class="overflow-hidden rounded-2xl border border-navy-900/12 bg-white shadow-card"><img src="assets/results/netjrf/06_Akriti_Kumari_97.56.jpeg" alt="Akriti Kumari — 97.56 percentile, UGC NET/JRF" loading="lazy" decoding="async" width="600" height="600" class="block aspect-square w-full object-cover"><figcaption class="px-3 py-2 text-[12px] font-bold text-navy-800">Akriti Kumari — 97.56</figcaption></figure></li>
-    <li><figure class="overflow-hidden rounded-2xl border border-navy-900/12 bg-white shadow-card"><img src="assets/results/netjrf/b3_12_Ranika_97.41.jpeg" alt="Ranika — 97.41 percentile, UGC NET/JRF" loading="lazy" decoding="async" width="600" height="600" class="block aspect-square w-full object-cover"><figcaption class="px-3 py-2 text-[12px] font-bold text-navy-800">Ranika — 97.41</figcaption></figure></li>
-  </ul>
-
-  <div class="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
-    <a href="results.html" class="btn-outline">VIEW ALL RESULTS (81+) <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h15"/><path d="m13 6 6 6-6 6"/></svg></a>
-    <a href="enroll.html" class="btn-primary">✓ Join Batch @ ₹500</a>
-  </div>
-
-
-</div></section>
-
-<!-- ========================= BATCH STATUS ========================= -->
-<section class="border-b border-navy-900/8 bg-white py-10 lg:py-12"><div class="container-x">
-  <div class="rounded-2xl border border-navy-900/10 bg-cream p-6 sm:p-8">
-    <div class="grid gap-8 lg:grid-cols-[1.3fr_.7fr] lg:items-center">
-      <div>
-        <span class="eyebrow"><span class="h-1.5 w-1.5 rounded-full bg-brick"></span> Batch Status</span>
-        <p class="hind mt-4 text-[15px] leading-relaxed text-navy-800">Classes 16 August 2026 से शुरू हो चुकी हैं। यदि आपने शुरुआत miss कर दी है, तो preparation postpone करने की जरूरत नहीं है। Program में Live + Recorded Learning Support रखा गया है ताकि नए students current batch के साथ systematically जुड़ सकें।</p>
-        <ul class="mt-6 grid gap-2.5 sm:grid-cols-2"><li class="flex items-start gap-2.5 text-[14px] font-semibold text-navy-800"><svg viewBox="0 0 24 24" class="mt-0.5 h-4 w-4 shrink-0 text-gold-600" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7"/></svg>Structured Paper-1 Foundation</li><li class="flex items-start gap-2.5 text-[14px] font-semibold text-navy-800"><svg viewBox="0 0 24 24" class="mt-0.5 h-4 w-4 shrink-0 text-gold-600" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7"/></svg>Regular Live Classes</li><li class="flex items-start gap-2.5 text-[14px] font-semibold text-navy-800"><svg viewBox="0 0 24 24" class="mt-0.5 h-4 w-4 shrink-0 text-gold-600" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7"/></svg>Recorded Sessions</li><li class="flex items-start gap-2.5 text-[14px] font-semibold text-navy-800"><svg viewBox="0 0 24 24" class="mt-0.5 h-4 w-4 shrink-0 text-gold-600" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7"/></svg>Exam-Oriented PDF Notes</li><li class="flex items-start gap-2.5 text-[14px] font-semibold text-navy-800"><svg viewBox="0 0 24 24" class="mt-0.5 h-4 w-4 shrink-0 text-gold-600" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7"/></svg>PYQ Discussion &amp; Practice</li><li class="flex items-start gap-2.5 text-[14px] font-semibold text-navy-800"><svg viewBox="0 0 24 24" class="mt-0.5 h-4 w-4 shrink-0 text-gold-600" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7"/></svg>Tests, Analysis &amp; Mentorship</li></ul>
-      </div>
-      <a href="enroll.html" class="btn-primary w-full py-4 text-[15px]">JOIN CURRENT BATCH <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h15"/><path d="m13 6 6 6-6 6"/></svg></a>
-    </div>
-  </div>
-</div></section>
-
-<!-- ========================= WHY NOW ========================= -->
-<section class="bg-cream py-14 lg:py-16"><div class="container-x">
-  <div class="mx-auto max-w-3xl text-center">
-    <span class="eyebrow"><svg viewBox="0 0 24 24" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5 13.8 9l5.5 1.8-5.5 1.8L12 18.1l-1.8-5.5L4.7 10.8 10.2 9 12 3.5Z"/></svg> Why now</span>
-    <h2 class="h-display mt-4 text-[30px] sm:text-[38px]">UGC NET/JRF Paper-1 की तैयारी अभी से क्यों शुरू करें?</h2>
-    <div class="rule-gold mx-auto mt-4"></div>
-    <p class="hind mt-4 text-[15px] leading-relaxed text-navy-700">JRF preparation में सबसे common problem syllabus की कमी नहीं, बल्कि systematic preparation की कमी होती है। बहुत से aspirants content consume करते हैं, लेकिन उनके पास fixed learning system, revision cycle और test-analysis process नहीं होता।</p>
-  </div>
-  <ul class="mt-9 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-    <li class="card flex items-start gap-3 p-4"><span class="grid h-7 w-7 shrink-0 place-items-center rounded-lg bg-brick/10 text-[12px] font-extrabold text-brick">1</span><span class="hind text-[13.5px] leading-relaxed text-navy-800">Paper-1 को last months के लिए छोड़ देना</span></li>
-    <li class="card flex items-start gap-3 p-4"><span class="grid h-7 w-7 shrink-0 place-items-center rounded-lg bg-brick/10 text-[12px] font-extrabold text-brick">2</span><span class="hind text-[13.5px] leading-relaxed text-navy-800">अलग-अलग YouTube videos से fragmented preparation करना</span></li>
-    <li class="card flex items-start gap-3 p-4"><span class="grid h-7 w-7 shrink-0 place-items-center rounded-lg bg-brick/10 text-[12px] font-extrabold text-brick">3</span><span class="hind text-[13.5px] leading-relaxed text-navy-800">Notes collect करना लेकिन revise न करना</span></li>
-    <li class="card flex items-start gap-3 p-4"><span class="grid h-7 w-7 shrink-0 place-items-center rounded-lg bg-brick/10 text-[12px] font-extrabold text-brick">4</span><span class="hind text-[13.5px] leading-relaxed text-navy-800">PYQs solve करना लेकिन उनका analysis न करना</span></li>
-    <li class="card flex items-start gap-3 p-4"><span class="grid h-7 w-7 shrink-0 place-items-center rounded-lg bg-brick/10 text-[12px] font-extrabold text-brick">5</span><span class="hind text-[13.5px] leading-relaxed text-navy-800">Mock test देना लेकिन mistakes classify न करना</span></li>
-    <li class="card flex items-start gap-3 p-4"><span class="grid h-7 w-7 shrink-0 place-items-center rounded-lg bg-brick/10 text-[12px] font-extrabold text-brick">6</span><span class="hind text-[13.5px] leading-relaxed text-navy-800">Paper-2 पर पूरा focus करके Paper-1 को underestimate करना</span></li>
-    <li class="card flex items-start gap-3 p-4"><span class="grid h-7 w-7 shrink-0 place-items-center rounded-lg bg-brick/10 text-[12px] font-extrabold text-brick">7</span><span class="hind text-[13.5px] leading-relaxed text-navy-800">सही guidance के बिना strategy बार-बार बदलना</span></li>
-  </ul>
-  <div class="card mt-8 p-7 sm:p-9">
-    <h3 class="text-[21px] font-extrabold text-navy-900">Paper-1 को JRF Score Booster बनाइए</h3>
-    <p class="hind mt-3 text-[15px] leading-relaxed text-navy-800">Paper-1 को केवल qualifying paper की तरह पढ़ना पर्याप्त नहीं है। एक well-prepared aspirant Paper-1 में अपनी overall performance को significantly strengthen कर सकता है। हमारा target Paper-1 को weakness से strength में convert करना है।</p>
-    <ul class="mt-5 flex flex-wrap gap-2"><li class="rounded-lg border border-gold-300/60 bg-gold-50 px-3 py-2 text-[13px] font-bold text-gold-700">Conceptual clarity</li><li class="rounded-lg border border-gold-300/60 bg-gold-50 px-3 py-2 text-[13px] font-bold text-gold-700">Question-solving ability</li><li class="rounded-lg border border-gold-300/60 bg-gold-50 px-3 py-2 text-[13px] font-bold text-gold-700">PYQ understanding</li><li class="rounded-lg border border-gold-300/60 bg-gold-50 px-3 py-2 text-[13px] font-bold text-gold-700">Accuracy</li><li class="rounded-lg border border-gold-300/60 bg-gold-50 px-3 py-2 text-[13px] font-bold text-gold-700">Revision</li><li class="rounded-lg border border-gold-300/60 bg-gold-50 px-3 py-2 text-[13px] font-bold text-gold-700">Test performance</li></ul>
-    <p class="hind mt-6 flex items-start gap-2.5 rounded-xl bg-navy-50 p-4 text-[13.5px] leading-relaxed text-navy-700"><svg viewBox="0 0 24 24" class="mt-0.5 h-4 w-4 shrink-0 text-navy-500" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 20 6v6c0 4.4-3.2 7.9-8 9-4.8-1.1-8-4.6-8-9V6l8-3Z"/><path d="m8.8 12 2.2 2.2 4.2-4.4"/></svg>हम किसी fixed score या JRF selection की guarantee नहीं देते। हमारा commitment quality teaching, structured preparation और academic guidance है।</p>
-  </div>
-</div></section>
-
-<!-- ========================= SYLLABUS ========================= -->
-<section class="bg-white py-14 lg:py-16"><div class="container-x">
-  <div class="mx-auto max-w-3xl text-center">
-    <span class="eyebrow"><svg viewBox="0 0 24 24" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5 13.8 9l5.5 1.8-5.5 1.8L12 18.1l-1.8-5.5L4.7 10.8 10.2 9 12 3.5Z"/></svg> Syllabus</span>
-    <h2 class="h-display mt-4 text-[30px] sm:text-[38px]">Official Paper-I syllabus notes that five questions carrying 2 marks each are set from each module/unit</h2>
-    <div class="rule-gold mx-auto mt-4"></div>
-    <p class="hind mt-4 text-[15px] leading-relaxed text-navy-700">10 units — हर unit से 5 questions और 10 marks.</p>
-  </div>
-  <div class="mt-9 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-    <div class="card card-hover flex h-full items-start gap-4 p-5"><span class="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-navy-900 font-display text-[18px] font-extrabold text-gold-400">01</span><div><h3 class="text-[16px] font-extrabold text-navy-900">Teaching Aptitude</h3><p class="hind mt-1.5 text-[13px] leading-relaxed text-navy-700">Teaching, Objectives, Levels of Teaching, Learner Characteristics, Teaching Methods, Evaluation आदि।</p></div></div>
-    <div class="card card-hover flex h-full items-start gap-4 p-5"><span class="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-navy-900 font-display text-[18px] font-extrabold text-gold-400">02</span><div><h3 class="text-[16px] font-extrabold text-navy-900">Research Aptitude</h3><p class="hind mt-1.5 text-[13px] leading-relaxed text-navy-700">Research Types, Methods, Sampling, Hypothesis, Ethics, Research Process आदि।</p></div></div>
-    <div class="card card-hover flex h-full items-start gap-4 p-5"><span class="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-navy-900 font-display text-[18px] font-extrabold text-gold-400">03</span><div><h3 class="text-[16px] font-extrabold text-navy-900">Comprehension</h3><p class="hind mt-1.5 text-[13px] leading-relaxed text-navy-700">Reading, Interpretation और Question-solving approach.</p></div></div>
-    <div class="card card-hover flex h-full items-start gap-4 p-5"><span class="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-navy-900 font-display text-[18px] font-extrabold text-gold-400">04</span><div><h3 class="text-[16px] font-extrabold text-navy-900">Communication</h3><p class="hind mt-1.5 text-[13px] leading-relaxed text-navy-700">Types, Models, Barriers, Classroom Communication और Mass Communication.</p></div></div>
-    <div class="card card-hover flex h-full items-start gap-4 p-5"><span class="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-navy-900 font-display text-[18px] font-extrabold text-gold-400">05</span><div><h3 class="text-[16px] font-extrabold text-navy-900">Mathematical Reasoning &amp; Aptitude</h3><p class="hind mt-1.5 text-[13px] leading-relaxed text-navy-700">Ratio, Percentage, Average, Time &amp; Work, Series और exam-relevant aptitude.</p></div></div>
-    <div class="card card-hover flex h-full items-start gap-4 p-5"><span class="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-navy-900 font-display text-[18px] font-extrabold text-gold-400">06</span><div><h3 class="text-[16px] font-extrabold text-navy-900">Logical Reasoning</h3><p class="hind mt-1.5 text-[13px] leading-relaxed text-navy-700">Arguments, Fallacies, Analogy, Indian Logic और reasoning concepts.</p></div></div>
-    <div class="card card-hover flex h-full items-start gap-4 p-5"><span class="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-navy-900 font-display text-[18px] font-extrabold text-gold-400">07</span><div><h3 class="text-[16px] font-extrabold text-navy-900">Data Interpretation</h3><p class="hind mt-1.5 text-[13px] leading-relaxed text-navy-700">Tables, Graphs, Charts, Percentage और Data-based Questions.</p></div></div>
-    <div class="card card-hover flex h-full items-start gap-4 p-5"><span class="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-navy-900 font-display text-[18px] font-extrabold text-gold-400">08</span><div><h3 class="text-[16px] font-extrabold text-navy-900">ICT</h3><p class="hind mt-1.5 text-[13px] leading-relaxed text-navy-700">Internet, Digital Initiatives, Communication Technology, Cyber Concepts आदि।</p></div></div>
-    <div class="card card-hover flex h-full items-start gap-4 p-5"><span class="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-navy-900 font-display text-[18px] font-extrabold text-gold-400">09</span><div><h3 class="text-[16px] font-extrabold text-navy-900">People, Development &amp; Environment</h3><p class="hind mt-1.5 text-[13px] leading-relaxed text-navy-700">Development, Pollution, Environment, Sustainable Development आदि।</p></div></div>
-    <div class="card card-hover flex h-full items-start gap-4 p-5"><span class="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-navy-900 font-display text-[18px] font-extrabold text-gold-400">10</span><div><h3 class="text-[16px] font-extrabold text-navy-900">Higher Education System</h3><p class="hind mt-1.5 text-[13px] leading-relaxed text-navy-700">Institutions, Policies, Governance, Regulatory Bodies और Indian Higher Education.</p></div></div>
-  </div>
-  <div class="mt-8 flex justify-center"><div class="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:justify-center"><a href="/#free-demo" class="btn-outline">▶ WATCH FREE DEMO</a><a href="#" class="btn-outline gate-btn" data-gate-title="UGC NET Paper-1 Brochure" data-gate-type="brochure" data-gate-file="assets/pdf/brochure.pdf">⬇ DOWNLOAD BROCHURE</a><a href="enroll.html" class="btn-primary">✓ JOIN BATCH @ ₹500</a></div></div>
-</div></section>
-
-<!-- ========================= DIFFERENTIATORS ========================= -->
-<section class="bg-cream py-14 lg:py-16"><div class="container-x">
-  <div class="mx-auto max-w-3xl text-center">
-    <span class="eyebrow"><svg viewBox="0 0 24 24" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5 13.8 9l5.5 1.8-5.5 1.8L12 18.1l-1.8-5.5L4.7 10.8 10.2 9 12 3.5Z"/></svg> The difference</span>
-    <h2 class="h-display mt-4 text-[30px] sm:text-[38px]">What Makes This Program Different?</h2>
-    <div class="rule-gold mx-auto mt-4"></div>
-  </div>
-  <div class="mt-9 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-    <div class="card card-hover h-full p-6"><span class="grid h-9 w-9 place-items-center rounded-lg bg-gold-400 font-display text-[15px] font-extrabold text-navy-950">1</span><h3 class="mt-4 text-[17px] font-extrabold text-navy-900">Conceptual Clarity</h3><p class="hind mt-2 text-[13.5px] leading-relaxed text-navy-700">हर topic को exam-oriented तरीके से basic से समझाया जाएगा ताकि learner केवल definition याद न करे बल्कि concept को identify और apply कर सके।</p></div>
-    <div class="card card-hover h-full p-6"><span class="grid h-9 w-9 place-items-center rounded-lg bg-gold-400 font-display text-[15px] font-extrabold text-navy-950">2</span><h3 class="mt-4 text-[17px] font-extrabold text-navy-900">PYQ Intelligence</h3><p class="hind mt-2 text-[13.5px] leading-relaxed text-navy-700">Previous Year Questions को केवल solve नहीं किया जाएगा। Question किस concept से बना, distractor कैसे बनाया गया, बाकी options गलत क्यों हैं और इसी concept को नए तरीके से कैसे पूछा जा सकता है—यह approach develop की जाएगी।</p></div>
-    <div class="card card-hover h-full p-6"><span class="grid h-9 w-9 place-items-center rounded-lg bg-gold-400 font-display text-[15px] font-extrabold text-navy-950">3</span><h3 class="mt-4 text-[17px] font-extrabold text-navy-900">Exam-Oriented Notes</h3><p class="hind mt-2 text-[13.5px] leading-relaxed text-navy-700">Classes के साथ structured bilingual notes दिए जाएंगे जिन्हें student mobile पर आसानी से पढ़ और revise कर सके।</p></div>
-    <div class="card card-hover h-full p-6"><span class="grid h-9 w-9 place-items-center rounded-lg bg-gold-400 font-display text-[15px] font-extrabold text-navy-950">4</span><h3 class="mt-4 text-[17px] font-extrabold text-navy-900">Smart Practice</h3><p class="hind mt-2 text-[13.5px] leading-relaxed text-navy-700">Topic के बाद relevant questions और practice ताकि concept immediately test हो सके।</p></div>
-    <div class="card card-hover h-full p-6"><span class="grid h-9 w-9 place-items-center rounded-lg bg-gold-400 font-display text-[15px] font-extrabold text-navy-950">5</span><h3 class="mt-4 text-[17px] font-extrabold text-navy-900">Test &amp; Analysis</h3><p class="hind mt-2 text-[13.5px] leading-relaxed text-navy-700">Mistakes को Concept Error, Memory Error, Calculation Error और Question-Reading Error में identify करने की habit develop की जाएगी।</p></div>
-    <div class="card card-hover h-full p-6"><span class="grid h-9 w-9 place-items-center rounded-lg bg-gold-400 font-display text-[15px] font-extrabold text-navy-950">6</span><h3 class="mt-4 text-[17px] font-extrabold text-navy-900">Revision &amp; Recall</h3><p class="hind mt-2 text-[13.5px] leading-relaxed text-navy-700">Revision को preparation का अंतिम हिस्सा नहीं बल्कि continuous process माना जाएगा।</p></div>
-    <div class="card card-hover h-full p-6"><span class="grid h-9 w-9 place-items-center rounded-lg bg-gold-400 font-display text-[15px] font-extrabold text-navy-950">7</span><h3 class="mt-4 text-[17px] font-extrabold text-navy-900">Mentorship</h3><p class="hind mt-2 text-[13.5px] leading-relaxed text-navy-700">Preparation direction, planning, consistency और exam approach पर regular guidance दिया जाएगा।</p></div>
-  </div>
-</div></section>
-
-<!-- ============ FIX #4: FREE DEMO — 3 CATEGORIES (tabs) ============ -->
-<section id="free-demo" class="scroll-mt-24 bg-navy-950 py-16 text-white lg:py-20">
-  <div class="container-x grid gap-8 lg:grid-cols-2 lg:items-center">
-    <div>
-      <span class="eyebrow"><svg viewBox="0 0 24 24" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4.5 19 12 7 19.5v-15Z"/></svg> Free Demo Classes</span>
-      <h2 class="h-display mt-4 text-[30px] sm:text-[38px]">पहले हमारी Teaching Experience कीजिए — फिर Decide कीजिए</h2>
-      <div class="rule-gold mt-4"></div>
-      <p class="hind mt-4 text-[15px] leading-relaxed text-navy-100/80">किसी coaching program को केवल poster या advertisement देखकर join नहीं करना चाहिए। अपनी पसंद की category चुनिए और Shardool Sir की actual class देखिए।</p>
-      <ul class="mt-6 grid gap-2.5">
-        <li class="hind flex items-start gap-2.5 text-[14.5px] text-navy-100/85"><svg viewBox="0 0 24 24" class="mt-0.5 h-4 w-4 shrink-0 icon-gold" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7"/></svg>Concepts कैसे explain किए जाते हैं</li>
-        <li class="hind flex items-start gap-2.5 text-[14.5px] text-navy-100/85"><svg viewBox="0 0 24 24" class="mt-0.5 h-4 w-4 shrink-0 icon-gold" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7"/></svg>Hindi-English bilingual approach आपके लिए comfortable है या नहीं</li>
-        <li class="hind flex items-start gap-2.5 text-[14.5px] text-navy-100/85"><svg viewBox="0 0 24 24" class="mt-0.5 h-4 w-4 shrink-0 icon-gold" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7"/></svg>Notes कैसे structured हैं</li>
-        <li class="hind flex items-start gap-2.5 text-[14.5px] text-navy-100/85"><svg viewBox="0 0 24 24" class="mt-0.5 h-4 w-4 shrink-0 icon-gold" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7"/></svg>PYQs कैसे discuss होते हैं</li>
-        <li class="hind flex items-start gap-2.5 text-[14.5px] text-navy-100/85"><svg viewBox="0 0 24 24" class="mt-0.5 h-4 w-4 shrink-0 icon-gold" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7"/></svg>Class कितनी exam-oriented है</li>
-      </ul>
-    </div>
-
-    <div class="demo-tabs">
-      <input type="radio" name="demo" id="dt-teaching" class="dt-radio" checked>
-      <input type="radio" name="demo" id="dt-research" class="dt-radio">
-      <input type="radio" name="demo" id="dt-logical"  class="dt-radio">
-
-      <div class="dt-nav">
-        <label class="dt-label" for="dt-teaching">Teaching Aptitude Demo</label>
-        <label class="dt-label" for="dt-research">Research Aptitude Demo</label>
-        <label class="dt-label" for="dt-logical">Logical Reasoning Demo</label>
-      </div>
-
-      <div class="dt-stage">
-        <!-- ▼▼ VIDEO ID YAHAN BADLEIN ▼▼  (abhi teeno me same video hai) -->
-        <div class="dt-panel dt-panel--teaching">
-          <div class="overflow-hidden rounded-2xl border border-white/15 bg-black shadow-lift">
-            <div class="relative w-full pb-[56.25%]">
-              <!-- TEACHING APTITUDE video id -->
-              <iframe class="absolute inset-0 h-full w-full" src="https://www.youtube.com/embed/FAgtT33U8RY?rel=0&amp;modestbranding=1&amp;playsinline=1" title="Free demo class — Teaching Aptitude" loading="lazy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <div class="lg:col-span-5 w-full max-w-[340px] mx-auto lg:mx-0 lg:ml-auto">
+                        <div class="rounded-2xl border border-white/[0.08] bg-white/[0.04] p-3.5 backdrop-blur-md shadow-[0_8px_32px_rgba(0,0,0,0.18)] sm:p-4">
+                            <div class="relative overflow-hidden rounded-xl">
+                                <img src="assets/images/faculty.jpg"
+                                    alt="Dr. Shardool Sir — UGC NET Paper-1 Faculty, GS Net Academy"
+                                    class="aspect-[3/4] w-full max-h-72 object-cover object-top"
+                                    width="340" height="453">
+                                <span
+                                    class="absolute left-2.5 top-2.5 rounded-md bg-gold-amber/95 px-2 py-0.5 text-[10px] font-extrabold uppercase tracking-wider text-navy-darkest shadow-sm">Faculty</span>
+                            </div>
+                            <p class="mt-3.5 font-headline-md text-[20px] font-extrabold leading-none tracking-tight text-gold-amber">
+                                Dr. Shardool Sir
+                            </p>
+                            <ul class="mt-2.5 grid gap-1.5 border-t border-white/[0.08] pt-2.5">
+                                <li class="flex items-start gap-2 text-[12px] leading-snug text-surface-container-highest/90">
+                                    <span class="material-symbols-outlined text-gold-amber text-[13px] shrink-0 mt-0.5"
+                                        style="font-variation-settings: 'FILL' 1;">check_circle </span>
+                                    14+ साल का Teaching &amp; Research अनुभव
+                                </li>
+                                <li class="flex items-start gap-2 text-[12px] leading-snug text-surface-container-highest/90">
+                                    <span class="material-symbols-outlined text-gold-amber text-[13px] shrink-0 mt-0.5"
+                                        style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                                    M.A. – JNU (AIR-1) · M.Phil. &amp; Ph.D. – DU
+                                </li>
+                                <li class="flex items-start gap-2 text-[12px] leading-snug text-surface-container-highest/90">
+                                    <span class="material-symbols-outlined text-gold-amber text-[13px] shrink-0 mt-0.5"
+                                        style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                                    UGC NET-JRF Qualified
+                                </li>
+                                <li class="flex items-start gap-2 text-[12px] leading-snug text-surface-container-highest/90">
+                                    <span class="material-symbols-outlined text-gold-amber text-[13px] shrink-0 mt-0.5"
+                                        style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                                    पूर्व-कर्मचारी, सामाजिक न्याय मंत्रालय, भारत सरकार
+                                </li>
+                                <li class="flex items-start gap-2 text-[12px] leading-snug text-surface-container-highest/90">
+                                    <span class="material-symbols-outlined text-gold-amber text-[13px] shrink-0 mt-0.5"
+                                        style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                                    UPSC / IBPS / SSC विशेषज्ञ · Asst. Professor
+                                </li>
+                            </ul>
+                            <a href="https://wa.me/919876543210"
+                                class="mt-3.5 w-full inline-flex items-center justify-center gap-2 py-2.5 px-4 rounded-lg bg-gold-amber/95 hover:bg-gold-amber text-navy-darkest font-headline-sm text-[13px] font-bold transition-all shadow-[0_2px_12px_rgba(245,166,35,0.25)]">
+                                <span class="material-symbols-outlined text-[17px]">chat</span>
+                                Mentorship के लिए संपर्क करें
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- THE TWO DEDICATED COURSE PORTALS -->
+            <section
+                class="w-full max-w-[1240px] mx-auto px-gutter-mobile md:px-gutter-desktop -mt-10 mb-space-3xl relative z-20">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-space-xl">
+                    <!-- CARD 1: UGC NET PAPER-1 -->
+                    <div
+                        class="bg-paper-white rounded-xl shadow-xl border border-outline-variant/30 flex flex-col justify-between overflow-hidden transition-all duration-300 hover:shadow-2xl hover:border-emerald-accent/50 group">
+                        <div class="bg-navy-darkest px-space-lg py-space-sm flex items-center justify-between">
+                            <span
+                                class="inline-flex items-center gap-1.5 font-label-md text-emerald-accent uppercase font-bold tracking-wider">
+                                <span class="w-2.5 h-2.5 rounded-full bg-emerald-accent animate-pulse"></span>
+                                NTA UGC NET / JRF 2025-26
+                            </span>
+                            <span
+                                class="bg-emerald-subtle text-emerald-success text-xs font-headline-sm font-bold px-space-xs py-0.5 rounded">
+                                लक्ष्य 80+ अंक
+                            </span>
+                        </div>
+                        <div class="p-space-xl flex-1 flex flex-col justify-between">
+                            <div>
+                                <h2
+                                    class="font-headline-xl text-3xl md:text-4xl text-navy-darkest font-bold mb-space-xs group-hover:text-emerald-success transition-colors">
+                                    UGC NET Paper-1 पूर्ण Mentorship
+                                </h2>
+                                <p class="font-body-md text-lg text-on-surface-variant mb-space-lg leading-relaxed">
+                                    Teaching &amp; Research Aptitude ka General Paper, jisme sabhi 10 core units targeted scoring frameworks ke saath cover kiye jaate hain.
+                                </p>
+                                <div
+                                    class="p-space-md rounded-lg bg-surface-container-low border border-surface-container-highest mb-space-lg flex items-center justify-between">
+                                    <div>
+                                        <div class="flex items-baseline gap-space-xs">
+                                            <span
+                                                class="font-headline-2xl text-4xl md:text-5xl font-extrabold text-emerald-success">₹500</span>
+                                            <span
+                                                class="font-body-sm text-sm text-outline font-semibold line-through">₹2,499</span>
+                                        </div>
+                                        <p class="font-body-sm text-sm text-on-surface-variant font-medium mt-0.5">
+                                            One-Time Complete Cycle Fee • कोई मासिक Renewal नहीं</p>
+                                    </div>
+                                    <span
+                                        class="bg-emerald-subtle text-emerald-success border border-emerald-accent/40 font-label-sm uppercase font-bold px-space-xs py-1 rounded">
+                                        80% छूट सीमित समय
+                                    </span>
+                                </div>
+                                <ul class="space-y-space-md mb-space-xl">
+                                    <li class="flex items-start gap-space-sm">
+                                        <span
+                                            class="material-symbols-outlined text-emerald-success text-2xl shrink-0 mt-0.5"
+                                            style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                                        <span class="font-body-md text-base md:text-lg text-navy-surface font-medium">
+                                            <strong>पूरी 10 Core Units:</strong> Teaching, Research, Reading
+                                            Comprehension, Communication, Math, Logic, DI, ICT, People &amp;
+                                            Environment, Higher Ed.
+                                        </span>
+                                    </li>
+                                    <li class="flex items-start gap-space-sm">
+                                        <span
+                                            class="material-symbols-outlined text-emerald-success text-2xl shrink-0 mt-0.5"
+                                            style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                                        <span class="font-body-md text-base md:text-lg text-navy-surface font-medium">
+                                            <strong>Daily Live Evening Classes (रात 8:00 बजे):</strong> Real-time doubt
+                                            resolution + तुरंत 1080p cloud replay library, exam tak lifetime validity ke saath.
+                                        </span>
+                                    </li>
+                                    <li class="flex items-start gap-space-sm">
+                                        <span
+                                            class="material-symbols-outlined text-emerald-success text-2xl shrink-0 mt-0.5"
+                                            style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                                        <span class="font-body-md text-base md:text-lg text-navy-surface font-medium">
+                                            <strong>2019–2024 Chapter-Wise PYQs:</strong> 1,500+ solved authentic
+                                            questions, high-speed elimination techniques ke saath.
+                                        </span>
+                                    </li>
+                                    <li class="flex items-start gap-space-sm">
+                                        <span
+                                            class="material-symbols-outlined text-emerald-success text-2xl shrink-0 mt-0.5"
+                                            style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                                        <span class="font-body-md text-base md:text-lg text-navy-surface font-medium">
+                                            <strong>10 Bilingual Mind-Map PDF Booklets:</strong> अंतिम 15 दिनों की quick revision ke liye ultra-dense summary notes.
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div>
+                                <a class="w-full flex items-center justify-center gap-space-xs py-space-md px-space-lg rounded-lg bg-navy-darkest hover:bg-navy-surface text-paper-white font-headline-md text-lg md:text-xl font-bold transition-all shadow-lg hover:shadow-xl"
+                                    href="jrf-net.html">
+                                    <span>NET Paper-1 Portal में प्रवेश करें (₹500)</span>
+                                    <span class="material-symbols-outlined text-2xl">arrow_forward</span>
+                                </a>
+                                <div
+                                    class="mt-space-sm flex items-center justify-center gap-1.5 text-center font-body-sm text-sm text-on-surface-variant font-medium">
+                                    <span class="material-symbols-outlined text-base text-emerald-success">info</span>
+                                    <span>पूरा 10-Unit syllabus breakdown, schedule aur free demo index.html par उपलब्ध है</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- CARD 2: UP ASSISTANT PROFESSOR GK -->
+                    <div
+                        class="bg-paper-white rounded-xl shadow-xl border-2 border-gold-amber/60 flex flex-col justify-between overflow-hidden transition-all duration-300 hover:shadow-2xl group relative">
+                        <div
+                            class="absolute top-0 right-0 bg-gold-amber text-navy-darkest px-space-md py-1 font-label-md uppercase font-bold tracking-wider shadow-sm rounded-bl-lg">
+                            उच्च-प्रभाव सिलेक्शन ट्रैक
+                        </div>
+                        <div class="bg-navy-darkest px-space-lg py-space-sm flex items-center">
+                            <span
+                                class="inline-flex items-center gap-1.5 font-label-md text-gold-amber uppercase font-bold tracking-wider">
+                                <span class="material-symbols-outlined text-lg"
+                                    style="font-variation-settings: 'FILL' 1;">stars</span>
+                                UPHESC ADVT 51 &amp; GDC विशेष
+                            </span>
+                        </div>
+                        <div class="p-space-xl flex-1 flex flex-col justify-between">
+                            <div>
+                                <h2
+                                    class="font-headline-xl text-3xl md:text-4xl text-navy-darkest font-bold mb-space-xs group-hover:text-gold-deep transition-colors">
+                                    UP Assistant Professor GK Mentorship
+                                </h2>
+                                <p class="font-body-md text-lg text-on-surface-variant mb-space-lg leading-relaxed">
+                                    General Knowledge Paper-1 (Advt 51 / Govt Degree College ke liye अनिवार्य 30 निर्णायक प्रश्न)।
+                                </p>
+                                <div
+                                    class="p-space-md rounded-lg bg-gold-light/20 border border-gold-amber/30 mb-space-lg flex items-center justify-between">
+                                    <div>
+                                        <div class="flex items-baseline gap-space-xs">
+                                            <span
+                                                class="font-headline-2xl text-4xl md:text-5xl font-extrabold text-gold-deep">₹2,500</span>
+                                            <span
+                                                class="font-body-sm text-sm text-outline font-semibold line-through">₹5,000</span>
+                                        </div>
+                                        <p class="font-body-sm text-sm text-on-surface-variant font-medium mt-0.5">
+                                            पूर्ण डेडिकेटेड Term • Direct Faculty Mentorship</p>
+                                    </div>
+                                    <span
+                                        class="bg-gold-light text-secondary border border-gold-amber/50 font-label-sm uppercase font-bold px-space-xs py-1 rounded">
+                                        फ्लैगशिप कोहॉर्ट
+                                    </span>
+                                </div>
+                                <ul class="space-y-space-md mb-space-xl">
+                                    <li class="flex items-start gap-space-sm">
+                                        <span class="material-symbols-outlined text-gold-deep text-2xl shrink-0 mt-0.5"
+                                            style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                                        <span class="font-body-md text-base md:text-lg text-navy-surface font-medium">
+                                            <strong>सभी 6 विशेष GK Units:</strong> UP Special GK &amp; Geography,
+                                            National &amp; International Affairs, Teaching/Research, ICT, Environment,
+                                            History &amp; Polity.
+                                        </span>
+                                    </li>
+                                    <li class="flex items-start gap-space-sm">
+                                        <span class="material-symbols-outlined text-gold-deep text-2xl shrink-0 mt-0.5"
+                                            style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                                        <span class="font-body-md text-base md:text-lg text-navy-surface font-medium">
+                                            <strong>25+ स्कोर गारंटी Framework:</strong> वो निर्णायक 30 अंक मास्टर करें जो final interview selection list बनाते या बिगाड़ते हैं।
+                                        </span>
+                                    </li>
+                                    <li class="flex items-start gap-space-sm">
+                                        <span class="material-symbols-outlined text-gold-deep text-2xl shrink-0 mt-0.5"
+                                            style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                                        <span class="font-body-md text-base md:text-lg text-navy-surface font-medium">
+                                            <strong>Advt 51 Match Mock Tests:</strong> उच्च-प्रभाव simulation aur negative marking analysis ke saath 25 Full-Length Test Series.
+                                        </span>
+                                    </li>
+                                    <li class="flex items-start gap-space-sm">
+                                        <span class="material-symbols-outlined text-gold-deep text-2xl shrink-0 mt-0.5"
+                                            style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                                        <span class="font-body-md text-base md:text-lg text-navy-surface font-medium">
+                                            <strong>1-on-1 Faculty Access:</strong> Direct query resolution aur personal
+                                            answer structuring, un educators ke saath jinhone khud PSC exams clear kiye hain.
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div>
+                                <a class="w-full flex items-center justify-center gap-space-xs py-space-md px-space-lg rounded-lg bg-gold-amber hover:bg-gold-deep text-navy-darkest font-headline-md text-lg md:text-xl font-bold transition-all shadow-lg hover:shadow-xl"
+                                    href="new.html">
+                                    <span>UP GK Portal देखें (₹2,500)</span>
+                                    <span class="material-symbols-outlined text-2xl">arrow_forward</span>
+                                </a>
+                                <div
+                                    class="mt-space-sm flex items-center justify-center gap-1.5 text-center font-body-sm text-sm text-on-surface-variant font-medium">
+                                    <span class="material-symbols-outlined text-base text-gold-deep">info</span>
+                                    <span>Unit breakdown, mock test preview aur schedule new.html par उपलब्ध है</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- 5-SECOND DECISION DIAGNOSTIC -->
+            <section class="w-full bg-paper-muted py-space-3xl px-gutter-mobile md:px-gutter-desktop">
+                <div class="max-w-[1240px] mx-auto">
+                    <div class="text-center max-w-3xl mx-auto mb-space-2xl">
+                        <span
+                            class="font-label-lg text-secondary uppercase font-bold tracking-widest block mb-space-2xs">Fast-Track
+                            Guidance</span>
+                        <h2 class="font-headline-2xl text-3xl md:text-5xl font-extrabold text-navy-darkest mb-space-sm">
+                            कौन सा Course आपके लिए सही है?
+                        </h2>
+                        <p class="font-body-lg text-lg text-on-surface-variant">
+                            5 seconds me identify kijiye apna target goal aur bina kisi confusion ke सही curriculum
+                            chuniye:
+                        </p>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-space-lg">
+                        <div
+                            class="bg-paper-white p-space-xl rounded-xl shadow-md border-l-4 border-emerald-success flex flex-col justify-between">
+                            <div>
+                                <div class="flex items-center gap-space-sm mb-space-md">
+                                    <span
+                                        class="w-10 h-10 rounded-full bg-emerald-subtle text-emerald-success flex items-center justify-center font-bold text-lg">1</span>
+                                    <span
+                                        class="font-label-md text-emerald-success uppercase tracking-wider font-bold">लक्ष्य:
+                                        National Eligibility • PhD • JRF</span>
+                                </div>
+                                <h3 class="font-headline-lg text-2xl font-bold text-navy-darkest mb-space-sm">
+                                    अगर आपका target NTA UGC NET / JRF crack करना है...
+                                </h3>
+                                <p
+                                    class="font-body-md text-base md:text-lg text-on-surface-variant leading-relaxed mb-space-lg">
+                                    Aap Master's student ya pass-out hain aur All-India level par Assistant Professor
+                                    eligibility ya ₹37,000+ monthly Junior Research Fellowship (JRF) scholarship secure
+                                    karna chahte hain.
+                                </p>
+                            </div>
+                            <div
+                                class="pt-space-md border-t border-surface-container-highest flex items-center justify-between">
+                                <span class="font-headline-sm text-navy-darkest font-semibold">Recommended Track:</span>
+                                <a class="inline-flex items-center gap-1 px-space-md py-2 rounded-lg bg-emerald-success text-paper-white font-headline-sm text-sm font-bold hover:bg-emerald-accent transition-colors"
+                                    href="jrf-net.html">
+                                    <span>UGC NET Track पर जाएं</span>
+                                    <span class="material-symbols-outlined text-base">arrow_forward</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div
+                            class="bg-paper-white p-space-xl rounded-xl shadow-md border-l-4 border-gold-amber flex flex-col justify-between">
+                            <div>
+                                <div class="flex items-center gap-space-sm mb-space-md">
+                                    <span
+                                        class="w-10 h-10 rounded-full bg-gold-light/40 text-gold-deep flex items-center justify-center font-bold text-lg">2</span>
+                                    <span class="font-label-md text-gold-deep uppercase tracking-wider font-bold">लक्ष्य:
+                                        Permanent Govt Job • UP Colleges</span>
+                                </div>
+                                <h3 class="font-headline-lg text-2xl font-bold text-navy-darkest mb-space-sm">
+                                    अगर आप UP Higher Education Commission (Advt 51 / GDC) candidate हैं...
+                                </h3>
+                                <p
+                                    class="font-body-md text-base md:text-lg text-on-surface-variant leading-relaxed mb-space-lg">
+                                    Aapka NET/PhD already qualified hai, subject paper tayar hai, lekin selection
+                                    interview list me aane ke liye compulsory 30 GK questions me 25+ ka definitive
+                                    benchmark chahiye.
+                                </p>
+                            </div>
+                            <div
+                                class="pt-space-md border-t border-surface-container-highest flex items-center justify-between">
+                                <span class="font-headline-sm text-navy-darkest font-semibold">Recommended Track:</span>
+                                <a class="inline-flex items-center gap-1 px-space-md py-2 rounded-lg bg-gold-amber text-navy-darkest font-headline-sm text-sm font-bold hover:bg-gold-deep transition-colors"
+                                    href="new.html">
+                                    <span>UP Asst. Prof Track पर जाएं</span>
+                                    <span class="material-symbols-outlined text-base">arrow_forward</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- COMPARISON MATRIX -->
+            <section class="w-full max-w-[1240px] mx-auto py-space-3xl px-gutter-mobile md:px-gutter-desktop">
+                <div class="text-center max-w-3xl mx-auto mb-space-2xl">
+                    <span
+                        class="font-label-lg text-secondary uppercase font-bold tracking-widest block mb-space-2xs">Head-to-Head
+                        Overview</span>
+                    <h2 class="font-headline-2xl text-3xl md:text-5xl font-extrabold text-navy-darkest mb-space-sm">
+                        Technical Curriculum तुलना
+                    </h2>
+                    <p class="font-body-lg text-lg text-on-surface-variant">
+                        साफ़, पारदर्शी parameters ताकि aapko exactly pata ho ki har portal me kya cover hota hai.
+                    </p>
+                </div>
+                <div
+                    class="w-full overflow-x-auto rounded-xl shadow-lg border border-outline-variant/30 bg-paper-white">
+                    <table class="w-full text-left border-collapse min-w-[700px]">
+                        <thead>
+                            <tr class="bg-navy-darkest text-paper-white">
+                                <th class="p-space-lg font-headline-sm text-lg font-bold w-1/4">विशेषता / Parameter</th>
+                                <th class="p-space-lg font-headline-sm text-lg font-bold w-3/8 text-emerald-accent">UGC
+                                    NET Paper-1 Track</th>
+                                <th class="p-space-lg font-headline-sm text-lg font-bold w-3/8 text-gold-amber">UP Asst.
+                                    Professor GK Track</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-surface-container-highest font-body-md text-base">
+                            <tr class="hover:bg-surface-container-low transition-colors">
+                                <td class="p-space-lg font-semibold text-navy-darkest">Target परीक्षा</td>
+                                <td class="p-space-lg text-on-surface">NTA UGC NET / JRF (June &amp; Dec Cycles)</td>
+                                <td class="p-space-lg text-on-surface">UPHESC Advt 51 &amp; UP GDC Lecturer Exam</td>
+                            </tr>
+                            <tr class="hover:bg-surface-container-low transition-colors">
+                                <td class="p-space-lg font-semibold text-navy-darkest">Syllabus का दायरा</td>
+                                <td class="p-space-lg text-on-surface">पूरी 10 Core Units (Teaching to Higher Ed)</td>
+                                <td class="p-space-lg text-on-surface">अनिवार्य 6 General Knowledge Units (30 प्रश्न)</td>
+                            </tr>
+                            <tr class="hover:bg-surface-container-low transition-colors">
+                                <td class="p-space-lg font-semibold text-navy-darkest">Tuition Fee</td>
+                                <td class="p-space-lg font-headline-md text-xl font-bold text-emerald-success">₹500
+                                    (One-Time)</td>
+                                <td class="p-space-lg font-headline-md text-xl font-bold text-gold-deep">₹2,500
+                                    (Comprehensive)</td>
+                            </tr>
+                            <tr class="hover:bg-surface-container-low transition-colors">
+                                <td class="p-space-lg font-semibold text-navy-darkest">Class Timing &amp; Format</td>
+                                <td class="p-space-lg text-on-surface">रोज़ाना रात 8:00 बजे Live + 1080p Cloud Replay</td>
+                                <td class="p-space-lg text-on-surface">Scheduled Deep-Dive Modules + Recorded Access
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-surface-container-low transition-colors">
+                                <td class="p-space-lg font-semibold text-navy-darkest">पढ़ाई की भाषा</td>
+                                <td class="p-space-lg text-on-surface">100% Hinglish (Bilingual Slides &amp;
+                                    Explanations)</td>
+                                <td class="p-space-lg text-on-surface">Bilingual (Hindi &amp; English Terminologies)
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-surface-container-low transition-colors">
+                                <td class="p-space-lg font-semibold text-navy-darkest">Study Material शामिल</td>
+                                <td class="p-space-lg text-on-surface">10 Unit Mind-Map PDFs + Solved PYQ Sheets</td>
+                                <td class="p-space-lg text-on-surface">UP Special GK Handouts + Current Affairs Digest
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-surface-container-low transition-colors">
+                                <td class="p-space-lg font-semibold text-navy-darkest">Mock Test Suite</td>
+                                <td class="p-space-lg text-on-surface">15 NTA-Interface Full Mocks</td>
+                                <td class="p-space-lg text-on-surface">25 Topic &amp; Full Length Advt 51 Standard Tests
+                                </td>
+                            </tr>
+                            <tr class="bg-surface-container-low">
+                                <td class="p-space-lg font-bold text-navy-darkest">डेडिकेटेड Portal Link</td>
+                                <td class="p-space-lg">
+                                    <a class="inline-flex items-center gap-1.5 px-space-md py-2 rounded bg-navy-darkest text-paper-white font-headline-sm text-sm font-bold hover:bg-navy-surface transition-all"
+                                        href="jrf-net.html">
+                                        <span>Paper-1 Page देखें</span>
+                                        <span class="material-symbols-outlined text-base">arrow_forward</span>
+                                    </a>
+                                </td>
+                                <td class="p-space-lg">
+                                    <a class="inline-flex items-center gap-1.5 px-space-md py-2 rounded bg-gold-amber text-navy-darkest font-headline-sm text-sm font-bold hover:bg-gold-deep transition-all"
+                                        href="new.html">
+                                        <span>UP GK Page देखें</span>
+                                        <span class="material-symbols-outlined text-base">arrow_forward</span>
+                                    </a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+            <!-- WHY GS NET ACADEMY -->
+            <section
+                class="w-full bg-navy-darkest text-paper-white py-space-3xl px-gutter-mobile md:px-gutter-desktop relative overflow-hidden">
+                <div class="max-w-[1240px] mx-auto">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-space-2xl items-center">
+                        <div class="lg:col-span-5 flex flex-col items-center lg:items-start text-center lg:text-left">
+                            <img alt="GS Net Academy Emblem"
+                                class="w-28 h-28 object-contain mb-space-md rounded-lg shadow-lg border border-navy-surface p-2 bg-navy-surface/40"
+                                src="https://lh3.googleusercontent.com/aida/AEtjO1X3XXhaovYGmW0ay9XuSUKJrfQrCanoysm0eerOo_JtEd2HXnluam7CWoSUDTTKDXBZyAQszQHRfnIiroxgHhEGgJRQzMnTorQSZJIsvauRVCP-08diOVs13s76fz69WZZcyCgbP2MvOx2QenYa8sT0AEMzm2dv8BXt48BGH4EBSki0lu3j-st3UfOJJiiN8s2AXXwmeYjD0-NHxVWwxQNUrCaGOm-NEGXO1Iw972RrWUCgsfaxy_HGS70" />
+                            <div
+                                class="inline-block px-space-sm py-1 rounded bg-gold-amber/20 text-gold-amber font-label-md uppercase tracking-wider font-bold mb-space-sm">
+                                Pedagogical Core Standard
+                            </div>
+                            <h2
+                                class="font-headline-xl text-3xl md:text-4xl font-extrabold text-paper-white leading-tight mb-space-md">
+                                "हम वो नहीं पढ़ाते जो आसान है। हम वो पढ़ाते हैं जो NTA &amp; UPHESC dwara बार-बार test किया जाता है।"
+                            </h2>
+                            <p class="font-body-md text-base md:text-lg text-surface-container-highest leading-relaxed">
+                                Zyadatar aspirants fail isliye nahi hote kyunki unke study hours kam hain, balki isliye
+                                kyunki wo outdated 600-page guides se padhte hain jo 2017 exam dynamics ke liye बनाई गई थीं।
+                                GS Net Academy me, har class current question trap mechanics ke around engineer ki jaati hai।
+                            </p>
+                        </div>
+                        <div class="lg:col-span-7 grid grid-cols-1 md:grid-cols-3 gap-space-md">
+                            <div
+                                class="bg-navy-surface p-space-lg rounded-xl border border-navy-surface/80 flex flex-col justify-between">
+                                <div>
+                                    <div
+                                        class="w-12 h-12 rounded-lg bg-gold-amber/20 text-gold-amber flex items-center justify-center mb-space-md">
+                                        <span class="material-symbols-outlined text-[28px]">verified_user</span>
+                                    </div>
+                                    <h3 class="font-headline-md text-xl font-bold text-paper-white mb-space-xs">
+                                        Direct Syllabus Strictness
+                                    </h3>
+                                    <p class="font-body-sm text-sm text-surface-container-highest leading-relaxed">
+                                        हर slide directly ek official syllabus sub-point se juda hai। कोई अनावश्यक
+                                        intellectual lectures नहीं।
+                                    </p>
+                                </div>
+                                <div
+                                    class="mt-space-md pt-space-xs border-t border-navy-darkest text-gold-amber font-label-sm uppercase font-bold tracking-wider">
+                                    Zero Deviations
+                                </div>
+                            </div>
+                            <div
+                                class="bg-navy-surface p-space-lg rounded-xl border border-navy-surface/80 flex flex-col justify-between">
+                                <div>
+                                    <div
+                                        class="w-12 h-12 rounded-lg bg-emerald-accent/20 text-emerald-accent flex items-center justify-center mb-space-md">
+                                        <span class="material-symbols-outlined text-[28px]">delete_sweep</span>
+                                    </div>
+                                    <h3 class="font-headline-md text-xl font-bold text-paper-white mb-space-xs">
+                                        Zero Repetitive Fluff
+                                    </h3>
+                                    <p class="font-body-sm text-sm text-surface-container-highest leading-relaxed">
+                                        Concise high-yield mind maps revision time ko 70% कम करते हैं, jisse exam day se
+                                        pehle aapko maximum edge milta hai।
+                                    </p>
+                                </div>
+                                <div
+                                    class="mt-space-md pt-space-xs border-t border-navy-darkest text-emerald-accent font-label-sm uppercase font-bold tracking-wider">
+                                    Micro-Summaries
+                                </div>
+                            </div>
+                            <div
+                                class="bg-navy-surface p-space-lg rounded-xl border border-navy-surface/80 flex flex-col justify-between">
+                                <div>
+                                    <div
+                                        class="w-12 h-12 rounded-lg bg-gold-amber/20 text-gold-amber flex items-center justify-center mb-space-md">
+                                        <span class="material-symbols-outlined text-[28px]">school</span>
+                                    </div>
+                                    <h3 class="font-headline-md text-xl font-bold text-paper-white mb-space-xs">
+                                        Verified Educators
+                                    </h3>
+                                    <p class="font-body-sm text-sm text-surface-container-highest leading-relaxed">
+                                        Sirf JRF rank-holders aur qualified state PSC candidates dwara padhaya jaata hai,
+                                        jo exam room ke pressure ko khud jaante hain।
+                                    </p>
+                                </div>
+                                <div
+                                    class="mt-space-md pt-space-xs border-t border-navy-darkest text-gold-amber font-label-sm uppercase font-bold tracking-wider">
+                                    Top 1% Mentors
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- FAQ -->
+            <section class="w-full max-w-[1240px] mx-auto py-space-3xl px-gutter-mobile md:px-gutter-desktop">
+                <div class="text-center max-w-3xl mx-auto mb-space-2xl">
+                    <span
+                        class="font-label-lg text-secondary uppercase font-bold tracking-widest block mb-space-2xs">कुछ
+                        सवाल हैं?</span>
+                    <h2 class="font-headline-2xl text-3xl md:text-5xl font-extrabold text-navy-darkest mb-space-sm">
+                        अक्सर पूछे जाने वाले सवाल
+                    </h2>
+                    <p class="font-body-lg text-lg text-on-surface-variant">
+                        Enrollments, batch access, aur curriculum validity ke baare me sab kuch jo aapko jaanna chahiye।
+                    </p>
+                </div>
+                <div class="max-w-4xl mx-auto space-y-space-md">
+                    <details
+                        class="group bg-paper-white p-space-lg rounded-xl shadow-sm border border-outline-variant/30 open:shadow-md transition-all">
+                        <summary
+                            class="flex items-center justify-between font-headline-md text-lg md:text-xl font-bold text-navy-darkest cursor-pointer select-none">
+                            <span>क्या मैं एक साथ दोनों courses में enroll हो सकता हूं?</span>
+                            <span
+                                class="material-symbols-outlined text-gold-deep transition-transform duration-200 group-open:rotate-180">expand_more</span>
+                        </summary>
+                        <p
+                            class="font-body-md text-base md:text-lg text-on-surface-variant mt-space-md leading-relaxed">
+                            हाँ, बिल्कुल। दोनों batches ki live classes aur doubt schedules अलग-अलग timings par organize
+                            kiye jate hain taaki aspirants bina kisi clash ke dono examinations ki tayaari seamlessly
+                            complete kar sakein।
+                        </p>
+                    </details>
+                    <details
+                        class="group bg-paper-white p-space-lg rounded-xl shadow-sm border border-outline-variant/30 open:shadow-md transition-all">
+                        <summary
+                            class="flex items-center justify-between font-headline-md text-lg md:text-xl font-bold text-navy-darkest cursor-pointer select-none">
+                            <span>अगर live class miss हो जाए तो replay कितनी बार देख सकते हैं?</span>
+                            <span
+                                class="material-symbols-outlined text-gold-deep transition-transform duration-200 group-open:rotate-180">expand_more</span>
+                        </summary>
+                        <p
+                            class="font-body-md text-base md:text-lg text-on-surface-variant mt-space-md leading-relaxed">
+                            हर live class ke turant baad HD 1080p recorded replay aapke student portal me upload ho
+                            jata hai। Aap bina kisi view limits ke unlimited baar apni convenience ke anusar revise kar
+                            sakte hain।
+                        </p>
+                    </details>
+                    <details
+                        class="group bg-paper-white p-space-lg rounded-xl shadow-sm border border-outline-variant/30 open:shadow-md transition-all">
+                        <summary
+                            class="flex items-center justify-between font-headline-md text-lg md:text-xl font-bold text-navy-darkest cursor-pointer select-none">
+                            <span>₹500 वाले Paper-1 batch में क्या सारी 10 units cover होंगी?</span>
+                            <span
+                                class="material-symbols-outlined text-gold-deep transition-transform duration-200 group-open:rotate-180">expand_more</span>
+                        </summary>
+                        <p
+                            class="font-body-md text-base md:text-lg text-on-surface-variant mt-space-md leading-relaxed">
+                            हाँ, complete 10 units (Teaching, Research, Comprehension, Communication, Mathematical
+                            Reasoning, Logical Reasoning, Data Interpretation, ICT, People &amp; Environment, and Higher
+                            Education System) poori detail me cover ki jayengi, PYQ practice ke saath।
+                        </p>
+                    </details>
+                    <details
+                        class="group bg-paper-white p-space-lg rounded-xl shadow-sm border border-outline-variant/30 open:shadow-md transition-all">
+                        <summary
+                            class="flex items-center justify-between font-headline-md text-lg md:text-xl font-bold text-navy-darkest cursor-pointer select-none">
+                            <span>UP Assistant Professor GK का target score 25+ कैसे achieve होता है?</span>
+                            <span
+                                class="material-symbols-outlined text-gold-deep transition-transform duration-200 group-open:rotate-180">expand_more</span>
+                        </summary>
+                        <p
+                            class="font-body-md text-base md:text-lg text-on-surface-variant mt-space-md leading-relaxed">
+                            UPHESC ke pichle 15 saalon ke question trends aur specific UP Special GK ke recurring topics
+                            par concentrated drill karwayi jaati hai। Advt 51 negative-marking format mocks ke through
+                            candidates naturally 25+ correct attempts ka confidence bana lete hain।
+                        </p>
+                    </details>
+                </div>
+            </section>
+            <!-- WHATSAPP BANNER -->
+            <section class="w-full max-w-[1240px] mx-auto px-gutter-mobile md:px-gutter-desktop mb-space-3xl">
+                <div
+                    class="bg-gradient-to-r from-navy-darkest via-primary-container to-navy-darkest p-space-xl md:p-space-2xl rounded-2xl shadow-xl border border-gold-amber/30 text-paper-white flex flex-col md:flex-row items-center justify-between gap-space-xl">
+                    <div class="max-w-2xl text-center md:text-left">
+                        <span
+                            class="inline-flex items-center gap-1.5 px-space-sm py-1 rounded bg-emerald-accent/20 text-emerald-accent font-label-md uppercase font-bold tracking-wider mb-space-xs">
+                            <span class="material-symbols-outlined text-base">support_agent</span> Direct Admission
+                            Helpline
+                        </span>
+                        <h3 class="font-headline-xl text-2xl md:text-4xl font-extrabold text-paper-white mb-space-xs">
+                            Syllabus ya eligibility को लेकर confused हैं?
+                        </h3>
+                        <p class="font-body-lg text-base md:text-xl text-surface-container-highest leading-relaxed">
+                            Hamare senior academic counselor se WhatsApp par seedhe baat karein। Free syllabus PDF
+                            guidance turant di jaati hai।
+                        </p>
+                    </div>
+                    <div class="shrink-0">
+                        <a class="inline-flex items-center gap-space-xs px-space-xl py-space-md rounded-lg bg-emerald-success hover:bg-emerald-accent text-paper-white font-headline-md text-lg font-bold transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+                            href="https://wa.me/919876543210" rel="noopener noreferrer" target="_blank">
+                            <span class="material-symbols-outlined text-2xl">chat</span>
+                            <span>WhatsApp Counselor: +91 98765 43210</span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <!-- STICKY BOTTOM BAR -->
+            <div
+                class="fixed bottom-0 left-0 w-full bg-navy-darkest/95 backdrop-blur-md border-t border-navy-surface py-space-xs px-gutter-mobile md:px-gutter-desktop z-40 shadow-2xl">
+                <div
+                    class="max-w-[1240px] mx-auto flex flex-col sm:flex-row items-center justify-between gap-space-xs sm:gap-space-md">
+                    <div class="hidden md:flex items-center gap-space-sm">
+                        <img alt="GS Net Academy Emblem" class="w-8 h-8 object-contain rounded shrink-0"
+                            src="https://lh3.googleusercontent.com/aida/AEtjO1X3XXhaovYGmW0ay9XuSUKJrfQrCanoysm0eerOo_JtEd2HXnluam7CWoSUDTTKDXBZyAQszQHRfnIiroxgHhEGgJRQzMnTorQSZJIsvauRVCP-08diOVs13s76fz69WZZcyCgbP2MvOx2QenYa8sT0AEMzm2dv8BXt48BGH4EBSki0lu3j-st3UfOJJiiN8s2AXXwmeYjD0-NHxVWwxQNUrCaGOm-NEGXO1Iw972RrWUCgsfaxy_HGS70" />
+                        <div>
+                            <span class="font-headline-sm text-sm font-bold text-paper-white block leading-tight">GS NET
+                                ACADEMY</span>
+                            <span class="font-label-sm text-xs text-gold-amber flex items-center gap-1">
+                                <span class="w-1.5 h-1.5 rounded-full bg-emerald-accent animate-ping"></span> Admissions
+                                Active 2025-26
+                            </span>
+                        </div>
+                    </div>
+                    <div class="w-full sm:w-auto flex items-center gap-space-sm justify-end">
+                        <a class="flex-1 sm:flex-none inline-flex items-center justify-center gap-1.5 px-space-md py-2 rounded bg-navy-surface hover:bg-surface-tint border border-emerald-accent/40 text-paper-white font-headline-sm text-xs md:text-sm font-bold transition-all shadow-sm"
+                            href="jrf-net.html">
+                            <span>UGC NET Paper-1 (₹500)</span>
+                            <span class="material-symbols-outlined text-base text-emerald-accent">arrow_forward</span>
+                        </a>
+                        <a class="flex-1 sm:flex-none inline-flex items-center justify-center gap-1.5 px-space-md py-2 rounded bg-gold-amber hover:bg-gold-deep text-navy-darkest font-headline-sm text-xs md:text-sm font-bold transition-all shadow-sm"
+                            href="new.html">
+                            <span>UP Asst. Prof GK (₹2,500)</span>
+                            <span class="material-symbols-outlined text-base">arrow_forward</span>
+                        </a>
+                    </div>
+                </div>
             </div>
-          </div>
-          <p class="mt-3 text-[13px] font-semibold text-navy-200/75">Unit-1 — Teaching Aptitude: concept + PYQ approach.</p>
         </div>
-
-      <!-- ================= VIDEO DEMO SECTION ================= -->
-
-<!-- 1. RESEARCH APTITUDE -->
-<div class="dt-panel dt-panel--research">
-  <div class="overflow-hidden rounded-2xl border border-white/15 bg-black shadow-lift">
-    <div class="relative w-full pb-[56.25%]">
-
-      <iframe
-        class="absolute inset-0 h-full w-full"
-        src="https://www.youtube.com/embed/1m8ly1R-5tA?rel=0&modestbranding=1&playsinline=1"
-        title="Free Demo Class — Research Aptitude"
-        loading="lazy"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin"
-        allowfullscreen>
-      </iframe>
-
-    </div>
-  </div>
-
-  <p class="mt-3 text-[13px] font-semibold text-navy-200/75">
-    Unit-2 — Research Aptitude: Methods, Sampling aur Hypothesis.
-  </p>
-</div>
-
-
-
-
-<!-- 3. LOGICAL REASONING -->
-<div class="dt-panel dt-panel--logical">
-  <div class="overflow-hidden rounded-2xl border border-white/15 bg-black shadow-lift">
-    <div class="relative w-full pb-[56.25%]">
-
-      <iframe
-        class="absolute inset-0 h-full w-full"
-        src="https://www.youtube.com/embed/nv7OrVyiq1o?rel=0&modestbranding=1&playsinline=1"
-        title="Free Demo Class — Logical Reasoning"
-        loading="lazy"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin"
-        allowfullscreen>
-      </iframe>
-
-    </div>
-  </div>
-
-  <p class="mt-3 text-[13px] font-semibold text-navy-200/75">
-    Unit-6 — Logical Reasoning: Arguments, Fallacies aur Indian Logic.
-  </p>
-</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ========================= FACULTY ========================= -->
-<section class="bg-white py-14 lg:py-16"><div class="container-x grid gap-8 lg:grid-cols-[.8fr_1.2fr] lg:items-center">
-  <!-- FIX #1: yahan bhi placeholder note hataya gaya -->
-  <div><img src="assets/images/faculty.jpg" alt="Dr. Shardool Sir — UGC NET Paper-1 Faculty" loading="lazy" width="600" height="750" class="aspect-[4/5] w-full rounded-2xl object-cover shadow-lift"></div>
-  <div>
-    <span class="eyebrow"><svg viewBox="0 0 24 24" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4 2.5 8.6 12 13.2l9.5-4.6L12 4Z"/><path d="M6.4 10.6V16c0 1.4 2.5 2.8 5.6 2.8s5.6-1.4 5.6-2.8v-5.4"/><path d="M21.5 8.6v5"/></svg> Faculty</span>
-    <h2 class="h-display mt-4 text-[30px] sm:text-[38px]">Why Learn with Dr. Shardool Sir?</h2>
-    <div class="rule-gold mt-4"></div>
-    <ul class="mt-6 grid gap-2.5 sm:grid-cols-2"><li class="flex items-start gap-2.5 text-[14px] text-navy-800"><svg viewBox="0 0 24 24" class="mt-0.5 h-4 w-4 shrink-0 text-gold-600" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7"/></svg>Strong academic background from JNU &amp; University of Delhi</li><li class="flex items-start gap-2.5 text-[14px] text-navy-800"><svg viewBox="0 0 24 24" class="mt-0.5 h-4 w-4 shrink-0 text-gold-600" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7"/></svg>Teaching + research-oriented conceptual approach</li><li class="flex items-start gap-2.5 text-[14px] text-navy-800"><svg viewBox="0 0 24 24" class="mt-0.5 h-4 w-4 shrink-0 text-gold-600" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7"/></svg>UGC NET/JRF Paper-1 focused mentoring</li><li class="flex items-start gap-2.5 text-[14px] text-navy-800"><svg viewBox="0 0 24 24" class="mt-0.5 h-4 w-4 shrink-0 text-gold-600" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7"/></svg>Exam-oriented bilingual teaching</li><li class="flex items-start gap-2.5 text-[14px] text-navy-800"><svg viewBox="0 0 24 24" class="mt-0.5 h-4 w-4 shrink-0 text-gold-600" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7"/></svg>Concept clarity + PYQ analysis + practice + revision</li><li class="flex items-start gap-2.5 text-[14px] text-navy-800"><svg viewBox="0 0 24 24" class="mt-0.5 h-4 w-4 shrink-0 text-gold-600" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7"/></svg>Personal guidance for NET, JRF, Assistant Professor &amp; Ph.D. aspirants</li></ul>
-    <p class="hind mt-6 rounded-xl border-l-4 border-gold-400 bg-gold-50 px-5 py-4 text-[14.5px] font-semibold leading-relaxed text-navy-900">हम आपको केवल syllabus complete नहीं कराते—हम आपकी Paper-1 preparation को systematically build करते हैं।</p>
-  </div>
-</div></section>
-
-<!-- ========================= WHY US ========================= -->
-<section class="bg-cream py-14 lg:py-16"><div class="container-x">
-  <div class="mx-auto max-w-3xl text-center">
-    <span class="eyebrow"><svg viewBox="0 0 24 24" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5 13.8 9l5.5 1.8-5.5 1.8L12 18.1l-1.8-5.5L4.7 10.8 10.2 9 12 3.5Z"/></svg> Why us</span>
-    <h2 class="h-display mt-4 text-[30px] sm:text-[38px]">GS Net Academy क्यों?</h2>
-    <div class="rule-gold mx-auto mt-4"></div>
-    <p class="hind mt-4 text-[15px] leading-relaxed text-navy-700">GS Net Academy का focus केवल course sell करना नहीं बल्कि aspirant को structured academic support देना है।</p>
-  </div>
-  <div class="mt-8 flex items-center gap-4 rounded-2xl bg-navy-950 p-5 text-white sm:p-6"><span class="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-gold-400/15 ring-1 ring-gold-400/30"><svg viewBox="0 0 24 24" class="icon-gold h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4h10v5a5 5 0 0 1-10 0V4Z"/><path d="M7 5.5H4.5V7a3 3 0 0 0 3 3M17 5.5h2.5V7a3 3 0 0 1-3 3"/><path d="M12 14v4M8.5 21h7l-.7-3h-5.6l-.7 3Z"/></svg></span><p class="text-[13px] font-extrabold uppercase leading-relaxed tracking-wider text-gold-300 sm:text-[14px]">RIGHT DIRECTION + CONCEPTUAL CLARITY + PYQ INTELLIGENCE + PRACTICE + TEST + REVISION + MENTORSHIP</p></div>
-  <ul class="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-    <li class="card card-hover flex items-center gap-3 p-4"><span class="grid h-9 w-9 shrink-0 place-items-center rounded-lg bg-navy-900 font-display text-[14px] font-extrabold text-gold-400">01</span><span class="text-[13.5px] font-bold text-navy-900">UGC NET Paper-1 focused preparation</span></li>
-    <li class="card card-hover flex items-center gap-3 p-4"><span class="grid h-9 w-9 shrink-0 place-items-center rounded-lg bg-navy-900 font-display text-[14px] font-extrabold text-gold-400">02</span><span class="text-[13.5px] font-bold text-navy-900">Bilingual Teaching</span></li>
-    <li class="card card-hover flex items-center gap-3 p-4"><span class="grid h-9 w-9 shrink-0 place-items-center rounded-lg bg-navy-900 font-display text-[14px] font-extrabold text-gold-400">03</span><span class="text-[13.5px] font-bold text-navy-900">Exam-oriented Notes</span></li>
-    <li class="card card-hover flex items-center gap-3 p-4"><span class="grid h-9 w-9 shrink-0 place-items-center rounded-lg bg-navy-900 font-display text-[14px] font-extrabold text-gold-400">04</span><span class="text-[13.5px] font-bold text-navy-900">Live Interaction</span></li>
-    <li class="card card-hover flex items-center gap-3 p-4"><span class="grid h-9 w-9 shrink-0 place-items-center rounded-lg bg-navy-900 font-display text-[14px] font-extrabold text-gold-400">05</span><span class="text-[13.5px] font-bold text-navy-900">Recorded Learning Support</span></li>
-    <li class="card card-hover flex items-center gap-3 p-4"><span class="grid h-9 w-9 shrink-0 place-items-center rounded-lg bg-navy-900 font-display text-[14px] font-extrabold text-gold-400">06</span><span class="text-[13.5px] font-bold text-navy-900">PYQ-based Approach</span></li>
-    <li class="card card-hover flex items-center gap-3 p-4"><span class="grid h-9 w-9 shrink-0 place-items-center rounded-lg bg-navy-900 font-display text-[14px] font-extrabold text-gold-400">07</span><span class="text-[13.5px] font-bold text-navy-900">Regular Practice</span></li>
-    <li class="card card-hover flex items-center gap-3 p-4"><span class="grid h-9 w-9 shrink-0 place-items-center rounded-lg bg-navy-900 font-display text-[14px] font-extrabold text-gold-400">08</span><span class="text-[13.5px] font-bold text-navy-900">Doubt Support</span></li>
-    <li class="card card-hover flex items-center gap-3 p-4"><span class="grid h-9 w-9 shrink-0 place-items-center rounded-lg bg-navy-900 font-display text-[14px] font-extrabold text-gold-400">09</span><span class="text-[13.5px] font-bold text-navy-900">Mentorship</span></li>
-    <li class="card card-hover flex items-center gap-3 p-4"><span class="grid h-9 w-9 shrink-0 place-items-center rounded-lg bg-navy-900 font-display text-[14px] font-extrabold text-gold-400">10</span><span class="text-[13.5px] font-bold text-navy-900">Affordable Learning Opportunity</span></li>
-  </ul>
-</div></section>
-
-<!-- ========================= FIT CHECK ========================= -->
-<section class="bg-white py-14 lg:py-16"><div class="container-x">
-  <div class="mx-auto max-w-3xl text-center">
-    <span class="eyebrow"><svg viewBox="0 0 24 24" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5 13.8 9l5.5 1.8-5.5 1.8L12 18.1l-1.8-5.5L4.7 10.8 10.2 9 12 3.5Z"/></svg> Fit check</span>
-    <h2 class="h-display mt-4 text-[30px] sm:text-[38px]">Who Should Join?</h2>
-    <div class="rule-gold mx-auto mt-4"></div>
-  </div>
-  <div class="mt-9 grid gap-5 lg:grid-cols-2">
-    <div class="rounded-2xl border p-6 sm:p-7 border-emerald-200 bg-emerald-50/60"><h3 class="flex items-center gap-2.5 text-[19px] font-extrabold text-emerald-700"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7"/></svg>Who Should Join?</h3><ul class="mt-5 grid gap-2.5"><li class="hind flex items-start gap-2.5 text-[13.5px] leading-relaxed text-navy-800"><svg viewBox="0 0 24 24" class="mt-1 h-3.5 w-3.5 shrink-0 text-emerald-600" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7"/></svg>December 2026 UGC NET/JRF target करने वाले aspirants</li><li class="hind flex items-start gap-2.5 text-[13.5px] leading-relaxed text-navy-800"><svg viewBox="0 0 24 24" class="mt-1 h-3.5 w-3.5 shrink-0 text-emerald-600" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7"/></svg>Paper-1 की शुरुआत basic से करना चाहते हैं</li><li class="hind flex items-start gap-2.5 text-[13.5px] leading-relaxed text-navy-800"><svg viewBox="0 0 24 24" class="mt-1 h-3.5 w-3.5 shrink-0 text-emerald-600" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7"/></svg>पहले Paper-1 पढ़ चुके हैं लेकिन concepts fragmented हैं</li><li class="hind flex items-start gap-2.5 text-[13.5px] leading-relaxed text-navy-800"><svg viewBox="0 0 24 24" class="mt-1 h-3.5 w-3.5 shrink-0 text-emerald-600" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7"/></svg>YouTube से पढ़ते-पढ़ते structured preparation चाहते हैं</li><li class="hind flex items-start gap-2.5 text-[13.5px] leading-relaxed text-navy-800"><svg viewBox="0 0 24 24" class="mt-1 h-3.5 w-3.5 shrink-0 text-emerald-600" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7"/></svg>Paper-1 mock score improve करना चाहते हैं</li><li class="hind flex items-start gap-2.5 text-[13.5px] leading-relaxed text-navy-800"><svg viewBox="0 0 24 24" class="mt-1 h-3.5 w-3.5 shrink-0 text-emerald-600" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7"/></svg>Hindi-English bilingual classes पसंद करते हैं</li><li class="hind flex items-start gap-2.5 text-[13.5px] leading-relaxed text-navy-800"><svg viewBox="0 0 24 24" class="mt-1 h-3.5 w-3.5 shrink-0 text-emerald-600" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7"/></svg>PYQ + Notes + Practice + Mentorship एक साथ चाहते हैं</li><li class="hind flex items-start gap-2.5 text-[13.5px] leading-relaxed text-navy-800"><svg viewBox="0 0 24 24" class="mt-1 h-3.5 w-3.5 shrink-0 text-emerald-600" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7"/></svg>कम budget में quality guidance चाहते हैं</li></ul></div>
-    <div class="rounded-2xl border p-6 sm:p-7 border-brick/30 bg-brick/5"><h3 class="flex items-center gap-2.5 text-[19px] font-extrabold text-brick"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg>Who Should Not Join?</h3><ul class="mt-5 grid gap-2.5"><li class="hind flex items-start gap-2.5 text-[13.5px] leading-relaxed text-navy-800"><svg viewBox="0 0 24 24" class="mt-1 h-3.5 w-3.5 shrink-0 text-brick" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg>बिना regular study के केवल certificate चाहते हैं</li><li class="hind flex items-start gap-2.5 text-[13.5px] leading-relaxed text-navy-800"><svg viewBox="0 0 24 24" class="mt-1 h-3.5 w-3.5 shrink-0 text-brick" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg>Classes attend/revise करने के लिए समय नहीं देना चाहते</li><li class="hind flex items-start gap-2.5 text-[13.5px] leading-relaxed text-navy-800"><svg viewBox="0 0 24 24" class="mt-1 h-3.5 w-3.5 shrink-0 text-brick" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg>केवल shortcut tricks पर depend करना चाहते हैं</li><li class="hind flex items-start gap-2.5 text-[13.5px] leading-relaxed text-navy-800"><svg viewBox="0 0 24 24" class="mt-1 h-3.5 w-3.5 shrink-0 text-brick" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg>Practice और tests नहीं करना चाहते</li><li class="hind flex items-start gap-2.5 text-[13.5px] leading-relaxed text-navy-800"><svg viewBox="0 0 24 24" class="mt-1 h-3.5 w-3.5 shrink-0 text-brick" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg>Guaranteed JRF जैसी unrealistic promise चाहते हैं</li></ul></div>
-  </div>
-</div></section>
-
-<!-- ========================= PROGRAM & FEE ========================= -->
-<section class="bg-cream py-14 lg:py-16"><div class="container-x">
-  <div class="mx-auto max-w-3xl text-center">
-    <span class="eyebrow"><svg viewBox="0 0 24 24" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5 13.8 9l5.5 1.8-5.5 1.8L12 18.1l-1.8-5.5L4.7 10.8 10.2 9 12 3.5Z"/></svg> Program</span>
-    <h2 class="h-display mt-4 text-[30px] sm:text-[38px]">Program Details &amp; Fee</h2>
-    <div class="rule-gold mx-auto mt-4"></div>
-  </div>
-  <div class="mt-9 grid gap-6 lg:grid-cols-[1.4fr_1fr] lg:items-start">
-    <div class="grid gap-3 sm:grid-cols-2">
-      <div class="card flex items-center gap-3.5 p-4"><span class="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-gold-50 text-gold-600 ring-1 ring-gold-200"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4 2.5 8.6 12 13.2l9.5-4.6L12 4Z"/><path d="M6.4 10.6V16c0 1.4 2.5 2.8 5.6 2.8s5.6-1.4 5.6-2.8v-5.4"/><path d="M21.5 8.6v5"/></svg></span><div><p class="text-[10.5px] font-extrabold uppercase tracking-[0.14em] text-navy-500">Program</p><p class="text-[14.5px] font-extrabold text-navy-900">UGC NET Paper-1 Special Mentorship Batch</p></div></div>
-      <div class="card flex items-center gap-3.5 p-4"><span class="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-gold-50 text-gold-600 ring-1 ring-gold-200"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1"/></svg></span><div><p class="text-[10.5px] font-extrabold uppercase tracking-[0.14em] text-navy-500">Target</p><p class="text-[14.5px] font-extrabold text-navy-900">UGC NET/JRF 2026</p></div></div>
-      <div class="card flex items-center gap-3.5 p-4"><span class="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-gold-50 text-gold-600 ring-1 ring-gold-200"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17"/><path d="M12 3.5c2.4 2.6 3.5 5.4 3.5 8.5S14.4 17.9 12 20.5c-2.4-2.6-3.5-5.4-3.5-8.5S9.6 6.1 12 3.5Z"/></svg></span><div><p class="text-[10.5px] font-extrabold uppercase tracking-[0.14em] text-navy-500">Mode</p><p class="text-[14.5px] font-extrabold text-navy-900">Online</p></div></div>
-      <div class="card flex items-center gap-3.5 p-4"><span class="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-gold-50 text-gold-600 ring-1 ring-gold-200"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6.5" width="12" height="11" rx="2.5"/><path d="m15 11 5.5-3v8L15 13"/></svg></span><div><p class="text-[10.5px] font-extrabold uppercase tracking-[0.14em] text-navy-500">Platform</p><p class="text-[14.5px] font-extrabold text-navy-900">Google Meet</p></div></div>
-      <div class="card flex items-center gap-3.5 p-4"><span class="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-gold-50 text-gold-600 ring-1 ring-gold-200"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5.2l3.2 2"/></svg></span><div><p class="text-[10.5px] font-extrabold uppercase tracking-[0.14em] text-navy-500">Class Time</p><p class="text-[14.5px] font-extrabold text-navy-900">6:30 PM</p></div></div>
-      <div class="card flex items-center gap-3.5 p-4"><span class="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-gold-50 text-gold-600 ring-1 ring-gold-200"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H19v15H6.5A2.5 2.5 0 0 0 4 20.5v-15Z"/><path d="M4 20.5A2.5 2.5 0 0 1 6.5 18H19v3H6.5A2.5 2.5 0 0 1 4 20.5Z"/></svg></span><div><p class="text-[10.5px] font-extrabold uppercase tracking-[0.14em] text-navy-500">Medium</p><p class="text-[14.5px] font-extrabold text-navy-900">Hindi + English</p></div></div>
-      <div class="card flex items-center gap-3.5 p-4"><span class="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-gold-50 text-gold-600 ring-1 ring-gold-200"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 9 5-9 5-9-5 9-5Z"/><path d="m3 13 9 5 9-5"/></svg></span><div><p class="text-[10.5px] font-extrabold uppercase tracking-[0.14em] text-navy-500">Coverage</p><p class="text-[14.5px] font-extrabold text-navy-900">Complete Paper-1</p></div></div>
-      <div class="card flex items-center gap-3.5 p-4"><span class="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-gold-50 text-gold-600 ring-1 ring-gold-200"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 12a8 8 0 1 1-2.6-5.9"/><path d="M20 4v4.5h-4.5"/></svg></span><div><p class="text-[10.5px] font-extrabold uppercase tracking-[0.14em] text-navy-500">Support</p><p class="text-[14.5px] font-extrabold text-navy-900">Live + Recorded Sessions</p></div></div>
-      <div class="card flex items-center gap-3.5 p-4"><span class="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-gold-50 text-gold-600 ring-1 ring-gold-200"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h8l4 4v14H6V3Z"/><path d="M14 3v4h4"/><path d="M9 13.5h1.4a1.1 1.1 0 0 1 0 2.2H9v-2.2Zm0 2.2V18"/><path d="M13.4 13.5h1.2a1.4 1.4 0 0 1 1.4 1.4v1.7a1.4 1.4 0 0 1-1.4 1.4h-1.2v-4.5Z"/></svg></span><div><p class="text-[10.5px] font-extrabold uppercase tracking-[0.14em] text-navy-500">Notes</p><p class="text-[14.5px] font-extrabold text-navy-900">PDF Study Material</p></div></div>
-      <div class="card flex items-center gap-3.5 p-4"><span class="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-gold-50 text-gold-600 ring-1 ring-gold-200"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2.5"/><path d="m8 10 1.6 1.6L13 8.2"/><path d="M8 16h8"/></svg></span><div><p class="text-[10.5px] font-extrabold uppercase tracking-[0.14em] text-navy-500">Practice</p><p class="text-[14.5px] font-extrabold text-navy-900">PYQ + Questions + Tests</p></div></div>
-      <div class="card flex items-center gap-3.5 p-4"><span class="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-gold-50 text-gold-600 ring-1 ring-gold-200"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.2"/><path d="M3.5 20a5.5 5.5 0 0 1 11 0"/><path d="M16.5 8.5h5M16.5 12h5M16.5 15.5h3"/></svg></span><div><p class="text-[10.5px] font-extrabold uppercase tracking-[0.14em] text-navy-500">Mentorship</p><p class="text-[14.5px] font-extrabold text-navy-900">Regular Academic Guidance</p></div></div>
-    </div>
-    <div class="relative overflow-hidden rounded-2xl bg-navy-950 p-7 text-white sm:p-8">
-      <div class="grid-paper absolute inset-0 opacity-50" aria-hidden="true"></div>
-      <div class="absolute -right-16 -top-16 h-56 w-56 rounded-full bg-gold-500/20 blur-3xl" aria-hidden="true"></div>
-      <div class="relative">
-        <p class="font-display text-[28px] font-extrabold text-gold-400">COURSE FEE — FREE</p>
-        <p class="mt-4 text-[13px] font-bold uppercase tracking-wider text-navy-200/80">Registration &amp; Academic/Logistics Support Contribution</p>
-        <p class="font-display text-[40px] font-extrabold leading-none">₹500/- ONLY</p>
-        <p class="hind mt-3 text-[13.5px] leading-relaxed text-navy-100/75">यह contribution program की academic और logistics support व्यवस्था के लिए है।</p>
-        <p class="mt-3 text-[12.5px] font-semibold text-navy-200/70">Payment करने से पहले <a href="refund-policy.html" class="underline hover:text-gold-300">Refund &amp; Cancellation Policy</a> और <a href="terms-of-enrollment.html" class="underline hover:text-gold-300">Terms of Enrollment</a> ज़रूर पढ़ें।</p>
-        <div class="mt-6"><div class="flex flex-col gap-3 sm:flex-row sm:flex-wrap"><a href="/#free-demo" class="btn-ghost-light">▶ WATCH FREE DEMO</a><a href="#" class="btn-ghost-light gate-btn" data-gate-title="UGC NET Paper-1 Brochure" data-gate-type="brochure" data-gate-file="assets/pdf/brochure.pdf">⬇ DOWNLOAD BROCHURE</a><a href="enroll.html" class="btn-primary">✓ JOIN BATCH @ ₹500</a></div></div>
-      </div>
-    </div>
-  </div>
-</div></section>
-
-<!-- ========================= HOW TO JOIN ========================= -->
-<section class="bg-white py-14 lg:py-16"><div class="container-x">
-  <div class="mx-auto max-w-3xl text-center">
-    <span class="eyebrow"><svg viewBox="0 0 24 24" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5 13.8 9l5.5 1.8-5.5 1.8L12 18.1l-1.8-5.5L4.7 10.8 10.2 9 12 3.5Z"/></svg> Admission</span>
-    <h2 class="h-display mt-4 text-[30px] sm:text-[38px]">How to Join?</h2>
-    <div class="rule-gold mx-auto mt-4"></div>
-    <p class="hind mt-4 text-[15px] leading-relaxed text-navy-700">केवल 2 Simple Steps</p>
-  </div>
-  <div class="mt-9 grid gap-5 lg:grid-cols-2">
-    <div class="card p-6 sm:p-7"><span class="grid h-10 w-10 place-items-center rounded-full bg-gold-400 font-display text-[16px] font-extrabold text-navy-950">01</span><h3 class="mt-4 text-[18px] font-extrabold text-navy-900">STEP 1 — Registration Form Fill करें</h3><p class="hind mt-2.5 text-[14px] leading-relaxed text-navy-800">Registration Form में अपनी basic details भरें, policies को accept करें और ₹500 Registration &amp; Academic/Logistics Contribution का payment proof upload करें।</p><a href="enroll.html" class="btn-primary mt-5">OPEN REGISTRATION FORM <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h15"/><path d="m13 6 6 6-6 6"/></svg></a></div>
-    <div class="card p-6 sm:p-7"><span class="grid h-10 w-10 place-items-center rounded-full bg-gold-400 font-display text-[16px] font-extrabold text-navy-950">02</span><h3 class="mt-4 text-[18px] font-extrabold text-navy-900">STEP 2 — Join Class Community</h3><p class="hind mt-2.5 text-[14px] leading-relaxed text-navy-800">Verification के बाद student को GS Net Academy की official class community में add किया जाएगा।</p><ul class="mt-4 grid gap-2 sm:grid-cols-2"><li class="flex items-center gap-2.5 text-[13.5px] font-semibold text-navy-800"><svg viewBox="0 0 24 24" class="h-4 w-4 shrink-0 text-gold-600" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7"/></svg>Google Meet Class Link</li><li class="flex items-center gap-2.5 text-[13.5px] font-semibold text-navy-800"><svg viewBox="0 0 24 24" class="h-4 w-4 shrink-0 text-gold-600" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7"/></svg>PDF Notes</li><li class="flex items-center gap-2.5 text-[13.5px] font-semibold text-navy-800"><svg viewBox="0 0 24 24" class="h-4 w-4 shrink-0 text-gold-600" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7"/></svg>Class Updates</li><li class="flex items-center gap-2.5 text-[13.5px] font-semibold text-navy-800"><svg viewBox="0 0 24 24" class="h-4 w-4 shrink-0 text-gold-600" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7"/></svg>Recorded Session Information</li><li class="flex items-center gap-2.5 text-[13.5px] font-semibold text-navy-800"><svg viewBox="0 0 24 24" class="h-4 w-4 shrink-0 text-gold-600" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7"/></svg>Test Information</li><li class="flex items-center gap-2.5 text-[13.5px] font-semibold text-navy-800"><svg viewBox="0 0 24 24" class="h-4 w-4 shrink-0 text-gold-600" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7"/></svg>Mentorship Updates</li></ul></div>
-  </div>
-</div></section>
-
-<!-- ========================= FAQ ========================= -->
-<section class="bg-cream py-14 lg:py-16"><div class="container-x max-w-4xl">
-  <div class="mx-auto max-w-3xl text-center">
-    <span class="eyebrow"><svg viewBox="0 0 24 24" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5 13.8 9l5.5 1.8-5.5 1.8L12 18.1l-1.8-5.5L4.7 10.8 10.2 9 12 3.5Z"/></svg> FAQ</span>
-    <h2 class="h-display mt-4 text-[30px] sm:text-[38px]">Frequently Asked Questions</h2>
-    <div class="rule-gold mx-auto mt-4"></div>
-  </div>
-  <ul class="mt-6 grid gap-2.5">
-    <li><details class="faq card overflow-hidden" open><summary class="flex cursor-pointer items-center justify-between gap-4 px-5 py-4"><span class="text-[14.5px] font-bold text-navy-900">1. क्या ₹500 में पूरा Paper-1 पढ़ाया जाएगा?</span><span class="faq-mark grid h-6 w-6 shrink-0 place-items-center rounded-md bg-navy-50 text-[16px] font-extrabold text-navy-700"></span></summary><p class="border-t border-navy-900/8 px-5 py-4 text-[14px] leading-relaxed text-navy-700">Program UGC NET Paper-1 की structured foundation और mentorship preparation के लिए बनाया गया है। Complete coverage और schedule brochure में दिया जाएगा।</p></details></li>
-    <li><details class="faq card overflow-hidden"><summary class="flex cursor-pointer items-center justify-between gap-4 px-5 py-4"><span class="text-[14.5px] font-bold text-navy-900">2. Course Fee FREE क्यों रखा गया है?</span><span class="faq-mark grid h-6 w-6 shrink-0 place-items-center rounded-md bg-navy-50 text-[16px] font-extrabold text-navy-700"></span></summary><p class="border-t border-navy-900/8 px-5 py-4 text-[14px] leading-relaxed text-navy-700">JRF@500 को affordable academic initiative की तरह design किया गया है। Course fee free रखी गई है और ₹500 registration तथा academic/logistics support contribution लिया जा रहा है।</p></details></li>
-    <li><details class="faq card overflow-hidden"><summary class="flex cursor-pointer items-center justify-between gap-4 px-5 py-4"><span class="text-[14.5px] font-bold text-navy-900">3. Classes कहाँ होंगी?</span><span class="faq-mark grid h-6 w-6 shrink-0 place-items-center rounded-md bg-navy-50 text-[16px] font-extrabold text-navy-700"></span></summary><p class="border-t border-navy-900/8 px-5 py-4 text-[14px] leading-relaxed text-navy-700">Classes online Google Meet पर आयोजित की जाएंगी।</p></details></li>
-    <li><details class="faq card overflow-hidden"><summary class="flex cursor-pointer items-center justify-between gap-4 px-5 py-4"><span class="text-[14.5px] font-bold text-navy-900">4. Class का medium क्या रहेगा?</span><span class="faq-mark grid h-6 w-6 shrink-0 place-items-center rounded-md bg-navy-50 text-[16px] font-extrabold text-navy-700"></span></summary><p class="border-t border-navy-900/8 px-5 py-4 text-[14px] leading-relaxed text-navy-700">Teaching bilingual होगी — Hindi + English।</p></details></li>
-    <li><details class="faq card overflow-hidden"><summary class="flex cursor-pointer items-center justify-between gap-4 px-5 py-4"><span class="text-[14.5px] font-bold text-navy-900">5. अगर कोई class miss हो जाए तो?</span><span class="faq-mark grid h-6 w-6 shrink-0 place-items-center rounded-md bg-navy-50 text-[16px] font-extrabold text-navy-700"></span></summary><p class="border-t border-navy-900/8 px-5 py-4 text-[14px] leading-relaxed text-navy-700">Program में live classes के साथ recorded learning support भी रखा गया है। Availability और access rules batch instructions के अनुसार रहेंगे।</p></details></li>
-    <li><details class="faq card overflow-hidden"><summary class="flex cursor-pointer items-center justify-between gap-4 px-5 py-4"><span class="text-[14.5px] font-bold text-navy-900">6. क्या Notes मिलेंगे?</span><span class="faq-mark grid h-6 w-6 shrink-0 place-items-center rounded-md bg-navy-50 text-[16px] font-extrabold text-navy-700"></span></summary><p class="border-t border-navy-900/8 px-5 py-4 text-[14px] leading-relaxed text-navy-700">हाँ। Topics के लिए exam-oriented PDF notes और relevant learning material share किया जाएगा।</p></details></li>
-    <li><details class="faq card overflow-hidden"><summary class="flex cursor-pointer items-center justify-between gap-4 px-5 py-4"><span class="text-[14.5px] font-bold text-navy-900">7. क्या PYQs भी होंगे?</span><span class="faq-mark grid h-6 w-6 shrink-0 place-items-center rounded-md bg-navy-50 text-[16px] font-extrabold text-navy-700"></span></summary><p class="border-t border-navy-900/8 px-5 py-4 text-[14px] leading-relaxed text-navy-700">हाँ। PYQs program का core हिस्सा होंगे और concept के साथ analyse किए जाएंगे।</p></details></li>
-    <li><details class="faq card overflow-hidden"><summary class="flex cursor-pointer items-center justify-between gap-4 px-5 py-4"><span class="text-[14.5px] font-bold text-navy-900">8. क्या tests होंगे?</span><span class="faq-mark grid h-6 w-6 shrink-0 place-items-center rounded-md bg-navy-50 text-[16px] font-extrabold text-navy-700"></span></summary><p class="border-t border-navy-900/8 px-5 py-4 text-[14px] leading-relaxed text-navy-700">हाँ। Unit-wise practice और tests preparation process में शामिल होंगे।</p></details></li>
-    <li><details class="faq card overflow-hidden"><summary class="flex cursor-pointer items-center justify-between gap-4 px-5 py-4"><span class="text-[14.5px] font-bold text-navy-900">9. क्या doubts पूछ सकते हैं?</span><span class="faq-mark grid h-6 w-6 shrink-0 place-items-center rounded-md bg-navy-50 text-[16px] font-extrabold text-navy-700"></span></summary><p class="border-t border-navy-900/8 px-5 py-4 text-[14px] leading-relaxed text-navy-700">Regular doubt support और mentorship program का हिस्सा है।</p></details></li>
-    <li><details class="faq card overflow-hidden"><summary class="flex cursor-pointer items-center justify-between gap-4 px-5 py-4"><span class="text-[14.5px] font-bold text-navy-900">10. क्या JRF Selection Guarantee है?</span><span class="faq-mark grid h-6 w-6 shrink-0 place-items-center rounded-md bg-navy-50 text-[16px] font-extrabold text-navy-700"></span></summary><p class="border-t border-navy-900/8 px-5 py-4 text-[14px] leading-relaxed text-navy-700">नहीं। JRF/NET qualification कई factors और candidate की performance पर निर्भर करती है। GS Net Academy quality teaching, notes, PYQ practice, test preparation और mentorship प्रदान करता है—selection guarantee नहीं।</p></details></li>
-    <li><details class="faq card overflow-hidden"><summary class="flex cursor-pointer items-center justify-between gap-4 px-5 py-4"><span class="text-[14.5px] font-bold text-navy-900">11. क्या batch अभी join कर सकते हैं?</span><span class="faq-mark grid h-6 w-6 shrink-0 place-items-center rounded-md bg-navy-50 text-[16px] font-extrabold text-navy-700"></span></summary><p class="border-t border-navy-900/8 px-5 py-4 text-[14px] leading-relaxed text-navy-700">Admissions open रहने तक current batch join किया जा सकता है।</p></details></li>
-    <li><details class="faq card overflow-hidden"><summary class="flex cursor-pointer items-center justify-between gap-4 px-5 py-4"><span class="text-[14.5px] font-bold text-navy-900">12. क्या ₹500 contribution refundable है?</span><span class="faq-mark grid h-6 w-6 shrink-0 place-items-center rounded-md bg-navy-50 text-[16px] font-extrabold text-navy-700"></span></summary><p class="border-t border-navy-900/8 px-5 py-4 text-[14px] leading-relaxed text-navy-700">Refund से जुड़ी पूरी शर्तें हमारी <a href="refund-policy.html" class="font-bold text-gold-700 underline">Refund &amp; Cancellation Policy</a> में दी गई हैं। Registration से पहले उसे ज़रूर पढ़ें।</p></details></li>
-  </ul>
-</div></section>
-
-<!-- ========================= FINAL CTA ========================= -->
-<section class="bg-white py-14 lg:py-16"><div class="container-x">
-  <div class="relative overflow-hidden rounded-2xl bg-navy-950 p-8 text-center text-white sm:p-12">
-    <div class="grid-paper absolute inset-0 opacity-50" aria-hidden="true"></div>
-    <div class="absolute -right-20 -top-20 h-64 w-64 rounded-full bg-gold-500/20 blur-3xl" aria-hidden="true"></div>
-    <div class="relative">
-      <h2 class="h-display mx-auto max-w-3xl text-[30px] sm:text-[40px]">JRF का सपना बड़ा है। Preparation भी systematic होनी चाहिए।</h2>
-      <p class="hind mx-auto mt-4 max-w-2xl text-[15px] leading-relaxed text-navy-100/80">अगर आप UGC NET/JRF Paper-1 को सही direction, conceptual clarity, PYQ intelligence, practice, revision और mentorship के साथ तैयार करना चाहते हैं—</p>
-      <p class="mt-5 text-[16px] font-extrabold text-gold-400">Join GS Net Academy's Paper-1 Special Mentorship Program</p>
-      <div class="mt-7 flex justify-center"><div class="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:justify-center"><a href="/#free-demo" class="btn-ghost-light">▶ WATCH FREE DEMO</a><a href="#" class="btn-ghost-light gate-btn" data-gate-title="UGC NET Paper-1 Brochure" data-gate-type="brochure" data-gate-file="assets/pdf/brochure.pdf">⬇ DOWNLOAD BROCHURE</a><a href="enroll.html" class="btn-primary">✓ JOIN BATCH @ ₹500</a></div></div>
-      <p class="mt-7 text-[13.5px] font-semibold text-navy-200/75">We Don't Just Teach. We Build Aspirants.</p>
-    </div>
-  </div>
-</div></section>
-
-<!-- ========================= FIND US (GOOGLE MAP) ========================= -->
-<section class="bg-cream py-14 lg:py-16">
-    <div class="container-x">
-        <!-- Section header -->
-        <div class="mx-auto max-w-3xl text-center">
-            <span class="eyebrow">
-                <svg viewBox="0 0 24 24" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                    <path d="M12 3.5 13.8 9l5.5 1.8-5.5 1.8L12 18.1l-1.8-5.5L4.7 10.8 10.2 9 12 3.5Z"/>
-                </svg> Find Us
-            </span>
-            <h2 class="h-display mt-4 text-[30px] sm:text-[38px]">GS Net Academy Campus</h2>
-            <div class="rule-gold mx-auto mt-4"></div>
-            <p class="hind mt-4 text-[15px] leading-relaxed text-navy-700">Visit us at our learning centre in Noida. We're always happy to welcome aspiring NET/JRF candidates.</p>
-        </div>
-
-        <!-- FLEXBOX: Left (address) + Right (map) — side by side on desktop, stacked on mobile -->
-        <div class="mt-7 flex gap-5 md:flex-row md:gap-6">
-
-    <!-- LEFT COLUMN: Address card -->
-    <div class="card flex flex-1 flex-col justify-center p-5 sm:p-6">
-        <div class="flex items-start gap-3.5">
-            <span class="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-gold-400/15 text-gold-600 ring-1 ring-gold-400/30">
-                <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none"
-                    stroke="currentColor" stroke-width="1.7"
-                    stroke-linecap="round" stroke-linejoin="round"
-                    aria-hidden="true">
-                    <path d="M12 3a7.5 7.5 0 0 0-7.5 7.5c0 5 7.5 12.5 7.5 12.5s7.5-7.5 7.5-12.5A7.5 7.5 0 0 0 12 3Z"/>
-                    <circle cx="12" cy="10.5" r="3"/>
-                </svg>
-            </span>
-
-            <div>
-                <p class="text-[10px] font-extrabold uppercase tracking-[0.18em] text-gold-600">
-                    Our Address
-                </p>
-
-                <p class="mt-1.5 text-[15px] font-extrabold leading-snug text-navy-900">
-                    B 14-15, Udhyog Marg, Block B, Sector 1, Noida, Uttar Pradesh 201301
-                </p>
+    </main>
+    <footer class="w-full bg-navy-darkest text-paper-white">
+        <div class="max-w-[1240px] mx-auto px-gutter-desktop pt-space-3xl pb-space-2xl">
+            <div
+                class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-xl pb-space-2xl border-b border-navy-surface">
+                <div class="space-y-space-md">
+                    <div class="flex items-center gap-space-sm">
+                        <div class="w-8 h-8 rounded bg-gold-amber flex items-center justify-center"><span
+                                class="material-symbols-outlined text-navy-darkest text-[20px]">school</span></div>
+                        <div class="flex flex-col"><span
+                                class="font-headline-sm text-headline-sm font-bold tracking-tight text-paper-white">GS
+                                NET ACADEMY</span><span class="font-label-sm text-label-sm text-gold-amber">Higher
+                                Education Coaching Unit</span></div>
+                    </div>
+                    <p class="font-body-sm text-body-sm text-surface-container-highest leading-relaxed">NTA UGC NET JRF
+                        Paper-1 aur UP Assistant Professor Advt General Knowledge target karne wale candidates ke liye
+                        high-yield mentorship, exam-tested pedagogical frameworks, aur structured test series ki
+                        pehल।</p>
+                    <div class="flex items-center gap-space-sm text-gold-amber text-body-sm"><span
+                            class="material-symbols-outlined text-[18px]">workspace_premium</span><span
+                            class="font-semibold">98.4% Top-Percentile Mentorship रिकॉर्ड</span></div>
+                </div>
+                <div class="space-y-space-sm"><span
+                        class="font-label-lg text-label-lg uppercase tracking-wider text-gold-amber block">Targeted
+                        Cohorts</span>
+                    <ul class="space-y-space-xs font-body-sm text-surface-container-highest">
+                        <li><a class="hover:text-gold-amber transition-colors flex items-center justify-between"
+                                data-path="ugc-net-paper-1" href="#"><span>UGC NET Paper-1 Crash Course</span><span
+                                    class="text-gold-amber text-label-sm font-bold">₹500</span></a></li>
+                        <li><a class="hover:text-gold-amber transition-colors flex items-center justify-between"
+                                data-path="up-assistant-professor-gk" href="#"><span>UP Higher Ed (UPHESC) GK
+                                    Mastery</span><span
+                                    class="text-gold-amber text-label-sm font-bold">₹2,500</span></a></li>
+                        <li><a class="hover:text-gold-amber transition-colors flex items-center justify-between"
+                                href="#"><span>पूर्ण JRF Test Series</span><span
+                                    class="text-emerald-accent text-label-sm font-bold">शामिल</span></a></li>
+                        <li><a class="hover:text-gold-amber transition-colors flex items-center justify-between"
+                                href="#"><span>Teaching &amp; Research Aptitude Live</span><span
+                                    class="text-gold-amber text-label-sm font-bold">रोज़ाना Live</span></a></li>
+                        <li><a class="hover:text-gold-amber transition-colors flex items-center justify-between"
+                                href="#"><span>पिछले 10 साल के Question Analysis</span><span
+                                    class="text-surface-variant text-label-sm font-bold">Archived</span></a></li>
+                    </ul>
+                </div>
+                <div class="space-y-space-sm"><span
+                        class="font-label-lg text-label-lg uppercase tracking-wider text-gold-amber block">Academic
+                        Resources</span>
+                    <ul class="space-y-space-xs font-body-sm text-surface-container-highest">
+                        <li><a class="hover:text-gold-amber transition-colors" data-path="syllabus-tracker"
+                                href="#">Official Syllabus &amp; Unit-Wise Blueprint</a></li>
+                        <li><a class="hover:text-gold-amber transition-colors" data-path="pyq-repository"
+                                href="#">Verified Solved PYQs &amp; Answer Keys</a></li>
+                        <li><a class="hover:text-gold-amber transition-colors" data-path="cutoff-benchmarks"
+                                href="#">Historical Cutoffs (JRF &amp; Lectureship)</a></li>
+                        <li><a class="hover:text-gold-amber transition-colors" data-path="faculty-credentials"
+                                href="#">Faculty Academic Profiles &amp; Qualifications</a></li>
+                        <li><a class="hover:text-gold-amber transition-colors" href="#">Daily Morning Quiz &amp;
+                                Leaderboard</a></li>
+                    </ul>
+                </div>
+                <div class="space-y-space-md"><span
+                        class="font-label-lg text-label-lg uppercase tracking-wider text-gold-amber block">Academic
+                        Helpdesk</span>
+                    <div class="space-y-space-xs text-body-sm text-surface-container-highest">
+                        <div class="flex items-start gap-space-xs"><span
+                                class="material-symbols-outlined text-gold-amber text-[20px] shrink-0">support_agent</span>
+                            <div>
+                                <p class="text-paper-white font-medium">Student Counselor Line</p>
+                                <p>+91 98765 43210 (सुबह 10 - शाम 7 IST)</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-space-xs"><span
+                                class="material-symbols-outlined text-emerald-accent text-[20px] shrink-0">chat</span>
+                            <div>
+                                <p class="text-paper-white font-medium">Instant WhatsApp सलाह</p>
+                                <p>+91 98765 43211 (24/7 Response Desk)</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-space-xs"><span
+                                class="material-symbols-outlined text-gold-amber text-[20px] shrink-0">mail</span>
+                            <div>
+                                <p class="text-paper-white font-medium">Official पत्राचार</p>
+                                <p>admissions@gsnetacademy.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="pt-space-lg flex flex-col md:flex-row items-center justify-between gap-space-md font-body-sm text-on-primary-container text-[13px]">
+                <p>© 2025 GS Net Academy. सर्वाधिकार सुरक्षित। National Higher Education Guidance Norms ke antargat
+                    registered।</p>
+                <div class="flex items-center gap-space-lg"><a class="hover:text-paper-white transition-colors"
+                        href="#">Terms of Enrollment</a><a class="hover:text-paper-white transition-colors"
+                        href="#">Refund Policy</a><a class="hover:text-paper-white transition-colors" href="#">Privacy
+                        Statement</a><a class="hover:text-paper-white transition-colors" href="#">Student Code of
+                        Conduct</a></div>
             </div>
         </div>
-
-        <div class="mt-4 grid grid-cols-1 gap-2.5 sm:grid-cols-2">
-            <a href="https://maps.google.com/maps?daddr=B+14-15,+Udhyog+Marg,+Block+B,+Sector+1,+Noida,+Uttar+Pradesh+201301"
-                target="_blank"
-                rel="noreferrer noopener"
-                class="btn-primary flex items-center justify-center gap-2 text-sm">
-
-                <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none"
-                    stroke="currentColor" stroke-width="1.7"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M12 3a7.5 7.5 0 0 0-7.5 7.5c0 5 7.5 12.5 7.5 12.5s7.5-7.5 7.5-12.5A7.5 7.5 0 0 0 12 3Z"/>
-                    <circle cx="12" cy="10.5" r="3"/>
-                </svg>
-
-                Get Directions
-            </a>
-
-            <a href="tel:+919266511505"
-                class="btn-outline flex items-center justify-center gap-2 text-sm">
-
-                <svg viewBox="0 0 24 24" class="h-4 w-4"
-                    fill="currentColor" stroke="none">
-                    <path d="M5 3h3.5l1.6 4-2 1.4a12 12 0 0 0 5.5 5.5l1.4-2 4 1.6V19a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 3 5.2 2 2 0 0 1 5 3Z"/>
-                </svg>
-
-                Call Us
-            </a>
-        </div>
-
-        <div class="mt-4 flex flex-wrap items-center gap-3 border-t border-navy-900/8 pt-4">
-
-            <span class="flex items-center gap-1.5 text-[11.5px] font-semibold text-navy-700">
-                <svg viewBox="0 0 24 24" class="h-4 w-4 text-emerald-600"
-                    fill="none" stroke="currentColor" stroke-width="1.7"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <circle cx="12" cy="12" r="8.5"/>
-                    <path d="m8.5 11.5 2.5 2.5 4.5-4.5"/>
-                </svg>
-
-                Landmark: Near Sector 1 Metro Station
-            </span>
-
-            <span class="flex items-center gap-1.5 text-[11.5px] font-semibold text-navy-700">
-                <svg viewBox="0 0 24 24" class="h-4 w-4 text-gold-600"
-                    fill="none" stroke="currentColor" stroke-width="1.7"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <rect x="3" y="6.5" width="12" height="11" rx="2.5"/>
-                    <path d="m15 11 5.5-3v8L15 13"/>
-                </svg>
-
-                Google Meet — Online Available
-            </span>
-
-        </div>
-    </div>
-
-
-    <!-- RIGHT COLUMN: Google Map -->
-    <div class="flex-1 overflow-hidden rounded-2xl border border-navy-900/10 bg-white shadow-lift">
-
-        <!-- Changed 75% → 55% -->
-        <div class="relative w-full" style="padding-bottom: 55%;">
-
-            <iframe
-                class="absolute inset-0 h-full w-full"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6946.28593372575!2d77.30880823285351!3d28.588787675468105!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce5d8c0000001%3A0xea5a624c23e5f7db!2sUncodemy!5e0!3m2!1sen!2sin!4v1788348489449!5m2!1sen!2sin"
-                title="GS Net Academy location map — B 14-15, Udhyog Marg, Block B, Sector 1, Noida"
-                loading="lazy"
-                allowfullscreen>
-            </iframe>
-
-        </div>
-
-        <div class="border-t border-navy-900/8 bg-navy-50/50 px-4 py-2 text-center text-xs font-medium text-navy-600">
-            <a href="https://maps.google.com/maps?q=B+14-15,+Udhyog+Marg,+Block+B,+Sector+1,+Noida"
-                target="_blank"
-                rel="noreferrer noopener"
-                class="inline-flex items-center gap-1.5 hover:text-gold-700 hover:underline">
-
-                <svg viewBox="0 0 24 24" class="h-3.5 w-3.5"
-                    fill="none" stroke="currentColor" stroke-width="1.7"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M12 3a7.5 7.5 0 0 0-7.5 7.5c0 5 7.5 12.5 7.5 12.5s7.5-7.5 7.5-12.5A7.5 7.5 0 0 0 12 3Z"/>
-                    <circle cx="12" cy="10.5" r="3"/>
-                </svg>
-
-                Can't see the map? Open in Google Maps →
-            </a>
-        </div>
-
-    </div>
-
-</div>
-    </div>
-</section>
-
-</main>
-
-<!-- GSNET-FOOTER:START -->
-<footer class="relative overflow-hidden bg-navy-950 text-white">
-  <div class="grid-paper absolute inset-0 opacity-50" aria-hidden="true"></div>
-  <div class="container-x relative py-12 lg:py-14">
-    <div class="grid grid-cols-2 gap-10 lg:grid-cols-4">
-
-      <div>
-        <div class="flex items-center gap-3">
-          <img src="assets/images/logo.png" alt="GS Net Academy" class="h-11 w-auto rounded-lg bg-white p-1" width="120" height="44">
-          <img src="assets/images/tagline.png" alt="" class="h-11 w-auto brightness-0 invert" aria-hidden="true">
-        </div>
-        <p class="mt-5 text-[14px] leading-relaxed text-navy-100/75">UGC NET Paper-I | JRF Preparation | Mentorship</p>
-        <span class="eyebrow mt-5"><svg viewBox="0 0 24 24" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1"/></svg> JRF @ ₹500 Mission 2026</span>
-
-        <p class="mt-6 text-[11px] font-extrabold uppercase tracking-[0.18em] text-gold-400">Follow Us</p>
-        <ul class="mt-3 flex flex-wrap gap-2">
-          <li><a href="https://www.youtube.com/@gsnetacademy" target="_blank" rel="noreferrer noopener" aria-label="YouTube" title="YouTube" class="grid h-10 w-10 place-items-center rounded-xl border border-white/12 bg-white/[0.06] text-navy-100/80 transition hover:border-gold-400/50 hover:bg-white/[0.12] hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor" aria-hidden="true"><path d="M21.6 7.2a2.5 2.5 0 0 0-1.8-1.8C18.2 5 12 5 12 5s-6.2 0-7.8.4A2.5 2.5 0 0 0 2.4 7.2 26 26 0 0 0 2 12a26 26 0 0 0 .4 4.8 2.5 2.5 0 0 0 1.8 1.8C5.8 19 12 19 12 19s6.2 0 7.8-.4a2.5 2.5 0 0 0 1.8-1.8A26 26 0 0 0 22 12a26 26 0 0 0-.4-4.8ZM10 15V9l5.2 3L10 15Z"/></svg></a></li>
-          <li><a href="https://www.instagram.com/gsnetacademy" target="_blank" rel="noreferrer noopener" aria-label="Instagram" title="Instagram" class="grid h-10 w-10 place-items-center rounded-xl border border-white/12 bg-white/[0.06] text-navy-100/80 transition hover:border-gold-400/50 hover:bg-white/[0.12] hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg></a></li>
-          <li><a href="https://www.facebook.com/gsnetacademy" target="_blank" rel="noreferrer noopener" aria-label="Facebook" title="Facebook" class="grid h-10 w-10 place-items-center rounded-xl border border-white/12 bg-white/[0.06] text-navy-100/80 transition hover:border-gold-400/50 hover:bg-white/[0.12] hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.25-1.5 1.55-1.5H16.7V3.6c-.3 0-1.3-.13-2.47-.13-2.44 0-4.11 1.49-4.11 4.23V9.9H7.4V13h2.72v8h3.38Z"/></svg></a></li>
-          <li><a href="https://t.me/gsnetacademy" target="_blank" rel="noreferrer noopener" aria-label="Telegram" title="Telegram" class="grid h-10 w-10 place-items-center rounded-xl border border-white/12 bg-white/[0.06] text-navy-100/80 transition hover:border-gold-400/50 hover:bg-white/[0.12] hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor" aria-hidden="true"><path d="M21.3 4.3 2.9 11.4c-.9.35-.9 1.62.02 1.93l4.6 1.53 1.75 5.3c.25.75 1.2.95 1.73.37l2.5-2.72 4.6 3.38c.63.46 1.53.12 1.7-.65l3.1-14.9c.2-.9-.7-1.65-1.6-1.31ZM9.6 14.1l8.5-5.6-6.9 6.5-.3 3.3-1.3-4.2Z"/></svg></a></li>
-          <li><a href="https://chat.whatsapp.com/KeaQUhOFz0UGAKtLmsM7oU" target="_blank" rel="noreferrer noopener" aria-label="WhatsApp Group" title="WhatsApp Group" class="grid h-10 w-10 place-items-center rounded-xl border border-white/12 bg-white/[0.06] text-navy-100/80 transition hover:border-emerald-400/50 hover:bg-emerald-500/15 hover:text-emerald-300"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.2 20.8 4.6 16A8.4 8.4 0 1 1 8 19.4l-4.8 1.4Z"/><path d="M9 8.4c.3-.7.6-.7.9-.7h.6c.2 0 .5 0 .7.6l.8 1.9c.1.2.1.4 0 .6l-.5.7c-.1.2-.2.4 0 .7a7 7 0 0 0 3 2.6c.3.1.5.1.7-.1l.7-.8c.2-.2.4-.2.6-.1l1.8.9c.3.1.5.3.5.5v.6c0 .4-.2.9-.9 1.2-.6.3-1.5.4-2.5.1a10 10 0 0 1-6.5-6.2c-.3-1-.1-1.9.1-2.5Z"/></svg></a></li>
-          <li><a href="https://x.com/gsnetacademy" target="_blank" rel="noreferrer noopener" aria-label="X (Twitter)" title="X (Twitter)" class="grid h-10 w-10 place-items-center rounded-xl border border-white/12 bg-white/[0.06] text-navy-100/80 transition hover:border-gold-400/50 hover:bg-white/[0.12] hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-4.5 w-4.5" fill="currentColor" aria-hidden="true"><path d="M17.5 3h3.1l-6.8 7.8L21.8 21h-6.2l-4.9-6.4L5.1 21H2l7.3-8.3L2.5 3h6.4l4.4 5.8L17.5 3Zm-1.1 16.2h1.7L7.7 4.7H5.9l10.5 14.5Z"/></svg></a></li>
-        </ul>
-      </div>
-
-      <div>
-        <p class="text-[11px] font-extrabold uppercase tracking-[0.18em] text-gold-400">Quick Links</p>
-        <ul class="mt-4 grid gap-2.5">
-          <li><a href="/" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Home</a></li>
-          <li><a href="courses.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">UGC NET Paper-I</a></li>
-          <li><a href="results.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Our Results</a></li>
-          <li><a href="tutorials.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Tutorials</a></li>
-          <li><a href="blog.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Blog</a></li>
-          <li><a href="about.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">About</a></li>
-          <li><a href="contact.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Contact</a></li>
-        </ul>
-      </div>
-
-      <div>
-        <p class="text-[11px] font-extrabold uppercase tracking-[0.18em] text-gold-400">Resources</p>
-        <ul class="mt-4 grid gap-2.5">
-          <li><a href="notes.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Notes</a></li>
-          <li><a href="enroll.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Register for ₹500</a></li>
-          <li><a href="/#free-demo" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Free Demo Classes</a></li>
-          <li><a href="https://chat.whatsapp.com/KeaQUhOFz0UGAKtLmsM7oU" target="_blank" rel="noreferrer noopener" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Student Community</a></li>
-        </ul>
-        <p class="mt-6 text-[11px] font-extrabold uppercase tracking-[0.18em] text-gold-400">Legal</p>
-        <ul class="mt-4 grid gap-2.5">
-          <li><a href="privacy-policy.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Privacy Policy</a></li>
-          <li><a href="refund-policy.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Refund &amp; Cancellation</a></li>
-          <li><a href="terms-of-enrollment.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Terms of Enrollment</a></li>
-        </ul>
-      </div>
-
-      <div>
-        <p class="text-[11px] font-extrabold uppercase tracking-[0.18em] text-gold-400">Contact</p>
-        <ul class="mt-4 grid gap-2.5 text-[14px] text-navy-100/75">
-          <li><a href="tel:+919266511505" class="flex items-center gap-2 hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-4 w-4 icon-gold" fill="currentColor" aria-hidden="true"><path d="M5 3h3.5l1.6 4-2 1.4a12 12 0 0 0 5.5 5.5l1.4-2 4 1.6V19a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 3 5.2 2 2 0 0 1 5 3Z"/></svg> +91 9266511505</a></li>
-          <li><a href="tel:+919810845327" class="flex items-center gap-2 hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-4 w-4 icon-gold" fill="currentColor" aria-hidden="true"><path d="M5 3h3.5l1.6 4-2 1.4a12 12 0 0 0 5.5 5.5l1.4-2 4 1.6V19a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 3 5.2 2 2 0 0 1 5 3Z"/></svg> +91 9810845327</a></li>
-          <li><a href="mailto:gsnetacademy@gmail.com" class="flex items-center gap-2 break-all hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-4 w-4 icon-gold" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="m3.5 6.5 8.5 6 8.5-6"/></svg> gsnetacademy@gmail.com</a></li>
-          <li><a href="https://chat.whatsapp.com/KeaQUhOFz0UGAKtLmsM7oU" target="_blank" rel="noreferrer noopener" class="flex items-center gap-2 hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-4 w-4 icon-gold" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.2 20.8 4.6 16A8.4 8.4 0 1 1 8 19.4l-4.8 1.4Z"/><path d="M9 8.4c.3-.7.6-.7.9-.7h.6c.2 0 .5 0 .7.6l.8 1.9c.1.2.1.4 0 .6l-.5.7c-.1.2-.2.4 0 .7a7 7 0 0 0 3 2.6c.3.1.5.1.7-.1l.7-.8c.2-.2.4-.2.6-.1l1.8.9c.3.1.5.3.5.5v.6c0 .4-.2.9-.9 1.2-.6.3-1.5.4-2.5.1a10 10 0 0 1-6.5-6.2c-.3-1-.1-1.9.1-2.5Z"/></svg> WhatsApp Group</a></li>
-        </ul>
-        <a href="enroll.html" class="btn-primary mt-6 w-full">Join for ₹500</a>
-        <p class="text-[14px] mt-3 text-navy-100/75 transition hover:text-gold-300">Address: B 14-15, Udhyog Marg, Block B, Sector 1, Noida, Uttar Pradesh 201301</p>
-      </div>
-    </div>
-
-    <div class="mt-10 border-t border-white/10 pt-6">
-      <ul class="flex flex-wrap items-center gap-x-5 gap-y-2 text-[13px]">
-        <li><a href="privacy-policy.html" class="text-navy-100/70 transition hover:text-gold-300">Privacy Policy</a></li>
-        <li aria-hidden="true" class="text-navy-100/25">|</li>
-        <li><a href="refund-policy.html" class="text-navy-100/70 transition hover:text-gold-300">Refund &amp; Cancellation</a></li>
-        <li aria-hidden="true" class="text-navy-100/25">|</li>
-        <li><a href="terms-of-enrollment.html" class="text-navy-100/70 transition hover:text-gold-300">Terms of Enrollment</a></li>
-      </ul>
-      <div class="mt-4 flex flex-col gap-2 text-[13px] text-navy-100/60 sm:flex-row sm:items-center sm:justify-between">
-        <p>© 2026 GS Net Academy. All Rights Reserved.</p>
-        <p>A Premier institute for UGC NET Paper-1</p>
-      </div>
-      <p class="mt-4 text-[12px] leading-relaxed text-navy-100/45">Disclaimer: GS Net Academy किसी भी exam में selection, rank या score की guarantee नहीं देता। हम quality teaching, study material, practice और academic mentorship प्रदान करते हैं। UGC, NTA या किसी अन्य government body से हमारा कोई affiliation नहीं है।</p>
-    </div>
-  </div>
-</footer>
-<!-- GSNET-FOOTER:END -->
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "EducationalOrganization",
-  "name": "GS Net Academy",
-  "url": "https://gsnetacademy.com/",
-  "logo": "https://gsnetacademy.com/assets/images/logo.png",
-  "description": "UGC NET Paper-1 Special Mentorship + Foundation Program. Live classes, notes, PYQs, tests and mentorship.",
-  "telephone": ["+91-9266511505", "+91-9810845327"],
-  "email": "gsnetacademy@gmail.com",
-  "areaServed": "IN"
-}
-</script>
-
-<script src="js/testimonial.js"></script>
-<script src="js/lead-gate.js"></script>
-<script src="js/topperpopup.js" > </script>
+    </footer>
 </body>
+
 </html>

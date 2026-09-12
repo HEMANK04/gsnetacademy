@@ -28,7 +28,7 @@
   + '.gs-pop__box::-webkit-scrollbar{display:none}'
   + '.gs-pop.is-open .gs-pop__box{transform:translateY(0) scale(1)}'
   + '.gs-pop__x{position:absolute;top:12px;right:12px;z-index:10;width:32px;height:32px;display:flex;align-items:center;justify-content:center;border:0;border-radius:50%;'
-  +   'background:rgba(0,0,0,.4);color:#fff;font-size:22px;line-height:1;cursor:pointer;transition:background .2s,transform .2s;backdrop-filter:blur(4px)}'
+  +   'background:rgba(255, 0, 0, 0.79);color:#fff;font-size:28px;line-height:1;cursor:pointer;transition:background .2s,transform .2s;backdrop-filter:blur(4px)}'
   + '.gs-pop__x:hover{background:rgba(0,0,0,.75);transform:scale(1.05)}'
   + '.gs-pop__poster{width:100%;height:auto;display:block;border-radius:16px 16px 0 0;}'
   + '.gs-pop__footer{padding:16px 24px 24px;background:#0B1B34;border-radius:0 0 16px 16px;}'
