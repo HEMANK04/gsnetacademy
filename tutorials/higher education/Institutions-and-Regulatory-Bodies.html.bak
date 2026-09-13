@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Institutions & Regulatory Bodies – Full Notes | UGC NET Paper-1</title>
+  <meta name="description" content="Complete tutorial: Institutions & Regulatory Bodies in Indian Higher Education - UGC, AICTE, NAAC, NBA, NIRF, NRF, DEB, NCTE, BCI, MCI/NMC, DCI, PCI, ICAR, RCI, AISHE for UGC NET Paper-1 Higher Education.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; }
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background: #f8f5ee;
+      color: #101a3d;
+    }
+    .h-display { font-family: 'Poppins', sans-serif; font-weight: 800; letter-spacing: -0.01em; }
+    .container { max-width: 1360px; margin: 0 auto; padding: 0 20px; }
+
+    .hero {
+      background: #0b1330;
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+      padding: 28px 0 22px;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      right: -80px;
+      top: -100px;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(232,183,75,0.2), transparent 70%);
+    }
+    .hero-inner { position: relative; }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      padding: 6px 16px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+      color: #e8b74b;
+    }
+    .hero h1 {
+      font-size: clamp(28px, 4.2vw, 44px);
+      margin: 12px 0 6px;
+    }
+    .hero p {
+      color: rgba(255,255,255,0.78);
+      max-width: 680px;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 28px;
+      padding: 28px 0 50px;
+      align-items: start;
+    }
+    @media (max-width: 980px) {
+      .layout { grid-template-columns: 1fr; }
+    }
+
+    .sidebar {
+      position: sticky;
+      top: 16px;
+      max-height: calc(100vh - 40px);
+      overflow-y: auto;
+      background: #fff;
+      border: 1px solid rgba(16,26,61,0.08);
+      border-radius: 16px;
+      padding: 16px 12px;
+      box-shadow: 0 6px 24px rgba(16,26,61,0.05);
+    }
+    .sidebar::-webkit-scrollbar { width: 5px; }
+    .sidebar::-webkit-scrollbar-thumb { background: #dde2ef; border-radius: 8px; }
+    .sidebar-title {
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: #b9852a;
+      padding: 4px 10px 14px;
+    }
+    .nav-link {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 10px;
+      border-radius: 10px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #33406b;
+      line-height: 1.3;
+      transition: 0.1s;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .nav-link:hover { background: #f4f6fc; color: #0b1330; }
+    .nav-link.active {
+      background: #fdf6e7;
+      color: #0b1330;
+    }
+    .nav-num {
+      flex: none;
+      width: 22px;
+      height: 22px;
+      border-radius: 7px;
+      background: #e7eaf5;
+      color: #5b6690;
+      font-size: 11px;
+      font-weight: 800;
+      display: grid;
+      place-items: center;
+    }
+    .nav-link.active .nav-num {
+      background: #e8b74b;
+      color: #0b1330;
+    }
+
+    #sidebar-toggle { display: none; }
+    .mobile-bar { display: none; }
+    @media (max-width: 980px) {
+      .mobile-bar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: #fff;
+        border: 1px solid rgba(16,26,61,0.1);
+        border-radius: 12px;
+        padding: 12px 16px;
+        margin-bottom: 8px;
+        font-weight: 800;
+        font-size: 13.5px;
+        color: #0b1330;
+      }
+      .sidebar { display: none; position: static; max-height: none; }
+      #sidebar-toggle:checked ~ .layout .sidebar { display: block; }
+    }
+
+    .content { min-width: 0; }
+    .topic-card {
+      background: #fff;
+      border: 1px solid rgba(16,26,61,0.08);
+      border-radius: 16px;
+      padding: 20px 20px 16px;
+      margin-bottom: 18px;
+      scroll-margin-top: 20px;
+      display: block;
+    }
+    .topic-card.hidden { display: none; }
+    .sec-head {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+    .sec-num {
+      flex: none;
+      width: 34px;
+      height: 34px;
+      border-radius: 10px;
+      background: #0b1330;
+      color: #e8b74b;
+      font-weight: 800;
+      font-size: 14px;
+      display: grid;
+      place-items: center;
+    }
+    .sec-head h2 {
+      margin: 0;
+      font-size: 19px;
+      font-weight: 800;
+      color: #0b1330;
+    }
+    .topic-card p {
+      font-size: 14.5px;
+      line-height: 1.75;
+      color: #1a254a;
+      margin: 6px 0;
+    }
+    .bullet-list {
+      margin: 8px 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 5px;
+    }
+    .bullet-list li {
+      position: relative;
+      padding-left: 20px;
+      font-size: 14px;
+      line-height: 1.6;
+      color: #1a254a;
+    }
+    .bullet-list li::before {
+      content: "";
+      position: absolute;
+      left: 2px;
+      top: 9px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #d9a53a;
+    }
+    .formula-box {
+      background: #0b1330;
+      color: #fdeec2;
+      font-weight: 700;
+      font-size: 13.6px;
+      padding: 10px 16px;
+      border-radius: 10px;
+      margin: 10px 0;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 12px 0;
+      font-size: 13.6px;
+      display: block;
+      overflow-x: auto;
+    }
+    .data-table th, .data-table td {
+      border: 1px solid #e7eaf5;
+      padding: 8px 12px;
+      text-align: left;
+      color: #1a254a;
+      white-space: normal;
+    }
+    .data-table th {
+      background: #f4f6fc;
+      color: #0b1330;
+      font-weight: 800;
+    }
+    .pyq-tag {
+      display: inline-block;
+      background: #fdf6e7;
+      color: #b9852a;
+      font-weight: 800;
+      font-size: 12px;
+      padding: 4px 12px;
+      border-radius: 8px;
+      margin: 12px 0 6px;
+    }
+    .answer-box {
+      background: #eefaf2;
+      border: 1px solid #bfe8cc;
+      color: #1a7a4c;
+      font-weight: 700;
+      font-size: 13.6px;
+      padding: 6px 14px;
+      border-radius: 9px;
+      margin: 6px 0;
+    }
+    .explain {
+      background: #f4f6fc;
+      border-radius: 9px;
+      padding: 6px 14px;
+      font-size: 13.6px;
+      color: #1a254a;
+    }
+    .subtopic {
+      padding: 14px 0 6px;
+      border-top: 1px dashed #e7eaf5;
+    }
+    .subtopic:first-of-type { border-top: none; padding-top: 2px; }
+    .subhead {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 6px;
+    }
+    .sub-num {
+      flex: none;
+      width: 26px;
+      height: 26px;
+      border-radius: 8px;
+      background: #fdf6e7;
+      color: #b9852a;
+      font-weight: 800;
+      font-size: 12px;
+      display: grid;
+      place-items: center;
+    }
+    .subhead h3 {
+      margin: 0;
+      font-size: 15.5px;
+      font-weight: 800;
+      color: #0b1330;
+    }
+    .enroll-cta {
+      background: #0b1330;
+      color: #fff;
+      border-radius: 16px;
+      padding: 24px 24px;
+      margin-top: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+      overflow: hidden;
+    }
+    .enroll-cta::before {
+      content: "";
+      position: absolute;
+      right: -40px;
+      top: -40px;
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(232,183,75,0.2), transparent 70%);
+    }
+    .enroll-cta h3 { margin: 0 0 4px; font-size: 20px; }
+    .enroll-cta p { margin: 0; color: rgba(255,255,255,0.75); font-size: 13.5px; max-width: 480px; }
+    .btn-gold {
+      background: #e8b74b;
+      color: #0b1330;
+      font-weight: 800;
+      padding: 10px 22px;
+      border-radius: 10px;
+      font-size: 13.5px;
+      white-space: nowrap;
+      text-decoration: none;
+    }
+  </style>
+
+  <link rel="stylesheet" href="/css/tailwind.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <style>.hero h1 { font-weight: 800 !important; color: #fff !important; line-height: 1.2 !important; font-family: 'Poppins', sans-serif !important; }</style>
+
+  <link rel="icon" href="/assets/images/logo.png">
+</head>
+<body>
+
+<header class="sticky top-0 z-50 border-b border-navy-900/8 bg-white/95 backdrop-blur-md">
+  <nav class="container-wide flex h-[76px] items-center gap-4" aria-label="Main">
+    <a href="/" class="flex shrink-0 items-center gap-3" aria-label="Home">
+      <span class="inline-flex shrink-0 items-center justify-center overflow-hidden rounded-lg bg-navy-950 ring-1 ring-navy-900/10">
+        <img src="assets/images/logo.png" alt="GS Net Academy" class="h-11 w-auto" width="120" height="44">
+      </span>
+      <img src="assets/images/tagline.png" alt="#1 A Premier institute for UGC NET Paper-1" class="h-11 hidden w-auto lg:block">
+    </a>
+    <ul class="mx-auto hidden items-center gap-5 xl:flex">
+      <li><a href="courses.html" class="relative block whitespace-nowrap rounded-lg px-3 py-2 text-[13.5px] font-bold transition-colors text-navy-700/75 hover:text-navy-900">UGC NET Paper-I</a></li>
+      <li><a href="results.html" class="relative block whitespace-nowrap rounded-lg px-3 py-2 text-[13.5px] font-bold transition-colors text-navy-700/75 hover:text-navy-900">Results</a></li>
+      <li><a href="tutorial.html" class="relative block whitespace-nowrap rounded-lg px-3 py-2 text-[13.5px] font-bold transition-colors text-navy-700/75 hover:text-navy-900">Tutorials</a></li>
+      <li><a href="notes.html" class="relative block whitespace-nowrap rounded-lg px-3 py-2 text-[13.5px] font-bold transition-colors text-navy-700/75 hover:text-navy-900">Notes</a></li>
+      <li><a href="blog.html" class="relative block whitespace-nowrap rounded-lg px-3 py-2 text-[13.5px] font-bold transition-colors text-navy-700/75 hover:text-navy-900">Blog</a></li>
+      <li><a href="about.html" class="relative block whitespace-nowrap rounded-lg px-3 py-2 text-[13.5px] font-bold transition-colors text-navy-700/75 hover:text-navy-900">About</a></li>
+      <li><a href="contact.html" class="relative block whitespace-nowrap rounded-lg px-3 py-2 text-[13.5px] font-bold transition-colors text-navy-700/75 hover:text-navy-900">Contact</a></li>
+    </ul>
+    <div class="ml-auto flex items-center gap-2 xl:ml-0">
+      <span title="Coming soon" class="hidden items-center gap-1.5 whitespace-nowrap rounded-lg border border-navy-900/12 px-3 py-2 text-[13px] font-bold text-navy-700 lg:inline-flex"><svg viewBox="0 0 24 24" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="4.5" width="14" height="16" rx="2.5"/><path d="M9 4.5a3 3 0 0 1 6 0"/><path d="M9 11h6M9 15h4"/></svg> <a href="https://mock-test.gsnetacademy.com/" class="cursor-pointer">Exam Portal</a></span>
+      <a href="/#free-demo" class="btn-outline btn-sm hidden 2xl:inline-flex">Demo</a>
+      <a href="enroll.html" class="btn-primary btn-sm hidden sm:inline-flex">Join Now</a>
+      <label for="nav-toggle" class="cursor-pointer rounded-lg border border-navy-900/12 p-2 text-navy-800 xl:hidden" aria-label="Menu"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></label>
+    </div>
+  </nav>
+</header>
+
+<div class="drawer xl:hidden">
+  <label for="nav-toggle" class="drawer-scrim" aria-hidden="true"></label>
+  <div class="drawer-panel">
+    <div class="flex h-[72px] shrink-0 items-center justify-between border-b border-navy-900/10 px-5">
+      <img src="assets/images/logo.png" alt="GS Net Academy" class="h-9 w-auto rounded-lg bg-navy-950">
+      <label for="nav-toggle" class="cursor-pointer p-2 text-navy-800" aria-label="Close"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></label>
+    </div>
+    <div class="flex-1 overflow-y-auto p-5">
+      <ul class="flex flex-col gap-1">
+      <li><a href="/" class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold bg-navy-50 text-navy-900">Home</a></li>
+      <li><a href="courses.html" class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold text-navy-700">UGC NET Paper-I</a></li>
+      <li><a href="results.html" class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold text-navy-700">Our Results</a></li>
+      <li><span class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold text-navy-400">UG / PG (Paper-2)<span class="rounded-md bg-navy-50 px-2 py-0.5 text-[10.5px] font-extrabold uppercase tracking-wider">Coming soon</span></span></li>
+      <li><a href="tutorial.html" class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold text-navy-700">Tutorials</a></li>
+      <li><a href="notes.html" class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold text-navy-700">Notes</a></li>
+      <li><a href="blog.html" class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold text-navy-700">Blog</a></li>
+      <li><a href="about.html" class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold text-navy-700">About</a></li>
+      <li><a href="contact.html" class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold text-navy-700">Contact</a></li>
+      </ul>
+      <p class="mt-3 rounded-xl bg-gold-50 px-4 py-3 text-[12.5px] font-extrabold uppercase tracking-wider text-gold-700">AI-Powered Career Guidance — Coming soon</p>
+      <div class="mt-5 grid gap-2.5">
+        <a href="enroll.html" class="btn-primary w-full">✓ JOIN BATCH @ ₹500</a>
+        <a href="/#free-demo" class="btn-outline w-full">▶ WATCH FREE DEMO</a>
+        <a href="https://chat.whatsapp.com/KeaQUhOFz0UGAKtLmsM7oU" target="_blank" rel="noreferrer noopener" class="btn-outline w-full"><svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.2 20.8 4.6 16A8.4 8.4 0 1 1 8 19.4l-4.8 1.4Z"/><path d="M9 8.4c.3-.7.6-.7.9-.7h.6c.2 0 .5 0 .7.6l.8 1.9c.1.2.1.4 0 .6l-.5.7c-.1.2-.2.4 0 .7a7 7 0 0 0 3 2.6c.3.1.5.1.7-.1l.7-.8c.2-.2.4-.2.6-.1l1.8.9c.3.1.5.3.5.5v.6c0 .4-.2.9-.9 1.2-.6.3-1.5.4-2.5.1a10 10 0 0 1-6.5-6.2c-.3-1-.1-1.9.1-2.5Z"/></svg> WhatsApp Group</a>
+        <a href="tel:+919266511505" class="btn-dark w-full"><svg viewBox="0 0 24 24" class="h-4 w-4" fill="currentColor" stroke="none" aria-hidden="true"><path d="M5 3h3.5l1.6 4-2 1.4a12 12 0 0 0 5.5 5.5l1.4-2 4 1.6V19a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 3 5.2 2 2 0 0 1 5 3Z"/></svg> Call 9266511505</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<section class="hero">
+  <div class="container hero-inner">
+    <span class="eyebrow">★ UGC NET Paper-I · Higher Education</span>
+    <h1 class="h-display">Institutions & Regulatory Bodies</h1>
+    <p>Complete tutorial: UGC, AICTE, NAAC, NBA, NIRF, NRF, DEB, NCTE, BCI, MCI/NMC, DCI, PCI, ICAR, RCI, AISHE, and other regulatory bodies in Indian Higher Education.</p>
+  </div>
+</section>
+
+<main class="container">
+  <input type="checkbox" id="sidebar-toggle">
+  <label for="sidebar-toggle" class="mobile-bar">
+    <span>📑 On this page</span>
+    <span>☰ Menu</span>
+  </label>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebarNav">
+      <p class="sidebar-title">On this page</p>
+      <nav>
+    <a href="/tutorials/higher-education-system/institutions-and-regulatory-bodies/ugc" class="nav-link active"><span class="nav-num">1</span>UGC</a>
+        <a href="/tutorials/higher-education-system/institutions-and-regulatory-bodies/aicte" class="nav-link"><span class="nav-num">2</span>AICTE</a>
+        <a href="/tutorials/higher-education-system/institutions-and-regulatory-bodies/naac" class="nav-link"><span class="nav-num">3</span>NAAC</a>
+        <a href="/tutorials/higher-education-system/institutions-and-regulatory-bodies/nba" class="nav-link"><span class="nav-num">4</span>NBA</a>
+        <a href="/tutorials/higher-education-system/institutions-and-regulatory-bodies/nirf" class="nav-link"><span class="nav-num">5</span>NIRF</a>
+        <a href="/tutorials/higher-education-system/institutions-and-regulatory-bodies/nrf" class="nav-link"><span class="nav-num">6</span>NRF</a>
+        <a href="/tutorials/higher-education-system/institutions-and-regulatory-bodies/deb" class="nav-link"><span class="nav-num">7</span>DEB</a>
+        <a href="/tutorials/higher-education-system/institutions-and-regulatory-bodies/ncte" class="nav-link"><span class="nav-num">8</span>NCTE</a>
+        <a href="/tutorials/higher-education-system/institutions-and-regulatory-bodies/bci" class="nav-link"><span class="nav-num">9</span>BCI</a>
+        <a href="/tutorials/higher-education-system/institutions-and-regulatory-bodies/nmc" class="nav-link"><span class="nav-num">10</span>NMC (MCI)</a>
+        <a href="/tutorials/higher-education-system/institutions-and-regulatory-bodies/dci" class="nav-link"><span class="nav-num">11</span>DCI</a>
+        <a href="/tutorials/higher-education-system/institutions-and-regulatory-bodies/pci" class="nav-link"><span class="nav-num">12</span>PCI</a>
+        <a href="/tutorials/higher-education-system/institutions-and-regulatory-bodies/icar" class="nav-link"><span class="nav-num">13</span>ICAR</a>
+        <a href="/tutorials/higher-education-system/institutions-and-regulatory-bodies/rci" class="nav-link"><span class="nav-num">14</span>RCI</a>
+        <a href="/tutorials/higher-education-system/institutions-and-regulatory-bodies/aishe" class="nav-link"><span class="nav-num">15</span>AISHE</a>
+        <a href="/tutorials/higher-education-system/institutions-and-regulatory-bodies/summary-table" class="nav-link"><span class="nav-num">16</span>Summary Table</a>
+        <a href="/tutorials/higher-education-system/institutions-and-regulatory-bodies/exam-traps" class="nav-link"><span class="nav-num">17</span>Common Exam Traps</a>
+        <a href="/tutorials/higher-education-system/institutions-and-regulatory-bodies/practice-questions" class="nav-link"><span class="nav-num">18</span>Practice Questions</a>
+        <a href="/tutorials/higher-education-system/institutions-and-regulatory-bodies/one-page-revision" class="nav-link"><span class="nav-num">19</span>One-Page Revision</a>
+      </nav>
+    </aside>
+
+    <div class="content" id="contentArea">
+      <!-- ===== CARDS ===== -->
+      <div id="ugc" class="topic-card"><div class="sec-head"><span class="sec-num">1</span><h2>UGC — विश्वविद्यालय अनुदान आयोग</h2></div><p><strong>University Grants Commission (UGC)</strong> is the statutory body for coordination, determination and maintenance of standards of university education in India.</p><ul class="bullet-list"><li><strong>Established:</strong> 1956 (Statutory body under UGC Act, 1956)</li><li><strong>Headquarters:</strong> New Delhi</li><li><strong>Functions:</strong><ul><li>Grant-in-aid to universities and colleges</li><li>Recognition of institutions (under Section 2(f) and 12(B))</li><li>Curriculum development and academic standards</li><li>Promotion of research</li><li>Conducting NET (UGC-NET) for Assistant Professor and JRF</li><li>Maintaining standards of higher education</li></ul></li><li><strong>Key Schemes:</strong> SAP, DSA, UPE, CPEPA, etc.</li></ul></div>
+
+      <div id="aicte" class="topic-card"><div class="sec-head"><span class="sec-num">2</span><h2>AICTE — अखिल भारतीय तकनीकी शिक्षा परिषद</h2></div><p><strong>All India Council for Technical Education (AICTE)</strong> is the statutory body for planning, coordination, and regulation of technical education in India.</p><ul class="bullet-list"><li><strong>Established:</strong> 1987 (Statutory body under AICTE Act, 1987)</li><li><strong>Headquarters:</strong> New Delhi</li><li><strong>Functions:</strong><ul><li>Approval of technical institutions (engineering, management, pharmacy, architecture, hotel management, etc.)</li><li>Curriculum development and academic standards</li><li>Quality assurance in technical education</li><li>Promotion of research and innovation</li></ul></li><li><strong>Programmes:</strong> Undergraduate, postgraduate, and diploma programmes in technical fields</li></ul></div>
+
+      <div id="naac" class="topic-card"><div class="sec-head"><span class="sec-num">3</span><h2>NAAC — राष्ट्रीय मूल्यांकन एवं प्रत्यायन परिषद</h2></div><p><strong>National Assessment and Accreditation Council (NAAC)</strong> is an autonomous body that assesses and accredits higher education institutions (HEIs) in India.</p><ul class="bullet-list"><li><strong>Established:</strong> 1994 (Autonomous body of UGC)</li><li><strong>Headquarters:</strong> Bengaluru</li><li><strong>Purpose:</strong> Quality assurance and accreditation of HEIs</li><li><strong>Grading:</strong> A++ (3.51-4.00), A+ (3.26-3.50), A (3.01-3.25), B++ (2.76-3.00), B+ (2.51-2.75), B (2.01-2.50), C (1.51-2.00), D (≤1.50)</li><li><strong>Assessment Framework:</strong> Curricular Aspects, Teaching-Learning, Research, Infrastructure, Student Support, Governance</li><li><strong>NAAC Grade is valid for 5 years.</strong></li></ul></div>
+
+      <div id="nba" class="topic-card"><div class="sec-head"><span class="sec-num">4</span><h2>NBA — राष्ट्रीय प्रत्यायन बोर्ड</h2></div><p><strong>National Board of Accreditation (NBA)</strong> is an autonomous body that accredits technical programmes (engineering, management, pharmacy, etc.) in India.</p><ul class="bullet-list"><li><strong>Established:</strong> 1994 (under AICTE)</li><li><strong>Headquarters:</strong> New Delhi</li><li><strong>Purpose:</strong> Accreditation of technical programmes</li><li><strong>Outcome-Based Accreditation:</strong> Focus on Programme Outcomes (POs), Programme Educational Objectives (PEOs), and Course Outcomes (COs)</li><li><strong>Accreditation is for 3-5 years.</strong></li><li><strong>NBA is a signatory to the Washington Accord.</strong></li></ul></div>
+
+      <div id="nirf" class="topic-card"><div class="sec-head"><span class="sec-num">5</span><h2>NIRF — राष्ट्रीय संस्थागत रैंकिंग फ्रेमवर्क</h2></div><p><strong>National Institutional Ranking Framework (NIRF)</strong> is a methodology adopted by the Ministry of Education (MoE) to rank higher education institutions in India.</p><ul class="bullet-list"><li><strong>Launched:</strong> 2015</li><li><strong>Purpose:</strong> Ranking of HEIs in India</li><li><strong>Parameters (5 broad categories):</strong><ul><li>Teaching, Learning & Resources (TLR)</li><li>Research and Professional Practice (RP)</li><li>Graduation Outcomes (GO)</li><li>Outreach and Inclusivity (OI)</li><li>Perception (PR)</li></ul></li><li><strong>Categories:</strong> Overall, Universities, Engineering, Management, Pharmacy, Medical, Law, Architecture, Dental, Research, Innovation, Agriculture, etc.</li><li><strong>NIRF ranking is published annually by the MoE.</strong></li></ul></div>
+
+      <div id="nrf" class="topic-card"><div class="sec-head"><span class="sec-num">6</span><h2>NRF — राष्ट्रीय अनुसंधान फाउंडेशन</h2></div><p><strong>National Research Foundation (NRF)</strong> is a proposed body to promote research and innovation in India, as recommended by NEP 2020.</p><ul class="bullet-list"><li><strong>Purpose:</strong> To foster a culture of research and innovation</li><li><strong>Functions:</strong><ul><li>Funding for research projects</li><li>Promoting interdisciplinary research</li><li>Building research infrastructure</li><li>Encouraging industry-academia collaboration</li><li>Supporting early-career researchers</li></ul></li><li><strong>NRF will replace/reorganise existing research funding bodies (like SERB, etc.).</strong></li></ul></div>
+
+      <div id="deb" class="topic-card"><div class="sec-head"><span class="sec-num">7</span><h2>DEB — दूरस्थ शिक्षा ब्यूरो</h2></div><p><strong>Distance Education Bureau (DEB)</strong> is the regulatory body for open and distance learning (ODL) and online education in India.</p><ul class="bullet-list"><li><strong>Previously:</strong> DEC (Distance Education Council) — now replaced by DEB</li><li><strong>Established:</strong> 2012 (under UGC)</li><li><strong>Functions:</strong><ul><li>Regulation of ODL and online programmes</li><li>Approval of ODL/online courses</li><li>Quality assurance in distance education</li></ul></li><li><strong>DEB works under UGC.</strong></li></ul></div>
+
+      <div id="ncte" class="topic-card"><div class="sec-head"><span class="sec-num">8</span><h2>NCTE — राष्ट्रीय शिक्षक शिक्षा परिषद</h2></div><p><strong>National Council for Teacher Education (NCTE)</strong> is the statutory body for teacher education in India.</p><ul class="bullet-list"><li><strong>Established:</strong> 1995 (Statutory body under NCTE Act, 1993)</li><li><strong>Headquarters:</strong> New Delhi</li><li><strong>Functions:</strong><ul><li>Regulation of teacher education programmes (B.Ed., M.Ed., D.El.Ed., etc.)</li><li>Recognition of teacher education institutions</li><li>Curriculum development for teacher education</li><li>Quality assurance in teacher education</li></ul></li></ul></div>
+
+      <div id="bci" class="topic-card"><div class="sec-head"><span class="sec-num">9</span><h2>BCI — बार काउंसिल ऑफ इंडिया</h2></div><p><strong>Bar Council of India (BCI)</strong> is the statutory body for legal education and legal profession in India.</p><ul class="bullet-list"><li><strong>Established:</strong> 1961 (under Advocates Act, 1961)</li><li><strong>Headquarters:</strong> New Delhi</li><li><strong>Functions:</strong><ul><li>Regulation of legal education</li><li>Recognition of law colleges (LL.B., LL.M.)</li><li>Conduct of All India Bar Examination (AIBE)</li><li>Regulation of legal profession</li></ul></li></ul></div>
+
+      <div id="nmc" class="topic-card"><div class="sec-head"><span class="sec-num">10</span><h2>NMC (MCI) — राष्ट्रीय चिकित्सा आयोग</h2></div><p><strong>National Medical Commission (NMC)</strong> is the regulatory body for medical education and medical profession in India.</p><ul class="bullet-list"><li><strong>Previously:</strong> Medical Council of India (MCI) — replaced by NMC in 2020</li><li><strong>Established:</strong> 2020 (under NMC Act, 2019)</li><li><strong>Headquarters:</strong> New Delhi</li><li><strong>Functions:</strong><ul><li>Regulation of medical education (MBBS, MD, MS, etc.)</li><li>Recognition of medical colleges</li><li>Conduct of NEET-UG, NEET-PG</li><li>Regulation of medical profession</li></ul></li><li><strong>NMC has 4 boards:</strong> UG Medical Education Board, PG Medical Education Board, Medical Assessment and Rating Board, Ethics and Medical Registration Board</li></ul></div>
+
+      <div id="dci" class="topic-card"><div class="sec-head"><span class="sec-num">11</span><h2>DCI — दंत चिकित्सा परिषद</h2></div><p><strong>Dental Council of India (DCI)</strong> is the statutory body for dental education and dental profession in India.</p><ul class="bullet-list"><li><strong>Established:</strong> 1949 (under Dentists Act, 1948)</li><li><strong>Headquarters:</strong> New Delhi</li><li><strong>Functions:</strong><ul><li>Regulation of dental education (BDS, MDS)</li><li>Recognition of dental colleges</li><li>Maintenance of dental register</li><li>Regulation of dental profession</li></ul></li></ul></div>
+
+      <div id="pci" class="topic-card"><div class="sec-head"><span class="sec-num">12</span><h2>PCI — भारतीय औषधि परिषद</h2></div><p><strong>Pharmacy Council of India (PCI)</strong> is the statutory body for pharmacy education and pharmacy profession in India.</p><ul class="bullet-list"><li><strong>Established:</strong> 1949 (under Pharmacy Act, 1948)</li><li><strong>Headquarters:</strong> New Delhi</li><li><strong>Functions:</strong><ul><li>Regulation of pharmacy education (B.Pharm, M.Pharm, D.Pharm)</li><li>Recognition of pharmacy colleges</li><li>Maintenance of pharmacy register</li><li>Regulation of pharmacy profession</li></ul></li></ul></div>
+
+      <div id="icar" class="topic-card"><div class="sec-head"><span class="sec-num">13</span><h2>ICAR — भारतीय कृषि अनुसंधान परिषद</h2></div><p><strong>Indian Council of Agricultural Research (ICAR)</strong> is the apex body for agricultural education, research, and extension in India.</p><ul class="bullet-list"><li><strong>Established:</strong> 1929</li><li><strong>Headquarters:</strong> New Delhi</li><li><strong>Functions:</strong><ul><li>Regulation of agricultural education</li><li>Agricultural research and extension</li><li>Recognition of agricultural universities and colleges</li><li>Conduct of exams for agricultural education</li></ul></li></ul></div>
+
+      <div id="rci" class="topic-card"><div class="sec-head"><span class="sec-num">14</span><h2>RCI — पुनर्वास परिषद</h2></div><p><strong>Rehabilitation Council of India (RCI)</strong> is the statutory body for rehabilitation and special education in India.</p><ul class="bullet-list"><li><strong>Established:</strong> 1992 (under RCI Act, 1992)</li><li><strong>Headquarters:</strong> New Delhi</li><li><strong>Functions:</strong><ul><li>Regulation of rehabilitation and special education</li><li>Recognition of institutions for special education</li><li>Maintenance of rehabilitation register</li><li>Promotion of rehabilitation services</li></ul></li></ul></div>
+
+      <div id="aishe" class="topic-card"><div class="sec-head"><span class="sec-num">15</span><h2>AISHE — उच्च शिक्षा पर अखिल भारतीय सर्वेक्षण</h2></div><p><strong>All India Survey on Higher Education (AISHE)</strong> is an annual survey conducted by the Ministry of Education (MoE) to collect data on higher education in India.</p><ul class="bullet-list"><li><strong>Conducted by:</strong> Ministry of Education (MoE)</li><li><strong>Purpose:</strong> Collection of data on higher education institutions, enrolment, faculty, infrastructure, etc.</li><li><strong>Parameters:</strong> Number of institutions, enrolment (gender, category), faculty, courses offered, infrastructure, etc.</li><li><strong>AISHE is the primary source of data on higher education in India.</strong></li></ul></div>
+
+      <div id="summary-table" class="topic-card"><div class="sec-head"><span class="sec-num">16</span><h2>Summary Table — सारांश तालिका</h2></div><table class="data-table"><tr><th>Body</th><th>Year</th><th>Domain</th></tr><tr><td>UGC</td><td>1956</td><td>Higher Education (General)</td></tr><tr><td>AICTE</td><td>1987</td><td>Technical Education</td></tr><tr><td>NAAC</td><td>1994</td><td>Accreditation (All HEIs)</td></tr><tr><td>NBA</td><td>1994</td><td>Technical Programme Accreditation</td></tr><tr><td>NIRF</td><td>2015</td><td>Ranking of HEIs</td></tr><tr><td>NRF</td><td>Proposed (NEP 2020)</td><td>Research & Innovation</td></tr><tr><td>DEB</td><td>2012</td><td>Distance/Online Education</td></tr><tr><td>NCTE</td><td>1995</td><td>Teacher Education</td></tr><tr><td>BCI</td><td>1961</td><td>Legal Education</td></tr><tr><td>NMC</td><td>2020 (MCI: 1933)</td><td>Medical Education</td></tr><tr><td>DCI</td><td>1949</td><td>Dental Education</td></tr><tr><td>PCI</td><td>1949</td><td>Pharmacy Education</td></tr><tr><td>ICAR</td><td>1929</td><td>Agricultural Education</td></tr><tr><td>RCI</td><td>1992</td><td>Rehabilitation/Special Education</td></tr><tr><td>AISHE</td><td>Annual Survey</td><td>Higher Education Data</td></tr></table></div>
+
+      <div id="exam-traps" class="topic-card"><div class="sec-head"><span class="sec-num">17</span><h2>Common Exam Traps — सामान्य परीक्षा जाल</h2></div><ul class="bullet-list"><li><strong>Trap 1:</strong> NAAC = NBA → ❌ NAAC accredits institutions (overall); NBA accredits technical programmes.</li><li><strong>Trap 2:</strong> UGC = AICTE → ❌ UGC regulates general higher education; AICTE regulates technical education.</li><li><strong>Trap 3:</strong> NIRF = conducted by UGC → ❌ NIRF is conducted by the Ministry of Education (MoE).</li><li><strong>Trap 4:</strong> NMC = UGC → ❌ NMC regulates medical education; UGC regulates general higher education.</li><li><strong>Trap 5:</strong> DEB = DEC → ❌ DEB replaced DEC (Distance Education Council).</li><li><strong>Trap 6:</strong> NBA = NAAC → ❌ NBA accredits technical programmes; NAAC accredits institutions.</li><li><strong>Trap 7:</strong> NRF = UGC → ❌ NRF is for research; UGC is for general higher education regulation.</li><li><strong>Trap 8:</strong> AISHE = conducted by UGC → ❌ AISHE is conducted by the Ministry of Education.</li></ul></div>
+
+      <div id="practice-questions" class="topic-card"><div class="sec-head"><span class="sec-num">18</span><h2>Practice Questions — अभ्यास प्रश्न</h2></div>
+      <div class="pyq-tag">Question 1</div>
+      <p>Which body is responsible for accreditation of higher education institutions in India?</p>
+      <ul class="bullet-list"><li>A. UGC</li><li>B. AICTE</li><li>C. NAAC</li><li>D. NIRF</li></ul>
+      <div class="answer-box">Answer: C. NAAC</div>
+      <p class="explain">Explanation: NAAC (National Assessment and Accreditation Council) accredits higher education institutions.</p>
+
+      <div class="pyq-tag">Question 2</div>
+      <p>Which regulatory body governs technical education in India?</p>
+      <ul class="bullet-list"><li>A. UGC</li><li>B. AICTE</li><li>C. NCTE</li><li>D. BCI</li></ul>
+      <div class="answer-box">Answer: B. AICTE</div>
+      <p class="explain">Explanation: AICTE (All India Council for Technical Education) regulates technical education in India.</p>
+
+      <div class="pyq-tag">Question 3</div>
+      <p>NBA accreditation is primarily for:</p>
+      <ul class="bullet-list"><li>A. Entire institutions</li><li>B. Technical programmes</li><li>C. Teacher education</li><li>D. Medical colleges</li></ul>
+      <div class="answer-box">Answer: B. Technical programmes</div>
+      <p class="explain">Explanation: NBA accredits technical programmes (engineering, management, pharmacy, etc.).</p>
+
+      <div class="pyq-tag">Question 4</div>
+      <p>NIRF ranking is released by:</p>
+      <ul class="bullet-list"><li>A. UGC</li><li>B. AICTE</li><li>C. Ministry of Education</li><li>D. NAAC</li></ul>
+      <div class="answer-box">Answer: C. Ministry of Education</div>
+      <p class="explain">Explanation: NIRF ranking is published annually by the Ministry of Education (MoE).</p>
+
+      <div class="pyq-tag">Question 5</div>
+      <p>Which body is responsible for teacher education in India?</p>
+      <ul class="bullet-list"><li>A. UGC</li><li>B. NCTE</li><li>C. AICTE</li><li>D. BCI</li></ul>
+      <div class="answer-box">Answer: B. NCTE</div>
+      <p class="explain">Explanation: NCTE (National Council for Teacher Education) regulates teacher education in India.</p>
+
+      <div class="pyq-tag">Question 6</div>
+      <p>The Medical Council of India (MCI) has been replaced by:</p>
+      <ul class="bullet-list"><li>A. NMC</li><li>B. NBE</li><li>C. DCI</li><li>D. PCI</li></ul>
+      <div class="answer-box">Answer: A. NMC</div>
+      <p class="explain">Explanation: MCI was replaced by the National Medical Commission (NMC) in 2020.</p></div>
+
+      <div id="one-page-revision" class="topic-card"><div class="sec-head"><span class="sec-num">19</span><h2>One-Page Revision — एक पेज में पुनरावृत्ति</h2></div>
+      <p><strong>Regulatory Bodies:</strong></p>
+      <ul class="bullet-list"><li>UGC (1956) — General Higher Education</li>
+      <li>AICTE (1987) — Technical Education</li>
+      <li>NCTE (1995) — Teacher Education</li>
+      <li>BCI (1961) — Legal Education</li>
+      <li>NMC (2020) — Medical Education</li>
+      <li>DCI (1949) — Dental Education</li>
+      <li>PCI (1949) — Pharmacy Education</li>
+      <li>ICAR (1929) — Agricultural Education</li>
+      <li>RCI (1992) — Rehabilitation/Special Education</li></ul>
+
+      <p><strong>Accreditation & Quality:</strong></p>
+      <ul class="bullet-list"><li>NAAC (1994) — Institutional Accreditation</li>
+      <li>NBA (1994) — Technical Programme Accreditation</li></ul>
+
+      <p><strong>Ranking & Data:</strong></p>
+      <ul class="bullet-list"><li>NIRF (2015) — Ranking of HEIs</li>
+      <li>AISHE — Annual Survey on Higher Education</li></ul>
+
+      <p><strong>Research & Innovation:</strong></p>
+      <ul class="bullet-list"><li>NRF — Proposed (NEP 2020) — Research promotion</li></ul>
+
+      <p><strong>Distance Education:</strong></p>
+      <ul class="bullet-list"><li>DEB (2012) — Distance/Online Education regulation</li></ul>
+
+      <p><strong>Exam Formula:</strong></p>
+      <div class="formula-box">Body → Year → Domain → Function</div>
+      <p><em>UGC NET में Institutions & Regulatory Bodies के questions establishment year, domain, and functions पर based होते हैं।</em></p></div>
+
+      <div class="enroll-cta"><div><h3 class="h-display">Join the Paper-1 Batch</h3><p>Course fee FREE — ₹500 registration & academic/logistics contribution. Classes daily at 6:30 PM.</p></div><a href="/enroll.html" class="btn-gold">✓ JOIN BATCH @ ₹500</a></div>
+    </div>
+  </div>
+</main>
+
+<footer class="relative overflow-hidden bg-navy-950 text-white">
+  <div class="grid-paper absolute inset-0 opacity-50" aria-hidden="true"></div>
+  <div class="container-x relative py-12 lg:py-14">
+    <div class="grid grid-cols-2 gap-10 lg:grid-cols-4">
+
+      <div>
+        <div class="flex items-center gap-3">
+          <img src="/assets/images/logo.png" alt="GS Net Academy" class="h-11 w-auto rounded-lg bg-white p-1" width="120" height="44">
+          <img src="/assets/images/tagline.png" alt="" class="h-11 w-auto brightness-0 invert" aria-hidden="true">
+        </div>
+        <p class="mt-5 text-[14px] leading-relaxed text-navy-100/75">UGC NET Paper-I | JRF Preparation | Mentorship</p>
+        <span class="eyebrow mt-5"><svg viewBox="0 0 24 24" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1"/></svg> JRF @ ₹500 Mission 2026</span>
+
+        <p class="mt-6 text-[11px] font-extrabold uppercase tracking-[0.18em] text-gold-400">Follow Us</p>
+        <ul class="mt-3 flex flex-wrap gap-2">
+          <li><a href="https://www.youtube.com/@gsnetacademy" target="_blank" rel="noreferrer noopener" aria-label="YouTube" title="YouTube" class="grid h-10 w-10 place-items-center rounded-xl border border-white/12 bg-white/[0.06] text-navy-100/80 transition hover:border-gold-400/50 hover:bg-white/[0.12] hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor" aria-hidden="true"><path d="M21.6 7.2a2.5 2.5 0 0 0-1.8-1.8C18.2 5 12 5 12 5s-6.2 0-7.8.4A2.5 2.5 0 0 0 2.4 7.2 26 26 0 0 0 2 12a26 26 0 0 0 .4 4.8 2.5 2.5 0 0 0 1.8 1.8C5.8 19 12 19 12 19s6.2 0 7.8-.4a2.5 2.5 0 0 0 1.8-1.8A26 26 0 0 0 22 12a26 26 0 0 0-.4-4.8ZM10 15V9l5.2 3L10 15Z"/></svg></a></li>
+          <li><a href="https://www.instagram.com/gsnetacademy" target="_blank" rel="noreferrer noopener" aria-label="Instagram" title="Instagram" class="grid h-10 w-10 place-items-center rounded-xl border border-white/12 bg-white/[0.06] text-navy-100/80 transition hover:border-gold-400/50 hover:bg-white/[0.12] hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg></a></li>
+          <li><a href="https://www.facebook.com/gsnetacademy" target="_blank" rel="noreferrer noopener" aria-label="Facebook" title="Facebook" class="grid h-10 w-10 place-items-center rounded-xl border border-white/12 bg-white/[0.06] text-navy-100/80 transition hover:border-gold-400/50 hover:bg-white/[0.12] hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.25-1.5 1.55-1.5H16.7V3.6c-.3 0-1.3-.13-2.47-.13-2.44 0-4.11 1.49-4.11 4.23V9.9H7.4V13h2.72v8h3.38Z"/></svg></a></li>
+          <li><a href="https://t.me/gsnetacademy" target="_blank" rel="noreferrer noopener" aria-label="Telegram" title="Telegram" class="grid h-10 w-10 place-items-center rounded-xl border border-white/12 bg-white/[0.06] text-navy-100/80 transition hover:border-gold-400/50 hover:bg-white/[0.12] hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor" aria-hidden="true"><path d="M21.3 4.3 2.9 11.4c-.9.35-.9 1.62.02 1.93l4.6 1.53 1.75 5.3c.25.75 1.2.95 1.73.37l2.5-2.72 4.6 3.38c.63.46 1.53.12 1.7-.65l3.1-14.9c.2-.9-.7-1.65-1.6-1.31ZM9.6 14.1l8.5-5.6-6.9 6.5-.3 3.3-1.3-4.2Z"/></svg></a></li>
+          <li><a href="https://chat.whatsapp.com/KeaQUhOFz0UGAKtLmsM7oU" target="_blank" rel="noreferrer noopener" aria-label="WhatsApp Group" title="WhatsApp Group" class="grid h-10 w-10 place-items-center rounded-xl border border-white/12 bg-white/[0.06] text-navy-100/80 transition hover:border-emerald-400/50 hover:bg-emerald-500/15 hover:text-emerald-300"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.2 20.8 4.6 16A8.4 8.4 0 1 1 8 19.4l-4.8 1.4Z"/><path d="M9 8.4c.3-.7.6-.7.9-.7h.6c.2 0 .5 0 .7.6l.8 1.9c.1.2.1.4 0 .6l-.5.7c-.1.2-.2.4 0 .7a7 7 0 0 0 3 2.6c.3.1.5.1.7-.1l.7-.8c.2-.2.4-.2.6-.1l1.8.9c.3.1.5.3.5.5v.6c0 .4-.2.9-.9 1.2-.6.3-1.5.4-2.5.1a10 10 0 0 1-6.5-6.2c-.3-1-.1-1.9.1-2.5Z"/></svg></a></li>
+          <li><a href="https://x.com/gsnetacademy" target="_blank" rel="noreferrer noopener" aria-label="X (Twitter)" title="X (Twitter)" class="grid h-10 w-10 place-items-center rounded-xl border border-white/12 bg-white/[0.06] text-navy-100/80 transition hover:border-gold-400/50 hover:bg-white/[0.12] hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-4.5 w-4.5" fill="currentColor" aria-hidden="true"><path d="M17.5 3h3.1l-6.8 7.8L21.8 21h-6.2l-4.9-6.4L5.1 21H2l7.3-8.3L2.5 3h6.4l4.4 5.8L17.5 3Zm-1.1 16.2h1.7L7.7 4.7H5.9l10.5 14.5Z"/></svg></a></li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="text-[11px] font-extrabold uppercase tracking-[0.18em] text-gold-400">Quick Links</p>
+        <ul class="mt-4 grid gap-2.5">
+          <li><a href="/index.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Home</a></li>
+          <li><a href="/courses.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">UGC NET Paper-I</a></li>
+          <li><a href="/results.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Our Results</a></li>
+          <li><a href="/tutorials.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Tutorials</a></li>
+          <li><a href="/blog.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Blog</a></li>
+          <li><a href="/about.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">About</a></li>
+          <li><a href="/contact.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="text-[11px] font-extrabold uppercase tracking-[0.18em] text-gold-400">Resources</p>
+        <ul class="mt-4 grid gap-2.5">
+          <li><a href="/notes.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Notes</a></li>
+          <li><a href="/enroll.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Register for ₹500</a></li>
+          <li><a href="/index.html#free-demo" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Free Demo Classes</a></li>
+          <li><a href="https://chat.whatsapp.com/KeaQUhOFz0UGAKtLmsM7oU" target="_blank" rel="noreferrer noopener" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Student Community</a></li>
+        </ul>
+        <p class="mt-6 text-[11px] font-extrabold uppercase tracking-[0.18em] text-gold-400">Legal</p>
+        <ul class="mt-4 grid gap-2.5">
+          <li><a href="/privacy-policy.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Privacy Policy</a></li>
+          <li><a href="/refund-policy.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Refund &amp; Cancellation</a></li>
+          <li><a href="/terms-of-enrollment.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Terms of Enrollment</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="text-[11px] font-extrabold uppercase tracking-[0.18em] text-gold-400">Contact</p>
+        <ul class="mt-4 grid gap-2.5 text-[14px] text-navy-100/75">
+          <li><a href="tel:+919266511505" class="flex items-center gap-2 hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-4 w-4 icon-gold" fill="currentColor" aria-hidden="true"><path d="M5 3h3.5l1.6 4-2 1.4a12 12 0 0 0 5.5 5.5l1.4-2 4 1.6V19a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 3 5.2 2 2 0 0 1 5 3Z"/></svg> +91 9266511505</a></li>
+          <li><a href="tel:+919810845327" class="flex items-center gap-2 hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-4 w-4 icon-gold" fill="currentColor" aria-hidden="true"><path d="M5 3h3.5l1.6 4-2 1.4a12 12 0 0 0 5.5 5.5l1.4-2 4 1.6V19a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 3 5.2 2 2 0 0 1 5 3Z"/></svg> +91 9810845327</a></li>
+          <li><a href="mailto:gsnetacademy@gmail.com" class="flex items-center gap-2 break-all hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-4 w-4 icon-gold" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="m3.5 6.5 8.5 6 8.5-6"/></svg> gsnetacademy@gmail.com</a></li>
+          <li><a href="https://chat.whatsapp.com/KeaQUhOFz0UGAKtLmsM7oU" target="_blank" rel="noreferrer noopener" class="flex items-center gap-2 hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-4 w-4 icon-gold" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.2 20.8 4.6 16A8.4 8.4 0 1 1 8 19.4l-4.8 1.4Z"/><path d="M9 8.4c.3-.7.6-.7.9-.7h.6c.2 0 .5 0 .7.6l.8 1.9c.1.2.1.4 0 .6l-.5.7c-.1.2-.2.4 0 .7a7 7 0 0 0 3 2.6c.3.1.5.1.7-.1l.7-.8c.2-.2.4-.2.6-.1l1.8.9c.3.1.5.3.5.5v.6c0 .4-.2.9-.9 1.2-.6.3-1.5.4-2.5.1a10 10 0 0 1-6.5-6.2c-.3-1-.1-1.9.1-2.5Z"/></svg> WhatsApp Group</a></li>
+        </ul>
+        <a href="/enroll.html" class="btn-primary mt-6 w-full">Join for ₹500</a>
+        <p class="text-[14px] mt-3 text-navy-100/75 transition hover:text-gold-300">Address: B 14-15, Udhyog Marg, Block B, Sector 1, Noida, Uttar Pradesh 201301</p>
+      </div>
+    </div>
+
+    <div class="mt-10 border-t border-white/10 pt-6">
+      <ul class="flex flex-wrap items-center gap-x-5 gap-y-2 text-[13px]">
+        <li><a href="/privacy-policy.html" class="text-navy-100/70 transition hover:text-gold-300">Privacy Policy</a></li>
+        <li aria-hidden="true" class="text-navy-100/25">|</li>
+        <li><a href="/refund-policy.html" class="text-navy-100/70 transition hover:text-gold-300">Refund &amp; Cancellation</a></li>
+        <li aria-hidden="true" class="text-navy-100/25">|</li>
+        <li><a href="/terms-of-enrollment.html" class="text-navy-100/70 transition hover:text-gold-300">Terms of Enrollment</a></li>
+      </ul>
+      <div class="mt-4 flex flex-col gap-2 text-[13px] text-navy-100/60 sm:flex-row sm:items-center sm:justify-between">
+        <p>© 2026 GS Net Academy. All Rights Reserved.</p>
+        <p>A Premier institute for UGC NET Paper-1</p>
+      </div>
+      <p class="mt-4 text-[12px] leading-relaxed text-navy-100/45">Disclaimer: GS Net Academy किसी भी exam में selection, rank या score की guarantee नहीं देता। हम quality teaching, study material, practice और academic mentorship प्रदान करते हैं। UGC, NTA या किसी अन्य government body से हमारा कोई affiliation नहीं है।</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  (function() {
+
+    const BASE_PATH =
+      "/tutorials/higher-education-system/institutions-and-regulatory-bodies";
+
+    const links =
+      document.querySelectorAll(".nav-link");
+
+    const cards =
+      document.querySelectorAll(".topic-card");
+
+    const content =
+      document.getElementById("contentArea");
+
+    const sidebarToggle =
+      document.getElementById("sidebar-toggle");
+
+
+    // Get topic slug from current URL
+    function getSlugFromPath() {
+
+      const path =
+        window.location.pathname
+          .replace(/\/+$/, "");
+
+      if (
+        path.startsWith(BASE_PATH + "/")
+      ) {
+
+        return path
+          .substring(
+            (BASE_PATH + "/").length
+          )
+          .split("/")[0];
+
+      }
+
+      return null;
+    }
+
+
+    // Update browser URL
+    function updateUrl(
+      slug,
+      replace = false
+    ) {
+
+      const newPath =
+        BASE_PATH + "/" + slug;
+
+      if (
+        window.location.pathname !== newPath
+      ) {
+
+        if (replace) {
+
+          history.replaceState(
+            null,
+            "",
+            newPath
+          );
+
+        } else {
+
+          history.pushState(
+            null,
+            "",
+            newPath
+          );
+
+        }
+
+      }
+
+    }
+
+
+    // Update active sidebar link
+    function updateActiveLink(slug) {
+
+      links.forEach(function(link) {
+
+        const href =
+          link.getAttribute("href");
+
+        if (!href) return;
+
+
+        const linkSlug =
+          href
+            .split("/")
+            .filter(Boolean)
+            .pop();
+
+
+        link.classList.toggle(
+          "active",
+          linkSlug === slug
+        );
+
+      });
+
+    }
+
+
+    // Show selected topic card
+    function showCard(
+      slug,
+      updateHistory = true
+    ) {
+
+      cards.forEach(function(card) {
+
+        card.classList.add("hidden");
+
+      });
+
+
+      const target =
+        document.getElementById(slug);
+
+
+      if (!target) {
+
+        const first =
+          cards[0];
+
+        if (first) {
+
+          first.classList.remove("hidden");
+
+          const firstSlug =
+            first.id;
+
+          updateActiveLink(
+            firstSlug
+          );
+
+          updateUrl(
+            firstSlug,
+            true
+          );
+
+        }
+
+        return;
+      }
+
+
+      target.classList.remove("hidden");
+
+      updateActiveLink(slug);
+
+
+      if (updateHistory) {
+
+        updateUrl(
+          slug,
+          false
+        );
+
+      }
+
+
+      if (sidebarToggle) {
+
+        sidebarToggle.checked = false;
+
+      }
+
+
+      if (content) {
+
+        const top =
+          content.getBoundingClientRect().top +
+          window.pageYOffset -
+          10;
+
+        window.scrollTo({
+
+          top: top,
+
+          behavior: "smooth"
+
+        });
+
+      }
+
+    }
+
+
+    // Sidebar link click
+    links.forEach(function(link) {
+
+      link.addEventListener(
+        "click",
+        function(e) {
+
+          e.preventDefault();
+
+
+          const href =
+            this.getAttribute("href");
+
+          if (!href) return;
+
+
+          const slug =
+            href
+              .split("/")
+              .filter(Boolean)
+              .pop();
+
+
+          if (!slug) return;
+
+
+          showCard(
+            slug,
+            true
+          );
+
+        }
+      );
+
+    });
+
+
+    // Initial page load
+    function initFromPath() {
+
+      let slug =
+        getSlugFromPath();
+
+
+      if (
+        !slug ||
+        !document.getElementById(slug)
+      ) {
+
+        slug =
+          cards[0]?.id ||
+          "ugc";
+
+      }
+
+
+      showCard(
+        slug,
+        false
+      );
+
+
+      updateUrl(
+        slug,
+        true
+      );
+
+    }
+
+
+    initFromPath();
+
+
+    // Browser Back / Forward
+    window.addEventListener(
+      "popstate",
+      function() {
+
+        const slug =
+          getSlugFromPath();
+
+
+        if (
+          slug &&
+          document.getElementById(slug)
+        ) {
+
+          showCard(
+            slug,
+            false
+          );
+
+        } else {
+
+          const firstSlug =
+            cards[0]?.id ||
+            "ugc";
+
+          showCard(
+            firstSlug,
+            false
+          );
+
+        }
+
+      }
+    );
+
+
+  })();
+</script>
+</body>
+</html>

@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Categorical Propositions & Immediate Inferences – Full Notes | UGC NET Paper-1</title>
+  <meta name="description" content="Complete tutorial: Categorical Proposition, Quantity & Quality, A, E, I, O propositions, Distribution of Terms, Standardisation of propositions (Only, None but, Not all), Conversion, Obversion, Contraposition for UGC NET Paper-1 Logical Reasoning.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; }
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background: #f8f5ee;
+      color: #101a3d;
+    }
+    .h-display { font-family: 'Poppins', sans-serif; font-weight: 800; letter-spacing: -0.01em; }
+    .container { max-width: 1360px; margin: 0 auto; padding: 0 20px; }
+
+    .hero {
+      background: #0b1330;
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+      padding: 28px 0 22px;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      right: -80px;
+      top: -100px;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(232,183,75,0.2), transparent 70%);
+    }
+    .hero-inner { position: relative; }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      padding: 6px 16px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+      color: #e8b74b;
+    }
+    .hero h1 {
+      font-size: clamp(28px, 4.2vw, 44px);
+      margin: 12px 0 6px;
+    }
+    .hero p {
+      color: rgba(255,255,255,0.78);
+      max-width: 680px;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 28px;
+      padding: 28px 0 50px;
+      align-items: start;
+    }
+    @media (max-width: 980px) {
+      .layout { grid-template-columns: 1fr; }
+    }
+
+    .sidebar {
+      position: sticky;
+      top: 16px;
+      max-height: calc(100vh - 40px);
+      overflow-y: auto;
+      background: #fff;
+      border: 1px solid rgba(16,26,61,0.08);
+      border-radius: 16px;
+      padding: 16px 12px;
+      box-shadow: 0 6px 24px rgba(16,26,61,0.05);
+    }
+    .sidebar::-webkit-scrollbar { width: 5px; }
+    .sidebar::-webkit-scrollbar-thumb { background: #dde2ef; border-radius: 8px; }
+    .sidebar-title {
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: #b9852a;
+      padding: 4px 10px 14px;
+    }
+    .nav-link {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 10px;
+      border-radius: 10px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #33406b;
+      line-height: 1.3;
+      transition: 0.1s;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .nav-link:hover { background: #f4f6fc; color: #0b1330; }
+    .nav-link.active {
+      background: #fdf6e7;
+      color: #0b1330;
+    }
+    .nav-num {
+      flex: none;
+      width: 22px;
+      height: 22px;
+      border-radius: 7px;
+      background: #e7eaf5;
+      color: #5b6690;
+      font-size: 11px;
+      font-weight: 800;
+      display: grid;
+      place-items: center;
+    }
+    .nav-link.active .nav-num {
+      background: #e8b74b;
+      color: #0b1330;
+    }
+
+    #sidebar-toggle { display: none; }
+    .mobile-bar { display: none; }
+    @media (max-width: 980px) {
+      .mobile-bar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: #fff;
+        border: 1px solid rgba(16,26,61,0.1);
+        border-radius: 12px;
+        padding: 12px 16px;
+        margin-bottom: 8px;
+        font-weight: 800;
+        font-size: 13.5px;
+        color: #0b1330;
+      }
+      .sidebar { display: none; position: static; max-height: none; }
+      #sidebar-toggle:checked ~ .layout .sidebar { display: block; }
+    }
+
+    .content { min-width: 0; }
+    .topic-card {
+      background: #fff;
+      border: 1px solid rgba(16,26,61,0.08);
+      border-radius: 16px;
+      padding: 20px 20px 16px;
+      margin-bottom: 18px;
+      scroll-margin-top: 20px;
+      display: block;
+    }
+    .topic-card.hidden { display: none; }
+    .sec-head {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+    .sec-num {
+      flex: none;
+      width: 34px;
+      height: 34px;
+      border-radius: 10px;
+      background: #0b1330;
+      color: #e8b74b;
+      font-weight: 800;
+      font-size: 14px;
+      display: grid;
+      place-items: center;
+    }
+    .sec-head h2 {
+      margin: 0;
+      font-size: 19px;
+      font-weight: 800;
+      color: #0b1330;
+    }
+    .topic-card p {
+      font-size: 14.5px;
+      line-height: 1.75;
+      color: #1a254a;
+      margin: 6px 0;
+    }
+    .bullet-list {
+      margin: 8px 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 5px;
+    }
+    .bullet-list li {
+      position: relative;
+      padding-left: 20px;
+      font-size: 14px;
+      line-height: 1.6;
+      color: #1a254a;
+    }
+    .bullet-list li::before {
+      content: "";
+      position: absolute;
+      left: 2px;
+      top: 9px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #d9a53a;
+    }
+    .formula-box {
+      background: #0b1330;
+      color: #fdeec2;
+      font-weight: 700;
+      font-size: 13.6px;
+      padding: 10px 16px;
+      border-radius: 10px;
+      margin: 10px 0;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 12px 0;
+      font-size: 13.6px;
+      display: block;
+      overflow-x: auto;
+    }
+    .data-table th, .data-table td {
+      border: 1px solid #e7eaf5;
+      padding: 8px 12px;
+      text-align: left;
+      color: #1a254a;
+      white-space: normal;
+    }
+    .data-table th {
+      background: #f4f6fc;
+      color: #0b1330;
+      font-weight: 800;
+    }
+    .pyq-tag {
+      display: inline-block;
+      background: #fdf6e7;
+      color: #b9852a;
+      font-weight: 800;
+      font-size: 12px;
+      padding: 4px 12px;
+      border-radius: 8px;
+      margin: 12px 0 6px;
+    }
+    .answer-box {
+      background: #eefaf2;
+      border: 1px solid #bfe8cc;
+      color: #1a7a4c;
+      font-weight: 700;
+      font-size: 13.6px;
+      padding: 6px 14px;
+      border-radius: 9px;
+      margin: 6px 0;
+    }
+    .explain {
+      background: #f4f6fc;
+      border-radius: 9px;
+      padding: 6px 14px;
+      font-size: 13.6px;
+      color: #1a254a;
+    }
+    .subtopic {
+      padding: 14px 0 6px;
+      border-top: 1px dashed #e7eaf5;
+    }
+    .subtopic:first-of-type { border-top: none; padding-top: 2px; }
+    .subhead {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 6px;
+    }
+    .sub-num {
+      flex: none;
+      width: 26px;
+      height: 26px;
+      border-radius: 8px;
+      background: #fdf6e7;
+      color: #b9852a;
+      font-weight: 800;
+      font-size: 12px;
+      display: grid;
+      place-items: center;
+    }
+    .subhead h3 {
+      margin: 0;
+      font-size: 15.5px;
+      font-weight: 800;
+      color: #0b1330;
+    }
+    .enroll-cta {
+      background: #0b1330;
+      color: #fff;
+      border-radius: 16px;
+      padding: 24px 24px;
+      margin-top: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+      overflow: hidden;
+    }
+    .enroll-cta::before {
+      content: "";
+      position: absolute;
+      right: -40px;
+      top: -40px;
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(232,183,75,0.2), transparent 70%);
+    }
+    .enroll-cta h3 { margin: 0 0 4px; font-size: 20px; }
+    .enroll-cta p { margin: 0; color: rgba(255,255,255,0.75); font-size: 13.5px; max-width: 480px; }
+    .btn-gold {
+      background: #e8b74b;
+      color: #0b1330;
+      font-weight: 800;
+      padding: 10px 22px;
+      border-radius: 10px;
+      font-size: 13.5px;
+      white-space: nowrap;
+      text-decoration: none;
+    }
+  </style>
+
+  <link rel="stylesheet" href="/css/tailwind.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <style>.hero h1 { font-weight: 800 !important; color: #fff !important; line-height: 1.2 !important; font-family: 'Poppins', sans-serif !important; }</style>
+
+  <link rel="icon" href="/assets/images/logo.png">
+</head>
+<body>
+
+<header class="sticky top-0 z-50 border-b border-navy-900/8 bg-white/95 backdrop-blur-md">
+  <nav class="container-wide flex h-[76px] items-center gap-4" aria-label="Main">
+    <a href="/" class="flex shrink-0 items-center gap-3" aria-label="Home">
+      <span class="inline-flex shrink-0 items-center justify-center overflow-hidden rounded-lg bg-navy-950 ring-1 ring-navy-900/10">
+        <img src="assets/images/logo.png" alt="GS Net Academy" class="h-11 w-auto" width="120" height="44">
+      </span>
+      <img src="assets/images/tagline.png" alt="#1 A Premier institute for UGC NET Paper-1" class="h-11 hidden w-auto lg:block">
+    </a>
+    <ul class="mx-auto hidden items-center gap-5 xl:flex">
+      <li><a href="courses.html" class="relative block whitespace-nowrap rounded-lg px-3 py-2 text-[13.5px] font-bold transition-colors text-navy-700/75 hover:text-navy-900">UGC NET Paper-I</a></li>
+      <li><a href="results.html" class="relative block whitespace-nowrap rounded-lg px-3 py-2 text-[13.5px] font-bold transition-colors text-navy-700/75 hover:text-navy-900">Results</a></li>
+      <li><a href="tutorial.html" class="relative block whitespace-nowrap rounded-lg px-3 py-2 text-[13.5px] font-bold transition-colors text-navy-700/75 hover:text-navy-900">Tutorials</a></li>
+      <li><a href="notes.html" class="relative block whitespace-nowrap rounded-lg px-3 py-2 text-[13.5px] font-bold transition-colors text-navy-700/75 hover:text-navy-900">Notes</a></li>
+      <li><a href="blog.html" class="relative block whitespace-nowrap rounded-lg px-3 py-2 text-[13.5px] font-bold transition-colors text-navy-700/75 hover:text-navy-900">Blog</a></li>
+      <li><a href="about.html" class="relative block whitespace-nowrap rounded-lg px-3 py-2 text-[13.5px] font-bold transition-colors text-navy-700/75 hover:text-navy-900">About</a></li>
+      <li><a href="contact.html" class="relative block whitespace-nowrap rounded-lg px-3 py-2 text-[13.5px] font-bold transition-colors text-navy-700/75 hover:text-navy-900">Contact</a></li>
+    </ul>
+    <div class="ml-auto flex items-center gap-2 xl:ml-0">
+      <span title="Coming soon" class="hidden items-center gap-1.5 whitespace-nowrap rounded-lg border border-navy-900/12 px-3 py-2 text-[13px] font-bold text-navy-700 lg:inline-flex"><svg viewBox="0 0 24 24" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="4.5" width="14" height="16" rx="2.5"/><path d="M9 4.5a3 3 0 0 1 6 0"/><path d="M9 11h6M9 15h4"/></svg> <a href="https://mock-test.gsnetacademy.com/" class="cursor-pointer">Exam Portal</a></span>
+      <a href="/#free-demo" class="btn-outline btn-sm hidden 2xl:inline-flex">Demo</a>
+      <a href="enroll.html" class="btn-primary btn-sm hidden sm:inline-flex">Join Now</a>
+      <label for="nav-toggle" class="cursor-pointer rounded-lg border border-navy-900/12 p-2 text-navy-800 xl:hidden" aria-label="Menu"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></label>
+    </div>
+  </nav>
+</header>
+
+<div class="drawer xl:hidden">
+  <label for="nav-toggle" class="drawer-scrim" aria-hidden="true"></label>
+  <div class="drawer-panel">
+    <div class="flex h-[72px] shrink-0 items-center justify-between border-b border-navy-900/10 px-5">
+      <img src="assets/images/logo.png" alt="GS Net Academy" class="h-9 w-auto rounded-lg bg-navy-950">
+      <label for="nav-toggle" class="cursor-pointer p-2 text-navy-800" aria-label="Close"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></label>
+    </div>
+    <div class="flex-1 overflow-y-auto p-5">
+      <ul class="flex flex-col gap-1">
+      <li><a href="/" class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold bg-navy-50 text-navy-900">Home</a></li>
+      <li><a href="courses.html" class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold text-navy-700">UGC NET Paper-I</a></li>
+      <li><a href="results.html" class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold text-navy-700">Our Results</a></li>
+      <li><span class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold text-navy-400">UG / PG (Paper-2)<span class="rounded-md bg-navy-50 px-2 py-0.5 text-[10.5px] font-extrabold uppercase tracking-wider">Coming soon</span></span></li>
+      <li><a href="tutorial.html" class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold text-navy-700">Tutorials</a></li>
+      <li><a href="notes.html" class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold text-navy-700">Notes</a></li>
+      <li><a href="blog.html" class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold text-navy-700">Blog</a></li>
+      <li><a href="about.html" class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold text-navy-700">About</a></li>
+      <li><a href="contact.html" class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold text-navy-700">Contact</a></li>
+      </ul>
+      <p class="mt-3 rounded-xl bg-gold-50 px-4 py-3 text-[12.5px] font-extrabold uppercase tracking-wider text-gold-700">AI-Powered Career Guidance — Coming soon</p>
+      <div class="mt-5 grid gap-2.5">
+        <a href="enroll.html" class="btn-primary w-full">✓ JOIN BATCH @ ₹500</a>
+        <a href="/#free-demo" class="btn-outline w-full">▶ WATCH FREE DEMO</a>
+        <a href="https://chat.whatsapp.com/KeaQUhOFz0UGAKtLmsM7oU" target="_blank" rel="noreferrer noopener" class="btn-outline w-full"><svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.2 20.8 4.6 16A8.4 8.4 0 1 1 8 19.4l-4.8 1.4Z"/><path d="M9 8.4c.3-.7.6-.7.9-.7h.6c.2 0 .5 0 .7.6l.8 1.9c.1.2.1.4 0 .6l-.5.7c-.1.2-.2.4 0 .7a7 7 0 0 0 3 2.6c.3.1.5.1.7-.1l.7-.8c.2-.2.4-.2.6-.1l1.8.9c.3.1.5.3.5.5v.6c0 .4-.2.9-.9 1.2-.6.3-1.5.4-2.5.1a10 10 0 0 1-6.5-6.2c-.3-1-.1-1.9.1-2.5Z"/></svg> WhatsApp Group</a>
+        <a href="tel:+919266511505" class="btn-dark w-full"><svg viewBox="0 0 24 24" class="h-4 w-4" fill="currentColor" stroke="none" aria-hidden="true"><path d="M5 3h3.5l1.6 4-2 1.4a12 12 0 0 0 5.5 5.5l1.4-2 4 1.6V19a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 3 5.2 2 2 0 0 1 5 3Z"/></svg> Call 9266511505</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<section class="hero">
+  <div class="container hero-inner">
+    <span class="eyebrow">★ UGC NET Paper-I · Logical Reasoning</span>
+    <h1 class="h-display">Categorical Propositions & Immediate Inferences</h1>
+    <p>Complete tutorial: Categorical Proposition, Quantity & Quality, A, E, I, O propositions, Distribution of Terms, Standardisation of propositions (Only, None but, Not all), Conversion, Obversion, Contraposition.</p>
+  </div>
+</section>
+
+<main class="container">
+  <input type="checkbox" id="sidebar-toggle">
+  <label for="sidebar-toggle" class="mobile-bar">
+    <span>📑 On this page</span>
+    <span>☰ Menu</span>
+  </label>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebarNav">
+      <p class="sidebar-title">On this page</p>
+      <nav>
+        <a href="/tutorials/logical-reasoning/categorical-propositions-immediate-inferences/categorical-proposition" class="nav-link active">
+  <span class="nav-num">1</span>Categorical Proposition
+</a>
+<a href="/tutorials/logical-reasoning/categorical-propositions-immediate-inferences/quantity-quality" class="nav-link">
+  <span class="nav-num">2</span>Quantity & Quality
+</a>
+<a href="/tutorials/logical-reasoning/categorical-propositions-immediate-inferences/aeio-propositions" class="nav-link">
+  <span class="nav-num">3</span>A, E, I, O Propositions
+</a>
+<a href="/tutorials/logical-reasoning/categorical-propositions-immediate-inferences/distribution-terms" class="nav-link">
+  <span class="nav-num">4</span>Distribution of Terms
+</a>
+<a href="/tutorials/logical-reasoning/categorical-propositions-immediate-inferences/standardisation" class="nav-link">
+  <span class="nav-num">5</span>Standardisation of Propositions
+</a>
+<a href="/tutorials/logical-reasoning/categorical-propositions-immediate-inferences/conversion" class="nav-link">
+  <span class="nav-num">6</span>Conversion
+</a>
+<a href="/tutorials/logical-reasoning/categorical-propositions-immediate-inferences/obversion" class="nav-link">
+  <span class="nav-num">7</span>Obversion
+</a>
+<a href="/tutorials/logical-reasoning/categorical-propositions-immediate-inferences/contraposition" class="nav-link">
+  <span class="nav-num">8</span>Contraposition
+</a>
+<a href="/tutorials/logical-reasoning/categorical-propositions-immediate-inferences/immediate-inference-comparison" class="nav-link">
+  <span class="nav-num">9</span>Comparison of Inferences
+</a>
+<a href="/tutorials/logical-reasoning/categorical-propositions-immediate-inferences/square-of-opposition" class="nav-link">
+  <span class="nav-num">10</span>Square of Opposition
+</a>
+<a href="/tutorials/logical-reasoning/categorical-propositions-immediate-inferences/exam-traps" class="nav-link">
+  <span class="nav-num">11</span>Common Exam Traps
+</a>
+<a href="/tutorials/logical-reasoning/categorical-propositions-immediate-inferences/practice-questions" class="nav-link">
+  <span class="nav-num">12</span>Practice Questions
+</a>
+<a href="/tutorials/logical-reasoning/categorical-propositions-immediate-inferences/one-page-revision" class="nav-link">
+  <span class="nav-num">13</span>One-Page Revision
+</a>
+      </nav>
+    </aside>
+
+    <div class="content" id="contentArea">
+      <!-- ===== CARDS ===== -->
+      <div id="categorical-proposition" class="topic-card"><div class="sec-head"><span class="sec-num">1</span><h2>Categorical Proposition — श्रेणीबद्ध प्रस्ताव</h2></div><p><strong>Categorical Proposition</strong> एक ऐसा proposition है जो <strong>two classes/categories</strong> (Subject और Predicate) के बीच <strong>relationship</strong> को बिना किसी condition के affirm या deny करता है।</p><div class="formula-box">Categorical Proposition = Subject + Copula + Predicate</div><p><strong>Structure:</strong></p><ul class="bullet-list"><li><strong>Subject (S):</strong> जिसके बारे में कुछ कहा जा रहा है</li><li><strong>Copula:</strong> Verb (is/are/am/are not) जो subject और predicate को जोड़ता है</li><li><strong>Predicate (P):</strong> जो subject के बारे में कहा जा रहा है</li></ul><p><strong>Example:</strong></p><ul class="bullet-list"><li><strong>All humans are mortal.</strong> → Subject = humans, Copula = are, Predicate = mortal</li><li><strong>No cats are dogs.</strong> → Subject = cats, Copula = are not, Predicate = dogs</li></ul></div>
+
+      <div id="quantity-quality" class="topic-card"><div class="sec-head"><span class="sec-num">2</span><h2>Quantity & Quality — परिमाण एवं गुण</h2></div><p><strong>Quantity (मात्रा/परिमाण):</strong> Proposition में subject की कितनी <strong>portion</strong> refer की जा रही है।</p><ul class="bullet-list"><li><strong>Universal — सार्वभौमिक:</strong> Whole subject class (All/No) — All humans are mortal.</li><li><strong>Particular — विशेष:</strong> Part of subject class (Some) — Some students are intelligent.</li><li><strong>Singular — एकवचन:</strong> Only one member of the class — Socrates is mortal.</li></ul><p><strong>Quality (गुण):</strong> Proposition <strong>affirmative</strong> है या <strong>negative</strong>।</p><ul class="bullet-list"><li><strong>Affirmative — सकारात्मक:</strong> Subject and predicate are connected — All S are P.</li><li><strong>Negative — नकारात्मक:</strong> Subject and predicate are separated — No S are P.</li></ul></div>
+
+      <div id="aeio-propositions" class="topic-card"><div class="sec-head"><span class="sec-num">3</span><h2>A, E, I, O Propositions — A, E, I, O प्रस्ताव</h2></div><table class="data-table"><tr><th>Type</th><th>Letter</th><th>Quantity</th><th>Quality</th><th>Form</th><th>Example</th></tr><tr><td><strong>A</strong></td><td>A (Affirmo)</td><td>Universal</td><td>Affirmative</td><td>All S are P</td><td>All men are mortal</td></tr><tr><td><strong>E</strong></td><td>E (Nego)</td><td>Universal</td><td>Negative</td><td>No S are P</td><td>No men are perfect</td></tr><tr><td><strong>I</strong></td><td>I (Affirmo)</td><td>Particular</td><td>Affirmative</td><td>Some S are P</td><td>Some students are intelligent</td></tr><tr><td><strong>O</strong></td><td>O (Nego)</td><td>Particular</td><td>Negative</td><td>Some S are not P</td><td>Some students are not intelligent</td></tr></table><p><strong>Memory Formula (Latin):</strong></p><ul class="bullet-list"><li><strong>A</strong> = Universal Affirmative (Affirmo)</li><li><strong>E</strong> = Universal Negative (Nego)</li><li><strong>I</strong> = Particular Affirmative (Affirmo)</li><li><strong>O</strong> = Particular Negative (Nego)</li></ul></div>
+
+      <div id="distribution-terms" class="topic-card"><div class="sec-head"><span class="sec-num">4</span><h2>Distribution of Terms — पदों का वितरण</h2></div><p><strong>Distribution</strong> का अर्थ है कि कोई term अपने <strong>entire class</strong> (सभी members) को refer कर रहा है या नहीं।</p><div class="formula-box">A term is Distributed if it refers to all members of its class</div><p><strong>Rules of Distribution:</strong></p><ul class="bullet-list"><li><strong>A (All S are P):</strong> S is <strong>distributed</strong>; P is <strong>undistributed</strong></li><li><strong>E (No S are P):</strong> S is <strong>distributed</strong>; P is <strong>distributed</strong></li><li><strong>I (Some S are P):</strong> S is <strong>undistributed</strong>; P is <strong>undistributed</strong></li><li><strong>O (Some S are not P):</strong> S is <strong>undistributed</strong>; P is <strong>distributed</strong></li></ul><p><strong>Quick Memory:</strong></p><ul class="bullet-list"><li><strong>A</strong> → S distributed, P undistributed</li><li><strong>E</strong> → Both distributed</li><li><strong>I</strong> → Neither distributed</li><li><strong>O</strong> → S undistributed, P distributed</li></ul></div>
+
+      <div id="standardisation" class="topic-card"><div class="sec-head"><span class="sec-num">5</span><h2>Standardisation of Propositions — प्रस्तावों का मानकीकरण</h2></div><p>Some propositions need to be <strong>translated/standardised</strong> into standard categorical form (A, E, I, O) for logical analysis.</p><p><strong>Common Standardisations:</strong></p><ul class="bullet-list"><li><strong>"Only S are P"</strong> → All P are S (A proposition with subject = P, predicate = S)</li><li><strong>"None but S are P"</strong> → All P are S (Only S can be P)</li><li><strong>"Not all S are P"</strong> → Some S are not P (O proposition)</li><li><strong>"S are P"</strong> → All S are P (if universal) or Some S are P (if particular, depends on context)</li></ul><p><strong>Examples:</strong></p><ul class="bullet-list"><li><strong>"Only students can enter."</strong> → All those who can enter are students. (All entrants are students)</li><li><strong>"None but the brave deserve the fair."</strong> → All who deserve the fair are brave.</li><li><strong>"Not all birds can fly."</strong> → Some birds are not able to fly. (Some birds cannot fly)</li></ul></div>
+
+      <div id="conversion" class="topic-card"><div class="sec-head"><span class="sec-num">6</span><h2>Conversion — विपर्यय/रूपांतरण</h2></div><p><strong>Conversion</strong> एक <strong>immediate inference</strong> है जिसमें <strong>subject और predicate को interchange</strong> कर दिया जाता है।</p><div class="formula-box">Original: Subject + Copula + Predicate → Converted: Predicate + Copula + Subject</div><p><strong>Rules:</strong></p><ul class="bullet-list"><li><strong>A (All S are P) → I (Some P are S)</strong> (Conversion by limitation) — Not all A propositions convert validly to A (unless both terms are distributed).</li><li><strong>E (No S are P) → E (No P are S)</strong> (Simple conversion) ✅ Valid</li><li><strong>I (Some S are P) → I (Some P are S)</strong> (Simple conversion) ✅ Valid</li><li><strong>O (Some S are not P) → Cannot be converted</strong> ❌ Invalid</li></ul><p><strong>Examples:</strong></p><ul class="bullet-list"><li><strong>A:</strong> All cats are animals → Some animals are cats ✅</li><li><strong>E:</strong> No cats are dogs → No dogs are cats ✅</li><li><strong>I:</strong> Some students are intelligent → Some intelligent are students ✅</li><li><strong>O:</strong> Some students are not intelligent → Cannot convert ❌</li></ul></div>
+
+      <div id="obversion" class="topic-card"><div class="sec-head"><span class="sec-num">7</span><h2>Obversion — अभिवर्तन/विरोधांतर</h2></div><p><strong>Obversion</strong> एक <strong>immediate inference</strong> है जिसमें:</p><ul class="bullet-list"><li><strong>Quality</strong> को बदला जाता है (affirmative ↔ negative)</li><li><strong>Predicate</strong> को उसके <strong>complement (contradictory)</strong> से replace किया जाता है</li></ul><div class="formula-box">Original: S + Quality + P → Obverted: S + Opposite Quality + non-P</div><p><strong>Rules:</strong></p><ul class="bullet-list"><li><strong>A (All S are P) → E (No S are non-P)</strong> ✅ Valid</li><li><strong>E (No S are P) → A (All S are non-P)</strong> ✅ Valid</li><li><strong>I (Some S are P) → O (Some S are not non-P)</strong> ✅ Valid</li><li><strong>O (Some S are not P) → I (Some S are non-P)</strong> ✅ Valid</li></ul><p><strong>Complement (non-P):</strong> वह सब कुछ जो P नहीं है।</p><p><strong>Examples:</strong></p><ul class="bullet-list"><li><strong>A:</strong> All men are mortal → No men are non-mortal ✅</li><li><strong>E:</strong> No cats are dogs → All cats are non-dogs ✅</li><li><strong>I:</strong> Some students are intelligent → Some students are not non-intelligent ✅</li><li><strong>O:</strong> Some students are not intelligent → Some students are non-intelligent ✅</li></ul></div>
+
+      <div id="contraposition" class="topic-card"><div class="sec-head"><span class="sec-num">8</span><h2>Contraposition — प्रतिधर्मीय/विपरीतकरण</h2></div><p><strong>Contraposition</strong> एक <strong>immediate inference</strong> है जिसमें:</p><ul class="bullet-list"><li><strong>Subject और Predicate</strong> को interchange किया जाता है</li><li><strong>दोनों terms</strong> को उनके <strong>complement (non-)</strong> से replace किया जाता है</li><li><strong>Quality</strong> वही रहती है</li></ul><div class="formula-box">Original: S + Quality + P → Contraposition: non-P + Quality + non-S</div><p><strong>Rules:</strong></p><ul class="bullet-list"><li><strong>A (All S are P) → A (All non-P are non-S)</strong> ✅ Valid</li><li><strong>E (No S are P) → O (Some non-P are not non-S)</strong> (By limitation, not full contraposition)</li><li><strong>I (Some S are P) → Cannot be contraposed</strong> ❌ Invalid</li><li><strong>O (Some S are not P) → O (Some non-P are not non-S)</strong> ✅ Valid</li></ul><p><strong>Examples:</strong></p><ul class="bullet-list"><li><strong>A:</strong> All humans are mortal → All non-mortals are non-humans ✅</li><li><strong>E:</strong> No cats are dogs → Some non-dogs are not non-cats (by limitation)</li><li><strong>O:</strong> Some students are not intelligent → Some non-intelligent are not non-students ✅</li></ul></div>
+
+      <div id="immediate-inference-comparison" class="topic-card"><div class="sec-head"><span class="sec-num">9</span><h2>Comparison of Inferences — तुलना</h2></div><table class="data-table"><tr><th>Type</th><th>Operation</th><th>Valid For</th><th>Example</th></tr><tr><td><strong>Conversion</strong></td><td>Swap S and P</td><td>E, I (Simple); A (by limitation)</td><td>No S are P → No P are S</td></tr><tr><td><strong>Obversion</strong></td><td>Change Quality + Complement Predicate</td><td>All (A, E, I, O)</td><td>All S are P → No S are non-P</td></tr><tr><td><strong>Contraposition</strong></td><td>Swap S & P + Both Complements</td><td>A, O (Full); E (by limitation)</td><td>All S are P → All non-P are non-S</td></tr></table></div>
+
+      <div id="square-of-opposition" class="topic-card"><div class="sec-head"><span class="sec-num">10</span><h2>Square of Opposition — विरोध का वर्ग</h2></div><p><strong>Square of Opposition</strong> A, E, I, O propositions के बीच logical relationships को दर्शाता है।</p><ul class="bullet-list"><li><strong>Contraries — विरोधी:</strong> A and E (Cannot both be true, but can both be false)</li><li><strong>Contradictories — विरुद्ध:</strong> A and O, E and I (Cannot both be true and cannot both be false)</li><li><strong>Sub-contraries — उपविरोधी:</strong> I and O (Cannot both be false, but can both be true)</li><li><strong>Sub-alternation — उपांतरण:</strong> A → I, E → O (If universal true → particular true; if particular false → universal false)</li></ul></div>
+
+      <div id="exam-traps" class="topic-card"><div class="sec-head"><span class="sec-num">11</span><h2>Common Exam Traps — सामान्य परीक्षा जाल</h2></div><ul class="bullet-list"><li><strong>Trap 1:</strong> All S are P → All P are S → ❌ A proposition का simple conversion valid नहीं है (only by limitation: Some P are S)</li><li><strong>Trap 2:</strong> Some S are not P → No S are P → ❌ O proposition का obversion valid है, लेकिन यह obversion नहीं है</li><li><strong>Trap 3:</strong> O proposition cannot be converted → ✅ True, O cannot be converted</li><li><strong>Trap 4:</strong> I proposition can be contraposed → ❌ I cannot be contraposed</li><li><strong>Trap 5:</strong> Only S are P → All S are P → ❌ Only S are P = All P are S (subject-predicate swap)</li><li><strong>Trap 6:</strong> Not all S are P → No S are P → ❌ Not all = Some S are not P (O proposition)</li><li><strong>Trap 7:</strong> Distribution: In E proposition, both terms distributed → ✅ True</li></ul></div>
+
+      <div id="practice-questions" class="topic-card"><div class="sec-head"><span class="sec-num">12</span><h2>Practice Questions — अभ्यास प्रश्न</h2></div>
+      <div class="pyq-tag">Question 1 (Type Identification)</div>
+      <p>"No men are perfect" is which type of categorical proposition?</p>
+      <ul class="bullet-list"><li>A. A</li><li>B. E</li><li>C. I</li><li>D. O</li></ul>
+      <div class="answer-box">Answer: B. E</div>
+      <p class="explain">Explanation: Universal Negative → E proposition (No S are P).</p>
+
+      <div class="pyq-tag">Question 2 (Distribution)</div>
+      <p>In the proposition "All students are intelligent", which terms are distributed?</p>
+      <ul class="bullet-list"><li>A. Only Subject</li><li>B. Only Predicate</li><li>C. Both Subject and Predicate</li><li>D. Neither</li></ul>
+      <div class="answer-box">Answer: A. Only Subject</div>
+      <p class="explain">Explanation: A proposition = Subject distributed, Predicate undistributed.</p>
+
+      <div class="pyq-tag">Question 3 (Standardisation)</div>
+      <p>"Only students can enter the library" is equivalent to:</p>
+      <ul class="bullet-list"><li>A. All students can enter</li><li>B. All who can enter are students</li><li>C. No students can enter</li><li>D. Some students can enter</li></ul>
+      <div class="answer-box">Answer: B. All who can enter are students</div>
+      <p class="explain">Explanation: "Only S are P" = All P are S (All entrants are students).</p>
+
+      <div class="pyq-tag">Question 4 (Conversion)</div>
+      <p>What is the valid conversion of "No cats are dogs"?</p>
+      <ul class="bullet-list"><li>A. Some cats are dogs</li><li>B. All dogs are cats</li><li>C. No dogs are cats</li><li>D. Some dogs are cats</li></ul>
+      <div class="answer-box">Answer: C. No dogs are cats</div>
+      <p class="explain">Explanation: E proposition converts simply → No dogs are cats.</p>
+
+      <div class="pyq-tag">Question 5 (Obversion)</div>
+      <p>What is the obversion of "All humans are mortal"?</p>
+      <ul class="bullet-list"><li>A. No humans are mortal</li><li>B. No humans are non-mortal</li><li>C. All non-humans are mortal</li><li>D. Some humans are mortal</li></ul>
+      <div class="answer-box">Answer: B. No humans are non-mortal</div>
+      <p class="explain">Explanation: A → E with complement predicate: No S are non-P.</p>
+
+      <div class="pyq-tag">Question 6 (Contraposition)</div>
+      <p>What is the contraposition of "All teachers are educated"?</p>
+      <ul class="bullet-list"><li>A. All non-teachers are non-educated</li><li>B. All non-educated are non-teachers</li><li>C. Some non-educated are non-teachers</li><li>D. No non-teachers are educated</li></ul>
+      <div class="answer-box">Answer: B. All non-educated are non-teachers</div>
+      <p class="explain">Explanation: A → A with both complements: All non-P are non-S.</p>
+
+      <div class="pyq-tag">Question 7 (Standardisation)</div>
+      <p>"Not all birds can fly" is equivalent to:</p>
+      <ul class="bullet-list"><li>A. All birds can fly</li><li>B. No birds can fly</li><li>C. Some birds cannot fly</li><li>D. Some birds can fly</li></ul>
+      <div class="answer-box">Answer: C. Some birds cannot fly</div>
+      <p class="explain">Explanation: "Not all" = Some are not (O proposition).</p></div>
+
+      <div id="one-page-revision" class="topic-card"><div class="sec-head"><span class="sec-num">13</span><h2>One-Page Revision — एक पेज में पुनरावृत्ति</h2></div>
+      <div class="formula-box">Categorical Proposition = S + Copula + P</div>
+
+      <p><strong>A, E, I, O:</strong></p>
+      <ul class="bullet-list"><li>A = Universal Affirmative (All S are P) → S-Distributed, P-Undistributed</li><li>E = Universal Negative (No S are P) → Both Distributed</li><li>I = Particular Affirmative (Some S are P) → Neither Distributed</li><li>O = Particular Negative (Some S are not P) → S-Undistributed, P-Distributed</li></ul>
+
+      <p><strong>Standardisation:</strong></p>
+      <ul class="bullet-list"><li>Only S are P = All P are S</li><li>None but S are P = All P are S</li><li>Not all S are P = Some S are not P</li></ul>
+
+      <p><strong>Immediate Inferences:</strong></p>
+      <ul class="bullet-list"><li><strong>Conversion:</strong> Swap S & P → Valid: E, I; A→I (limitation); O: Invalid</li>
+      <li><strong>Obversion:</strong> Change Quality + Complement P → Valid: All</li>
+      <li><strong>Contraposition:</strong> Swap S & P + Both Complements → Valid: A, O; E→O (limitation); I: Invalid</li></ul>
+
+      <p><strong>Exam Formula:</strong></p>
+      <div class="formula-box">Conversion = Swap | Obversion = Change Quality + Complement | Contraposition = Swap + Both Complements</div>
+      <p><em>UGC NET में Categorical Propositions & Immediate Inferences के questions type identification, distribution, और conversion/obversion/contraposition पर based होते हैं।</em></p></div>
+
+      <div class="enroll-cta"><div><h3 class="h-display">Join the Paper-1 Batch</h3><p>Course fee FREE — ₹500 registration & academic/logistics contribution. Classes daily at 6:30 PM.</p></div><a href="/enroll.html" class="btn-gold">✓ JOIN BATCH @ ₹500</a></div>
+    </div>
+  </div>
+</main>
+
+<footer class="relative overflow-hidden bg-navy-950 text-white">
+  <div class="grid-paper absolute inset-0 opacity-50" aria-hidden="true"></div>
+  <div class="container-x relative py-12 lg:py-14">
+    <div class="grid grid-cols-2 gap-10 lg:grid-cols-4">
+
+      <div>
+        <div class="flex items-center gap-3">
+          <img src="/assets/images/logo.png" alt="GS Net Academy" class="h-11 w-auto rounded-lg bg-white p-1" width="120" height="44">
+          <img src="/assets/images/tagline.png" alt="" class="h-11 w-auto brightness-0 invert" aria-hidden="true">
+        </div>
+        <p class="mt-5 text-[14px] leading-relaxed text-navy-100/75">UGC NET Paper-I | JRF Preparation | Mentorship</p>
+        <span class="eyebrow mt-5"><svg viewBox="0 0 24 24" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1"/></svg> JRF @ ₹500 Mission 2026</span>
+
+        <p class="mt-6 text-[11px] font-extrabold uppercase tracking-[0.18em] text-gold-400">Follow Us</p>
+        <ul class="mt-3 flex flex-wrap gap-2">
+          <li><a href="https://www.youtube.com/@gsnetacademy" target="_blank" rel="noreferrer noopener" aria-label="YouTube" title="YouTube" class="grid h-10 w-10 place-items-center rounded-xl border border-white/12 bg-white/[0.06] text-navy-100/80 transition hover:border-gold-400/50 hover:bg-white/[0.12] hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor" aria-hidden="true"><path d="M21.6 7.2a2.5 2.5 0 0 0-1.8-1.8C18.2 5 12 5 12 5s-6.2 0-7.8.4A2.5 2.5 0 0 0 2.4 7.2 26 26 0 0 0 2 12a26 26 0 0 0 .4 4.8 2.5 2.5 0 0 0 1.8 1.8C5.8 19 12 19 12 19s6.2 0 7.8-.4a2.5 2.5 0 0 0 1.8-1.8A26 26 0 0 0 22 12a26 26 0 0 0-.4-4.8ZM10 15V9l5.2 3L10 15Z"/></svg></a></li>
+          <li><a href="https://www.instagram.com/gsnetacademy" target="_blank" rel="noreferrer noopener" aria-label="Instagram" title="Instagram" class="grid h-10 w-10 place-items-center rounded-xl border border-white/12 bg-white/[0.06] text-navy-100/80 transition hover:border-gold-400/50 hover:bg-white/[0.12] hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg></a></li>
+          <li><a href="https://www.facebook.com/gsnetacademy" target="_blank" rel="noreferrer noopener" aria-label="Facebook" title="Facebook" class="grid h-10 w-10 place-items-center rounded-xl border border-white/12 bg-white/[0.06] text-navy-100/80 transition hover:border-gold-400/50 hover:bg-white/[0.12] hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.25-1.5 1.55-1.5H16.7V3.6c-.3 0-1.3-.13-2.47-.13-2.44 0-4.11 1.49-4.11 4.23V9.9H7.4V13h2.72v8h3.38Z"/></svg></a></li>
+          <li><a href="https://t.me/gsnetacademy" target="_blank" rel="noreferrer noopener" aria-label="Telegram" title="Telegram" class="grid h-10 w-10 place-items-center rounded-xl border border-white/12 bg-white/[0.06] text-navy-100/80 transition hover:border-gold-400/50 hover:bg-white/[0.12] hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor" aria-hidden="true"><path d="M21.3 4.3 2.9 11.4c-.9.35-.9 1.62.02 1.93l4.6 1.53 1.75 5.3c.25.75 1.2.95 1.73.37l2.5-2.72 4.6 3.38c.63.46 1.53.12 1.7-.65l3.1-14.9c.2-.9-.7-1.65-1.6-1.31ZM9.6 14.1l8.5-5.6-6.9 6.5-.3 3.3-1.3-4.2Z"/></svg></a></li>
+          <li><a href="https://chat.whatsapp.com/KeaQUhOFz0UGAKtLmsM7oU" target="_blank" rel="noreferrer noopener" aria-label="WhatsApp Group" title="WhatsApp Group" class="grid h-10 w-10 place-items-center rounded-xl border border-white/12 bg-white/[0.06] text-navy-100/80 transition hover:border-emerald-400/50 hover:bg-emerald-500/15 hover:text-emerald-300"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.2 20.8 4.6 16A8.4 8.4 0 1 1 8 19.4l-4.8 1.4Z"/><path d="M9 8.4c.3-.7.6-.7.9-.7h.6c.2 0 .5 0 .7.6l.8 1.9c.1.2.1.4 0 .6l-.5.7c-.1.2-.2.4 0 .7a7 7 0 0 0 3 2.6c.3.1.5.1.7-.1l.7-.8c.2-.2.4-.2.6-.1l1.8.9c.3.1.5.3.5.5v.6c0 .4-.2.9-.9 1.2-.6.3-1.5.4-2.5.1a10 10 0 0 1-6.5-6.2c-.3-1-.1-1.9.1-2.5Z"/></svg></a></li>
+          <li><a href="https://x.com/gsnetacademy" target="_blank" rel="noreferrer noopener" aria-label="X (Twitter)" title="X (Twitter)" class="grid h-10 w-10 place-items-center rounded-xl border border-white/12 bg-white/[0.06] text-navy-100/80 transition hover:border-gold-400/50 hover:bg-white/[0.12] hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-4.5 w-4.5" fill="currentColor" aria-hidden="true"><path d="M17.5 3h3.1l-6.8 7.8L21.8 21h-6.2l-4.9-6.4L5.1 21H2l7.3-8.3L2.5 3h6.4l4.4 5.8L17.5 3Zm-1.1 16.2h1.7L7.7 4.7H5.9l10.5 14.5Z"/></svg></a></li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="text-[11px] font-extrabold uppercase tracking-[0.18em] text-gold-400">Quick Links</p>
+        <ul class="mt-4 grid gap-2.5">
+          <li><a href="/index.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Home</a></li>
+          <li><a href="/courses.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">UGC NET Paper-I</a></li>
+          <li><a href="/results.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Our Results</a></li>
+          <li><a href="/tutorials.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Tutorials</a></li>
+          <li><a href="/blog.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Blog</a></li>
+          <li><a href="/about.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">About</a></li>
+          <li><a href="/contact.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="text-[11px] font-extrabold uppercase tracking-[0.18em] text-gold-400">Resources</p>
+        <ul class="mt-4 grid gap-2.5">
+          <li><a href="/notes.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Notes</a></li>
+          <li><a href="/enroll.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Register for ₹500</a></li>
+          <li><a href="/index.html#free-demo" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Free Demo Classes</a></li>
+          <li><a href="https://chat.whatsapp.com/KeaQUhOFz0UGAKtLmsM7oU" target="_blank" rel="noreferrer noopener" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Student Community</a></li>
+        </ul>
+        <p class="mt-6 text-[11px] font-extrabold uppercase tracking-[0.18em] text-gold-400">Legal</p>
+        <ul class="mt-4 grid gap-2.5">
+          <li><a href="/privacy-policy.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Privacy Policy</a></li>
+          <li><a href="/refund-policy.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Refund &amp; Cancellation</a></li>
+          <li><a href="/terms-of-enrollment.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Terms of Enrollment</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="text-[11px] font-extrabold uppercase tracking-[0.18em] text-gold-400">Contact</p>
+        <ul class="mt-4 grid gap-2.5 text-[14px] text-navy-100/75">
+          <li><a href="tel:+919266511505" class="flex items-center gap-2 hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-4 w-4 icon-gold" fill="currentColor" aria-hidden="true"><path d="M5 3h3.5l1.6 4-2 1.4a12 12 0 0 0 5.5 5.5l1.4-2 4 1.6V19a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 3 5.2 2 2 0 0 1 5 3Z"/></svg> +91 9266511505</a></li>
+          <li><a href="tel:+919810845327" class="flex items-center gap-2 hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-4 w-4 icon-gold" fill="currentColor" aria-hidden="true"><path d="M5 3h3.5l1.6 4-2 1.4a12 12 0 0 0 5.5 5.5l1.4-2 4 1.6V19a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 3 5.2 2 2 0 0 1 5 3Z"/></svg> +91 9810845327</a></li>
+          <li><a href="mailto:gsnetacademy@gmail.com" class="flex items-center gap-2 break-all hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-4 w-4 icon-gold" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="m3.5 6.5 8.5 6 8.5-6"/></svg> gsnetacademy@gmail.com</a></li>
+          <li><a href="https://chat.whatsapp.com/KeaQUhOFz0UGAKtLmsM7oU" target="_blank" rel="noreferrer noopener" class="flex items-center gap-2 hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-4 w-4 icon-gold" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.2 20.8 4.6 16A8.4 8.4 0 1 1 8 19.4l-4.8 1.4Z"/><path d="M9 8.4c.3-.7.6-.7.9-.7h.6c.2 0 .5 0 .7.6l.8 1.9c.1.2.1.4 0 .6l-.5.7c-.1.2-.2.4 0 .7a7 7 0 0 0 3 2.6c.3.1.5.1.7-.1l.7-.8c.2-.2.4-.2.6-.1l1.8.9c.3.1.5.3.5.5v.6c0 .4-.2.9-.9 1.2-.6.3-1.5.4-2.5.1a10 10 0 0 1-6.5-6.2c-.3-1-.1-1.9.1-2.5Z"/></svg> WhatsApp Group</a></li>
+        </ul>
+        <a href="/enroll.html" class="btn-primary mt-6 w-full">Join for ₹500</a>
+        <p class="text-[14px] mt-3 text-navy-100/75 transition hover:text-gold-300">Address: B 14-15, Udhyog Marg, Block B, Sector 1, Noida, Uttar Pradesh 201301</p>
+      </div>
+    </div>
+
+    <div class="mt-10 border-t border-white/10 pt-6">
+      <ul class="flex flex-wrap items-center gap-x-5 gap-y-2 text-[13px]">
+        <li><a href="/privacy-policy.html" class="text-navy-100/70 transition hover:text-gold-300">Privacy Policy</a></li>
+        <li aria-hidden="true" class="text-navy-100/25">|</li>
+        <li><a href="/refund-policy.html" class="text-navy-100/70 transition hover:text-gold-300">Refund &amp; Cancellation</a></li>
+        <li aria-hidden="true" class="text-navy-100/25">|</li>
+        <li><a href="/terms-of-enrollment.html" class="text-navy-100/70 transition hover:text-gold-300">Terms of Enrollment</a></li>
+      </ul>
+      <div class="mt-4 flex flex-col gap-2 text-[13px] text-navy-100/60 sm:flex-row sm:items-center sm:justify-between">
+        <p>© 2026 GS Net Academy. All Rights Reserved.</p>
+        <p>A Premier institute for UGC NET Paper-1</p>
+      </div>
+      <p class="mt-4 text-[12px] leading-relaxed text-navy-100/45">Disclaimer: GS Net Academy किसी भी exam में selection, rank या score की guarantee नहीं देता। हम quality teaching, study material, practice और academic mentorship प्रदान करते हैं। UGC, NTA या किसी अन्य government body से हमारा कोई affiliation नहीं है।</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  (function() {
+
+    const BASE_PATH =
+      "/tutorials/logical-reasoning/categorical-propositions-immediate-inferences";
+
+    const links = document.querySelectorAll(".nav-link");
+    const cards = document.querySelectorAll(".topic-card");
+    const content = document.getElementById("contentArea");
+    const sidebarToggle = document.getElementById("sidebar-toggle");
+
+
+    // Get topic slug from current URL
+    function getSlugFromPath() {
+
+      const path = window.location.pathname
+        .replace(/\/+$/, "");
+
+      if (path.startsWith(BASE_PATH + "/")) {
+
+        return path
+          .substring((BASE_PATH + "/").length)
+          .split("/")[0];
+
+      }
+
+      return null;
+    }
+
+
+    // Update browser URL
+    function updateUrl(slug, replace = false) {
+
+      const newPath =
+        BASE_PATH + "/" + slug;
+
+      if (window.location.pathname !== newPath) {
+
+        if (replace) {
+
+          history.replaceState(
+            null,
+            "",
+            newPath
+          );
+
+        } else {
+
+          history.pushState(
+            null,
+            "",
+            newPath
+          );
+
+        }
+
+      }
+    }
+
+
+    // Update active sidebar link
+    function updateActiveLink(slug) {
+
+      links.forEach(function(link) {
+
+        const href =
+          link.getAttribute("href");
+
+        if (!href) return;
+
+        const linkSlug =
+          href
+            .split("/")
+            .filter(Boolean)
+            .pop();
+
+        link.classList.toggle(
+          "active",
+          linkSlug === slug
+        );
+
+      });
+
+    }
+
+
+    // Show selected topic card
+    function showCard(
+      slug,
+      updateHistory = true
+    ) {
+
+      cards.forEach(function(card) {
+
+        card.classList.add("hidden");
+
+      });
+
+
+      const target =
+        document.getElementById(slug);
+
+
+      if (!target) {
+
+        const first = cards[0];
+
+        if (first) {
+
+          first.classList.remove("hidden");
+
+          const firstSlug =
+            first.id;
+
+          updateActiveLink(firstSlug);
+
+          updateUrl(firstSlug, true);
+
+        }
+
+        return;
+      }
+
+
+      target.classList.remove("hidden");
+
+      updateActiveLink(slug);
+
+
+      if (updateHistory) {
+
+        updateUrl(slug);
+
+      }
+
+
+      if (sidebarToggle) {
+
+        sidebarToggle.checked = false;
+
+      }
+
+
+      if (content) {
+
+        const top =
+          content.getBoundingClientRect().top +
+          window.pageYOffset -
+          10;
+
+        window.scrollTo({
+
+          top: top,
+
+          behavior: "smooth"
+
+        });
+
+      }
+
+    }
+
+
+    // Sidebar link click
+    links.forEach(function(link) {
+
+      link.addEventListener(
+        "click",
+        function(e) {
+
+          e.preventDefault();
+
+
+          const href =
+            this.getAttribute("href");
+
+          if (!href) return;
+
+
+          const slug =
+            href
+              .split("/")
+              .filter(Boolean)
+              .pop();
+
+
+          if (!slug) return;
+
+
+          console.log(
+            "Clicked topic:",
+            slug
+          );
+
+
+          showCard(
+            slug,
+            true
+          );
+
+        }
+      );
+
+    });
+
+
+    // Initial page load
+    function initFromPath() {
+
+      let slug =
+        getSlugFromPath();
+
+
+      if (
+        !slug ||
+        !document.getElementById(slug)
+      ) {
+
+        slug =
+          cards[0]?.id ||
+          "categorical-proposition";
+
+      }
+
+
+      showCard(
+        slug,
+        false
+      );
+
+
+      updateUrl(
+        slug,
+        true
+      );
+
+    }
+
+
+    initFromPath();
+
+
+    // Browser Back / Forward
+    window.addEventListener(
+      "popstate",
+      function() {
+
+        const slug =
+          getSlugFromPath();
+
+
+        if (
+          slug &&
+          document.getElementById(slug)
+        ) {
+
+          showCard(
+            slug,
+            false
+          );
+
+        } else {
+
+          const firstSlug =
+            cards[0]?.id ||
+            "categorical-proposition";
+
+          showCard(
+            firstSlug,
+            false
+          );
+
+        }
+
+      }
+    );
+
+
+  })();
+</script>
+</body>
+</html>

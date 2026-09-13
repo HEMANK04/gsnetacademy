@@ -24,7 +24,7 @@
   };
   /* ---------------------------------------- */
 
-  if (window.__gsTopperPopup) return;
+  if (window.__gsTopperPopup) return; 
   window.__gsTopperPopup = true;
 
   var CSS = ''

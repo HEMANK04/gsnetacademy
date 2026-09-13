@@ -1,0 +1,687 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Module 6: Evaluation System — Unit 1 | GS Net Academy</title>
+<meta name="description" content="Evaluation System — UGC NET Paper-I, Unit 1: Teaching Aptitude, Module 6.">
+<link rel="icon" href="../assets/images/logo.png">
+<link rel="stylesheet" href="../css/tailwind.css">
+<link rel="stylesheet" href="../css/style.css">
+<style>
+  .mod-h2{margin:34px 0 14px;font-size:22px;font-weight:800;color:#0B1B34;padding-top:6px;border-top:1px solid rgba(11,27,52,.08)}
+  .mod-h2:first-child{border-top:0;padding-top:0;margin-top:0}
+  .mod-h3{margin:22px 0 10px;font-size:17px;font-weight:800;color:#0B1B34}
+  .mod-strong{margin:12px 0;font-size:15px;font-weight:700;color:#0B1B34;line-height:1.7}
+  .mod-tag{display:inline-block;margin:14px 0 8px;font-size:11.5px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#B8860B;background:#FFF8E1;border-radius:6px;padding:4px 10px}
+  .prose p{margin:10px 0;font-size:15px;line-height:1.85;color:#334155}
+  .prose-list{margin:10px 0 16px;padding-left:22px;list-style:disc}
+  .prose-list li{margin:6px 0;font-size:15px;line-height:1.75;color:#334155}
+  .table-wrap{overflow-x:auto;margin:16px 0}
+  .mod-table{width:100%;border-collapse:collapse;font-size:13.5px;min-width:480px}
+  .mod-table th,.mod-table td{border:1px solid rgba(11,27,52,.12);padding:9px 12px;text-align:left;vertical-align:top}
+  .mod-table th{background:#0B1B34;color:#fff;font-weight:700}
+  .mod-table tr:nth-child(even) td{background:#F8F5EE}
+</style>
+</head>
+<body>
+
+<input type="checkbox" id="nav-toggle" class="nav-toggle">
+<div class="hidden bg-navy-950 text-white lg:block">
+  <div class="container-wide flex h-9 items-center justify-between text-[12px]">
+    <p class="flex min-w-0 items-center gap-2 truncate font-semibold text-navy-100/80"><svg viewBox="0 0 24 24" class="h-3.5 w-3.5 shrink-0 icon-gold" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1"/></svg><span class="truncate">Target December 2026 Exam — Paper-I Batch Started 16 August 2026</span></p>
+    <div class="flex shrink-0 items-center gap-5 font-semibold">
+      <a href="tel:+919266511505" class="flex items-center gap-1.5 hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-3.5 w-3.5" fill="currentColor" stroke="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3h3.5l1.6 4-2 1.4a12 12 0 0 0 5.5 5.5l1.4-2 4 1.6V19a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 3 5.2 2 2 0 0 1 5 3Z"/></svg> +91 9266511505</a>
+      <a href="tel:+919810845327" class="flex items-center gap-1.5 hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-3.5 w-3.5" fill="currentColor" stroke="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3h3.5l1.6 4-2 1.4a12 12 0 0 0 5.5 5.5l1.4-2 4 1.6V19a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 3 5.2 2 2 0 0 1 5 3Z"/></svg> +91 9810845327</a>
+      <a href="mailto:gsnetacademy@gmail.com" class="flex items-center gap-1.5 hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="m3.5 6.5 8.5 6 8.5-6"/></svg> gsnetacademy@gmail.com</a>
+      <a href="https://api.whatsapp.com/send/?phone=919810845327&text=Hello%2C+can+I+get+more+info+about+joining+the+mentorship+batch+and+classes+for+UGC+NET+JRF+Paper+1%3F&type=phone_number&app_absent=0" target="_blank" rel="noreferrer noopener" class="flex items-center gap-1.5 rounded-md bg-white/10 px-2.5 py-1 transition hover:bg-emerald-500/25 hover:text-white"><svg viewBox="0 0 24 24" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.2 20.8 4.6 16A8.4 8.4 0 1 1 8 19.4l-4.8 1.4Z"/><path d="M9 8.4c.3-.7.6-.7.9-.7h.6c.2 0 .5 0 .7.6l.8 1.9c.1.2.1.4 0 .6l-.5.7c-.1.2-.2.4 0 .7a7 7 0 0 0 3 2.6c.3.1.5.1.7-.1l.7-.8c.2-.2.4-.2.6-.1l1.8.9c.3.1.5.3.5.5v.6c0 .4-.2.9-.9 1.2-.6.3-1.5.4-2.5.1a10 10 0 0 1-6.5-6.2c-.3-1-.1-1.9.1-2.5Z"/></svg> chat us</a>
+    </div>
+  </div>
+</div>
+<header class="sticky top-0 z-50 border-b border-navy-900/8 bg-white/95 backdrop-blur-md">
+  <nav class="container-wide flex h-[76px] items-center gap-4" aria-label="Main">
+    <a href="../index.html" class="flex shrink-0 items-center gap-3" aria-label="Home">
+      <span class="inline-flex shrink-0 items-center justify-center overflow-hidden rounded-lg bg-navy-950 ring-1 ring-navy-900/10">
+        <img src="../assets/images/logo.png" alt="GS Net Academy" class="h-11 w-auto" width="120" height="44">
+      </span>
+      <img src="../assets/images/tagline.png" alt="#1 A Premier institute for UGC NET Paper-1" class=" h-11 hidden w-auto lg:block">
+    </a>
+    <ul class="mx-auto hidden items-center gap-5 xl:flex">
+      <li><a href="../courses.html" class="relative block whitespace-nowrap rounded-lg px-3 py-2 text-[13.5px] font-bold transition-colors text-navy-700/75 hover:text-navy-900">UGC NET Paper-I</a></li>
+      <li><a href="../tutorials.html" class="relative block whitespace-nowrap rounded-lg px-3 py-2 text-[13.5px] font-bold transition-colors text-navy-900">Tutorials</a></li>
+      <li><a href="../notes.html" class="relative block whitespace-nowrap rounded-lg px-3 py-2 text-[13.5px] font-bold transition-colors text-navy-700/75 hover:text-navy-900">Notes</a></li>
+      <li><a href="../blog.html" class="relative block whitespace-nowrap rounded-lg px-3 py-2 text-[13.5px] font-bold transition-colors text-navy-700/75 hover:text-navy-900">Blog</a></li>
+      <li><a href="../about.html" class="relative block whitespace-nowrap rounded-lg px-3 py-2 text-[13.5px] font-bold transition-colors text-navy-700/75 hover:text-navy-900">About</a></li>
+      <li><a href="../contact.html" class="relative block whitespace-nowrap rounded-lg px-3 py-2 text-[13.5px] font-bold transition-colors text-navy-700/75 hover:text-navy-900">Contact</a></li>
+    </ul>
+    <div class="ml-auto flex items-center gap-2 xl:ml-0">
+      <a href="../index.html#free-demo" class="btn-outline btn-sm hidden 2xl:inline-flex">Demo</a>
+      <a href="../enroll.html" class="btn-primary btn-sm hidden sm:inline-flex">Join Now</a>
+      <label for="nav-toggle" class="cursor-pointer rounded-lg border border-navy-900/12 p-2 text-navy-800 xl:hidden" aria-label="Menu"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></label>
+    </div>
+  </nav>
+</header>
+<div class="drawer xl:hidden">
+  <label for="nav-toggle" class="drawer-scrim" aria-hidden="true"></label>
+  <div class="drawer-panel">
+    <div class="flex h-[72px] shrink-0 items-center justify-between border-b border-navy-900/10 px-5">
+      <img src="../assets/images/logo.png" alt="GS Net Academy" class="h-9 w-auto rounded-lg bg-navy-950">
+      <label for="nav-toggle" class="cursor-pointer p-2 text-navy-800" aria-label="Close"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></label>
+    </div>
+    <div class="flex-1 overflow-y-auto p-5">
+      <ul class="flex flex-col gap-1">
+      <li><a href="../index.html" class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold text-navy-700">Home</a></li>
+      <li><a href="../courses.html" class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold text-navy-700">UGC NET Paper-I</a></li>
+      <li><a href="../tutorials.html" class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold bg-navy-50 text-navy-900">Tutorials</a></li>
+      <li><a href="../notes.html" class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold text-navy-700">Notes</a></li>
+      </ul>
+      <div class="mt-5 grid gap-2.5">
+        <a href="../enroll.html" class="btn-primary w-full">✓ JOIN BATCH @ ₹500</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<main id="main">
+<section class="bg-navy-950 text-white">
+  <div class="grid-paper absolute inset-0 opacity-50" aria-hidden="true"></div>
+  <div class="container-x relative py-8 lg:py-10">
+    <nav aria-label="Breadcrumb" class="mb-4">
+      <ol class="flex flex-wrap items-center gap-1.5 text-[12px] font-semibold text-navy-100/70">
+        <li><a href="../index.html" class="hover:text-gold-300">Home</a></li>
+        <li aria-hidden="true">/</li>
+        <li><a href="../tutorials.html" class="hover:text-gold-300">Tutorials</a></li>
+        <li aria-hidden="true">/</li>
+        <li><a href="unit-1.html" class="hover:text-gold-300">Unit 1 · Teaching Aptitude</a></li>
+        <li aria-hidden="true">/</li>
+        <li class="text-gold-300" aria-current="page">Module 6</li>
+      </ol>
+    </nav>
+    <span class="eyebrow"><svg viewBox="0 0 24 24" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5 13.8 9l5.5 1.8-5.5 1.8L12 18.1l-1.8-5.5L4.7 10.8 10.2 9 12 3.5Z"/></svg> Unit 1 · Module 6 of 8</span>
+    <h1 class="h-display mt-4 text-[28px] sm:text-[38px] lg:text-[44px] max-w-3xl">Evaluation System</h1>
+    <p class="mt-2 text-[15px] text-navy-100/75">मूल्यांकन प्रणाली</p>
+  </div>
+</section>
+
+<section class="bg-cream py-10 lg:py-12"><div class="container-x">
+  <div class="grid gap-8 lg:grid-cols-[1fr_270px]">
+    <article class="card prose p-6 sm:p-8">
+<h2 class="mod-h2">Evaluation Systems</h2>
+<h3 class="mod-h3">मूल्यांकन प्रणालियाँ</h3>
+<p class="mod-strong">UGC NET/JRF &amp; Assistant Professor Paper-1 — December 2026</p>
+<p>यह Teaching Aptitude का अत्यंत महत्वपूर्ण topic है। इससे direct MCQ, Match the Following, Assertion–Reason, statement-based तथा numerical questions पूछे जाते हैं।</p>
+<h3 class="mod-h3">Syllabus Coverage</h3>
+<ul class="prose-list"><li>Elements and Types of Evaluation</li><li>CBCS में Evaluation</li><li>Computer-Based Testing</li><li>Innovations in Evaluation Systems</li></ul>
+<h2 class="mod-h2">1. Evaluation का अर्थ</h2>
+<h3 class="mod-h3">Meaning of Evaluation</h3>
+<p>Evaluation एक systematic process है जिसमें learner के learning outcomes से संबंधित evidence collect किया जाता है, उसकी interpretation की जाती है और निर्धारित objectives या standards के आधार पर value judgement तथा decision लिया जाता है।</p>
+<p class="mod-strong">Evaluation = Evidence Collection + Interpretation + Value Judgement + Decision</p>
+<p class="mod-tag">उदाहरण</p>
+<p>किसी student को Research Aptitude test में 50 में से 32 marks मिले।</p>
+<ul class="prose-list"><li>32/50 बताना = Measurement</li><li>Strengths और weaknesses पहचानना = Assessment</li><li>Performance satisfactory है या remediation चाहिए—यह निर्णय लेना = Evaluation</li></ul>
+<h2 class="mod-h2">2. Measurement, Assessment और Evaluation</h2>
+<h3 class="mod-h3">Exam Formula</h3>
+<p class="mod-strong">Measurement asks: How much?
+Assessment asks: What and how has the learner learned?
+Evaluation asks: How good is the performance and what decision follows?</p>
+<h3 class="mod-h3">Exam Trap</h3>
+<p>Evaluation केवल marks देना नहीं है। Marks measurement का परिणाम हैं; evaluation में judgement और decision भी शामिल होते हैं।</p>
+<h2 class="mod-h2">3. Elements of Evaluation</h2>
+<h3 class="mod-h3">मूल्यांकन के प्रमुख तत्त्व</h3>
+<h3 class="mod-h3">3.1 Learning Objectives</h3>
+<p>सबसे पहले यह निर्धारित किया जाता है कि learner से क्या अपेक्षित है।</p>
+<p>उदाहरण:</p>
+<ul class="prose-list"><li>Define formative evaluation</li><li>Differentiate NRT and CRT</li><li>Calculate SGPA</li><li>Apply evaluation principles</li></ul>
+<h3 class="mod-h3">3.2 Learning Experiences</h3>
+<p>ऐसी teaching-learning activities जिनसे objectives प्राप्त किए जा सकें।</p>
+<p>उदाहरण:</p>
+<ul class="prose-list"><li>Lecture</li><li>Discussion</li><li>Project</li><li>Case study</li><li>Practical work</li><li>Online activity</li></ul>
+<h3 class="mod-h3">3.3 Tools and Techniques</h3>
+<p>Evidence collect करने के माध्यम:</p>
+<ul class="prose-list"><li>Written test</li><li>Oral examination</li><li>Observation</li><li>Interview</li><li>Questionnaire</li><li>Checklist</li><li>Rating scale</li><li>Rubric</li><li>Portfolio</li><li>Project</li><li>Assignment</li></ul>
+<h3 class="mod-h3">3.4 Criteria and Standards</h3>
+<p>Learner performance को किस standard के आधार पर judge किया जाएगा।</p>
+<p>उदाहरण:</p>
+<p>निर्धारित दस competencies में कम-से-कम आठ demonstrate करना।</p>
+<h3 class="mod-h3">3.5 Evidence Collection</h3>
+<p>Learning से संबंधित sufficient, relevant और reliable data collect करना।</p>
+<h3 class="mod-h3">3.6 Interpretation</h3>
+<p>Score का meaning समझना।</p>
+<p>उदाहरण:</p>
+<ul class="prose-list"><li>Group के comparison में performance</li><li>Fixed mastery standard के comparison में performance</li></ul>
+<h3 class="mod-h3">3.7 Value Judgement</h3>
+<p>यह निर्धारित करना कि performance:</p>
+<ul class="prose-list"><li>Excellent</li><li>Satisfactory</li><li>Unsatisfactory</li><li>Proficient</li><li>Needs improvement</li></ul>
+<p>है।</p>
+<h3 class="mod-h3">3.8 Feedback and Decision</h3>
+<p>Evaluation के आधार पर:</p>
+<ul class="prose-list"><li>Remedial teaching</li><li>Promotion</li><li>Selection</li><li>Certification</li><li>Course modification</li><li>Teaching-method improvement</li></ul>
+<p>का निर्णय लिया जाता है।</p>
+<h2 class="mod-h2">4. Principles of Good Evaluation</h2>
+<h3 class="mod-h3">अच्छे मूल्यांकन के सिद्धान्त</h3>
+<h3 class="mod-h3">4.1 Validity—वैधता</h3>
+<p>Tool वही measure करे जिसे measure करने के लिए बनाया गया है।</p>
+<p class="mod-tag">Example</p>
+<p>यदि objective speaking skill measure करना है और केवल written grammar test लिया गया, तो test पूर्णतः valid नहीं होगा।</p>
+<p class="mod-tag">Validity = Accuracy and Appropriateness</p>
+<h3 class="mod-h3">4.2 Reliability—विश्वसनीयता</h3>
+<p>Repeated या equivalent measurement में results की consistency।</p>
+<p class="mod-tag">Reliability = Consistency</p>
+<p class="mod-tag">Exam Trap</p>
+<p>एक test reliable होकर भी invalid हो सकता है।</p>
+<p>उदाहरण: खराब calibrated weighing machine हर बार दो किलो अधिक बताती है। परिणाम consistent है, लेकिन accurate नहीं।</p>
+<p class="mod-strong">Reliability is necessary but not sufficient for validity.</p>
+<h3 class="mod-h3">4.3 Objectivity—वस्तुनिष्ठता</h3>
+<p>Score examiner की personal bias या judgement से कम-से-कम प्रभावित हो।</p>
+<p>Objective questions generally अधिक objective होते हैं, लेकिन essay scoring को rubric द्वारा अधिक objective बनाया जा सकता है।</p>
+<h3 class="mod-h3">4.4 Practicability/Usability—व्यावहारिकता</h3>
+<p>Evaluation होना चाहिए:</p>
+<ul class="prose-list"><li>Economical</li><li>Easy to administer</li><li>Time-efficient</li><li>Easy to score</li><li>Suitable for available resources</li></ul>
+<h3 class="mod-h3">4.5 Comprehensiveness—व्यापकता</h3>
+<p>Evaluation केवल recall नहीं, बल्कि relevant learning outcomes को cover करे:</p>
+<ul class="prose-list"><li>Cognitive</li><li>Affective</li><li>Psychomotor</li></ul>
+<h3 class="mod-h3">4.6 Continuity—निरन्तरता</h3>
+<p>Evidence केवल final examination में नहीं, learning process के विभिन्न stages पर collect किया जाए।</p>
+<h3 class="mod-h3">Exam Trap</h3>
+<p>Continuous evaluation का अर्थ हर दिन examination लेना नहीं है।</p>
+<h3 class="mod-h3">4.7 Fairness—निष्पक्षता</h3>
+<p>Evaluation में:</p>
+<ul class="prose-list"><li>Bias कम हो</li><li>Instructions clear हों</li><li>Accessibility हो</li><li>Relevant accommodations उपलब्ध हों</li><li>Criteria transparent हों</li></ul>
+<h3 class="mod-h3">4.8 Diagnostic Value</h3>
+<p>Evaluation learner की errors और learning difficulties पहचानने में सहायता करे।</p>
+<h2 class="mod-h2">5. Types of Evaluation</h2>
+<h3 class="mod-h3">मूल्यांकन के प्रकार</h3>
+<p>Purpose और timing के आधार पर चार प्रमुख प्रकार हैं:</p>
+<p class="mod-strong">Placement → Diagnostic → Formative → Summative</p>
+<h3 class="mod-h3">Recall Formula</h3>
+<p class="mod-strong">P–D–F–S = Place → Diagnose → Form/Improve → Sum/Certify</p>
+<h2 class="mod-h2">6. Placement Evaluation</h2>
+<h3 class="mod-h3">स्थान-निर्धारण मूल्यांकन</h3>
+<p>Instruction प्रारम्भ होने से पहले learner की entry behaviour, readiness और appropriate learning level निर्धारित करने के लिए किया जाता है।</p>
+<h3 class="mod-h3">Purpose</h3>
+<ul class="prose-list"><li>Learner का entry level निर्धारित करना</li><li>Prior knowledge जानना</li><li>Suitable course/group में placement</li><li>Prerequisites की जाँच</li><li>Instructional starting point तय करना</li></ul>
+<p class="mod-tag">Example</p>
+<p>English language institute learners को Basic, Intermediate और Advanced groups में बाँटने के लिए entry test लेता है।</p>
+<p>यह Placement Evaluation है।</p>
+<h3 class="mod-h3">Exam Keyword</h3>
+<p class="mod-strong">Entry Behaviour + Readiness + Suitable Level</p>
+<h2 class="mod-h2">7. Diagnostic Evaluation</h2>
+<h3 class="mod-h3">निदानात्मक मूल्यांकन</h3>
+<p>Diagnostic evaluation learner की specific learning difficulty और उसके possible cause को पहचानता है।</p>
+<p class="mod-strong">Diagnostic Evaluation = Specific Weakness + Probable Cause</p>
+<p class="mod-tag">Example</p>
+<p>Student बार-बार SGPA calculation में गलती करता है। Teacher focused test से पता लगाता है कि student weighted average नहीं समझता।</p>
+<p>यह Diagnostic Evaluation है।</p>
+<h3 class="mod-h3">Steps</h3>
+<ul class="prose-list"><li>Difficulty identify करना</li><li>Error का detailed analysis</li><li>Cause identify करना</li><li>Remedial teaching</li><li>Re-assessment</li></ul>
+<h3 class="mod-h3">Placement vs Diagnostic</h3>
+<h2 class="mod-h2">8. Formative Evaluation</h2>
+<h3 class="mod-h3">निर्माणात्मक मूल्यांकन</h3>
+<p>Teaching-learning process के दौरान learner progress monitor करने और improvement के लिए feedback देने वाला evaluation।</p>
+<p class="mod-strong">Formative = During Learning + Feedback + Improvement</p>
+<h3 class="mod-h3">Examples</h3>
+<ul class="prose-list"><li>Classroom quiz</li><li>Oral questioning</li><li>Exit ticket</li><li>Draft feedback</li><li>Assignment</li><li>Observation</li><li>Peer assessment</li><li>Concept map</li><li>Practice test</li></ul>
+<h3 class="mod-h3">Purpose</h3>
+<ul class="prose-list"><li>Learning gaps पहचानना</li><li>Immediate feedback</li><li>Teaching method modify करना</li><li>Remedial support</li><li>Learner motivation</li><li>Continuous improvement</li></ul>
+<h3 class="mod-h3">Teacher के लिए Feedback</h3>
+<p>Teacher जानता है:</p>
+<ul class="prose-list"><li>कौन-सा concept clear नहीं है?</li><li>किस method को बदलना चाहिए?</li><li>किस learner को additional support चाहिए?</li></ul>
+<h3 class="mod-h3">Learner के लिए Feedback</h3>
+<p>Learner जानता है:</p>
+<ul class="prose-list"><li>वह क्या जानता है?</li><li>कहाँ गलती कर रहा है?</li><li>किस strategy में सुधार चाहिए?</li></ul>
+<h3 class="mod-h3">Exam Trap</h3>
+<p>Formative assessment में marks हो सकते हैं। उसे formative बनाने वाला factor marks की absence नहीं, बल्कि evidence का improvement के लिए उपयोग है।</p>
+<h2 class="mod-h2">9. Summative Evaluation</h2>
+<h3 class="mod-h3">संकलनात्मक मूल्यांकन</h3>
+<p>Course, unit, semester या programme के अंत में overall achievement judge करने के लिए किया जाता है।</p>
+<p class="mod-strong">Summative = End Point + Grading + Certification + Judgement</p>
+<h3 class="mod-h3">Examples</h3>
+<ul class="prose-list"><li>End-semester examination</li><li>Final examination</li><li>Term-end project</li><li>University examination</li><li>Certification test</li></ul>
+<h3 class="mod-h3">Purpose</h3>
+<ul class="prose-list"><li>Grading</li><li>Promotion</li><li>Certification</li><li>Selection</li><li>Overall achievement</li><li>Accountability</li></ul>
+<h3 class="mod-h3">Exam Trap</h3>
+<p>Summative evaluation केवल annual examination नहीं है। यह unit, semester, course या programme के अंत में हो सकता है।</p>
+<h2 class="mod-h2">10. Formative vs Summative Evaluation</h2>
+<h2 class="mod-h2">11. Assessment FOR, AS and OF Learning</h2>
+<h3 class="mod-h3">Assessment FOR Learning</h3>
+<p>Learning improve करने के लिए assessment।</p>
+<ul class="prose-list"><li>Primarily formative</li><li>Teacher feedback</li><li>Teaching adjustment</li><li>Learning gaps</li></ul>
+<p class="mod-tag">Example</p>
+<p>Quiz results देखकर teacher difficult concept दोबारा समझाता है।</p>
+<h3 class="mod-h3">Assessment AS Learning</h3>
+<p>Learner स्वयं अपनी learning monitor और regulate करता है।</p>
+<ul class="prose-list"><li>Self-assessment</li><li>Peer assessment</li><li>Reflection</li><li>Metacognition</li><li>Self-regulation</li></ul>
+<p class="mod-tag">Example</p>
+<p>Learner rubric से अपना answer check करके strategy बदलता है।</p>
+<h3 class="mod-h3">Assessment OF Learning</h3>
+<p>Learning complete होने के बाद achievement judge करना।</p>
+<ul class="prose-list"><li>Summative</li><li>Grade</li><li>Certification</li><li>Final judgement</li></ul>
+<p class="mod-tag">Example</p>
+<p>Semester-end examination</p>
+<h3 class="mod-h3">Recall Formula</h3>
+<p class="mod-strong">FOR = Teacher improves learning
+AS = Learner monitors learning
+OF = Institution judges learning</p>
+<h2 class="mod-h2">12. Norm-Referenced Evaluation</h2>
+<h3 class="mod-h3">मानक-समूह संदर्भित मूल्यांकन</h3>
+<p>Learner की performance को दूसरे learners या norm group से compare किया जाता है।</p>
+<p class="mod-tag">NRT = Learner vs Other Learners</p>
+<h3 class="mod-h3">Purpose</h3>
+<ul class="prose-list"><li>Ranking</li><li>Selection</li><li>Relative position</li><li>Percentile</li><li>Competitive examination</li></ul>
+<p class="mod-tag">Example</p>
+<p>Candidate 90th percentile पर है।</p>
+<p>इसका अर्थ है कि उसका relative position comparison group में ऊपर है।</p>
+<h3 class="mod-h3">Keywords</h3>
+<ul class="prose-list"><li>Rank</li><li>Percentile</li><li>Relative performance</li><li>Comparison group</li><li>Selection</li></ul>
+<h2 class="mod-h2">13. Criterion-Referenced Evaluation</h2>
+<h3 class="mod-h3">मानदण्ड-संदर्भित मूल्यांकन</h3>
+<p>Learner की performance को predetermined criterion, competency या mastery standard से compare किया जाता है।</p>
+<p class="mod-tag">CRT = Learner vs Fixed Standard</p>
+<p class="mod-tag">Example</p>
+<p>Learner को certification के लिए दस में से आठ competencies demonstrate करनी हैं।</p>
+<p>यहाँ learner को दूसरे candidates से नहीं, fixed standard से compare किया जा रहा है।</p>
+<h3 class="mod-h3">Purpose</h3>
+<ul class="prose-list"><li>Mastery</li><li>Competency</li><li>Diagnosis</li><li>Learning outcomes</li><li>Certification against standards</li></ul>
+<h2 class="mod-h2">14. NRT vs CRT</h2>
+<h3 class="mod-h3">Exam Trap</h3>
+<p>NRT का high rank यह guarantee नहीं करता कि learner ने absolute mastery प्राप्त कर ली है।</p>
+<p>CRT में सभी learners mastery प्राप्त कर सकते हैं; किसी का fail होना आवश्यक नहीं है।</p>
+<h2 class="mod-h2">15. Internal and External Evaluation</h2>
+<h3 class="mod-h3">Internal Evaluation</h3>
+<p>Institution या course teacher द्वारा conducted।</p>
+<p class="mod-tag">Examples</p>
+<ul class="prose-list"><li>Internal assignment</li><li>Class test</li><li>Attendance-based components</li><li>Presentation</li><li>Project</li></ul>
+<h3 class="mod-h3">External Evaluation</h3>
+<p>Outside examiner, university या external agency द्वारा conducted।</p>
+<p class="mod-tag">Examples</p>
+<ul class="prose-list"><li>University examination</li><li>External viva</li><li>National eligibility test</li><li>Board examination</li></ul>
+<h3 class="mod-h3">Advantages of Internal Evaluation</h3>
+<ul class="prose-list"><li>Continuous observation</li><li>Wider range of learning outcomes</li><li>Frequent feedback</li><li>Classroom performance का inclusion</li></ul>
+<h3 class="mod-h3">Risks</h3>
+<ul class="prose-list"><li>Subjectivity</li><li>Institutional variation</li><li>Favouritism का possibility</li><li>Comparability problem</li></ul>
+<h2 class="mod-h2">16. Quantitative and Qualitative Evaluation</h2>
+<h3 class="mod-h3">Quantitative</h3>
+<p>Performance को numerical form में express करना।</p>
+<ul class="prose-list"><li>Marks</li><li>Score</li><li>Grade point</li><li>Percentile</li><li>Frequency</li></ul>
+<h3 class="mod-h3">Qualitative</h3>
+<p>Performance की quality और characteristics का descriptive assessment।</p>
+<ul class="prose-list"><li>Observation report</li><li>Narrative feedback</li><li>Interview</li><li>Reflective journal</li><li>Portfolio commentary</li></ul>
+<p>Effective evaluation में quantitative और qualitative evidence दोनों उपयोगी हो सकते हैं।</p>
+<h2 class="mod-h2">17. Tools and Techniques of Evaluation</h2>
+<h2 class="mod-h2">18. Rubric</h2>
+<p>Rubric एक scoring guide है जिसमें:</p>
+<ul class="prose-list"><li>Assessment criteria</li><li>Performance levels</li><li>Descriptors</li></ul>
+<p>दिए जाते हैं।</p>
+<p class="mod-tag">Rubric = Criteria + Levels + Descriptors</p>
+<h3 class="mod-h3">Analytic Rubric</h3>
+<p>हर criterion का अलग score।</p>
+<p class="mod-tag">Example</p>
+<p>Presentation:</p>
+<ul class="prose-list"><li>Content: 10</li><li>Organisation: 5</li><li>Delivery: 5</li><li>Evidence: 5</li></ul>
+<h3 class="mod-h3">Holistic Rubric</h3>
+<p>पूरे performance को एक overall score या level दिया जाता है।</p>
+<h3 class="mod-h3">Rubric vs Checklist</h3>
+<h2 class="mod-h2">19. Portfolio Assessment</h2>
+<p>Portfolio learner के work का systematic collection है जो learning, effort, achievement और growth को दर्शाता है।</p>
+<h3 class="mod-h3">इसमें शामिल हो सकते हैं</h3>
+<ul class="prose-list"><li>Drafts</li><li>Final assignments</li><li>Projects</li><li>Reflection</li><li>Teacher feedback</li><li>Self-assessment</li><li>Progress evidence</li></ul>
+<h3 class="mod-h3">Exam Point</h3>
+<p>Portfolio एक single best answer नहीं, बल्कि learning over time का evidence है।</p>
+<h2 class="mod-h2">20. Evaluation in CBCS</h2>
+<h3 class="mod-h3">Choice Based Credit System में मूल्यांकन</h3>
+<p>CBCS का full form है:</p>
+<p class="mod-tag">Choice Based Credit System</p>
+<p>यह higher education में learners को prescribed framework के भीतर core, elective/minor और skill-based courses चुनने की flexibility देता है।</p>
+<p>UGC guidelines CBCS को student-centric choice, interdisciplinary learning, grading और learner mobility से जोड़ती हैं। UGC CBCS Guidelines</p>
+<h2 class="mod-h2">21. CBCS के प्रमुख Concepts</h2>
+<h3 class="mod-h3">Core Course</h3>
+<p>Discipline का compulsory foundation course।</p>
+<h3 class="mod-h3">Elective Course</h3>
+<p>Approved basket में से selected course।</p>
+<h3 class="mod-h3">Skill-Based Course</h3>
+<p>Practical, professional या employability-related competencies से जुड़ा course।</p>
+<h3 class="mod-h3">Credit</h3>
+<p>Course से जुड़ा academic workload या learning volume।</p>
+<h3 class="mod-h3">Grade</h3>
+<p>Performance की symbolic category:</p>
+<ul class="prose-list"><li>O</li><li>A+</li><li>A</li><li>B+</li><li>B आदि</li></ul>
+<h3 class="mod-h3">Grade Point</h3>
+<p>Letter grade को assigned numerical value।</p>
+<h3 class="mod-h3">Credit Point</h3>
+<p class="mod-strong">Credit Point = Course Credit × Grade Point</p>
+<h2 class="mod-h2">23. Advantages of CBCS</h2>
+<ul class="prose-list"><li>Learner choice</li><li>Academic flexibility</li><li>Interdisciplinary learning</li><li>Skill-based courses</li><li>Credit accumulation</li><li>Credit transfer</li><li>Learner mobility</li><li>Student-centred education</li><li>Wider course combinations</li><li>Grading system</li></ul>
+<h2 class="mod-h2">24. CBCS की Limitations</h2>
+<ul class="prose-list"><li>Timetable complexity</li><li>Course availability की समस्या</li><li>Faculty workload</li><li>Infrastructure requirements</li><li>Advising की आवश्यकता</li><li>Institutional standards में variation</li><li>वास्तविक choice सीमित हो सकती है</li><li>Internal assessment में variation</li></ul>
+<h3 class="mod-h3">Exam Trap</h3>
+<p>CBCS का अर्थ unlimited freedom नहीं है।</p>
+<p>Choice prescribed course baskets, prerequisites, institutional rules और course availability के भीतर होती है।</p>
+<h2 class="mod-h2">25. Computer-Based Testing</h2>
+<h3 class="mod-h3">कंप्यूटर आधारित परीक्षण</h3>
+<p>CBT में computer का प्रयोग test delivery, response recording और प्रायः scoring के लिए किया जाता है।</p>
+<p class="mod-strong">CBT = Digital Test Delivery + Response Capture + Scoring/Processing</p>
+<p>UGC-NET को NTA द्वारा December 2018 से CBT mode में conduct किया जा रहा है। NTA UGC-NET portal</p>
+<h2 class="mod-h2">26. Features of CBT</h2>
+<ul class="prose-list"><li>Digital question display</li><li>On-screen timer</li><li>Question palette</li><li>Save and next</li><li>Mark for review</li><li>Response modification</li><li>Item randomisation</li><li>Automated scoring</li><li>Item bank</li><li>Audit trail</li><li>Result processing</li><li>Response analytics</li></ul>
+<h2 class="mod-h2">27. Advantages of CBT</h2>
+<ul class="prose-list"><li>Rapid result processing</li><li>Standardised administration</li><li>Large-scale testing</li><li>Reduced paper handling</li><li>Randomisation</li><li>Multimedia questions</li><li>Automated scoring</li><li>Response-time analysis</li><li>Accessible display options</li><li>Efficient data management</li></ul>
+<h2 class="mod-h2">28. Limitations of CBT</h2>
+<ul class="prose-list"><li>Digital divide</li><li>Computer anxiety</li><li>Technical failures</li><li>Electricity और network problems</li><li>Cybersecurity concerns</li><li>Data privacy</li><li>Identity verification</li><li>Technical support की आवश्यकता</li><li>Subjective answers की complex scoring</li><li>Accessibility issues</li></ul>
+<h2 class="mod-h2">29. CBT vs Online Testing vs Adaptive Testing</h2>
+<h3 class="mod-h3">Computer-Based Test</h3>
+<p>Computer test deliver करता है। Test fixed भी हो सकता है।</p>
+<h3 class="mod-h3">Internet-Based/Online Test</h3>
+<p>Internet के माध्यम से delivered test।</p>
+<h3 class="mod-h3">Remote-Proctored Test</h3>
+<p>Learner remote location से परीक्षा देता है और technology द्वारा monitoring की जाती है।</p>
+<h3 class="mod-h3">Computerized Adaptive Test</h3>
+<p>Learner की previous responses या estimated ability के आधार पर next question select किया जाता है।</p>
+<p class="mod-strong">CAT = Response/Ability-Based Item Selection</p>
+<h3 class="mod-h3">Exam Formula</h3>
+<p>Every adaptive test is computer-based, but every CBT is not adaptive.</p>
+<h3 class="mod-h3">Exam Trap</h3>
+<ul class="prose-list"><li>CBT का अर्थ घर से परीक्षा देना नहीं है।</li><li>Random questions का अर्थ adaptive testing नहीं है।</li><li>Computer-based test Internet के बिना local network पर भी conduct हो सकता है।</li></ul>
+<h2 class="mod-h2">30. Item Bank</h2>
+<p>Item bank validated questions का organised digital collection है।</p>
+<p>Items के साथ metadata हो सकता है:</p>
+<ul class="prose-list"><li>Subject</li><li>Unit</li><li>Difficulty level</li><li>Cognitive level</li><li>Correct answer</li><li>Discrimination index</li><li>Time required</li></ul>
+<h3 class="mod-h3">Exam Trap</h3>
+<p>Large question bank automatically valid item bank नहीं है। Items की quality, syllabus mapping और psychometric properties भी आवश्यक हैं।</p>
+<h2 class="mod-h2">31. Innovations in Evaluation Systems</h2>
+<h3 class="mod-h3">31.1 Continuous and Comprehensive Evaluation</h3>
+<p>Evaluation continuous stages पर और multiple learning outcomes पर आधारित होता है।</p>
+<p class="mod-strong">Continuous = Throughout Learning
+Comprehensive = Different Relevant Outcomes</p>
+<h3 class="mod-h3">31.2 Outcome-Based Assessment</h3>
+<p>Evidence को pre-defined Course Outcomes और Programme Outcomes से map किया जाता है।</p>
+<p class="mod-tag">Process</p>
+<p>Outcome → Learning Activity → Assessment → Attainment → Improvement</p>
+<h3 class="mod-h3">31.3 Authentic Assessment</h3>
+<p>Learner realistic और meaningful task perform करता है।</p>
+<p class="mod-tag">Examples</p>
+<ul class="prose-list"><li>Research proposal</li><li>Policy brief</li><li>Teaching demonstration</li><li>Laboratory performance</li><li>Field report</li></ul>
+<h3 class="mod-h3">31.4 Performance-Based Assessment</h3>
+<p>Learner knowledge बताने के बजाय skill या performance demonstrate करता है।</p>
+<h3 class="mod-h3">31.5 Open-Book Examination</h3>
+<p>Learner को permitted resources use करने की अनुमति होती है।</p>
+<p>Good open-book questions focus करते हैं:</p>
+<ul class="prose-list"><li>Application</li><li>Analysis</li><li>Evaluation</li><li>Integration</li><li>Problem-solving</li></ul>
+<h3 class="mod-h3">Trap</h3>
+<p>Open-book examination necessarily easy नहीं होता। Recall-based question हो तो open-book का educational benefit कम हो जाता है।</p>
+<h3 class="mod-h3">31.6 Self-Assessment</h3>
+<p>Learner criteria के आधार पर अपनी performance judge करता है।</p>
+<p>Develops:</p>
+<ul class="prose-list"><li>Metacognition</li><li>Responsibility</li><li>Self-regulation</li><li>Goal setting</li></ul>
+<h3 class="mod-h3">31.7 Peer Assessment</h3>
+<p>Learners predefined criteria के आधार पर peers को feedback देते हैं।</p>
+<p class="mod-tag">Benefits</p>
+<ul class="prose-list"><li>Feedback literacy</li><li>Collaboration</li><li>Critical judgement</li><li>Multiple perspectives</li></ul>
+<p class="mod-tag">Limitation</p>
+<ul class="prose-list"><li>Friendship bias</li><li>Inconsistent judgement</li><li>Training की आवश्यकता</li></ul>
+<h3 class="mod-h3">31.8 E-Portfolio</h3>
+<p>Digital format में learner की progress और achievements का evidence।</p>
+<h3 class="mod-h3">31.9 Learning Analytics</h3>
+<p>Learner data का analysis करके:</p>
+<ul class="prose-list"><li>At-risk learners पहचानना</li><li>Engagement monitor करना</li><li>Performance patterns समझना</li><li>Personalised feedback देना</li></ul>
+<h3 class="mod-h3">Trap</h3>
+<p>More data automatically better decision नहीं देता। Valid interpretation, privacy और context आवश्यक हैं।</p>
+<h3 class="mod-h3">31.10 AI-Assisted Evaluation</h3>
+<p>AI का प्रयोग हो सकता है:</p>
+<ul class="prose-list"><li>Item drafting</li><li>Automated feedback</li><li>Response classification</li><li>Pattern identification</li><li>Adaptive testing</li><li>Preliminary scoring</li></ul>
+<h3 class="mod-h3">Ethical Concerns</h3>
+<ul class="prose-list"><li>Bias</li><li>Privacy</li><li>Explainability</li><li>Transparency</li><li>Data security</li><li>Validity</li><li>Human accountability</li></ul>
+<p class="mod-strong">AI should support professional judgement, not eliminate accountability.</p>
+<h2 class="mod-h2">32. Important Thinkers and Frameworks</h2>
+<h2 class="mod-h2">33. CIPP Model</h2>
+<p>Daniel Stufflebeam का CIPP Model:</p>
+<p class="mod-strong">CIPP = Context + Input + Process + Product</p>
+<h3 class="mod-h3">Context Evaluation</h3>
+<p>Needs, problems और objectives की जाँच।</p>
+<p>What should be done?</p>
+<h3 class="mod-h3">Input Evaluation</h3>
+<p>Resources, strategies और alternatives की जाँच।</p>
+<p>How should it be done?</p>
+<h3 class="mod-h3">Process Evaluation</h3>
+<p>Programme implementation monitor करना।</p>
+<p>Is it being done as planned?</p>
+<h3 class="mod-h3">Product Evaluation</h3>
+<p>Outcomes और impact का evaluation।</p>
+<p>Did it succeed?</p>
+<h2 class="mod-h2">34. Kirkpatrick’s Four-Level Model</h2>
+<p>Training evaluation के चार levels:</p>
+<ul class="prose-list"><li>Reaction – Participants को training कैसी लगी?</li><li>Learning – उन्होंने क्या सीखा?</li><li>Behaviour – Workplace behaviour में क्या change आया?</li><li>Results – Organisation पर क्या impact पड़ा?</li></ul>
+<h3 class="mod-h3">Exam Trap</h3>
+<p>Kirkpatrick और Bloom की Taxonomy को mix न करें।</p>
+<h2 class="mod-h2">35. Verified Previous Year Questions</h2>
+<h3 class="mod-h3">PYQ 1: UGC NET, 4 December 2019, Shift 1</h3>
+<p>Question: Which type of assessment is conducted periodically with an eye on standards?</p>
+<p class="mod-tag">Answer: Summative Assessment</p>
+<p>यह defined stages पर achievement standards judge करता है।
+Verified PYQ</p>
+<h3 class="mod-h3">PYQ 2: UGC NET, 2 December 2019, Shift 1</h3>
+<p>Match the following:</p>
+<p>Verified PYQ</p>
+<h3 class="mod-h3">PYQ 3: UGC NET, 22 October 2022, Shift 1</h3>
+<p>Assertion: Formative assessments provide feedback to learners for improvement.
+Reason: Formative assessments improve the teaching-learning process.</p>
+<p>Answer: Both are true and the Reason correctly explains the Assertion.
+Verified PYQ</p>
+<h3 class="mod-h3">PYQ 4: UGC NET, December 2018</h3>
+<p>Question: The goal of Formative Assessment is to:</p>
+<p>A. Promote learners
+B. Form groups
+C. Compare with a benchmark
+D. Monitor learning to provide ongoing feedback</p>
+<p class="mod-strong">Answer: D. Monitor learning to provide ongoing feedback</p>
+<h2 class="mod-h2">36. PYQ Trend Analysis</h2>
+<h3 class="mod-h3">December 2026 Trend</h3>
+<p>High-probability areas:</p>
+<ul class="prose-list"><li>Formative–Diagnostic distinction</li><li>NRT–CRT comparison</li><li>Validity–Reliability relationship</li><li>SGPA calculation</li><li>Credit vs Grade Point</li><li>CBT vs Adaptive Testing</li><li>Rubric vs Checklist</li><li>Assessment AS Learning</li><li>Authentic Assessment</li><li>AI-based assessment ethics</li></ul>
+<h2 class="mod-h2">37. Expected Questions for December 2026</h2>
+<h3 class="mod-h3">Question 1</h3>
+<p>Teacher quiz के बाद misconceptions identify करके topic दोबारा पढ़ाता है। यह है:</p>
+<p>A. Placement
+B. Formative
+C. Summative
+D. Norm-referenced</p>
+<p class="mod-tag">Answer: B. Formative Evaluation</p>
+<h3 class="mod-h3">Question 2</h3>
+<p>Focused test यह जानने के लिए लिया जाता है कि learner बार-बार एक particular error क्यों कर रहा है।</p>
+<p class="mod-tag">Answer: Diagnostic Evaluation</p>
+<h3 class="mod-h3">Question 3</h3>
+<p>Candidate को 92nd percentile प्राप्त हुआ। यह किस प्रकार की interpretation है?</p>
+<p class="mod-tag">Answer: Norm-Referenced Interpretation</p>
+<h3 class="mod-h3">Question 4</h3>
+<p>Learner को certification के लिए 80% competencies demonstrate करनी हैं।</p>
+<p class="mod-tag">Answer: Criterion-Referenced Evaluation</p>
+<h3 class="mod-h3">Question 6</h3>
+<p>कौन-सा statement incorrect है?</p>
+<p>A. Credit course workload बताता है।
+B. Grade Point performance value बताता है।
+C. Credit और marks समान हैं।
+D. SGPA credit-weighted average है।</p>
+<p class="mod-tag">Answer: C</p>
+<h3 class="mod-h3">Question 7</h3>
+<p>Computer learner की previous response के अनुसार अगला item select करता है। यह है:</p>
+<p class="mod-tag">Answer: Computerized Adaptive Testing</p>
+<h3 class="mod-h3">Question 8</h3>
+<p>Assessment criteria, performance levels और descriptors का combination क्या कहलाता है?</p>
+<p class="mod-tag">Answer: Rubric</p>
+<h3 class="mod-h3">Question 9</h3>
+<p>Learner स्वयं rubric से अपना answer check करके learning strategy बदलता है। यह है:</p>
+<p class="mod-tag">Answer: Assessment AS Learning</p>
+<h3 class="mod-h3">Question 10: Assertion–Reason</h3>
+<p>Assertion: Reliable test हमेशा valid नहीं होता।
+Reason: Consistent measurement गलत construct का भी हो सकता है।</p>
+<p>Answer: दोनों सही हैं और Reason सही explanation है।</p>
+<h3 class="mod-h3">Question 11</h3>
+<p>CIPP model में programme implementation किस component में evaluate होता है?</p>
+<p class="mod-tag">Answer: Process Evaluation</p>
+<h3 class="mod-h3">Question 12</h3>
+<p>Real-world task के माध्यम से competency assess करना कहलाता है:</p>
+<p class="mod-tag">Answer: Authentic Assessment</p>
+<h3 class="mod-h3">Question 13</h3>
+<p>AI-assisted scoring में सबसे appropriate safeguard क्या है?</p>
+<p>Answer: Validation, bias audit, transparency और meaningful human oversight.</p>
+<h2 class="mod-h2">38. Final One-Page Revision</h2>
+<p class="mod-strong">Evaluation = Evidence + Interpretation + Judgement + Decision</p>
+<p class="mod-tag">Placement = Entry Level</p>
+<p class="mod-tag">Diagnostic = Specific Gap and Cause</p>
+<p class="mod-strong">Formative = During + Feedback + Improvement</p>
+<p class="mod-tag">Summative = End + Grade + Certification</p>
+<p class="mod-tag">FOR = Improve Learning</p>
+<p class="mod-tag">AS = Self-Monitoring</p>
+<p class="mod-tag">OF = Final Judgement</p>
+<p class="mod-tag">NRT = Learner vs Group</p>
+<p class="mod-tag">CRT = Learner vs Standard</p>
+<p class="mod-tag">Validity = Right Measurement</p>
+<p class="mod-tag">Reliability = Consistent Measurement</p>
+<p class="mod-tag">Objectivity = Minimum Scorer Bias</p>
+<p class="mod-tag">Credit = Workload</p>
+<p class="mod-tag">Grade Point = Performance Value</p>
+<p class="mod-strong">SGPA = Σ(Credit × Grade Point) ÷ ΣCredits</p>
+<p class="mod-tag">CBT = Computer-Delivered Test</p>
+<p class="mod-tag">CAT = Ability-Based Item Selection</p>
+<p class="mod-tag">Rubric = Criteria + Levels + Descriptors</p>
+<p class="mod-tag">Portfolio = Growth Over Time</p>
+<p class="mod-strong">CIPP = Context + Input + Process + Product</p>
+<p class="mod-strong">Kirkpatrick = Reaction + Learning + Behaviour + Results</p>
+<h3 class="mod-h3">अंतिम Exam Approach</h3>
+<p>किसी evaluation question में तीन बातें पहचानें:</p>
+<ul class="prose-list"><li>Evaluation कब हो रहा है?</li><li>Performance किससे compare की जा रही है?</li><li>Evidence का उपयोग किस decision के लिए होगा?</li></ul>
+<p>इन तीन questions से अधिकांश evaluation-system MCQs आसानी से solve किए जा सकते हैं।</p>
+<div class="table-wrap"><table class="mod-table"><tr><th>Concept</th><th>Meaning</th><th>उदाहरण</th></tr><tr><td>Measurement—मापन</td><td>किसी performance को numerical value देना</td><td>40/50 marks</td></tr><tr><td>Assessment—आकलन</td><td>Learning के evidence को collect और interpret करना</td><td>Quiz, assignment और observation</td></tr><tr><td>Evaluation—मूल्यांकन</td><td>Evidence के आधार पर judgement और decision लेना</td><td>Pass, fail, grade या remediation</td></tr><tr><td>Examination—परीक्षा</td><td>निर्धारित समय में knowledge/skills test करने की formal प्रक्रिया</td><td>Semester examination</td></tr><tr><td>Testing—परीक्षण</td><td>किसी specific ability या achievement को tool से measure करना</td><td>Aptitude test</td></tr></table></div>
+<div class="table-wrap"><table class="mod-table"><tr><th>Placement</th><th>Diagnostic</th></tr><tr><td>Suitable entry level तय करता है</td><td>Specific difficulty और cause पहचानता है</td></tr><tr><td>Instruction से पहले</td><td>Before या during instruction</td></tr><tr><td>Group/course placement</td><td>Remedial action</td></tr><tr><td>Broad readiness</td><td>Focused weakness</td></tr></table></div>
+<div class="table-wrap"><table class="mod-table"><tr><th>Basis</th><th>Formative</th><th>Summative</th></tr><tr><td>Timing</td><td>During learning</td><td>End of learning period</td></tr><tr><td>Main purpose</td><td>Improvement</td><td>Judgement/certification</td></tr><tr><td>Feedback</td><td>Continuous and developmental</td><td>Terminal/overall</td></tr><tr><td>Nature</td><td>Diagnostic and remedial orientation</td><td>Grading and certification</td></tr><tr><td>Stakes</td><td>Generally low</td><td>Generally high</td></tr><tr><td>Teacher action</td><td>Modify teaching</td><td>Report achievement</td></tr><tr><td>Example</td><td>Weekly quiz with feedback</td><td>Final semester exam</td></tr><tr><td>Assessment concept</td><td>Assessment FOR learning</td><td>Assessment OF learning</td></tr></table></div>
+<div class="table-wrap"><table class="mod-table"><tr><th>Basis</th><th>Norm-Referenced</th><th>Criterion-Referenced</th></tr><tr><td>Comparison</td><td>Other learners/group</td><td>Fixed standard</td></tr><tr><td>Nature</td><td>Relative</td><td>Absolute/domain-based</td></tr><tr><td>Purpose</td><td>Ranking and selection</td><td>Mastery and diagnosis</td></tr><tr><td>Result</td><td>Rank/percentile</td><td>Mastered/not mastered</td></tr><tr><td>Question</td><td>Who performed better?</td><td>What can the learner do?</td></tr><tr><td>Example</td><td>Competitive ranking</td><td>Driving competency test</td></tr></table></div>
+<div class="table-wrap"><table class="mod-table"><tr><th>Tool/Technique</th><th>Best suited for</th></tr><tr><td>Written test</td><td>Knowledge and written expression</td></tr><tr><td>Oral test</td><td>Verbal understanding and expression</td></tr><tr><td>Observation</td><td>Behaviour and performance</td></tr><tr><td>Interview</td><td>Attitude, experience and reasoning</td></tr><tr><td>Checklist</td><td>Presence or absence of behaviour</td></tr><tr><td>Rating scale</td><td>Degree or quality of performance</td></tr><tr><td>Rubric</td><td>Criteria-based performance levels</td></tr><tr><td>Portfolio</td><td>Growth over time</td></tr><tr><td>Project</td><td>Application and integration</td></tr><tr><td>Anecdotal record</td><td>Significant learner behaviour</td></tr><tr><td>Questionnaire</td><td>Opinions, attitudes and information</td></tr><tr><td>Sociometry</td><td>Group relationships</td></tr></table></div>
+<div class="table-wrap"><table class="mod-table"><tr><th>Rubric</th><th>Checklist</th></tr><tr><td>Quality और level बताता है</td><td>Presence/absence बताता है</td></tr><tr><td>Detailed descriptors</td><td>Yes/No format</td></tr><tr><td>Scoring possible</td><td>Verification-oriented</td></tr></table></div>
+<div class="table-wrap"><table class="mod-table"><tr><th>Thinker/Framework</th><th>Association</th></tr><tr><td>Ralph Tyler</td><td>Objective-oriented evaluation</td></tr><tr><td>Michael Scriven</td><td>Formative and Summative Evaluation</td></tr><tr><td>Daniel Stufflebeam</td><td>CIPP Model</td></tr><tr><td>Benjamin Bloom</td><td>Taxonomy and mastery-learning orientation</td></tr><tr><td>Kirkpatrick</td><td>Training Evaluation Model</td></tr></table></div>
+<div class="table-wrap"><table class="mod-table"><tr><th>Evaluation Type</th><th>Correct Feature</th></tr><tr><td>Formative</td><td>Identifying scope for improvement</td></tr><tr><td>Summative</td><td>Judging learning standards</td></tr><tr><td>Norm-referenced</td><td>Comparing performance with others</td></tr><tr><td>Criterion-referenced</td><td>Indicating standards of mastery</td></tr></table></div>
+<div class="table-wrap"><table class="mod-table"><tr><th>Tested Area</th><th>Common Format</th></tr><tr><td>Formative vs Summative</td><td>Direct MCQ/Assertion–Reason</td></tr><tr><td>Placement vs Diagnostic</td><td>Classroom situation</td></tr><tr><td>NRT vs CRT</td><td>Match the Following</td></tr><tr><td>Validity and Reliability</td><td>Statement-based</td></tr><tr><td>Assessment FOR/AS/OF</td><td>Concept matching</td></tr><tr><td>CBCS terms</td><td>Match/incorrect statement</td></tr><tr><td>SGPA/CGPA</td><td>Numerical question</td></tr><tr><td>CBT</td><td>Feature and advantage</td></tr><tr><td>CBT vs CAT</td><td>Conceptual distinction</td></tr><tr><td>Innovation</td><td>Scenario-based question</td></tr><tr><td>Rubric and portfolio</td><td>Tool identification</td></tr><tr><td>AI evaluation</td><td>Ethics-based statements</td></tr></table></div>
+    </article>
+    <aside class="lg:sticky lg:top-24 lg:self-start">
+      <div class="card p-5">
+        <p class="text-[10.5px] font-extrabold uppercase tracking-[0.16em] text-gold-600">Unit 1 · Teaching Aptitude</p>
+        <ul class="mt-3 grid gap-1.5 text-[13.5px] font-semibold text-navy-700">
+          <li><a href="module-1.html" class="block rounded-lg px-2.5 py-2 hover:bg-navy-50">1. Teaching: Objective, Levels &amp; Basic Concepts</a></li>
+          <li><a href="module-2.html" class="block rounded-lg px-2.5 py-2 hover:bg-navy-50">2. Learner's Characteristics</a></li>
+          <li><a href="module-3.html" class="block rounded-lg px-2.5 py-2 hover:bg-navy-50">3. Factors Affecting Teaching</a></li>
+          <li><a href="module-4.html" class="block rounded-lg px-2.5 py-2 hover:bg-navy-50">4. Methods of Teaching in Higher Institutions</a></li>
+          <li><a href="module-5.html" class="block rounded-lg px-2.5 py-2 hover:bg-navy-50">5. Teaching Support System</a></li>
+          <li><a href="module-6.html" class="block rounded-lg px-2.5 py-2 hover:bg-navy-50">6. Evaluation System</a></li>
+          <li><a href="module-7.html" class="block rounded-lg px-2.5 py-2 hover:bg-navy-50">7. Important Educational Thinkers &amp; Theories</a></li>
+          <li><a href="module-8.html" class="block rounded-lg px-2.5 py-2 hover:bg-navy-50">8. Educational Philosophy &amp; Thinking</a></li>
+        </ul>
+        <a href="../enroll.html" class="btn-primary mt-4 w-full">✓ JOIN BATCH @ ₹500</a>
+      </div>
+    </aside>
+  </div>
+  <div class="mt-8 flex flex-wrap items-center justify-between gap-3">
+    <a href="module-5.html" class="btn-outline btn-sm">← Module 5</a>
+    <a href="unit-1.html" class="btn-outline btn-sm">All Unit 1 Modules</a>
+    <a href="module-7.html" class="btn-dark btn-sm">Module 7 →</a>
+  </div>
+</div></section>
+
+<section class="bg-cream py-12 lg:py-14"><div class="container-x">
+  <div class="relative overflow-hidden rounded-2xl bg-navy-950 p-8 text-white sm:p-10">
+    <div class="grid-paper absolute inset-0 opacity-50" aria-hidden="true"></div>
+    <div class="absolute -right-16 -top-16 h-56 w-56 rounded-full bg-gold-500/20 blur-3xl" aria-hidden="true"></div>
+    <div class="relative flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
+      <div>
+        <h2 class="h-display text-[28px] sm:text-[34px]">Join the Paper-1 Batch</h2>
+        <p class="mt-2 max-w-lg text-[14.5px] text-navy-100/80">Course fee FREE — ₹500 registration &amp; academic/logistics contribution. Classes daily at 6:30 PM.</p>
+      </div>
+      <a href="../enroll.html" class="btn-primary shrink-0">✓ JOIN BATCH @ ₹500</a>
+    </div>
+  </div>
+</div></section>
+</main>
+
+<footer class="relative overflow-hidden bg-navy-950 text-white">
+  <div class="grid-paper absolute inset-0 opacity-50" aria-hidden="true"></div>
+  <div class="container-x relative py-12 lg:py-14">
+    <div class="grid grid-cols-2 gap-10 lg:grid-cols-4">
+
+      <div>
+        <div class="flex items-center gap-3">
+          <img src="assets/images/logo.png" alt="GS Net Academy" class="h-11 w-auto rounded-lg bg-white p-1" width="120" height="44">
+          <img src="assets/images/tagline.png" alt="" class="h-11 w-auto brightness-0 invert" aria-hidden="true">
+        </div>
+        <p class="mt-5 text-[14px] leading-relaxed text-navy-100/75">UGC NET Paper-I | JRF Preparation | Mentorship</p>
+        <span class="eyebrow mt-5"><svg viewBox="0 0 24 24" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1"/></svg> JRF @ ₹500 Mission 2026</span>
+
+        <p class="mt-6 text-[11px] font-extrabold uppercase tracking-[0.18em] text-gold-400">Follow Us</p>
+        <ul class="mt-3 flex flex-wrap gap-2">
+          <li><a href="https://www.youtube.com/@gsnetacademy" target="_blank" rel="noreferrer noopener" aria-label="YouTube" title="YouTube" class="grid h-10 w-10 place-items-center rounded-xl border border-white/12 bg-white/[0.06] text-navy-100/80 transition hover:border-gold-400/50 hover:bg-white/[0.12] hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor" aria-hidden="true"><path d="M21.6 7.2a2.5 2.5 0 0 0-1.8-1.8C18.2 5 12 5 12 5s-6.2 0-7.8.4A2.5 2.5 0 0 0 2.4 7.2 26 26 0 0 0 2 12a26 26 0 0 0 .4 4.8 2.5 2.5 0 0 0 1.8 1.8C5.8 19 12 19 12 19s6.2 0 7.8-.4a2.5 2.5 0 0 0 1.8-1.8A26 26 0 0 0 22 12a26 26 0 0 0-.4-4.8ZM10 15V9l5.2 3L10 15Z"/></svg></a></li>
+          <li><a href="https://www.instagram.com/gsnetacademy" target="_blank" rel="noreferrer noopener" aria-label="Instagram" title="Instagram" class="grid h-10 w-10 place-items-center rounded-xl border border-white/12 bg-white/[0.06] text-navy-100/80 transition hover:border-gold-400/50 hover:bg-white/[0.12] hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg></a></li>
+          <li><a href="https://www.facebook.com/gsnetacademy" target="_blank" rel="noreferrer noopener" aria-label="Facebook" title="Facebook" class="grid h-10 w-10 place-items-center rounded-xl border border-white/12 bg-white/[0.06] text-navy-100/80 transition hover:border-gold-400/50 hover:bg-white/[0.12] hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.25-1.5 1.55-1.5H16.7V3.6c-.3 0-1.3-.13-2.47-.13-2.44 0-4.11 1.49-4.11 4.23V9.9H7.4V13h2.72v8h3.38Z"/></svg></a></li>
+          <li><a href="https://t.me/gsnetacademy" target="_blank" rel="noreferrer noopener" aria-label="Telegram" title="Telegram" class="grid h-10 w-10 place-items-center rounded-xl border border-white/12 bg-white/[0.06] text-navy-100/80 transition hover:border-gold-400/50 hover:bg-white/[0.12] hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor" aria-hidden="true"><path d="M21.3 4.3 2.9 11.4c-.9.35-.9 1.62.02 1.93l4.6 1.53 1.75 5.3c.25.75 1.2.95 1.73.37l2.5-2.72 4.6 3.38c.63.46 1.53.12 1.7-.65l3.1-14.9c.2-.9-.7-1.65-1.6-1.31ZM9.6 14.1l8.5-5.6-6.9 6.5-.3 3.3-1.3-4.2Z"/></svg></a></li>
+          <li><a href="https://chat.whatsapp.com/KeaQUhOFz0UGAKtLmsM7oU" target="_blank" rel="noreferrer noopener" aria-label="WhatsApp Group" title="WhatsApp Group" class="grid h-10 w-10 place-items-center rounded-xl border border-white/12 bg-white/[0.06] text-navy-100/80 transition hover:border-emerald-400/50 hover:bg-emerald-500/15 hover:text-emerald-300"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.2 20.8 4.6 16A8.4 8.4 0 1 1 8 19.4l-4.8 1.4Z"/><path d="M9 8.4c.3-.7.6-.7.9-.7h.6c.2 0 .5 0 .7.6l.8 1.9c.1.2.1.4 0 .6l-.5.7c-.1.2-.2.4 0 .7a7 7 0 0 0 3 2.6c.3.1.5.1.7-.1l.7-.8c.2-.2.4-.2.6-.1l1.8.9c.3.1.5.3.5.5v.6c0 .4-.2.9-.9 1.2-.6.3-1.5.4-2.5.1a10 10 0 0 1-6.5-6.2c-.3-1-.1-1.9.1-2.5Z"/></svg></a></li>
+          <li><a href="https://x.com/gsnetacademy" target="_blank" rel="noreferrer noopener" aria-label="X (Twitter)" title="X (Twitter)" class="grid h-10 w-10 place-items-center rounded-xl border border-white/12 bg-white/[0.06] text-navy-100/80 transition hover:border-gold-400/50 hover:bg-white/[0.12] hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-4.5 w-4.5" fill="currentColor" aria-hidden="true"><path d="M17.5 3h3.1l-6.8 7.8L21.8 21h-6.2l-4.9-6.4L5.1 21H2l7.3-8.3L2.5 3h6.4l4.4 5.8L17.5 3Zm-1.1 16.2h1.7L7.7 4.7H5.9l10.5 14.5Z"/></svg></a></li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="text-[11px] font-extrabold uppercase tracking-[0.18em] text-gold-400">Quick Links</p>
+        <ul class="mt-4 grid gap-2.5">
+          <li><a href="/" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Home</a></li>
+          <li><a href="courses.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">UGC NET Paper-I</a></li>
+          <li><a href="results.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Our Results</a></li>
+          <li><a href="tutorials.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Tutorials</a></li>
+          <li><a href="blog.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Blog</a></li>
+          <li><a href="about.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">About</a></li>
+          <li><a href="contact.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="text-[11px] font-extrabold uppercase tracking-[0.18em] text-gold-400">Resources</p>
+        <ul class="mt-4 grid gap-2.5">
+          <li><a href="notes.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Notes</a></li>
+          <li><a href="enroll.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Register for ₹500</a></li>
+          <li><a href="/#free-demo" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Free Demo Classes</a></li>
+          <li><a href="https://chat.whatsapp.com/KeaQUhOFz0UGAKtLmsM7oU" target="_blank" rel="noreferrer noopener" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Student Community</a></li>
+        </ul>
+        <p class="mt-6 text-[11px] font-extrabold uppercase tracking-[0.18em] text-gold-400">Legal</p>
+        <ul class="mt-4 grid gap-2.5">
+          <li><a href="privacy-policy.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Privacy Policy</a></li>
+          <li><a href="refund-policy.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Refund &amp; Cancellation</a></li>
+          <li><a href="terms-of-enrollment.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Terms of Enrollment</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="text-[11px] font-extrabold uppercase tracking-[0.18em] text-gold-400">Contact</p>
+        <ul class="mt-4 grid gap-2.5 text-[14px] text-navy-100/75">
+          <li><a href="tel:+919266511505" class="flex items-center gap-2 hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-4 w-4 icon-gold" fill="currentColor" aria-hidden="true"><path d="M5 3h3.5l1.6 4-2 1.4a12 12 0 0 0 5.5 5.5l1.4-2 4 1.6V19a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 3 5.2 2 2 0 0 1 5 3Z"/></svg> +91 9266511505</a></li>
+          <li><a href="tel:+919810845327" class="flex items-center gap-2 hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-4 w-4 icon-gold" fill="currentColor" aria-hidden="true"><path d="M5 3h3.5l1.6 4-2 1.4a12 12 0 0 0 5.5 5.5l1.4-2 4 1.6V19a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 3 5.2 2 2 0 0 1 5 3Z"/></svg> +91 9810845327</a></li>
+          <li><a href="mailto:gsnetacademy@gmail.com" class="flex items-center gap-2 break-all hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-4 w-4 icon-gold" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="m3.5 6.5 8.5 6 8.5-6"/></svg> gsnetacademy@gmail.com</a></li>
+          <li><a href="https://chat.whatsapp.com/KeaQUhOFz0UGAKtLmsM7oU" target="_blank" rel="noreferrer noopener" class="flex items-center gap-2 hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-4 w-4 icon-gold" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.2 20.8 4.6 16A8.4 8.4 0 1 1 8 19.4l-4.8 1.4Z"/><path d="M9 8.4c.3-.7.6-.7.9-.7h.6c.2 0 .5 0 .7.6l.8 1.9c.1.2.1.4 0 .6l-.5.7c-.1.2-.2.4 0 .7a7 7 0 0 0 3 2.6c.3.1.5.1.7-.1l.7-.8c.2-.2.4-.2.6-.1l1.8.9c.3.1.5.3.5.5v.6c0 .4-.2.9-.9 1.2-.6.3-1.5.4-2.5.1a10 10 0 0 1-6.5-6.2c-.3-1-.1-1.9.1-2.5Z"/></svg> WhatsApp Group</a></li>
+        </ul>
+        <a href="enroll.html" class="btn-primary mt-6 w-full">Join for ₹500</a>
+        <p class="text-[14px] mt-3 text-navy-100/75 transition hover:text-gold-300">Address: B 14-15, Udhyog Marg, Block B, Sector 1, Noida, Uttar Pradesh 201301</p>
+      </div>
+    </div>
+
+    <div class="mt-10 border-t border-white/10 pt-6">
+      <ul class="flex flex-wrap items-center gap-x-5 gap-y-2 text-[13px]">
+        <li><a href="privacy-policy.html" class="text-navy-100/70 transition hover:text-gold-300">Privacy Policy</a></li>
+        <li aria-hidden="true" class="text-navy-100/25">|</li>
+        <li><a href="refund-policy.html" class="text-navy-100/70 transition hover:text-gold-300">Refund &amp; Cancellation</a></li>
+        <li aria-hidden="true" class="text-navy-100/25">|</li>
+        <li><a href="terms-of-enrollment.html" class="text-navy-100/70 transition hover:text-gold-300">Terms of Enrollment</a></li>
+      </ul>
+      <div class="mt-4 flex flex-col gap-2 text-[13px] text-navy-100/60 sm:flex-row sm:items-center sm:justify-between">
+        <p>© 2026 GS Net Academy. All Rights Reserved.</p>
+        <p>A Premier institute for UGC NET Paper-1</p>
+      </div>
+      <p class="mt-4 text-[12px] leading-relaxed text-navy-100/45">Disclaimer: GS Net Academy किसी भी exam में selection, rank या score की guarantee नहीं देता। हम quality teaching, study material, practice और academic mentorship प्रदान करते हैं। UGC, NTA या किसी अन्य government body से हमारा कोई affiliation नहीं है।</p>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/testimonial.js"></script>
+</body>
+</html>

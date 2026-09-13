@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Module 8: Educational Philosophy & Thinking — Unit 1 | GS Net Academy</title>
+<meta name="description" content="Educational Philosophy & Thinking — UGC NET Paper-I, Unit 1: Teaching Aptitude, Module 8.">
+<link rel="icon" href="../assets/images/logo.png">
+<link rel="stylesheet" href="../css/tailwind.css">
+<link rel="stylesheet" href="../css/style.css">
+<style>
+  .mod-h2{margin:34px 0 14px;font-size:22px;font-weight:800;color:#0B1B34;padding-top:6px;border-top:1px solid rgba(11,27,52,.08)}
+  .mod-h2:first-child{border-top:0;padding-top:0;margin-top:0}
+  .mod-h3{margin:22px 0 10px;font-size:17px;font-weight:800;color:#0B1B34}
+  .mod-strong{margin:12px 0;font-size:15px;font-weight:700;color:#0B1B34;line-height:1.7}
+  .mod-tag{display:inline-block;margin:14px 0 8px;font-size:11.5px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#B8860B;background:#FFF8E1;border-radius:6px;padding:4px 10px}
+  .prose p{margin:10px 0;font-size:15px;line-height:1.85;color:#334155}
+  .prose-list{margin:10px 0 16px;padding-left:22px;list-style:disc}
+  .prose-list li{margin:6px 0;font-size:15px;line-height:1.75;color:#334155}
+  .table-wrap{overflow-x:auto;margin:16px 0}
+  .mod-table{width:100%;border-collapse:collapse;font-size:13.5px;min-width:480px}
+  .mod-table th,.mod-table td{border:1px solid rgba(11,27,52,.12);padding:9px 12px;text-align:left;vertical-align:top}
+  .mod-table th{background:#0B1B34;color:#fff;font-weight:700}
+  .mod-table tr:nth-child(even) td{background:#F8F5EE}
+</style>
+</head>
+<body>
+
+<input type="checkbox" id="nav-toggle" class="nav-toggle">
+<div class="hidden bg-navy-950 text-white lg:block">
+  <div class="container-wide flex h-9 items-center justify-between text-[12px]">
+    <p class="flex min-w-0 items-center gap-2 truncate font-semibold text-navy-100/80"><svg viewBox="0 0 24 24" class="h-3.5 w-3.5 shrink-0 icon-gold" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1"/></svg><span class="truncate">Target December 2026 Exam — Paper-I Batch Started 16 August 2026</span></p>
+    <div class="flex shrink-0 items-center gap-5 font-semibold">
+      <a href="tel:+919266511505" class="flex items-center gap-1.5 hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-3.5 w-3.5" fill="currentColor" stroke="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3h3.5l1.6 4-2 1.4a12 12 0 0 0 5.5 5.5l1.4-2 4 1.6V19a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 3 5.2 2 2 0 0 1 5 3Z"/></svg> +91 9266511505</a>
+      <a href="tel:+919810845327" class="flex items-center gap-1.5 hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-3.5 w-3.5" fill="currentColor" stroke="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3h3.5l1.6 4-2 1.4a12 12 0 0 0 5.5 5.5l1.4-2 4 1.6V19a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 3 5.2 2 2 0 0 1 5 3Z"/></svg> +91 9810845327</a>
+      <a href="mailto:gsnetacademy@gmail.com" class="flex items-center gap-1.5 hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="m3.5 6.5 8.5 6 8.5-6"/></svg> gsnetacademy@gmail.com</a>
+      <a href="https://api.whatsapp.com/send/?phone=919810845327&text=Hello%2C+can+I+get+more+info+about+joining+the+mentorship+batch+and+classes+for+UGC+NET+JRF+Paper+1%3F&type=phone_number&app_absent=0" target="_blank" rel="noreferrer noopener" class="flex items-center gap-1.5 rounded-md bg-white/10 px-2.5 py-1 transition hover:bg-emerald-500/25 hover:text-white"><svg viewBox="0 0 24 24" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.2 20.8 4.6 16A8.4 8.4 0 1 1 8 19.4l-4.8 1.4Z"/><path d="M9 8.4c.3-.7.6-.7.9-.7h.6c.2 0 .5 0 .7.6l.8 1.9c.1.2.1.4 0 .6l-.5.7c-.1.2-.2.4 0 .7a7 7 0 0 0 3 2.6c.3.1.5.1.7-.1l.7-.8c.2-.2.4-.2.6-.1l1.8.9c.3.1.5.3.5.5v.6c0 .4-.2.9-.9 1.2-.6.3-1.5.4-2.5.1a10 10 0 0 1-6.5-6.2c-.3-1-.1-1.9.1-2.5Z"/></svg> chat us</a>
+    </div>
+  </div>
+</div>
+<header class="sticky top-0 z-50 border-b border-navy-900/8 bg-white/95 backdrop-blur-md">
+  <nav class="container-wide flex h-[76px] items-center gap-4" aria-label="Main">
+    <a href="../index.html" class="flex shrink-0 items-center gap-3" aria-label="Home">
+      <span class="inline-flex shrink-0 items-center justify-center overflow-hidden rounded-lg bg-navy-950 ring-1 ring-navy-900/10">
+        <img src="../assets/images/logo.png" alt="GS Net Academy" class="h-11 w-auto" width="120" height="44">
+      </span>
+      <img src="../assets/images/tagline.png" alt="#1 A Premier institute for UGC NET Paper-1" class=" h-11 hidden w-auto lg:block">
+    </a>
+    <ul class="mx-auto hidden items-center gap-5 xl:flex">
+      <li><a href="../courses.html" class="relative block whitespace-nowrap rounded-lg px-3 py-2 text-[13.5px] font-bold transition-colors text-navy-700/75 hover:text-navy-900">UGC NET Paper-I</a></li>
+      <li><a href="../tutorials.html" class="relative block whitespace-nowrap rounded-lg px-3 py-2 text-[13.5px] font-bold transition-colors text-navy-900">Tutorials</a></li>
+      <li><a href="../notes.html" class="relative block whitespace-nowrap rounded-lg px-3 py-2 text-[13.5px] font-bold transition-colors text-navy-700/75 hover:text-navy-900">Notes</a></li>
+      <li><a href="../blog.html" class="relative block whitespace-nowrap rounded-lg px-3 py-2 text-[13.5px] font-bold transition-colors text-navy-700/75 hover:text-navy-900">Blog</a></li>
+      <li><a href="../about.html" class="relative block whitespace-nowrap rounded-lg px-3 py-2 text-[13.5px] font-bold transition-colors text-navy-700/75 hover:text-navy-900">About</a></li>
+      <li><a href="../contact.html" class="relative block whitespace-nowrap rounded-lg px-3 py-2 text-[13.5px] font-bold transition-colors text-navy-700/75 hover:text-navy-900">Contact</a></li>
+    </ul>
+    <div class="ml-auto flex items-center gap-2 xl:ml-0">
+      <a href="../index.html#free-demo" class="btn-outline btn-sm hidden 2xl:inline-flex">Demo</a>
+      <a href="../enroll.html" class="btn-primary btn-sm hidden sm:inline-flex">Join Now</a>
+      <label for="nav-toggle" class="cursor-pointer rounded-lg border border-navy-900/12 p-2 text-navy-800 xl:hidden" aria-label="Menu"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></label>
+    </div>
+  </nav>
+</header>
+<div class="drawer xl:hidden">
+  <label for="nav-toggle" class="drawer-scrim" aria-hidden="true"></label>
+  <div class="drawer-panel">
+    <div class="flex h-[72px] shrink-0 items-center justify-between border-b border-navy-900/10 px-5">
+      <img src="../assets/images/logo.png" alt="GS Net Academy" class="h-9 w-auto rounded-lg bg-navy-950">
+      <label for="nav-toggle" class="cursor-pointer p-2 text-navy-800" aria-label="Close"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></label>
+    </div>
+    <div class="flex-1 overflow-y-auto p-5">
+      <ul class="flex flex-col gap-1">
+      <li><a href="../index.html" class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold text-navy-700">Home</a></li>
+      <li><a href="../courses.html" class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold text-navy-700">UGC NET Paper-I</a></li>
+      <li><a href="../tutorials.html" class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold bg-navy-50 text-navy-900">Tutorials</a></li>
+      <li><a href="../notes.html" class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold text-navy-700">Notes</a></li>
+      </ul>
+      <div class="mt-5 grid gap-2.5">
+        <a href="../enroll.html" class="btn-primary w-full">✓ JOIN BATCH @ ₹500</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<main id="main">
+<section class="bg-navy-950 text-white">
+  <div class="grid-paper absolute inset-0 opacity-50" aria-hidden="true"></div>
+  <div class="container-x relative py-8 lg:py-10">
+    <nav aria-label="Breadcrumb" class="mb-4">
+      <ol class="flex flex-wrap items-center gap-1.5 text-[12px] font-semibold text-navy-100/70">
+        <li><a href="../index.html" class="hover:text-gold-300">Home</a></li>
+        <li aria-hidden="true">/</li>
+        <li><a href="../tutorials.html" class="hover:text-gold-300">Tutorials</a></li>
+        <li aria-hidden="true">/</li>
+        <li><a href="unit-1.html" class="hover:text-gold-300">Unit 1 · Teaching Aptitude</a></li>
+        <li aria-hidden="true">/</li>
+        <li class="text-gold-300" aria-current="page">Module 8</li>
+      </ol>
+    </nav>
+    <span class="eyebrow"><svg viewBox="0 0 24 24" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5 13.8 9l5.5 1.8-5.5 1.8L12 18.1l-1.8-5.5L4.7 10.8 10.2 9 12 3.5Z"/></svg> Unit 1 · Module 8 of 8</span>
+    <h1 class="h-display mt-4 text-[28px] sm:text-[38px] lg:text-[44px] max-w-3xl">Educational Philosophy & Thinking</h1>
+    <p class="mt-2 text-[15px] text-navy-100/75">शैक्षिक दर्शन एवं चिंतन</p>
+  </div>
+</section>
+
+<section class="bg-cream py-10 lg:py-12"><div class="container-x">
+  <div class="grid gap-8 lg:grid-cols-[1fr_270px]">
+    <article class="card prose p-6 sm:p-8">
+<h2 class="mod-h2">Educational Philosophy &amp; Convergent–Divergent Thinking</h2>
+<h3 class="mod-h3">UGC NET/JRF Paper-1 — Quick Revision Notes</h3>
+<h2 class="mod-h2">1. Educational Philosophy</h2>
+<h3 class="mod-h3">शैक्षिक दर्शन</h3>
+<p>Educational Philosophy education के aims, curriculum, teaching methods, teacher–learner role और values को philosophical principles के आधार पर समझाती है।</p>
+<p class="mod-strong">Educational Philosophy = Aim + Curriculum + Method + Teacher–Learner Role + Values</p>
+<h3 class="mod-h3">A. Idealism — आदर्शवाद</h3>
+<p class="mod-tag">Main Focus</p>
+<p class="mod-strong">Mind + Ideas + Values + Spiritual Development</p>
+<p class="mod-tag">Thinkers</p>
+<ul class="prose-list"><li>Plato</li><li>Socrates</li><li>Hegel</li></ul>
+<p class="mod-tag">Educational Features</p>
+<ul class="prose-list"><li>Truth, Beauty and Goodness</li><li>Moral और spiritual development</li><li>Teacher का central और ideal role</li><li>Humanities, literature, ethics</li><li>Discussion और questioning</li></ul>
+<p class="mod-tag">Recall</p>
+<p class="mod-tag">Idealism → Ideas and Values</p>
+<h3 class="mod-h3">B. Naturalism — प्रकृतिवाद</h3>
+<p class="mod-tag">Main Focus</p>
+<p class="mod-strong">Nature + Freedom + Child-Centred Education</p>
+<p class="mod-tag">Thinkers</p>
+<ul class="prose-list"><li>Jean-Jacques Rousseau</li><li>Herbert Spencer</li></ul>
+<p class="mod-tag">Educational Features</p>
+<ul class="prose-list"><li>Education according to nature</li><li>Learner freedom</li><li>Direct experience</li><li>Minimum external interference</li><li>Teacher as observer/facilitator</li><li>Natural consequences</li></ul>
+<p class="mod-tag">Recall</p>
+<p class="mod-tag">Naturalism → Nature and Freedom</p>
+<h3 class="mod-h3">C. Pragmatism — प्रयोजनवाद</h3>
+<p class="mod-tag">Main Focus</p>
+<p class="mod-strong">Experience + Utility + Action + Problem-Solving</p>
+<p class="mod-tag">Thinkers</p>
+<ul class="prose-list"><li>John Dewey</li><li>William James</li><li>Charles Peirce</li></ul>
+<p class="mod-tag">Educational Features</p>
+<ul class="prose-list"><li>Learning by Doing</li><li>Project and problem-solving methods</li><li>Knowledge tested through consequences</li><li>Flexible curriculum</li><li>Democratic classroom</li><li>Teacher as facilitator</li></ul>
+<p class="mod-tag">Recall</p>
+<p class="mod-tag">Pragmatism → Experience and Action</p>
+<h3 class="mod-h3">D. Realism — यथार्थवाद</h3>
+<p class="mod-tag">Main Focus</p>
+<p class="mod-strong">Objective Reality + Facts + Scientific Knowledge</p>
+<p class="mod-tag">Thinkers</p>
+<ul class="prose-list"><li>Aristotle</li><li>Francis Bacon</li><li>John Locke</li></ul>
+<p class="mod-tag">Educational Features</p>
+<ul class="prose-list"><li>External world exists independently</li><li>Observation and experiment</li><li>Science and practical subjects</li><li>Inductive method</li><li>Sense experience</li></ul>
+<p class="mod-tag">Recall</p>
+<p class="mod-tag">Realism → Reality, Facts and Science</p>
+<h3 class="mod-h3">E. Existentialism — अस्तित्ववाद</h3>
+<p class="mod-tag">Main Focus</p>
+<p class="mod-strong">Individual Freedom + Choice + Responsibility + Authenticity</p>
+<p class="mod-tag">Thinkers</p>
+<ul class="prose-list"><li>Søren Kierkegaard</li><li>Jean-Paul Sartre</li><li>Martin Heidegger</li></ul>
+<p class="mod-tag">Educational Features</p>
+<ul class="prose-list"><li>Learner individuality</li><li>Personal choice</li><li>Self-awareness</li><li>Responsibility for decisions</li><li>Teacher as facilitator of self-discovery</li></ul>
+<p class="mod-tag">Recall</p>
+<p class="mod-strong">Existentialism → Existence, Choice and Responsibility</p>
+<h3 class="mod-h3">Philosophy Comparison</h3>
+<h2 class="mod-h2">2. Convergent Thinking</h2>
+<h3 class="mod-h3">अभिसारी चिंतन</h3>
+<p>Convergent thinking में available information और rules का उपयोग करके किसी problem का एक best या correct answer खोजा जाता है।</p>
+<p class="mod-strong">Convergent Thinking = Many Facts → One Correct Solution</p>
+<p class="mod-tag">Characteristics</p>
+<ul class="prose-list"><li>Logical</li><li>Focused</li><li>Rule-based</li><li>Accuracy-oriented</li><li>One correct answer</li><li>Standardised testing में उपयोगी</li></ul>
+<p class="mod-tag">Example</p>
+<p>25%25\% of 400 कितना है?</p>
+<p>एक correct answer: 100</p>
+<p class="mod-tag">Association</p>
+<p class="mod-strong">J. P. Guilford → Convergent and Divergent Production</p>
+<h2 class="mod-h2">3. Divergent Thinking</h2>
+<h3 class="mod-h3">अपसारी चिंतन</h3>
+<p>Divergent thinking में एक problem या stimulus से अनेक possible ideas, responses और solutions उत्पन्न किए जाते हैं।</p>
+<p class="mod-strong">Divergent Thinking = One Problem → Many Possible Solutions</p>
+<p class="mod-tag">Characteristics</p>
+<ul class="prose-list"><li>Creative</li><li>Open-ended</li><li>Flexible</li><li>Original</li><li>Multiple answers</li><li>Exploratory</li></ul>
+<p class="mod-tag">Example</p>
+<p>“एक plastic bottle के अधिकतम alternative uses बताइए।”</p>
+<p>इसका कोई एक fixed correct answer नहीं है।</p>
+<h2 class="mod-h2">4. Components of Divergent Thinking</h2>
+<h3 class="mod-h3">Fluency</h3>
+<p>अधिक संख्या में ideas उत्पन्न करना।</p>
+<h3 class="mod-h3">Flexibility</h3>
+<p>Different categories या perspectives से ideas देना।</p>
+<h3 class="mod-h3">Originality</h3>
+<p>Unique और uncommon ideas देना।</p>
+<h3 class="mod-h3">Elaboration</h3>
+<p>Idea को detail में develop करना।</p>
+<p class="mod-strong">Divergent Thinking = Fluency + Flexibility + Originality + Elaboration</p>
+<h2 class="mod-h2">5. Convergent vs Divergent Thinking</h2>
+<h3 class="mod-h3">Important Principle</h3>
+<p>Creative problem-solving में दोनों की आवश्यकता होती है:</p>
+<p class="mod-strong">Divergent Thinking generates alternatives; Convergent Thinking selects the best alternative.</p>
+<h2 class="mod-h2">6. Exam Traps</h2>
+<ul class="prose-list"><li>Divergent thinking का अर्थ illogical thinking नहीं है।</li><li>Convergent thinking का अर्थ केवल rote learning नहीं है।</li><li>Creativity में केवल originality नहीं; fluency, flexibility और elaboration भी शामिल हैं।</li><li>Brainstorming मुख्यतः divergent thinking को support करता है।</li><li>Final solution select करना convergent thinking है।</li><li>Guilford को divergent production और Structure of Intellect Model से associate करें।</li><li>Dewey का problem-solving दोनों thinking processes का उपयोग कर सकता है।</li></ul>
+<h2 class="mod-h2">7. Quick MCQs</h2>
+<h3 class="mod-h3">Question 1</h3>
+<p>A learner produces ten different solutions to reduce classroom waste. This primarily represents:</p>
+<p>A. Convergent thinking
+B. Divergent thinking
+C. Rote learning
+D. Conditioning</p>
+<p class="mod-tag">Correct Answer: B. Divergent Thinking</p>
+<p>Explanation: एक problem के multiple solutions generate किए गए हैं।</p>
+<h3 class="mod-h3">Question 2</h3>
+<p>Selecting the most feasible solution from several alternatives represents:</p>
+<p>A. Divergent thinking
+B. Convergent thinking
+C. Random thinking
+D. Imitation</p>
+<p class="mod-tag">Correct Answer: B. Convergent Thinking</p>
+<p>Explanation: Alternatives में से best answer select करना convergent process है।</p>
+<h3 class="mod-h3">Question 3</h3>
+<p>Which educational philosophy is most closely associated with Learning by Doing?</p>
+<p>A. Idealism
+B. Naturalism
+C. Pragmatism
+D. Existentialism</p>
+<p class="mod-tag">Correct Answer: C. Pragmatism</p>
+<p>Explanation: John Dewey का Pragmatism experience, activity और problem-solving पर आधारित है।</p>
+<h3 class="mod-h3">Question 4</h3>
+<p>Individual freedom, choice and responsibility are central to:</p>
+<p>A. Realism
+B. Existentialism
+C. Idealism
+D. Behaviourism</p>
+<p class="mod-tag">Correct Answer: B. Existentialism</p>
+<h2 class="mod-h2">Final Recall</h2>
+<p class="mod-tag">Idealism → Ideas</p>
+<p class="mod-tag">Naturalism → Nature</p>
+<p class="mod-tag">Realism → Reality</p>
+<p class="mod-tag">Pragmatism → Practical Experience</p>
+<p class="mod-tag">Existentialism → Individual Choice</p>
+<p class="mod-tag">Convergent → One Best Answer</p>
+<p class="mod-tag">Divergent → Many Original Answers</p>
+<div class="table-wrap"><table class="mod-table"><tr><th>Philosophy</th><th>Main Focus</th><th>Teacher’s Role</th><th>Preferred Method</th></tr><tr><td>Idealism</td><td>Ideas and values</td><td>Role model</td><td>Dialogue and lecture</td></tr><tr><td>Naturalism</td><td>Nature and freedom</td><td>Observer</td><td>Direct experience</td></tr><tr><td>Pragmatism</td><td>Experience and utility</td><td>Facilitator</td><td>Project/problem-solving</td></tr><tr><td>Realism</td><td>Facts and reality</td><td>Subject expert</td><td>Observation/experiment</td></tr><tr><td>Existentialism</td><td>Choice and individuality</td><td>Guide</td><td>Dialogue/self-exploration</td></tr></table></div>
+<div class="table-wrap"><table class="mod-table"><tr><th>Basis</th><th>Convergent</th><th>Divergent</th></tr><tr><td>Direction</td><td>Multiple information → one answer</td><td>One stimulus → multiple answers</td></tr><tr><td>Nature</td><td>Closed-ended</td><td>Open-ended</td></tr><tr><td>Focus</td><td>Accuracy</td><td>Creativity</td></tr><tr><td>Answers</td><td>One best/correct</td><td>Many possible</td></tr><tr><td>Process</td><td>Logical selection</td><td>Idea generation</td></tr><tr><td>Assessment</td><td>Objective test</td><td>Project/open-ended task</td></tr><tr><td>Example</td><td>Correct formula select करना</td><td>कई research topics बनाना</td></tr></table></div>
+    </article>
+    <aside class="lg:sticky lg:top-24 lg:self-start">
+      <div class="card p-5">
+        <p class="text-[10.5px] font-extrabold uppercase tracking-[0.16em] text-gold-600">Unit 1 · Teaching Aptitude</p>
+        <ul class="mt-3 grid gap-1.5 text-[13.5px] font-semibold text-navy-700">
+          <li><a href="module-1.html" class="block rounded-lg px-2.5 py-2 hover:bg-navy-50">1. Teaching: Objective, Levels &amp; Basic Concepts</a></li>
+          <li><a href="module-2.html" class="block rounded-lg px-2.5 py-2 hover:bg-navy-50">2. Learner's Characteristics</a></li>
+          <li><a href="module-3.html" class="block rounded-lg px-2.5 py-2 hover:bg-navy-50">3. Factors Affecting Teaching</a></li>
+          <li><a href="module-4.html" class="block rounded-lg px-2.5 py-2 hover:bg-navy-50">4. Methods of Teaching in Higher Institutions</a></li>
+          <li><a href="module-5.html" class="block rounded-lg px-2.5 py-2 hover:bg-navy-50">5. Teaching Support System</a></li>
+          <li><a href="module-6.html" class="block rounded-lg px-2.5 py-2 hover:bg-navy-50">6. Evaluation System</a></li>
+          <li><a href="module-7.html" class="block rounded-lg px-2.5 py-2 hover:bg-navy-50">7. Important Educational Thinkers &amp; Theories</a></li>
+          <li><a href="module-8.html" class="block rounded-lg px-2.5 py-2 hover:bg-navy-50">8. Educational Philosophy &amp; Thinking</a></li>
+        </ul>
+        <a href="../enroll.html" class="btn-primary mt-4 w-full">✓ JOIN BATCH @ ₹500</a>
+      </div>
+    </aside>
+  </div>
+  <div class="mt-8 flex flex-wrap items-center justify-between gap-3">
+    <a href="module-7.html" class="btn-outline btn-sm">← Module 7</a>
+    <a href="unit-1.html" class="btn-outline btn-sm">All Unit 1 Modules</a>
+    <a href="../tutorials.html" class="btn-dark btn-sm">All Units →</a>
+  </div>
+</div></section>
+
+<section class="bg-cream py-12 lg:py-14"><div class="container-x">
+  <div class="relative overflow-hidden rounded-2xl bg-navy-950 p-8 text-white sm:p-10">
+    <div class="grid-paper absolute inset-0 opacity-50" aria-hidden="true"></div>
+    <div class="absolute -right-16 -top-16 h-56 w-56 rounded-full bg-gold-500/20 blur-3xl" aria-hidden="true"></div>
+    <div class="relative flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
+      <div>
+        <h2 class="h-display text-[28px] sm:text-[34px]">Join the Paper-1 Batch</h2>
+        <p class="mt-2 max-w-lg text-[14.5px] text-navy-100/80">Course fee FREE — ₹500 registration &amp; academic/logistics contribution. Classes daily at 6:30 PM.</p>
+      </div>
+      <a href="../enroll.html" class="btn-primary shrink-0">✓ JOIN BATCH @ ₹500</a>
+    </div>
+  </div>
+</div></section>
+</main>
+
+<footer class="relative overflow-hidden bg-navy-950 text-white">
+  <div class="grid-paper absolute inset-0 opacity-50" aria-hidden="true"></div>
+  <div class="container-x relative py-12 lg:py-14">
+    <div class="grid grid-cols-2 gap-10 lg:grid-cols-4">
+
+      <div>
+        <div class="flex items-center gap-3">
+          <img src="assets/images/logo.png" alt="GS Net Academy" class="h-11 w-auto rounded-lg bg-white p-1" width="120" height="44">
+          <img src="assets/images/tagline.png" alt="" class="h-11 w-auto brightness-0 invert" aria-hidden="true">
+        </div>
+        <p class="mt-5 text-[14px] leading-relaxed text-navy-100/75">UGC NET Paper-I | JRF Preparation | Mentorship</p>
+        <span class="eyebrow mt-5"><svg viewBox="0 0 24 24" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1"/></svg> JRF @ ₹500 Mission 2026</span>
+
+        <p class="mt-6 text-[11px] font-extrabold uppercase tracking-[0.18em] text-gold-400">Follow Us</p>
+        <ul class="mt-3 flex flex-wrap gap-2">
+          <li><a href="https://www.youtube.com/@gsnetacademy" target="_blank" rel="noreferrer noopener" aria-label="YouTube" title="YouTube" class="grid h-10 w-10 place-items-center rounded-xl border border-white/12 bg-white/[0.06] text-navy-100/80 transition hover:border-gold-400/50 hover:bg-white/[0.12] hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor" aria-hidden="true"><path d="M21.6 7.2a2.5 2.5 0 0 0-1.8-1.8C18.2 5 12 5 12 5s-6.2 0-7.8.4A2.5 2.5 0 0 0 2.4 7.2 26 26 0 0 0 2 12a26 26 0 0 0 .4 4.8 2.5 2.5 0 0 0 1.8 1.8C5.8 19 12 19 12 19s6.2 0 7.8-.4a2.5 2.5 0 0 0 1.8-1.8A26 26 0 0 0 22 12a26 26 0 0 0-.4-4.8ZM10 15V9l5.2 3L10 15Z"/></svg></a></li>
+          <li><a href="https://www.instagram.com/gsnetacademy" target="_blank" rel="noreferrer noopener" aria-label="Instagram" title="Instagram" class="grid h-10 w-10 place-items-center rounded-xl border border-white/12 bg-white/[0.06] text-navy-100/80 transition hover:border-gold-400/50 hover:bg-white/[0.12] hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg></a></li>
+          <li><a href="https://www.facebook.com/gsnetacademy" target="_blank" rel="noreferrer noopener" aria-label="Facebook" title="Facebook" class="grid h-10 w-10 place-items-center rounded-xl border border-white/12 bg-white/[0.06] text-navy-100/80 transition hover:border-gold-400/50 hover:bg-white/[0.12] hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.25-1.5 1.55-1.5H16.7V3.6c-.3 0-1.3-.13-2.47-.13-2.44 0-4.11 1.49-4.11 4.23V9.9H7.4V13h2.72v8h3.38Z"/></svg></a></li>
+          <li><a href="https://t.me/gsnetacademy" target="_blank" rel="noreferrer noopener" aria-label="Telegram" title="Telegram" class="grid h-10 w-10 place-items-center rounded-xl border border-white/12 bg-white/[0.06] text-navy-100/80 transition hover:border-gold-400/50 hover:bg-white/[0.12] hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor" aria-hidden="true"><path d="M21.3 4.3 2.9 11.4c-.9.35-.9 1.62.02 1.93l4.6 1.53 1.75 5.3c.25.75 1.2.95 1.73.37l2.5-2.72 4.6 3.38c.63.46 1.53.12 1.7-.65l3.1-14.9c.2-.9-.7-1.65-1.6-1.31ZM9.6 14.1l8.5-5.6-6.9 6.5-.3 3.3-1.3-4.2Z"/></svg></a></li>
+          <li><a href="https://chat.whatsapp.com/KeaQUhOFz0UGAKtLmsM7oU" target="_blank" rel="noreferrer noopener" aria-label="WhatsApp Group" title="WhatsApp Group" class="grid h-10 w-10 place-items-center rounded-xl border border-white/12 bg-white/[0.06] text-navy-100/80 transition hover:border-emerald-400/50 hover:bg-emerald-500/15 hover:text-emerald-300"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.2 20.8 4.6 16A8.4 8.4 0 1 1 8 19.4l-4.8 1.4Z"/><path d="M9 8.4c.3-.7.6-.7.9-.7h.6c.2 0 .5 0 .7.6l.8 1.9c.1.2.1.4 0 .6l-.5.7c-.1.2-.2.4 0 .7a7 7 0 0 0 3 2.6c.3.1.5.1.7-.1l.7-.8c.2-.2.4-.2.6-.1l1.8.9c.3.1.5.3.5.5v.6c0 .4-.2.9-.9 1.2-.6.3-1.5.4-2.5.1a10 10 0 0 1-6.5-6.2c-.3-1-.1-1.9.1-2.5Z"/></svg></a></li>
+          <li><a href="https://x.com/gsnetacademy" target="_blank" rel="noreferrer noopener" aria-label="X (Twitter)" title="X (Twitter)" class="grid h-10 w-10 place-items-center rounded-xl border border-white/12 bg-white/[0.06] text-navy-100/80 transition hover:border-gold-400/50 hover:bg-white/[0.12] hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-4.5 w-4.5" fill="currentColor" aria-hidden="true"><path d="M17.5 3h3.1l-6.8 7.8L21.8 21h-6.2l-4.9-6.4L5.1 21H2l7.3-8.3L2.5 3h6.4l4.4 5.8L17.5 3Zm-1.1 16.2h1.7L7.7 4.7H5.9l10.5 14.5Z"/></svg></a></li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="text-[11px] font-extrabold uppercase tracking-[0.18em] text-gold-400">Quick Links</p>
+        <ul class="mt-4 grid gap-2.5">
+          <li><a href="/" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Home</a></li>
+          <li><a href="courses.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">UGC NET Paper-I</a></li>
+          <li><a href="results.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Our Results</a></li>
+          <li><a href="tutorials.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Tutorials</a></li>
+          <li><a href="blog.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Blog</a></li>
+          <li><a href="about.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">About</a></li>
+          <li><a href="contact.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="text-[11px] font-extrabold uppercase tracking-[0.18em] text-gold-400">Resources</p>
+        <ul class="mt-4 grid gap-2.5">
+          <li><a href="notes.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Notes</a></li>
+          <li><a href="enroll.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Register for ₹500</a></li>
+          <li><a href="/#free-demo" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Free Demo Classes</a></li>
+          <li><a href="https://chat.whatsapp.com/KeaQUhOFz0UGAKtLmsM7oU" target="_blank" rel="noreferrer noopener" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Student Community</a></li>
+        </ul>
+        <p class="mt-6 text-[11px] font-extrabold uppercase tracking-[0.18em] text-gold-400">Legal</p>
+        <ul class="mt-4 grid gap-2.5">
+          <li><a href="privacy-policy.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Privacy Policy</a></li>
+          <li><a href="refund-policy.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Refund &amp; Cancellation</a></li>
+          <li><a href="terms-of-enrollment.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Terms of Enrollment</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="text-[11px] font-extrabold uppercase tracking-[0.18em] text-gold-400">Contact</p>
+        <ul class="mt-4 grid gap-2.5 text-[14px] text-navy-100/75">
+          <li><a href="tel:+919266511505" class="flex items-center gap-2 hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-4 w-4 icon-gold" fill="currentColor" aria-hidden="true"><path d="M5 3h3.5l1.6 4-2 1.4a12 12 0 0 0 5.5 5.5l1.4-2 4 1.6V19a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 3 5.2 2 2 0 0 1 5 3Z"/></svg> +91 9266511505</a></li>
+          <li><a href="tel:+919810845327" class="flex items-center gap-2 hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-4 w-4 icon-gold" fill="currentColor" aria-hidden="true"><path d="M5 3h3.5l1.6 4-2 1.4a12 12 0 0 0 5.5 5.5l1.4-2 4 1.6V19a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 3 5.2 2 2 0 0 1 5 3Z"/></svg> +91 9810845327</a></li>
+          <li><a href="mailto:gsnetacademy@gmail.com" class="flex items-center gap-2 break-all hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-4 w-4 icon-gold" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="m3.5 6.5 8.5 6 8.5-6"/></svg> gsnetacademy@gmail.com</a></li>
+          <li><a href="https://chat.whatsapp.com/KeaQUhOFz0UGAKtLmsM7oU" target="_blank" rel="noreferrer noopener" class="flex items-center gap-2 hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-4 w-4 icon-gold" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.2 20.8 4.6 16A8.4 8.4 0 1 1 8 19.4l-4.8 1.4Z"/><path d="M9 8.4c.3-.7.6-.7.9-.7h.6c.2 0 .5 0 .7.6l.8 1.9c.1.2.1.4 0 .6l-.5.7c-.1.2-.2.4 0 .7a7 7 0 0 0 3 2.6c.3.1.5.1.7-.1l.7-.8c.2-.2.4-.2.6-.1l1.8.9c.3.1.5.3.5.5v.6c0 .4-.2.9-.9 1.2-.6.3-1.5.4-2.5.1a10 10 0 0 1-6.5-6.2c-.3-1-.1-1.9.1-2.5Z"/></svg> WhatsApp Group</a></li>
+        </ul>
+        <a href="enroll.html" class="btn-primary mt-6 w-full">Join for ₹500</a>
+        <p class="text-[14px] mt-3 text-navy-100/75 transition hover:text-gold-300">Address: B 14-15, Udhyog Marg, Block B, Sector 1, Noida, Uttar Pradesh 201301</p>
+      </div>
+    </div>
+
+    <div class="mt-10 border-t border-white/10 pt-6">
+      <ul class="flex flex-wrap items-center gap-x-5 gap-y-2 text-[13px]">
+        <li><a href="privacy-policy.html" class="text-navy-100/70 transition hover:text-gold-300">Privacy Policy</a></li>
+        <li aria-hidden="true" class="text-navy-100/25">|</li>
+        <li><a href="refund-policy.html" class="text-navy-100/70 transition hover:text-gold-300">Refund &amp; Cancellation</a></li>
+        <li aria-hidden="true" class="text-navy-100/25">|</li>
+        <li><a href="terms-of-enrollment.html" class="text-navy-100/70 transition hover:text-gold-300">Terms of Enrollment</a></li>
+      </ul>
+      <div class="mt-4 flex flex-col gap-2 text-[13px] text-navy-100/60 sm:flex-row sm:items-center sm:justify-between">
+        <p>© 2026 GS Net Academy. All Rights Reserved.</p>
+        <p>A Premier institute for UGC NET Paper-1</p>
+      </div>
+      <p class="mt-4 text-[12px] leading-relaxed text-navy-100/45">Disclaimer: GS Net Academy किसी भी exam में selection, rank या score की guarantee नहीं देता। हम quality teaching, study material, practice और academic mentorship प्रदान करते हैं। UGC, NTA या किसी अन्य government body से हमारा कोई affiliation नहीं है।</p>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/testimonial.js"></script>
+</body>
+</html>

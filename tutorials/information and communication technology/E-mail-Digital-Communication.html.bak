@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-mail & Digital Communication – Full Notes | UGC NET Paper-1</title>
+  <meta name="description" content="Complete tutorial: E-mail, digital communication, e-mail protocols (SMTP, POP3, IMAP), CC & BCC, e-mail etiquette, video conferencing, synchronous/asynchronous communication, VoIP, instant messaging for UGC NET Paper-1 ICT.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; }
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background: #f8f5ee;
+      color: #101a3d;
+    }
+    .h-display { font-family: 'Poppins', sans-serif; font-weight: 800; letter-spacing: -0.01em; }
+    .container { max-width: 1360px; margin: 0 auto; padding: 0 20px; }
+
+    .hero {
+      background: #0b1330;
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+      padding: 28px 0 22px;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      right: -80px;
+      top: -100px;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(232,183,75,0.2), transparent 70%);
+    }
+    .hero-inner { position: relative; }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      padding: 6px 16px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+      color: #e8b74b;
+    }
+    .hero h1 {
+      font-size: clamp(28px, 4.2vw, 44px);
+      margin: 12px 0 6px;
+    }
+    .hero p {
+      color: rgba(255,255,255,0.78);
+      max-width: 680px;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 28px;
+      padding: 28px 0 50px;
+      align-items: start;
+    }
+    @media (max-width: 980px) {
+      .layout { grid-template-columns: 1fr; }
+    }
+
+    .sidebar {
+      position: sticky;
+      top: 16px;
+      max-height: calc(100vh - 40px);
+      overflow-y: auto;
+      background: #fff;
+      border: 1px solid rgba(16,26,61,0.08);
+      border-radius: 16px;
+      padding: 16px 12px;
+      box-shadow: 0 6px 24px rgba(16,26,61,0.05);
+    }
+    .sidebar::-webkit-scrollbar { width: 5px; }
+    .sidebar::-webkit-scrollbar-thumb { background: #dde2ef; border-radius: 8px; }
+    .sidebar-title {
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: #b9852a;
+      padding: 4px 10px 14px;
+    }
+    .nav-link {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 10px;
+      border-radius: 10px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #33406b;
+      line-height: 1.3;
+      transition: 0.1s;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .nav-link:hover { background: #f4f6fc; color: #0b1330; }
+    .nav-link.active {
+      background: #fdf6e7;
+      color: #0b1330;
+    }
+    .nav-num {
+      flex: none;
+      width: 22px;
+      height: 22px;
+      border-radius: 7px;
+      background: #e7eaf5;
+      color: #5b6690;
+      font-size: 11px;
+      font-weight: 800;
+      display: grid;
+      place-items: center;
+    }
+    .nav-link.active .nav-num {
+      background: #e8b74b;
+      color: #0b1330;
+    }
+
+    #sidebar-toggle { display: none; }
+    .mobile-bar { display: none; }
+    @media (max-width: 980px) {
+      .mobile-bar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: #fff;
+        border: 1px solid rgba(16,26,61,0.1);
+        border-radius: 12px;
+        padding: 12px 16px;
+        margin-bottom: 8px;
+        font-weight: 800;
+        font-size: 13.5px;
+        color: #0b1330;
+      }
+      .sidebar { display: none; position: static; max-height: none; }
+      #sidebar-toggle:checked ~ .layout .sidebar { display: block; }
+    }
+
+    .content { min-width: 0; }
+    .topic-card {
+      background: #fff;
+      border: 1px solid rgba(16,26,61,0.08);
+      border-radius: 16px;
+      padding: 20px 20px 16px;
+      margin-bottom: 18px;
+      scroll-margin-top: 20px;
+      display: block;
+    }
+    .topic-card.hidden { display: none; }
+    .sec-head {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+    .sec-num {
+      flex: none;
+      width: 34px;
+      height: 34px;
+      border-radius: 10px;
+      background: #0b1330;
+      color: #e8b74b;
+      font-weight: 800;
+      font-size: 14px;
+      display: grid;
+      place-items: center;
+    }
+    .sec-head h2 {
+      margin: 0;
+      font-size: 19px;
+      font-weight: 800;
+      color: #0b1330;
+    }
+    .topic-card p {
+      font-size: 14.5px;
+      line-height: 1.75;
+      color: #1a254a;
+      margin: 6px 0;
+    }
+    .bullet-list {
+      margin: 8px 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 5px;
+    }
+    .bullet-list li {
+      position: relative;
+      padding-left: 20px;
+      font-size: 14px;
+      line-height: 1.6;
+      color: #1a254a;
+    }
+    .bullet-list li::before {
+      content: "";
+      position: absolute;
+      left: 2px;
+      top: 9px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #d9a53a;
+    }
+    .formula-box {
+      background: #0b1330;
+      color: #fdeec2;
+      font-weight: 700;
+      font-size: 13.6px;
+      padding: 10px 16px;
+      border-radius: 10px;
+      margin: 10px 0;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 12px 0;
+      font-size: 13.6px;
+      display: block;
+      overflow-x: auto;
+    }
+    .data-table th, .data-table td {
+      border: 1px solid #e7eaf5;
+      padding: 8px 12px;
+      text-align: left;
+      color: #1a254a;
+      white-space: normal;
+    }
+    .data-table th {
+      background: #f4f6fc;
+      color: #0b1330;
+      font-weight: 800;
+    }
+    .pyq-tag {
+      display: inline-block;
+      background: #fdf6e7;
+      color: #b9852a;
+      font-weight: 800;
+      font-size: 12px;
+      padding: 4px 12px;
+      border-radius: 8px;
+      margin: 12px 0 6px;
+    }
+    .answer-box {
+      background: #eefaf2;
+      border: 1px solid #bfe8cc;
+      color: #1a7a4c;
+      font-weight: 700;
+      font-size: 13.6px;
+      padding: 6px 14px;
+      border-radius: 9px;
+      margin: 6px 0;
+    }
+    .explain {
+      background: #f4f6fc;
+      border-radius: 9px;
+      padding: 6px 14px;
+      font-size: 13.6px;
+      color: #1a254a;
+    }
+    .subtopic {
+      padding: 14px 0 6px;
+      border-top: 1px dashed #e7eaf5;
+    }
+    .subtopic:first-of-type { border-top: none; padding-top: 2px; }
+    .subhead {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 6px;
+    }
+    .sub-num {
+      flex: none;
+      width: 26px;
+      height: 26px;
+      border-radius: 8px;
+      background: #fdf6e7;
+      color: #b9852a;
+      font-weight: 800;
+      font-size: 12px;
+      display: grid;
+      place-items: center;
+    }
+    .subhead h3 {
+      margin: 0;
+      font-size: 15.5px;
+      font-weight: 800;
+      color: #0b1330;
+    }
+    .enroll-cta {
+      background: #0b1330;
+      color: #fff;
+      border-radius: 16px;
+      padding: 24px 24px;
+      margin-top: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+      overflow: hidden;
+    }
+    .enroll-cta::before {
+      content: "";
+      position: absolute;
+      right: -40px;
+      top: -40px;
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(232,183,75,0.2), transparent 70%);
+    }
+    .enroll-cta h3 { margin: 0 0 4px; font-size: 20px; }
+    .enroll-cta p { margin: 0; color: rgba(255,255,255,0.75); font-size: 13.5px; max-width: 480px; }
+    .btn-gold {
+      background: #e8b74b;
+      color: #0b1330;
+      font-weight: 800;
+      padding: 10px 22px;
+      border-radius: 10px;
+      font-size: 13.5px;
+      white-space: nowrap;
+      text-decoration: none;
+    }
+  </style>
+
+  <link rel="stylesheet" href="/css/tailwind.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <style>.hero h1 { font-weight: 800 !important; color: #fff !important; line-height: 1.2 !important; font-family: 'Poppins', sans-serif !important; }</style>
+
+  <link rel="icon" href="/assets/images/logo.png">
+</head>
+<body>
+
+<header class="sticky top-0 z-50 border-b border-navy-900/8 bg-white/95 backdrop-blur-md">
+  <nav class="container-wide flex h-[76px] items-center gap-4" aria-label="Main">
+    <a href="/" class="flex shrink-0 items-center gap-3" aria-label="Home">
+      <span class="inline-flex shrink-0 items-center justify-center overflow-hidden rounded-lg bg-navy-950 ring-1 ring-navy-900/10">
+        <img src="assets/images/logo.png" alt="GS Net Academy" class="h-11 w-auto" width="120" height="44">
+      </span>
+      <img src="assets/images/tagline.png" alt="#1 A Premier institute for UGC NET Paper-1" class="h-11 hidden w-auto lg:block">
+    </a>
+    <ul class="mx-auto hidden items-center gap-5 xl:flex">
+      <li><a href="courses.html" class="relative block whitespace-nowrap rounded-lg px-3 py-2 text-[13.5px] font-bold transition-colors text-navy-700/75 hover:text-navy-900">UGC NET Paper-I</a></li>
+      <li><a href="results.html" class="relative block whitespace-nowrap rounded-lg px-3 py-2 text-[13.5px] font-bold transition-colors text-navy-700/75 hover:text-navy-900">Results</a></li>
+      <li><a href="tutorial.html" class="relative block whitespace-nowrap rounded-lg px-3 py-2 text-[13.5px] font-bold transition-colors text-navy-700/75 hover:text-navy-900">Tutorials</a></li>
+      <li><a href="notes.html" class="relative block whitespace-nowrap rounded-lg px-3 py-2 text-[13.5px] font-bold transition-colors text-navy-700/75 hover:text-navy-900">Notes</a></li>
+      <li><a href="blog.html" class="relative block whitespace-nowrap rounded-lg px-3 py-2 text-[13.5px] font-bold transition-colors text-navy-700/75 hover:text-navy-900">Blog</a></li>
+      <li><a href="about.html" class="relative block whitespace-nowrap rounded-lg px-3 py-2 text-[13.5px] font-bold transition-colors text-navy-700/75 hover:text-navy-900">About</a></li>
+      <li><a href="contact.html" class="relative block whitespace-nowrap rounded-lg px-3 py-2 text-[13.5px] font-bold transition-colors text-navy-700/75 hover:text-navy-900">Contact</a></li>
+    </ul>
+    <div class="ml-auto flex items-center gap-2 xl:ml-0">
+      <span title="Coming soon" class="hidden items-center gap-1.5 whitespace-nowrap rounded-lg border border-navy-900/12 px-3 py-2 text-[13px] font-bold text-navy-700 lg:inline-flex"><svg viewBox="0 0 24 24" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="4.5" width="14" height="16" rx="2.5"/><path d="M9 4.5a3 3 0 0 1 6 0"/><path d="M9 11h6M9 15h4"/></svg> <a href="https://mock-test.gsnetacademy.com/" class="cursor-pointer">Exam Portal</a></span>
+      <a href="/#free-demo" class="btn-outline btn-sm hidden 2xl:inline-flex">Demo</a>
+      <a href="enroll.html" class="btn-primary btn-sm hidden sm:inline-flex">Join Now</a>
+      <label for="nav-toggle" class="cursor-pointer rounded-lg border border-navy-900/12 p-2 text-navy-800 xl:hidden" aria-label="Menu"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></label>
+    </div>
+  </nav>
+</header>
+
+<div class="drawer xl:hidden">
+  <label for="nav-toggle" class="drawer-scrim" aria-hidden="true"></label>
+  <div class="drawer-panel">
+    <div class="flex h-[72px] shrink-0 items-center justify-between border-b border-navy-900/10 px-5">
+      <img src="assets/images/logo.png" alt="GS Net Academy" class="h-9 w-auto rounded-lg bg-navy-950">
+      <label for="nav-toggle" class="cursor-pointer p-2 text-navy-800" aria-label="Close"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></label>
+    </div>
+    <div class="flex-1 overflow-y-auto p-5">
+      <ul class="flex flex-col gap-1">
+      <li><a href="/" class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold bg-navy-50 text-navy-900">Home</a></li>
+      <li><a href="courses.html" class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold text-navy-700">UGC NET Paper-I</a></li>
+      <li><a href="results.html" class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold text-navy-700">Our Results</a></li>
+      <li><span class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold text-navy-400">UG / PG (Paper-2)<span class="rounded-md bg-navy-50 px-2 py-0.5 text-[10.5px] font-extrabold uppercase tracking-wider">Coming soon</span></span></li>
+      <li><a href="tutorial.html" class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold text-navy-700">Tutorials</a></li>
+      <li><a href="notes.html" class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold text-navy-700">Notes</a></li>
+      <li><a href="blog.html" class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold text-navy-700">Blog</a></li>
+      <li><a href="about.html" class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold text-navy-700">About</a></li>
+      <li><a href="contact.html" class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold text-navy-700">Contact</a></li>
+      </ul>
+      <p class="mt-3 rounded-xl bg-gold-50 px-4 py-3 text-[12.5px] font-extrabold uppercase tracking-wider text-gold-700">AI-Powered Career Guidance — Coming soon</p>
+      <div class="mt-5 grid gap-2.5">
+        <a href="enroll.html" class="btn-primary w-full">✓ JOIN BATCH @ ₹500</a>
+        <a href="/#free-demo" class="btn-outline w-full">▶ WATCH FREE DEMO</a>
+        <a href="https://chat.whatsapp.com/KeaQUhOFz0UGAKtLmsM7oU" target="_blank" rel="noreferrer noopener" class="btn-outline w-full"><svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.2 20.8 4.6 16A8.4 8.4 0 1 1 8 19.4l-4.8 1.4Z"/><path d="M9 8.4c.3-.7.6-.7.9-.7h.6c.2 0 .5 0 .7.6l.8 1.9c.1.2.1.4 0 .6l-.5.7c-.1.2-.2.4 0 .7a7 7 0 0 0 3 2.6c.3.1.5.1.7-.1l.7-.8c.2-.2.4-.2.6-.1l1.8.9c.3.1.5.3.5.5v.6c0 .4-.2.9-.9 1.2-.6.3-1.5.4-2.5.1a10 10 0 0 1-6.5-6.2c-.3-1-.1-1.9.1-2.5Z"/></svg> WhatsApp Group</a>
+        <a href="tel:+919266511505" class="btn-dark w-full"><svg viewBox="0 0 24 24" class="h-4 w-4" fill="currentColor" stroke="none" aria-hidden="true"><path d="M5 3h3.5l1.6 4-2 1.4a12 12 0 0 0 5.5 5.5l1.4-2 4 1.6V19a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 3 5.2 2 2 0 0 1 5 3Z"/></svg> Call 9266511505</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<section class="hero">
+  <div class="container hero-inner">
+    <span class="eyebrow">★ UGC NET Paper-I · ICT</span>
+    <h1 class="h-display">E-mail & Digital Communication</h1>
+    <p>Complete tutorial: E-mail, digital communication, e-mail protocols (SMTP, POP3, IMAP), CC & BCC, e-mail etiquette, video conferencing, synchronous/asynchronous communication, VoIP, instant messaging.</p>
+  </div>
+</section>
+
+<main class="container">
+  <input type="checkbox" id="sidebar-toggle">
+  <label for="sidebar-toggle" class="mobile-bar">
+    <span>📑 On this page</span>
+    <span>☰ Menu</span>
+  </label>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebarNav">
+      <p class="sidebar-title">On this page</p>
+      <nav>
+      <a href="/tutorials/information-and-communication-technology/e-mail-digital-communication/email-intro" class="nav-link active"><span class="nav-num">1</span>E-mail</a>
+        <a href="/tutorials/information-and-communication-technology/e-mail-digital-communication/email-structure" class="nav-link"><span class="nav-num">2</span>E-mail Structure</a>
+        <a href="/tutorials/information-and-communication-technology/e-mail-digital-communication/cc-bcc" class="nav-link"><span class="nav-num">3</span>CC & BCC</a>
+        <a href="/tutorials/information-and-communication-technology/e-mail-digital-communication/email-protocols" class="nav-link"><span class="nav-num">4</span>E-mail Protocols</a>
+        <a href="/tutorials/information-and-communication-technology/e-mail-digital-communication/smtp" class="nav-link"><span class="nav-num">5</span>SMTP</a>
+        <a href="/tutorials/information-and-communication-technology/e-mail-digital-communication/pop3" class="nav-link"><span class="nav-num">6</span>POP3</a>
+        <a href="/tutorials/information-and-communication-technology/e-mail-digital-communication/imap" class="nav-link"><span class="nav-num">7</span>IMAP</a>
+        <a href="/tutorials/information-and-communication-technology/e-mail-digital-communication/pop3-vs-imap" class="nav-link"><span class="nav-num">8</span>POP3 vs IMAP</a>
+        <a href="/tutorials/information-and-communication-technology/e-mail-digital-communication/email-etiquette" class="nav-link"><span class="nav-num">9</span>E-mail Etiquette</a>
+        <a href="/tutorials/information-and-communication-technology/e-mail-digital-communication/digital-communication" class="nav-link"><span class="nav-num">10</span>Digital Communication</a>
+        <a href="/tutorials/information-and-communication-technology/e-mail-digital-communication/synchronous-asynchronous" class="nav-link"><span class="nav-num">11</span>Synchronous vs Asynchronous</a>
+        <a href="/tutorials/information-and-communication-technology/e-mail-digital-communication/video-conferencing" class="nav-link"><span class="nav-num">12</span>Video Conferencing</a>
+        <a href="/tutorials/information-and-communication-technology/e-mail-digital-communication/voip" class="nav-link"><span class="nav-num">13</span>VoIP</a>
+        <a href="/tutorials/information-and-communication-technology/e-mail-digital-communication/instant-messaging" class="nav-link"><span class="nav-num">14</span>Instant Messaging</a>
+        <a href="/tutorials/information-and-communication-technology/e-mail-digital-communication/collaboration-tools" class="nav-link"><span class="nav-num">15</span>Collaboration Tools</a>
+        <a href="/tutorials/information-and-communication-technology/e-mail-digital-communication/digital-communication-ethics" class="nav-link"><span class="nav-num">16</span>Digital Communication Ethics</a>
+        <a href="/tutorials/information-and-communication-technology/e-mail-digital-communication/exam-traps" class="nav-link"><span class="nav-num">17</span>Common Exam Traps</a>
+        <a href="/tutorials/information-and-communication-technology/e-mail-digital-communication/practice-questions" class="nav-link"><span class="nav-num">18</span>Practice Questions</a>
+        <a href="/tutorials/information-and-communication-technology/e-mail-digital-communication/one-page-revision" class="nav-link"><span class="nav-num">19</span>One-Page Revision</a>
+      </nav>
+    </aside>
+
+    <div class="content" id="contentArea">
+      <!-- ===== CARDS ===== -->
+      <div id="email-intro" class="topic-card"><div class="sec-head"><span class="sec-num">1</span><h2>E-mail — ईमेल</h2></div><p><strong>E-mail (Electronic Mail)</strong> digital messages को network के माध्यम से send/receive करने की system है।</p><div class="formula-box">E-mail = Electronic Message + Network + Recipient</div><p><strong>Key Features:</strong></p><ul class="bullet-list"><li>Text messages with attachments</li><li>Global reach</li><li>Asynchronous communication</li><li>Can be stored and forwarded</li><li>Multiple recipients possible (To, CC, BCC)</li></ul><p><strong>Advantages:</strong> Fast, economical, permanent record, attachments, global reach</p><p><strong>Limitations:</strong> No immediate feedback, spam, phishing, attachment size limits</p></div>
+
+      <div id="email-structure" class="topic-card"><div class="sec-head"><span class="sec-num">2</span><h2>E-mail Structure — ईमेल संरचना</h2></div><ul class="bullet-list"><li><strong>To — मुख्य प्राप्तकर्ता:</strong> Primary recipient(s) of the email.</li><li><strong>CC (Carbon Copy) — कार्बन कॉपी:</strong> Additional recipients whose addresses are visible to all.</li><li><strong>BCC (Blind Carbon Copy) — ब्लाइंड कार्बन कॉपी:</strong> Additional recipients whose addresses are <strong>not visible</strong> to other recipients.</li><li><strong>Subject — विषय:</strong> Concise summary of the email's purpose.</li><li><strong>Body — मुख्य भाग:</strong> The main content of the email.</li><li><strong>Attachment — संलग्नक:</strong> File(s) sent along with the email.</li><li><strong>Signature — हस्ताक्षर:</strong> Sender's identification/contact information (automated).</li></ul></div>
+
+      <div id="cc-bcc" class="topic-card"><div class="sec-head"><span class="sec-num">3</span><h2>CC & BCC — CC एवं BCC</h2></div><ul class="bullet-list"><li><strong>CC (Carbon Copy):</strong><ul><li>Recipients are <strong>visible</strong> to all other recipients</li><li>Used when everyone should know who received the email</li><li>Example: Project team members</li></ul></li><li><strong>BCC (Blind Carbon Copy):</strong><ul><li>Recipients are <strong>hidden</strong> from other recipients</li><li>Used to protect privacy or when recipients don't need to see each other</li><li>Example: Sending a bulk email to many people</li></ul></li></ul><p><strong>Exam Point:</strong> BCC recipients are hidden from <strong>all</strong> other recipients, including those in To and CC.</p></div>
+
+      <div id="email-protocols" class="topic-card"><div class="sec-head"><span class="sec-num">4</span><h2>E-mail Protocols — ईमेल प्रोटोकॉल</h2></div><ul class="bullet-list"><li><strong>SMTP (Simple Mail Transfer Protocol):</strong> Used for <strong>sending</strong> e-mail. Port 25.</li><li><strong>POP3 (Post Office Protocol Version 3):</strong> Used for <strong>receiving/downloading</strong> e-mail from server to client. Port 110.</li><li><strong>IMAP (Internet Message Access Protocol):</strong> Used for <strong>accessing and synchronising</strong> e-mail on the server. Port 143.</li></ul><div class="formula-box">SMTP Sends | POP3 Pulls/Downloads | IMAP Synchronises</div></div>
+
+      <div id="smtp" class="topic-card"><div class="sec-head"><span class="sec-num">5</span><h2>SMTP — SMTP</h2></div><p><strong>SMTP (Simple Mail Transfer Protocol):</strong> Protocol for <strong>sending</strong> e-mail from client to server and between servers.</p><ul class="bullet-list"><li><strong>Port:</strong> 25 (default)</li><li><strong>Function:</strong> Outgoing mail transfer</li><li><strong>Direction:</strong> Sender → Server → Recipient's Server</li><li><strong>Works with:</strong> POP3 or IMAP for receiving</li></ul><p><strong>Key Point:</strong> SMTP is used <strong>only for sending</strong> e-mail, not for receiving.</p></div>
+
+      <div id="pop3" class="topic-card"><div class="sec-head"><span class="sec-num">6</span><h2>POP3 — POP3</h2></div><p><strong>POP3 (Post Office Protocol Version 3):</strong> Protocol for <strong>downloading/retrieving</strong> e-mail from server to client.</p><ul class="bullet-list"><li><strong>Port:</strong> 110</li><li><strong>Function:</strong> Mail retrieval and download</li><li><strong>Direction:</strong> Server → Client</li><li><strong>Default behavior:</strong> Downloads and removes from server (can be configured to keep a copy)</li><li><strong>Best for:</strong> Single device access; offline access</li></ul><p><strong>Limitation:</strong> Limited synchronisation across multiple devices.</p></div>
+
+      <div id="imap" class="topic-card"><div class="sec-head"><span class="sec-num">7</span><h2>IMAP — IMAP</h2></div><p><strong>IMAP (Internet Message Access Protocol):</strong> Protocol for <strong>accessing and managing</strong> e-mail on the server.</p><ul class="bullet-list"><li><strong>Port:</strong> 143</li><li><strong>Function:</strong> Mail management and synchronisation</li><li><strong>Direction:</strong> Server → Client (with server storage)</li><li><strong>Keeps messages on server</strong> — syncs across multiple devices</li><li><strong>Best for:</strong> Multiple device access; synchronisation</li></ul><p><strong>Advantage:</strong> Same inbox, folders, and read/unread status across all devices.</p></div>
+
+      <div id="pop3-vs-imap" class="topic-card"><div class="sec-head"><span class="sec-num">8</span><h2>POP3 vs IMAP — POP3 vs IMAP</h2></div><table class="data-table"><tr><th>Basis</th><th>POP3</th><th>IMAP</th></tr><tr><td>Function</td><td>Download/retrieve mail</td><td>Access/manage mail on server</td></tr><tr><td>Storage</td><td>Local storage (downloads to device)</td><td>Server storage (keeps on server)</td></tr><tr><td>Synchronisation</td><td>Limited</td><td>Full synchronisation across devices</td></tr><tr><td>Offline Access</td><td>Excellent (stored locally)</td><td>Limited (needs sync)</td></tr><tr><td>Multi-device Support</td><td>Poor (each device sees different state)</td><td>Excellent (same state everywhere)</td></tr><tr><td>Port</td><td>110</td><td>143</td></tr><tr><td>Default Behavior</td><td>Downloads and removes from server</td><td>Keeps on server</td></tr></table><p><strong>Exam Point:</strong> IMAP is preferred when using multiple devices; POP3 is suitable for single-device offline access.</p></div>
+
+      <div id="email-etiquette" class="topic-card"><div class="sec-head"><span class="sec-num">9</span><h2>E-mail Etiquette — ईमेल शिष्टाचार</h2></div><ul class="bullet-list"><li><strong>Clear Subject Line:</strong> Use descriptive, concise subjects.</li><li><strong>Professional Greeting & Closing:</strong> Formal greeting and sign-off.</li><li><strong>Use of CC & BCC Appropriately:</strong> Use CC for transparency, BCC for privacy.</li><li><strong>Reply All:</strong> Use only when necessary.</li><li><strong>Concise and Clear Language:</strong> Be brief and to the point.</li><li><strong>Avoid ALL CAPS:</strong> It is considered shouting.</li><li><strong>Check Spelling & Grammar:</strong> Proofread before sending.</li><li><strong>Avoid Excessive Attachments:</strong> Compress or link large files.</li><li><strong>Timely Response:</strong> Reply within a reasonable time.</li><li><strong>Professional Tone:</strong> Maintain professionalism even in casual communication.</li></ul></div>
+
+      <div id="digital-communication" class="topic-card"><div class="sec-head"><span class="sec-num">10</span><h2>Digital Communication — डिजिटल संचार</h2></div><p><strong>Digital Communication</strong> digital technologies के माध्यम से information, ideas और messages का exchange है।</p><p><strong>Forms of Digital Communication:</strong></p><ul class="bullet-list"><li><strong>E-mail:</strong> Asynchronous written messages</li><li><strong>Instant Messaging:</strong> Real-time text chat (WhatsApp, Telegram)</li><li><strong>Video Conferencing:</strong> Real-time audio-visual communication (Zoom, Meet)</li><li><strong>Voice over IP (VoIP):</strong> Internet-based voice calls (Skype)</li><li><strong>Social Media:</strong> Public/semi-public communication platforms</li><li><strong>Discussion Forums:</strong> Asynchronous group discussions</li><li><strong>Collaboration Tools:</strong> Shared documents and workspaces</li></ul></div>
+
+      <div id="synchronous-asynchronous" class="topic-card"><div class="sec-head"><span class="sec-num">11</span><h2>Synchronous vs Asynchronous — समकालिक vs असमकालिक</h2></div><ul class="bullet-list"><li><strong>Synchronous Communication — समकालिक:</strong> Participants interact in <strong>real-time</strong>. Examples: Live video call, chat, webinar, phone call.</li><li><strong>Asynchronous Communication — असमकालिक:</strong> Participants do NOT need to be present at the same time. Examples: E-mail, recorded lecture, discussion forum, SMS.</li></ul><table class="data-table"><tr><th>Synchronous</th><th>Asynchronous</th></tr><tr><td>Real-time</td><td>Time-independent</td></tr><tr><td>Immediate feedback</td><td>Delayed feedback</td></tr><tr><td>Fixed schedule</td><td>Flexible access</td></tr><tr><td>Live interaction</td><td>Recorded/stored</td></tr><tr><td>Example: Video conference</td><td>Example: E-mail</td></tr></table><p><strong>Exam Point:</strong> Video conferencing = synchronous; E-mail = asynchronous.</p></div>
+
+      <div id="video-conferencing" class="topic-card"><div class="sec-head"><span class="sec-num">12</span><h2>Video Conferencing — वीडियो कॉन्फ्रेंसिंग</h2></div><p><strong>Video Conferencing:</strong> Real-time audio and visual communication between two or more participants in different locations.</p><p><strong>Examples:</strong> Google Meet, Zoom, Microsoft Teams, Cisco Webex, Skype.</p><p><strong>Essential Requirements:</strong></p><ul class="bullet-list"><li>Computer/mobile device</li><li>Microphone and speaker/headphones</li><li>Camera (webcam)</li><li>Stable Internet connection</li><li>Conferencing software/platform</li></ul><p><strong>Advantages in Education:</strong></p><ul class="bullet-list"><li>Remote learning and teaching</li><li>Guest lectures from anywhere</li><li>Collaboration and group work</li><li>Screen sharing and demonstration</li><li>Recording for revision</li></ul><p><strong>Limitations:</strong></p><ul class="bullet-list"><li>Bandwidth issues</li><li>Digital divide</li><li>Screen fatigue</li><li>Reduced non-verbal cues</li><li>Privacy concerns</li></ul></div>
+
+      <div id="voip" class="topic-card"><div class="sec-head"><span class="sec-num">13</span><h2>VoIP — VoIP (Voice over Internet Protocol)</h2></div><p><strong>VoIP (Voice over Internet Protocol):</strong> Internet-based voice calls using IP networks instead of traditional telephone lines.</p><ul class="bullet-list"><li><strong>Examples:</strong> Skype, WhatsApp calls, Google Voice, Zoom audio</li><li><strong>Function:</strong> Converts voice to digital packets and transmits over the Internet</li><li><strong>Advantages:</strong> Lower cost, flexibility, additional features (video, conferencing)</li><li><strong>Protocol:</strong> SIP (Session Initiation Protocol) commonly used</li></ul></div>
+
+      <div id="instant-messaging" class="topic-card"><div class="sec-head"><span class="sec-num">14</span><h2>Instant Messaging — इंस्टेंट मैसेजिंग</h2></div><p><strong>Instant Messaging (IM):</strong> Real-time text communication between users over the Internet.</p><p><strong>Examples:</strong> WhatsApp, Telegram, Signal, Facebook Messenger, Slack, Google Chat.</p><p><strong>Features:</strong></p><ul class="bullet-list"><li>Real-time text messages</li><li>File sharing</li><li>Group chats</li><li>Voice and video calls</li><li>End-to-end encryption (some platforms)</li></ul><p><strong>Comparison with E-mail:</strong></p><ul class="bullet-list"><li>IM = Synchronous (real-time)</li><li>E-mail = Asynchronous (delayed)</li></ul></div>
+
+      <div id="collaboration-tools" class="topic-card"><div class="sec-head"><span class="sec-num">15</span><h2>Collaboration Tools — सहयोग उपकरण</h2></div><p><strong>Collaboration Tools</strong> teams को एक साथ काम करने, documents share करने और communicate करने की सुविधा देते हैं।</p><ul class="bullet-list"><li><strong>Google Workspace:</strong> Docs, Sheets, Slides, Drive, Meet</li><li><strong>Microsoft 365:</strong> Word Online, Excel Online, Teams, OneDrive</li><li><strong>Slack:</strong> Team communication and collaboration</li><li><strong>Notion:</strong> Note-taking and project management</li><li><strong>Trello:</strong> Project management and task tracking</li><li><strong>Zoom/Meet:</strong> Video conferencing</li></ul></div>
+
+      <div id="digital-communication-ethics" class="topic-card"><div class="sec-head"><span class="sec-num">16</span><h2>Digital Communication Ethics — डिजिटल संचार नैतिकता</h2></div><ul class="bullet-list"><li><strong>Privacy:</strong> Respect others' privacy; don't share personal information without consent.</li><li><strong>Consent:</strong> Obtain consent before adding to groups or sharing content.</li><li><strong>Respectful Language:</strong> Use polite and respectful language.</li><li><strong>Cyberbullying:</strong> Never engage in or encourage harassment.</li><li><strong>Fake Information:</strong> Verify before sharing; avoid spreading misinformation.</li><li><strong>Professional Conduct:</strong> Maintain professional behaviour in work/educational contexts.</li><li><strong>Data Protection:</strong> Secure sensitive information shared digitally.</li><li><strong>Intellectual Property:</strong> Respect copyright and give credit for shared content.</li></ul></div>
+
+      <div id="exam-traps" class="topic-card"><div class="sec-head"><span class="sec-num">17</span><h2>Common Exam Traps — सामान्य परीक्षा जाल</h2></div><ul class="bullet-list"><li><strong>Trap 1:</strong> SMTP = receiving e-mail → ❌ SMTP sends e-mail; POP3/IMAP retrieve/access it.</li><li><strong>Trap 2:</strong> POP3 = syncs across devices → ❌ IMAP syncs; POP3 downloads to one device.</li><li><strong>Trap 3:</strong> IMAP = downloads and removes from server → ❌ IMAP keeps messages on server; POP3 often removes.</li><li><strong>Trap 4:</strong> BCC recipients are visible to CC recipients → ❌ BCC recipients are hidden from everyone.</li><li><strong>Trap 5:</strong> Video conferencing = asynchronous → ❌ Video conferencing is synchronous.</li><li><strong>Trap 6:</strong> E-mail = synchronous → ❌ E-mail is asynchronous.</li><li><strong>Trap 7:</strong> VoIP = video calling → ❌ VoIP is primarily voice; can include video but not necessarily.</li></ul></div>
+
+      <div id="practice-questions" class="topic-card"><div class="sec-head"><span class="sec-num">18</span><h2>Practice Questions — अभ्यास प्रश्न</h2></div>
+      <div class="pyq-tag">Question 1</div>
+      <p>Which protocol is used to send e-mail?</p>
+      <ul class="bullet-list"><li>A. POP3</li><li>B. IMAP</li><li>C. SMTP</li><li>D. FTP</li></ul>
+      <div class="answer-box">Answer: C. SMTP</div>
+      <p class="explain">Explanation: SMTP (Simple Mail Transfer Protocol) is used for sending e-mail.</p>
+
+      <div class="pyq-tag">Question 2</div>
+      <p>Which protocol is best for accessing e-mail across multiple devices with full synchronisation?</p>
+      <ul class="bullet-list"><li>A. POP3</li><li>B. IMAP</li><li>C. SMTP</li><li>D. HTTP</li></ul>
+      <div class="answer-box">Answer: B. IMAP</div>
+      <p class="explain">Explanation: IMAP keeps messages on the server and synchronises across all devices.</p>
+
+      <div class="pyq-tag">Question 3</div>
+      <p>In an e-mail, BCC recipients are:</p>
+      <ul class="bullet-list"><li>A. Visible to all recipients</li><li>B. Visible only to CC recipients</li><li>C. Hidden from all other recipients</li><li>D. Visible only to the sender</li></ul>
+      <div class="answer-box">Answer: C. Hidden from all other recipients</div>
+      <p class="explain">Explanation: BCC (Blind Carbon Copy) recipients are hidden from all other recipients.</p>
+
+      <div class="pyq-tag">Question 4</div>
+      <p>Which of the following is an example of synchronous communication?</p>
+      <ul class="bullet-list"><li>A. E-mail</li><li>B. Recorded lecture</li><li>C. Video conferencing</li><li>D. Discussion forum</li></ul>
+      <div class="answer-box">Answer: C. Video conferencing</div>
+      <p class="explain">Explanation: Video conferencing is real-time (synchronous) communication. E-mail, recorded lectures, and discussion forums are asynchronous.</p>
+
+      <div class="pyq-tag">Question 5</div>
+      <p>What is the default port for SMTP?</p>
+      <ul class="bullet-list"><li>A. 25</li><li>B. 110</li><li>C. 143</li><li>D. 80</li></ul>
+      <div class="answer-box">Answer: A. 25</div>
+      <p class="explain">Explanation: SMTP uses port 25. POP3 uses 110, IMAP uses 143, HTTP uses 80.</p>
+
+      <div class="pyq-tag">Question 6</div>
+      <p>Which of the following is an example of VoIP service?</p>
+      <ul class="bullet-list"><li>A. E-mail</li><li>B. WhatsApp call</li><li>C. SMS</li><li>D. Discussion forum</li></ul>
+      <div class="answer-box">Answer: B. WhatsApp call</div>
+      <p class="explain">Explanation: VoIP (Voice over IP) services include WhatsApp calls, Skype, Google Voice, etc. E-mail, SMS, and forums are not VoIP.</p></div>
+
+      <div id="one-page-revision" class="topic-card"><div class="sec-head"><span class="sec-num">19</span><h2>One-Page Revision — एक पेज में पुनरावृत्ति</h2></div>
+      <div class="formula-box">SMTP Sends | POP3 Pulls/Downloads | IMAP Synchronises</div>
+      <div class="formula-box">E-mail = To + CC + BCC + Subject + Body + Attachments</div>
+
+      <p><strong>CC vs BCC:</strong></p>
+      <ul class="bullet-list"><li>CC = Visible to all</li>
+      <li>BCC = Hidden from all</li></ul>
+
+      <p><strong>Communication Types:</strong></p>
+      <ul class="bullet-list"><li>Synchronous = Real-time (Video conferencing, Chat, Phone)</li>
+      <li>Asynchronous = Time-independent (E-mail, Recorded lecture, Forum)</li></ul>
+
+      <p><strong>Digital Communication Tools:</strong></p>
+      <ul class="bullet-list"><li>E-mail, Instant Messaging, Video Conferencing, VoIP, Collaboration Tools</li></ul>
+
+      <p><strong>E-mail Protocols:</strong></p>
+      <ul class="bullet-list"><li>SMTP: Sending (Port 25)</li>
+      <li>POP3: Downloading (Port 110)</li>
+      <li>IMAP: Synchronising (Port 143)</li></ul>
+
+      <p><strong>Exam Formula:</strong></p>
+      <div class="formula-box">Protocol → Function → Port → Use Case → Distinction</div>
+      <p><em>UGC NET में E-mail & Digital Communication के questions protocol functions, CC/BCC usage, synchronous vs asynchronous, और digital communication tools पर based होते हैं।</em></p></div>
+
+      <div class="enroll-cta"><div><h3 class="h-display">Join the Paper-1 Batch</h3><p>Course fee FREE — ₹500 registration & academic/logistics contribution. Classes daily at 6:30 PM.</p></div><a href="/enroll.html" class="btn-gold">✓ JOIN BATCH @ ₹500</a></div>
+    </div>
+  </div>
+</main>
+
+<footer class="relative overflow-hidden bg-navy-950 text-white">
+  <div class="grid-paper absolute inset-0 opacity-50" aria-hidden="true"></div>
+  <div class="container-x relative py-12 lg:py-14">
+    <div class="grid grid-cols-2 gap-10 lg:grid-cols-4">
+
+      <div>
+        <div class="flex items-center gap-3">
+          <img src="/assets/images/logo.png" alt="GS Net Academy" class="h-11 w-auto rounded-lg bg-white p-1" width="120" height="44">
+          <img src="/assets/images/tagline.png" alt="" class="h-11 w-auto brightness-0 invert" aria-hidden="true">
+        </div>
+        <p class="mt-5 text-[14px] leading-relaxed text-navy-100/75">UGC NET Paper-I | JRF Preparation | Mentorship</p>
+        <span class="eyebrow mt-5"><svg viewBox="0 0 24 24" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1"/></svg> JRF @ ₹500 Mission 2026</span>
+
+        <p class="mt-6 text-[11px] font-extrabold uppercase tracking-[0.18em] text-gold-400">Follow Us</p>
+        <ul class="mt-3 flex flex-wrap gap-2">
+          <li><a href="https://www.youtube.com/@gsnetacademy" target="_blank" rel="noreferrer noopener" aria-label="YouTube" title="YouTube" class="grid h-10 w-10 place-items-center rounded-xl border border-white/12 bg-white/[0.06] text-navy-100/80 transition hover:border-gold-400/50 hover:bg-white/[0.12] hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor" aria-hidden="true"><path d="M21.6 7.2a2.5 2.5 0 0 0-1.8-1.8C18.2 5 12 5 12 5s-6.2 0-7.8.4A2.5 2.5 0 0 0 2.4 7.2 26 26 0 0 0 2 12a26 26 0 0 0 .4 4.8 2.5 2.5 0 0 0 1.8 1.8C5.8 19 12 19 12 19s6.2 0 7.8-.4a2.5 2.5 0 0 0 1.8-1.8A26 26 0 0 0 22 12a26 26 0 0 0-.4-4.8ZM10 15V9l5.2 3L10 15Z"/></svg></a></li>
+          <li><a href="https://www.instagram.com/gsnetacademy" target="_blank" rel="noreferrer noopener" aria-label="Instagram" title="Instagram" class="grid h-10 w-10 place-items-center rounded-xl border border-white/12 bg-white/[0.06] text-navy-100/80 transition hover:border-gold-400/50 hover:bg-white/[0.12] hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg></a></li>
+          <li><a href="https://www.facebook.com/gsnetacademy" target="_blank" rel="noreferrer noopener" aria-label="Facebook" title="Facebook" class="grid h-10 w-10 place-items-center rounded-xl border border-white/12 bg-white/[0.06] text-navy-100/80 transition hover:border-gold-400/50 hover:bg-white/[0.12] hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.25-1.5 1.55-1.5H16.7V3.6c-.3 0-1.3-.13-2.47-.13-2.44 0-4.11 1.49-4.11 4.23V9.9H7.4V13h2.72v8h3.38Z"/></svg></a></li>
+          <li><a href="https://t.me/gsnetacademy" target="_blank" rel="noreferrer noopener" aria-label="Telegram" title="Telegram" class="grid h-10 w-10 place-items-center rounded-xl border border-white/12 bg-white/[0.06] text-navy-100/80 transition hover:border-gold-400/50 hover:bg-white/[0.12] hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor" aria-hidden="true"><path d="M21.3 4.3 2.9 11.4c-.9.35-.9 1.62.02 1.93l4.6 1.53 1.75 5.3c.25.75 1.2.95 1.73.37l2.5-2.72 4.6 3.38c.63.46 1.53.12 1.7-.65l3.1-14.9c.2-.9-.7-1.65-1.6-1.31ZM9.6 14.1l8.5-5.6-6.9 6.5-.3 3.3-1.3-4.2Z"/></svg></a></li>
+          <li><a href="https://chat.whatsapp.com/KeaQUhOFz0UGAKtLmsM7oU" target="_blank" rel="noreferrer noopener" aria-label="WhatsApp Group" title="WhatsApp Group" class="grid h-10 w-10 place-items-center rounded-xl border border-white/12 bg-white/[0.06] text-navy-100/80 transition hover:border-emerald-400/50 hover:bg-emerald-500/15 hover:text-emerald-300"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.2 20.8 4.6 16A8.4 8.4 0 1 1 8 19.4l-4.8 1.4Z"/><path d="M9 8.4c.3-.7.6-.7.9-.7h.6c.2 0 .5 0 .7.6l.8 1.9c.1.2.1.4 0 .6l-.5.7c-.1.2-.2.4 0 .7a7 7 0 0 0 3 2.6c.3.1.5.1.7-.1l.7-.8c.2-.2.4-.2.6-.1l1.8.9c.3.1.5.3.5.5v.6c0 .4-.2.9-.9 1.2-.6.3-1.5.4-2.5.1a10 10 0 0 1-6.5-6.2c-.3-1-.1-1.9.1-2.5Z"/></svg></a></li>
+          <li><a href="https://x.com/gsnetacademy" target="_blank" rel="noreferrer noopener" aria-label="X (Twitter)" title="X (Twitter)" class="grid h-10 w-10 place-items-center rounded-xl border border-white/12 bg-white/[0.06] text-navy-100/80 transition hover:border-gold-400/50 hover:bg-white/[0.12] hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-4.5 w-4.5" fill="currentColor" aria-hidden="true"><path d="M17.5 3h3.1l-6.8 7.8L21.8 21h-6.2l-4.9-6.4L5.1 21H2l7.3-8.3L2.5 3h6.4l4.4 5.8L17.5 3Zm-1.1 16.2h1.7L7.7 4.7H5.9l10.5 14.5Z"/></svg></a></li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="text-[11px] font-extrabold uppercase tracking-[0.18em] text-gold-400">Quick Links</p>
+        <ul class="mt-4 grid gap-2.5">
+          <li><a href="/index.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Home</a></li>
+          <li><a href="/courses.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">UGC NET Paper-I</a></li>
+          <li><a href="/results.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Our Results</a></li>
+          <li><a href="/tutorials.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Tutorials</a></li>
+          <li><a href="/blog.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Blog</a></li>
+          <li><a href="/about.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">About</a></li>
+          <li><a href="/contact.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="text-[11px] font-extrabold uppercase tracking-[0.18em] text-gold-400">Resources</p>
+        <ul class="mt-4 grid gap-2.5">
+          <li><a href="/notes.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Notes</a></li>
+          <li><a href="/enroll.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Register for ₹500</a></li>
+          <li><a href="/index.html#free-demo" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Free Demo Classes</a></li>
+          <li><a href="https://chat.whatsapp.com/KeaQUhOFz0UGAKtLmsM7oU" target="_blank" rel="noreferrer noopener" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Student Community</a></li>
+        </ul>
+        <p class="mt-6 text-[11px] font-extrabold uppercase tracking-[0.18em] text-gold-400">Legal</p>
+        <ul class="mt-4 grid gap-2.5">
+          <li><a href="/privacy-policy.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Privacy Policy</a></li>
+          <li><a href="/refund-policy.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Refund &amp; Cancellation</a></li>
+          <li><a href="/terms-of-enrollment.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Terms of Enrollment</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="text-[11px] font-extrabold uppercase tracking-[0.18em] text-gold-400">Contact</p>
+        <ul class="mt-4 grid gap-2.5 text-[14px] text-navy-100/75">
+          <li><a href="tel:+919266511505" class="flex items-center gap-2 hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-4 w-4 icon-gold" fill="currentColor" aria-hidden="true"><path d="M5 3h3.5l1.6 4-2 1.4a12 12 0 0 0 5.5 5.5l1.4-2 4 1.6V19a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 3 5.2 2 2 0 0 1 5 3Z"/></svg> +91 9266511505</a></li>
+          <li><a href="tel:+919810845327" class="flex items-center gap-2 hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-4 w-4 icon-gold" fill="currentColor" aria-hidden="true"><path d="M5 3h3.5l1.6 4-2 1.4a12 12 0 0 0 5.5 5.5l1.4-2 4 1.6V19a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 3 5.2 2 2 0 0 1 5 3Z"/></svg> +91 9810845327</a></li>
+          <li><a href="mailto:gsnetacademy@gmail.com" class="flex items-center gap-2 break-all hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-4 w-4 icon-gold" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="m3.5 6.5 8.5 6 8.5-6"/></svg> gsnetacademy@gmail.com</a></li>
+          <li><a href="https://chat.whatsapp.com/KeaQUhOFz0UGAKtLmsM7oU" target="_blank" rel="noreferrer noopener" class="flex items-center gap-2 hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-4 w-4 icon-gold" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.2 20.8 4.6 16A8.4 8.4 0 1 1 8 19.4l-4.8 1.4Z"/><path d="M9 8.4c.3-.7.6-.7.9-.7h.6c.2 0 .5 0 .7.6l.8 1.9c.1.2.1.4 0 .6l-.5.7c-.1.2-.2.4 0 .7a7 7 0 0 0 3 2.6c.3.1.5.1.7-.1l.7-.8c.2-.2.4-.2.6-.1l1.8.9c.3.1.5.3.5.5v.6c0 .4-.2.9-.9 1.2-.6.3-1.5.4-2.5.1a10 10 0 0 1-6.5-6.2c-.3-1-.1-1.9.1-2.5Z"/></svg> WhatsApp Group</a></li>
+        </ul>
+        <a href="/enroll.html" class="btn-primary mt-6 w-full">Join for ₹500</a>
+        <p class="text-[14px] mt-3 text-navy-100/75 transition hover:text-gold-300">Address: B 14-15, Udhyog Marg, Block B, Sector 1, Noida, Uttar Pradesh 201301</p>
+      </div>
+    </div>
+
+    <div class="mt-10 border-t border-white/10 pt-6">
+      <ul class="flex flex-wrap items-center gap-x-5 gap-y-2 text-[13px]">
+        <li><a href="/privacy-policy.html" class="text-navy-100/70 transition hover:text-gold-300">Privacy Policy</a></li>
+        <li aria-hidden="true" class="text-navy-100/25">|</li>
+        <li><a href="/refund-policy.html" class="text-navy-100/70 transition hover:text-gold-300">Refund &amp; Cancellation</a></li>
+        <li aria-hidden="true" class="text-navy-100/25">|</li>
+        <li><a href="/terms-of-enrollment.html" class="text-navy-100/70 transition hover:text-gold-300">Terms of Enrollment</a></li>
+      </ul>
+      <div class="mt-4 flex flex-col gap-2 text-[13px] text-navy-100/60 sm:flex-row sm:items-center sm:justify-between">
+        <p>© 2026 GS Net Academy. All Rights Reserved.</p>
+        <p>A Premier institute for UGC NET Paper-1</p>
+      </div>
+      <p class="mt-4 text-[12px] leading-relaxed text-navy-100/45">Disclaimer: GS Net Academy किसी भी exam में selection, rank या score की guarantee नहीं देता। हम quality teaching, study material, practice और academic mentorship प्रदान करते हैं। UGC, NTA या किसी अन्य government body से हमारा कोई affiliation नहीं है।</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  (function() {
+
+    const BASE_PATH =
+      "/tutorials/information-and-communication-technology/e-mail-digital-communication";
+
+    const links = document.querySelectorAll(".nav-link");
+    const cards = document.querySelectorAll(".topic-card");
+    const content = document.getElementById("contentArea");
+    const sidebarToggle = document.getElementById("sidebar-toggle");
+
+
+    // Get topic slug from current URL
+    function getSlugFromPath() {
+
+      const path = window.location.pathname
+        .replace(/\/+$/, "");
+
+      if (path.startsWith(BASE_PATH + "/")) {
+
+        return path
+          .substring((BASE_PATH + "/").length)
+          .split("/")[0];
+
+      }
+
+      return null;
+    }
+
+
+    // Update browser URL
+    function updateUrl(slug, replace = false) {
+
+      const newPath =
+        BASE_PATH + "/" + slug;
+
+      if (window.location.pathname !== newPath) {
+
+        if (replace) {
+
+          history.replaceState(
+            null,
+            "",
+            newPath
+          );
+
+        } else {
+
+          history.pushState(
+            null,
+            "",
+            newPath
+          );
+
+        }
+
+      }
+    }
+
+
+    // Update active sidebar link
+    function updateActiveLink(slug) {
+
+      links.forEach(function(link) {
+
+        const href =
+          link.getAttribute("href");
+
+        if (!href) return;
+
+        const linkSlug =
+          href
+            .split("/")
+            .filter(Boolean)
+            .pop();
+
+        link.classList.toggle(
+          "active",
+          linkSlug === slug
+        );
+
+      });
+
+    }
+
+
+    // Show selected topic card
+    function showCard(
+      slug,
+      updateHistory = true
+    ) {
+
+      cards.forEach(function(card) {
+
+        card.classList.add("hidden");
+
+      });
+
+
+      const target =
+        document.getElementById(slug);
+
+
+      if (!target) {
+
+        const first = cards[0];
+
+        if (first) {
+
+          first.classList.remove("hidden");
+
+          const firstSlug =
+            first.id;
+
+          updateActiveLink(firstSlug);
+
+          updateUrl(
+            firstSlug,
+            true
+          );
+
+        }
+
+        return;
+      }
+
+
+      target.classList.remove("hidden");
+
+      updateActiveLink(slug);
+
+
+      if (updateHistory) {
+
+        updateUrl(
+          slug,
+          false
+        );
+
+      }
+
+
+      if (sidebarToggle) {
+
+        sidebarToggle.checked = false;
+
+      }
+
+
+      if (content) {
+
+        const top =
+          content.getBoundingClientRect().top +
+          window.pageYOffset -
+          10;
+
+        window.scrollTo({
+
+          top: top,
+
+          behavior: "smooth"
+
+        });
+
+      }
+
+    }
+
+
+    // Sidebar link click
+    links.forEach(function(link) {
+
+      link.addEventListener(
+        "click",
+        function(e) {
+
+          e.preventDefault();
+
+
+          const href =
+            this.getAttribute("href");
+
+          if (!href) return;
+
+
+          const slug =
+            href
+              .split("/")
+              .filter(Boolean)
+              .pop();
+
+
+          if (!slug) return;
+
+
+          console.log(
+            "Clicked topic:",
+            slug
+          );
+
+
+          showCard(
+            slug,
+            true
+          );
+
+        }
+      );
+
+    });
+
+
+    // Initial page load
+    function initFromPath() {
+
+      let slug =
+        getSlugFromPath();
+
+
+      if (
+        !slug ||
+        !document.getElementById(slug)
+      ) {
+
+        slug =
+          cards[0]?.id ||
+          "email-intro";
+
+      }
+
+
+      showCard(
+        slug,
+        false
+      );
+
+
+      updateUrl(
+        slug,
+        true
+      );
+
+    }
+
+
+    initFromPath();
+
+
+    // Browser Back / Forward
+    window.addEventListener(
+      "popstate",
+      function() {
+
+        const slug =
+          getSlugFromPath();
+
+
+        if (
+          slug &&
+          document.getElementById(slug)
+        ) {
+
+          showCard(
+            slug,
+            false
+          );
+
+        } else {
+
+          const firstSlug =
+            cards[0]?.id ||
+            "email-intro";
+
+          showCard(
+            firstSlug,
+            false
+          );
+
+        }
+
+      }
+    );
+
+
+  })();
+</script>
+</body>
+</html>

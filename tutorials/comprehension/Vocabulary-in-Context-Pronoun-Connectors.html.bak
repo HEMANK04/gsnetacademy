@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vocabulary in Context, Pronoun & Connectors – Full Notes | UGC NET Paper-1</title>
+  <meta name="description" content="Complete tutorial: Vocabulary in Context, Pronoun Reference, Connectors (coordinators, subordinators, transitions, conjunctive adverbs) for UGC NET Paper-1 Reading Comprehension.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; }
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background: #f8f5ee;
+      color: #101a3d;
+    }
+    .h-display { font-family: 'Poppins', sans-serif; font-weight: 800; letter-spacing: -0.01em; }
+    .container { max-width: 1360px; margin: 0 auto; padding: 0 20px; }
+
+    .hero {
+      background: #0b1330;
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+      padding: 28px 0 22px;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      right: -80px;
+      top: -100px;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(232,183,75,0.2), transparent 70%);
+    }
+    .hero-inner { position: relative; }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      padding: 6px 16px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+      color: #e8b74b;
+    }
+    .hero h1 {
+      font-size: clamp(28px, 4.2vw, 44px);
+      margin: 12px 0 6px;
+    }
+    .hero p {
+      color: rgba(255,255,255,0.78);
+      max-width: 680px;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 28px;
+      padding: 28px 0 50px;
+      align-items: start;
+    }
+    @media (max-width: 980px) {
+      .layout { grid-template-columns: 1fr; }
+    }
+
+    .sidebar {
+      position: sticky;
+      top: 16px;
+      max-height: calc(100vh - 40px);
+      overflow-y: auto;
+      background: #fff;
+      border: 1px solid rgba(16,26,61,0.08);
+      border-radius: 16px;
+      padding: 16px 12px;
+      box-shadow: 0 6px 24px rgba(16,26,61,0.05);
+    }
+    .sidebar::-webkit-scrollbar { width: 5px; }
+    .sidebar::-webkit-scrollbar-thumb { background: #dde2ef; border-radius: 8px; }
+    .sidebar-title {
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: #b9852a;
+      padding: 4px 10px 14px;
+    }
+    .nav-link {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 10px;
+      border-radius: 10px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #33406b;
+      line-height: 1.3;
+      transition: 0.1s;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .nav-link:hover { background: #f4f6fc; color: #0b1330; }
+    .nav-link.active {
+      background: #fdf6e7;
+      color: #0b1330;
+    }
+    .nav-num {
+      flex: none;
+      width: 22px;
+      height: 22px;
+      border-radius: 7px;
+      background: #e7eaf5;
+      color: #5b6690;
+      font-size: 11px;
+      font-weight: 800;
+      display: grid;
+      place-items: center;
+    }
+    .nav-link.active .nav-num {
+      background: #e8b74b;
+      color: #0b1330;
+    }
+
+    #sidebar-toggle { display: none; }
+    .mobile-bar { display: none; }
+    @media (max-width: 980px) {
+      .mobile-bar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: #fff;
+        border: 1px solid rgba(16,26,61,0.1);
+        border-radius: 12px;
+        padding: 12px 16px;
+        margin-bottom: 8px;
+        font-weight: 800;
+        font-size: 13.5px;
+        color: #0b1330;
+      }
+      .sidebar { display: none; position: static; max-height: none; }
+      #sidebar-toggle:checked ~ .layout .sidebar { display: block; }
+    }
+
+    .content { min-width: 0; }
+    .topic-card {
+      background: #fff;
+      border: 1px solid rgba(16,26,61,0.08);
+      border-radius: 16px;
+      padding: 20px 20px 16px;
+      margin-bottom: 18px;
+      scroll-margin-top: 20px;
+      display: block;
+    }
+    .topic-card.hidden { display: none; }
+    .sec-head {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+    .sec-num {
+      flex: none;
+      width: 34px;
+      height: 34px;
+      border-radius: 10px;
+      background: #0b1330;
+      color: #e8b74b;
+      font-weight: 800;
+      font-size: 14px;
+      display: grid;
+      place-items: center;
+    }
+    .sec-head h2 {
+      margin: 0;
+      font-size: 19px;
+      font-weight: 800;
+      color: #0b1330;
+    }
+    .topic-card p {
+      font-size: 14.5px;
+      line-height: 1.75;
+      color: #1a254a;
+      margin: 6px 0;
+    }
+    .bullet-list {
+      margin: 8px 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 5px;
+    }
+    .bullet-list li {
+      position: relative;
+      padding-left: 20px;
+      font-size: 14px;
+      line-height: 1.6;
+      color: #1a254a;
+    }
+    .bullet-list li::before {
+      content: "";
+      position: absolute;
+      left: 2px;
+      top: 9px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #d9a53a;
+    }
+    .formula-box {
+      background: #0b1330;
+      color: #fdeec2;
+      font-weight: 700;
+      font-size: 13.6px;
+      padding: 10px 16px;
+      border-radius: 10px;
+      margin: 10px 0;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 12px 0;
+      font-size: 13.6px;
+      display: block;
+      overflow-x: auto;
+    }
+    .data-table th, .data-table td {
+      border: 1px solid #e7eaf5;
+      padding: 8px 12px;
+      text-align: left;
+      color: #1a254a;
+      white-space: normal;
+    }
+    .data-table th {
+      background: #f4f6fc;
+      color: #0b1330;
+      font-weight: 800;
+    }
+    .pyq-tag {
+      display: inline-block;
+      background: #fdf6e7;
+      color: #b9852a;
+      font-weight: 800;
+      font-size: 12px;
+      padding: 4px 12px;
+      border-radius: 8px;
+      margin: 12px 0 6px;
+    }
+    .answer-box {
+      background: #eefaf2;
+      border: 1px solid #bfe8cc;
+      color: #1a7a4c;
+      font-weight: 700;
+      font-size: 13.6px;
+      padding: 6px 14px;
+      border-radius: 9px;
+      margin: 6px 0;
+    }
+    .explain {
+      background: #f4f6fc;
+      border-radius: 9px;
+      padding: 6px 14px;
+      font-size: 13.6px;
+      color: #1a254a;
+    }
+    .subtopic {
+      padding: 14px 0 6px;
+      border-top: 1px dashed #e7eaf5;
+    }
+    .subtopic:first-of-type { border-top: none; padding-top: 2px; }
+    .subhead {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 6px;
+    }
+    .sub-num {
+      flex: none;
+      width: 26px;
+      height: 26px;
+      border-radius: 8px;
+      background: #fdf6e7;
+      color: #b9852a;
+      font-weight: 800;
+      font-size: 12px;
+      display: grid;
+      place-items: center;
+    }
+    .subhead h3 {
+      margin: 0;
+      font-size: 15.5px;
+      font-weight: 800;
+      color: #0b1330;
+    }
+    .enroll-cta {
+      background: #0b1330;
+      color: #fff;
+      border-radius: 16px;
+      padding: 24px 24px;
+      margin-top: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+      overflow: hidden;
+    }
+    .enroll-cta::before {
+      content: "";
+      position: absolute;
+      right: -40px;
+      top: -40px;
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(232,183,75,0.2), transparent 70%);
+    }
+    .enroll-cta h3 { margin: 0 0 4px; font-size: 20px; }
+    .enroll-cta p { margin: 0; color: rgba(255,255,255,0.75); font-size: 13.5px; max-width: 480px; }
+    .btn-gold {
+      background: #e8b74b;
+      color: #0b1330;
+      font-weight: 800;
+      padding: 10px 22px;
+      border-radius: 10px;
+      font-size: 13.5px;
+      white-space: nowrap;
+      text-decoration: none;
+    }
+  </style>
+
+  <link rel="stylesheet" href="/css/tailwind.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <style>.hero h1 { font-weight: 800 !important; color: #fff !important; line-height: 1.2 !important; font-family: 'Poppins', sans-serif !important; }</style>
+
+  <link rel="icon" href="/assets/images/logo.png">
+</head>
+<body>
+
+<header class="sticky top-0 z-50 border-b border-navy-900/8 bg-white/95 backdrop-blur-md">
+  <nav class="container-wide flex h-[76px] items-center gap-4" aria-label="Main">
+    <a href="/" class="flex shrink-0 items-center gap-3" aria-label="Home">
+      <span class="inline-flex shrink-0 items-center justify-center overflow-hidden rounded-lg bg-navy-950 ring-1 ring-navy-900/10">
+        <img src="assets/images/logo.png" alt="GS Net Academy" class="h-11 w-auto" width="120" height="44">
+      </span>
+      <img src="assets/images/tagline.png" alt="#1 A Premier institute for UGC NET Paper-1" class="h-11 hidden w-auto lg:block">
+    </a>
+    <ul class="mx-auto hidden items-center gap-5 xl:flex">
+      <li><a href="courses.html" class="relative block whitespace-nowrap rounded-lg px-3 py-2 text-[13.5px] font-bold transition-colors text-navy-700/75 hover:text-navy-900">UGC NET Paper-I</a></li>
+      <li><a href="results.html" class="relative block whitespace-nowrap rounded-lg px-3 py-2 text-[13.5px] font-bold transition-colors text-navy-700/75 hover:text-navy-900">Results</a></li>
+      <li><a href="tutorial.html" class="relative block whitespace-nowrap rounded-lg px-3 py-2 text-[13.5px] font-bold transition-colors text-navy-700/75 hover:text-navy-900">Tutorials</a></li>
+      <li><a href="notes.html" class="relative block whitespace-nowrap rounded-lg px-3 py-2 text-[13.5px] font-bold transition-colors text-navy-700/75 hover:text-navy-900">Notes</a></li>
+      <li><a href="blog.html" class="relative block whitespace-nowrap rounded-lg px-3 py-2 text-[13.5px] font-bold transition-colors text-navy-700/75 hover:text-navy-900">Blog</a></li>
+      <li><a href="about.html" class="relative block whitespace-nowrap rounded-lg px-3 py-2 text-[13.5px] font-bold transition-colors text-navy-700/75 hover:text-navy-900">About</a></li>
+      <li><a href="contact.html" class="relative block whitespace-nowrap rounded-lg px-3 py-2 text-[13.5px] font-bold transition-colors text-navy-700/75 hover:text-navy-900">Contact</a></li>
+    </ul>
+    <div class="ml-auto flex items-center gap-2 xl:ml-0">
+      <span title="Coming soon" class="hidden items-center gap-1.5 whitespace-nowrap rounded-lg border border-navy-900/12 px-3 py-2 text-[13px] font-bold text-navy-700 lg:inline-flex"><svg viewBox="0 0 24 24" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="4.5" width="14" height="16" rx="2.5"/><path d="M9 4.5a3 3 0 0 1 6 0"/><path d="M9 11h6M9 15h4"/></svg> <a href="https://mock-test.gsnetacademy.com/" class="cursor-pointer">Exam Portal</a></span>
+      <a href="/#free-demo" class="btn-outline btn-sm hidden 2xl:inline-flex">Demo</a>
+      <a href="enroll.html" class="btn-primary btn-sm hidden sm:inline-flex">Join Now</a>
+      <label for="nav-toggle" class="cursor-pointer rounded-lg border border-navy-900/12 p-2 text-navy-800 xl:hidden" aria-label="Menu"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></label>
+    </div>
+  </nav>
+</header>
+
+<div class="drawer xl:hidden">
+  <label for="nav-toggle" class="drawer-scrim" aria-hidden="true"></label>
+  <div class="drawer-panel">
+    <div class="flex h-[72px] shrink-0 items-center justify-between border-b border-navy-900/10 px-5">
+      <img src="assets/images/logo.png" alt="GS Net Academy" class="h-9 w-auto rounded-lg bg-navy-950">
+      <label for="nav-toggle" class="cursor-pointer p-2 text-navy-800" aria-label="Close"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></label>
+    </div>
+    <div class="flex-1 overflow-y-auto p-5">
+      <ul class="flex flex-col gap-1">
+      <li><a href="/" class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold bg-navy-50 text-navy-900">Home</a></li>
+      <li><a href="courses.html" class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold text-navy-700">UGC NET Paper-I</a></li>
+      <li><a href="results.html" class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold text-navy-700">Our Results</a></li>
+      <li><span class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold text-navy-400">UG / PG (Paper-2)<span class="rounded-md bg-navy-50 px-2 py-0.5 text-[10.5px] font-extrabold uppercase tracking-wider">Coming soon</span></span></li>
+      <li><a href="tutorial.html" class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold text-navy-700">Tutorials</a></li>
+      <li><a href="notes.html" class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold text-navy-700">Notes</a></li>
+      <li><a href="blog.html" class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold text-navy-700">Blog</a></li>
+      <li><a href="about.html" class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold text-navy-700">About</a></li>
+      <li><a href="contact.html" class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold text-navy-700">Contact</a></li>
+      </ul>
+      <p class="mt-3 rounded-xl bg-gold-50 px-4 py-3 text-[12.5px] font-extrabold uppercase tracking-wider text-gold-700">AI-Powered Career Guidance — Coming soon</p>
+      <div class="mt-5 grid gap-2.5">
+        <a href="enroll.html" class="btn-primary w-full">✓ JOIN BATCH @ ₹500</a>
+        <a href="/#free-demo" class="btn-outline w-full">▶ WATCH FREE DEMO</a>
+        <a href="https://chat.whatsapp.com/KeaQUhOFz0UGAKtLmsM7oU" target="_blank" rel="noreferrer noopener" class="btn-outline w-full"><svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.2 20.8 4.6 16A8.4 8.4 0 1 1 8 19.4l-4.8 1.4Z"/><path d="M9 8.4c.3-.7.6-.7.9-.7h.6c.2 0 .5 0 .7.6l.8 1.9c.1.2.1.4 0 .6l-.5.7c-.1.2-.2.4 0 .7a7 7 0 0 0 3 2.6c.3.1.5.1.7-.1l.7-.8c.2-.2.4-.2.6-.1l1.8.9c.3.1.5.3.5.5v.6c0 .4-.2.9-.9 1.2-.6.3-1.5.4-2.5.1a10 10 0 0 1-6.5-6.2c-.3-1-.1-1.9.1-2.5Z"/></svg> WhatsApp Group</a>
+        <a href="tel:+919266511505" class="btn-dark w-full"><svg viewBox="0 0 24 24" class="h-4 w-4" fill="currentColor" stroke="none" aria-hidden="true"><path d="M5 3h3.5l1.6 4-2 1.4a12 12 0 0 0 5.5 5.5l1.4-2 4 1.6V19a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 3 5.2 2 2 0 0 1 5 3Z"/></svg> Call 9266511505</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<section class="hero">
+  <div class="container hero-inner">
+    <span class="eyebrow">★ UGC NET Paper-I · Reading Comprehension</span>
+    <h1 class="h-display">Vocabulary in Context, Pronoun & Connectors</h1>
+    <p>Complete tutorial: Vocabulary in Context, Pronoun Reference, Connectors (coordinators, subordinators, transitions, conjunctive adverbs) for UGC NET Paper-1.</p>
+  </div>
+</section>
+
+<main class="container">
+  <input type="checkbox" id="sidebar-toggle">
+  <label for="sidebar-toggle" class="mobile-bar">
+    <span>📑 On this page</span>
+    <span>☰ Menu</span>
+  </label>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebarNav">
+      <p class="sidebar-title">On this page</p>
+      <nav>
+        <a href="/tutorials/comprehension/vocabulary-in-context-pronoun-connectors/vocabulary-context" class="nav-link active">
+  <span class="nav-num">1</span>Vocabulary in Context
+</a>
+        <a href="/tutorials/comprehension/vocabulary-in-context-pronoun-connectors/context-clues-types" class="nav-link"><span class="nav-num">2</span>Types of Context Clues</a>
+        <a href="/tutorials/comprehension/vocabulary-in-context-pronoun-connectors/pronoun-reference" class="nav-link"><span class="nav-num">3</span>Pronoun Reference</a>
+        <a href="/tutorials/comprehension/vocabulary-in-context-pronoun-connectors/pronoun-antecedent" class="nav-link"><span class="nav-num">4</span>Pronoun-Antecedent Agreement</a>
+        <a href="/tutorials/comprehension/vocabulary-in-context-pronoun-connectors/connectors" class="nav-link"><span class="nav-num">5</span>Connectors</a>
+        <a href="/tutorials/comprehension/vocabulary-in-context-pronoun-connectors/coordinators" class="nav-link"><span class="nav-num">6</span>Coordinating Conjunctions</a>
+        <a href="/tutorials/comprehension/vocabulary-in-context-pronoun-connectors/subordinators" class="nav-link"><span class="nav-num">7</span>Subordinating Conjunctions</a>
+        <a href="/tutorials/comprehension/vocabulary-in-context-pronoun-connectors/transitions" class="nav-link"><span class="nav-num">8</span>Transitional Words & Phrases</a>
+        <a href="/tutorials/comprehension/vocabulary-in-context-pronoun-connectors/connectors-functions" class="nav-link"><span class="nav-num">9</span>Connectors by Function</a>
+        <a href="/tutorials/comprehension/vocabulary-in-context-pronoun-connectors/common-errors" class="nav-link"><span class="nav-num">10</span>Common Errors</a>
+        <a href="/tutorials/comprehension/vocabulary-in-context-pronoun-connectors/exam-traps" class="nav-link"><span class="nav-num">11</span>Common Exam Traps</a>
+        <a href="/tutorials/comprehension/vocabulary-in-context-pronoun-connectors/practice-questions" class="nav-link"><span class="nav-num">12</span>Practice Questions</a>
+        <a href="/tutorials/comprehension/vocabulary-in-context-pronoun-connectors/one-page-revision" class="nav-link"><span class="nav-num">13</span>One-Page Revision</a>
+      </nav>
+    </aside>
+
+    <div class="content" id="contentArea">
+      <!-- ===== CARDS ===== -->
+      <div id="vocabulary-context" class="topic-card"><div class="sec-head"><span class="sec-num">1</span><h2>Vocabulary in Context — संदर्भ में शब्दावली</h2></div><p><strong>Vocabulary in Context</strong> का अर्थ है किसी <strong>unfamiliar word</strong> का अर्थ <strong>surrounding words, sentences और passage के context</strong> से समझना।</p><div class="formula-box">Vocabulary in Context = Understanding Word Meaning from Surrounding Text</div><p><strong>Key Point:</strong> किसी शब्द का सामान्य अर्थ passage में उसके <strong>context</strong> से अलग हो सकता है। आपको word का dictionary meaning नहीं, बल्कि <strong>passage में उसका अर्थ</strong> पहचानना होता है।</p><p><strong>सरल उदाहरण:</strong></p><ul class="bullet-list"><li><strong>Sentence:</strong> "The teacher's <strong>acerbic</strong> remarks made the students uncomfortable."</li><li><strong>Context:</strong> Remarks made students uncomfortable → <strong>Acerbic = sharp/harsh</strong></li><li><strong>Sentence:</strong> "She was <strong>elated</strong> when she received the scholarship."</li><li><strong>Context:</strong> Received scholarship (positive event) → <strong>Elated = extremely happy</strong></li></ul></div>
+
+      <div id="context-clues-types" class="topic-card"><div class="sec-head"><span class="sec-num">2</span><h2>Types of Context Clues — संदर्भ सुराग के प्रकार</h2></div><ul class="bullet-list"><li><strong>Definition/Explanation — परिभाषा/व्याख्या:</strong> Word को directly define या explain किया जाता है। <em>Example: "The <strong>altruistic</strong> act — helping others without expecting anything in return — was appreciated by all."</em></li><li><strong>Synonym — पर्यायवाची:</strong> Similar word का उपयोग। <em>Example: "The <strong>arduous</strong> journey was difficult and exhausting."</em></li><li><strong>Antonym — विलोम:</strong> Opposite word का उपयोग। <em>Example: "Unlike her <strong>gregarious</strong> sister, she was shy and reserved."</em></li><li><strong>Example — उदाहरण:</strong> Examples word के meaning को समझाते हैं। <em>Example: "She had many <strong>culinary</strong> skills, such as baking, grilling, and sautéing."</em></li><li><strong>Inference — अनुमान:</strong> पूरे sentence/passage से meaning infer करना। <em>Example: "The <strong>mellifluous</strong> voice of the singer captivated everyone in the hall."</em></li><li><strong>Contrast — विरोधाभास:</strong> Opposite idea से meaning समझना। <em>Example: "The politician was <strong>loquacious</strong>, but his opponent was silent and reserved."</em></li><li><strong>Cause-Effect — कारण-प्रभाव:</strong> कारण/प्रभाव से meaning समझना। <em>Example: "The <strong>exigent</strong> situation required immediate action."</em></li></ul></div>
+
+      <div id="pronoun-reference" class="topic-card"><div class="sec-head"><span class="sec-num">3</span><h2>Pronoun Reference — सर्वनाम संदर्भ</h2></div><p><strong>Pronoun Reference</strong> यह identify करना है कि एक <strong>pronoun (he, she, it, they, them, this, that, etc.)</strong> किस <strong>noun (antecedent)</strong> को refer कर रहा है।</p><div class="formula-box">Pronoun → Refers to → Antecedent (the noun it replaces)</div><p><strong>Key Point:</strong> UGC NET में pronoun reference questions passage की <strong>coherence</strong> और <strong>clarity</strong> को test करते हैं।</p><p><strong>सरल उदाहरण:</strong></p><ul class="bullet-list"><li><strong>Sentence:</strong> "Shyam lost his book. <strong>He</strong> was very upset."</li><li><strong>Pronoun:</strong> He → <strong>Refers to:</strong> Shyam</li><li><strong>Sentence:</strong> "The students submitted <strong>their</strong> assignments. <strong>They</strong> were well-prepared."</li><li><strong>Pronoun:</strong> They → <strong>Refers to:</strong> The students</li></ul></div>
+
+      <div id="pronoun-antecedent" class="topic-card"><div class="sec-head"><span class="sec-num">4</span><h2>Pronoun-Antecedent Agreement — सर्वनाम-पूर्वपद संगति</h2></div><ul class="bullet-list"><li><strong>Number Agreement:</strong> Singular pronoun → singular antecedent; Plural pronoun → plural antecedent</li><li><strong>Gender Agreement:</strong> He/him/his → masculine; She/her/hers → feminine; They/them/theirs → gender-neutral/plural</li><li><strong>Person Agreement:</strong> I/we (first person), You (second person), He/she/they (third person)</li></ul><p><strong>Example:</strong></p><ul class="bullet-list"><li><strong>Correct:</strong> "Every student must submit <strong>his/her</strong> assignment."</li><li><strong>Correct (Gender-neutral):</strong> "Every student must submit <strong>their</strong> assignment." (accepted in modern usage)</li><li><strong>Incorrect:</strong> "Every student must submit <strong>their</strong> assignment." (traditionally considered incorrect; now widely accepted)</li><li><strong>Correct:</strong> "The team celebrated <strong>its</strong> victory." (collective noun → singular)</li></ul><p><strong>Ambiguous Reference:</strong></p><ul class="bullet-list"><li><strong>Ambiguous:</strong> "Ravi told Shyam that <strong>he</strong> was selected." → कौन selected हुआ — Ravi या Shyam? (Unclear)</li><li><strong>Clear:</strong> "Ravi told Shyam, '<strong>I</strong> was selected.'" (Clear)</li></ul></div>
+
+      <div id="connectors" class="topic-card"><div class="sec-head"><span class="sec-num">5</span><h2>Connectors — कनेक्टर्स (संयोजक)</h2></div><p><strong>Connectors</strong> वे words या phrases हैं जो <strong>sentences, clauses, paragraphs</strong> और <strong>ideas</strong> को <strong>logically connect</strong> करते हैं।</p><div class="formula-box">Connectors = Link Ideas + Show Relationships + Improve Coherence</div><p><strong>Why Connectors Matter in UGC NET:</strong></p><ul class="bullet-list"><li>Passage की <strong>flow</strong> और <strong>structure</strong> समझने में मदद करते हैं</li><li>Author के <strong>argument</strong> और <strong>reasoning</strong> को समझने में मदद करते हैं</li><li>Questions passage में <strong>missing connector</strong> या <strong>incorrect connector</strong> के बारे में भी पूछ सकते हैं</li></ul></div>
+
+      <div id="coordinators" class="topic-card"><div class="sec-head"><span class="sec-num">6</span><h2>Coordinating Conjunctions — समानयोजक संयोजक</h2></div><p><strong>FANBOYS</strong> — For, And, Nor, But, Or, Yet, So</p><ul class="bullet-list"><li><strong>For</strong> — कारण/explanation (<em>I was tired, <strong>for</strong> I had worked all day.</em>)</li><li><strong>And</strong> — addition (<em>She likes tea <strong>and</strong> coffee.</em>)</li><li><strong>Nor</strong> — negative addition (<em>He didn't go, <strong>nor</strong> did he call.</em>)</li><li><strong>But</strong> — contrast (<em>She is smart, <strong>but</strong> lazy.</em>)</li><li><strong>Or</strong> — alternative/choice (<em>You can stay <strong>or</strong> leave.</em>)</li><li><strong>Yet</strong> — contrast/despite (<em>He is wealthy, <strong>yet</strong> unhappy.</em>)</li><li><strong>So</strong> — result/consequence (<em>It was raining, <strong>so</strong> we stayed inside.</em>)</li></ul></div>
+
+      <div id="subordinators" class="topic-card"><div class="sec-head"><span class="sec-num">7</span><h2>Subordinating Conjunctions — अधीनयोजक संयोजक</h2></div><ul class="bullet-list"><li><strong>Time:</strong> when, while, after, before, since, until, as soon as, whenever</li><li><strong>Reason/Cause:</strong> because, since, as, now that</li><li><strong>Contrast/Concession:</strong> although, though, even though, while, whereas</li><li><strong>Condition:</strong> if, unless, provided that, as long as</li><li><strong>Purpose:</strong> so that, in order that</li><li><strong>Result/Effect:</strong> so...that, such...that</li></ul><p><strong>Example:</strong></p><ul class="bullet-list"><li>"<strong>Although</strong> it was raining, we went for a walk." (contrast)</li><li>"She left early <strong>because</strong> she was tired." (reason)</li><li>"<strong>Unless</strong> you study, you will not pass." (condition)</li></ul></div>
+
+      <div id="transitions" class="topic-card"><div class="sec-head"><span class="sec-num">8</span><h2>Transitional Words & Phrases — संक्रमणात्मक शब्द</h2></div><ul class="bullet-list"><li><strong>Addition:</strong> additionally, moreover, furthermore, in addition, also, besides</li><li><strong>Contrast:</strong> however, nevertheless, on the other hand, in contrast, conversely, although</li><li><strong>Cause/Effect:</strong> therefore, consequently, as a result, thus, hence, accordingly</li><li><strong>Sequence/Order:</strong> first, next, then, finally, subsequently, meanwhile</li><li><strong>Example:</strong> for example, for instance, such as, to illustrate</li><li><strong>Conclusion/Summary:</strong> in conclusion, to conclude, in summary, overall, ultimately</li><li><strong>Emphasis:</strong> indeed, in fact, certainly, undoubtedly</li></ul></div>
+
+      <div id="connectors-functions" class="topic-card"><div class="sec-head"><span class="sec-num">9</span><h2>Connectors by Function — कार्य के अनुसार कनेक्टर्स</h2></div><table class="data-table"><tr><th>Function</th><th>Connectors</th><th>Example</th></tr><tr><td><strong>Addition</strong></td><td>and, also, moreover, furthermore, in addition</td><td>"He is smart <strong>and</strong> hardworking."</td></tr><tr><td><strong>Contrast</strong></td><td>but, however, although, yet, nevertheless, on the other hand</td><td>"<strong>Although</strong> tired, he continued."</td></tr><tr><td><strong>Cause/Reason</strong></td><td>because, since, as, because of, due to</td><td>"She passed <strong>because</strong> she studied hard."</td></tr><tr><td><strong>Effect/Result</strong></td><td>so, therefore, thus, hence, consequently, as a result</td><td>"It rained; <strong>therefore</strong> we cancelled the trip."</td></tr><tr><td><strong>Condition</strong></td><td>if, unless, provided that, as long as</td><td>"<strong>If</strong> you want to succeed, work hard."</td></tr><tr><td><strong>Purpose</strong></td><td>so that, in order that</td><td>"She saved money <strong>so that</strong> she could travel."</td></tr><tr><td><strong>Example</strong></td><td>for example, for instance, such as</td><td>"Many fruits, <strong>such as</strong> apples and oranges..."</td></tr><tr><td><strong>Time/Sequence</strong></td><td>then, next, finally, meanwhile, subsequently</td><td>"<strong>First</strong> mix the flour, <strong>then</strong> add water."</td></tr><tr><td><strong>Conclusion</strong></td><td>in conclusion, to conclude, overall, ultimately</td><td>"<strong>In conclusion</strong>, education is essential."</td></tr></table></div>
+
+      <div id="common-errors" class="topic-card"><div class="sec-head"><span class="sec-num">10</span><h2>Common Errors — सामान्य त्रुटियाँ</h2></div><ul class="bullet-list"><li><strong>Error 1:</strong> Unfamiliar word का dictionary meaning लगाना — <em>context का अर्थ अलग हो सकता है</em></li><li><strong>Error 2:</strong> Pronoun reference में ambiguity — <em>pronoun किस noun को refer कर रहा है, unclear होना</em></li><li><strong>Error 3:</strong> Pronoun-antecedent agreement mismatch — <em>singular/plural mismatch</em></li><li><strong>Error 4:</strong> Incorrect connector — <em>contrast के लिए addition connector का use</em></li><li><strong>Error 5:</strong> Misunderstanding connector function — <em>connector का function समझना ज़रूरी</em></li><li><strong>Error 6:</strong> Overlooking context — <em>passage का overall context ignore करना</em></li><li><strong>Error 7:</strong> Confusing similar connectors — <em>"however" vs "moreover"</em></li></ul></div>
+
+      <div id="exam-traps" class="topic-card"><div class="sec-head"><span class="sec-num">11</span><h2>Common Exam Traps — सामान्य परीक्षा जाल</h2></div><ul class="bullet-list"><li><strong>Trap 1:</strong> Vocabulary questions — options में common meaning और contextual meaning दोनों हो सकते हैं। <strong>Contextual meaning</strong> को choose करें।</li><li><strong>Trap 2:</strong> Pronoun reference — options में multiple nouns हो सकते हैं। <strong>Most logical and nearest</strong> noun को select करें।</li><li><strong>Trap 3:</strong> Connectors — options में different function connectors हो सकते हैं। <strong>Passage का logical relationship</strong> पहचानें।</li><li><strong>Trap 4:</strong> Ambiguous pronoun — pronoun का antecedent clear न हो तो <strong>grammatically incorrect</strong> या <strong>confusing</strong> माना जाता है।</li><li><strong>Trap 5:</strong> Misleading context — context clue जो misleading हो सकता है, उसे ignore करें और <strong>overall passage meaning</strong> देखें।</li><li><strong>Trap 6:</strong> False synonyms — options में similar meaning वाले words हो सकते हैं, लेकिन <strong>only one fits the context</strong>।</li></ul></div>
+
+      <div id="practice-questions" class="topic-card"><div class="sec-head"><span class="sec-num">12</span><h2>Practice Questions — अभ्यास प्रश्न</h2></div>
+      <p><strong>Passage 1:</strong> "The new education policy has been <strong>lauded</strong> by many experts. However, its <strong>implementation</strong> remains a challenge. While the policy is <strong>comprehensive</strong>, it requires significant resources. Teachers, <strong>who</strong> are the key stakeholders, need proper training. <strong>Therefore</strong>, the government must invest in professional development programmes."</p>
+
+      <div class="pyq-tag">Question 1 (Vocabulary)</div>
+      <p>In the passage, the word <strong>"lauded"</strong> most nearly means:</p>
+      <ul class="bullet-list"><li>A. Criticised</li><li>B. Praised</li><li>C. Ignored</li><li>D. Described</li></ul>
+      <div class="answer-box">Answer: B. Praised</div>
+      <p class="explain">Explanation: Context से "lauded" का positive meaning है — praised या commended।</p>
+
+      <div class="pyq-tag">Question 2 (Vocabulary)</div>
+      <p>The word <strong>"comprehensive"</strong> in the passage means:</p>
+      <ul class="bullet-list"><li>A. Narrow</li><li>B. Limited</li><li>C. Complete and thorough</li><li>D. Confusing</li></ul>
+      <div class="answer-box">Answer: C. Complete and thorough</div>
+      <p class="explain">Explanation: Context से comprehensive = व्यापक, पूर्ण, thorough।</p>
+
+      <div class="pyq-tag">Question 3 (Pronoun Reference)</div>
+      <p>In the passage, the pronoun <strong>"who"</strong> refers to:</p>
+      <ul class="bullet-list"><li>A. The government</li><li>B. Teachers</li><li>C. Experts</li><li>D. Resources</li></ul>
+      <div class="answer-box">Answer: B. Teachers</div>
+      <p class="explain">Explanation: "Teachers, who are the key stakeholders" — who teachers को refer करता है।</p>
+
+      <div class="pyq-tag">Question 4 (Connector)</div>
+      <p>What does the connector <strong>"Therefore"</strong> indicate in the passage?</p>
+      <ul class="bullet-list"><li>A. Contrast</li><li>B. Addition</li><li>C. Cause and effect / conclusion</li><li>D. Example</li></ul>
+      <div class="answer-box">Answer: C. Cause and effect / conclusion</div>
+      <p class="explain">Explanation: Therefore = परिणाम/निष्कर्ष — teachers को training चाहिए, इसलिए government invest करे।</p>
+
+      <br>
+
+      <p><strong>Passage 2:</strong> "Online learning has become increasingly popular. <strong>However</strong>, it has its limitations. Students often struggle with lack of motivation <strong>because</strong> there is no face-to-face interaction. <strong>Moreover</strong>, technical issues can disrupt learning. <strong>Although</strong> online education offers flexibility, it cannot completely replace traditional classrooms."</p>
+
+      <div class="pyq-tag">Question 5 (Connector)</div>
+      <p>The connector <strong>"However"</strong> indicates:</p>
+      <ul class="bullet-list"><li>A. Addition</li><li>B. Contrast</li><li>C. Cause</li><li>D. Sequence</li></ul>
+      <div class="answer-box">Answer: B. Contrast</div>
+      <p class="explain">Explanation: Online learning popular है, but limitations हैं — contrast।</p>
+
+      <div class="pyq-tag">Question 6 (Connector)</div>
+      <p>The connector <strong>"because"</strong> indicates:</p>
+      <ul class="bullet-list"><li>A. Contrast</li><li>B. Cause/Reason</li><li>C. Addition</li><li>D. Example</li></ul>
+      <div class="answer-box">Answer: B. Cause/Reason</div>
+      <p class="explain">Explanation: Students struggle <strong>because</strong> there is no face-to-face interaction — reason।</p>
+
+      <div class="pyq-tag">Question 7 (Pronoun Reference)</div>
+      <p>In the passage, what does the connector <strong>"Although"</strong> indicate?</p>
+      <ul class="bullet-list"><li>A. Cause</li><li>B. Contrast/Concession</li><li>C. Addition</li><li>D. Effect</li></ul>
+      <div class="answer-box">Answer: B. Contrast/Concession</div>
+      <p class="explain">Explanation: Although = contrast/concession — flexibility है, but replace नहीं कर सकता।</p></div>
+
+      <div id="one-page-revision" class="topic-card"><div class="sec-head"><span class="sec-num">13</span><h2>One-Page Revision — एक पेज में पुनरावृत्ति</h2></div>
+      <div class="formula-box">Vocabulary in Context = Word Meaning from Surrounding Text</div>
+      <div class="formula-box">Pronoun → Refers to → Antecedent</div>
+      <div class="formula-box">Connectors = Link Ideas + Show Relationships</div>
+
+      <p><strong>Context Clues:</strong></p>
+      <ul class="bullet-list"><li>Definition, Synonym, Antonym, Example, Inference, Contrast, Cause-Effect</li></ul>
+
+      <p><strong>Pronoun Reference:</strong></p>
+      <ul class="bullet-list"><li>Pronoun must agree with antecedent (number, gender)</li><li>Ambiguous reference = unclear meaning</li></ul>
+
+      <p><strong>Connectors by Function:</strong></p>
+      <ul class="bullet-list"><li><strong>Addition:</strong> and, also, moreover, furthermore, in addition</li><li><strong>Contrast:</strong> but, however, although, yet, nevertheless, on the other hand</li><li><strong>Cause/Reason:</strong> because, since, as</li><li><strong>Effect/Result:</strong> so, therefore, thus, hence, consequently</li><li><strong>Condition:</strong> if, unless, provided that</li><li><strong>Purpose:</strong> so that, in order that</li><li><strong>Example:</strong> for example, for instance, such as</li><li><strong>Time/Sequence:</strong> then, next, finally, meanwhile</li><li><strong>Conclusion:</strong> in conclusion, to conclude, overall</li></ul>
+
+      <p><strong>Exam Formula:</strong></p>
+      <div class="formula-box">Vocabulary = Context | Pronoun = Antecedent | Connector = Relationship</div>
+      <p><em>UGC NET में vocabulary, pronoun और connector के questions passage की deep understanding और logical structure को test करते हैं।</em></p></div>
+
+      <div class="enroll-cta"><div><h3 class="h-display">Join the Paper-1 Batch</h3><p>Course fee FREE — ₹500 registration & academic/logistics contribution. Classes daily at 6:30 PM.</p></div><a href="/enroll.html" class="btn-gold">✓ JOIN BATCH @ ₹500</a></div>
+    </div>
+  </div>
+</main>
+
+<footer class="relative overflow-hidden bg-navy-950 text-white">
+  <div class="grid-paper absolute inset-0 opacity-50" aria-hidden="true"></div>
+  <div class="container-x relative py-12 lg:py-14">
+    <div class="grid grid-cols-2 gap-10 lg:grid-cols-4">
+
+      <div>
+        <div class="flex items-center gap-3">
+          <img src="/assets/images/logo.png" alt="GS Net Academy" class="h-11 w-auto rounded-lg bg-white p-1" width="120" height="44">
+          <img src="/assets/images/tagline.png" alt="" class="h-11 w-auto brightness-0 invert" aria-hidden="true">
+        </div>
+        <p class="mt-5 text-[14px] leading-relaxed text-navy-100/75">UGC NET Paper-I | JRF Preparation | Mentorship</p>
+        <span class="eyebrow mt-5"><svg viewBox="0 0 24 24" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1"/></svg> JRF @ ₹500 Mission 2026</span>
+
+        <p class="mt-6 text-[11px] font-extrabold uppercase tracking-[0.18em] text-gold-400">Follow Us</p>
+        <ul class="mt-3 flex flex-wrap gap-2">
+          <li><a href="https://www.youtube.com/@gsnetacademy" target="_blank" rel="noreferrer noopener" aria-label="YouTube" title="YouTube" class="grid h-10 w-10 place-items-center rounded-xl border border-white/12 bg-white/[0.06] text-navy-100/80 transition hover:border-gold-400/50 hover:bg-white/[0.12] hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor" aria-hidden="true"><path d="M21.6 7.2a2.5 2.5 0 0 0-1.8-1.8C18.2 5 12 5 12 5s-6.2 0-7.8.4A2.5 2.5 0 0 0 2.4 7.2 26 26 0 0 0 2 12a26 26 0 0 0 .4 4.8 2.5 2.5 0 0 0 1.8 1.8C5.8 19 12 19 12 19s6.2 0 7.8-.4a2.5 2.5 0 0 0 1.8-1.8A26 26 0 0 0 22 12a26 26 0 0 0-.4-4.8ZM10 15V9l5.2 3L10 15Z"/></svg></a></li>
+          <li><a href="https://www.instagram.com/gsnetacademy" target="_blank" rel="noreferrer noopener" aria-label="Instagram" title="Instagram" class="grid h-10 w-10 place-items-center rounded-xl border border-white/12 bg-white/[0.06] text-navy-100/80 transition hover:border-gold-400/50 hover:bg-white/[0.12] hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg></a></li>
+          <li><a href="https://www.facebook.com/gsnetacademy" target="_blank" rel="noreferrer noopener" aria-label="Facebook" title="Facebook" class="grid h-10 w-10 place-items-center rounded-xl border border-white/12 bg-white/[0.06] text-navy-100/80 transition hover:border-gold-400/50 hover:bg-white/[0.12] hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.25-1.5 1.55-1.5H16.7V3.6c-.3 0-1.3-.13-2.47-.13-2.44 0-4.11 1.49-4.11 4.23V9.9H7.4V13h2.72v8h3.38Z"/></svg></a></li>
+          <li><a href="https://t.me/gsnetacademy" target="_blank" rel="noreferrer noopener" aria-label="Telegram" title="Telegram" class="grid h-10 w-10 place-items-center rounded-xl border border-white/12 bg-white/[0.06] text-navy-100/80 transition hover:border-gold-400/50 hover:bg-white/[0.12] hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor" aria-hidden="true"><path d="M21.3 4.3 2.9 11.4c-.9.35-.9 1.62.02 1.93l4.6 1.53 1.75 5.3c.25.75 1.2.95 1.73.37l2.5-2.72 4.6 3.38c.63.46 1.53.12 1.7-.65l3.1-14.9c.2-.9-.7-1.65-1.6-1.31ZM9.6 14.1l8.5-5.6-6.9 6.5-.3 3.3-1.3-4.2Z"/></svg></a></li>
+          <li><a href="https://chat.whatsapp.com/KeaQUhOFz0UGAKtLmsM7oU" target="_blank" rel="noreferrer noopener" aria-label="WhatsApp Group" title="WhatsApp Group" class="grid h-10 w-10 place-items-center rounded-xl border border-white/12 bg-white/[0.06] text-navy-100/80 transition hover:border-emerald-400/50 hover:bg-emerald-500/15 hover:text-emerald-300"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.2 20.8 4.6 16A8.4 8.4 0 1 1 8 19.4l-4.8 1.4Z"/><path d="M9 8.4c.3-.7.6-.7.9-.7h.6c.2 0 .5 0 .7.6l.8 1.9c.1.2.1.4 0 .6l-.5.7c-.1.2-.2.4 0 .7a7 7 0 0 0 3 2.6c.3.1.5.1.7-.1l.7-.8c.2-.2.4-.2.6-.1l1.8.9c.3.1.5.3.5.5v.6c0 .4-.2.9-.9 1.2-.6.3-1.5.4-2.5.1a10 10 0 0 1-6.5-6.2c-.3-1-.1-1.9.1-2.5Z"/></svg></a></li>
+          <li><a href="https://x.com/gsnetacademy" target="_blank" rel="noreferrer noopener" aria-label="X (Twitter)" title="X (Twitter)" class="grid h-10 w-10 place-items-center rounded-xl border border-white/12 bg-white/[0.06] text-navy-100/80 transition hover:border-gold-400/50 hover:bg-white/[0.12] hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-4.5 w-4.5" fill="currentColor" aria-hidden="true"><path d="M17.5 3h3.1l-6.8 7.8L21.8 21h-6.2l-4.9-6.4L5.1 21H2l7.3-8.3L2.5 3h6.4l4.4 5.8L17.5 3Zm-1.1 16.2h1.7L7.7 4.7H5.9l10.5 14.5Z"/></svg></a></li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="text-[11px] font-extrabold uppercase tracking-[0.18em] text-gold-400">Quick Links</p>
+        <ul class="mt-4 grid gap-2.5">
+          <li><a href="/index.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Home</a></li>
+          <li><a href="/courses.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">UGC NET Paper-I</a></li>
+          <li><a href="/results.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Our Results</a></li>
+          <li><a href="/tutorials.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Tutorials</a></li>
+          <li><a href="/blog.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Blog</a></li>
+          <li><a href="/about.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">About</a></li>
+          <li><a href="/contact.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="text-[11px] font-extrabold uppercase tracking-[0.18em] text-gold-400">Resources</p>
+        <ul class="mt-4 grid gap-2.5">
+          <li><a href="/notes.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Notes</a></li>
+          <li><a href="/enroll.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Register for ₹500</a></li>
+          <li><a href="/index.html#free-demo" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Free Demo Classes</a></li>
+          <li><a href="https://chat.whatsapp.com/KeaQUhOFz0UGAKtLmsM7oU" target="_blank" rel="noreferrer noopener" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Student Community</a></li>
+        </ul>
+        <p class="mt-6 text-[11px] font-extrabold uppercase tracking-[0.18em] text-gold-400">Legal</p>
+        <ul class="mt-4 grid gap-2.5">
+          <li><a href="/privacy-policy.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Privacy Policy</a></li>
+          <li><a href="/refund-policy.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Refund &amp; Cancellation</a></li>
+          <li><a href="/terms-of-enrollment.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Terms of Enrollment</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="text-[11px] font-extrabold uppercase tracking-[0.18em] text-gold-400">Contact</p>
+        <ul class="mt-4 grid gap-2.5 text-[14px] text-navy-100/75">
+          <li><a href="tel:+919266511505" class="flex items-center gap-2 hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-4 w-4 icon-gold" fill="currentColor" aria-hidden="true"><path d="M5 3h3.5l1.6 4-2 1.4a12 12 0 0 0 5.5 5.5l1.4-2 4 1.6V19a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 3 5.2 2 2 0 0 1 5 3Z"/></svg> +91 9266511505</a></li>
+          <li><a href="tel:+919810845327" class="flex items-center gap-2 hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-4 w-4 icon-gold" fill="currentColor" aria-hidden="true"><path d="M5 3h3.5l1.6 4-2 1.4a12 12 0 0 0 5.5 5.5l1.4-2 4 1.6V19a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 3 5.2 2 2 0 0 1 5 3Z"/></svg> +91 9810845327</a></li>
+          <li><a href="mailto:gsnetacademy@gmail.com" class="flex items-center gap-2 break-all hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-4 w-4 icon-gold" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="m3.5 6.5 8.5 6 8.5-6"/></svg> gsnetacademy@gmail.com</a></li>
+          <li><a href="https://chat.whatsapp.com/KeaQUhOFz0UGAKtLmsM7oU" target="_blank" rel="noreferrer noopener" class="flex items-center gap-2 hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-4 w-4 icon-gold" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.2 20.8 4.6 16A8.4 8.4 0 1 1 8 19.4l-4.8 1.4Z"/><path d="M9 8.4c.3-.7.6-.7.9-.7h.6c.2 0 .5 0 .7.6l.8 1.9c.1.2.1.4 0 .6l-.5.7c-.1.2-.2.4 0 .7a7 7 0 0 0 3 2.6c.3.1.5.1.7-.1l.7-.8c.2-.2.4-.2.6-.1l1.8.9c.3.1.5.3.5.5v.6c0 .4-.2.9-.9 1.2-.6.3-1.5.4-2.5.1a10 10 0 0 1-6.5-6.2c-.3-1-.1-1.9.1-2.5Z"/></svg> WhatsApp Group</a></li>
+        </ul>
+        <a href="/enroll.html" class="btn-primary mt-6 w-full">Join for ₹500</a>
+        <p class="text-[14px] mt-3 text-navy-100/75 transition hover:text-gold-300">Address: B 14-15, Udhyog Marg, Block B, Sector 1, Noida, Uttar Pradesh 201301</p>
+      </div>
+    </div>
+
+    <div class="mt-10 border-t border-white/10 pt-6">
+      <ul class="flex flex-wrap items-center gap-x-5 gap-y-2 text-[13px]">
+        <li><a href="/privacy-policy.html" class="text-navy-100/70 transition hover:text-gold-300">Privacy Policy</a></li>
+        <li aria-hidden="true" class="text-navy-100/25">|</li>
+        <li><a href="/refund-policy.html" class="text-navy-100/70 transition hover:text-gold-300">Refund &amp; Cancellation</a></li>
+        <li aria-hidden="true" class="text-navy-100/25">|</li>
+        <li><a href="/terms-of-enrollment.html" class="text-navy-100/70 transition hover:text-gold-300">Terms of Enrollment</a></li>
+      </ul>
+      <div class="mt-4 flex flex-col gap-2 text-[13px] text-navy-100/60 sm:flex-row sm:items-center sm:justify-between">
+        <p>© 2026 GS Net Academy. All Rights Reserved.</p>
+        <p>A Premier institute for UGC NET Paper-1</p>
+      </div>
+      <p class="mt-4 text-[12px] leading-relaxed text-navy-100/45">Disclaimer: GS Net Academy किसी भी exam में selection, rank या score की guarantee नहीं देता। हम quality teaching, study material, practice और academic mentorship प्रदान करते हैं। UGC, NTA या किसी अन्य government body से हमारा कोई affiliation नहीं है।</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function() {
+
+  const BASE_PATH =
+    "/tutorials/comprehension/vocabulary-in-context-pronoun-connectors";
+
+  const links = document.querySelectorAll(".nav-link");
+  const cards = document.querySelectorAll(".topic-card");
+  const content = document.getElementById("contentArea");
+  const sidebarToggle = document.getElementById("sidebar-toggle");
+
+
+  // Get topic slug from current URL
+  function getSlugFromPath() {
+
+    const path = window.location.pathname
+      .replace(/\/+$/, "");
+
+    if (path.startsWith(BASE_PATH + "/")) {
+
+      return path
+        .substring((BASE_PATH + "/").length)
+        .split("/")[0];
+
+    }
+
+    return null;
+  }
+
+
+  // Update browser URL
+  function updateUrl(slug, replace = false) {
+
+    const newPath =
+      BASE_PATH + "/" + slug;
+
+    if (window.location.pathname !== newPath) {
+
+      if (replace) {
+        history.replaceState(null, "", newPath);
+      } else {
+        history.pushState(null, "", newPath);
+      }
+
+    }
+  }
+
+
+  // Update active sidebar link
+  function updateActiveLink(slug) {
+
+    links.forEach(function(link) {
+
+      const href =
+        link.getAttribute("href");
+
+      if (!href) return;
+
+      const linkSlug =
+        href
+          .split("/")
+          .filter(Boolean)
+          .pop();
+
+      link.classList.toggle(
+        "active",
+        linkSlug === slug
+      );
+
+    });
+  }
+
+
+  // Show selected topic card
+  function showCard(slug, updateHistory = true) {
+
+    cards.forEach(function(card) {
+      card.classList.add("hidden");
+    });
+
+
+    const target =
+      document.getElementById(slug);
+
+
+    // Topic not found
+    if (!target) {
+
+      const first = cards[0];
+
+      if (first) {
+
+        first.classList.remove("hidden");
+
+        const firstSlug = first.id;
+
+        updateActiveLink(firstSlug);
+
+        updateUrl(firstSlug, true);
+
+      }
+
+      return;
+    }
+
+
+    // Show selected topic
+    target.classList.remove("hidden");
+
+    updateActiveLink(slug);
+
+
+    // Update URL
+    if (updateHistory) {
+      updateUrl(slug);
+    }
+
+
+    // Close mobile sidebar
+    if (sidebarToggle) {
+      sidebarToggle.checked = false;
+    }
+
+
+    // Scroll to content
+    if (content) {
+
+      const top =
+        content.getBoundingClientRect().top +
+        window.pageYOffset -
+        10;
+
+      window.scrollTo({
+        top: top,
+        behavior: "smooth"
+      });
+
+    }
+
+  }
+
+
+  // Sidebar link click
+  links.forEach(function(link) {
+
+    link.addEventListener("click", function(e) {
+
+      e.preventDefault();
+
+      const href =
+        this.getAttribute("href");
+
+      if (!href) return;
+
+
+      const slug =
+        href
+          .split("/")
+          .filter(Boolean)
+          .pop();
+
+
+      if (!slug) return;
+
+
+      console.log("Clicked topic:", slug);
+
+      showCard(slug, true);
+
+    });
+
+  });
+
+
+  // Initial page load
+  function initFromPath() {
+
+    let slug =
+      getSlugFromPath();
+
+
+    if (
+      !slug ||
+      !document.getElementById(slug)
+    ) {
+
+      slug =
+        cards[0]?.id ||
+        "vocabulary-context";
+
+    }
+
+
+    // Show topic without creating history entry
+    showCard(slug, false);
+
+
+    // Set correct nested URL
+    updateUrl(slug, true);
+
+  }
+
+
+  initFromPath();
+
+
+  // Browser Back / Forward
+  window.addEventListener(
+    "popstate",
+    function() {
+
+      const slug =
+        getSlugFromPath();
+
+
+      if (
+        slug &&
+        document.getElementById(slug)
+      ) {
+
+        showCard(slug, false);
+
+      } else {
+
+        const firstSlug =
+          cards[0]?.id ||
+          "vocabulary-context";
+
+        showCard(firstSlug, false);
+
+      }
+
+    }
+  );
+
+
+})();
+</script>
+</body>
+</html>

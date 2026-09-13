@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Categorical Syllogism – Full Notes | UGC NET Paper-1</title>
+  <meta name="description" content="Complete tutorial: Categorical Syllogism, Major, Minor & Middle Terms, Mood, Figure, Standard forms, Rules of categorical syllogism, Validity testing, Existential fallacy for UGC NET Paper-1 Logical Reasoning.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; }
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background: #f8f5ee;
+      color: #101a3d;
+    }
+    .h-display { font-family: 'Poppins', sans-serif; font-weight: 800; letter-spacing: -0.01em; }
+    .container { max-width: 1360px; margin: 0 auto; padding: 0 20px; }
+
+    .hero {
+      background: #0b1330;
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+      padding: 28px 0 22px;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      right: -80px;
+      top: -100px;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(232,183,75,0.2), transparent 70%);
+    }
+    .hero-inner { position: relative; }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      padding: 6px 16px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+      color: #e8b74b;
+    }
+    .hero h1 {
+      font-size: clamp(28px, 4.2vw, 44px);
+      margin: 12px 0 6px;
+    }
+    .hero p {
+      color: rgba(255,255,255,0.78);
+      max-width: 680px;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 28px;
+      padding: 28px 0 50px;
+      align-items: start;
+    }
+    @media (max-width: 980px) {
+      .layout { grid-template-columns: 1fr; }
+    }
+
+    .sidebar {
+      position: sticky;
+      top: 16px;
+      max-height: calc(100vh - 40px);
+      overflow-y: auto;
+      background: #fff;
+      border: 1px solid rgba(16,26,61,0.08);
+      border-radius: 16px;
+      padding: 16px 12px;
+      box-shadow: 0 6px 24px rgba(16,26,61,0.05);
+    }
+    .sidebar::-webkit-scrollbar { width: 5px; }
+    .sidebar::-webkit-scrollbar-thumb { background: #dde2ef; border-radius: 8px; }
+    .sidebar-title {
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: #b9852a;
+      padding: 4px 10px 14px;
+    }
+    .nav-link {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 10px;
+      border-radius: 10px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #33406b;
+      line-height: 1.3;
+      transition: 0.1s;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .nav-link:hover { background: #f4f6fc; color: #0b1330; }
+    .nav-link.active {
+      background: #fdf6e7;
+      color: #0b1330;
+    }
+    .nav-num {
+      flex: none;
+      width: 22px;
+      height: 22px;
+      border-radius: 7px;
+      background: #e7eaf5;
+      color: #5b6690;
+      font-size: 11px;
+      font-weight: 800;
+      display: grid;
+      place-items: center;
+    }
+    .nav-link.active .nav-num {
+      background: #e8b74b;
+      color: #0b1330;
+    }
+
+    #sidebar-toggle { display: none; }
+    .mobile-bar { display: none; }
+    @media (max-width: 980px) {
+      .mobile-bar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: #fff;
+        border: 1px solid rgba(16,26,61,0.1);
+        border-radius: 12px;
+        padding: 12px 16px;
+        margin-bottom: 8px;
+        font-weight: 800;
+        font-size: 13.5px;
+        color: #0b1330;
+      }
+      .sidebar { display: none; position: static; max-height: none; }
+      #sidebar-toggle:checked ~ .layout .sidebar { display: block; }
+    }
+
+    .content { min-width: 0; }
+    .topic-card {
+      background: #fff;
+      border: 1px solid rgba(16,26,61,0.08);
+      border-radius: 16px;
+      padding: 20px 20px 16px;
+      margin-bottom: 18px;
+      scroll-margin-top: 20px;
+      display: block;
+    }
+    .topic-card.hidden { display: none; }
+    .sec-head {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+    .sec-num {
+      flex: none;
+      width: 34px;
+      height: 34px;
+      border-radius: 10px;
+      background: #0b1330;
+      color: #e8b74b;
+      font-weight: 800;
+      font-size: 14px;
+      display: grid;
+      place-items: center;
+    }
+    .sec-head h2 {
+      margin: 0;
+      font-size: 19px;
+      font-weight: 800;
+      color: #0b1330;
+    }
+    .topic-card p {
+      font-size: 14.5px;
+      line-height: 1.75;
+      color: #1a254a;
+      margin: 6px 0;
+    }
+    .bullet-list {
+      margin: 8px 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 5px;
+    }
+    .bullet-list li {
+      position: relative;
+      padding-left: 20px;
+      font-size: 14px;
+      line-height: 1.6;
+      color: #1a254a;
+    }
+    .bullet-list li::before {
+      content: "";
+      position: absolute;
+      left: 2px;
+      top: 9px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #d9a53a;
+    }
+    .formula-box {
+      background: #0b1330;
+      color: #fdeec2;
+      font-weight: 700;
+      font-size: 13.6px;
+      padding: 10px 16px;
+      border-radius: 10px;
+      margin: 10px 0;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 12px 0;
+      font-size: 13.6px;
+      display: block;
+      overflow-x: auto;
+    }
+    .data-table th, .data-table td {
+      border: 1px solid #e7eaf5;
+      padding: 8px 12px;
+      text-align: left;
+      color: #1a254a;
+      white-space: normal;
+    }
+    .data-table th {
+      background: #f4f6fc;
+      color: #0b1330;
+      font-weight: 800;
+    }
+    .pyq-tag {
+      display: inline-block;
+      background: #fdf6e7;
+      color: #b9852a;
+      font-weight: 800;
+      font-size: 12px;
+      padding: 4px 12px;
+      border-radius: 8px;
+      margin: 12px 0 6px;
+    }
+    .answer-box {
+      background: #eefaf2;
+      border: 1px solid #bfe8cc;
+      color: #1a7a4c;
+      font-weight: 700;
+      font-size: 13.6px;
+      padding: 6px 14px;
+      border-radius: 9px;
+      margin: 6px 0;
+    }
+    .explain {
+      background: #f4f6fc;
+      border-radius: 9px;
+      padding: 6px 14px;
+      font-size: 13.6px;
+      color: #1a254a;
+    }
+    .subtopic {
+      padding: 14px 0 6px;
+      border-top: 1px dashed #e7eaf5;
+    }
+    .subtopic:first-of-type { border-top: none; padding-top: 2px; }
+    .subhead {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 6px;
+    }
+    .sub-num {
+      flex: none;
+      width: 26px;
+      height: 26px;
+      border-radius: 8px;
+      background: #fdf6e7;
+      color: #b9852a;
+      font-weight: 800;
+      font-size: 12px;
+      display: grid;
+      place-items: center;
+    }
+    .subhead h3 {
+      margin: 0;
+      font-size: 15.5px;
+      font-weight: 800;
+      color: #0b1330;
+    }
+    .enroll-cta {
+      background: #0b1330;
+      color: #fff;
+      border-radius: 16px;
+      padding: 24px 24px;
+      margin-top: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+      overflow: hidden;
+    }
+    .enroll-cta::before {
+      content: "";
+      position: absolute;
+      right: -40px;
+      top: -40px;
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(232,183,75,0.2), transparent 70%);
+    }
+    .enroll-cta h3 { margin: 0 0 4px; font-size: 20px; }
+    .enroll-cta p { margin: 0; color: rgba(255,255,255,0.75); font-size: 13.5px; max-width: 480px; }
+    .btn-gold {
+      background: #e8b74b;
+      color: #0b1330;
+      font-weight: 800;
+      padding: 10px 22px;
+      border-radius: 10px;
+      font-size: 13.5px;
+      white-space: nowrap;
+      text-decoration: none;
+    }
+  </style>
+
+  <link rel="stylesheet" href="/css/tailwind.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <style>.hero h1 { font-weight: 800 !important; color: #fff !important; line-height: 1.2 !important; font-family: 'Poppins', sans-serif !important; }</style>
+
+  <link rel="icon" href="/assets/images/logo.png">
+</head>
+<body>
+
+<header class="sticky top-0 z-50 border-b border-navy-900/8 bg-white/95 backdrop-blur-md">
+  <nav class="container-wide flex h-[76px] items-center gap-4" aria-label="Main">
+    <a href="/" class="flex shrink-0 items-center gap-3" aria-label="Home">
+      <span class="inline-flex shrink-0 items-center justify-center overflow-hidden rounded-lg bg-navy-950 ring-1 ring-navy-900/10">
+        <img src="assets/images/logo.png" alt="GS Net Academy" class="h-11 w-auto" width="120" height="44">
+      </span>
+      <img src="assets/images/tagline.png" alt="#1 A Premier institute for UGC NET Paper-1" class="h-11 hidden w-auto lg:block">
+    </a>
+    <ul class="mx-auto hidden items-center gap-5 xl:flex">
+      <li><a href="courses.html" class="relative block whitespace-nowrap rounded-lg px-3 py-2 text-[13.5px] font-bold transition-colors text-navy-700/75 hover:text-navy-900">UGC NET Paper-I</a></li>
+      <li><a href="results.html" class="relative block whitespace-nowrap rounded-lg px-3 py-2 text-[13.5px] font-bold transition-colors text-navy-700/75 hover:text-navy-900">Results</a></li>
+      <li><a href="tutorial.html" class="relative block whitespace-nowrap rounded-lg px-3 py-2 text-[13.5px] font-bold transition-colors text-navy-700/75 hover:text-navy-900">Tutorials</a></li>
+      <li><a href="notes.html" class="relative block whitespace-nowrap rounded-lg px-3 py-2 text-[13.5px] font-bold transition-colors text-navy-700/75 hover:text-navy-900">Notes</a></li>
+      <li><a href="blog.html" class="relative block whitespace-nowrap rounded-lg px-3 py-2 text-[13.5px] font-bold transition-colors text-navy-700/75 hover:text-navy-900">Blog</a></li>
+      <li><a href="about.html" class="relative block whitespace-nowrap rounded-lg px-3 py-2 text-[13.5px] font-bold transition-colors text-navy-700/75 hover:text-navy-900">About</a></li>
+      <li><a href="contact.html" class="relative block whitespace-nowrap rounded-lg px-3 py-2 text-[13.5px] font-bold transition-colors text-navy-700/75 hover:text-navy-900">Contact</a></li>
+    </ul>
+    <div class="ml-auto flex items-center gap-2 xl:ml-0">
+      <span title="Coming soon" class="hidden items-center gap-1.5 whitespace-nowrap rounded-lg border border-navy-900/12 px-3 py-2 text-[13px] font-bold text-navy-700 lg:inline-flex"><svg viewBox="0 0 24 24" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="4.5" width="14" height="16" rx="2.5"/><path d="M9 4.5a3 3 0 0 1 6 0"/><path d="M9 11h6M9 15h4"/></svg> <a href="https://mock-test.gsnetacademy.com/" class="cursor-pointer">Exam Portal</a></span>
+      <a href="/#free-demo" class="btn-outline btn-sm hidden 2xl:inline-flex">Demo</a>
+      <a href="enroll.html" class="btn-primary btn-sm hidden sm:inline-flex">Join Now</a>
+      <label for="nav-toggle" class="cursor-pointer rounded-lg border border-navy-900/12 p-2 text-navy-800 xl:hidden" aria-label="Menu"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></label>
+    </div>
+  </nav>
+</header>
+
+<div class="drawer xl:hidden">
+  <label for="nav-toggle" class="drawer-scrim" aria-hidden="true"></label>
+  <div class="drawer-panel">
+    <div class="flex h-[72px] shrink-0 items-center justify-between border-b border-navy-900/10 px-5">
+      <img src="assets/images/logo.png" alt="GS Net Academy" class="h-9 w-auto rounded-lg bg-navy-950">
+      <label for="nav-toggle" class="cursor-pointer p-2 text-navy-800" aria-label="Close"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></label>
+    </div>
+    <div class="flex-1 overflow-y-auto p-5">
+      <ul class="flex flex-col gap-1">
+      <li><a href="/" class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold bg-navy-50 text-navy-900">Home</a></li>
+      <li><a href="courses.html" class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold text-navy-700">UGC NET Paper-I</a></li>
+      <li><a href="results.html" class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold text-navy-700">Our Results</a></li>
+      <li><span class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold text-navy-400">UG / PG (Paper-2)<span class="rounded-md bg-navy-50 px-2 py-0.5 text-[10.5px] font-extrabold uppercase tracking-wider">Coming soon</span></span></li>
+      <li><a href="tutorial.html" class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold text-navy-700">Tutorials</a></li>
+      <li><a href="notes.html" class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold text-navy-700">Notes</a></li>
+      <li><a href="blog.html" class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold text-navy-700">Blog</a></li>
+      <li><a href="about.html" class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold text-navy-700">About</a></li>
+      <li><a href="contact.html" class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold text-navy-700">Contact</a></li>
+      </ul>
+      <p class="mt-3 rounded-xl bg-gold-50 px-4 py-3 text-[12.5px] font-extrabold uppercase tracking-wider text-gold-700">AI-Powered Career Guidance — Coming soon</p>
+      <div class="mt-5 grid gap-2.5">
+        <a href="enroll.html" class="btn-primary w-full">✓ JOIN BATCH @ ₹500</a>
+        <a href="/#free-demo" class="btn-outline w-full">▶ WATCH FREE DEMO</a>
+        <a href="https://chat.whatsapp.com/KeaQUhOFz0UGAKtLmsM7oU" target="_blank" rel="noreferrer noopener" class="btn-outline w-full"><svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.2 20.8 4.6 16A8.4 8.4 0 1 1 8 19.4l-4.8 1.4Z"/><path d="M9 8.4c.3-.7.6-.7.9-.7h.6c.2 0 .5 0 .7.6l.8 1.9c.1.2.1.4 0 .6l-.5.7c-.1.2-.2.4 0 .7a7 7 0 0 0 3 2.6c.3.1.5.1.7-.1l.7-.8c.2-.2.4-.2.6-.1l1.8.9c.3.1.5.3.5.5v.6c0 .4-.2.9-.9 1.2-.6.3-1.5.4-2.5.1a10 10 0 0 1-6.5-6.2c-.3-1-.1-1.9.1-2.5Z"/></svg> WhatsApp Group</a>
+        <a href="tel:+919266511505" class="btn-dark w-full"><svg viewBox="0 0 24 24" class="h-4 w-4" fill="currentColor" stroke="none" aria-hidden="true"><path d="M5 3h3.5l1.6 4-2 1.4a12 12 0 0 0 5.5 5.5l1.4-2 4 1.6V19a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 3 5.2 2 2 0 0 1 5 3Z"/></svg> Call 9266511505</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<section class="hero">
+  <div class="container hero-inner">
+    <span class="eyebrow">★ UGC NET Paper-I · Logical Reasoning</span>
+    <h1 class="h-display">Categorical Syllogism</h1>
+    <p>Complete tutorial: Categorical Syllogism, Major, Minor & Middle Terms, Mood, Figure, Standard forms, Rules of categorical syllogism, Validity testing, Existential fallacy for UGC NET Paper-1.</p>
+  </div>
+</section>
+
+<main class="container">
+  <input type="checkbox" id="sidebar-toggle">
+  <label for="sidebar-toggle" class="mobile-bar">
+    <span>📑 On this page</span>
+    <span>☰ Menu</span>
+  </label>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebarNav">
+      <p class="sidebar-title">On this page</p>
+      <nav>
+       <a href="/tutorials/logical-reasoning/categorical-syllogism/categorical-syllogism-intro" class="nav-link active">
+  <span class="nav-num">1</span>Categorical Syllogism
+</a>
+<a href="/tutorials/logical-reasoning/categorical-syllogism/major-minor-middle-terms" class="nav-link">
+  <span class="nav-num">2</span>Major, Minor & Middle Terms
+</a>
+<a href="/tutorials/logical-reasoning/categorical-syllogism/mood" class="nav-link">
+  <span class="nav-num">3</span>Mood
+</a>
+<a href="/tutorials/logical-reasoning/categorical-syllogism/figure" class="nav-link">
+  <span class="nav-num">4</span>Figure
+</a>
+<a href="/tutorials/logical-reasoning/categorical-syllogism/standard-forms" class="nav-link">
+  <span class="nav-num">5</span>Standard Forms
+</a>
+<a href="/tutorials/logical-reasoning/categorical-syllogism/rules-categorical-syllogism" class="nav-link">
+  <span class="nav-num">6</span>Rules of Categorical Syllogism
+</a>
+<a href="/tutorials/logical-reasoning/categorical-syllogism/validity-testing" class="nav-link">
+  <span class="nav-num">7</span>Validity Testing
+</a>
+<a href="/tutorials/logical-reasoning/categorical-syllogism/existential-fallacy" class="nav-link">
+  <span class="nav-num">8</span>Existential Fallacy
+</a>
+<a href="/tutorials/logical-reasoning/categorical-syllogism/syllogism-summary" class="nav-link">
+  <span class="nav-num">9</span>Summary
+</a>
+<a href="/tutorials/logical-reasoning/categorical-syllogism/exam-traps" class="nav-link">
+  <span class="nav-num">10</span>Common Exam Traps
+</a>
+<a href="/tutorials/logical-reasoning/categorical-syllogism/practice-questions" class="nav-link">
+  <span class="nav-num">11</span>Practice Questions
+</a>
+<a href="/tutorials/logical-reasoning/categorical-syllogism/one-page-revision" class="nav-link">
+  <span class="nav-num">12</span>One-Page Revision
+</a>
+      </nav>
+    </aside>
+
+    <div class="content" id="contentArea">
+      <!-- ===== CARDS ===== -->
+      <div id="categorical-syllogism-intro" class="topic-card"><div class="sec-head"><span class="sec-num">1</span><h2>Categorical Syllogism — श्रेणीबद्ध न्यायवाक्य</h2></div><p><strong>Categorical Syllogism</strong> एक <strong>deductive argument</strong> है जिसमें <strong>तीन categorical propositions</strong> (two premises + one conclusion) होते हैं, और <strong>three terms</strong> होते हैं, जिनमें से प्रत्येक <strong>exactly two</strong> propositions में आता है।</p><div class="formula-box">Categorical Syllogism = 2 Premises + 1 Conclusion | 3 Terms (each used twice)</div><p><strong>Example:</strong></p><ul class="bullet-list"><li><strong>Premise 1 (Major):</strong> All humans are mortal. (All M are P)</li><li><strong>Premise 2 (Minor):</strong> Socrates is a human. (All S are M)</li><li><strong>Conclusion:</strong> Therefore, Socrates is mortal. (All S are P)</li></ul></div>
+
+      <div id="major-minor-middle-terms" class="topic-card"><div class="sec-head"><span class="sec-num">2</span><h2>Major, Minor & Middle Terms — प्रमुख, गौण एवं मध्य पद</h2></div><ul class="bullet-list"><li><strong>Major Term (P) — प्रमुख पद:</strong> वह term जो <strong>conclusion का predicate</strong> है। (Mortal in the example)</li><li><strong>Minor Term (S) — गौण पद:</strong> वह term जो <strong>conclusion का subject</strong> है। (Socrates in the example)</li><li><strong>Middle Term (M) — मध्य पद:</strong> वह term जो <strong>both premises</strong> में आता है, लेकिन <strong>conclusion में नहीं</strong> आता। (Humans in the example)</li></ul><p><strong>Identification:</strong></p><ul class="bullet-list"><li><strong>Major Premise:</strong> वह premise जिसमें <strong>Major Term (P)</strong> होता है</li><li><strong>Minor Premise:</strong> वह premise जिसमें <strong>Minor Term (S)</strong> होता है</li><li><strong>Middle Term (M):</strong> दोनों premises में आता है, conclusion में नहीं</li></ul><p><strong>Example:</strong></p><ul class="bullet-list"><li><strong>Major Premise:</strong> All <u>humans</u> (M) are <u>mortal</u> (P)</li><li><strong>Minor Premise:</strong> <u>Socrates</u> (S) is a <u>human</u> (M)</li><li><strong>Conclusion:</strong> <u>Socrates</u> (S) is <u>mortal</u> (P)</li></ul></div>
+
+      <div id="mood" class="topic-card"><div class="sec-head"><span class="sec-num">3</span><h2>Mood — स्वरूप (मूड)</h2></div><p><strong>Mood</strong> syllogism में <strong>three propositions</strong> (two premises + one conclusion) के <strong>types</strong> (A, E, I, O) का <strong>sequence</strong> है।</p><div class="formula-box">Mood = Type of Major Premise + Type of Minor Premise + Type of Conclusion</div><p><strong>Example:</strong></p><ul class="bullet-list"><li><strong>All M are P</strong> = A</li><li><strong>All S are M</strong> = A</li><li><strong>All S are P</strong> = A</li><li><strong>Mood = AAA</strong></li></ul><p><strong>Another Example:</strong></p><ul class="bullet-list"><li><strong>All M are P</strong> = A</li><li><strong>Some S are M</strong> = I</li><li><strong>Some S are P</strong> = I</li><li><strong>Mood = AII</strong></li></ul><p><strong>Total Possibilities:</strong> 4×4×4 = 64 possible moods (but only some are valid).</p></div>
+
+      <div id="figure" class="topic-card"><div class="sec-head"><span class="sec-num">4</span><h2>Figure — आकृति</h2></div><p><strong>Figure</strong> syllogism में <strong>middle term (M)</strong> की position को दर्शाता है — M किस term के साथ और कहाँ आता है।</p><p><strong>Four Figures:</strong></p><ul class="bullet-list"><li><strong>Figure 1:</strong> M — P (Major), S — M (Minor) → M is subject of major and predicate of minor</li><li><strong>Figure 2:</strong> P — M (Major), S — M (Minor) → M is predicate of both</li><li><strong>Figure 3:</strong> M — P (Major), M — S (Minor) → M is subject of both</li><li><strong>Figure 4:</strong> P — M (Major), M — S (Minor) → M is predicate of major and subject of minor</li></ul><p><strong>Visual Representation:</strong></p><ul class="bullet-list"><li><strong>Figure 1:</strong> M — P / S — M → ∴ S — P</li><li><strong>Figure 2:</strong> P — M / S — M → ∴ S — P</li><li><strong>Figure 3:</strong> M — P / M — S → ∴ S — P</li><li><strong>Figure 4:</strong> P — M / M — S → ∴ S — P</li></ul></div>
+
+      <div id="standard-forms" class="topic-card"><div class="sec-head"><span class="sec-num">5</span><h2>Standard Forms — मानक रूप</h2></div><p>A syllogism is in <strong>standard form</strong> when:</p><ul class="bullet-list"><li><strong>Premises are in proper order</strong> (Major premise first, then Minor premise)</li><li><strong>Conclusion is stated last</strong></li><li><strong>Propositions are in standard categorical form</strong> (A, E, I, O)</li></ul><p><strong>Standard Form Structure:</strong></p><ul class="bullet-list"><li><strong>Major Premise:</strong> contains Major Term (P) and Middle Term (M)</li><li><strong>Minor Premise:</strong> contains Minor Term (S) and Middle Term (M)</li><li><strong>Conclusion:</strong> contains Minor Term (S) and Major Term (P)</li></ul><div class="formula-box">Major Premise → Minor Premise → Conclusion</div><p><strong>Example:</strong></p><ul class="bullet-list"><li><strong>Major Premise:</strong> All M are P</li><li><strong>Minor Premise:</strong> All S are M</li><li><strong>Conclusion:</strong> All S are P</li><li><strong>Mood and Figure:</strong> AAA-1</li></ul></div>
+
+      <div id="rules-categorical-syllogism" class="topic-card"><div class="sec-head"><span class="sec-num">6</span><h2>Rules of Categorical Syllogism — नियम</h2></div><p>A syllogism is <strong>valid</strong> only if it follows <strong>all</strong> these rules:</p><ul class="bullet-list"><li><strong>Rule 1 (Distribution of Middle Term):</strong> The middle term must be <strong>distributed at least once</strong>. (M must be distributed in at least one premise)</li><li><strong>Rule 2 (Distribution of Terms in Conclusion):</strong> If a term is <strong>distributed in the conclusion</strong>, it must be <strong>distributed in the premise</strong>. (No term can be distributed in conclusion if not distributed in premise)</li><li><strong>Rule 3 (Quality of Premises):</strong> <strong>Two negative premises</strong> are not allowed. (At least one premise must be affirmative)</li><li><strong>Rule 4 (Quality of Conclusion):</strong> If either premise is <strong>negative</strong>, the conclusion must be <strong>negative</strong>. If both premises are affirmative, conclusion must be affirmative.</li><li><strong>Rule 5 (Existential Import):</strong> If both premises are <strong>universal</strong>, the conclusion cannot be <strong>particular</strong> (unless existential import is assumed).</li><li><strong>Rule 6 (From Two Particulars):</strong> <strong>Two particular premises</strong> are not allowed.</li><li><strong>Rule 7 (Particular Premise with Negative):</strong> If one premise is <strong>particular</strong> and the other is <strong>negative</strong>, the conclusion cannot be <strong>universal</strong>.</li></ul></div>
+
+      <div id="validity-testing" class="topic-card"><div class="sec-head"><span class="sec-num">7</span><h2>Validity Testing — वैधता परीक्षण</h2></div><p><strong>Steps to Test Validity:</strong></p><ul class="bullet-list"><li><strong>Step 1:</strong> Identify the <strong>Major, Minor, and Middle Terms</strong></li><li><strong>Step 2:</strong> Identify the <strong>Mood</strong> (A, E, I, O sequence)</li><li><strong>Step 3:</strong> Identify the <strong>Figure</strong> (position of Middle Term)</li><li><strong>Step 4:</strong> Check <strong>all 7 rules</strong> — if any rule is violated, the syllogism is <strong>invalid</strong></li><li><strong>Step 5:</strong> If all rules are satisfied, the syllogism is <strong>valid</strong></li></ul><p><strong>Valid Mood-Figure Combinations (Traditional):</strong></p><ul class="bullet-list"><li><strong>Figure 1:</strong> AAA, EAE, AII, EIO, (AAI), (EAO)</li><li><strong>Figure 2:</strong> EAE, AEE, EIO, AOO, (EAO), (AEO)</li><li><strong>Figure 3:</strong> AII, EIO, IAI, OAO, (AAI), (EAO)</li><li><strong>Figure 4:</strong> AEE, IAI, EIO, (AAI), (EAO), (AEO)</li></ul><p><strong>Note:</strong> Moods in parentheses require <strong>existential import</strong> (valid only if the subject class exists).</p></div>
+
+      <div id="existential-fallacy" class="topic-card"><div class="sec-head"><span class="sec-num">8</span><h2>Existential Fallacy — अस्तित्वगत दोष</h2></div><p><strong>Existential Fallacy</strong> तब होता है जब एक <strong>valid syllogism</strong> में <strong>universal premises</strong> से <strong>particular conclusion</strong> निकाला जाता है, बिना यह माने कि subject class का <strong>existence</strong> confirmed है।</p><div class="formula-box">Existential Fallacy = Universal Premises → Particular Conclusion (without existential import)</div><p><strong>Example (Invalid in Boolean):</strong></p><ul class="bullet-list"><li><strong>Major Premise:</strong> All M are P (A)</li><li><strong>Minor Premise:</strong> All M are S (A)</li><li><strong>Conclusion:</strong> Some S are P (I)</li><li><strong>Mood:</strong> AAI (Figure 3)</li><li>In Traditional logic, this is valid (assuming M exists).</li><li>In <strong>Boolean logic</strong>, this is <strong>invalid</strong> because the conclusion has existential import but premises do not.</li></ul><p><strong>Key Point:</strong></p><ul class="bullet-list"><li>Universal propositions (A and E) <strong>do not</strong> assert existence in Boolean interpretation.</li><li>Particular propositions (I and O) <strong>do</strong> assert existence.</li><li>So, from universal premises, we <strong>cannot</strong> derive a particular conclusion in Boolean logic without a separate existence assumption.</li></ul></div>
+
+      <div id="syllogism-summary" class="topic-card"><div class="sec-head"><span class="sec-num">9</span><h2>Summary — सारांश</h2></div><ul class="bullet-list"><li><strong>Categorical Syllogism:</strong> 3 propositions, 3 terms, each term used twice</li><li><strong>Major Term (P):</strong> Conclusion predicate</li><li><strong>Minor Term (S):</strong> Conclusion subject</li><li><strong>Middle Term (M):</strong> Appears in both premises, not in conclusion</li><li><strong>Mood:</strong> Sequence of A, E, I, O in (Major, Minor, Conclusion)</li><li><strong>Figure:</strong> Position of Middle Term (1-4)</li><li><strong>Standard Form:</strong> Major Premise → Minor Premise → Conclusion</li><li><strong>Rules:</strong> 7 rules to test validity</li><li><strong>Existential Fallacy:</strong> Universal premises → Particular conclusion without existence assumption</li></ul></div>
+
+      <div id="exam-traps" class="topic-card"><div class="sec-head"><span class="sec-num">10</span><h2>Common Exam Traps — सामान्य परीक्षा जाल</h2></div><ul class="bullet-list"><li><strong>Trap 1:</strong> Major Term = Predicate of conclusion → ✅ True</li><li><strong>Trap 2:</strong> Minor Term = Subject of conclusion → ✅ True</li><li><strong>Trap 3:</strong> Middle Term = appears in conclusion → ❌ Middle term does NOT appear in conclusion.</li><li><strong>Trap 4:</strong> Two negative premises are allowed → ❌ Two negative premises are NOT allowed.</li><li><strong>Trap 5:</strong> If conclusion is negative, both premises must be negative → ❌ At least one premise must be negative, but not necessarily both.</li><li><strong>Trap 6:</strong> Existential fallacy = always invalid → ❌ In Traditional logic it's valid; in Boolean logic it's invalid.</li><li><strong>Trap 7:</strong> Mood = Figure → ❌ Mood and Figure are different concepts.</li></ul></div>
+
+      <div id="practice-questions" class="topic-card"><div class="sec-head"><span class="sec-num">11</span><h2>Practice Questions — अभ्यास प्रश्न</h2></div>
+      <div class="pyq-tag">Question 1 (Terms Identification)</div>
+      <p>In the syllogism "All cats are animals. All animals are living things. Therefore, all cats are living things." Identify the Middle Term.</p>
+      <ul class="bullet-list"><li>A. Cats</li><li>B. Animals</li><li>C. Living things</li><li>D. None of these</li></ul>
+      <div class="answer-box">Answer: B. Animals</div>
+      <p class="explain">Explanation: Middle term appears in both premises but not in conclusion — "animals" is the middle term.</p>
+
+      <div class="pyq-tag">Question 2 (Mood)</div>
+      <p>What is the mood of: "All M are P. All S are M. Therefore, All S are P."</p>
+      <ul class="bullet-list"><li>A. AAA</li><li>B. AAE</li><li>C. EAE</li><li>D. AAI</li></ul>
+      <div class="answer-box">Answer: A. AAA</div>
+      <p class="explain">Explanation: All three propositions are A (Universal Affirmative) → Mood = AAA.</p>
+
+      <div class="pyq-tag">Question 3 (Figure)</div>
+      <p>In the syllogism "All M are P. All S are M. Therefore, All S are P." what is the figure?</p>
+      <ul class="bullet-list"><li>A. Figure 1</li><li>B. Figure 2</li><li>C. Figure 3</li><li>D. Figure 4</li></ul>
+      <div class="answer-box">Answer: A. Figure 1</div>
+      <p class="explain">Explanation: M is subject of major (M—P) and predicate of minor (S—M) → Figure 1.</p>
+
+      <div class="pyq-tag">Question 4 (Rule Violation)</div>
+      <p>Which rule is violated by: "All M are P. Some S are not M. Therefore, Some S are not P."</p>
+      <ul class="bullet-list"><li>A. Middle term not distributed</li><li>B. Two negative premises</li><li>C. Illicit major</li><li>D. Illicit minor</li></ul>
+      <div class="answer-box">Answer: A. Middle term not distributed</div>
+      <p class="explain">Explanation: M appears as subject in "All M are P" (distributed) but in "Some S are not M" (predicate — not distributed). M is not distributed in either premise → Rule 1 violated.</p>
+
+      <div class="pyq-tag">Question 5 (Existential Fallacy)</div>
+      <p>Which syllogism commits the existential fallacy in Boolean interpretation?</p>
+      <ul class="bullet-list"><li>A. AAA-1</li><li>B. AAI-3</li><li>C. EAE-1</li><li>D. AEE-2</li></ul>
+      <div class="answer-box">Answer: B. AAI-3</div>
+      <p class="explain">Explanation: AAI-3 has universal premises (A and A) and a particular conclusion (I) → existential fallacy in Boolean logic.</p>
+
+      <div class="pyq-tag">Question 6 (Valid Mood)</div>
+      <p>Which of the following is a valid mood in Figure 1?</p>
+      <ul class="bullet-list"><li>A. AII</li><li>B. EIO</li><li>C. AAA</li><li>D. All of the above</li></ul>
+      <div class="answer-box">Answer: D. All of the above</div>
+      <p class="explain">Explanation: AAA-1, AII-1, and EIO-1 are all valid moods in Figure 1.</p></div>
+
+      <div id="one-page-revision" class="topic-card"><div class="sec-head"><span class="sec-num">12</span><h2>One-Page Revision — एक पेज में पुनरावृत्ति</h2></div>
+      <div class="formula-box">Categorical Syllogism = 3 Propositions + 3 Terms + Deductive</div>
+
+      <p><strong>Terms:</strong></p>
+      <ul class="bullet-list"><li><strong>Major Term (P):</strong> Conclusion Predicate</li>
+      <li><strong>Minor Term (S):</strong> Conclusion Subject</li>
+      <li><strong>Middle Term (M):</strong> In both premises, NOT in conclusion</li></ul>
+
+      <p><strong>Mood & Figure:</strong></p>
+      <ul class="bullet-list"><li><strong>Mood:</strong> A, E, I, O sequence (Major, Minor, Conclusion)</li>
+      <li><strong>Figure:</strong> Position of Middle Term (1-4)</li></ul>
+
+      <p><strong>7 Rules:</strong></p>
+      <ul class="bullet-list"><li>1. M distributed at least once</li>
+      <li>2. If term distributed in conclusion → distributed in premise</li>
+      <li>3. No two negative premises</li>
+      <li>4. Negative premise → Negative conclusion; Affirmative premises → Affirmative conclusion</li>
+      <li>5. Universal premises → No particular conclusion (without existential import)</li>
+      <li>6. No two particular premises</li>
+      <li>7. Particular + Negative → No universal conclusion</li></ul>
+
+      <p><strong>Existential Fallacy:</strong></p>
+      <ul class="bullet-list"><li>Universal premises → Particular conclusion (invalid in Boolean, valid in Traditional if existence assumed)</li></ul>
+
+      <p><strong>Exam Formula:</strong></p>
+      <div class="formula-box">Valid Syllogism = Standard Form + All 7 Rules Satisfied</div>
+      <p><em>UGC NET में Categorical Syllogism के questions terms identification, mood-figure, rules, और existential fallacy पर based होते हैं।</em></p></div>
+
+      <div class="enroll-cta"><div><h3 class="h-display">Join the Paper-1 Batch</h3><p>Course fee FREE — ₹500 registration & academic/logistics contribution. Classes daily at 6:30 PM.</p></div><a href="/enroll.html" class="btn-gold">✓ JOIN BATCH @ ₹500</a></div>
+    </div>
+  </div>
+</main>
+
+<footer class="relative overflow-hidden bg-navy-950 text-white">
+  <div class="grid-paper absolute inset-0 opacity-50" aria-hidden="true"></div>
+  <div class="container-x relative py-12 lg:py-14">
+    <div class="grid grid-cols-2 gap-10 lg:grid-cols-4">
+
+      <div>
+        <div class="flex items-center gap-3">
+          <img src="/assets/images/logo.png" alt="GS Net Academy" class="h-11 w-auto rounded-lg bg-white p-1" width="120" height="44">
+          <img src="/assets/images/tagline.png" alt="" class="h-11 w-auto brightness-0 invert" aria-hidden="true">
+        </div>
+        <p class="mt-5 text-[14px] leading-relaxed text-navy-100/75">UGC NET Paper-I | JRF Preparation | Mentorship</p>
+        <span class="eyebrow mt-5"><svg viewBox="0 0 24 24" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1"/></svg> JRF @ ₹500 Mission 2026</span>
+
+        <p class="mt-6 text-[11px] font-extrabold uppercase tracking-[0.18em] text-gold-400">Follow Us</p>
+        <ul class="mt-3 flex flex-wrap gap-2">
+          <li><a href="https://www.youtube.com/@gsnetacademy" target="_blank" rel="noreferrer noopener" aria-label="YouTube" title="YouTube" class="grid h-10 w-10 place-items-center rounded-xl border border-white/12 bg-white/[0.06] text-navy-100/80 transition hover:border-gold-400/50 hover:bg-white/[0.12] hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor" aria-hidden="true"><path d="M21.6 7.2a2.5 2.5 0 0 0-1.8-1.8C18.2 5 12 5 12 5s-6.2 0-7.8.4A2.5 2.5 0 0 0 2.4 7.2 26 26 0 0 0 2 12a26 26 0 0 0 .4 4.8 2.5 2.5 0 0 0 1.8 1.8C5.8 19 12 19 12 19s6.2 0 7.8-.4a2.5 2.5 0 0 0 1.8-1.8A26 26 0 0 0 22 12a26 26 0 0 0-.4-4.8ZM10 15V9l5.2 3L10 15Z"/></svg></a></li>
+          <li><a href="https://www.instagram.com/gsnetacademy" target="_blank" rel="noreferrer noopener" aria-label="Instagram" title="Instagram" class="grid h-10 w-10 place-items-center rounded-xl border border-white/12 bg-white/[0.06] text-navy-100/80 transition hover:border-gold-400/50 hover:bg-white/[0.12] hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg></a></li>
+          <li><a href="https://www.facebook.com/gsnetacademy" target="_blank" rel="noreferrer noopener" aria-label="Facebook" title="Facebook" class="grid h-10 w-10 place-items-center rounded-xl border border-white/12 bg-white/[0.06] text-navy-100/80 transition hover:border-gold-400/50 hover:bg-white/[0.12] hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.25-1.5 1.55-1.5H16.7V3.6c-.3 0-1.3-.13-2.47-.13-2.44 0-4.11 1.49-4.11 4.23V9.9H7.4V13h2.72v8h3.38Z"/></svg></a></li>
+          <li><a href="https://t.me/gsnetacademy" target="_blank" rel="noreferrer noopener" aria-label="Telegram" title="Telegram" class="grid h-10 w-10 place-items-center rounded-xl border border-white/12 bg-white/[0.06] text-navy-100/80 transition hover:border-gold-400/50 hover:bg-white/[0.12] hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor" aria-hidden="true"><path d="M21.3 4.3 2.9 11.4c-.9.35-.9 1.62.02 1.93l4.6 1.53 1.75 5.3c.25.75 1.2.95 1.73.37l2.5-2.72 4.6 3.38c.63.46 1.53.12 1.7-.65l3.1-14.9c.2-.9-.7-1.65-1.6-1.31ZM9.6 14.1l8.5-5.6-6.9 6.5-.3 3.3-1.3-4.2Z"/></svg></a></li>
+          <li><a href="https://chat.whatsapp.com/KeaQUhOFz0UGAKtLmsM7oU" target="_blank" rel="noreferrer noopener" aria-label="WhatsApp Group" title="WhatsApp Group" class="grid h-10 w-10 place-items-center rounded-xl border border-white/12 bg-white/[0.06] text-navy-100/80 transition hover:border-emerald-400/50 hover:bg-emerald-500/15 hover:text-emerald-300"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.2 20.8 4.6 16A8.4 8.4 0 1 1 8 19.4l-4.8 1.4Z"/><path d="M9 8.4c.3-.7.6-.7.9-.7h.6c.2 0 .5 0 .7.6l.8 1.9c.1.2.1.4 0 .6l-.5.7c-.1.2-.2.4 0 .7a7 7 0 0 0 3 2.6c.3.1.5.1.7-.1l.7-.8c.2-.2.4-.2.6-.1l1.8.9c.3.1.5.3.5.5v.6c0 .4-.2.9-.9 1.2-.6.3-1.5.4-2.5.1a10 10 0 0 1-6.5-6.2c-.3-1-.1-1.9.1-2.5Z"/></svg></a></li>
+          <li><a href="https://x.com/gsnetacademy" target="_blank" rel="noreferrer noopener" aria-label="X (Twitter)" title="X (Twitter)" class="grid h-10 w-10 place-items-center rounded-xl border border-white/12 bg-white/[0.06] text-navy-100/80 transition hover:border-gold-400/50 hover:bg-white/[0.12] hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-4.5 w-4.5" fill="currentColor" aria-hidden="true"><path d="M17.5 3h3.1l-6.8 7.8L21.8 21h-6.2l-4.9-6.4L5.1 21H2l7.3-8.3L2.5 3h6.4l4.4 5.8L17.5 3Zm-1.1 16.2h1.7L7.7 4.7H5.9l10.5 14.5Z"/></svg></a></li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="text-[11px] font-extrabold uppercase tracking-[0.18em] text-gold-400">Quick Links</p>
+        <ul class="mt-4 grid gap-2.5">
+          <li><a href="/index.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Home</a></li>
+          <li><a href="/courses.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">UGC NET Paper-I</a></li>
+          <li><a href="/results.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Our Results</a></li>
+          <li><a href="/tutorials.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Tutorials</a></li>
+          <li><a href="/blog.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Blog</a></li>
+          <li><a href="/about.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">About</a></li>
+          <li><a href="/contact.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="text-[11px] font-extrabold uppercase tracking-[0.18em] text-gold-400">Resources</p>
+        <ul class="mt-4 grid gap-2.5">
+          <li><a href="/notes.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Notes</a></li>
+          <li><a href="/enroll.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Register for ₹500</a></li>
+          <li><a href="/index.html#free-demo" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Free Demo Classes</a></li>
+          <li><a href="https://chat.whatsapp.com/KeaQUhOFz0UGAKtLmsM7oU" target="_blank" rel="noreferrer noopener" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Student Community</a></li>
+        </ul>
+        <p class="mt-6 text-[11px] font-extrabold uppercase tracking-[0.18em] text-gold-400">Legal</p>
+        <ul class="mt-4 grid gap-2.5">
+          <li><a href="/privacy-policy.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Privacy Policy</a></li>
+          <li><a href="/refund-policy.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Refund &amp; Cancellation</a></li>
+          <li><a href="/terms-of-enrollment.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Terms of Enrollment</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="text-[11px] font-extrabold uppercase tracking-[0.18em] text-gold-400">Contact</p>
+        <ul class="mt-4 grid gap-2.5 text-[14px] text-navy-100/75">
+          <li><a href="tel:+919266511505" class="flex items-center gap-2 hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-4 w-4 icon-gold" fill="currentColor" aria-hidden="true"><path d="M5 3h3.5l1.6 4-2 1.4a12 12 0 0 0 5.5 5.5l1.4-2 4 1.6V19a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 3 5.2 2 2 0 0 1 5 3Z"/></svg> +91 9266511505</a></li>
+          <li><a href="tel:+919810845327" class="flex items-center gap-2 hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-4 w-4 icon-gold" fill="currentColor" aria-hidden="true"><path d="M5 3h3.5l1.6 4-2 1.4a12 12 0 0 0 5.5 5.5l1.4-2 4 1.6V19a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 3 5.2 2 2 0 0 1 5 3Z"/></svg> +91 9810845327</a></li>
+          <li><a href="mailto:gsnetacademy@gmail.com" class="flex items-center gap-2 break-all hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-4 w-4 icon-gold" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="m3.5 6.5 8.5 6 8.5-6"/></svg> gsnetacademy@gmail.com</a></li>
+          <li><a href="https://chat.whatsapp.com/KeaQUhOFz0UGAKtLmsM7oU" target="_blank" rel="noreferrer noopener" class="flex items-center gap-2 hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-4 w-4 icon-gold" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.2 20.8 4.6 16A8.4 8.4 0 1 1 8 19.4l-4.8 1.4Z"/><path d="M9 8.4c.3-.7.6-.7.9-.7h.6c.2 0 .5 0 .7.6l.8 1.9c.1.2.1.4 0 .6l-.5.7c-.1.2-.2.4 0 .7a7 7 0 0 0 3 2.6c.3.1.5.1.7-.1l.7-.8c.2-.2.4-.2.6-.1l1.8.9c.3.1.5.3.5.5v.6c0 .4-.2.9-.9 1.2-.6.3-1.5.4-2.5.1a10 10 0 0 1-6.5-6.2c-.3-1-.1-1.9.1-2.5Z"/></svg> WhatsApp Group</a></li>
+        </ul>
+        <a href="/enroll.html" class="btn-primary mt-6 w-full">Join for ₹500</a>
+        <p class="text-[14px] mt-3 text-navy-100/75 transition hover:text-gold-300">Address: B 14-15, Udhyog Marg, Block B, Sector 1, Noida, Uttar Pradesh 201301</p>
+      </div>
+    </div>
+
+    <div class="mt-10 border-t border-white/10 pt-6">
+      <ul class="flex flex-wrap items-center gap-x-5 gap-y-2 text-[13px]">
+        <li><a href="/privacy-policy.html" class="text-navy-100/70 transition hover:text-gold-300">Privacy Policy</a></li>
+        <li aria-hidden="true" class="text-navy-100/25">|</li>
+        <li><a href="/refund-policy.html" class="text-navy-100/70 transition hover:text-gold-300">Refund &amp; Cancellation</a></li>
+        <li aria-hidden="true" class="text-navy-100/25">|</li>
+        <li><a href="/terms-of-enrollment.html" class="text-navy-100/70 transition hover:text-gold-300">Terms of Enrollment</a></li>
+      </ul>
+      <div class="mt-4 flex flex-col gap-2 text-[13px] text-navy-100/60 sm:flex-row sm:items-center sm:justify-between">
+        <p>© 2026 GS Net Academy. All Rights Reserved.</p>
+        <p>A Premier institute for UGC NET Paper-1</p>
+      </div>
+      <p class="mt-4 text-[12px] leading-relaxed text-navy-100/45">Disclaimer: GS Net Academy किसी भी exam में selection, rank या score की guarantee नहीं देता। हम quality teaching, study material, practice और academic mentorship प्रदान करते हैं। UGC, NTA या किसी अन्य government body से हमारा कोई affiliation नहीं है।</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  (function() {
+
+    const BASE_PATH =
+      "/tutorials/logical-reasoning/categorical-syllogism";
+
+    const links = document.querySelectorAll(".nav-link");
+    const cards = document.querySelectorAll(".topic-card");
+    const content = document.getElementById("contentArea");
+    const sidebarToggle = document.getElementById("sidebar-toggle");
+
+
+    // Get topic slug from current URL
+    function getSlugFromPath() {
+
+      const path = window.location.pathname
+        .replace(/\/+$/, "");
+
+      if (path.startsWith(BASE_PATH + "/")) {
+
+        return path
+          .substring((BASE_PATH + "/").length)
+          .split("/")[0];
+
+      }
+
+      return null;
+    }
+
+
+    // Update browser URL
+    function updateUrl(slug, replace = false) {
+
+      const newPath =
+        BASE_PATH + "/" + slug;
+
+      if (window.location.pathname !== newPath) {
+
+        if (replace) {
+
+          history.replaceState(
+            null,
+            "",
+            newPath
+          );
+
+        } else {
+
+          history.pushState(
+            null,
+            "",
+            newPath
+          );
+
+        }
+
+      }
+    }
+
+
+    // Update active sidebar link
+    function updateActiveLink(slug) {
+
+      links.forEach(function(link) {
+
+        const href =
+          link.getAttribute("href");
+
+        if (!href) return;
+
+        const linkSlug =
+          href
+            .split("/")
+            .filter(Boolean)
+            .pop();
+
+        link.classList.toggle(
+          "active",
+          linkSlug === slug
+        );
+
+      });
+
+    }
+
+
+    // Show selected topic card
+    function showCard(
+      slug,
+      updateHistory = true
+    ) {
+
+      cards.forEach(function(card) {
+
+        card.classList.add("hidden");
+
+      });
+
+
+      const target =
+        document.getElementById(slug);
+
+
+      if (!target) {
+
+        const first = cards[0];
+
+        if (first) {
+
+          first.classList.remove("hidden");
+
+          const firstSlug =
+            first.id;
+
+          updateActiveLink(firstSlug);
+
+          updateUrl(
+            firstSlug,
+            true
+          );
+
+        }
+
+        return;
+      }
+
+
+      target.classList.remove("hidden");
+
+      updateActiveLink(slug);
+
+
+      if (updateHistory) {
+
+        updateUrl(
+          slug,
+          false
+        );
+
+      }
+
+
+      if (sidebarToggle) {
+
+        sidebarToggle.checked = false;
+
+      }
+
+
+      if (content) {
+
+        const top =
+          content.getBoundingClientRect().top +
+          window.pageYOffset -
+          10;
+
+        window.scrollTo({
+
+          top: top,
+
+          behavior: "smooth"
+
+        });
+
+      }
+
+    }
+
+
+    // Sidebar link click
+    links.forEach(function(link) {
+
+      link.addEventListener(
+        "click",
+        function(e) {
+
+          e.preventDefault();
+
+
+          const href =
+            this.getAttribute("href");
+
+          if (!href) return;
+
+
+          const slug =
+            href
+              .split("/")
+              .filter(Boolean)
+              .pop();
+
+
+          if (!slug) return;
+
+
+          console.log(
+            "Clicked topic:",
+            slug
+          );
+
+
+          showCard(
+            slug,
+            true
+          );
+
+        }
+      );
+
+    });
+
+
+    // Initial page load
+    function initFromPath() {
+
+      let slug =
+        getSlugFromPath();
+
+
+      if (
+        !slug ||
+        !document.getElementById(slug)
+      ) {
+
+        slug =
+          cards[0]?.id ||
+          "categorical-syllogism-intro";
+
+      }
+
+
+      showCard(
+        slug,
+        false
+      );
+
+
+      updateUrl(
+        slug,
+        true
+      );
+
+    }
+
+
+    initFromPath();
+
+
+    // Browser Back / Forward
+    window.addEventListener(
+      "popstate",
+      function() {
+
+        const slug =
+          getSlugFromPath();
+
+
+        if (
+          slug &&
+          document.getElementById(slug)
+        ) {
+
+          showCard(
+            slug,
+            false
+          );
+
+        } else {
+
+          const firstSlug =
+            cards[0]?.id ||
+            "categorical-syllogism-intro";
+
+          showCard(
+            firstSlug,
+            false
+          );
+
+        }
+
+      }
+    );
+
+
+  })();
+</script>
+</body>
+</html>

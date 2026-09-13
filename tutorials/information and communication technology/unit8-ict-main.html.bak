@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ICT & Computer Fundamentals – Full Notes | UGC NET Paper-1</title>
+  <meta name="description" content="Complete tutorial: ICT meaning, Data vs Information, Computer fundamentals, hardware, software, input/output devices, memory, storage, number systems, computer networks, Internet, intranet, extranet, protocols, e-mail, digital learning, SWAYAM, SWAYAM PRABHA, digital initiatives, e-governance, cybersecurity, cloud computing, AI in education, PYQs for UGC NET Paper-1.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; }
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background: #f8f5ee;
+      color: #101a3d;
+    }
+    .h-display { font-family: 'Poppins', sans-serif; font-weight: 800; letter-spacing: -0.01em; }
+    .container { max-width: 1360px; margin: 0 auto; padding: 0 20px; }
+
+    .hero {
+      background: #0b1330;
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+      padding: 28px 0 22px;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      right: -80px;
+      top: -100px;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(232,183,75,0.2), transparent 70%);
+    }
+    .hero-inner { position: relative; }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      padding: 6px 16px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+      color: #e8b74b;
+    }
+    .hero h1 {
+      font-size: clamp(28px, 4.2vw, 44px);
+      margin: 12px 0 6px;
+    }
+    .hero p {
+      color: rgba(255,255,255,0.78);
+      max-width: 680px;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 28px;
+      padding: 28px 0 50px;
+      align-items: start;
+    }
+    @media (max-width: 980px) {
+      .layout { grid-template-columns: 1fr; }
+    }
+
+    .sidebar {
+      position: sticky;
+      top: 16px;
+      max-height: calc(100vh - 40px);
+      overflow-y: auto;
+      background: #fff;
+      border: 1px solid rgba(16,26,61,0.08);
+      border-radius: 16px;
+      padding: 16px 12px;
+      box-shadow: 0 6px 24px rgba(16,26,61,0.05);
+    }
+    .sidebar::-webkit-scrollbar { width: 5px; }
+    .sidebar::-webkit-scrollbar-thumb { background: #dde2ef; border-radius: 8px; }
+    .sidebar-title {
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: #b9852a;
+      padding: 4px 10px 14px;
+    }
+    .nav-link {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 10px;
+      border-radius: 10px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #33406b;
+      line-height: 1.3;
+      transition: 0.1s;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .nav-link:hover { background: #f4f6fc; color: #0b1330; }
+    .nav-link.active {
+      background: #fdf6e7;
+      color: #0b1330;
+    }
+    .nav-num {
+      flex: none;
+      width: 22px;
+      height: 22px;
+      border-radius: 7px;
+      background: #e7eaf5;
+      color: #5b6690;
+      font-size: 11px;
+      font-weight: 800;
+      display: grid;
+      place-items: center;
+    }
+    .nav-link.active .nav-num {
+      background: #e8b74b;
+      color: #0b1330;
+    }
+
+    #sidebar-toggle { display: none; }
+    .mobile-bar { display: none; }
+    @media (max-width: 980px) {
+      .mobile-bar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: #fff;
+        border: 1px solid rgba(16,26,61,0.1);
+        border-radius: 12px;
+        padding: 12px 16px;
+        margin-bottom: 8px;
+        font-weight: 800;
+        font-size: 13.5px;
+        color: #0b1330;
+      }
+      .sidebar { display: none; position: static; max-height: none; }
+      #sidebar-toggle:checked ~ .layout .sidebar { display: block; }
+    }
+
+    .content { min-width: 0; }
+    .topic-card {
+      background: #fff;
+      border: 1px solid rgba(16,26,61,0.08);
+      border-radius: 16px;
+      padding: 20px 20px 16px;
+      margin-bottom: 18px;
+      scroll-margin-top: 20px;
+      display: block;
+    }
+    .topic-card.hidden { display: none; }
+    .sec-head {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+    .sec-num {
+      flex: none;
+      width: 34px;
+      height: 34px;
+      border-radius: 10px;
+      background: #0b1330;
+      color: #e8b74b;
+      font-weight: 800;
+      font-size: 14px;
+      display: grid;
+      place-items: center;
+    }
+    .sec-head h2 {
+      margin: 0;
+      font-size: 19px;
+      font-weight: 800;
+      color: #0b1330;
+    }
+    .topic-card p {
+      font-size: 14.5px;
+      line-height: 1.75;
+      color: #1a254a;
+      margin: 6px 0;
+    }
+    .bullet-list {
+      margin: 8px 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 5px;
+    }
+    .bullet-list li {
+      position: relative;
+      padding-left: 20px;
+      font-size: 14px;
+      line-height: 1.6;
+      color: #1a254a;
+    }
+    .bullet-list li::before {
+      content: "";
+      position: absolute;
+      left: 2px;
+      top: 9px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #d9a53a;
+    }
+    .formula-box {
+      background: #0b1330;
+      color: #fdeec2;
+      font-weight: 700;
+      font-size: 13.6px;
+      padding: 10px 16px;
+      border-radius: 10px;
+      margin: 10px 0;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 12px 0;
+      font-size: 13.6px;
+      display: block;
+      overflow-x: auto;
+    }
+    .data-table th, .data-table td {
+      border: 1px solid #e7eaf5;
+      padding: 8px 12px;
+      text-align: left;
+      color: #1a254a;
+      white-space: normal;
+    }
+    .data-table th {
+      background: #f4f6fc;
+      color: #0b1330;
+      font-weight: 800;
+    }
+    .pyq-tag {
+      display: inline-block;
+      background: #fdf6e7;
+      color: #b9852a;
+      font-weight: 800;
+      font-size: 12px;
+      padding: 4px 12px;
+      border-radius: 8px;
+      margin: 12px 0 6px;
+    }
+    .answer-box {
+      background: #eefaf2;
+      border: 1px solid #bfe8cc;
+      color: #1a7a4c;
+      font-weight: 700;
+      font-size: 13.6px;
+      padding: 6px 14px;
+      border-radius: 9px;
+      margin: 6px 0;
+    }
+    .explain {
+      background: #f4f6fc;
+      border-radius: 9px;
+      padding: 6px 14px;
+      font-size: 13.6px;
+      color: #1a254a;
+    }
+    .subtopic {
+      padding: 14px 0 6px;
+      border-top: 1px dashed #e7eaf5;
+    }
+    .subtopic:first-of-type { border-top: none; padding-top: 2px; }
+    .subhead {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 6px;
+    }
+    .sub-num {
+      flex: none;
+      width: 26px;
+      height: 26px;
+      border-radius: 8px;
+      background: #fdf6e7;
+      color: #b9852a;
+      font-weight: 800;
+      font-size: 12px;
+      display: grid;
+      place-items: center;
+    }
+    .subhead h3 {
+      margin: 0;
+      font-size: 15.5px;
+      font-weight: 800;
+      color: #0b1330;
+    }
+    .enroll-cta {
+      background: #0b1330;
+      color: #fff;
+      border-radius: 16px;
+      padding: 24px 24px;
+      margin-top: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+      overflow: hidden;
+    }
+    .enroll-cta::before {
+      content: "";
+      position: absolute;
+      right: -40px;
+      top: -40px;
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(232,183,75,0.2), transparent 70%);
+    }
+    .enroll-cta h3 { margin: 0 0 4px; font-size: 20px; }
+    .enroll-cta p { margin: 0; color: rgba(255,255,255,0.75); font-size: 13.5px; max-width: 480px; }
+    .btn-gold {
+      background: #e8b74b;
+      color: #0b1330;
+      font-weight: 800;
+      padding: 10px 22px;
+      border-radius: 10px;
+      font-size: 13.5px;
+      white-space: nowrap;
+      text-decoration: none;
+    }
+  </style>
+
+  <link rel="stylesheet" href="/css/tailwind.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <style>.hero h1 { font-weight: 800 !important; color: #fff !important; line-height: 1.2 !important; font-family: 'Poppins', sans-serif !important; }</style>
+
+  <link rel="icon" href="/assets/images/logo.png">
+</head>
+<body>
+
+<header class="sticky top-0 z-50 border-b border-navy-900/8 bg-white/95 backdrop-blur-md">
+  <nav class="container-wide flex h-[76px] items-center gap-4" aria-label="Main">
+    <a href="/" class="flex shrink-0 items-center gap-3" aria-label="Home">
+      <span class="inline-flex shrink-0 items-center justify-center overflow-hidden rounded-lg bg-navy-950 ring-1 ring-navy-900/10">
+        <img src="assets/images/logo.png" alt="GS Net Academy" class="h-11 w-auto" width="120" height="44">
+      </span>
+      <img src="assets/images/tagline.png" alt="#1 A Premier institute for UGC NET Paper-1" class="h-11 hidden w-auto lg:block">
+    </a>
+    <ul class="mx-auto hidden items-center gap-5 xl:flex">
+      <li><a href="courses.html" class="relative block whitespace-nowrap rounded-lg px-3 py-2 text-[13.5px] font-bold transition-colors text-navy-700/75 hover:text-navy-900">UGC NET Paper-I</a></li>
+      <li><a href="results.html" class="relative block whitespace-nowrap rounded-lg px-3 py-2 text-[13.5px] font-bold transition-colors text-navy-700/75 hover:text-navy-900">Results</a></li>
+      <li><a href="tutorial.html" class="relative block whitespace-nowrap rounded-lg px-3 py-2 text-[13.5px] font-bold transition-colors text-navy-700/75 hover:text-navy-900">Tutorials</a></li>
+      <li><a href="notes.html" class="relative block whitespace-nowrap rounded-lg px-3 py-2 text-[13.5px] font-bold transition-colors text-navy-700/75 hover:text-navy-900">Notes</a></li>
+      <li><a href="blog.html" class="relative block whitespace-nowrap rounded-lg px-3 py-2 text-[13.5px] font-bold transition-colors text-navy-700/75 hover:text-navy-900">Blog</a></li>
+      <li><a href="about.html" class="relative block whitespace-nowrap rounded-lg px-3 py-2 text-[13.5px] font-bold transition-colors text-navy-700/75 hover:text-navy-900">About</a></li>
+      <li><a href="contact.html" class="relative block whitespace-nowrap rounded-lg px-3 py-2 text-[13.5px] font-bold transition-colors text-navy-700/75 hover:text-navy-900">Contact</a></li>
+    </ul>
+    <div class="ml-auto flex items-center gap-2 xl:ml-0">
+      <span title="Coming soon" class="hidden items-center gap-1.5 whitespace-nowrap rounded-lg border border-navy-900/12 px-3 py-2 text-[13px] font-bold text-navy-700 lg:inline-flex"><svg viewBox="0 0 24 24" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="4.5" width="14" height="16" rx="2.5"/><path d="M9 4.5a3 3 0 0 1 6 0"/><path d="M9 11h6M9 15h4"/></svg> <a href="https://mock-test.gsnetacademy.com/" class="cursor-pointer">Exam Portal</a></span>
+      <a href="/#free-demo" class="btn-outline btn-sm hidden 2xl:inline-flex">Demo</a>
+      <a href="enroll.html" class="btn-primary btn-sm hidden sm:inline-flex">Join Now</a>
+      <label for="nav-toggle" class="cursor-pointer rounded-lg border border-navy-900/12 p-2 text-navy-800 xl:hidden" aria-label="Menu"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></label>
+    </div>
+  </nav>
+</header>
+
+<div class="drawer xl:hidden">
+  <label for="nav-toggle" class="drawer-scrim" aria-hidden="true"></label>
+  <div class="drawer-panel">
+    <div class="flex h-[72px] shrink-0 items-center justify-between border-b border-navy-900/10 px-5">
+      <img src="assets/images/logo.png" alt="GS Net Academy" class="h-9 w-auto rounded-lg bg-navy-950">
+      <label for="nav-toggle" class="cursor-pointer p-2 text-navy-800" aria-label="Close"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></label>
+    </div>
+    <div class="flex-1 overflow-y-auto p-5">
+      <ul class="flex flex-col gap-1">
+      <li><a href="/" class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold bg-navy-50 text-navy-900">Home</a></li>
+      <li><a href="courses.html" class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold text-navy-700">UGC NET Paper-I</a></li>
+      <li><a href="results.html" class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold text-navy-700">Our Results</a></li>
+      <li><span class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold text-navy-400">UG / PG (Paper-2)<span class="rounded-md bg-navy-50 px-2 py-0.5 text-[10.5px] font-extrabold uppercase tracking-wider">Coming soon</span></span></li>
+      <li><a href="tutorial.html" class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold text-navy-700">Tutorials</a></li>
+      <li><a href="notes.html" class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold text-navy-700">Notes</a></li>
+      <li><a href="blog.html" class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold text-navy-700">Blog</a></li>
+      <li><a href="about.html" class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold text-navy-700">About</a></li>
+      <li><a href="contact.html" class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold text-navy-700">Contact</a></li>
+      </ul>
+      <p class="mt-3 rounded-xl bg-gold-50 px-4 py-3 text-[12.5px] font-extrabold uppercase tracking-wider text-gold-700">AI-Powered Career Guidance — Coming soon</p>
+      <div class="mt-5 grid gap-2.5">
+        <a href="enroll.html" class="btn-primary w-full">✓ JOIN BATCH @ ₹500</a>
+        <a href="/#free-demo" class="btn-outline w-full">▶ WATCH FREE DEMO</a>
+        <a href="https://chat.whatsapp.com/KeaQUhOFz0UGAKtLmsM7oU" target="_blank" rel="noreferrer noopener" class="btn-outline w-full"><svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.2 20.8 4.6 16A8.4 8.4 0 1 1 8 19.4l-4.8 1.4Z"/><path d="M9 8.4c.3-.7.6-.7.9-.7h.6c.2 0 .5 0 .7.6l.8 1.9c.1.2.1.4 0 .6l-.5.7c-.1.2-.2.4 0 .7a7 7 0 0 0 3 2.6c.3.1.5.1.7-.1l.7-.8c.2-.2.4-.2.6-.1l1.8.9c.3.1.5.3.5.5v.6c0 .4-.2.9-.9 1.2-.6.3-1.5.4-2.5.1a10 10 0 0 1-6.5-6.2c-.3-1-.1-1.9.1-2.5Z"/></svg> WhatsApp Group</a>
+        <a href="tel:+919266511505" class="btn-dark w-full"><svg viewBox="0 0 24 24" class="h-4 w-4" fill="currentColor" stroke="none" aria-hidden="true"><path d="M5 3h3.5l1.6 4-2 1.4a12 12 0 0 0 5.5 5.5l1.4-2 4 1.6V19a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 3 5.2 2 2 0 0 1 5 3Z"/></svg> Call 9266511505</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<section class="hero">
+  <div class="container hero-inner">
+    <span class="eyebrow">★ UGC NET Paper-I · Information and Communication Technology (ICT)</span>
+    <h1 class="h-display">Unit-VIII: ICT & Computer Fundamentals</h1>
+    <p>Complete tutorial: ICT meaning, Data vs Information, Computer fundamentals, hardware, software, input/output devices, memory, storage, networks, Internet, intranet, extranet, protocols, e-mail, digital learning, SWAYAM, SWAYAM PRABHA, digital initiatives, e-governance, cybersecurity, cloud computing, AI in education, PYQs & more.</p>
+  </div>
+</section>
+
+<main class="container">
+  <input type="checkbox" id="sidebar-toggle">
+  <label for="sidebar-toggle" class="mobile-bar">
+    <span>📑 On this page</span>
+    <span>☰ Menu</span>
+  </label>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebarNav">
+      <p class="sidebar-title">On this page</p>
+      <nav>
+      <a href="/tutorials/information-and-communication-technology/ict/ict-meaning" class="nav-link active"><span class="nav-num">1</span>ICT Meaning</a>
+        <a href="/tutorials/information-and-communication-technology/ict/data-information" class="nav-link"><span class="nav-num">2</span>Data & Information</a>
+        <a href="/tutorials/information-and-communication-technology/ict/abbreviations" class="nav-link"><span class="nav-num">3</span>Important Abbreviations</a>
+        <a href="/tutorials/information-and-communication-technology/ict/hardware-software" class="nav-link"><span class="nav-num">4</span>Hardware & Software</a>
+        <a href="/tutorials/information-and-communication-technology/ict/input-output-devices" class="nav-link"><span class="nav-num">5</span>Input & Output Devices</a>
+        <a href="/tutorials/information-and-communication-technology/ict/memory-storage" class="nav-link"><span class="nav-num">6</span>Memory & Storage</a>
+        <a href="/tutorials/information-and-communication-technology/ict/storage-units" class="nav-link"><span class="nav-num">7</span>Units of Digital Storage</a>
+        <a href="/tutorials/information-and-communication-technology/ict/networks" class="nav-link"><span class="nav-num">8</span>Types of Networks</a>
+        <a href="/tutorials/information-and-communication-technology/ict/internet-intranet-extranet" class="nav-link"><span class="nav-num">9</span>Internet, Intranet & Extranet</a>
+        <a href="/tutorials/information-and-communication-technology/ict/internet-vs-www" class="nav-link"><span class="nav-num">10</span>Internet vs WWW</a>
+        <a href="/tutorials/information-and-communication-technology/ict/website-browser" class="nav-link"><span class="nav-num">11</span>Website, Webpage & Browser</a>
+        <a href="/tutorials/information-and-communication-technology/ict/url-domain" class="nav-link"><span class="nav-num">12</span>URL & Domain Name</a>
+        <a href="/tutorials/information-and-communication-technology/ict/protocols" class="nav-link"><span class="nav-num">13</span>Important Protocols</a>
+        <a href="/tutorials/information-and-communication-technology/ict/tcp-udp" class="nav-link"><span class="nav-num">14</span>TCP & UDP</a>
+        <a href="/tutorials/information-and-communication-technology/ict/email" class="nav-link"><span class="nav-num">15</span>E-mail</a>
+        <a href="/tutorials/information-and-communication-technology/ict/audio-video-conferencing" class="nav-link"><span class="nav-num">16</span>Audio & Video Conferencing</a>
+        <a href="/tutorials/information-and-communication-technology/ict/bandwidth" class="nav-link"><span class="nav-num">17</span>Bandwidth</a>
+        <a href="/tutorials/information-and-communication-technology/ict/digital-learning" class="nav-link"><span class="nav-num">18</span>Digital Learning</a>
+        <a href="/tutorials/information-and-communication-technology/ict/moocs" class="nav-link"><span class="nav-num">19</span>MOOCs</a>
+        <a href="/tutorials/information-and-communication-technology/ict/swayam-four-quadrants" class="nav-link"><span class="nav-num">20</span>Four Quadrants of SWAYAM</a>
+        <a href="/tutorials/information-and-communication-technology/ict/swayam" class="nav-link"><span class="nav-num">21</span>SWAYAM</a>
+        <a href="/tutorials/information-and-communication-technology/ict/swayam-prabha" class="nav-link"><span class="nav-num">22</span>SWAYAM PRABHA</a>
+        <a href="/tutorials/information-and-communication-technology/ict/digital-initiatives" class="nav-link"><span class="nav-num">23</span>Digital Initiatives</a>
+        <a href="/tutorials/information-and-communication-technology/ict/digital-divide" class="nav-link"><span class="nav-num">24</span>Digital Divide</a>
+        <a href="/tutorials/information-and-communication-technology/ict/ict-higher-education" class="nav-link"><span class="nav-num">25</span>ICT in Higher Education</a>
+        <a href="/tutorials/information-and-communication-technology/ict/e-governance" class="nav-link"><span class="nav-num">26</span>ICT & E-Governance</a>
+        <a href="/tutorials/information-and-communication-technology/ict/digital-governance-initiatives" class="nav-link"><span class="nav-num">27</span>Digital Governance Initiatives</a>
+        <a href="/tutorials/information-and-communication-technology/ict/cybersecurity" class="nav-link"><span class="nav-num">28</span>Cybersecurity</a>
+        <a href="/tutorials/information-and-communication-technology/ict/cloud-computing" class="nav-link"><span class="nav-num">29</span>Cloud Computing</a>
+        <a href="/tutorials/information-and-communication-technology/ict/ai-education" class="nav-link"><span class="nav-num">30</span>AI in Education</a>
+        <a href="/tutorials/information-and-communication-technology/ict/exam-traps" class="nav-link"><span class="nav-num">31</span>Common Exam Traps</a>
+        <a href="/tutorials/information-and-communication-technology/ict/verified-pyqs" class="nav-link"><span class="nav-num">32</span>Verified PYQs</a>
+        <a href="/tutorials/information-and-communication-technology/ict/pyq-trend" class="nav-link"><span class="nav-num">33</span>PYQ Trend Analysis</a>
+        <a href="/tutorials/information-and-communication-technology/ict/expected-mcqs" class="nav-link"><span class="nav-num">34</span>Expected MCQs</a>
+        <a href="/tutorials/information-and-communication-technology/ict/one-page-revision" class="nav-link"><span class="nav-num">35</span>One-Page Revision</a>
+      </nav>
+    </aside>
+
+    <div class="content" id="contentArea">
+      <!-- ===== CARDS ===== -->
+      <div id="ict-meaning" class="topic-card"><div class="sec-head"><span class="sec-num">1</span><h2>ICT का अर्थ</h2></div><p><strong>Information and Communication Technology (ICT)</strong> refers to technologies used for collecting, processing, storing, retrieving and communicating information.</p><p><strong>सूचना एवं संचार प्रौद्योगिकी</strong> उन technologies का समूह है जिनका उपयोग information को collect, process, store, retrieve और transmit करने के लिए किया जाता है।</p><div class="formula-box">ICT = Information Processing + Digital Storage + Communication Network</div><p><strong>ICT के Components:</strong> Computer hardware, Software, Internet and networks, Telecommunication, Audio-video technology, Digital platforms, Cloud services, Database systems, Mobile communication, Artificial Intelligence</p><p><strong>Educational Example:</strong> जब teacher Google Meet पर live class लेता है, LMS पर notes upload करता है और online quiz से assessment करता है, तो वह ICT-enabled teaching कर रहा है।</p></div>
+
+      <div id="data-information" class="topic-card"><div class="sec-head"><span class="sec-num">2</span><h2>Data and Information</h2></div><table class="data-table"><tr><th>Data / डेटा</th><th>Information / सूचना</th></tr><tr><td>Raw facts</td><td>Processed and meaningful data</td></tr><tr><td>Unorganised हो सकता है</td><td>Organised और contextual</td></tr><tr><td>Example: 45, 60, 75</td><td>Average marks = 60</td></tr><tr><td>Input की तरह कार्य करता है</td><td>Decision-making में useful</td></tr></table><div class="formula-box">Data + Processing = Information</div></div>
+
+      <div id="abbreviations" class="topic-card"><div class="sec-head"><span class="sec-num">3</span><h2>Important ICT Abbreviations</h2></div><p><strong>Computer and Storage:</strong></p><ul class="bullet-list"><li>ICT - Information and Communication Technology</li><li>CPU - Central Processing Unit</li><li>ALU - Arithmetic Logic Unit</li><li>CU - Control Unit</li><li>RAM - Random Access Memory</li><li>ROM - Read Only Memory</li><li>HDD - Hard Disk Drive</li><li>SSD - Solid State Drive</li><li>USB - Universal Serial Bus</li><li>UPS - Uninterruptible Power Supply</li><li>BIOS - Basic Input/Output System</li><li>GUI - Graphical User Interface</li><li>OS - Operating System</li><li>PDF - Portable Document Format</li><li>OCR - Optical Character Recognition</li><li>OMR - Optical Mark Recognition</li><li>MICR - Magnetic Ink Character Recognition</li></ul><p><strong>Internet and Networking:</strong></p><ul class="bullet-list"><li>LAN - Local Area Network</li><li>MAN - Metropolitan Area Network</li><li>WAN - Wide Area Network</li><li>PAN - Personal Area Network</li><li>WLAN - Wireless Local Area Network</li><li>WWW - World Wide Web</li><li>URL - Uniform Resource Locator</li><li>ISP - Internet Service Provider</li><li>IP - Internet Protocol</li><li>DNS - Domain Name System</li><li>DHCP - Dynamic Host Configuration Protocol</li><li>HTTP - Hypertext Transfer Protocol</li><li>HTTPS - Hypertext Transfer Protocol Secure</li><li>FTP - File Transfer Protocol</li><li>TCP - Transmission Control Protocol</li><li>UDP - User Datagram Protocol</li><li>VPN - Virtual Private Network</li><li>Wi-Fi - Wireless networking technology</li><li>VoIP - Voice over Internet Protocol</li><li>HTML - HyperText Markup Language</li></ul><p><strong>E-mail:</strong></p><ul class="bullet-list"><li>SMTP - Simple Mail Transfer Protocol</li><li>POP3 - Post Office Protocol Version 3</li><li>IMAP - Internet Message Access Protocol</li><li>CC - Carbon Copy</li><li>BCC - Blind Carbon Copy</li></ul><p><strong>Education and Governance:</strong></p><ul class="bullet-list"><li>MOOC - Massive Open Online Course</li><li>LMS - Learning Management System</li><li>SWAYAM - Study Webs of Active Learning for Young Aspiring Minds</li><li>NPTEL - National Programme on Technology Enhanced Learning</li><li>CEC - Consortium for Educational Communication</li><li>NDLI - National Digital Library of India</li><li>NAD - National Academic Depository</li><li>DIKSHA - Digital Infrastructure for Knowledge Sharing</li><li>NETF - National Educational Technology Forum</li><li>NMEICT - National Mission on Education through ICT</li><li>G2C - Government to Citizen</li><li>G2B - Government to Business</li><li>G2G - Government to Government</li><li>G2E - Government to Employee</li></ul></div>
+
+      <div id="hardware-software" class="topic-card"><div class="sec-head"><span class="sec-num">4</span><h2>Computer System: Basic Concepts</h2></div><p><strong>Hardware:</strong> Physical components of a computer that can be seen or touched. Examples: Keyboard, monitor, CPU, printer, hard disk.</p><p><strong>Software:</strong> Instructions or programs that direct a computer to perform tasks.</p><p><strong>Types of Software:</strong></p><ul class="bullet-list"><li><strong>System Software:</strong> Operating system, device drivers</li><li><strong>Application Software:</strong> Word processor, browser, spreadsheet</li><li><strong>Utility Software:</strong> Antivirus, backup, compression tools</li></ul><p><strong>Example:</strong> Windows/Linux → System software; MS Word → Application software; Antivirus → Utility software</p></div>
+
+      <div id="input-output-devices" class="topic-card"><div class="sec-head"><span class="sec-num">5</span><h2>Input and Output Devices</h2></div><p><strong>Input Devices:</strong> Data को computer में enter करते हैं। Keyboard, Mouse, Scanner, Microphone, Webcam, Barcode reader, OCR, OMR, MICR, Touchscreen</p><p><strong>Output Devices:</strong> Processed information प्रस्तुत करते हैं। Monitor, Printer, Speaker, Projector, Plotter</p><p><strong>Important Devices:</strong></p><ul class="bullet-list"><li><strong>OCR:</strong> Printed characters को editable digital text में बदलता है</li><li><strong>OMR:</strong> Shaded marks/bubbles पढ़ता है</li><li><strong>MICR:</strong> Bank cheques पर magnetic-ink characters पढ़ता है</li><li><strong>Barcode reader:</strong> Product code scan करता है</li><li><strong>Biometric scanner:</strong> Fingerprint/iris जैसी biological identity पढ़ता है</li></ul><p><strong>Exam Trap:</strong> OMR handwritten essay नहीं पढ़ता। OCR shaded circles identify करने का primary device नहीं है। MICR का प्रमुख उपयोग banking में होता है।</p></div>
+
+      <div id="memory-storage" class="topic-card"><div class="sec-head"><span class="sec-num">6</span><h2>Memory and Storage</h2></div><p><strong>Primary Memory:</strong> CPU द्वारा directly accessible memory.</p><ul class="bullet-list"><li><strong>RAM:</strong> Volatile memory, Temporary storage, Power बंद होने पर data lost, Read and write possible</li><li><strong>ROM:</strong> Non-volatile memory, Permanent instructions, Power बंद होने पर data retained</li><li><strong>Cache Memory:</strong> Very fast memory, CPU और main memory के बीच, Frequently used data/instructions रखती है</li></ul><p><strong>Secondary Storage:</strong> HDD, SSD, Pen drive, Memory card, CD/DVD, Magnetic tape</p><p><strong>Memory Hierarchy:</strong> Registers → Cache → RAM → SSD/HDD → Optical/Tape</p><p>ऊपर से नीचे जाने पर: Speed decreases, Capacity increases, Cost per unit generally decreases</p></div>
+
+      <div id="storage-units" class="topic-card"><div class="sec-head"><span class="sec-num">7</span><h2>Units of Digital Storage</h2></div><div class="formula-box">1 Byte = 8 bits</div><p>Traditional binary convention में: 1 KB = 1024 Bytes, 1 MB = 1024 KB, 1 GB = 1024 MB, 1 TB = 1024 GB</p><p><strong>Order:</strong> Bit → Nibble (4 bits) → Byte (8 bits) → KB → MB → GB → TB → PB</p><p><strong>Exam Trap:</strong> Lowercase <strong>b</strong> means bit and uppercase <strong>B</strong> means byte. Mbps = megabits per second; MBps = megabytes per second.</p></div>
+
+      <div id="networks" class="topic-card"><div class="sec-head"><span class="sec-num">8</span><h2>Types of Computer Networks</h2></div><ul class="bullet-list"><li><strong>PAN - Personal Area Network:</strong> एक व्यक्ति के आसपास छोटी range का network। Example: Smartphone और wireless earbuds का Bluetooth connection।</li><li><strong>LAN - Local Area Network:</strong> छोटे geographical area में network। Example: Computer laboratory or university department.</li><li><strong>MAN - Metropolitan Area Network:</strong> City या metropolitan area तक फैला network।</li><li><strong>WAN - Wide Area Network:</strong> Large geographical area covering countries or continents। Example: Internet.</li></ul><div class="formula-box">PAN < LAN < MAN < WAN</div></div>
+
+      <div id="internet-intranet-extranet" class="topic-card"><div class="sec-head"><span class="sec-num">9</span><h2>Internet, Intranet and Extranet</h2></div><ul class="bullet-list"><li><strong>Internet:</strong> A global public network of interconnected networks. Internet = Network of Networks</li><li><strong>Intranet:</strong> Internet technologies पर आधारित private organisational network। Example: University का internal faculty portal.</li><li><strong>Extranet:</strong> Controlled private network in which selected outsiders are also given authorised access। Example: University portal accessed by authorised vendors or collaborating institutions.</li></ul><table class="data-table"><tr><th>Basis</th><th>Internet</th><th>Intranet</th><th>Extranet</th></tr><tr><td>Access</td><td>Public</td><td>Internal authorised users</td><td>Internal + selected external users</td></tr><tr><td>Ownership</td><td>No single owner</td><td>Organisation</td><td>Organisation/partners</td></tr><tr><td>Security</td><td>Relatively less controlled</td><td>More controlled</td><td>Controlled access</td></tr><tr><td>Scope</td><td>Global</td><td>Organisation</td><td>Collaborating groups</td></tr><tr><td>Example</td><td>Public website</td><td>Employee portal</td><td>Supplier/collaboration portal</td></tr></table><div class="formula-box">Internet = Everyone | Intranet = Employees/Internal members | Extranet = Employees + Authorised outsiders</div></div>
+
+      <div id="internet-vs-www" class="topic-card"><div class="sec-head"><span class="sec-num">10</span><h2>Internet vs World Wide Web</h2></div><ul class="bullet-list"><li><strong>Internet:</strong> Physical and logical network infrastructure connecting devices worldwide.</li><li><strong>World Wide Web:</strong> Internet पर उपलब्ध interlinked web pages और resources की service।</li></ul><div class="formula-box">Internet is the infrastructure; WWW is a service running on it.</div><p><strong>Other Internet Services:</strong> E-mail, FTP, VoIP, Video conferencing, Web browsing, Cloud services, Instant messaging</p><p><strong>Exam Trap:</strong> Internet और WWW समान concepts नहीं हैं। WWW, Internet की services में से एक है।</p></div>
+
+      <div id="website-browser" class="topic-card"><div class="sec-head"><span class="sec-num">11</span><h2>Website, Webpage and Browser</h2></div><ul class="bullet-list"><li><strong>Website:</strong> Related web pages का collection।</li><li><strong>Webpage:</strong> Website का single document/page।</li><li><strong>Home Page:</strong> Website का main or introductory page।</li><li><strong>Web Browser:</strong> Web resources access और display करने वाला software। Examples: Chrome, Firefox, Edge, Safari.</li><li><strong>Search Engine:</strong> Internet पर information search करने वाली service। Examples: Google, Bing.</li></ul><p><strong>Exam Trap:</strong> Google primarily search engine है; Chrome browser है।</p></div>
+
+      <div id="url-domain" class="topic-card"><div class="sec-head"><span class="sec-num">12</span><h2>URL and Domain Name</h2></div><p><strong>URL:</strong> Internet resource का complete address। Example: https://www.example.com/course/page1</p><p><strong>Components:</strong> https → protocol, www.example.com → domain, /course/page1 → path</p><p><strong>Domain Examples:</strong></p><ul class="bullet-list"><li>.com - Commercial</li><li>.org - Organisation</li><li>.edu - Education</li><li>.gov - Government</li><li>.net - Network</li><li>.in - India country-code domain</li></ul></div>
+
+      <div id="protocols" class="topic-card"><div class="sec-head"><span class="sec-num">13</span><h2>Important Internet Protocols</h2></div><ul class="bullet-list"><li><strong>HTTP:</strong> Web pages transfer</li><li><strong>HTTPS:</strong> Encrypted web communication</li><li><strong>SMTP:</strong> Sending e-mail</li><li><strong>POP3:</strong> Downloading/retrieving e-mail</li><li><strong>IMAP:</strong> Server-based e-mail access and synchronisation</li><li><strong>FTP:</strong> File transfer</li><li><strong>SFTP:</strong> Secure file transfer</li><li><strong>TCP:</strong> Reliable, connection-oriented delivery</li><li><strong>UDP:</strong> Faster, connectionless delivery</li><li><strong>DNS:</strong> Domain name को IP address में translate करना</li><li><strong>DHCP:</strong> Device को automatically IP address assign करना</li></ul><div class="formula-box">SMTP Sends | POP3 Pulls/Downloads | IMAP Synchronises | DNS Names → Numbers | DHCP Assigns IP</div></div>
+
+      <div id="tcp-udp" class="topic-card"><div class="sec-head"><span class="sec-num">14</span><h2>TCP and UDP</h2></div><table class="data-table"><tr><th>TCP</th><th>UDP</th></tr><tr><td>Connection-oriented</td><td>Connectionless</td></tr><tr><td>Reliable delivery</td><td>Delivery guarantee नहीं</td></tr><tr><td>Error checking and sequencing</td><td>Lower overhead</td></tr><tr><td>Comparatively slower</td><td>Faster</td></tr><tr><td>Web, e-mail, file transfer</td><td>Live streaming, gaming, VoIP</td></tr></table><p><strong>Exam Trap:</strong> UDP का fast होना यह नहीं दर्शाता कि वह TCP से अधिक reliable है।</p></div>
+
+      <div id="email" class="topic-card"><div class="sec-head"><span class="sec-num">15</span><h2>E-mail</h2></div><p>Electronic mail is a system for sending digital messages through a network.</p><p><strong>Major Fields:</strong></p><ul class="bullet-list"><li><strong>To:</strong> Primary recipient.</li><li><strong>CC (Carbon Copy):</strong> Additional recipients visible to everyone.</li><li><strong>BCC (Blind Carbon Copy):</strong> Additional recipients whose addresses other recipients cannot see.</li><li><strong>Subject:</strong> Message का concise purpose.</li><li><strong>Attachment:</strong> Message के साथ भेजी गई file.</li></ul><p><strong>E-mail Protocols:</strong> Sending → SMTP; Receiving/downloading → POP3; Server-based synchronisation → IMAP</p><p><strong>POP3 vs IMAP:</strong> POP3 mail device पर download करता है (limited synchronisation, offline access useful). IMAP mail server पर manage करता है (multiple devices पर synchronisation, multi-device access useful). Example: यदि user mobile और laptop दोनों पर same inbox status देखना चाहता है, IMAP अधिक suitable है।</p></div>
+
+      <div id="audio-video-conferencing" class="topic-card"><div class="sec-head"><span class="sec-num">16</span><h2>Audio Conferencing and Video Conferencing</h2></div><p><strong>Audio Conferencing:</strong> Participants केवल audio के माध्यम से communicate करते हैं।</p><p><strong>Video Conferencing:</strong> Real-time audio and visual communication. Examples: Google Meet, Zoom, Microsoft Teams, Webex.</p><p><strong>Essential Requirements:</strong> Computer/mobile device, Microphone, Speaker/headphones, Camera for video, Internet connection, Conferencing software/platform</p><p><strong>Synchronous Communication:</strong> Participants same time पर interact करते हैं। Examples: Live Google Meet class, webinar, chat.</p><p><strong>Asynchronous Communication:</strong> Participants का same time पर present होना आवश्यक नहीं। Examples: Recorded lecture, discussion forum, e-mail.</p><table class="data-table"><tr><th>Synchronous</th><th>Asynchronous</th></tr><tr><td>Real-time</td><td>Time-independent</td></tr><tr><td>Immediate feedback</td><td>Delayed feedback</td></tr><tr><td>Fixed schedule</td><td>Flexible access</td></tr><tr><td>Live class</td><td>Recorded class</td></tr></table><p><strong>Advantages in Education:</strong> Remote access, Guest lectures, Collaboration, Immediate interaction, Reduced travel cost, Screen sharing and demonstration, Recording and revision</p><p><strong>Limitations:</strong> Bandwidth problems, Digital divide, Screen fatigue, Reduced non-verbal cues, Privacy concerns, Technology anxiety, Distraction and multitasking</p></div>
+
+      <div id="bandwidth" class="topic-card"><div class="sec-head"><span class="sec-num">17</span><h2>Bandwidth and Related Terms</h2></div><ul class="bullet-list"><li><strong>Bandwidth:</strong> A communication channel की theoretical data-carrying capacity.</li><li><strong>Data Transfer Rate:</strong> Actual data transferred per unit time.</li><li><strong>Latency:</strong> Data को source से destination तक पहुँचने में लगने वाला delay.</li><li><strong>Jitter:</strong> Packet delay में variation.</li></ul><p><strong>Video-conferencing Example:</strong> Low bandwidth → low video quality; High latency → response delay; High jitter → broken or irregular audio; Packet loss → missing audio/video segments</p><p><strong>Exam Trap:</strong> High bandwidth alone does not guarantee perfect video conferencing; latency, jitter, congestion and device performance भी relevant हैं।</p></div>
+
+      <div id="digital-learning" class="topic-card"><div class="sec-head"><span class="sec-num">18</span><h2>Digital Learning</h2></div><ul class="bullet-list"><li><strong>E-learning:</strong> Electronic technologies के माध्यम से learning.</li><li><strong>Online Learning:</strong> Internet-based learning.</li><li><strong>Blended Learning:</strong> Face-to-face और online learning का planned combination.</li><li><strong>Flipped Classroom:</strong> Learners class से पहले instructional content देखते हैं और classroom time discussion, application तथा problem-solving के लिए उपयोग होता है।</li><li><strong>LMS (Learning Management System):</strong> Courses, content, assessment, attendance and learner progress को manage करता है। Examples: Moodle, Canvas and institutional LMS.</li></ul><table class="data-table"><tr><th>E-learning</th><th>Online learning</th><th>Blended learning</th></tr><tr><td>Broad electronic learning</td><td>Internet आवश्यक</td><td>Online + face-to-face</td></tr><tr><td>Offline digital content भी possible</td><td>Network-dependent</td><td>दोनों modes integrated</td></tr></table></div>
+
+      <div id="moocs" class="topic-card"><div class="sec-head"><span class="sec-num">19</span><h2>MOOCs</h2></div><p><strong>MOOC = Massive Open Online Course</strong></p><ul class="bullet-list"><li><strong>Massive:</strong> Large number of learners</li><li><strong>Open:</strong> Broad accessibility</li><li><strong>Online:</strong> Internet-based delivery</li><li><strong>Course:</strong> Organised learning experience</li></ul><p><strong>Major Characteristics:</strong> Learner-centric, Flexible access, Scalability, Multimedia content, Discussion and interaction, Assessment and certification possible, Self-paced or scheduled course possible, Credit and non-credit courses possible</p><p><strong>Exam Trap:</strong> सभी MOOCs credit-based नहीं होते। MOOCs केवल SWAYAM पर उपलब्ध नहीं होते। Open access का अर्थ automatically high completion rate नहीं है। Course access free हो सकता है, लेकिन certification examination के लिए fee हो सकती है।</p></div>
+
+      <div id="swayam-four-quadrants" class="topic-card"><div class="sec-head"><span class="sec-num">20</span><h2>Four Quadrants of SWAYAM MOOCs</h2></div><ul class="bullet-list"><li><strong>Quadrant I:</strong> Video/e-tutorial</li><li><strong>Quadrant II:</strong> E-content/readable study material</li><li><strong>Quadrant III:</strong> Web resources/further references</li><li><strong>Quadrant IV:</strong> Self-assessment</li></ul><div class="formula-box">Watch → Read → Explore → Assess</div><p><strong>Self-assessment Includes:</strong> Quizzes, Assignments, Practice exercises, Tests, Questions and answers</p></div>
+
+      <div id="swayam" class="topic-card"><div class="sec-head"><span class="sec-num">21</span><h2>SWAYAM</h2></div><p><strong>Study Webs of Active Learning for Young Aspiring Minds</strong></p><p>SWAYAM is India's online learning platform designed to facilitate access to courses across school and higher-education levels. The official platform describes access from Class 9 to postgraduate level, available to learners anywhere and anytime.</p><p><strong>Core Principles:</strong> Access + Equity + Quality</p><p><strong>National Coordinators:</strong></p><ul class="bullet-list"><li>AICTE - Self-paced and international courses</li><li>NPTEL - Engineering</li><li>UGC - Non-technical postgraduate education</li><li>CEC - Undergraduate education</li><li>NCERT - School education</li><li>NIOS - Out-of-school learners/school education</li><li>IGNOU - Diploma and certificate programmes</li><li>IIM Bangalore - Management studies</li><li>NITTTR - Teacher-training programmes</li></ul></div>
+
+      <div id="swayam-prabha" class="topic-card"><div class="sec-head"><span class="sec-num">22</span><h2>SWAYAM PRABHA</h2></div><p>SWAYAM PRABHA is a group of educational <strong>DTH channels</strong> that telecast educational programmes on a 24×7 basis and use satellite communication. Official PM e-VIDYA information associates it with GSAT-15.</p><p><strong>SWAYAM vs SWAYAM PRABHA:</strong></p><ul class="bullet-list"><li>SWAYAM: Online learning/MOOC platform, Internet-based, Interactive course components, Assessment possible</li><li>SWAYAM PRABHA: Educational DTH channels, Satellite/television-based, Broadcast-oriented, Primarily content telecast</li></ul><div class="formula-box">SWAYAM = Online Courses | SWAYAM PRABHA = DTH Educational Channels</div></div>
+
+      <div id="digital-initiatives" class="topic-card"><div class="sec-head"><span class="sec-num">23</span><h2>Important Digital Initiatives in Education</h2></div><ul class="bullet-list"><li><strong>SWAYAM:</strong> MOOCs and online courses</li><li><strong>SWAYAM PRABHA:</strong> Educational DTH channels</li><li><strong>NPTEL:</strong> Technology and engineering e-learning</li><li><strong>NDLI:</strong> Digital learning-resource repository/library</li><li><strong>e-PG Pathshala:</strong> Postgraduate e-content</li><li><strong>e-ShodhSindhu:</strong> Access to scholarly electronic resources</li><li><strong>Shodhganga:</strong> Repository of Indian theses and dissertations</li><li><strong>Shodhgangotri:</strong> Repository of approved research synopses</li><li><strong>VIDWAN:</strong> Database of experts and researchers</li><li><strong>DIKSHA:</strong> Digital infrastructure for school education</li><li><strong>DigiLocker:</strong> Storage and access of personal digital documents</li><li><strong>NAD:</strong> Digital academic awards</li><li><strong>Virtual Labs:</strong> Remote access to simulated/online laboratory experience</li><li><strong>Spoken Tutorial:</strong> Software and ICT skill tutorials</li><li><strong>FOSSEE:</strong> Promotion of open-source software in education</li><li><strong>PM e-VIDYA:</strong> Unified digital, online and on-air education initiative</li></ul><p><strong>High-Frequency Associations:</strong> Thesis → Shodhganga | Research Synopsis → Shodhgangotri | Expert Database → VIDWAN | Digital Library → NDLI | MOOCs → SWAYAM | DTH → SWAYAM PRABHA | School Digital Platform → DIKSHA | Academic Awards → NAD</p></div>
+
+      <div id="digital-divide" class="topic-card"><div class="sec-head"><span class="sec-num">24</span><h2>Digital Divide</h2></div><p>Digital divide means inequality in access to and effective use of digital technology.</p><p><strong>डिजिटल विभाजन</strong> technology की उपलब्धता, affordability, skills और meaningful use में असमानता है।</p><p><strong>Dimensions:</strong> Access divide, Affordability divide, Rural-urban divide, Gender divide, Language divide, Disability-related divide, Digital-literacy divide, Quality-of-connectivity divide, Usage and outcome divide</p><p><strong>Example:</strong> Student के पास smartphone है, लेकिन stable Internet और digital literacy नहीं है। Device access होने के बावजूद meaningful access incomplete है।</p><p><strong>Inclusive Measures:</strong> Accessible digital content, Captions and transcripts, Screen-reader compatibility, Regional-language content, Low-bandwidth resources, Offline downloads, Community digital centres, Digital-literacy training</p></div>
+
+      <div id="ict-higher-education" class="topic-card"><div class="sec-head"><span class="sec-num">25</span><h2>ICT in Higher Education</h2></div><p><strong>Teaching Applications:</strong> Multimedia presentations, Smart classrooms, Simulations, Virtual laboratories, Recorded lectures, Flipped classrooms, Adaptive learning</p><p><strong>Learning Applications:</strong> Self-paced study, Digital libraries, Peer collaboration, Discussion forums, Remote learning, Personalised feedback</p><p><strong>Assessment Applications:</strong> Computer-based testing, Online quizzes, Automated feedback, E-portfolios, Learning analytics, Question banks</p><p><strong>Research Applications:</strong> Literature search, Reference management, Online surveys, Data analysis, Plagiarism checking, Collaborative writing, Institutional repositories, Video interviews</p><p><strong>Administration:</strong> Online admission, Student-information systems, Attendance and examination management, Digital certificates, Financial management, Academic Bank and document services</p></div>
+
+      <div id="e-governance" class="topic-card"><div class="sec-head"><span class="sec-num">26</span><h2>ICT and Governance</h2></div><p><strong>E-Governance:</strong> Use of ICT by government to improve administration, service delivery, transparency, participation and accountability.</p><div class="formula-box">E-Governance = ICT + Public Services + Transparency + Accountability</div><p><strong>Types of E-Governance Interaction:</strong></p><ul class="bullet-list"><li><strong>G2C (Government to Citizen):</strong> Online certificates, tax services</li><li><strong>G2G (Government to Government):</strong> Interdepartmental data exchange</li><li><strong>G2B (Government to Business):</strong> E-tendering, online licences</li><li><strong>G2E (Government to Employee):</strong> Payroll, service portal</li></ul><p><strong>Objectives:</strong> Faster services, Transparency, Reduced paperwork, Better record management, Citizen participation, Reduced transaction costs, Monitoring and accountability, Wider accessibility</p><p><strong>Governance Models:</strong> Information Model (online information), Interaction Model (citizen feedback), Transaction Model (online payment/application), Transformation Model (integrated digital restructuring), Participation Model (online consultation)</p></div>
+
+      <div id="digital-governance-initiatives" class="topic-card"><div class="sec-head"><span class="sec-num">27</span><h2>Major Digital-Governance Initiatives</h2></div><ul class="bullet-list"><li><strong>Digital India:</strong> Digitally empowered society and knowledge economy</li><li><strong>UMANG:</strong> Multiple government services through a unified application</li><li><strong>DigiLocker:</strong> Digital documents and certificates</li><li><strong>Aadhaar:</strong> Digital identity/authentication framework</li><li><strong>GeM:</strong> Government e-Marketplace</li><li><strong>e-Office:</strong> Digital government-office processes</li><li><strong>MyGov:</strong> Citizen engagement and participation</li><li><strong>BharatNet:</strong> Broadband connectivity infrastructure</li><li><strong>Common Service Centres:</strong> Assisted digital public services</li><li><strong>DBT:</strong> Direct Benefit Transfer</li><li><strong>e-Hospital:</strong> Digital hospital-related services</li><li><strong>National Scholarship Portal:</strong> Scholarship services</li><li><strong>GSTN:</strong> Digital GST-related infrastructure</li></ul></div>
+
+      <div id="cybersecurity" class="topic-card"><div class="sec-head"><span class="sec-num">28</span><h2>Cybersecurity Basics</h2></div><p><strong>Malware:</strong> Malicious software designed to damage, disrupt or gain unauthorised access.</p><ul class="bullet-list"><li><strong>Virus:</strong> Host file/program से जुड़ता है</li><li><strong>Worm:</strong> Network पर self-replicate कर सकता है</li><li><strong>Trojan Horse:</strong> Legitimate software जैसा दिखाई देता है</li><li><strong>Ransomware:</strong> Data encrypt करके ransom माँगता है</li><li><strong>Spyware:</strong> Secretly information collect करता है</li><li><strong>Adware:</strong> Unwanted advertisements</li><li><strong>Rootkit:</strong> Malicious access/process छिपाता है</li><li><strong>Logic bomb:</strong> Specific event पर activate होता है</li></ul><p><strong>Social Engineering Attacks:</strong></p><ul class="bullet-list"><li><strong>Phishing:</strong> Fraudulent e-mail/message</li><li><strong>Spear phishing:</strong> Targeted phishing</li><li><strong>Smishing:</strong> SMS-based phishing</li><li><strong>Vishing:</strong> Voice-call-based fraud</li><li><strong>Pharming:</strong> User को fraudulent website पर redirect करना</li><li><strong>Spoofing:</strong> False identity/address दिखाना</li></ul><p><strong>Protective Measures:</strong> Strong unique passwords, Multi-factor authentication, Updated software, Antivirus and firewall, Encryption, Regular backups, Secure Wi-Fi, Suspicious links से बचना, Role-based access control</p><p><strong>Authentication Factors:</strong> Something you know (Password/PIN), Something you have (Phone/token/card), Something you are (Fingerprint/iris)</p><p><strong>Exam Trap:</strong> Password + PIN necessarily two-factor authentication नहीं है, क्योंकि दोनों "something you know" category में हैं।</p></div>
+
+      <div id="cloud-computing" class="topic-card"><div class="sec-head"><span class="sec-num">29</span><h2>Cloud Computing</h2></div><p>Cloud computing provides computing resources through the Internet.</p><p><strong>Service Models:</strong></p><ul class="bullet-list"><li><strong>IaaS (Infrastructure as a Service):</strong> Virtual servers and storage</li><li><strong>PaaS (Platform as a Service):</strong> Application-development platform</li><li><strong>SaaS (Software as a Service):</strong> Online e-mail, Google Docs</li></ul><p><strong>Deployment Models:</strong> Public cloud, Private cloud, Hybrid cloud, Community cloud</p><p><strong>Advantages:</strong> Scalability, Remote access, Reduced infrastructure burden, Collaboration, Backup and recovery</p><p><strong>Risks:</strong> Privacy, Vendor dependence, Internet dependence, Data breach, Service availability</p></div>
+
+      <div id="ai-education" class="topic-card"><div class="sec-head"><span class="sec-num">30</span><h2>Artificial Intelligence in Education</h2></div><p><strong>Applications:</strong> Adaptive learning, Automated assessment, Intelligent tutoring, Chatbots, Learning analytics, Content recommendation, Translation and accessibility</p><p><strong>Concerns:</strong> Algorithmic bias, Privacy, Hallucinated or inaccurate information, Academic integrity, Lack of transparency, Overdependence, Digital inequality</p><p>AI teacher को automatically replace नहीं करता; it can support teaching, assessment and administration.</p></div>
+
+      <div id="exam-traps" class="topic-card"><div class="sec-head"><span class="sec-num">31</span><h2>Common Exam Traps</h2></div><ul class="bullet-list"><li>Internet and WWW are not synonymous.</li><li>Internet is public; intranet is privately controlled.</li><li>Extranet allows selected external users.</li><li>SMTP sends e-mail; POP3/IMAP retrieve or access it.</li><li>BCC recipients are hidden from other recipients.</li><li>HTTPS adds encryption; it does not guarantee that every website is trustworthy.</li><li>RAM is volatile; ROM is non-volatile.</li><li>Google is a search engine; Chrome is a browser.</li><li>SWAYAM is an online course platform; SWAYAM PRABHA is DTH-based.</li><li>NDLI is a digital library; it is not the thesis-only repository.</li><li>Shodhganga contains theses; Shodhgangotri contains research synopses.</li><li>MOOCs may be credit or non-credit.</li><li>Blended learning is not merely using PowerPoint in a classroom.</li><li>Video conferencing is synchronous; recorded lecture is asynchronous.</li><li>Digital availability does not automatically ensure digital inclusion.</li><li>ICT governance includes alignment, security, accountability and resource use—not only hardware purchase.</li><li>Virus usually requires a host; worm can self-replicate over networks.</li><li>Phishing, smishing and vishing differ by communication medium.</li></ul></div>
+
+      <div id="verified-pyqs" class="topic-card"><div class="sec-head"><span class="sec-num">32</span><h2>Verified PYQs</h2></div>
+      <div class="pyq-tag">PYQ 1: UGC NET, 30 September 2020, Shift 1</div>
+      <p><strong>Answer:</strong> A and D only (Internet is larger than intranet; Internet is a network of networks)</p>
+      <div class="pyq-tag">PYQ 2: UGC NET, 29 November 2021, Shift 1</div>
+      <p><strong>Answer:</strong> C and D only (Intranets are more secure than the Internet; In an intranet, it is possible to control external links)</p>
+      <div class="pyq-tag">PYQ 3: UGC NET, 22 November 2021, Shift 1</div>
+      <p><strong>Answer:</strong> A--III, B--IV, C--II, D--I (SWAYAM→MOOCs, SWAYAM PRABHA→DTH, DigiLocker→Personal documents, NAD→Academic awards)</p>
+      <div class="pyq-tag">PYQ 4: UGC NET, 29 September 2022, Shift 2</div>
+      <p><strong>Answer:</strong> A, C and D only (MOOCs learner-centric, benefit large numbers, accessible anytime/anywhere; not only through SWAYAM; not all credit-based)</p>
+      <div class="pyq-tag">PYQ 5: UGC NET, 21 October 2022, Shift 2</div>
+      <p><strong>Answer:</strong> Both statements are true (DIKSHA, SWAYAM and SWAYAM PRABHA are e-learning platforms; NEP 2020 identified NETF)</p>
+      <div class="pyq-tag">PYQ 6: UGC NET, 21 June 2023, Shift 2</div>
+      <p><strong>Answer:</strong> Self-assessment (Fourth quadrant of SWAYAM MOOCs)</p></div>
+
+      <div id="pyq-trend" class="topic-card"><div class="sec-head"><span class="sec-num">33</span><h2>PYQ Trend Analysis</h2></div><table class="data-table"><tr><th>Tested Area</th><th>Common Question Format</th></tr><tr><td>Internet–Intranet–Extranet</td><td>Statements/correct combination</td></tr><tr><td>E-mail protocols</td><td>Match or direct MCQ</td></tr><tr><td>Digital initiatives</td><td>Match List I–II</td></tr><tr><td>SWAYAM/MOOCs</td><td>Statements and assertion–reason</td></tr><tr><td>Four quadrants</td><td>Direct factual question</td></tr><tr><td>Memory and storage</td><td>Correct sequence</td></tr><tr><td>Cybersecurity</td><td>Scenario-based identification</td></tr><tr><td>E-governance</td><td>G2C/G2G/G2B/G2E classification</td></tr><tr><td>Synchronous/asynchronous</td><td>Classroom scenario</td></tr><tr><td>Digital divide</td><td>Application-based question</td></tr><tr><td>Cloud and AI</td><td>Correct-statement combination</td></tr><tr><td>Network types</td><td>Range and example identification</td></tr></table></div>
+
+      <div id="expected-mcqs" class="topic-card"><div class="sec-head"><span class="sec-num">34</span><h2>December 2026 Expected MCQs</h2></div>
+      <div class="pyq-tag">Q1</div><p>A university portal accessible only to employees and registered faculty members → <strong>Intranet</strong></p>
+      <div class="pyq-tag">Q2</div><p>Protocol primarily for sending e-mail → <strong>SMTP</strong></p>
+      <div class="pyq-tag">Q3</div><p>Match: DNS→III, DHCP→I, HTTP→II, FTP→IV → <strong>1</strong></p>
+      <div class="pyq-tag">Q4</div><p>Initiative associated with Indian theses and dissertations → <strong>Shodhganga</strong></p>
+      <div class="pyq-tag">Q5</div><p>Learner watches recorded lectures before class and solves problems in class → <strong>Flipped classroom</strong></p>
+      <div class="pyq-tag">Q6</div><p>Video conferencing = synchronous; E-mail = asynchronous → <strong>Both correct</strong></p>
+      <div class="pyq-tag">Q7</div><p>Example of G2C interaction → <strong>Citizen applying online for a certificate</strong></p>
+      <div class="pyq-tag">Q8</div><p>Voice-call-based cyberattack → <strong>Vishing</strong></p>
+      <div class="pyq-tag">Q9</div><p>Two-factor authentication combination → <strong>Password + fingerprint</strong></p>
+      <div class="pyq-tag">Q10</div><p>SWAYAM MOOCs - quizzes and assignments → <strong>Quadrant IV</strong></p>
+      <div class="pyq-tag">Q11</div><p>Smartphone but poor connectivity and lack of digital skills → <strong>Digital divide</strong></p>
+      <div class="pyq-tag">Q12</div><p>Assertion: ICT infrastructure doesn't guarantee effective learning. Reason: Technology must integrate with pedagogy. → <strong>Both true, Reason explains Assertion</strong></p>
+      <div class="pyq-tag">Q13</div><p>Cloud model providing ready-to-use software → <strong>SaaS</strong></p>
+      <div class="pyq-tag">Q14</div><p>Worm requires host file (false); Trojan may appear legitimate (true) → <strong>Statement I false, Statement II true</strong></p>
+      <div class="pyq-tag">Q15</div><p>Most appropriate example of inclusive ICT → <strong>Captions, transcripts and screen-reader-compatible content</strong></p></div>
+
+      <div id="one-page-revision" class="topic-card"><div class="sec-head"><span class="sec-num">35</span><h2>One-Page Revision Capsule</h2></div>
+      <div class="formula-box">Internet = Public network of networks | Intranet = Private organisational network | Extranet = Private network + authorised outsiders</div>
+      <div class="formula-box">SMTP → Send mail | POP3/IMAP → Receive/access mail | HTTP/HTTPS → Web | FTP → Files | DNS → Name to IP | DHCP → Assign IP</div>
+      <div class="formula-box">SWAYAM → MOOCs | SWAYAM PRABHA → DTH | NDLI → Digital Library | Shodhganga → Thesis | Shodhgangotri → Synopsis | VIDWAN → Experts | DIKSHA → School education | NAD → Academic awards</div>
+      <div class="formula-box">MOOC Quadrants: Video → Reading → Resources → Self-assessment</div>
+      <div class="formula-box">Live Meet = Synchronous | Recorded lecture/e-mail = Asynchronous | Online + face-to-face = Blended | Content before class + application in class = Flipped</div>
+      <div class="formula-box">ICT + Public Service + Transparency + Accountability = E-Governance</div>
+      <p><strong>Final Exam Strategy:</strong> Term → Full Form → Function → Example → Similar-term distinction → Application</p></div>
+
+      <div class="enroll-cta"><div><h3 class="h-display">Join the Paper-1 Batch</h3><p>Course fee FREE — ₹500 registration & academic/logistics contribution. Classes daily at 6:30 PM.</p></div><a href="/enroll.html" class="btn-gold">✓ JOIN BATCH @ ₹500</a></div>
+    </div>
+  </div>
+</main>
+
+<footer class="relative overflow-hidden bg-navy-950 text-white">
+  <div class="grid-paper absolute inset-0 opacity-50" aria-hidden="true"></div>
+  <div class="container-x relative py-12 lg:py-14">
+    <div class="grid grid-cols-2 gap-10 lg:grid-cols-4">
+
+      <div>
+        <div class="flex items-center gap-3">
+          <img src="/assets/images/logo.png" alt="GS Net Academy" class="h-11 w-auto rounded-lg bg-white p-1" width="120" height="44">
+          <img src="/assets/images/tagline.png" alt="" class="h-11 w-auto brightness-0 invert" aria-hidden="true">
+        </div>
+        <p class="mt-5 text-[14px] leading-relaxed text-navy-100/75">UGC NET Paper-I | JRF Preparation | Mentorship</p>
+        <span class="eyebrow mt-5"><svg viewBox="0 0 24 24" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1"/></svg> JRF @ ₹500 Mission 2026</span>
+
+        <p class="mt-6 text-[11px] font-extrabold uppercase tracking-[0.18em] text-gold-400">Follow Us</p>
+        <ul class="mt-3 flex flex-wrap gap-2">
+          <li><a href="https://www.youtube.com/@gsnetacademy" target="_blank" rel="noreferrer noopener" aria-label="YouTube" title="YouTube" class="grid h-10 w-10 place-items-center rounded-xl border border-white/12 bg-white/[0.06] text-navy-100/80 transition hover:border-gold-400/50 hover:bg-white/[0.12] hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor" aria-hidden="true"><path d="M21.6 7.2a2.5 2.5 0 0 0-1.8-1.8C18.2 5 12 5 12 5s-6.2 0-7.8.4A2.5 2.5 0 0 0 2.4 7.2 26 26 0 0 0 2 12a26 26 0 0 0 .4 4.8 2.5 2.5 0 0 0 1.8 1.8C5.8 19 12 19 12 19s6.2 0 7.8-.4a2.5 2.5 0 0 0 1.8-1.8A26 26 0 0 0 22 12a26 26 0 0 0-.4-4.8ZM10 15V9l5.2 3L10 15Z"/></svg></a></li>
+          <li><a href="https://www.instagram.com/gsnetacademy" target="_blank" rel="noreferrer noopener" aria-label="Instagram" title="Instagram" class="grid h-10 w-10 place-items-center rounded-xl border border-white/12 bg-white/[0.06] text-navy-100/80 transition hover:border-gold-400/50 hover:bg-white/[0.12] hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg></a></li>
+          <li><a href="https://www.facebook.com/gsnetacademy" target="_blank" rel="noreferrer noopener" aria-label="Facebook" title="Facebook" class="grid h-10 w-10 place-items-center rounded-xl border border-white/12 bg-white/[0.06] text-navy-100/80 transition hover:border-gold-400/50 hover:bg-white/[0.12] hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.25-1.5 1.55-1.5H16.7V3.6c-.3 0-1.3-.13-2.47-.13-2.44 0-4.11 1.49-4.11 4.23V9.9H7.4V13h2.72v8h3.38Z"/></svg></a></li>
+          <li><a href="https://t.me/gsnetacademy" target="_blank" rel="noreferrer noopener" aria-label="Telegram" title="Telegram" class="grid h-10 w-10 place-items-center rounded-xl border border-white/12 bg-white/[0.06] text-navy-100/80 transition hover:border-gold-400/50 hover:bg-white/[0.12] hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor" aria-hidden="true"><path d="M21.3 4.3 2.9 11.4c-.9.35-.9 1.62.02 1.93l4.6 1.53 1.75 5.3c.25.75 1.2.95 1.73.37l2.5-2.72 4.6 3.38c.63.46 1.53.12 1.7-.65l3.1-14.9c.2-.9-.7-1.65-1.6-1.31ZM9.6 14.1l8.5-5.6-6.9 6.5-.3 3.3-1.3-4.2Z"/></svg></a></li>
+          <li><a href="https://chat.whatsapp.com/KeaQUhOFz0UGAKtLmsM7oU" target="_blank" rel="noreferrer noopener" aria-label="WhatsApp Group" title="WhatsApp Group" class="grid h-10 w-10 place-items-center rounded-xl border border-white/12 bg-white/[0.06] text-navy-100/80 transition hover:border-emerald-400/50 hover:bg-emerald-500/15 hover:text-emerald-300"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.2 20.8 4.6 16A8.4 8.4 0 1 1 8 19.4l-4.8 1.4Z"/><path d="M9 8.4c.3-.7.6-.7.9-.7h.6c.2 0 .5 0 .7.6l.8 1.9c.1.2.1.4 0 .6l-.5.7c-.1.2-.2.4 0 .7a7 7 0 0 0 3 2.6c.3.1.5.1.7-.1l.7-.8c.2-.2.4-.2.6-.1l1.8.9c.3.1.5.3.5.5v.6c0 .4-.2.9-.9 1.2-.6.3-1.5.4-2.5.1a10 10 0 0 1-6.5-6.2c-.3-1-.1-1.9.1-2.5Z"/></svg></a></li>
+          <li><a href="https://x.com/gsnetacademy" target="_blank" rel="noreferrer noopener" aria-label="X (Twitter)" title="X (Twitter)" class="grid h-10 w-10 place-items-center rounded-xl border border-white/12 bg-white/[0.06] text-navy-100/80 transition hover:border-gold-400/50 hover:bg-white/[0.12] hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-4.5 w-4.5" fill="currentColor" aria-hidden="true"><path d="M17.5 3h3.1l-6.8 7.8L21.8 21h-6.2l-4.9-6.4L5.1 21H2l7.3-8.3L2.5 3h6.4l4.4 5.8L17.5 3Zm-1.1 16.2h1.7L7.7 4.7H5.9l10.5 14.5Z"/></svg></a></li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="text-[11px] font-extrabold uppercase tracking-[0.18em] text-gold-400">Quick Links</p>
+        <ul class="mt-4 grid gap-2.5">
+          <li><a href="/index.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Home</a></li>
+          <li><a href="/courses.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">UGC NET Paper-I</a></li>
+          <li><a href="/results.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Our Results</a></li>
+          <li><a href="/tutorials.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Tutorials</a></li>
+          <li><a href="/blog.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Blog</a></li>
+          <li><a href="/about.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">About</a></li>
+          <li><a href="/contact.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="text-[11px] font-extrabold uppercase tracking-[0.18em] text-gold-400">Resources</p>
+        <ul class="mt-4 grid gap-2.5">
+          <li><a href="/notes.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Notes</a></li>
+          <li><a href="/enroll.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Register for ₹500</a></li>
+          <li><a href="/index.html#free-demo" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Free Demo Classes</a></li>
+          <li><a href="https://chat.whatsapp.com/KeaQUhOFz0UGAKtLmsM7oU" target="_blank" rel="noreferrer noopener" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Student Community</a></li>
+        </ul>
+        <p class="mt-6 text-[11px] font-extrabold uppercase tracking-[0.18em] text-gold-400">Legal</p>
+        <ul class="mt-4 grid gap-2.5">
+          <li><a href="/privacy-policy.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Privacy Policy</a></li>
+          <li><a href="/refund-policy.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Refund &amp; Cancellation</a></li>
+          <li><a href="/terms-of-enrollment.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Terms of Enrollment</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="text-[11px] font-extrabold uppercase tracking-[0.18em] text-gold-400">Contact</p>
+        <ul class="mt-4 grid gap-2.5 text-[14px] text-navy-100/75">
+          <li><a href="tel:+919266511505" class="flex items-center gap-2 hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-4 w-4 icon-gold" fill="currentColor" aria-hidden="true"><path d="M5 3h3.5l1.6 4-2 1.4a12 12 0 0 0 5.5 5.5l1.4-2 4 1.6V19a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 3 5.2 2 2 0 0 1 5 3Z"/></svg> +91 9266511505</a></li>
+          <li><a href="tel:+919810845327" class="flex items-center gap-2 hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-4 w-4 icon-gold" fill="currentColor" aria-hidden="true"><path d="M5 3h3.5l1.6 4-2 1.4a12 12 0 0 0 5.5 5.5l1.4-2 4 1.6V19a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 3 5.2 2 2 0 0 1 5 3Z"/></svg> +91 9810845327</a></li>
+          <li><a href="mailto:gsnetacademy@gmail.com" class="flex items-center gap-2 break-all hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-4 w-4 icon-gold" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="m3.5 6.5 8.5 6 8.5-6"/></svg> gsnetacademy@gmail.com</a></li>
+          <li><a href="https://chat.whatsapp.com/KeaQUhOFz0UGAKtLmsM7oU" target="_blank" rel="noreferrer noopener" class="flex items-center gap-2 hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-4 w-4 icon-gold" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.2 20.8 4.6 16A8.4 8.4 0 1 1 8 19.4l-4.8 1.4Z"/><path d="M9 8.4c.3-.7.6-.7.9-.7h.6c.2 0 .5 0 .7.6l.8 1.9c.1.2.1.4 0 .6l-.5.7c-.1.2-.2.4 0 .7a7 7 0 0 0 3 2.6c.3.1.5.1.7-.1l.7-.8c.2-.2.4-.2.6-.1l1.8.9c.3.1.5.3.5.5v.6c0 .4-.2.9-.9 1.2-.6.3-1.5.4-2.5.1a10 10 0 0 1-6.5-6.2c-.3-1-.1-1.9.1-2.5Z"/></svg> WhatsApp Group</a></li>
+        </ul>
+        <a href="/enroll.html" class="btn-primary mt-6 w-full">Join for ₹500</a>
+        <p class="text-[14px] mt-3 text-navy-100/75 transition hover:text-gold-300">Address: B 14-15, Udhyog Marg, Block B, Sector 1, Noida, Uttar Pradesh 201301</p>
+      </div>
+    </div>
+
+    <div class="mt-10 border-t border-white/10 pt-6">
+      <ul class="flex flex-wrap items-center gap-x-5 gap-y-2 text-[13px]">
+        <li><a href="/privacy-policy.html" class="text-navy-100/70 transition hover:text-gold-300">Privacy Policy</a></li>
+        <li aria-hidden="true" class="text-navy-100/25">|</li>
+        <li><a href="/refund-policy.html" class="text-navy-100/70 transition hover:text-gold-300">Refund &amp; Cancellation</a></li>
+        <li aria-hidden="true" class="text-navy-100/25">|</li>
+        <li><a href="/terms-of-enrollment.html" class="text-navy-100/70 transition hover:text-gold-300">Terms of Enrollment</a></li>
+      </ul>
+      <div class="mt-4 flex flex-col gap-2 text-[13px] text-navy-100/60 sm:flex-row sm:items-center sm:justify-between">
+        <p>© 2026 GS Net Academy. All Rights Reserved.</p>
+        <p>A Premier institute for UGC NET Paper-1</p>
+      </div>
+      <p class="mt-4 text-[12px] leading-relaxed text-navy-100/45">Disclaimer: GS Net Academy किसी भी exam में selection, rank या score की guarantee नहीं देता। हम quality teaching, study material, practice और academic mentorship प्रदान करते हैं। UGC, NTA या किसी अन्य government body से हमारा कोई affiliation नहीं है।</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  (function() {
+
+    const BASE_PATH =
+      "/tutorials/information-and-communication-technology/ict";
+
+    const links = document.querySelectorAll(".nav-link");
+    const cards = document.querySelectorAll(".topic-card");
+    const content = document.getElementById("contentArea");
+    const sidebarToggle = document.getElementById("sidebar-toggle");
+
+
+    // Get topic slug from current URL
+    function getSlugFromPath() {
+
+      const path = window.location.pathname
+        .replace(/\/+$/, "");
+
+      if (path.startsWith(BASE_PATH + "/")) {
+
+        return path
+          .substring((BASE_PATH + "/").length)
+          .split("/")[0];
+
+      }
+
+      return null;
+    }
+
+
+    // Update browser URL
+    function updateUrl(slug, replace = false) {
+
+      const newPath =
+        BASE_PATH + "/" + slug;
+
+      if (window.location.pathname !== newPath) {
+
+        if (replace) {
+
+          history.replaceState(
+            null,
+            "",
+            newPath
+          );
+
+        } else {
+
+          history.pushState(
+            null,
+            "",
+            newPath
+          );
+
+        }
+
+      }
+
+    }
+
+
+    // Update active sidebar link
+    function updateActiveLink(slug) {
+
+      links.forEach(function(link) {
+
+        const href =
+          link.getAttribute("href");
+
+        if (!href) return;
+
+        const linkSlug =
+          href
+            .split("/")
+            .filter(Boolean)
+            .pop();
+
+        link.classList.toggle(
+          "active",
+          linkSlug === slug
+        );
+
+      });
+
+    }
+
+
+    // Show selected topic card
+    function showCard(
+      slug,
+      updateHistory = true
+    ) {
+
+      cards.forEach(function(card) {
+
+        card.classList.add("hidden");
+
+      });
+
+
+      const target =
+        document.getElementById(slug);
+
+
+      if (!target) {
+
+        const first = cards[0];
+
+        if (first) {
+
+          first.classList.remove("hidden");
+
+          const firstSlug =
+            first.id;
+
+          updateActiveLink(firstSlug);
+
+          updateUrl(
+            firstSlug,
+            true
+          );
+
+        }
+
+        return;
+
+      }
+
+
+      target.classList.remove("hidden");
+
+      updateActiveLink(slug);
+
+
+      if (updateHistory) {
+
+        updateUrl(
+          slug,
+          false
+        );
+
+      }
+
+
+      if (sidebarToggle) {
+
+        sidebarToggle.checked = false;
+
+      }
+
+
+      if (content) {
+
+        const top =
+          content.getBoundingClientRect().top +
+          window.pageYOffset -
+          10;
+
+        window.scrollTo({
+
+          top: top,
+
+          behavior: "smooth"
+
+        });
+
+      }
+
+    }
+
+
+    // Sidebar link click
+    links.forEach(function(link) {
+
+      link.addEventListener(
+        "click",
+        function(e) {
+
+          e.preventDefault();
+
+
+          const href =
+            this.getAttribute("href");
+
+          if (!href) return;
+
+
+          const slug =
+            href
+              .split("/")
+              .filter(Boolean)
+              .pop();
+
+
+          if (!slug) return;
+
+
+          console.log(
+            "Clicked topic:",
+            slug
+          );
+
+
+          showCard(
+            slug,
+            true
+          );
+
+        }
+      );
+
+    });
+
+
+    // Initial page load
+    function initFromPath() {
+
+      let slug =
+        getSlugFromPath();
+
+
+      if (
+        !slug ||
+        !document.getElementById(slug)
+      ) {
+
+        slug =
+          cards[0]?.id ||
+          "ict-meaning";
+
+      }
+
+
+      showCard(
+        slug,
+        false
+      );
+
+
+      updateUrl(
+        slug,
+        true
+      );
+
+    }
+
+
+    initFromPath();
+
+
+    // Browser Back / Forward
+    window.addEventListener(
+      "popstate",
+      function() {
+
+        const slug =
+          getSlugFromPath();
+
+
+        if (
+          slug &&
+          document.getElementById(slug)
+        ) {
+
+          showCard(
+            slug,
+            false
+          );
+
+        } else {
+
+          const firstSlug =
+            cards[0]?.id ||
+            "ict-meaning";
+
+          showCard(
+            firstSlug,
+            false
+          );
+
+        }
+
+      }
+    );
+
+
+  })();
+</script>
+</body>
+</html>

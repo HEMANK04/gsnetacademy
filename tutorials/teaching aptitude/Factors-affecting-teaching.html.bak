@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Factors Affecting Teaching – Full Notes | UGC NET Paper-1</title>
+  <meta name="description" content="Complete factors affecting teaching tutorial: teacher, learner, support material, instructional facilities, learning environment, institution, PYQs for UGC NET Paper-1.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; }
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background: #f8f5ee;
+      color: #101a3d;
+    }
+    .h-display { font-family: 'Poppins', sans-serif; font-weight: 800; letter-spacing: -0.01em; }
+    .container { max-width: 1360px; margin: 0 auto; padding: 0 20px; }
+
+    .hero {
+      background: #0b1330;
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+      padding: 28px 0 22px;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      right: -80px;
+      top: -100px;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(232,183,75,0.2), transparent 70%);
+    }
+    .hero-inner { position: relative; }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      padding: 6px 16px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+      color: #e8b74b;
+    }
+    .hero h1 {
+      font-size: clamp(28px, 4.2vw, 44px);
+      margin: 12px 0 6px;
+    }
+    .hero p {
+      color: rgba(255,255,255,0.78);
+      max-width: 680px;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 28px;
+      padding: 28px 0 50px;
+      align-items: start;
+    }
+    @media (max-width: 980px) {
+      .layout { grid-template-columns: 1fr; }
+    }
+
+    .sidebar {
+      position: sticky;
+      top: 16px;
+      max-height: calc(100vh - 40px);
+      overflow-y: auto;
+      background: #fff;
+      border: 1px solid rgba(16,26,61,0.08);
+      border-radius: 16px;
+      padding: 16px 12px;
+      box-shadow: 0 6px 24px rgba(16,26,61,0.05);
+    }
+    .sidebar::-webkit-scrollbar { width: 5px; }
+    .sidebar::-webkit-scrollbar-thumb { background: #dde2ef; border-radius: 8px; }
+    .sidebar-title {
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: #b9852a;
+      padding: 4px 10px 14px;
+    }
+    .nav-link {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 10px;
+      border-radius: 10px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #33406b;
+      line-height: 1.3;
+      transition: 0.1s;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .nav-link:hover { background: #f4f6fc; color: #0b1330; }
+    .nav-link.active {
+      background: #fdf6e7;
+      color: #0b1330;
+    }
+    .nav-num {
+      flex: none;
+      width: 22px;
+      height: 22px;
+      border-radius: 7px;
+      background: #e7eaf5;
+      color: #5b6690;
+      font-size: 11px;
+      font-weight: 800;
+      display: grid;
+      place-items: center;
+    }
+    .nav-link.active .nav-num {
+      background: #e8b74b;
+      color: #0b1330;
+    }
+
+    #sidebar-toggle { display: none; }
+    .mobile-bar { display: none; }
+    @media (max-width: 980px) {
+      .mobile-bar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: #fff;
+        border: 1px solid rgba(16,26,61,0.1);
+        border-radius: 12px;
+        padding: 12px 16px;
+        margin-bottom: 8px;
+        font-weight: 800;
+        font-size: 13.5px;
+        color: #0b1330;
+      }
+      .sidebar { display: none; position: static; max-height: none; }
+      #sidebar-toggle:checked ~ .layout .sidebar { display: block; }
+    }
+
+    .content { min-width: 0; }
+    .topic-card {
+      background: #fff;
+      border: 1px solid rgba(16,26,61,0.08);
+      border-radius: 16px;
+      padding: 20px 20px 16px;
+      margin-bottom: 18px;
+      scroll-margin-top: 20px;
+      display: block;
+    }
+    .topic-card.hidden { display: none; }
+    .sec-head {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+    .sec-num {
+      flex: none;
+      width: 34px;
+      height: 34px;
+      border-radius: 10px;
+      background: #0b1330;
+      color: #e8b74b;
+      font-weight: 800;
+      font-size: 14px;
+      display: grid;
+      place-items: center;
+    }
+    .sec-head h2 {
+      margin: 0;
+      font-size: 19px;
+      font-weight: 800;
+      color: #0b1330;
+    }
+    .topic-card p {
+      font-size: 14.5px;
+      line-height: 1.75;
+      color: #1a254a;
+      margin: 6px 0;
+    }
+    .bullet-list {
+      margin: 8px 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 5px;
+    }
+    .bullet-list li {
+      position: relative;
+      padding-left: 20px;
+      font-size: 14px;
+      line-height: 1.6;
+      color: #1a254a;
+    }
+    .bullet-list li::before {
+      content: "";
+      position: absolute;
+      left: 2px;
+      top: 9px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #d9a53a;
+    }
+    .formula-box {
+      background: #0b1330;
+      color: #fdeec2;
+      font-weight: 700;
+      font-size: 13.6px;
+      padding: 10px 16px;
+      border-radius: 10px;
+      margin: 10px 0;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 12px 0;
+      font-size: 13.6px;
+      display: block;
+      overflow-x: auto;
+    }
+    .data-table th, .data-table td {
+      border: 1px solid #e7eaf5;
+      padding: 8px 12px;
+      text-align: left;
+      color: #1a254a;
+      white-space: normal;
+    }
+    .data-table th {
+      background: #f4f6fc;
+      color: #0b1330;
+      font-weight: 800;
+    }
+    .pyq-tag {
+      display: inline-block;
+      background: #fdf6e7;
+      color: #b9852a;
+      font-weight: 800;
+      font-size: 12px;
+      padding: 4px 12px;
+      border-radius: 8px;
+      margin: 12px 0 6px;
+    }
+    .answer-box {
+      background: #eefaf2;
+      border: 1px solid #bfe8cc;
+      color: #1a7a4c;
+      font-weight: 700;
+      font-size: 13.6px;
+      padding: 6px 14px;
+      border-radius: 9px;
+      margin: 6px 0;
+    }
+    .explain {
+      background: #f4f6fc;
+      border-radius: 9px;
+      padding: 6px 14px;
+      font-size: 13.6px;
+      color: #1a254a;
+    }
+    .subtopic {
+      padding: 14px 0 6px;
+      border-top: 1px dashed #e7eaf5;
+    }
+    .subtopic:first-of-type { border-top: none; padding-top: 2px; }
+    .subhead {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 6px;
+    }
+    .sub-num {
+      flex: none;
+      width: 26px;
+      height: 26px;
+      border-radius: 8px;
+      background: #fdf6e7;
+      color: #b9852a;
+      font-weight: 800;
+      font-size: 12px;
+      display: grid;
+      place-items: center;
+    }
+    .subhead h3 {
+      margin: 0;
+      font-size: 15.5px;
+      font-weight: 800;
+      color: #0b1330;
+    }
+    .enroll-cta {
+      background: #0b1330;
+      color: #fff;
+      border-radius: 16px;
+      padding: 24px 24px;
+      margin-top: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+      overflow: hidden;
+    }
+    .enroll-cta::before {
+      content: "";
+      position: absolute;
+      right: -40px;
+      top: -40px;
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(232,183,75,0.2), transparent 70%);
+    }
+    .enroll-cta h3 { margin: 0 0 4px; font-size: 20px; }
+    .enroll-cta p { margin: 0; color: rgba(255,255,255,0.75); font-size: 13.5px; max-width: 480px; }
+    .btn-gold {
+      background: #e8b74b;
+      color: #0b1330;
+      font-weight: 800;
+      padding: 10px 22px;
+      border-radius: 10px;
+      font-size: 13.5px;
+      white-space: nowrap;
+      text-decoration: none;
+    }
+  </style>
+
+  <link rel="stylesheet" href="/css/tailwind.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <style>.hero h1 { font-weight: 800 !important; color: #fff !important; line-height: 1.2 !important; font-family: 'Poppins', sans-serif !important; }</style>
+
+  <link rel="icon" href="/assets/images/logo.png">
+</head>
+<body>
+
+<header class="sticky top-0 z-50 border-b border-navy-900/8 bg-white/95 backdrop-blur-md">
+  <nav class="container-wide flex h-[76px] items-center gap-4" aria-label="Main">
+    <a href="/" class="flex shrink-0 items-center gap-3" aria-label="Home">
+      <span class="inline-flex shrink-0 items-center justify-center overflow-hidden rounded-lg bg-navy-950 ring-1 ring-navy-900/10">
+        <img src="assets/images/logo.png" alt="GS Net Academy" class="h-11 w-auto" width="120" height="44">
+      </span>
+      <img src="assets/images/tagline.png" alt="#1 A Premier institute for UGC NET Paper-1" class="h-11 hidden w-auto lg:block">
+    </a>
+    <ul class="mx-auto hidden items-center gap-5 xl:flex">
+      <li><a href="courses.html" class="relative block whitespace-nowrap rounded-lg px-3 py-2 text-[13.5px] font-bold transition-colors text-navy-700/75 hover:text-navy-900">UGC NET Paper-I</a></li>
+      <li><a href="results.html" class="relative block whitespace-nowrap rounded-lg px-3 py-2 text-[13.5px] font-bold transition-colors text-navy-700/75 hover:text-navy-900">Results</a></li>
+      <li><a href="tutorial.html" class="relative block whitespace-nowrap rounded-lg px-3 py-2 text-[13.5px] font-bold transition-colors text-navy-700/75 hover:text-navy-900">Tutorials</a></li>
+      <li><a href="notes.html" class="relative block whitespace-nowrap rounded-lg px-3 py-2 text-[13.5px] font-bold transition-colors text-navy-700/75 hover:text-navy-900">Notes</a></li>
+      <li><a href="blog.html" class="relative block whitespace-nowrap rounded-lg px-3 py-2 text-[13.5px] font-bold transition-colors text-navy-700/75 hover:text-navy-900">Blog</a></li>
+      <li><a href="about.html" class="relative block whitespace-nowrap rounded-lg px-3 py-2 text-[13.5px] font-bold transition-colors text-navy-700/75 hover:text-navy-900">About</a></li>
+      <li><a href="contact.html" class="relative block whitespace-nowrap rounded-lg px-3 py-2 text-[13.5px] font-bold transition-colors text-navy-700/75 hover:text-navy-900">Contact</a></li>
+    </ul>
+    <div class="ml-auto flex items-center gap-2 xl:ml-0">
+      <span title="Coming soon" class="hidden items-center gap-1.5 whitespace-nowrap rounded-lg border border-navy-900/12 px-3 py-2 text-[13px] font-bold text-navy-700 lg:inline-flex"><svg viewBox="0 0 24 24" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="4.5" width="14" height="16" rx="2.5"/><path d="M9 4.5a3 3 0 0 1 6 0"/><path d="M9 11h6M9 15h4"/></svg> <a href="https://mock-test.gsnetacademy.com/" class="cursor-pointer">Exam Portal</a></span>
+      <a href="/#free-demo" class="btn-outline btn-sm hidden 2xl:inline-flex">Demo</a>
+      <a href="enroll.html" class="btn-primary btn-sm hidden sm:inline-flex">Join Now</a>
+      <label for="nav-toggle" class="cursor-pointer rounded-lg border border-navy-900/12 p-2 text-navy-800 xl:hidden" aria-label="Menu"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></label>
+    </div>
+  </nav>
+</header>
+
+<div class="drawer xl:hidden">
+  <label for="nav-toggle" class="drawer-scrim" aria-hidden="true"></label>
+  <div class="drawer-panel">
+    <div class="flex h-[72px] shrink-0 items-center justify-between border-b border-navy-900/10 px-5">
+      <img src="assets/images/logo.png" alt="GS Net Academy" class="h-9 w-auto rounded-lg bg-navy-950">
+      <label for="nav-toggle" class="cursor-pointer p-2 text-navy-800" aria-label="Close"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></label>
+    </div>
+    <div class="flex-1 overflow-y-auto p-5">
+      <ul class="flex flex-col gap-1">
+      <li><a href="/" class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold bg-navy-50 text-navy-900">Home</a></li>
+      <li><a href="courses.html" class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold text-navy-700">UGC NET Paper-I</a></li>
+      <li><a href="results.html" class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold text-navy-700">Our Results</a></li>
+      <li><span class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold text-navy-400">UG / PG (Paper-2)<span class="rounded-md bg-navy-50 px-2 py-0.5 text-[10.5px] font-extrabold uppercase tracking-wider">Coming soon</span></span></li>
+      <li><a href="tutorial.html" class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold text-navy-700">Tutorials</a></li>
+      <li><a href="notes.html" class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold text-navy-700">Notes</a></li>
+      <li><a href="blog.html" class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold text-navy-700">Blog</a></li>
+      <li><a href="about.html" class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold text-navy-700">About</a></li>
+      <li><a href="contact.html" class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold text-navy-700">Contact</a></li>
+      </ul>
+      <p class="mt-3 rounded-xl bg-gold-50 px-4 py-3 text-[12.5px] font-extrabold uppercase tracking-wider text-gold-700">AI-Powered Career Guidance — Coming soon</p>
+      <div class="mt-5 grid gap-2.5">
+        <a href="enroll.html" class="btn-primary w-full">✓ JOIN BATCH @ ₹500</a>
+        <a href="/#free-demo" class="btn-outline w-full">▶ WATCH FREE DEMO</a>
+        <a href="https://chat.whatsapp.com/KeaQUhOFz0UGAKtLmsM7oU" target="_blank" rel="noreferrer noopener" class="btn-outline w-full"><svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.2 20.8 4.6 16A8.4 8.4 0 1 1 8 19.4l-4.8 1.4Z"/><path d="M9 8.4c.3-.7.6-.7.9-.7h.6c.2 0 .5 0 .7.6l.8 1.9c.1.2.1.4 0 .6l-.5.7c-.1.2-.2.4 0 .7a7 7 0 0 0 3 2.6c.3.1.5.1.7-.1l.7-.8c.2-.2.4-.2.6-.1l1.8.9c.3.1.5.3.5.5v.6c0 .4-.2.9-.9 1.2-.6.3-1.5.4-2.5.1a10 10 0 0 1-6.5-6.2c-.3-1-.1-1.9.1-2.5Z"/></svg> WhatsApp Group</a>
+        <a href="tel:+919266511505" class="btn-dark w-full"><svg viewBox="0 0 24 24" class="h-4 w-4" fill="currentColor" stroke="none" aria-hidden="true"><path d="M5 3h3.5l1.6 4-2 1.4a12 12 0 0 0 5.5 5.5l1.4-2 4 1.6V19a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 3 5.2 2 2 0 0 1 5 3Z"/></svg> Call 9266511505</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<section class="hero">
+  <div class="container hero-inner">
+    <span class="eyebrow">★ UGC NET Paper-I · Teaching Aptitude</span>
+    <h1 class="h-display">Factors Affecting Teaching: Teacher, Learner, Support Material, Facilities, Environment & Institution</h1>
+    <p>Complete tutorial: concept, classification, teacher-related, learner-related, support material, instructional facilities, learning environment, institutional factors, PYQs & more.</p>
+  </div>
+</section>
+
+<main class="container">
+  <input type="checkbox" id="sidebar-toggle">
+  <label for="sidebar-toggle" class="mobile-bar">
+    <span>📑 On this page</span>
+    <span>☰ Menu</span>
+  </label>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebarNav">
+      <p class="sidebar-title">On this page</p>
+      <nav>
+        <a href="/tutorials/teaching-aptitude/factors-affecting-teaching/concept-factors" class="nav-link active"><span class="nav-num">1</span>Concept & Classification</a>
+        <a href="/teacher-factors" class="nav-link"><span class="nav-num">2</span>Teacher-Related Factors</a>
+        <a href="/learner-factors" class="nav-link"><span class="nav-num">3</span>Learner-Related Factors</a>
+        <a href="/support-material" class="nav-link"><span class="nav-num">4</span>Support Material Factors</a>
+        <a href="/instructional-facilities" class="nav-link"><span class="nav-num">5</span>Instructional Facilities</a>
+        <a href="/learning-environment" class="nav-link"><span class="nav-num">6</span>Learning Environment</a>
+        <a href="/physical-environment" class="nav-link"><span class="nav-num">7</span>Physical Environment</a>
+        <a href="/social-environment" class="nav-link"><span class="nav-num">8</span>Social Environment</a>
+        <a href="/psychological-environment" class="nav-link"><span class="nav-num">9</span>Psychological Environment</a>
+        <a href="/academic-environment" class="nav-link"><span class="nav-num">10</span>Academic Environment</a>
+        <a href="/positive-reinforcement" class="nav-link"><span class="nav-num">11</span>Positive Reinforcement</a>
+        <a href="/negative-environment" class="nav-link"><span class="nav-num">12</span>Negative Environment</a>
+        <a href="/digital-environment" class="nav-link"><span class="nav-num">13</span>Digital Environment</a>
+        <a href="/institutional-factors" class="nav-link"><span class="nav-num">14</span>Institutional Factors</a>
+        <a href="/factor-interaction" class="nav-link"><span class="nav-num">15</span>Factor Interaction</a>
+        <a href="/factor-identification" class="nav-link"><span class="nav-num">16</span>Factor Identification Table</a>
+        <a href="/important-exam-points" class="nav-link"><span class="nav-num">17</span>Important Exam Points</a>
+        <a href="/common-exam-traps" class="nav-link"><span class="nav-num">18</span>Common Exam Traps</a>
+        <a href="/verified-pyqs" class="nav-link"><span class="nav-num">19</span>Verified PYQs</a>
+        <a href="/pyq-trend-analysis" class="nav-link"><span class="nav-num">20</span>PYQ Trend Analysis</a>
+        <a href="/expected-mcqs" class="nav-link"><span class="nav-num">21</span>Expected MCQs (Dec 2026)</a>
+      </nav>
+    </aside>
+
+    <div class="content" id="contentArea">
+      <!-- ===== CARDS ===== -->
+      <div id="concept-factors" class="topic-card"><div class="sec-head"><span class="sec-num">1</span><h2>Concept & Classification of Factors</h2></div><p><strong>Factors Affecting Teaching</strong> वे personal, academic, psychological, material, environmental और institutional conditions हैं जो teaching-learning process को facilitate या obstruct करती हैं।</p><div class="formula-box">Effective Teaching = Teacher Factors + Learner Factors + Support Material + Instructional Facilities + Learning Environment + Institutional Support</div><p><strong>Major Classification:</strong></p><ul class="bullet-list"><li><strong>A. Teacher-Related:</strong> Subject knowledge, pedagogy, communication, experience, attitude, motivation, personality, classroom management, assessment, technology, reflection</li><li><strong>B. Learner-Related:</strong> Prior knowledge, readiness, intelligence, aptitude, interest, motivation, health, attention, language, socio-economic background</li><li><strong>C. Support-Material:</strong> Textbooks, notes, charts, e-content, examples, accessibility, accuracy</li><li><strong>D. Instructional Facilities:</strong> Classroom, library, laboratory, ICT, Internet, smart classroom, assistive technologies</li><li><strong>E. Learning Environment:</strong> Physical, social, psychological, academic, digital</li><li><strong>F. Institutional:</strong> Leadership, academic policies, curriculum, faculty development, workload, funding, student support, quality assurance</li></ul></div>
+
+      <div id="teacher-factors" class="topic-card"><div class="sec-head"><span class="sec-num">2</span><h2>Teacher-Related Factors</h2></div><div class="formula-box">Effective Teacher = Content Knowledge + Pedagogy + Communication + Sensitivity + Assessment + Reflection</div><ul class="bullet-list"><li><strong>Subject Knowledge:</strong> Facts, concepts, principles, theories, applications, recent developments</li><li><strong>Pedagogical Knowledge:</strong> How to teach, explain, assess, identify difficulties</li><li><strong>Pedagogical Content Knowledge (PCK):</strong> Subject knowledge + best way to represent that subject</li><li><strong>Communication Skills:</strong> Clarity, logical organisation, voice modulation, listening, questioning, examples, bilingual explanation where required</li><li><strong>Teacher's Attitude:</strong> Respect, patience, empathy, fairness, acceptance of diversity, constructive feedback</li><li><strong>Motivation & Commitment:</strong> Lesson preparation, updated knowledge, learner support, professional development</li><li><strong>Teaching Experience:</strong> Anticipating classroom situations, selecting examples, identifying difficulties, managing time</li><li><strong>Teacher Personality:</strong> Emotional stability, confidence, enthusiasm, patience, openness, flexibility, professional ethics</li><li><strong>Classroom Management:</strong> Clear expectations, time management, positive discipline, conflict management, inclusive seating</li><li><strong>Assessment Skills:</strong> Valid questions, formative assessment, feedback, rubric development, misconception identification</li><li><strong>Use of Technology:</strong> Presentation, LMS, online quiz, video, simulation, accessibility tools (purposeful integration)</li><li><strong>Reflective Ability:</strong> Plan → Teach → Observe → Evaluate → Improve</li></ul></div>
+
+      <div id="learner-factors" class="topic-card"><div class="sec-head"><span class="sec-num">3</span><h2>Learner-Related Factors</h2></div><div class="formula-box">Learner Readiness = Ability + Prior Knowledge + Motivation + Health + Willingness</div><ul class="bullet-list"><li><strong>Prior Knowledge:</strong> New learning builds on existing knowledge</li><li><strong>Readiness & Maturation:</strong> Physically, cognitively, emotionally ready</li><li><strong>Intelligence:</strong> Reasoning, learning, adaptation potential (but achievement ≠ intelligence alone)</li><li><strong>Aptitude:</strong> Specific area future learning potential</li><li><strong>Interest:</strong> Relevance, engagement, attention</li><li><strong>Motivation:</strong> Intrinsic (curiosity, mastery) + Extrinsic (marks, certificate, promotion)</li><li><strong>Aspiration Level:</strong> Realistic challenging goals → motivation & progress</li><li><strong>Attention & Concentration:</strong> Affected by interest, fatigue, anxiety, noise, sleep, task difficulty, digital distraction</li><li><strong>Physical & Mental Health:</strong> Nutrition, sleep, illness, stress, anxiety, fatigue</li><li><strong>Language Proficiency:</strong> Medium of instruction familiarity affects comprehension and expression</li><li><strong>Learning Pace:</strong> Flexible practice, remedial support, enrichment, differentiated tasks</li><li><strong>Personality & Self-Concept:</strong> Confidence, persistence, self-efficacy, emotional stability</li><li><strong>Socio-Economic & Cultural Background:</strong> Resources, digital access, language exposure, family support, expectations</li></ul></div>
+
+      <div id="support-material" class="topic-card"><div class="sec-head"><span class="sec-num">4</span><h2>Support Material Factors</h2></div><div class="formula-box">Good Support Material = Accurate + Relevant + Organised + Accessible + Engaging</div><ul class="bullet-list"><li><strong>Accuracy:</strong> Factually and conceptually correct; outdated statistics and incorrect definitions create misconceptions</li><li><strong>Relevance:</strong> Related to learning objectives and learner needs</li><li><strong>Organisation:</strong> Clear headings, logical sequence, examples, summary, practice questions, visual hierarchy</li><li><strong>Language & Readability:</strong> Simple but academic language, appropriate font size, clear terminology, bilingual support, short paragraphs</li><li><strong>Learner Appropriateness:</strong> Age, prior knowledge, language, cognitive level, cultural background, special needs</li><li><strong>Interactivity:</strong> Answer, apply, compare, reflect, practise, create opportunities</li><li><strong>Accessibility:</strong> Alternative text, captions, screen-reader compatibility, readable typography, colour contrast, keyboard navigation, audio alternative</li><li><strong>Availability:</strong> Timely availability of textbooks, reading materials, digital content</li></ul></div>
+
+      <div id="instructional-facilities" class="topic-card"><div class="sec-head"><span class="sec-num">5</span><h2>Instructional Facilities</h2></div><ul class="bullet-list"><li><strong>Classroom Size & Seating:</strong> Overcrowding reduces interaction, individual feedback, visibility; increases noise; flexible seating useful for group discussion</li><li><strong>Library:</strong> Updated books, journals, databases, reading space, digital access, research support, trained staff</li><li><strong>Laboratory:</strong> Functional equipment, safety, consumables, demonstration, practical time, technical assistance</li><li><strong>ICT Infrastructure:</strong> Reliable Internet, devices, projector, LMS, technical support, cybersecurity, backup power, accessible software</li><li><strong>Maintenance & Technical Support:</strong> Equipment must be functional; technical support essential for actual instructional support</li></ul></div>
+
+      <div id="learning-environment" class="topic-card"><div class="sec-head"><span class="sec-num">6</span><h2>Learning Environment</h2></div><div class="formula-box">Learning Environment = Physical + Social + Psychological + Academic + Digital Conditions</div></div>
+
+      <div id="physical-environment" class="topic-card"><div class="sec-head"><span class="sec-num">7</span><h2>Physical Environment</h2></div><ul class="bullet-list"><li>Light, ventilation, temperature, noise, cleanliness, space, seating, visibility, acoustics, safety</li><li>Poor lighting → eyestrain; Noise → reduced concentration; Poor ventilation → fatigue; Extreme temperature → discomfort; Overcrowding → low interaction</li></ul></div>
+
+      <div id="social-environment" class="topic-card"><div class="sec-head"><span class="sec-num">8</span><h2>Social Environment</h2></div><ul class="bullet-list"><li>Teacher–student relationship, peer interaction, cooperation, respect, inclusion, communication, group belongingness</li><li>Positive social environment encourages learners to ask questions and share ideas</li></ul></div>
+
+      <div id="psychological-environment" class="topic-card"><div class="sec-head"><span class="sec-num">9</span><h2>Psychological/Emotional Environment</h2></div><ul class="bullet-list"><li>Mistakes are part of learning; asking questions is safe; no public humiliation; diversity respected; constructive feedback</li></ul><div class="formula-box">Psychological Safety → Participation → Feedback → Better Learning</div></div>
+
+      <div id="academic-environment" class="topic-card"><div class="sec-head"><span class="sec-num">10</span><h2>Academic Environment</h2></div><ul class="bullet-list"><li>High but realistic expectations, academic honesty, inquiry, discussion, research culture, feedback, collaboration, intellectual freedom</li></ul><p><strong>Exam Trap:</strong> High expectations and unreasonable pressure are not the same.</p></div>
+
+      <div id="positive-reinforcement" class="topic-card"><div class="sec-head"><span class="sec-num">11</span><h2>Positive Reinforcement</h2></div><p>Praise, encouragement and recognition support learner motivation.</p><ul class="bullet-list"><li><strong>Better Feedback:</strong> "You have made a clear comparison of both theories; adding evidence will make your answer stronger."</li><li><strong>Weak Feedback:</strong> "Good."</li></ul></div>
+
+      <div id="negative-environment" class="topic-card"><div class="sec-head"><span class="sec-num">12</span><h2>Negative Learning Environment</h2></div><ul class="bullet-list"><li>Fear, discrimination, favouritism, bullying, excessive competition, public humiliation, rigid control, lack of discussion, unsafe infrastructure, unclear expectations</li><li><strong>Impact:</strong> Anxiety, low participation, absenteeism, surface learning, low motivation, dropout, reduced creativity</li></ul></div>
+
+      <div id="digital-environment" class="topic-card"><div class="sec-head"><span class="sec-num">13</span><h2>Digital Learning Environment</h2></div><ul class="bullet-list"><li>LMS usability, device access, connectivity, online communication, digital content, data privacy, cyber safety, technical support, accessibility</li></ul><p><strong>Exam Point:</strong> Online learning may have physical distance, but social presence and teacher support must be maintained.</p></div>
+
+      <div id="institutional-factors" class="topic-card"><div class="sec-head"><span class="sec-num">14</span><h2>Institutional Factors</h2></div><div class="formula-box">Supportive Institution = Academic Leadership + Resources + Autonomy + Development + Accountability</div><ul class="bullet-list"><li><strong>Institutional Leadership:</strong> Clear academic vision, teacher support, collaboration, resource allocation, innovation, fair decision-making</li><li><strong>Curriculum:</strong> Relevant, updated, flexible, outcome-oriented, inclusive, skill-linked, research-informed</li><li><strong>Teacher Workload:</strong> Excessive teaching load, administrative work, documentation reduce lesson preparation, feedback and research time</li><li><strong>Faculty Development:</strong> Orientation, refresher programmes, workshops, research support, technology training, mentoring, peer observation, professional learning communities</li><li><strong>Academic Autonomy:</strong> Freedom to select teaching method, use contextual examples, innovative assessment, suggest course improvement (with accountability)</li><li><strong>Student Support Services:</strong> Academic counselling, mentoring, career guidance, psychological counselling, remedial support, scholarship, disability support, grievance redressal</li><li><strong>Funding & Resource Allocation:</strong> Affects faculty recruitment, library resources, laboratory, technology, maintenance, student support, research</li><li><strong>Faculty Availability:</strong> Teacher shortage → large classes, high workload, limited feedback, course cancellation, reduced mentoring</li><li><strong>Institutional Culture:</strong> Positive: teamwork, mutual respect, academic integrity, research, innovation, resource sharing; Negative: internal conflict, favouritism, fear, rigid bureaucracy, resistance to change</li><li><strong>Quality Assurance:</strong> Learner feedback, peer review, course-outcome analysis, assessment audit, curriculum review, faculty development, academic support (aim: continuous improvement, not punishment)</li></ul></div>
+
+      <div id="factor-interaction" class="topic-card"><div class="sec-head"><span class="sec-num">15</span><h2>Interaction among Different Factors</h2></div><p>Factors do not work independently; they interact with each other.</p><ul class="bullet-list"><li><strong>Example 1:</strong> Teacher is good but learners have weak prior knowledge → diagnostic assessment and prerequisite teaching needed</li><li><strong>Example 2:</strong> Digital content is good but Internet is unavailable → material is practically inaccessible</li><li><strong>Example 3:</strong> Facilities are excellent but environment is humiliating → participation and learning decrease</li><li><strong>Example 4:</strong> Learners are motivated but curriculum is outdated → engagement and career relevance affected</li></ul><div class="formula-box">A weakness in one factor can reduce the strength of another factor.</div></div>
+
+      <div id="factor-identification" class="topic-card"><div class="sec-head"><span class="sec-num">16</span><h2>Factor Identification Table</h2></div><table class="data-table"><tr><th>Situation</th><th>Main Factor</th></tr><tr><td>Teacher cannot clearly explain concept</td><td>Teacher — pedagogical/subject knowledge</td></tr><tr><td>Learner is tired and anxious</td><td>Learner — health/emotional factor</td></tr><tr><td>Textbook is not available</td><td>Support material</td></tr><tr><td>Laboratory equipment is broken</td><td>Instructional facility</td></tr><tr><td>Bullying in classroom</td><td>Learning environment</td></tr><tr><td>Institution does not provide faculty training</td><td>Institutional factor</td></tr><tr><td>Poor Internet connectivity</td><td>Facility/digital environment</td></tr><tr><td>Curriculum is outdated</td><td>Institutional/curricular factor</td></tr><tr><td>Font is too small and inaccessible</td><td>Support-material factor</td></tr><tr><td>Teacher publicly humiliates learners</td><td>Teacher + psychological environment</td></tr></table></div>
+
+      <div id="important-exam-points" class="topic-card"><div class="sec-head"><span class="sec-num">17</span><h2>Important Exam Points</h2></div><ul class="bullet-list"><li>Teaching effectiveness is a multi-factor phenomenon</li><li>Subject knowledge is necessary but not sufficient alone</li><li>Teacher's explanation ability is more direct than qualification</li><li>Learner motivation, aptitude and interest are influential factors</li><li>Prior experience is an important learner characteristic</li><li>Mental health, attention, readiness and fatigue affect learning</li><li>Learning material must be accurate, relevant, readable and accessible</li><li>Non-availability of reading materials reduces instructional effectiveness</li><li>Smart class availability is an instructional facility factor</li><li>Teacher praise creates a positive learning environment</li><li>Family and socio-cultural diversity are environmental factors</li><li>Overcrowding affects physical and instructional environment</li><li>Institutional leadership and faculty development affect teaching quality</li><li>ICT is not a complete replacement for the teacher</li><li>Learning autonomy support increases motivation</li><li>Public humiliation damages psychological safety</li><li>Technology availability and technology integration are different</li><li>Teaching methods should be diversified according to individual differences</li><li>Positive environment encourages open discussion and sharing</li><li>Effective institution supports teamwork and academic development</li></ul></div>
+
+      <div id="common-exam-traps" class="topic-card"><div class="sec-head"><span class="sec-num">18</span><h2>Common Exam Traps</h2></div><table class="data-table"><tr><th>Misleading Statement</th><th>Correct Position</th></tr><tr><td>Teacher qualification alone determines effectiveness.</td><td>Explanation, pedagogy and interaction are also essential.</td></tr><tr><td>Experienced teacher is always effective.</td><td>Reflection and updating are necessary.</td></tr><tr><td>Pleasing students means effective teaching.</td><td>Popularity is not learning effectiveness.</td></tr><tr><td>Strict silence means good classroom management.</td><td>Productive interaction is also effective management.</td></tr><tr><td>Motivation is only internal.</td><td>Both internal and external motivation are possible.</td></tr><tr><td>Low achievement means low intelligence.</td><td>Many learner and environmental factors may be involved.</td></tr><tr><td>More teaching material means better learning.</td><td>Relevance and quality are more important.</td></tr><tr><td>Smart class guarantees smart learning.</td><td>Pedagogical integration is essential.</td></tr><tr><td>Same material is fair for all.</td><td>Accessibility and equity are necessary.</td></tr><tr><td>Institution only provides buildings.</td><td>Policy, leadership and academic support are also important.</td></tr><tr><td>Praise always improves learning.</td><td>Praise should be specific, genuine and appropriate.</td></tr><tr><td>ICT can replace teacher in personality development.</td><td>Human interaction and guidance are essential.</td></tr></table></div>
+
+      <div id="verified-pyqs" class="topic-card"><div class="sec-head"><span class="sec-num">19</span><h2>Verified PYQs</h2></div><div class="pyq-tag">PYQ 1: UGC NET, 12 Nov 2020, Shift 1</div><p><strong>Question:</strong> Which factors are related to instructional facilities and learning environment?<br> <strong>Answer:</strong> Non-availability of textbooks/reading materials, proactive moves in interactive processes, availability of smart classes.</p><p><strong>Explanation:</strong> Textbooks → support material/instructional environment; Proactive interaction → learning process/environment; Smart classes → institutional infrastructure.</p>
+
+      <div class="pyq-tag">PYQ 2: UGC NET, 18 Dec 2018, Shift 2</div><p><strong>Question:</strong> Learner characteristics helpful in ensuring teaching effectiveness?<br> <strong>Answer:</strong> Motivation, prior experience, interpersonal relations.</p><p><strong>Formula:</strong> Effective Learner Participation = Motivation + Prior Experience + Interpersonal Relations</p>
+
+      <div class="pyq-tag">PYQ 3: UGC NET, 4 Dec 2021, Shift 1</div><p><strong>Question:</strong> Environmental factors influencing student learning?<br> <strong>Answer:</strong> Family, motivation, socio-cultural diversities.</p>
+
+      <div class="pyq-tag">PYQ 4: UGC NET, 24 Nov 2021, Shift 2</div><p><strong>Question:</strong> Most influential factors of learning?<br> <strong>Answer:</strong> Motivation, aptitude, interest.</p><p><strong>Formula:</strong> Learning Engagement = Motivation + Aptitude + Interest</p>
+
+      <div class="pyq-tag">PYQ 5: UGC NET, 14 March 2023, Shift 2</div><p><strong>Question:</strong> Factors that affect learning?<br> <strong>Answer:</strong> Mental health, attention, readiness, fatigue.</p>
+
+      <div class="pyq-tag">PYQ 6: UGC NET, 21 Oct 2022, Shift 2</div><p><strong>Question:</strong> Effectiveness of teaching depends on?<br> <strong>Answer:</strong> Ability of the teacher to explain concepts to learners.</p><p><strong>Formula:</strong> Subject Knowledge + Explanation Ability = Classroom Effectiveness</p>
+
+      <div class="pyq-tag">PYQ 7: UGC NET, 4 Dec 2019, Shift 2</div><p><strong>Question:</strong> Factors that do NOT contribute to teaching effectiveness?<br> <strong>Answer:</strong> Socio-economic background of teacher, teacher's skill in pleasing students, teacher's personal contact with students (if beyond professional boundaries). Subject knowledge DOES contribute.</p>
+
+      <div class="pyq-tag">PYQ 8: UGC NET, 9 Oct 2020, Shift 1</div><p><strong>Question:</strong> Instructional technology can replace the teacher when personality development is the objective?<br> <strong>Answer:</strong> FALSE. Technology can assist, but cannot completely replace the teacher, especially in personality development (human interaction, empathy, mentoring, social experience, value-oriented guidance).</p></div>
+
+      <div id="pyq-trend-analysis" class="topic-card"><div class="sec-head"><span class="sec-num">20</span><h2>PYQ Trend Analysis</h2></div><table class="data-table"><tr><th>Tested Area</th><th>Common Question Type</th></tr><tr><td>Teacher-related factors</td><td>Direct MCQ</td></tr><tr><td>Learner factors</td><td>Multiple statements</td></tr><tr><td>Support material</td><td>Classification</td></tr><tr><td>Facilities vs environment</td><td>Combination question</td></tr><tr><td>Positive environment</td><td>Statement-based</td></tr><tr><td>Teacher effectiveness</td><td>Best-answer question</td></tr><tr><td>Instructional technology</td><td>Assertion–Reason</td></tr><tr><td>Institutional support</td><td>Scenario-based</td></tr><tr><td>Physical and mental health</td><td>Multiple selection</td></tr><tr><td>Multiple-factor interaction</td><td>Application MCQ</td></tr></table></div>
+
+      <div id="expected-mcqs" class="topic-card"><div class="sec-head"><span class="sec-num">21</span><h2>Expected MCQs (Dec 2026)</h2></div>
+      <div class="pyq-tag">Q1</div><p>Teacher has excellent subject knowledge but cannot explain with simple examples → <strong>Pedagogical Content Knowledge</strong> deficient.</p>
+      <div class="pyq-tag">Q2</div><p>Learner cannot understand correlation because basic statistics not known → <strong>Prior knowledge and academic readiness</strong>.</p>
+      <div class="pyq-tag">Q3</div><p>College has computers but teachers not trained in LMS → <strong>Availability of infrastructure but lack of institutional professional development</strong>.</p>
+      <div class="pyq-tag">Q4</div><p>Primarily support-material factor → <strong>Outdated textbook</strong>.</p>
+      <div class="pyq-tag">Q5</div><p>Learners avoid reporting mistakes due to public criticism → <strong>Psychological learning environment</strong> affected.</p>
+      <div class="pyq-tag">Q6 Assertion-Reason</div><p>Assertion: Smart classroom does not guarantee effective learning. Reason: Technology must be integrated with learning objectives and pedagogy. → <strong>Both true, Reason explains Assertion</strong>.</p>
+      <div class="pyq-tag">Q7</div><p>Learner understands concept but performs poorly due to illness and fatigue → <strong>Learner-related physical health factor</strong>.</p>
+      <div class="pyq-tag">Q8</div><p>Primarily institutional factor → <strong>Faculty workload policy</strong>.</p>
+      <div class="pyq-tag">Q9</div><p>Effective teaching material combination → <strong>Accurate, relevant and accessible</strong>.</p>
+      <div class="pyq-tag">Q10</div><p>Different activities and support according to learners' readiness → <strong>Differentiated instruction</strong>.</p>
+      <div class="pyq-tag">Q11</div><p>NOT a teacher-related factor → <strong>Learner's prior experience</strong>.</p>
+      <div class="pyq-tag">Q12</div><p>Faculty teamwork, mentoring, research support → <strong>Positive institutional and professional environment</strong>.</p>
+      <div class="pyq-tag">Q13</div><p>No stable Internet for online classes → <strong>Instructional facility and digital learning environment</strong>.</p>
+      <div class="pyq-tag">Q14</div><p>Most direct classroom indicator of teaching effectiveness → <strong>Ability to facilitate learners' conceptual understanding</strong>.</p>
+      <div class="pyq-tag">Q15</div><p>Good lighting/ventilation but learners afraid to ask questions → <strong>Physical environment positive, psychological environment weak</strong>.</p>
+      <div class="pyq-tag">Q16</div><p>Digital resource accurate but small text, no captions → <strong>Accessibility</strong> missing.</p>
+      <div class="pyq-tag">Q17 Assertion-Reason</div><p>Assertion: Long experience does not automatically guarantee effective teaching. Reason: Experience becomes valuable with reflection, updating and adaptation. → <strong>Both true, Reason explains Assertion</strong>.</p>
+      <div class="pyq-tag">Q18</div><p>Best institutional support action → <strong>Providing faculty development, mentoring and adequate resources</strong>.</p>
+      </div>
+
+      <div class="enroll-cta"><div><h3 class="h-display">Join the Paper-1 Batch</h3><p>Course fee FREE — ₹500 registration & academic/logistics contribution. Classes daily at 6:30 PM.</p></div><a href="/enroll.html" class="btn-gold">✓ JOIN BATCH @ ₹500</a></div>
+    </div>
+  </div>
+</main>
+
+<footer class="relative overflow-hidden bg-navy-950 text-white">
+  <div class="grid-paper absolute inset-0 opacity-50" aria-hidden="true"></div>
+  <div class="container-x relative py-12 lg:py-14">
+    <div class="grid grid-cols-2 gap-10 lg:grid-cols-4">
+
+      <div>
+        <div class="flex items-center gap-3">
+          <img src="/assets/images/logo.png" alt="GS Net Academy" class="h-11 w-auto rounded-lg bg-white p-1" width="120" height="44">
+          <img src="/assets/images/tagline.png" alt="" class="h-11 w-auto brightness-0 invert" aria-hidden="true">
+        </div>
+        <p class="mt-5 text-[14px] leading-relaxed text-navy-100/75">UGC NET Paper-I | JRF Preparation | Mentorship</p>
+        <span class="eyebrow mt-5"><svg viewBox="0 0 24 24" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1"/></svg> JRF @ ₹500 Mission 2026</span>
+
+        <p class="mt-6 text-[11px] font-extrabold uppercase tracking-[0.18em] text-gold-400">Follow Us</p>
+        <ul class="mt-3 flex flex-wrap gap-2">
+          <li><a href="https://www.youtube.com/@gsnetacademy" target="_blank" rel="noreferrer noopener" aria-label="YouTube" title="YouTube" class="grid h-10 w-10 place-items-center rounded-xl border border-white/12 bg-white/[0.06] text-navy-100/80 transition hover:border-gold-400/50 hover:bg-white/[0.12] hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor" aria-hidden="true"><path d="M21.6 7.2a2.5 2.5 0 0 0-1.8-1.8C18.2 5 12 5 12 5s-6.2 0-7.8.4A2.5 2.5 0 0 0 2.4 7.2 26 26 0 0 0 2 12a26 26 0 0 0 .4 4.8 2.5 2.5 0 0 0 1.8 1.8C5.8 19 12 19 12 19s6.2 0 7.8-.4a2.5 2.5 0 0 0 1.8-1.8A26 26 0 0 0 22 12a26 26 0 0 0-.4-4.8ZM10 15V9l5.2 3L10 15Z"/></svg></a></li>
+          <li><a href="https://www.instagram.com/gsnetacademy" target="_blank" rel="noreferrer noopener" aria-label="Instagram" title="Instagram" class="grid h-10 w-10 place-items-center rounded-xl border border-white/12 bg-white/[0.06] text-navy-100/80 transition hover:border-gold-400/50 hover:bg-white/[0.12] hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg></a></li>
+          <li><a href="https://www.facebook.com/gsnetacademy" target="_blank" rel="noreferrer noopener" aria-label="Facebook" title="Facebook" class="grid h-10 w-10 place-items-center rounded-xl border border-white/12 bg-white/[0.06] text-navy-100/80 transition hover:border-gold-400/50 hover:bg-white/[0.12] hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.25-1.5 1.55-1.5H16.7V3.6c-.3 0-1.3-.13-2.47-.13-2.44 0-4.11 1.49-4.11 4.23V9.9H7.4V13h2.72v8h3.38Z"/></svg></a></li>
+          <li><a href="https://t.me/gsnetacademy" target="_blank" rel="noreferrer noopener" aria-label="Telegram" title="Telegram" class="grid h-10 w-10 place-items-center rounded-xl border border-white/12 bg-white/[0.06] text-navy-100/80 transition hover:border-gold-400/50 hover:bg-white/[0.12] hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor" aria-hidden="true"><path d="M21.3 4.3 2.9 11.4c-.9.35-.9 1.62.02 1.93l4.6 1.53 1.75 5.3c.25.75 1.2.95 1.73.37l2.5-2.72 4.6 3.38c.63.46 1.53.12 1.7-.65l3.1-14.9c.2-.9-.7-1.65-1.6-1.31ZM9.6 14.1l8.5-5.6-6.9 6.5-.3 3.3-1.3-4.2Z"/></svg></a></li>
+          <li><a href="https://chat.whatsapp.com/KeaQUhOFz0UGAKtLmsM7oU" target="_blank" rel="noreferrer noopener" aria-label="WhatsApp Group" title="WhatsApp Group" class="grid h-10 w-10 place-items-center rounded-xl border border-white/12 bg-white/[0.06] text-navy-100/80 transition hover:border-emerald-400/50 hover:bg-emerald-500/15 hover:text-emerald-300"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.2 20.8 4.6 16A8.4 8.4 0 1 1 8 19.4l-4.8 1.4Z"/><path d="M9 8.4c.3-.7.6-.7.9-.7h.6c.2 0 .5 0 .7.6l.8 1.9c.1.2.1.4 0 .6l-.5.7c-.1.2-.2.4 0 .7a7 7 0 0 0 3 2.6c.3.1.5.1.7-.1l.7-.8c.2-.2.4-.2.6-.1l1.8.9c.3.1.5.3.5.5v.6c0 .4-.2.9-.9 1.2-.6.3-1.5.4-2.5.1a10 10 0 0 1-6.5-6.2c-.3-1-.1-1.9.1-2.5Z"/></svg></a></li>
+          <li><a href="https://x.com/gsnetacademy" target="_blank" rel="noreferrer noopener" aria-label="X (Twitter)" title="X (Twitter)" class="grid h-10 w-10 place-items-center rounded-xl border border-white/12 bg-white/[0.06] text-navy-100/80 transition hover:border-gold-400/50 hover:bg-white/[0.12] hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-4.5 w-4.5" fill="currentColor" aria-hidden="true"><path d="M17.5 3h3.1l-6.8 7.8L21.8 21h-6.2l-4.9-6.4L5.1 21H2l7.3-8.3L2.5 3h6.4l4.4 5.8L17.5 3Zm-1.1 16.2h1.7L7.7 4.7H5.9l10.5 14.5Z"/></svg></a></li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="text-[11px] font-extrabold uppercase tracking-[0.18em] text-gold-400">Quick Links</p>
+        <ul class="mt-4 grid gap-2.5">
+          <li><a href="/index.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Home</a></li>
+          <li><a href="/courses.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">UGC NET Paper-I</a></li>
+          <li><a href="/results.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Our Results</a></li>
+          <li><a href="/tutorials.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Tutorials</a></li>
+          <li><a href="/blog.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Blog</a></li>
+          <li><a href="/about.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">About</a></li>
+          <li><a href="/contact.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="text-[11px] font-extrabold uppercase tracking-[0.18em] text-gold-400">Resources</p>
+        <ul class="mt-4 grid gap-2.5">
+          <li><a href="/notes.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Notes</a></li>
+          <li><a href="/enroll.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Register for ₹500</a></li>
+          <li><a href="/index.html#free-demo" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Free Demo Classes</a></li>
+          <li><a href="https://chat.whatsapp.com/KeaQUhOFz0UGAKtLmsM7oU" target="_blank" rel="noreferrer noopener" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Student Community</a></li>
+        </ul>
+        <p class="mt-6 text-[11px] font-extrabold uppercase tracking-[0.18em] text-gold-400">Legal</p>
+        <ul class="mt-4 grid gap-2.5">
+          <li><a href="/privacy-policy.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Privacy Policy</a></li>
+          <li><a href="/refund-policy.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Refund &amp; Cancellation</a></li>
+          <li><a href="/terms-of-enrollment.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Terms of Enrollment</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="text-[11px] font-extrabold uppercase tracking-[0.18em] text-gold-400">Contact</p>
+        <ul class="mt-4 grid gap-2.5 text-[14px] text-navy-100/75">
+          <li><a href="tel:+919266511505" class="flex items-center gap-2 hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-4 w-4 icon-gold" fill="currentColor" aria-hidden="true"><path d="M5 3h3.5l1.6 4-2 1.4a12 12 0 0 0 5.5 5.5l1.4-2 4 1.6V19a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 3 5.2 2 2 0 0 1 5 3Z"/></svg> +91 9266511505</a></li>
+          <li><a href="tel:+919810845327" class="flex items-center gap-2 hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-4 w-4 icon-gold" fill="currentColor" aria-hidden="true"><path d="M5 3h3.5l1.6 4-2 1.4a12 12 0 0 0 5.5 5.5l1.4-2 4 1.6V19a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 3 5.2 2 2 0 0 1 5 3Z"/></svg> +91 9810845327</a></li>
+          <li><a href="mailto:gsnetacademy@gmail.com" class="flex items-center gap-2 break-all hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-4 w-4 icon-gold" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="m3.5 6.5 8.5 6 8.5-6"/></svg> gsnetacademy@gmail.com</a></li>
+          <li><a href="https://chat.whatsapp.com/KeaQUhOFz0UGAKtLmsM7oU" target="_blank" rel="noreferrer noopener" class="flex items-center gap-2 hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-4 w-4 icon-gold" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.2 20.8 4.6 16A8.4 8.4 0 1 1 8 19.4l-4.8 1.4Z"/><path d="M9 8.4c.3-.7.6-.7.9-.7h.6c.2 0 .5 0 .7.6l.8 1.9c.1.2.1.4 0 .6l-.5.7c-.1.2-.2.4 0 .7a7 7 0 0 0 3 2.6c.3.1.5.1.7-.1l.7-.8c.2-.2.4-.2.6-.1l1.8.9c.3.1.5.3.5.5v.6c0 .4-.2.9-.9 1.2-.6.3-1.5.4-2.5.1a10 10 0 0 1-6.5-6.2c-.3-1-.1-1.9.1-2.5Z"/></svg> WhatsApp Group</a></li>
+        </ul>
+        <a href="/enroll.html" class="btn-primary mt-6 w-full">Join for ₹500</a>
+        <p class="text-[14px] mt-3 text-navy-100/75 transition hover:text-gold-300">Address: B 14-15, Udhyog Marg, Block B, Sector 1, Noida, Uttar Pradesh 201301</p>
+      </div>
+    </div>
+
+    <div class="mt-10 border-t border-white/10 pt-6">
+      <ul class="flex flex-wrap items-center gap-x-5 gap-y-2 text-[13px]">
+        <li><a href="/privacy-policy.html" class="text-navy-100/70 transition hover:text-gold-300">Privacy Policy</a></li>
+        <li aria-hidden="true" class="text-navy-100/25">|</li>
+        <li><a href="/refund-policy.html" class="text-navy-100/70 transition hover:text-gold-300">Refund &amp; Cancellation</a></li>
+        <li aria-hidden="true" class="text-navy-100/25">|</li>
+        <li><a href="/terms-of-enrollment.html" class="text-navy-100/70 transition hover:text-gold-300">Terms of Enrollment</a></li>
+      </ul>
+      <div class="mt-4 flex flex-col gap-2 text-[13px] text-navy-100/60 sm:flex-row sm:items-center sm:justify-between">
+        <p>© 2026 GS Net Academy. All Rights Reserved.</p>
+        <p>A Premier institute for UGC NET Paper-1</p>
+      </div>
+      <p class="mt-4 text-[12px] leading-relaxed text-navy-100/45">Disclaimer: GS Net Academy किसी भी exam में selection, rank या score की guarantee नहीं देता। हम quality teaching, study material, practice और academic mentorship प्रदान करते हैं। UGC, NTA या किसी अन्य government body से हमारा कोई affiliation नहीं है।</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  (function () {
+    const BASE_PATH = "/tutorials/teaching-aptitude/factors-affecting-teaching";
+
+    const links = document.querySelectorAll(".nav-link");
+    const cards = document.querySelectorAll(".topic-card");
+    const content = document.getElementById("contentArea");
+    const sidebarToggle = document.getElementById("sidebar-toggle");
+
+    function getSlugFromPath() {
+      const path = window.location.pathname.replace(/\/+$/, "");
+
+      if (path.startsWith(BASE_PATH)) {
+        const slug = path.slice(BASE_PATH.length).replace(/^\/+/, "");
+        return slug || null;
+      }
+
+      return null;
+    }
+
+    function updateUrl(slug, replace = false) {
+      const newPath = `${BASE_PATH}/${slug}`;
+
+      if (window.location.pathname !== newPath) {
+        if (replace) {
+          history.replaceState(null, "", newPath);
+        } else {
+          history.pushState(null, "", newPath);
+        }
+      }
+    }
+
+    function updateActiveLink(slug) {
+      links.forEach((link) => {
+        const href = link.getAttribute("href");
+
+        link.classList.toggle(
+          "active",
+          href === `${BASE_PATH}/${slug}`
+        );
+      });
+    }
+
+    function showCard(slug, updateHistory = true) {
+      const target = document.getElementById(slug);
+
+      if (!target) {
+        const first = cards[0];
+
+        if (first) {
+          first.classList.remove("hidden");
+
+          cards.forEach((card) => {
+            if (card !== first) {
+              card.classList.add("hidden");
+            }
+          });
+
+          const firstSlug = first.id;
+
+          updateActiveLink(firstSlug);
+          updateUrl(firstSlug, true);
+        }
+
+        return;
+      }
+
+      cards.forEach((card) => {
+        card.classList.add("hidden");
+      });
+
+      target.classList.remove("hidden");
+
+      updateActiveLink(slug);
+
+      if (updateHistory) {
+        updateUrl(slug);
+      }
+
+      if (sidebarToggle) {
+        sidebarToggle.checked = false;
+      }
+    }
+
+    links.forEach((link) => {
+      link.addEventListener("click", function (e) {
+        e.preventDefault();
+
+        const href = this.getAttribute("href");
+
+        if (!href) return;
+
+        const slug = href
+          .replace(`${BASE_PATH}/`, "")
+          .replace(/^\/+/, "");
+
+        showCard(slug, true);
+
+        const top =
+          content.getBoundingClientRect().top +
+          window.pageYOffset -
+          10;
+
+        window.scrollTo({
+          top: top,
+          behavior: "smooth"
+        });
+      });
+    });
+
+    function initFromPath() {
+      let slug = getSlugFromPath();
+
+      if (!slug || !document.getElementById(slug)) {
+        slug = cards[0]?.id || "concept-factors";
+      }
+
+      showCard(slug, false);
+
+      const expectedPath = `${BASE_PATH}/${slug}`;
+
+      if (window.location.pathname !== expectedPath) {
+        history.replaceState(null, "", expectedPath);
+      }
+    }
+
+    initFromPath();
+
+    window.addEventListener("popstate", function () {
+      const slug = getSlugFromPath();
+
+      if (slug && document.getElementById(slug)) {
+        showCard(slug, false);
+      } else {
+        const firstSlug = cards[0]?.id || "concept-factors";
+        showCard(firstSlug, false);
+      }
+    });
+  })();
+</script>
+</body>
+</html>

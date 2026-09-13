@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coding-Decoding & Mathematical Relationships – Full Notes | UGC NET Paper-1</title>
+  <meta name="description" content="Complete tutorial: Coding-Decoding (letter coding, number coding, mixed coding, substitution coding, decoding), Mathematical Relationships (age, ratio, proportion, percentage, time & work, speed & distance) for UGC NET Paper-1 Mathematical Aptitude.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; }
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background: #f8f5ee;
+      color: #101a3d;
+    }
+    .h-display { font-family: 'Poppins', sans-serif; font-weight: 800; letter-spacing: -0.01em; }
+    .container { max-width: 1360px; margin: 0 auto; padding: 0 20px; }
+
+    .hero {
+      background: #0b1330;
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+      padding: 28px 0 22px;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      right: -80px;
+      top: -100px;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(232,183,75,0.2), transparent 70%);
+    }
+    .hero-inner { position: relative; }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      padding: 6px 16px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+      color: #e8b74b;
+    }
+    .hero h1 {
+      font-size: clamp(28px, 4.2vw, 44px);
+      margin: 12px 0 6px;
+    }
+    .hero p {
+      color: rgba(255,255,255,0.78);
+      max-width: 680px;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 28px;
+      padding: 28px 0 50px;
+      align-items: start;
+    }
+    @media (max-width: 980px) {
+      .layout { grid-template-columns: 1fr; }
+    }
+
+    .sidebar {
+      position: sticky;
+      top: 16px;
+      max-height: calc(100vh - 40px);
+      overflow-y: auto;
+      background: #fff;
+      border: 1px solid rgba(16,26,61,0.08);
+      border-radius: 16px;
+      padding: 16px 12px;
+      box-shadow: 0 6px 24px rgba(16,26,61,0.05);
+    }
+    .sidebar::-webkit-scrollbar { width: 5px; }
+    .sidebar::-webkit-scrollbar-thumb { background: #dde2ef; border-radius: 8px; }
+    .sidebar-title {
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: #b9852a;
+      padding: 4px 10px 14px;
+    }
+    .nav-link {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 10px;
+      border-radius: 10px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #33406b;
+      line-height: 1.3;
+      transition: 0.1s;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .nav-link:hover { background: #f4f6fc; color: #0b1330; }
+    .nav-link.active {
+      background: #fdf6e7;
+      color: #0b1330;
+    }
+    .nav-num {
+      flex: none;
+      width: 22px;
+      height: 22px;
+      border-radius: 7px;
+      background: #e7eaf5;
+      color: #5b6690;
+      font-size: 11px;
+      font-weight: 800;
+      display: grid;
+      place-items: center;
+    }
+    .nav-link.active .nav-num {
+      background: #e8b74b;
+      color: #0b1330;
+    }
+
+    #sidebar-toggle { display: none; }
+    .mobile-bar { display: none; }
+    @media (max-width: 980px) {
+      .mobile-bar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: #fff;
+        border: 1px solid rgba(16,26,61,0.1);
+        border-radius: 12px;
+        padding: 12px 16px;
+        margin-bottom: 8px;
+        font-weight: 800;
+        font-size: 13.5px;
+        color: #0b1330;
+      }
+      .sidebar { display: none; position: static; max-height: none; }
+      #sidebar-toggle:checked ~ .layout .sidebar { display: block; }
+    }
+
+    .content { min-width: 0; }
+    .topic-card {
+      background: #fff;
+      border: 1px solid rgba(16,26,61,0.08);
+      border-radius: 16px;
+      padding: 20px 20px 16px;
+      margin-bottom: 18px;
+      scroll-margin-top: 20px;
+      display: block;
+    }
+    .topic-card.hidden { display: none; }
+    .sec-head {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+    .sec-num {
+      flex: none;
+      width: 34px;
+      height: 34px;
+      border-radius: 10px;
+      background: #0b1330;
+      color: #e8b74b;
+      font-weight: 800;
+      font-size: 14px;
+      display: grid;
+      place-items: center;
+    }
+    .sec-head h2 {
+      margin: 0;
+      font-size: 19px;
+      font-weight: 800;
+      color: #0b1330;
+    }
+    .topic-card p {
+      font-size: 14.5px;
+      line-height: 1.75;
+      color: #1a254a;
+      margin: 6px 0;
+    }
+    .bullet-list {
+      margin: 8px 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 5px;
+    }
+    .bullet-list li {
+      position: relative;
+      padding-left: 20px;
+      font-size: 14px;
+      line-height: 1.6;
+      color: #1a254a;
+    }
+    .bullet-list li::before {
+      content: "";
+      position: absolute;
+      left: 2px;
+      top: 9px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #d9a53a;
+    }
+    .formula-box {
+      background: #0b1330;
+      color: #fdeec2;
+      font-weight: 700;
+      font-size: 13.6px;
+      padding: 10px 16px;
+      border-radius: 10px;
+      margin: 10px 0;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 12px 0;
+      font-size: 13.6px;
+      display: block;
+      overflow-x: auto;
+    }
+    .data-table th, .data-table td {
+      border: 1px solid #e7eaf5;
+      padding: 8px 12px;
+      text-align: left;
+      color: #1a254a;
+      white-space: normal;
+    }
+    .data-table th {
+      background: #f4f6fc;
+      color: #0b1330;
+      font-weight: 800;
+    }
+    .pyq-tag {
+      display: inline-block;
+      background: #fdf6e7;
+      color: #b9852a;
+      font-weight: 800;
+      font-size: 12px;
+      padding: 4px 12px;
+      border-radius: 8px;
+      margin: 12px 0 6px;
+    }
+    .answer-box {
+      background: #eefaf2;
+      border: 1px solid #bfe8cc;
+      color: #1a7a4c;
+      font-weight: 700;
+      font-size: 13.6px;
+      padding: 6px 14px;
+      border-radius: 9px;
+      margin: 6px 0;
+    }
+    .explain {
+      background: #f4f6fc;
+      border-radius: 9px;
+      padding: 6px 14px;
+      font-size: 13.6px;
+      color: #1a254a;
+    }
+    .subtopic {
+      padding: 14px 0 6px;
+      border-top: 1px dashed #e7eaf5;
+    }
+    .subtopic:first-of-type { border-top: none; padding-top: 2px; }
+    .subhead {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 6px;
+    }
+    .sub-num {
+      flex: none;
+      width: 26px;
+      height: 26px;
+      border-radius: 8px;
+      background: #fdf6e7;
+      color: #b9852a;
+      font-weight: 800;
+      font-size: 12px;
+      display: grid;
+      place-items: center;
+    }
+    .subhead h3 {
+      margin: 0;
+      font-size: 15.5px;
+      font-weight: 800;
+      color: #0b1330;
+    }
+    .enroll-cta {
+      background: #0b1330;
+      color: #fff;
+      border-radius: 16px;
+      padding: 24px 24px;
+      margin-top: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+      overflow: hidden;
+    }
+    .enroll-cta::before {
+      content: "";
+      position: absolute;
+      right: -40px;
+      top: -40px;
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(232,183,75,0.2), transparent 70%);
+    }
+    .enroll-cta h3 { margin: 0 0 4px; font-size: 20px; }
+    .enroll-cta p { margin: 0; color: rgba(255,255,255,0.75); font-size: 13.5px; max-width: 480px; }
+    .btn-gold {
+      background: #e8b74b;
+      color: #0b1330;
+      font-weight: 800;
+      padding: 10px 22px;
+      border-radius: 10px;
+      font-size: 13.5px;
+      white-space: nowrap;
+      text-decoration: none;
+    }
+  </style>
+
+  <link rel="stylesheet" href="/css/tailwind.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <style>.hero h1 { font-weight: 800 !important; color: #fff !important; line-height: 1.2 !important; font-family: 'Poppins', sans-serif !important; }</style>
+
+  <link rel="icon" href="/assets/images/logo.png">
+</head>
+<body>
+
+<header class="sticky top-0 z-50 border-b border-navy-900/8 bg-white/95 backdrop-blur-md">
+  <nav class="container-wide flex h-[76px] items-center gap-4" aria-label="Main">
+    <a href="/" class="flex shrink-0 items-center gap-3" aria-label="Home">
+      <span class="inline-flex shrink-0 items-center justify-center overflow-hidden rounded-lg bg-navy-950 ring-1 ring-navy-900/10">
+        <img src="assets/images/logo.png" alt="GS Net Academy" class="h-11 w-auto" width="120" height="44">
+      </span>
+      <img src="assets/images/tagline.png" alt="#1 A Premier institute for UGC NET Paper-1" class="h-11 hidden w-auto lg:block">
+    </a>
+    <ul class="mx-auto hidden items-center gap-5 xl:flex">
+      <li><a href="courses.html" class="relative block whitespace-nowrap rounded-lg px-3 py-2 text-[13.5px] font-bold transition-colors text-navy-700/75 hover:text-navy-900">UGC NET Paper-I</a></li>
+      <li><a href="results.html" class="relative block whitespace-nowrap rounded-lg px-3 py-2 text-[13.5px] font-bold transition-colors text-navy-700/75 hover:text-navy-900">Results</a></li>
+      <li><a href="tutorial.html" class="relative block whitespace-nowrap rounded-lg px-3 py-2 text-[13.5px] font-bold transition-colors text-navy-700/75 hover:text-navy-900">Tutorials</a></li>
+      <li><a href="notes.html" class="relative block whitespace-nowrap rounded-lg px-3 py-2 text-[13.5px] font-bold transition-colors text-navy-700/75 hover:text-navy-900">Notes</a></li>
+      <li><a href="blog.html" class="relative block whitespace-nowrap rounded-lg px-3 py-2 text-[13.5px] font-bold transition-colors text-navy-700/75 hover:text-navy-900">Blog</a></li>
+      <li><a href="about.html" class="relative block whitespace-nowrap rounded-lg px-3 py-2 text-[13.5px] font-bold transition-colors text-navy-700/75 hover:text-navy-900">About</a></li>
+      <li><a href="contact.html" class="relative block whitespace-nowrap rounded-lg px-3 py-2 text-[13.5px] font-bold transition-colors text-navy-700/75 hover:text-navy-900">Contact</a></li>
+    </ul>
+    <div class="ml-auto flex items-center gap-2 xl:ml-0">
+      <span title="Coming soon" class="hidden items-center gap-1.5 whitespace-nowrap rounded-lg border border-navy-900/12 px-3 py-2 text-[13px] font-bold text-navy-700 lg:inline-flex"><svg viewBox="0 0 24 24" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="4.5" width="14" height="16" rx="2.5"/><path d="M9 4.5a3 3 0 0 1 6 0"/><path d="M9 11h6M9 15h4"/></svg> <a href="https://mock-test.gsnetacademy.com/" class="cursor-pointer">Exam Portal</a></span>
+      <a href="/#free-demo" class="btn-outline btn-sm hidden 2xl:inline-flex">Demo</a>
+      <a href="enroll.html" class="btn-primary btn-sm hidden sm:inline-flex">Join Now</a>
+      <label for="nav-toggle" class="cursor-pointer rounded-lg border border-navy-900/12 p-2 text-navy-800 xl:hidden" aria-label="Menu"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></label>
+    </div>
+  </nav>
+</header>
+
+<div class="drawer xl:hidden">
+  <label for="nav-toggle" class="drawer-scrim" aria-hidden="true"></label>
+  <div class="drawer-panel">
+    <div class="flex h-[72px] shrink-0 items-center justify-between border-b border-navy-900/10 px-5">
+      <img src="assets/images/logo.png" alt="GS Net Academy" class="h-9 w-auto rounded-lg bg-navy-950">
+      <label for="nav-toggle" class="cursor-pointer p-2 text-navy-800" aria-label="Close"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></label>
+    </div>
+    <div class="flex-1 overflow-y-auto p-5">
+      <ul class="flex flex-col gap-1">
+      <li><a href="/" class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold bg-navy-50 text-navy-900">Home</a></li>
+      <li><a href="courses.html" class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold text-navy-700">UGC NET Paper-I</a></li>
+      <li><a href="results.html" class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold text-navy-700">Our Results</a></li>
+      <li><span class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold text-navy-400">UG / PG (Paper-2)<span class="rounded-md bg-navy-50 px-2 py-0.5 text-[10.5px] font-extrabold uppercase tracking-wider">Coming soon</span></span></li>
+      <li><a href="tutorial.html" class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold text-navy-700">Tutorials</a></li>
+      <li><a href="notes.html" class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold text-navy-700">Notes</a></li>
+      <li><a href="blog.html" class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold text-navy-700">Blog</a></li>
+      <li><a href="about.html" class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold text-navy-700">About</a></li>
+      <li><a href="contact.html" class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold text-navy-700">Contact</a></li>
+      </ul>
+      <p class="mt-3 rounded-xl bg-gold-50 px-4 py-3 text-[12.5px] font-extrabold uppercase tracking-wider text-gold-700">AI-Powered Career Guidance — Coming soon</p>
+      <div class="mt-5 grid gap-2.5">
+        <a href="enroll.html" class="btn-primary w-full">✓ JOIN BATCH @ ₹500</a>
+        <a href="/#free-demo" class="btn-outline w-full">▶ WATCH FREE DEMO</a>
+        <a href="https://chat.whatsapp.com/KeaQUhOFz0UGAKtLmsM7oU" target="_blank" rel="noreferrer noopener" class="btn-outline w-full"><svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.2 20.8 4.6 16A8.4 8.4 0 1 1 8 19.4l-4.8 1.4Z"/><path d="M9 8.4c.3-.7.6-.7.9-.7h.6c.2 0 .5 0 .7.6l.8 1.9c.1.2.1.4 0 .6l-.5.7c-.1.2-.2.4 0 .7a7 7 0 0 0 3 2.6c.3.1.5.1.7-.1l.7-.8c.2-.2.4-.2.6-.1l1.8.9c.3.1.5.3.5.5v.6c0 .4-.2.9-.9 1.2-.6.3-1.5.4-2.5.1a10 10 0 0 1-6.5-6.2c-.3-1-.1-1.9.1-2.5Z"/></svg> WhatsApp Group</a>
+        <a href="tel:+919266511505" class="btn-dark w-full"><svg viewBox="0 0 24 24" class="h-4 w-4" fill="currentColor" stroke="none" aria-hidden="true"><path d="M5 3h3.5l1.6 4-2 1.4a12 12 0 0 0 5.5 5.5l1.4-2 4 1.6V19a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 3 5.2 2 2 0 0 1 5 3Z"/></svg> Call 9266511505</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<section class="hero">
+  <div class="container hero-inner">
+    <span class="eyebrow">★ UGC NET Paper-I · Mathematical Aptitude</span>
+    <h1 class="h-display">Coding-Decoding & Mathematical Relationships</h1>
+    <p>Complete tutorial: Coding-Decoding (letter coding, number coding, mixed coding, substitution coding, decoding), Mathematical Relationships (age, ratio, proportion, percentage, time & work, speed & distance) for UGC NET Paper-1.</p>
+  </div>
+</section>
+
+<main class="container">
+  <input type="checkbox" id="sidebar-toggle">
+  <label for="sidebar-toggle" class="mobile-bar">
+    <span>📑 On this page</span>
+    <span>☰ Menu</span>
+  </label>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebarNav">
+      <p class="sidebar-title">On this page</p>
+      <nav>
+       <a href="/tutorials/mathematical-reasoning-and-aptitude/coding-decoding-mathematical-relationships/coding-decoding" class="nav-link active">
+  <span class="nav-num">1</span>Coding-Decoding
+</a>
+<a href="/tutorials/mathematical-reasoning-and-aptitude/coding-decoding-mathematical-relationships/letter-coding" class="nav-link">
+  <span class="nav-num">2</span>Letter Coding
+</a>
+<a href="/tutorials/mathematical-reasoning-and-aptitude/coding-decoding-mathematical-relationships/number-coding" class="nav-link">
+  <span class="nav-num">3</span>Number Coding
+</a>
+<a href="/tutorials/mathematical-reasoning-and-aptitude/coding-decoding-mathematical-relationships/mixed-coding" class="nav-link">
+  <span class="nav-num">4</span>Mixed Coding
+</a>
+<a href="/tutorials/mathematical-reasoning-and-aptitude/coding-decoding-mathematical-relationships/substitution-coding" class="nav-link">
+  <span class="nav-num">5</span>Substitution Coding
+</a>
+<a href="/tutorials/mathematical-reasoning-and-aptitude/coding-decoding-mathematical-relationships/decoding" class="nav-link">
+  <span class="nav-num">6</span>Decoding
+</a>
+<a href="/tutorials/mathematical-reasoning-and-aptitude/coding-decoding-mathematical-relationships/mathematical-relationships" class="nav-link">
+  <span class="nav-num">7</span>Mathematical Relationships
+</a>
+<a href="/tutorials/mathematical-reasoning-and-aptitude/coding-decoding-mathematical-relationships/age-problems" class="nav-link">
+  <span class="nav-num">8</span>Age Problems
+</a>
+<a href="/tutorials/mathematical-reasoning-and-aptitude/coding-decoding-mathematical-relationships/ratio-proportion" class="nav-link">
+  <span class="nav-num">9</span>Ratio & Proportion
+</a>
+<a href="/tutorials/mathematical-reasoning-and-aptitude/coding-decoding-mathematical-relationships/percentage" class="nav-link">
+  <span class="nav-num">10</span>Percentage
+</a>
+<a href="/tutorials/mathematical-reasoning-and-aptitude/coding-decoding-mathematical-relationships/time-work" class="nav-link">
+  <span class="nav-num">11</span>Time & Work
+</a>
+<a href="/tutorials/mathematical-reasoning-and-aptitude/coding-decoding-mathematical-relationships/speed-distance" class="nav-link">
+  <span class="nav-num">12</span>Speed & Distance
+</a>
+<a href="/tutorials/mathematical-reasoning-and-aptitude/coding-decoding-mathematical-relationships/formulae-summary" class="nav-link">
+  <span class="nav-num">13</span>Formulae Summary
+</a>
+<a href="/tutorials/mathematical-reasoning-and-aptitude/coding-decoding-mathematical-relationships/exam-traps" class="nav-link">
+  <span class="nav-num">14</span>Common Exam Traps
+</a>
+<a href="/tutorials/mathematical-reasoning-and-aptitude/coding-decoding-mathematical-relationships/practice-questions" class="nav-link">
+  <span class="nav-num">15</span>Practice Questions
+</a>
+<a href="/tutorials/mathematical-reasoning-and-aptitude/coding-decoding-mathematical-relationships/one-page-revision" class="nav-link">
+  <span class="nav-num">16</span>One-Page Revision
+</a>
+      </nav>
+    </aside>
+
+    <div class="content" id="contentArea">
+      <!-- ===== CARDS ===== -->
+      <div id="coding-decoding" class="topic-card"><div class="sec-head"><span class="sec-num">1</span><h2>Coding-Decoding — कूट-लेखन एवं कूट-पठन</h2></div><p><strong>Coding</strong> किसी word, letter, number या symbol को एक <strong>specific rule</strong> (कूट) के अनुसार दूसरे रूप में बदलना है।</p><p><strong>Decoding</strong> coded form से <strong>original form</strong> को खोजना है।</p><div class="formula-box">Coding = Word → Code | Decoding = Code → Original Word</div><p><strong>Key Point:</strong> UGC NET में coding-decoding questions <strong>pattern recognition</strong> और <strong>logical reasoning</strong> को test करते हैं।</p><p><strong>Types of Coding-Decoding:</strong></p><ul class="bullet-list"><li><strong>Letter Coding — अक्षर कूट:</strong> Letters को एक rule के अनुसार बदलना</li><li><strong>Number Coding — संख्या कूट:</strong> Numbers को code में बदलना</li><li><strong>Mixed Coding — मिश्रित कूट:</strong> Letters और numbers का combination</li><li><strong>Substitution Coding — प्रतिस्थापन कूट:</strong> One word/symbol को another से replace करना</li><li><strong>Decoding — कूट-पठन:</strong> Code से original word खोजना</li></ul></div>
+
+      <div id="letter-coding" class="topic-card"><div class="sec-head"><span class="sec-num">2</span><h2>Letter Coding — अक्षर कूट</h2></div><p><strong>Letter Coding</strong> में letters को alphabet positions के अनुसार बदला जाता है।</p><div class="formula-box">A=1, B=2, C=3, ... Z=26</div><p><strong>Common Patterns:</strong></p><ul class="bullet-list"><li><strong>Direct Addition/Subtraction:</strong> +2, −3, etc.</li><li><strong>Reverse Alphabet:</strong> A↔Z, B↔Y, C↔X (sum = 27)</li><li><strong>Increasing/Decreasing Differences:</strong> +1, +2, +3...</li><li><strong>Vowel/Consonant Patterns</strong></li><li><strong>Positional Swapping</strong></li></ul><p><strong>Example 1:</strong></p><ul class="bullet-list"><li>If <strong>CAT</strong> is coded as <strong>DDU</strong> (C→D = +1, A→D = +3, T→U = +1)</li><li>Then <strong>DOG</strong> = ?</li><li>D→E = +1, O→R = +3, G→H = +1 → <strong>ERH</strong></li></ul><p><strong>Example 2:</strong></p><ul class="bullet-list"><li>If <strong>MAN</strong> is coded as <strong>NZM</strong> (M→N = +1, A→Z = −1, N→M = −1)</li></ul><p><strong>Reverse Alphabet Coding:</strong></p><ul class="bullet-list"><li>If <strong>CAT</strong> is coded as <strong>XZG</strong> (C↔X, A↔Z, T↔G)</li><li>Opposite letter sum = 27 (C=3 → X=24, 3+24=27)</li></ul></div>
+
+      <div id="number-coding" class="topic-card"><div class="sec-head"><span class="sec-num">3</span><h2>Number Coding — संख्या कूट</h2></div><p><strong>Number Coding</strong> में letters को numbers में बदला जाता है (alphabet positions का उपयोग).</p><p><strong>Example 1:</strong></p><ul class="bullet-list"><li>If <strong>CAT</strong> is coded as <strong>3120</strong> (C=3, A=1, T=20)</li><li>Then <strong>DOG</strong> = ?</li><li>D=4, O=15, G=7 → <strong>4157</strong></li></ul><p><strong>Example 2:</strong></p><ul class="bullet-list"><li>If <strong>BALL</strong> is coded as <strong>211212</strong> (B=2, A=1, L=12, L=12)</li><li>Then <strong>CALL</strong> = ?</li><li>C=3, A=1, L=12, L=12 → <strong>311212</strong></li></ul><p><strong>Example 3 (Sum of Positions):</strong></p><ul class="bullet-list"><li>If <strong>CAT</strong> is coded as <strong>24</strong> (3+1+20=24)</li><li>Then <strong>DOG</strong> = ?</li><li>D=4, O=15, G=7 → 4+15+7=26</li></ul></div>
+
+      <div id="mixed-coding" class="topic-card"><div class="sec-head"><span class="sec-num">4</span><h2>Mixed Coding — मिश्रित कूट</h2></div><p><strong>Mixed Coding</strong> में letters और numbers दोनों का combination use होता है या pattern complex होता है।</p><p><strong>Example 1:</strong></p><ul class="bullet-list"><li>If <strong>CAT</strong> is coded as <strong>C3T</strong> (vowels replaced by position, consonants unchanged)</li><li>Then <strong>DOG</strong> = ?</li><li>D, O=15, G → <strong>D15G</strong></li></ul><p><strong>Example 2:</strong></p><ul class="bullet-list"><li>If <strong>BAT</strong> is coded as <strong>2B3T</strong> (first letter position, original, third letter position...)</li></ul><p><strong>Example 3 (Difference Coding):</strong></p><ul class="bullet-list"><li>If <strong>CAT</strong> is coded as <strong>3-1-20</strong> (positions with hyphens)</li><li>Then <strong>DOG</strong> = <strong>4-15-7</strong></li></ul></div>
+
+      <div id="substitution-coding" class="topic-card"><div class="sec-head"><span class="sec-num">5</span><h2>Substitution Coding — प्रतिस्थापन कूट</h2></div><p><strong>Substitution Coding</strong> में एक word या symbol को दूसरे word या symbol से replace (बदल) दिया जाता है।</p><p><strong>Example:</strong></p><ul class="bullet-list"><li>If <strong>'red'</strong> is called <strong>'blue'</strong>, <strong>'blue'</strong> is called <strong>'green'</strong>, and <strong>'green'</strong> is called <strong>'yellow'</strong>.</li><li>Question: What is the colour of blood?</li><li>Blood is red → but red is called blue → <strong>Answer: Blue</strong></li></ul><p><strong>Key Point:</strong> Substitution coding में <strong>carefully follow</strong> the substitution chain.</p></div>
+
+      <div id="decoding" class="topic-card"><div class="sec-head"><span class="sec-num">6</span><h2>Decoding — कूट-पठन</h2></div><p><strong>Decoding</strong> coded form से <strong>original word/meaning</strong> को खोजना है।</p><p><strong>Example:</strong></p><ul class="bullet-list"><li>If <strong>3120</strong> is code for <strong>CAT</strong> (3=C, 1=A, 20=T)</li><li>What is <strong>4157</strong>?</li><li>4=D, 15=O, 7=G → <strong>DOG</strong></li></ul><p><strong>Strategy:</strong></p><ul class="bullet-list"><li>Identify the coding rule from the given example(s)</li><li>Apply the same rule to decode the given code</li><li>Work backwards from code to original</li></ul></div>
+
+      <div id="mathematical-relationships" class="topic-card"><div class="sec-head"><span class="sec-num">7</span><h2>Mathematical Relationships — गणितीय संबंध</h2></div><p><strong>Mathematical Relationships</strong> questions में <strong>numbers और their relationships</strong> (age, ratio, proportion, percentage, time & work, speed & distance) पर आधारित problems होते हैं।</p><div class="formula-box">Mathematical Relationships = Numbers + Operations + Logical Application</div><p><strong>Common Topics:</strong></p><ul class="bullet-list"><li><strong>Age Problems — आयु संबंधी</strong></li><li><strong>Ratio & Proportion — अनुपात एवं समानुपात</strong></li><li><strong>Percentage — प्रतिशत</strong></li><li><strong>Time & Work — समय एवं कार्य</strong></li><li><strong>Speed & Distance — चाल एवं दूरी</strong></li></ul></div>
+
+      <div id="age-problems" class="topic-card"><div class="sec-head"><span class="sec-num">8</span><h2>Age Problems — आयु संबंधी</h2></div><p><strong>Key Formulae:</strong></p><ul class="bullet-list"><li><strong>Present Age:</strong> Let present age = x</li><li><strong>Age n years ago:</strong> x − n</li><li><strong>Age n years hence:</strong> x + n</li><li><strong>Ratio of ages:</strong> Use ratio to form equations</li></ul><p><strong>Example:</strong></p><ul class="bullet-list"><li>A is 5 years older than B. After 3 years, A's age will be twice B's age. Find their present ages.</li><li>Let B's age = x → A's age = x + 5</li><li>After 3 years: (x+5)+3 = 2(x+3)</li><li>x+8 = 2x+6 → x = 2</li><li>B = 2, A = 7</li></ul><p><strong>Tip:</strong> Always form equations using the given relationships.</p></div>
+
+      <div id="ratio-proportion" class="topic-card"><div class="sec-head"><span class="sec-num">9</span><h2>Ratio & Proportion — अनुपात एवं समानुपात</h2></div><div class="formula-box">Ratio = a : b = a/b | Proportion = a:b :: c:d means a/b = c/d</div><p><strong>Key Formulae:</strong></p><ul class="bullet-list"><li><strong>a : b = c : d</strong> → a × d = b × c (Cross multiplication)</li><li><strong>Ratio of two quantities:</strong> a : b = (a/b)</li><li><strong>If a:b and b:c are given:</strong> a:b:c = (a×b) : (b×b) : (b×c)</li><li><strong>Shared amount in ratio:</strong> Total × (share ratio / total ratio)</li></ul><p><strong>Example:</strong></p><ul class="bullet-list"><li>₹500 is divided between A and B in ratio 2:3. How much does each get?</li><li>Total ratio = 2+3 = 5</li><li>A = 500 × 2/5 = 200</li><li>B = 500 × 3/5 = 300</li></ul></div>
+
+      <div id="percentage" class="topic-card"><div class="sec-head"><span class="sec-num">10</span><h2>Percentage — प्रतिशत</h2></div><div class="formula-box">Percentage = (Part / Whole) × 100</div><p><strong>Key Formulae:</strong></p><ul class="bullet-list"><li><strong>X% of Y:</strong> (X/100) × Y</li><li><strong>Percentage Increase:</strong> (Increase / Original) × 100</li><li><strong>Percentage Decrease:</strong> (Decrease / Original) × 100</li><li><strong>New Value after Increase:</strong> Original × (100 + X%) / 100</li><li><strong>New Value after Decrease:</strong> Original × (100 − X%) / 100</li></ul><p><strong>Example:</strong></p><ul class="bullet-list"><li>What is 25% of 400? → (25/100) × 400 = 100</li><li>If a price increases from ₹200 to ₹250, what is the percentage increase?</li><li>Increase = 50, Original = 200 → (50/200) × 100 = 25%</li></ul></div>
+
+      <div id="time-work" class="topic-card"><div class="sec-head"><span class="sec-num">11</span><h2>Time & Work — समय एवं कार्य</h2></div><div class="formula-box">Work = Rate × Time | Rate = 1/Time (if total work = 1)</div><p><strong>Key Formulae:</strong></p><ul class="bullet-list"><li><strong>If A can do work in x days:</strong> A's 1 day work = 1/x</li><li><strong>If A and B together:</strong> (1/x + 1/y) work in 1 day</li><li><strong>Time taken together:</strong> 1/(1/x + 1/y) = xy/(x+y)</li><li><strong>If A is n times efficient than B:</strong> Time ratio = A:B = 1:n</li></ul><p><strong>Example:</strong></p><ul class="bullet-list"><li>A can do work in 10 days, B can do it in 15 days. How long will they take together?</li><li>A's 1 day = 1/10, B's 1 day = 1/15</li><li>Together = 1/10 + 1/15 = 3/30 + 2/30 = 5/30 = 1/6</li><li>Time = 6 days</li></ul></div>
+
+      <div id="speed-distance" class="topic-card"><div class="sec-head"><span class="sec-num">12</span><h2>Speed & Distance — चाल एवं दूरी</h2></div><div class="formula-box">Speed = Distance / Time | Distance = Speed × Time | Time = Distance / Speed</div><p><strong>Key Formulae:</strong></p><ul class="bullet-list"><li><strong>Average Speed = Total Distance / Total Time</strong></li><li><strong>If distances are same:</strong> Average Speed = 2xy/(x+y) (where x and y are speeds)</li><li><strong>Conversion:</strong> km/h to m/s → multiply by 5/18; m/s to km/h → multiply by 18/5</li></ul><p><strong>Example:</strong></p><ul class="bullet-list"><li>A car travels 60 km at 30 km/h and 60 km at 60 km/h. Find average speed.</li><li>Time1 = 60/30 = 2 hours; Time2 = 60/60 = 1 hour</li><li>Total distance = 120 km, Total time = 3 hours</li><li>Average speed = 120/3 = 40 km/h</li></ul></div>
+
+      <div id="formulae-summary" class="topic-card"><div class="sec-head"><span class="sec-num">13</span><h2>Formulae Summary — सूत्र सारांश</h2></div><ul class="bullet-list"><li><strong>Age:</strong> Present = x, n years ago = x−n, n years hence = x+n</li><li><strong>Ratio:</strong> a:b = a/b, a:b:c = a×b : b×b : b×c</li><li><strong>Proportion:</strong> a:b::c:d → ad = bc</li><li><strong>Percentage:</strong> (Part/Whole) × 100</li><li><strong>Time & Work:</strong> 1 day work = 1/n, Together = xy/(x+y)</li><li><strong>Speed & Distance:</strong> S = D/T, Avg Speed = Total D/Total T</li><li><strong>Average Speed (same distance):</strong> 2xy/(x+y)</li></ul></div>
+
+      <div id="exam-traps" class="topic-card"><div class="sec-head"><span class="sec-num">14</span><h2>Common Exam Traps — सामान्य परीक्षा जाल</h2></div><ul class="bullet-list"><li><strong>Trap 1:</strong> Letter coding = always +/− constant → ❌ Patterns can vary (increasing differences, reverse, positional, mixed).</li><li><strong>Trap 2:</strong> Number coding = just alphabet positions → ❌ It can also be sum, difference, product, or mixed operations.</li><li><strong>Trap 3:</strong> Substitution coding = direct translation → ❌ Follow the substitution chain carefully.</li><li><strong>Trap 4:</strong> Age problems = always linear → ❌ May include ratios, sums, differences, and multiple people.</li><li><strong>Trap 5:</strong> Ratio = exact numbers → ❌ Ratio is a relation, not actual numbers.</li><li><strong>Trap 6:</strong> Percentage increase = percentage decrease → ❌ Different bases (original vs new).</li><li><strong>Trap 7:</strong> Time & Work = just add times → ❌ Add rates, not times.</li></ul></div>
+
+      <div id="practice-questions" class="topic-card"><div class="sec-head"><span class="sec-num">15</span><h2>Practice Questions — अभ्यास प्रश्न</h2></div>
+      <div class="pyq-tag">Question 1 (Letter Coding)</div>
+      <p>If <strong>CAT</strong> is coded as <strong>DDU</strong>, what is <strong>DOG</strong> coded as?</p>
+      <ul class="bullet-list"><li>A. ERH</li><li>B. EPI</li><li>C. ERI</li><li>D. EPH</li></ul>
+      <div class="answer-box">Answer: A. ERH</div>
+      <p class="explain">Explanation: C→D (+1), A→D (+3), T→U (+1). Apply same: D→E (+1), O→R (+3), G→H (+1) → ERH.</p>
+
+      <div class="pyq-tag">Question 2 (Number Coding)</div>
+      <p>If <strong>BAT</strong> is coded as <strong>2120</strong>, what is <strong>CAT</strong> coded as?</p>
+      <ul class="bullet-list"><li>A. 3120</li><li>B. 3210</li><li>C. 3119</li><li>D. 2119</li></ul>
+      <div class="answer-box">Answer: A. 3120</div>
+      <p class="explain">Explanation: BAT: B=2, A=1, T=20 → 2120. CAT: C=3, A=1, T=20 → 3120.</p>
+
+      <div class="pyq-tag">Question 3 (Decoding)</div>
+      <p>If <strong>4157</strong> is code for <strong>DOG</strong> (4=D, 15=O, 7=G), what is <strong>31820</strong>?</p>
+      <ul class="bullet-list"><li>A. CAT</li><li>B. CAR</li><li>C. CAN</li><li>D. CAP</li></ul>
+      <div class="answer-box">Answer: B. CAR</div>
+      <p class="explain">Explanation: 3=C, 18=R, 20=T → 3-18-20 is not in options. 3=C, 1=A, 18=R → CAR (3, 1, 18).</p>
+
+      <div class="pyq-tag">Question 4 (Age)</div>
+      <p>A is 10 years older than B. After 5 years, A's age will be twice B's age. Find B's present age.</p>
+      <ul class="bullet-list"><li>A. 5</li><li>B. 8</li><li>C. 10</li><li>D. 12</li></ul>
+      <div class="answer-box">Answer: A. 5</div>
+      <p class="explain">Explanation: Let B = x, A = x+10. After 5 years: (x+10)+5 = 2(x+5) → x+15 = 2x+10 → x = 5.</p>
+
+      <div class="pyq-tag">Question 5 (Ratio)</div>
+      <p>Divide ₹1200 between A and B in ratio 3:5. How much does B get?</p>
+      <ul class="bullet-list"><li>A. 450</li><li>B. 600</li><li>C. 720</li><li>D. 750</li></ul>
+      <div class="answer-box">Answer: D. 750</div>
+      <p class="explain">Explanation: Total ratio = 3+5=8. B = 1200 × 5/8 = 750.</p>
+
+      <div class="pyq-tag">Question 6 (Percentage)</div>
+      <p>What is 30% of 250?</p>
+      <ul class="bullet-list"><li>A. 60</li><li>B. 75</li><li>C. 80</li><li>D. 90</li></ul>
+      <div class="answer-box">Answer: B. 75</div>
+      <p class="explain">Explanation: (30/100) × 250 = 75.</p>
+
+      <div class="pyq-tag">Question 7 (Time & Work)</div>
+      <p>A can do work in 6 days, B in 12 days. How many days will they take together?</p>
+      <ul class="bullet-list"><li>A. 3</li><li>B. 4</li><li>C. 6</li><li>D. 8</li></ul>
+      <div class="answer-box">Answer: B. 4</div>
+      <p class="explain">Explanation: A's 1 day = 1/6, B's = 1/12. Together = 1/6 + 1/12 = 2/12 + 1/12 = 3/12 = 1/4 → Time = 4 days.</p></div>
+
+      <div id="one-page-revision" class="topic-card"><div class="sec-head"><span class="sec-num">16</span><h2>One-Page Revision — एक पेज में पुनरावृत्ति</h2></div>
+      <div class="formula-box">Coding = Word → Code | Decoding = Code → Original</div>
+
+      <p><strong>Coding-Decoding Types:</strong></p>
+      <ul class="bullet-list"><li>Letter Coding (A=1, B=2...)</li><li>Number Coding (positions)</li><li>Mixed Coding (letters + numbers)</li><li>Substitution Coding (replacements)</li><li>Decoding (reverse process)</li></ul>
+
+      <p><strong>Mathematical Relationships Formulae:</strong></p>
+      <ul class="bullet-list"><li><strong>Age:</strong> Present = x, x±n for ago/hence</li><li><strong>Ratio:</strong> a:b = a/b</li><li><strong>Percentage:</strong> (Part/Whole) × 100</li><li><strong>Time & Work:</strong> 1 day work = 1/n; Together = xy/(x+y)</li><li><strong>Speed & Distance:</strong> S = D/T; Avg S = Total D/Total T</li></ul>
+
+      <p><strong>Exam Formula:</strong></p>
+      <div class="formula-box">Find Pattern → Apply Rule → Get Answer</div>
+      <p><em>UGC NET में Coding-Decoding और Mathematical Relationships के questions logical thinking और basic arithmetic skills को test करते हैं।</em></p></div>
+
+      <div class="enroll-cta"><div><h3 class="h-display">Join the Paper-1 Batch</h3><p>Course fee FREE — ₹500 registration & academic/logistics contribution. Classes daily at 6:30 PM.</p></div><a href="/enroll.html" class="btn-gold">✓ JOIN BATCH @ ₹500</a></div>
+    </div>
+  </div>
+</main>
+
+<footer class="relative overflow-hidden bg-navy-950 text-white">
+  <div class="grid-paper absolute inset-0 opacity-50" aria-hidden="true"></div>
+  <div class="container-x relative py-12 lg:py-14">
+    <div class="grid grid-cols-2 gap-10 lg:grid-cols-4">
+
+      <div>
+        <div class="flex items-center gap-3">
+          <img src="/assets/images/logo.png" alt="GS Net Academy" class="h-11 w-auto rounded-lg bg-white p-1" width="120" height="44">
+          <img src="/assets/images/tagline.png" alt="" class="h-11 w-auto brightness-0 invert" aria-hidden="true">
+        </div>
+        <p class="mt-5 text-[14px] leading-relaxed text-navy-100/75">UGC NET Paper-I | JRF Preparation | Mentorship</p>
+        <span class="eyebrow mt-5"><svg viewBox="0 0 24 24" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1"/></svg> JRF @ ₹500 Mission 2026</span>
+
+        <p class="mt-6 text-[11px] font-extrabold uppercase tracking-[0.18em] text-gold-400">Follow Us</p>
+        <ul class="mt-3 flex flex-wrap gap-2">
+          <li><a href="https://www.youtube.com/@gsnetacademy" target="_blank" rel="noreferrer noopener" aria-label="YouTube" title="YouTube" class="grid h-10 w-10 place-items-center rounded-xl border border-white/12 bg-white/[0.06] text-navy-100/80 transition hover:border-gold-400/50 hover:bg-white/[0.12] hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor" aria-hidden="true"><path d="M21.6 7.2a2.5 2.5 0 0 0-1.8-1.8C18.2 5 12 5 12 5s-6.2 0-7.8.4A2.5 2.5 0 0 0 2.4 7.2 26 26 0 0 0 2 12a26 26 0 0 0 .4 4.8 2.5 2.5 0 0 0 1.8 1.8C5.8 19 12 19 12 19s6.2 0 7.8-.4a2.5 2.5 0 0 0 1.8-1.8A26 26 0 0 0 22 12a26 26 0 0 0-.4-4.8ZM10 15V9l5.2 3L10 15Z"/></svg></a></li>
+          <li><a href="https://www.instagram.com/gsnetacademy" target="_blank" rel="noreferrer noopener" aria-label="Instagram" title="Instagram" class="grid h-10 w-10 place-items-center rounded-xl border border-white/12 bg-white/[0.06] text-navy-100/80 transition hover:border-gold-400/50 hover:bg-white/[0.12] hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg></a></li>
+          <li><a href="https://www.facebook.com/gsnetacademy" target="_blank" rel="noreferrer noopener" aria-label="Facebook" title="Facebook" class="grid h-10 w-10 place-items-center rounded-xl border border-white/12 bg-white/[0.06] text-navy-100/80 transition hover:border-gold-400/50 hover:bg-white/[0.12] hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.25-1.5 1.55-1.5H16.7V3.6c-.3 0-1.3-.13-2.47-.13-2.44 0-4.11 1.49-4.11 4.23V9.9H7.4V13h2.72v8h3.38Z"/></svg></a></li>
+          <li><a href="https://t.me/gsnetacademy" target="_blank" rel="noreferrer noopener" aria-label="Telegram" title="Telegram" class="grid h-10 w-10 place-items-center rounded-xl border border-white/12 bg-white/[0.06] text-navy-100/80 transition hover:border-gold-400/50 hover:bg-white/[0.12] hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor" aria-hidden="true"><path d="M21.3 4.3 2.9 11.4c-.9.35-.9 1.62.02 1.93l4.6 1.53 1.75 5.3c.25.75 1.2.95 1.73.37l2.5-2.72 4.6 3.38c.63.46 1.53.12 1.7-.65l3.1-14.9c.2-.9-.7-1.65-1.6-1.31ZM9.6 14.1l8.5-5.6-6.9 6.5-.3 3.3-1.3-4.2Z"/></svg></a></li>
+          <li><a href="https://chat.whatsapp.com/KeaQUhOFz0UGAKtLmsM7oU" target="_blank" rel="noreferrer noopener" aria-label="WhatsApp Group" title="WhatsApp Group" class="grid h-10 w-10 place-items-center rounded-xl border border-white/12 bg-white/[0.06] text-navy-100/80 transition hover:border-emerald-400/50 hover:bg-emerald-500/15 hover:text-emerald-300"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.2 20.8 4.6 16A8.4 8.4 0 1 1 8 19.4l-4.8 1.4Z"/><path d="M9 8.4c.3-.7.6-.7.9-.7h.6c.2 0 .5 0 .7.6l.8 1.9c.1.2.1.4 0 .6l-.5.7c-.1.2-.2.4 0 .7a7 7 0 0 0 3 2.6c.3.1.5.1.7-.1l.7-.8c.2-.2.4-.2.6-.1l1.8.9c.3.1.5.3.5.5v.6c0 .4-.2.9-.9 1.2-.6.3-1.5.4-2.5.1a10 10 0 0 1-6.5-6.2c-.3-1-.1-1.9.1-2.5Z"/></svg></a></li>
+          <li><a href="https://x.com/gsnetacademy" target="_blank" rel="noreferrer noopener" aria-label="X (Twitter)" title="X (Twitter)" class="grid h-10 w-10 place-items-center rounded-xl border border-white/12 bg-white/[0.06] text-navy-100/80 transition hover:border-gold-400/50 hover:bg-white/[0.12] hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-4.5 w-4.5" fill="currentColor" aria-hidden="true"><path d="M17.5 3h3.1l-6.8 7.8L21.8 21h-6.2l-4.9-6.4L5.1 21H2l7.3-8.3L2.5 3h6.4l4.4 5.8L17.5 3Zm-1.1 16.2h1.7L7.7 4.7H5.9l10.5 14.5Z"/></svg></a></li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="text-[11px] font-extrabold uppercase tracking-[0.18em] text-gold-400">Quick Links</p>
+        <ul class="mt-4 grid gap-2.5">
+          <li><a href="/index.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Home</a></li>
+          <li><a href="/courses.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">UGC NET Paper-I</a></li>
+          <li><a href="/results.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Our Results</a></li>
+          <li><a href="/tutorials.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Tutorials</a></li>
+          <li><a href="/blog.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Blog</a></li>
+          <li><a href="/about.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">About</a></li>
+          <li><a href="/contact.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="text-[11px] font-extrabold uppercase tracking-[0.18em] text-gold-400">Resources</p>
+        <ul class="mt-4 grid gap-2.5">
+          <li><a href="/notes.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Notes</a></li>
+          <li><a href="/enroll.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Register for ₹500</a></li>
+          <li><a href="/index.html#free-demo" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Free Demo Classes</a></li>
+          <li><a href="https://chat.whatsapp.com/KeaQUhOFz0UGAKtLmsM7oU" target="_blank" rel="noreferrer noopener" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Student Community</a></li>
+        </ul>
+        <p class="mt-6 text-[11px] font-extrabold uppercase tracking-[0.18em] text-gold-400">Legal</p>
+        <ul class="mt-4 grid gap-2.5">
+          <li><a href="/privacy-policy.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Privacy Policy</a></li>
+          <li><a href="/refund-policy.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Refund &amp; Cancellation</a></li>
+          <li><a href="/terms-of-enrollment.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Terms of Enrollment</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="text-[11px] font-extrabold uppercase tracking-[0.18em] text-gold-400">Contact</p>
+        <ul class="mt-4 grid gap-2.5 text-[14px] text-navy-100/75">
+          <li><a href="tel:+919266511505" class="flex items-center gap-2 hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-4 w-4 icon-gold" fill="currentColor" aria-hidden="true"><path d="M5 3h3.5l1.6 4-2 1.4a12 12 0 0 0 5.5 5.5l1.4-2 4 1.6V19a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 3 5.2 2 2 0 0 1 5 3Z"/></svg> +91 9266511505</a></li>
+          <li><a href="tel:+919810845327" class="flex items-center gap-2 hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-4 w-4 icon-gold" fill="currentColor" aria-hidden="true"><path d="M5 3h3.5l1.6 4-2 1.4a12 12 0 0 0 5.5 5.5l1.4-2 4 1.6V19a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 3 5.2 2 2 0 0 1 5 3Z"/></svg> +91 9810845327</a></li>
+          <li><a href="mailto:gsnetacademy@gmail.com" class="flex items-center gap-2 break-all hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-4 w-4 icon-gold" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="m3.5 6.5 8.5 6 8.5-6"/></svg> gsnetacademy@gmail.com</a></li>
+          <li><a href="https://chat.whatsapp.com/KeaQUhOFz0UGAKtLmsM7oU" target="_blank" rel="noreferrer noopener" class="flex items-center gap-2 hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-4 w-4 icon-gold" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.2 20.8 4.6 16A8.4 8.4 0 1 1 8 19.4l-4.8 1.4Z"/><path d="M9 8.4c.3-.7.6-.7.9-.7h.6c.2 0 .5 0 .7.6l.8 1.9c.1.2.1.4 0 .6l-.5.7c-.1.2-.2.4 0 .7a7 7 0 0 0 3 2.6c.3.1.5.1.7-.1l.7-.8c.2-.2.4-.2.6-.1l1.8.9c.3.1.5.3.5.5v.6c0 .4-.2.9-.9 1.2-.6.3-1.5.4-2.5.1a10 10 0 0 1-6.5-6.2c-.3-1-.1-1.9.1-2.5Z"/></svg> WhatsApp Group</a></li>
+        </ul>
+        <a href="/enroll.html" class="btn-primary mt-6 w-full">Join for ₹500</a>
+        <p class="text-[14px] mt-3 text-navy-100/75 transition hover:text-gold-300">Address: B 14-15, Udhyog Marg, Block B, Sector 1, Noida, Uttar Pradesh 201301</p>
+      </div>
+    </div>
+
+    <div class="mt-10 border-t border-white/10 pt-6">
+      <ul class="flex flex-wrap items-center gap-x-5 gap-y-2 text-[13px]">
+        <li><a href="/privacy-policy.html" class="text-navy-100/70 transition hover:text-gold-300">Privacy Policy</a></li>
+        <li aria-hidden="true" class="text-navy-100/25">|</li>
+        <li><a href="/refund-policy.html" class="text-navy-100/70 transition hover:text-gold-300">Refund &amp; Cancellation</a></li>
+        <li aria-hidden="true" class="text-navy-100/25">|</li>
+        <li><a href="/terms-of-enrollment.html" class="text-navy-100/70 transition hover:text-gold-300">Terms of Enrollment</a></li>
+      </ul>
+      <div class="mt-4 flex flex-col gap-2 text-[13px] text-navy-100/60 sm:flex-row sm:items-center sm:justify-between">
+        <p>© 2026 GS Net Academy. All Rights Reserved.</p>
+        <p>A Premier institute for UGC NET Paper-1</p>
+      </div>
+      <p class="mt-4 text-[12px] leading-relaxed text-navy-100/45">Disclaimer: GS Net Academy किसी भी exam में selection, rank या score की guarantee नहीं देता। हम quality teaching, study material, practice और academic mentorship प्रदान करते हैं। UGC, NTA या किसी अन्य government body से हमारा कोई affiliation नहीं है।</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function() {
+
+  const BASE_PATH =
+    "/tutorials/mathematical-reasoning-and-aptitude/coding-decoding-mathematical-relationships";
+
+  const links = document.querySelectorAll(".nav-link");
+  const cards = document.querySelectorAll(".topic-card");
+  const content = document.getElementById("contentArea");
+  const sidebarToggle = document.getElementById("sidebar-toggle");
+
+
+  // Get topic slug from current URL
+  function getSlugFromPath() {
+
+    const path = window.location.pathname
+      .replace(/\/+$/, "");
+
+    if (path.startsWith(BASE_PATH + "/")) {
+
+      return path
+        .substring((BASE_PATH + "/").length)
+        .split("/")[0];
+
+    }
+
+    return null;
+  }
+
+
+  // Update browser URL
+  function updateUrl(slug, replace = false) {
+
+    const newPath =
+      BASE_PATH + "/" + slug;
+
+    if (window.location.pathname !== newPath) {
+
+      if (replace) {
+        history.replaceState(null, "", newPath);
+      } else {
+        history.pushState(null, "", newPath);
+      }
+
+    }
+  }
+
+
+  // Update active sidebar link
+  function updateActiveLink(slug) {
+
+    links.forEach(function(link) {
+
+      const href =
+        link.getAttribute("href");
+
+      if (!href) return;
+
+      const linkSlug =
+        href
+          .split("/")
+          .filter(Boolean)
+          .pop();
+
+      link.classList.toggle(
+        "active",
+        linkSlug === slug
+      );
+
+    });
+  }
+
+
+  // Show selected topic card
+  function showCard(slug, updateHistory = true) {
+
+    cards.forEach(function(card) {
+      card.classList.add("hidden");
+    });
+
+
+    const target =
+      document.getElementById(slug);
+
+
+    if (!target) {
+
+      const first = cards[0];
+
+      if (first) {
+
+        first.classList.remove("hidden");
+
+        const firstSlug = first.id;
+
+        updateActiveLink(firstSlug);
+
+        updateUrl(firstSlug, true);
+
+      }
+
+      return;
+    }
+
+
+    target.classList.remove("hidden");
+
+    updateActiveLink(slug);
+
+
+    if (updateHistory) {
+      updateUrl(slug);
+    }
+
+
+    if (sidebarToggle) {
+      sidebarToggle.checked = false;
+    }
+
+
+    if (content) {
+
+      const top =
+        content.getBoundingClientRect().top +
+        window.pageYOffset -
+        10;
+
+      window.scrollTo({
+        top: top,
+        behavior: "smooth"
+      });
+
+    }
+
+  }
+
+
+  // Sidebar link click
+  links.forEach(function(link) {
+
+    link.addEventListener("click", function(e) {
+
+      e.preventDefault();
+
+      const href =
+        this.getAttribute("href");
+
+      if (!href) return;
+
+
+      const slug =
+        href
+          .split("/")
+          .filter(Boolean)
+          .pop();
+
+
+      if (!slug) return;
+
+
+      console.log("Clicked topic:", slug);
+
+      showCard(slug, true);
+
+    });
+
+  });
+
+
+  // Initial page load
+  function initFromPath() {
+
+    let slug =
+      getSlugFromPath();
+
+
+    if (
+      !slug ||
+      !document.getElementById(slug)
+    ) {
+
+      slug =
+        cards[0]?.id ||
+        "coding-decoding";
+
+    }
+
+
+    showCard(slug, false);
+
+    updateUrl(slug, true);
+
+  }
+
+
+  initFromPath();
+
+
+  // Browser Back / Forward
+  window.addEventListener(
+    "popstate",
+    function() {
+
+      const slug =
+        getSlugFromPath();
+
+
+      if (
+        slug &&
+        document.getElementById(slug)
+      ) {
+
+        showCard(slug, false);
+
+      } else {
+
+        const firstSlug =
+          cards[0]?.id ||
+          "coding-decoding";
+
+        showCard(firstSlug, false);
+
+      }
+
+    }
+  );
+
+
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,1511 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Effective Communication: Verbal, Non-Verbal, Intercultural, Group & Classroom – Full Notes | UGC NET Paper-1
+  </title>
+  <meta name="description"
+    content="Complete tutorial: Effective Communication, Verbal Communication, Non-Verbal Communication (Kinesics, Proxemics, Paralanguage, etc.), Intercultural Communication, Group Communication, Classroom Communication for UGC NET Paper-1.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@700;800&display=swap"
+    rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background: #f8f5ee;
+      color: #101a3d;
+    }
+
+    .h-display {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 800;
+      letter-spacing: -0.01em;
+    }
+
+    .container {
+      max-width: 1360px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .hero {
+      background: #0b1330;
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+      padding: 28px 0 22px;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      right: -80px;
+      top: -100px;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(232, 183, 75, 0.2), transparent 70%);
+    }
+
+    .hero-inner {
+      position: relative;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      padding: 6px 16px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+      color: #e8b74b;
+    }
+
+    .hero h1 {
+      font-size: clamp(28px, 4.2vw, 44px);
+      margin: 12px 0 6px;
+    }
+
+    .hero p {
+      color: rgba(255, 255, 255, 0.78);
+      max-width: 680px;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 28px;
+      padding: 28px 0 50px;
+      align-items: start;
+    }
+
+    @media (max-width: 980px) {
+      .layout {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .sidebar {
+      position: sticky;
+      top: 16px;
+      max-height: calc(100vh - 40px);
+      overflow-y: auto;
+      background: #fff;
+      border: 1px solid rgba(16, 26, 61, 0.08);
+      border-radius: 16px;
+      padding: 16px 12px;
+      box-shadow: 0 6px 24px rgba(16, 26, 61, 0.05);
+    }
+
+    .sidebar::-webkit-scrollbar {
+      width: 5px;
+    }
+
+    .sidebar::-webkit-scrollbar-thumb {
+      background: #dde2ef;
+      border-radius: 8px;
+    }
+
+    .sidebar-title {
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: #b9852a;
+      padding: 4px 10px 14px;
+    }
+
+    .nav-link {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 10px;
+      border-radius: 10px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #33406b;
+      line-height: 1.3;
+      transition: 0.1s;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .nav-link:hover {
+      background: #f4f6fc;
+      color: #0b1330;
+    }
+
+    .nav-link.active {
+      background: #fdf6e7;
+      color: #0b1330;
+    }
+
+    .nav-num {
+      flex: none;
+      width: 22px;
+      height: 22px;
+      border-radius: 7px;
+      background: #e7eaf5;
+      color: #5b6690;
+      font-size: 11px;
+      font-weight: 800;
+      display: grid;
+      place-items: center;
+    }
+
+    .nav-link.active .nav-num {
+      background: #e8b74b;
+      color: #0b1330;
+    }
+
+    #sidebar-toggle {
+      display: none;
+    }
+
+    .mobile-bar {
+      display: none;
+    }
+
+    @media (max-width: 980px) {
+      .mobile-bar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: #fff;
+        border: 1px solid rgba(16, 26, 61, 0.1);
+        border-radius: 12px;
+        padding: 12px 16px;
+        margin-bottom: 8px;
+        font-weight: 800;
+        font-size: 13.5px;
+        color: #0b1330;
+      }
+
+      .sidebar {
+        display: none;
+        position: static;
+        max-height: none;
+      }
+
+      #sidebar-toggle:checked~.layout .sidebar {
+        display: block;
+      }
+    }
+
+    .content {
+      min-width: 0;
+    }
+
+    .topic-card {
+      background: #fff;
+      border: 1px solid rgba(16, 26, 61, 0.08);
+      border-radius: 16px;
+      padding: 20px 20px 16px;
+      margin-bottom: 18px;
+      scroll-margin-top: 20px;
+      display: block;
+    }
+
+    .topic-card.hidden {
+      display: none;
+    }
+
+    .sec-head {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+
+    .sec-num {
+      flex: none;
+      width: 34px;
+      height: 34px;
+      border-radius: 10px;
+      background: #0b1330;
+      color: #e8b74b;
+      font-weight: 800;
+      font-size: 14px;
+      display: grid;
+      place-items: center;
+    }
+
+    .sec-head h2 {
+      margin: 0;
+      font-size: 19px;
+      font-weight: 800;
+      color: #0b1330;
+    }
+
+    .topic-card p {
+      font-size: 14.5px;
+      line-height: 1.75;
+      color: #1a254a;
+      margin: 6px 0;
+    }
+
+    .bullet-list {
+      margin: 8px 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 5px;
+    }
+
+    .bullet-list li {
+      position: relative;
+      padding-left: 20px;
+      font-size: 14px;
+      line-height: 1.6;
+      color: #1a254a;
+    }
+
+    .bullet-list li::before {
+      content: "";
+      position: absolute;
+      left: 2px;
+      top: 9px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #d9a53a;
+    }
+
+    .formula-box {
+      background: #0b1330;
+      color: #fdeec2;
+      font-weight: 700;
+      font-size: 13.6px;
+      padding: 10px 16px;
+      border-radius: 10px;
+      margin: 10px 0;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 12px 0;
+      font-size: 13.6px;
+      display: block;
+      overflow-x: auto;
+    }
+
+    .data-table th,
+    .data-table td {
+      border: 1px solid #e7eaf5;
+      padding: 8px 12px;
+      text-align: left;
+      color: #1a254a;
+      white-space: normal;
+    }
+
+    .data-table th {
+      background: #f4f6fc;
+      color: #0b1330;
+      font-weight: 800;
+    }
+
+    .pyq-tag {
+      display: inline-block;
+      background: #fdf6e7;
+      color: #b9852a;
+      font-weight: 800;
+      font-size: 12px;
+      padding: 4px 12px;
+      border-radius: 8px;
+      margin: 12px 0 6px;
+    }
+
+    .answer-box {
+      background: #eefaf2;
+      border: 1px solid #bfe8cc;
+      color: #1a7a4c;
+      font-weight: 700;
+      font-size: 13.6px;
+      padding: 6px 14px;
+      border-radius: 9px;
+      margin: 6px 0;
+    }
+
+    .explain {
+      background: #f4f6fc;
+      border-radius: 9px;
+      padding: 6px 14px;
+      font-size: 13.6px;
+      color: #1a254a;
+    }
+
+    .subtopic {
+      padding: 14px 0 6px;
+      border-top: 1px dashed #e7eaf5;
+    }
+
+    .subtopic:first-of-type {
+      border-top: none;
+      padding-top: 2px;
+    }
+
+    .subhead {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 6px;
+    }
+
+    .sub-num {
+      flex: none;
+      width: 26px;
+      height: 26px;
+      border-radius: 8px;
+      background: #fdf6e7;
+      color: #b9852a;
+      font-weight: 800;
+      font-size: 12px;
+      display: grid;
+      place-items: center;
+    }
+
+    .subhead h3 {
+      margin: 0;
+      font-size: 15.5px;
+      font-weight: 800;
+      color: #0b1330;
+    }
+
+    .enroll-cta {
+      background: #0b1330;
+      color: #fff;
+      border-radius: 16px;
+      padding: 24px 24px;
+      margin-top: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .enroll-cta::before {
+      content: "";
+      position: absolute;
+      right: -40px;
+      top: -40px;
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(232, 183, 75, 0.2), transparent 70%);
+    }
+
+    .enroll-cta h3 {
+      margin: 0 0 4px;
+      font-size: 20px;
+    }
+
+    .enroll-cta p {
+      margin: 0;
+      color: rgba(255, 255, 255, 0.75);
+      font-size: 13.5px;
+      max-width: 480px;
+    }
+
+    .btn-gold {
+      background: #e8b74b;
+      color: #0b1330;
+      font-weight: 800;
+      padding: 10px 22px;
+      border-radius: 10px;
+      font-size: 13.5px;
+      white-space: nowrap;
+      text-decoration: none;
+    }
+  </style>
+
+  <link rel="stylesheet" href="/css/tailwind.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <style>.hero h1 { font-weight: 800 !important; color: #fff !important; line-height: 1.2 !important; font-family: 'Poppins', sans-serif !important; }</style>
+
+  <link rel="icon" href="/assets/images/logo.png">
+</head>
+
+<body>
+
+<header class="sticky top-0 z-50 border-b border-navy-900/8 bg-white/95 backdrop-blur-md">
+  <nav class="container-wide flex h-[76px] items-center gap-4" aria-label="Main">
+    <a href="/" class="flex shrink-0 items-center gap-3" aria-label="Home">
+      <span class="inline-flex shrink-0 items-center justify-center overflow-hidden rounded-lg bg-navy-950 ring-1 ring-navy-900/10">
+        <img src="assets/images/logo.png" alt="GS Net Academy" class="h-11 w-auto" width="120" height="44">
+      </span>
+      <img src="assets/images/tagline.png" alt="#1 A Premier institute for UGC NET Paper-1" class="h-11 hidden w-auto lg:block">
+    </a>
+    <ul class="mx-auto hidden items-center gap-5 xl:flex">
+      <li><a href="courses.html" class="relative block whitespace-nowrap rounded-lg px-3 py-2 text-[13.5px] font-bold transition-colors text-navy-700/75 hover:text-navy-900">UGC NET Paper-I</a></li>
+      <li><a href="results.html" class="relative block whitespace-nowrap rounded-lg px-3 py-2 text-[13.5px] font-bold transition-colors text-navy-700/75 hover:text-navy-900">Results</a></li>
+      <li><a href="tutorial.html" class="relative block whitespace-nowrap rounded-lg px-3 py-2 text-[13.5px] font-bold transition-colors text-navy-700/75 hover:text-navy-900">Tutorials</a></li>
+      <li><a href="notes.html" class="relative block whitespace-nowrap rounded-lg px-3 py-2 text-[13.5px] font-bold transition-colors text-navy-700/75 hover:text-navy-900">Notes</a></li>
+      <li><a href="blog.html" class="relative block whitespace-nowrap rounded-lg px-3 py-2 text-[13.5px] font-bold transition-colors text-navy-700/75 hover:text-navy-900">Blog</a></li>
+      <li><a href="about.html" class="relative block whitespace-nowrap rounded-lg px-3 py-2 text-[13.5px] font-bold transition-colors text-navy-700/75 hover:text-navy-900">About</a></li>
+      <li><a href="contact.html" class="relative block whitespace-nowrap rounded-lg px-3 py-2 text-[13.5px] font-bold transition-colors text-navy-700/75 hover:text-navy-900">Contact</a></li>
+    </ul>
+    <div class="ml-auto flex items-center gap-2 xl:ml-0">
+      <span title="Coming soon" class="hidden items-center gap-1.5 whitespace-nowrap rounded-lg border border-navy-900/12 px-3 py-2 text-[13px] font-bold text-navy-700 lg:inline-flex"><svg viewBox="0 0 24 24" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="4.5" width="14" height="16" rx="2.5"/><path d="M9 4.5a3 3 0 0 1 6 0"/><path d="M9 11h6M9 15h4"/></svg> <a href="https://mock-test.gsnetacademy.com/" class="cursor-pointer">Exam Portal</a></span>
+      <a href="/#free-demo" class="btn-outline btn-sm hidden 2xl:inline-flex">Demo</a>
+      <a href="enroll.html" class="btn-primary btn-sm hidden sm:inline-flex">Join Now</a>
+      <label for="nav-toggle" class="cursor-pointer rounded-lg border border-navy-900/12 p-2 text-navy-800 xl:hidden" aria-label="Menu"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></label>
+    </div>
+  </nav>
+</header>
+
+<div class="drawer xl:hidden">
+  <label for="nav-toggle" class="drawer-scrim" aria-hidden="true"></label>
+  <div class="drawer-panel">
+    <div class="flex h-[72px] shrink-0 items-center justify-between border-b border-navy-900/10 px-5">
+      <img src="assets/images/logo.png" alt="GS Net Academy" class="h-9 w-auto rounded-lg bg-navy-950">
+      <label for="nav-toggle" class="cursor-pointer p-2 text-navy-800" aria-label="Close"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></label>
+    </div>
+    <div class="flex-1 overflow-y-auto p-5">
+      <ul class="flex flex-col gap-1">
+      <li><a href="/" class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold bg-navy-50 text-navy-900">Home</a></li>
+      <li><a href="courses.html" class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold text-navy-700">UGC NET Paper-I</a></li>
+      <li><a href="results.html" class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold text-navy-700">Our Results</a></li>
+      <li><span class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold text-navy-400">UG / PG (Paper-2)<span class="rounded-md bg-navy-50 px-2 py-0.5 text-[10.5px] font-extrabold uppercase tracking-wider">Coming soon</span></span></li>
+      <li><a href="tutorial.html" class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold text-navy-700">Tutorials</a></li>
+      <li><a href="notes.html" class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold text-navy-700">Notes</a></li>
+      <li><a href="blog.html" class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold text-navy-700">Blog</a></li>
+      <li><a href="about.html" class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold text-navy-700">About</a></li>
+      <li><a href="contact.html" class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold text-navy-700">Contact</a></li>
+      </ul>
+      <p class="mt-3 rounded-xl bg-gold-50 px-4 py-3 text-[12.5px] font-extrabold uppercase tracking-wider text-gold-700">AI-Powered Career Guidance — Coming soon</p>
+      <div class="mt-5 grid gap-2.5">
+        <a href="enroll.html" class="btn-primary w-full">✓ JOIN BATCH @ ₹500</a>
+        <a href="/#free-demo" class="btn-outline w-full">▶ WATCH FREE DEMO</a>
+        <a href="https://chat.whatsapp.com/KeaQUhOFz0UGAKtLmsM7oU" target="_blank" rel="noreferrer noopener" class="btn-outline w-full"><svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.2 20.8 4.6 16A8.4 8.4 0 1 1 8 19.4l-4.8 1.4Z"/><path d="M9 8.4c.3-.7.6-.7.9-.7h.6c.2 0 .5 0 .7.6l.8 1.9c.1.2.1.4 0 .6l-.5.7c-.1.2-.2.4 0 .7a7 7 0 0 0 3 2.6c.3.1.5.1.7-.1l.7-.8c.2-.2.4-.2.6-.1l1.8.9c.3.1.5.3.5.5v.6c0 .4-.2.9-.9 1.2-.6.3-1.5.4-2.5.1a10 10 0 0 1-6.5-6.2c-.3-1-.1-1.9.1-2.5Z"/></svg> WhatsApp Group</a>
+        <a href="tel:+919266511505" class="btn-dark w-full"><svg viewBox="0 0 24 24" class="h-4 w-4" fill="currentColor" stroke="none" aria-hidden="true"><path d="M5 3h3.5l1.6 4-2 1.4a12 12 0 0 0 5.5 5.5l1.4-2 4 1.6V19a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 3 5.2 2 2 0 0 1 5 3Z"/></svg> Call 9266511505</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+  <section class="hero">
+    <div class="container hero-inner">
+      <span class="eyebrow">★ UGC NET Paper-I · Communication</span>
+      <h1 class="h-display">Effective Communication: Verbal, Non-Verbal, Intercultural, Group & Classroom</h1>
+      <p>Complete tutorial: effective communication, verbal communication, non-verbal communication (Kinesics,
+        Proxemics, Paralanguage, Chronemics, Haptics, Oculesics), intercultural communication, group communication,
+        classroom communication for UGC NET Paper-1.</p>
+    </div>
+  </section>
+
+  <main class="container">
+    <input type="checkbox" id="sidebar-toggle">
+    <label for="sidebar-toggle" class="mobile-bar">
+      <span>📑 On this page</span>
+      <span>☰ Menu</span>
+    </label>
+
+    <div class="layout">
+      <aside class="sidebar" id="sidebarNav">
+        <p class="sidebar-title">On this page</p>
+        <nav>
+          <a href="/tutorials/communication/effective-communication-verbal-non-verbal-intercultural-group-classroom-communication/effective-communication"
+            class="nav-link active">
+            <span class="nav-num">1</span>Effective Communication
+          </a>
+          <a href="/tutorials/communication/effective-communication-verbal-non-verbal-intercultural-group-classroom-communication/7cs-communication"
+            class="nav-link">
+            <span class="nav-num">2</span>7 C's of Communication
+          </a>
+          <a href="/tutorials/communication/effective-communication-verbal-non-verbal-intercultural-group-classroom-communication/verbal-communication"
+            class="nav-link">
+            <span class="nav-num">3</span>Verbal Communication
+          </a>
+          <a href="/tutorials/communication/effective-communication-verbal-non-verbal-intercultural-group-classroom-communication/non-verbal-communication"
+            class="nav-link">
+            <span class="nav-num">4</span>Non-Verbal Communication
+          </a>
+          <a href="/tutorials/communication/effective-communication-verbal-non-verbal-intercultural-group-classroom-communication/kinesics"
+            class="nav-link">
+            <span class="nav-num">5</span>Kinesics
+          </a>
+          <a href="/tutorials/communication/effective-communication-verbal-non-verbal-intercultural-group-classroom-communication/proxemics"
+            class="nav-link">
+            <span class="nav-num">6</span>Proxemics
+          </a>
+          <a href="/tutorials/communication/effective-communication-verbal-non-verbal-intercultural-group-classroom-communication/paralanguage"
+            class="nav-link">
+            <span class="nav-num">7</span>Paralanguage
+          </a>
+          <a href="/tutorials/communication/effective-communication-verbal-non-verbal-intercultural-group-classroom-communication/chronemics-haptics-oculesics"
+            class="nav-link">
+            <span class="nav-num">8</span>Chronemics, Haptics & Oculesics
+          </a>
+          <a href="/tutorials/communication/effective-communication-verbal-non-verbal-intercultural-group-classroom-communication/verbal-vs-nonverbal"
+            class="nav-link">
+            <span class="nav-num">9</span>Verbal vs Non-Verbal
+          </a>
+          <a href="/tutorials/communication/effective-communication-verbal-non-verbal-intercultural-group-classroom-communication/intercultural-communication"
+            class="nav-link">
+            <span class="nav-num">10</span>Intercultural Communication
+          </a>
+          <a href="/tutorials/communication/effective-communication-verbal-non-verbal-intercultural-group-classroom-communication/group-communication"
+            class="nav-link">
+            <span class="nav-num">11</span>Group Communication
+          </a>
+          <a href="/tutorials/communication/effective-communication-verbal-non-verbal-intercultural-group-classroom-communication/classroom-communication"
+            class="nav-link">
+            <span class="nav-num">12</span>Classroom Communication
+          </a>
+          <a href="/tutorials/communication/effective-communication-verbal-non-verbal-intercultural-group-classroom-communication/barriers-effective"
+            class="nav-link">
+            <span class="nav-num">13</span>Barriers to Effective Communication
+          </a>
+          <a href="/tutorials/communication/effective-communication-verbal-non-verbal-intercultural-group-classroom-communication/overcoming-barriers"
+            class="nav-link">
+            <span class="nav-num">14</span>Overcoming Barriers
+          </a>
+          <a href="/tutorials/communication/effective-communication-verbal-non-verbal-intercultural-group-classroom-communication/exam-traps"
+            class="nav-link">
+            <span class="nav-num">15</span>Common Exam Traps
+          </a>
+          <a href="/tutorials/communication/effective-communication-verbal-non-verbal-intercultural-group-classroom-communication/practice-questions"
+            class="nav-link">
+            <span class="nav-num">16</span>Practice Questions
+          </a>
+          <a href="/tutorials/communication/effective-communication-verbal-non-verbal-intercultural-group-classroom-communication/one-page-revision"
+            class="nav-link">
+            <span class="nav-num">17</span>One-Page Revision
+          </a>
+        </nav>
+      </aside>
+
+      <div class="content" id="contentArea">
+        <!-- ===== CARDS ===== -->
+        <div id="effective-communication" class="topic-card">
+          <div class="sec-head"><span class="sec-num">1</span>
+            <h2>Effective Communication — प्रभावी संचार</h2>
+          </div>
+          <p><strong>Effective Communication</strong> तब होता है जब <strong>sender का intended message</strong> receiver
+            द्वारा <strong>सही अर्थ में समझ</strong> लिया जाता है और <strong>desired response</strong> प्राप्त होता है।
+          </p>
+          <div class="formula-box">Effective Communication = Sender's Intended Message = Receiver's Understood Message +
+            Desired Response</div>
+          <p><strong>Key Characteristics:</strong></p>
+          <ul class="bullet-list">
+            <li><strong>Clear — स्पष्ट:</strong> Message easily understandable</li>
+            <li><strong>Concise — संक्षिप्त:</strong> No unnecessary words</li>
+            <li><strong>Complete — पूर्ण:</strong> All necessary information</li>
+            <li><strong>Correct — सही:</strong> Factually accurate</li>
+            <li><strong>Concrete — ठोस:</strong> Specific, not vague</li>
+            <li><strong>Courteous — विनम्र:</strong> Respectful and polite</li>
+            <li><strong>Coherent — सुसंगत:</strong> Logical flow</li>
+          </ul>
+          <p><strong>Why Effective Communication Matters:</strong></p>
+          <ul class="bullet-list">
+            <li>Builds understanding</li>
+            <li>Strengthens relationships</li>
+            <li>Increases productivity</li>
+            <li>Reduces conflicts</li>
+            <li>Enables better decision-making</li>
+            <li>Creates trust and transparency</li>
+          </ul>
+        </div>
+
+        <div id="7cs-communication" class="topic-card">
+          <div class="sec-head"><span class="sec-num">2</span>
+            <h2>7 C's of Communication — संचार के 7 सी</h2>
+          </div>
+          <ul class="bullet-list">
+            <li><strong>Clarity — स्पष्टता:</strong> Message को स्पष्ट, सरल और समझने योग्य भाषा में express करें। Avoid
+              jargon and ambiguity.</li>
+            <li><strong>Conciseness — संक्षिप्तता:</strong> Unnecessary words, repetition और irrelevant details से बचें।
+              Short and to the point.</li>
+            <li><strong>Completeness — पूर्णता:</strong> All necessary information provide करें। Receiver को कोई doubt
+              नहीं रहना चाहिए।</li>
+            <li><strong>Correctness — शुद्धता:</strong> Facts, data, grammar, spelling, punctuation — सब सही होना चाहिए।
+              Accurate information.</li>
+            <li><strong>Concreteness — ठोसता:</strong> Abstract ideas को specific facts, figures, examples से support
+              करें। Vague language से बचें।</li>
+            <li><strong>Courtesy — विनम्रता:</strong> Respectful, polite, considerate और positive language। Receiver की
+              dignity का respect करें।</li>
+            <li><strong>Coherence — सुसंगति:</strong> Logical flow, all parts well-connected। Ideas smoothly एक-दूसरे से
+              जुड़े हों।</li>
+          </ul>
+        </div>
+
+        <div id="verbal-communication" class="topic-card">
+          <div class="sec-head"><span class="sec-num">3</span>
+            <h2>Verbal Communication — मौखिक संचार</h2>
+          </div>
+          <div class="formula-box">Verbal Communication = Words + Language + Speech</div>
+          <p><strong>Two Types:</strong></p>
+          <ul class="bullet-list">
+            <li><strong>Oral Communication — मौखिक:</strong> Face-to-face conversation, telephone, speeches,
+              presentations, meetings, interviews, group discussions</li>
+            <li><strong>Written Communication — लिखित:</strong> Letters, emails, reports, memos, messages, notices,
+              articles, social media posts</li>
+          </ul>
+          <p><strong>Advantages of Verbal Communication:</strong></p>
+          <ul class="bullet-list">
+            <li>Immediate feedback (oral)</li>
+            <li>Permanent record (written)</li>
+            <li>Clarity and precision possible</li>
+            <li>Can be formal or informal</li>
+            <li>Personal touch (oral)</li>
+          </ul>
+          <p><strong>Limitations:</strong></p>
+          <ul class="bullet-list">
+            <li>Misinterpretation possible</li>
+            <li>Language barriers</li>
+            <li>No non-verbal cues in written</li>
+            <li>Delayed feedback in written</li>
+            <li>Memory issues (oral)</li>
+          </ul>
+        </div>
+
+        <div id="non-verbal-communication" class="topic-card">
+          <div class="sec-head"><span class="sec-num">4</span>
+            <h2>Non-Verbal Communication — अमौखिक संचार</h2>
+          </div>
+          <div class="formula-box">Non-Verbal Communication = Body Language + Expressions + Gestures + Tone + Distance +
+            Touch + Time</div>
+          <p><strong>Key Point:</strong> Non-verbal communication often conveys <strong>more</strong> than verbal
+            communication. It <strong>reinforces, contradicts, or substitutes</strong> verbal messages.</p>
+          <p><strong>Types of Non-Verbal Communication:</strong></p>
+          <ul class="bullet-list">
+            <li><strong>Kinesics — गतिकी:</strong> Body movements, gestures, facial expressions, posture, eye contact
+            </li>
+            <li><strong>Proxemics — दूरी-विज्ञान:</strong> Personal space, distance, territoriality</li>
+            <li><strong>Paralanguage — अशाब्दिक स्वर:</strong> Tone, pitch, volume, speed, pauses, emphasis</li>
+            <li><strong>Chronemics — समय-विज्ञान:</strong> Use of time — punctuality, waiting, duration</li>
+            <li><strong>Haptics — स्पर्श-विज्ञान:</strong> Touch — handshake, pat, hug</li>
+            <li><strong>Oculesics — दृष्टि-विज्ञान:</strong> Eye contact, gaze, eye movement</li>
+            <li><strong>Artifacts — वस्त्र/आभूषण:</strong> Clothing, jewellery, accessories, appearance</li>
+            <li><strong>Silence — मौन:</strong> Not speaking — can communicate many things</li>
+          </ul>
+        </div>
+
+        <div id="kinesics" class="topic-card">
+          <div class="sec-head"><span class="sec-num">5</span>
+            <h2>Kinesics — गतिकी (Body Language)</h2>
+          </div>
+          <p><strong>Kinesics</strong> body movements, gestures, facial expressions, posture और eye contact का study है।
+          </p>
+          <ul class="bullet-list">
+            <li><strong>Facial Expressions — चेहरे के भाव:</strong> Happiness, sadness, anger, surprise, fear, disgust —
+              universal expressions</li>
+            <li><strong>Gestures — हाथ/शरीर की हरकतें:</strong> Thumbs up (approval), waving (greeting), pointing
+              (indicating), nodding (agreement), shaking head (disagreement)</li>
+            <li><strong>Posture — शरीर की मुद्रा:</strong> Sitting, standing, leaning forward (interest), leaning back
+              (relaxed/disinterested), crossed arms (defensive/closed)</li>
+            <li><strong>Eye Contact — आँखों का संपर्क:</strong> Direct eye contact (confidence, honesty, interest);
+              avoiding eye contact (nervousness, dishonesty, discomfort)</li>
+            <li><strong>Emblems — प्रतीकात्मक हावभाव:</strong> Gestures with direct verbal translation (e.g., thumbs up,
+              "OK" sign)</li>
+            <li><strong>Illustrators — चित्रात्मक हावभाव:</strong> Gestures that accompany speech (e.g., pointing,
+              showing size)</li>
+            <li><strong>Affect Displays — भावात्मक प्रदर्शन:</strong> Facial expressions showing emotions</li>
+            <li><strong>Regulators — नियामक हावभाव:</strong> Gestures that control conversation (e.g., raising hand to
+              speak)</li>
+            <li><strong>Adaptors — अनुकूली हावभाव:</strong> Unconscious habits (e.g., scratching, tapping)</li>
+          </ul>
+        </div>
+
+        <div id="proxemics" class="topic-card">
+          <div class="sec-head"><span class="sec-num">6</span>
+            <h2>Proxemics — दूरी-विज्ञान (Personal Space)</h2>
+          </div>
+          <p><strong>Proxemics</strong> personal space और distance का study है। <strong>Edward T. Hall</strong> ने इस
+            concept को popularize किया।</p>
+          <p><strong>Four Zones:</strong></p>
+          <ul class="bullet-list">
+            <li><strong>Intimate Zone — 0-18 inches (0-45 cm):</strong> Close relationships — family, romantic partners,
+              close friends. Physical contact possible.</li>
+            <li><strong>Personal Zone — 18 inches - 4 feet (45 cm - 1.2 m):</strong> Friends, acquaintances, informal
+              conversations. Comfortable distance.</li>
+            <li><strong>Social Zone — 4-12 feet (1.2 - 3.6 m):</strong> Formal interactions, business meetings,
+              strangers. Professional distance.</li>
+            <li><strong>Public Zone — 12+ feet (3.6+ m):</strong> Public speaking, lectures, large audiences.
+              Formal/public communication.</li>
+          </ul>
+          <p><strong>Cultural Variation:</strong></p>
+          <ul class="bullet-list">
+            <li>Different cultures have different personal space norms</li>
+            <li>High-contact cultures (Latin America, Middle East) — closer distance</li>
+            <li>Low-contact cultures (Northern Europe, East Asia) — more distance</li>
+          </ul>
+        </div>
+
+        <div id="paralanguage" class="topic-card">
+          <div class="sec-head"><span class="sec-num">7</span>
+            <h2>Paralanguage — अशाब्दिक स्वर</h2>
+          </div>
+          <p><strong>Paralanguage</strong> voice qualities और vocal features का study है जो words के साथ जुड़े होते हैं।
+          </p>
+          <ul class="bullet-list">
+            <li><strong>Pitch — स्वर की उच्चता:</strong> High pitch (excitement, nervousness); Low pitch (authority,
+              calmness)</li>
+            <li><strong>Volume — आवाज की तीव्रता:</strong> Loud (confidence, anger); Soft (intimacy, uncertainty)</li>
+            <li><strong>Speed/Rate — बोलने की गति:</strong> Fast (excitement, nervousness); Slow (emphasis,
+              thoughtfulness)</li>
+            <li><strong>Pauses — रुकना:</strong> Pauses for effect, thinking, or uncertainty</li>
+            <li><strong>Emphasis — जोर:</strong> Stressing certain words to convey importance</li>
+            <li><strong>Tone — स्वर:</strong> Angry, happy, sad, sarcastic, enthusiastic, bored, concerned</li>
+            <li><strong>Vocal Quality — आवाज की गुणवत्ता:</strong> Nasal, breathy, harsh, smooth</li>
+          </ul>
+          <p><strong>Example:</strong> "I am happy for you." — Tone can change meaning: sincere (happy) या sarcastic
+            (not happy).</p>
+        </div>
+
+        <div id="chronemics-haptics-oculesics" class="topic-card">
+          <div class="sec-head"><span class="sec-num">8</span>
+            <h2>Chronemics, Haptics & Oculesics — समय, स्पर्श एवं दृष्टि</h2>
+          </div>
+          <ul class="bullet-list">
+            <li><strong>Chronemics — समय-विज्ञान (Use of Time):</strong>
+              <ul>
+                <li>Punctuality — समय पर होना</li>
+                <li>Waiting — इंतज़ार करना</li>
+                <li>Duration — समय की अवधि</li>
+                <li>Cultural differences: Monochronic (one thing at a time, punctuality important — Germany, USA) vs
+                  Polychronic (multiple things, flexibility — India, Latin America)</li>
+              </ul>
+            </li>
+            <li><strong>Haptics — स्पर्श-विज्ञान (Touch):</strong>
+              <ul>
+                <li>Handshake, pat on back, hug, holding hands</li>
+                <li>Indicates warmth, support, authority, affection</li>
+                <li>Cultural and gender differences in touch norms</li>
+              </ul>
+            </li>
+            <li><strong>Oculesics — दृष्टि-विज्ञान (Eye Contact):</strong>
+              <ul>
+                <li>Eye contact — confidence, honesty, interest</li>
+                <li>Avoiding eye contact — nervousness, dishonesty, submission</li>
+                <li>Staring — aggression, intimidation (negative)</li>
+                <li>Cultural differences: Some cultures avoid direct eye contact as a sign of respect</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <div id="verbal-vs-nonverbal" class="topic-card">
+          <div class="sec-head"><span class="sec-num">9</span>
+            <h2>Verbal vs Non-Verbal Communication</h2>
+          </div>
+          <table class="data-table">
+            <tr>
+              <th>Basis</th>
+              <th>Verbal Communication</th>
+              <th>Non-Verbal Communication</th>
+            </tr>
+            <tr>
+              <td>Medium</td>
+              <td>Words (spoken or written)</td>
+              <td>Body language, gestures, expressions, tone</td>
+            </tr>
+            <tr>
+              <td>Consciousness</td>
+              <td>Conscious/Intentional</td>
+              <td>Often unconscious</td>
+            </tr>
+            <tr>
+              <td>Structure</td>
+              <td>Structured (grammar, rules)</td>
+              <td>Less structured</td>
+            </tr>
+            <tr>
+              <td>Feedback</td>
+              <td>Can be immediate or delayed</td>
+              <td>Often immediate</td>
+            </tr>
+            <tr>
+              <td>Clarity</td>
+              <td>More precise</td>
+              <td>Can be ambiguous</td>
+            </tr>
+            <tr>
+              <td>Cultural Variation</td>
+              <td>Language-specific</td>
+              <td>Highly culture-specific</td>
+            </tr>
+            <tr>
+              <td>Reliability</td>
+              <td>Can be deceptive</td>
+              <td>More reliable (harder to fake)</td>
+            </tr>
+          </table>
+        </div>
+
+        <div id="intercultural-communication" class="topic-card">
+          <div class="sec-head"><span class="sec-num">10</span>
+            <h2>Intercultural Communication — अंतर-सांस्कृतिक संचार</h2>
+          </div>
+          <p><strong>Intercultural Communication</strong> विभिन्न cultural backgrounds के लोगों के बीच communication है।
+          </p>
+          <p><strong>Key Aspects:</strong></p>
+          <ul class="bullet-list">
+            <li><strong>Cultural Differences:</strong> Language, norms, values, beliefs, customs, traditions</li>
+            <li><strong>High Context vs Low Context:</strong> High context (indirect, implicit — Japan, India); Low
+              context (direct, explicit — USA, Germany)</li>
+            <li><strong>Individualistic vs Collectivistic:</strong> Individualistic (USA, UK); Collectivistic (India,
+              China)</li>
+            <li><strong>Power Distance:</strong> High power distance (India, Malaysia); Low power distance (Denmark,
+              Israel)</li>
+            <li><strong>Uncertainty Avoidance:</strong> High (Greece, Japan); Low (Singapore, Jamaica)</li>
+          </ul>
+          <p><strong>Challenges:</strong></p>
+          <ul class="bullet-list">
+            <li>Language barriers</li>
+            <li>Misinterpretation of non-verbal cues</li>
+            <li>Stereotypes and prejudices</li>
+            <li>Different communication styles</li>
+            <li>Cultural misunderstandings</li>
+          </ul>
+          <p><strong>Strategies for Effective Intercultural Communication:</strong></p>
+          <ul class="bullet-list">
+            <li>Cultural awareness and sensitivity</li>
+            <li>Active listening</li>
+            <li>Avoid assumptions</li>
+            <li>Be open-minded</li>
+            <li>Learn about other cultures</li>
+            <li>Use clear and simple language</li>
+            <li>Be respectful of differences</li>
+          </ul>
+        </div>
+
+        <div id="group-communication" class="topic-card">
+          <div class="sec-head"><span class="sec-num">11</span>
+            <h2>Group Communication — समूह संचार</h2>
+          </div>
+          <p><strong>Group Communication</strong> 3-15 people के small group के बीच communication है, जहाँ members आपस
+            में interact करते हैं और common goal प्राप्त करते हैं।</p>
+          <p><strong>Characteristics:</strong></p>
+          <ul class="bullet-list">
+            <li>Shared goal/purpose</li>
+            <li>Interaction among members</li>
+            <li>Interdependence</li>
+            <li>Group norms and roles</li>
+            <li>Group identity</li>
+          </ul>
+          <p><strong>Types of Groups:</strong></p>
+          <ul class="bullet-list">
+            <li><strong>Primary Groups:</strong> Family, close friends — strong emotional bonds</li>
+            <li><strong>Secondary Groups:</strong> Work teams, committees — task-oriented</li>
+            <li><strong>Formal Groups:</strong> Organisational teams, departments</li>
+            <li><strong>Informal Groups:</strong> Friendship groups, social groups</li>
+          </ul>
+          <p><strong>Group Communication Process:</strong></p>
+          <ul class="bullet-list">
+            <li>Sharing information</li>
+            <li>Discussion and debate</li>
+            <li>Decision making</li>
+            <li>Problem solving</li>
+            <li>Feedback and evaluation</li>
+          </ul>
+          <p><strong>Roles in Groups:</strong></p>
+          <ul class="bullet-list">
+            <li><strong>Task Roles:</strong> Initiator, information seeker, summariser, coordinator</li>
+            <li><strong>Maintenance Roles:</strong> Encourager, harmoniser, gatekeeper, follower</li>
+            <li><strong>Individual Roles:</strong> Dominator, blocker, recognition seeker (negative)</li>
+          </ul>
+        </div>
+
+        <div id="classroom-communication" class="topic-card">
+          <div class="sec-head"><span class="sec-num">12</span>
+            <h2>Classroom Communication — कक्षा संचार</h2>
+          </div>
+          <p><strong>Classroom Communication</strong> teacher और students के बीच teaching-learning context में होने वाला
+            communication है।</p>
+          <p><strong>Key Features:</strong></p>
+          <ul class="bullet-list">
+            <li>Teacher-student interaction</li>
+            <li>Student-student interaction</li>
+            <li>Instructional communication</li>
+            <li>Feedback and evaluation</li>
+            <li>Classroom management</li>
+          </ul>
+          <p><strong>Types of Classroom Communication:</strong></p>
+          <ul class="bullet-list">
+            <li><strong>Teacher to Student:</strong> Lectures, instructions, explanations, feedback</li>
+            <li><strong>Student to Teacher:</strong> Questions, responses, doubts, feedback</li>
+            <li><strong>Student to Student:</strong> Group discussions, peer learning, collaboration</li>
+          </ul>
+          <p><strong>Effective Classroom Communication:</strong></p>
+          <ul class="bullet-list">
+            <li>Clear and simple language</li>
+            <li>Use of examples and illustrations</li>
+            <li>Active listening</li>
+            <li>Encouraging questions and participation</li>
+            <li>Positive reinforcement</li>
+            <li>Appropriate non-verbal cues</li>
+            <li>Creating a safe and inclusive environment</li>
+            <li>Using multiple communication modes (verbal, non-verbal, visual)</li>
+          </ul>
+          <p><strong>Barriers in Classroom Communication:</strong></p>
+          <ul class="bullet-list">
+            <li>Language barriers</li>
+            <li>Teacher's poor communication skills</li>
+            <li>Students' lack of interest or attention</li>
+            <li>Large class size</li>
+            <li>Fear/anxiety (stage fright)</li>
+            <li>Physical barriers (noise, poor seating)</li>
+            <li>Cultural differences</li>
+            <li>Psychological barriers (fear, ego, prejudices)</li>
+          </ul>
+        </div>
+
+        <div id="barriers-effective" class="topic-card">
+          <div class="sec-head"><span class="sec-num">13</span>
+            <h2>Barriers to Effective Communication — प्रभावी संचार में बाधाएँ</h2>
+          </div>
+          <ul class="bullet-list">
+            <li><strong>Physical Barriers — भौतिक बाधाएँ:</strong> Noise, distance, poor lighting, technical issues,
+              physical distance</li>
+            <li><strong>Semantic/Language Barriers — भाषाई/अर्थगत बाधाएँ:</strong> Jargon, ambiguous words, language
+              differences, misinterpretation, poor vocabulary</li>
+            <li><strong>Psychological Barriers — मनोवैज्ञानिक बाधाएँ:</strong> Prejudice, emotions (anger, fear),
+              stress, perceptions, ego, closed-mindedness</li>
+            <li><strong>Cultural Barriers — सांस्कृतिक बाधाएँ:</strong> Different norms, values, beliefs, customs,
+              non-verbal cues differences</li>
+            <li><strong>Organizational Barriers — संगठनात्मक बाधाएँ:</strong> Hierarchy, rigid rules, communication
+              gaps, poor structure, long chain of command</li>
+            <li><strong>Physiological Barriers — शारीरिक बाधाएँ:</strong> Hearing impairment, fatigue, illness, speech
+              problems, visual impairment</li>
+            <li><strong>Attitudinal Barriers — दृष्टिकोणात्मक बाधाएँ:</strong> Bias, stereotypes, resistance to change,
+              negative attitude, close-mindedness</li>
+          </ul>
+        </div>
+
+        <div id="overcoming-barriers" class="topic-card">
+          <div class="sec-head"><span class="sec-num">14</span>
+            <h2>Overcoming Barriers — बाधाओं को दूर करना</h2>
+          </div>
+          <ul class="bullet-list">
+            <li><strong>Use Clear and Simple Language:</strong> Avoid jargon, use familiar words</li>
+            <li><strong>Active Listening:</strong> Pay attention, show interest, provide feedback</li>
+            <li><strong>Choose Appropriate Channel:</strong> Use the right medium for the message</li>
+            <li><strong>Provide Feedback:</strong> Encourage questions and responses</li>
+            <li><strong>Create Positive Environment:</strong> Comfortable, safe, and inclusive</li>
+            <li><strong>Be Sensitive to Culture:</strong> Understand and respect cultural differences</li>
+            <li><strong>Manage Emotions:</strong> Control anger, stress, and frustration</li>
+            <li><strong>Use Non-Verbal Cues Effectively:</strong> Appropriate gestures, expressions, eye contact</li>
+            <li><strong>Clarify and Confirm:</strong> Ask questions, paraphrase, summarize</li>
+            <li><strong>Develop Communication Skills:</strong> Practice, training, self-improvement</li>
+            <li><strong>Overcome Psychological Barriers:</strong> Open-mindedness, reduce prejudice, be empathetic</li>
+          </ul>
+        </div>
+
+        <div id="exam-traps" class="topic-card">
+          <div class="sec-head"><span class="sec-num">15</span>
+            <h2>Common Exam Traps — सामान्य परीक्षा जाल</h2>
+          </div>
+          <ul class="bullet-list">
+            <li><strong>Trap 1:</strong> Effective communication = only speaking well → ❌ Effective communication
+              includes listening, non-verbal cues, and feedback too.</li>
+            <li><strong>Trap 2:</strong> Non-verbal communication is universal → ❌ Non-verbal cues vary across cultures
+              (e.g., eye contact, gestures).</li>
+            <li><strong>Trap 3:</strong> Verbal communication is more important than non-verbal → ❌ Non-verbal often
+              conveys more meaning than verbal.</li>
+            <li><strong>Trap 4:</strong> Group communication = people in the same room → ❌ Group communication can be
+              face-to-face, virtual, or hybrid.</li>
+            <li><strong>Trap 5:</strong> Classroom communication = only teacher talking → ❌ Effective classroom
+              communication is interactive and two-way.</li>
+            <li><strong>Trap 6:</strong> Proxemics zones are universal → ❌ Zones vary by culture and context.</li>
+            <li><strong>Trap 7:</strong> Intercultural communication issues are only language-related → ❌ Cultural
+              norms, values, and non-verbal cues also matter.</li>
+            <li><strong>Trap 8:</strong> 7 C's apply only to written communication → ❌ 7 C's apply to both oral and
+              written communication.</li>
+          </ul>
+        </div>
+
+        <div id="practice-questions" class="topic-card">
+          <div class="sec-head"><span class="sec-num">16</span>
+            <h2>Practice Questions — अभ्यास प्रश्न</h2>
+          </div>
+          <div class="pyq-tag">Question 1</div>
+          <p>Which of the following is NOT a type of non-verbal communication?</p>
+          <ul class="bullet-list">
+            <li>A. Kinesics</li>
+            <li>B. Proxemics</li>
+            <li>C. Grammar</li>
+            <li>D. Paralanguage</li>
+          </ul>
+          <div class="answer-box">Answer: C. Grammar</div>
+          <p class="explain">Explanation: Grammar is part of verbal communication. Kinesics, Proxemics, and Paralanguage
+            are all types of non-verbal communication.</p>
+
+          <div class="pyq-tag">Question 2</div>
+          <p>Edward T. Hall is associated with which concept?</p>
+          <ul class="bullet-list">
+            <li>A. Kinesics</li>
+            <li>B. Proxemics</li>
+            <li>C. Paralanguage</li>
+            <li>D. Chronemics</li>
+          </ul>
+          <div class="answer-box">Answer: B. Proxemics</div>
+          <p class="explain">Explanation: Edward T. Hall developed the concept of Proxemics — the study of personal
+            space and distance.</p>
+
+          <div class="pyq-tag">Question 3</div>
+          <p>In which proxemic zone do formal business meetings typically occur?</p>
+          <ul class="bullet-list">
+            <li>A. Intimate zone</li>
+            <li>B. Personal zone</li>
+            <li>C. Social zone</li>
+            <li>D. Public zone</li>
+          </ul>
+          <div class="answer-box">Answer: C. Social zone</div>
+          <p class="explain">Explanation: Social zone (4-12 feet) is used for formal interactions, business meetings,
+            and professional communication.</p>
+
+          <div class="pyq-tag">Question 4</div>
+          <p>Which C of communication focuses on using specific facts and figures rather than vague language?</p>
+          <ul class="bullet-list">
+            <li>A. Clarity</li>
+            <li>B. Conciseness</li>
+            <li>C. Concreteness</li>
+            <li>D. Courtesy</li>
+          </ul>
+          <div class="answer-box">Answer: C. Concreteness</div>
+          <p class="explain">Explanation: Concreteness means using specific, definite facts and figures to support your
+            message.</p>
+
+          <div class="pyq-tag">Question 5</div>
+          <p>In intercultural communication, a culture that relies heavily on implicit messages and context is called:
+          </p>
+          <ul class="bullet-list">
+            <li>A. Low-context culture</li>
+            <li>B. High-context culture</li>
+            <li>C. Individualistic culture</li>
+            <li>D. Collectivistic culture</li>
+          </ul>
+          <div class="answer-box">Answer: B. High-context culture</div>
+          <p class="explain">Explanation: High-context cultures (Japan, India, China) rely on implicit messages and
+            context; Low-context cultures (USA, Germany) rely on explicit, direct communication.</p>
+
+          <div class="pyq-tag">Question 6</div>
+          <p>In classroom communication, the term 'feedback' means:</p>
+          <ul class="bullet-list">
+            <li>A. Only teacher's response to students</li>
+            <li>B. Only students' response to teacher</li>
+            <li>C. Both teacher and student responses</li>
+            <li>D. Only evaluation grades</li>
+          </ul>
+          <div class="answer-box">Answer: C. Both teacher and student responses</div>
+          <p class="explain">Explanation: Classroom communication is two-way — feedback flows both from teacher to
+            student and student to teacher.</p>
+        </div>
+
+        <div id="one-page-revision" class="topic-card">
+          <div class="sec-head"><span class="sec-num">17</span>
+            <h2>One-Page Revision — एक पेज में पुनरावृत्ति</h2>
+          </div>
+          <div class="formula-box">Effective Communication = Sender → Message → Channel → Receiver → Feedback (Complete)
+          </div>
+
+          <p><strong>7 C's:</strong></p>
+          <ul class="bullet-list">
+            <li>Clarity, Conciseness, Completeness, Correctness, Concreteness, Courtesy, Coherence</li>
+          </ul>
+
+          <p><strong>Non-Verbal Communication Types:</strong></p>
+          <ul class="bullet-list">
+            <li>Kinesics (Body language, gestures, expressions)</li>
+            <li>Proxemics (Distance/space — Edward T. Hall)</li>
+            <li>Paralanguage (Tone, pitch, volume, speed)</li>
+            <li>Chronemics (Time)</li>
+            <li>Haptics (Touch)</li>
+            <li>Oculesics (Eye contact)</li>
+          </ul>
+
+          <p><strong>Proxemic Zones:</strong></p>
+          <ul class="bullet-list">
+            <li>Intimate (0-18") → Close relationships</li>
+            <li>Personal (18" - 4') → Friends, acquaintances</li>
+            <li>Social (4-12') → Formal, business</li>
+            <li>Public (12'+) → Public speaking</li>
+          </ul>
+
+          <p><strong>Intercultural Communication:</strong></p>
+          <ul class="bullet-list">
+            <li>High context vs Low context</li>
+            <li>Individualistic vs Collectivistic</li>
+            <li>Cultural sensitivity and awareness</li>
+          </ul>
+
+          <p><strong>Group Communication:</strong></p>
+          <ul class="bullet-list">
+            <li>Shared goal, interaction, interdependence</li>
+            <li>Task roles and maintenance roles</li>
+          </ul>
+
+          <p><strong>Classroom Communication:</strong></p>
+          <ul class="bullet-list">
+            <li>Two-way (teacher ↔ student, student ↔ student)</li>
+            <li>Clear language, active listening, positive environment</li>
+          </ul>
+
+          <p><strong>Barriers:</strong></p>
+          <ul class="bullet-list">
+            <li>Physical, Semantic, Psychological, Cultural, Organizational, Physiological, Attitudinal</li>
+          </ul>
+
+          <p><strong>Exam Formula:</strong></p>
+          <div class="formula-box">Effective Communication = Clear + Concise + Complete + Correct + Concrete + Courteous
+            + Coherent</div>
+          <p><em>UGC NET में Communication के questions अक्सर non-verbal types, proxemic zones, 7 C's, barriers और
+              classroom communication पर based होते हैं।</em></p>
+        </div>
+
+        <div class="enroll-cta">
+          <div>
+            <h3 class="h-display">Join the Paper-1 Batch</h3>
+            <p>Course fee FREE — ₹500 registration & academic/logistics contribution. Classes daily at 6:30 PM.</p>
+          </div><a href="/enroll.html" class="btn-gold">✓ JOIN BATCH @ ₹500</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+<footer class="relative overflow-hidden bg-navy-950 text-white">
+  <div class="grid-paper absolute inset-0 opacity-50" aria-hidden="true"></div>
+  <div class="container-x relative py-12 lg:py-14">
+    <div class="grid grid-cols-2 gap-10 lg:grid-cols-4">
+
+      <div>
+        <div class="flex items-center gap-3">
+          <img src="/assets/images/logo.png" alt="GS Net Academy" class="h-11 w-auto rounded-lg bg-white p-1" width="120" height="44">
+          <img src="/assets/images/tagline.png" alt="" class="h-11 w-auto brightness-0 invert" aria-hidden="true">
+        </div>
+        <p class="mt-5 text-[14px] leading-relaxed text-navy-100/75">UGC NET Paper-I | JRF Preparation | Mentorship</p>
+        <span class="eyebrow mt-5"><svg viewBox="0 0 24 24" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1"/></svg> JRF @ ₹500 Mission 2026</span>
+
+        <p class="mt-6 text-[11px] font-extrabold uppercase tracking-[0.18em] text-gold-400">Follow Us</p>
+        <ul class="mt-3 flex flex-wrap gap-2">
+          <li><a href="https://www.youtube.com/@gsnetacademy" target="_blank" rel="noreferrer noopener" aria-label="YouTube" title="YouTube" class="grid h-10 w-10 place-items-center rounded-xl border border-white/12 bg-white/[0.06] text-navy-100/80 transition hover:border-gold-400/50 hover:bg-white/[0.12] hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor" aria-hidden="true"><path d="M21.6 7.2a2.5 2.5 0 0 0-1.8-1.8C18.2 5 12 5 12 5s-6.2 0-7.8.4A2.5 2.5 0 0 0 2.4 7.2 26 26 0 0 0 2 12a26 26 0 0 0 .4 4.8 2.5 2.5 0 0 0 1.8 1.8C5.8 19 12 19 12 19s6.2 0 7.8-.4a2.5 2.5 0 0 0 1.8-1.8A26 26 0 0 0 22 12a26 26 0 0 0-.4-4.8ZM10 15V9l5.2 3L10 15Z"/></svg></a></li>
+          <li><a href="https://www.instagram.com/gsnetacademy" target="_blank" rel="noreferrer noopener" aria-label="Instagram" title="Instagram" class="grid h-10 w-10 place-items-center rounded-xl border border-white/12 bg-white/[0.06] text-navy-100/80 transition hover:border-gold-400/50 hover:bg-white/[0.12] hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg></a></li>
+          <li><a href="https://www.facebook.com/gsnetacademy" target="_blank" rel="noreferrer noopener" aria-label="Facebook" title="Facebook" class="grid h-10 w-10 place-items-center rounded-xl border border-white/12 bg-white/[0.06] text-navy-100/80 transition hover:border-gold-400/50 hover:bg-white/[0.12] hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.25-1.5 1.55-1.5H16.7V3.6c-.3 0-1.3-.13-2.47-.13-2.44 0-4.11 1.49-4.11 4.23V9.9H7.4V13h2.72v8h3.38Z"/></svg></a></li>
+          <li><a href="https://t.me/gsnetacademy" target="_blank" rel="noreferrer noopener" aria-label="Telegram" title="Telegram" class="grid h-10 w-10 place-items-center rounded-xl border border-white/12 bg-white/[0.06] text-navy-100/80 transition hover:border-gold-400/50 hover:bg-white/[0.12] hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor" aria-hidden="true"><path d="M21.3 4.3 2.9 11.4c-.9.35-.9 1.62.02 1.93l4.6 1.53 1.75 5.3c.25.75 1.2.95 1.73.37l2.5-2.72 4.6 3.38c.63.46 1.53.12 1.7-.65l3.1-14.9c.2-.9-.7-1.65-1.6-1.31ZM9.6 14.1l8.5-5.6-6.9 6.5-.3 3.3-1.3-4.2Z"/></svg></a></li>
+          <li><a href="https://chat.whatsapp.com/KeaQUhOFz0UGAKtLmsM7oU" target="_blank" rel="noreferrer noopener" aria-label="WhatsApp Group" title="WhatsApp Group" class="grid h-10 w-10 place-items-center rounded-xl border border-white/12 bg-white/[0.06] text-navy-100/80 transition hover:border-emerald-400/50 hover:bg-emerald-500/15 hover:text-emerald-300"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.2 20.8 4.6 16A8.4 8.4 0 1 1 8 19.4l-4.8 1.4Z"/><path d="M9 8.4c.3-.7.6-.7.9-.7h.6c.2 0 .5 0 .7.6l.8 1.9c.1.2.1.4 0 .6l-.5.7c-.1.2-.2.4 0 .7a7 7 0 0 0 3 2.6c.3.1.5.1.7-.1l.7-.8c.2-.2.4-.2.6-.1l1.8.9c.3.1.5.3.5.5v.6c0 .4-.2.9-.9 1.2-.6.3-1.5.4-2.5.1a10 10 0 0 1-6.5-6.2c-.3-1-.1-1.9.1-2.5Z"/></svg></a></li>
+          <li><a href="https://x.com/gsnetacademy" target="_blank" rel="noreferrer noopener" aria-label="X (Twitter)" title="X (Twitter)" class="grid h-10 w-10 place-items-center rounded-xl border border-white/12 bg-white/[0.06] text-navy-100/80 transition hover:border-gold-400/50 hover:bg-white/[0.12] hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-4.5 w-4.5" fill="currentColor" aria-hidden="true"><path d="M17.5 3h3.1l-6.8 7.8L21.8 21h-6.2l-4.9-6.4L5.1 21H2l7.3-8.3L2.5 3h6.4l4.4 5.8L17.5 3Zm-1.1 16.2h1.7L7.7 4.7H5.9l10.5 14.5Z"/></svg></a></li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="text-[11px] font-extrabold uppercase tracking-[0.18em] text-gold-400">Quick Links</p>
+        <ul class="mt-4 grid gap-2.5">
+          <li><a href="/index.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Home</a></li>
+          <li><a href="/courses.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">UGC NET Paper-I</a></li>
+          <li><a href="/results.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Our Results</a></li>
+          <li><a href="/tutorials.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Tutorials</a></li>
+          <li><a href="/blog.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Blog</a></li>
+          <li><a href="/about.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">About</a></li>
+          <li><a href="/contact.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="text-[11px] font-extrabold uppercase tracking-[0.18em] text-gold-400">Resources</p>
+        <ul class="mt-4 grid gap-2.5">
+          <li><a href="/notes.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Notes</a></li>
+          <li><a href="/enroll.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Register for ₹500</a></li>
+          <li><a href="/index.html#free-demo" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Free Demo Classes</a></li>
+          <li><a href="https://chat.whatsapp.com/KeaQUhOFz0UGAKtLmsM7oU" target="_blank" rel="noreferrer noopener" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Student Community</a></li>
+        </ul>
+        <p class="mt-6 text-[11px] font-extrabold uppercase tracking-[0.18em] text-gold-400">Legal</p>
+        <ul class="mt-4 grid gap-2.5">
+          <li><a href="/privacy-policy.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Privacy Policy</a></li>
+          <li><a href="/refund-policy.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Refund &amp; Cancellation</a></li>
+          <li><a href="/terms-of-enrollment.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Terms of Enrollment</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="text-[11px] font-extrabold uppercase tracking-[0.18em] text-gold-400">Contact</p>
+        <ul class="mt-4 grid gap-2.5 text-[14px] text-navy-100/75">
+          <li><a href="tel:+919266511505" class="flex items-center gap-2 hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-4 w-4 icon-gold" fill="currentColor" aria-hidden="true"><path d="M5 3h3.5l1.6 4-2 1.4a12 12 0 0 0 5.5 5.5l1.4-2 4 1.6V19a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 3 5.2 2 2 0 0 1 5 3Z"/></svg> +91 9266511505</a></li>
+          <li><a href="tel:+919810845327" class="flex items-center gap-2 hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-4 w-4 icon-gold" fill="currentColor" aria-hidden="true"><path d="M5 3h3.5l1.6 4-2 1.4a12 12 0 0 0 5.5 5.5l1.4-2 4 1.6V19a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 3 5.2 2 2 0 0 1 5 3Z"/></svg> +91 9810845327</a></li>
+          <li><a href="mailto:gsnetacademy@gmail.com" class="flex items-center gap-2 break-all hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-4 w-4 icon-gold" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="m3.5 6.5 8.5 6 8.5-6"/></svg> gsnetacademy@gmail.com</a></li>
+          <li><a href="https://chat.whatsapp.com/KeaQUhOFz0UGAKtLmsM7oU" target="_blank" rel="noreferrer noopener" class="flex items-center gap-2 hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-4 w-4 icon-gold" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.2 20.8 4.6 16A8.4 8.4 0 1 1 8 19.4l-4.8 1.4Z"/><path d="M9 8.4c.3-.7.6-.7.9-.7h.6c.2 0 .5 0 .7.6l.8 1.9c.1.2.1.4 0 .6l-.5.7c-.1.2-.2.4 0 .7a7 7 0 0 0 3 2.6c.3.1.5.1.7-.1l.7-.8c.2-.2.4-.2.6-.1l1.8.9c.3.1.5.3.5.5v.6c0 .4-.2.9-.9 1.2-.6.3-1.5.4-2.5.1a10 10 0 0 1-6.5-6.2c-.3-1-.1-1.9.1-2.5Z"/></svg> WhatsApp Group</a></li>
+        </ul>
+        <a href="/enroll.html" class="btn-primary mt-6 w-full">Join for ₹500</a>
+        <p class="text-[14px] mt-3 text-navy-100/75 transition hover:text-gold-300">Address: B 14-15, Udhyog Marg, Block B, Sector 1, Noida, Uttar Pradesh 201301</p>
+      </div>
+    </div>
+
+    <div class="mt-10 border-t border-white/10 pt-6">
+      <ul class="flex flex-wrap items-center gap-x-5 gap-y-2 text-[13px]">
+        <li><a href="/privacy-policy.html" class="text-navy-100/70 transition hover:text-gold-300">Privacy Policy</a></li>
+        <li aria-hidden="true" class="text-navy-100/25">|</li>
+        <li><a href="/refund-policy.html" class="text-navy-100/70 transition hover:text-gold-300">Refund &amp; Cancellation</a></li>
+        <li aria-hidden="true" class="text-navy-100/25">|</li>
+        <li><a href="/terms-of-enrollment.html" class="text-navy-100/70 transition hover:text-gold-300">Terms of Enrollment</a></li>
+      </ul>
+      <div class="mt-4 flex flex-col gap-2 text-[13px] text-navy-100/60 sm:flex-row sm:items-center sm:justify-between">
+        <p>© 2026 GS Net Academy. All Rights Reserved.</p>
+        <p>A Premier institute for UGC NET Paper-1</p>
+      </div>
+      <p class="mt-4 text-[12px] leading-relaxed text-navy-100/45">Disclaimer: GS Net Academy किसी भी exam में selection, rank या score की guarantee नहीं देता। हम quality teaching, study material, practice और academic mentorship प्रदान करते हैं। UGC, NTA या किसी अन्य government body से हमारा कोई affiliation नहीं है।</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function() {
+
+  const BASE_PATH =
+    "/tutorials/communication/effective-communication-verbal-non-verbal-intercultural-group-classroom-communication";
+
+  const links = document.querySelectorAll(".nav-link");
+  const cards = document.querySelectorAll(".topic-card");
+  const content = document.getElementById("contentArea");
+  const sidebarToggle = document.getElementById("sidebar-toggle");
+
+
+  // Get topic slug from current URL
+  function getSlugFromPath() {
+
+    const path = window.location.pathname
+      .replace(/\/+$/, "");
+
+    if (path.startsWith(BASE_PATH + "/")) {
+
+      return path
+        .substring((BASE_PATH + "/").length)
+        .split("/")[0];
+
+    }
+
+    return null;
+  }
+
+
+  // Update browser URL
+  function updateUrl(slug, replace = false) {
+
+    const newPath =
+      BASE_PATH + "/" + slug;
+
+    if (window.location.pathname !== newPath) {
+
+      if (replace) {
+        history.replaceState(null, "", newPath);
+      } else {
+        history.pushState(null, "", newPath);
+      }
+
+    }
+  }
+
+
+  // Update active sidebar link
+  function updateActiveLink(slug) {
+
+    links.forEach(function(link) {
+
+      const href =
+        link.getAttribute("href");
+
+      if (!href) return;
+
+      const linkSlug =
+        href
+          .split("/")
+          .filter(Boolean)
+          .pop();
+
+      link.classList.toggle(
+        "active",
+        linkSlug === slug
+      );
+
+    });
+  }
+
+
+  // Show selected topic card
+  function showCard(slug, updateHistory = true) {
+
+    cards.forEach(function(card) {
+      card.classList.add("hidden");
+    });
+
+
+    const target =
+      document.getElementById(slug);
+
+
+    // Topic not found
+    if (!target) {
+
+      const first = cards[0];
+
+      if (first) {
+
+        first.classList.remove("hidden");
+
+        const firstSlug = first.id;
+
+        updateActiveLink(firstSlug);
+
+        updateUrl(firstSlug, true);
+
+      }
+
+      return;
+    }
+
+
+    // Show selected topic
+    target.classList.remove("hidden");
+
+    updateActiveLink(slug);
+
+
+    // Update URL
+    if (updateHistory) {
+      updateUrl(slug);
+    }
+
+
+    // Close mobile sidebar
+    if (sidebarToggle) {
+      sidebarToggle.checked = false;
+    }
+
+
+    // Scroll to content
+    if (content) {
+
+      const top =
+        content.getBoundingClientRect().top +
+        window.pageYOffset -
+        10;
+
+      window.scrollTo({
+        top: top,
+        behavior: "smooth"
+      });
+
+    }
+
+  }
+
+
+  // Sidebar link click
+  links.forEach(function(link) {
+
+    link.addEventListener("click", function(e) {
+
+      e.preventDefault();
+
+      const href =
+        this.getAttribute("href");
+
+      if (!href) return;
+
+
+      const slug =
+        href
+          .split("/")
+          .filter(Boolean)
+          .pop();
+
+
+      if (!slug) return;
+
+
+      console.log("Clicked topic:", slug);
+
+      showCard(slug, true);
+
+    });
+
+  });
+
+
+  // Initial page load
+  function initFromPath() {
+
+    let slug =
+      getSlugFromPath();
+
+
+    if (
+      !slug ||
+      !document.getElementById(slug)
+    ) {
+
+      slug =
+        cards[0]?.id ||
+        "effective-communication";
+
+    }
+
+
+    // Show topic without creating history entry
+    showCard(slug, false);
+
+
+    // Set correct nested URL
+    updateUrl(slug, true);
+
+  }
+
+
+  initFromPath();
+
+
+  // Browser Back / Forward
+  window.addEventListener(
+    "popstate",
+    function() {
+
+      const slug =
+        getSlugFromPath();
+
+
+      if (
+        slug &&
+        document.getElementById(slug)
+      ) {
+
+        showCard(slug, false);
+
+      } else {
+
+        const firstSlug =
+          cards[0]?.id ||
+          "effective-communication";
+
+        showCard(firstSlug, false);
+
+      }
+
+    }
+  );
+
+
+})();
+</script>
+</body>
+
+</html>

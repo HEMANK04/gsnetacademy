@@ -1,0 +1,590 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Module 5: Teaching Support System — Unit 1 | GS Net Academy</title>
+<meta name="description" content="Teaching Support System — UGC NET Paper-I, Unit 1: Teaching Aptitude, Module 5.">
+<link rel="icon" href="../assets/images/logo.png">
+<link rel="stylesheet" href="../css/tailwind.css">
+<link rel="stylesheet" href="../css/style.css">
+<style>
+  .mod-h2{margin:34px 0 14px;font-size:22px;font-weight:800;color:#0B1B34;padding-top:6px;border-top:1px solid rgba(11,27,52,.08)}
+  .mod-h2:first-child{border-top:0;padding-top:0;margin-top:0}
+  .mod-h3{margin:22px 0 10px;font-size:17px;font-weight:800;color:#0B1B34}
+  .mod-strong{margin:12px 0;font-size:15px;font-weight:700;color:#0B1B34;line-height:1.7}
+  .mod-tag{display:inline-block;margin:14px 0 8px;font-size:11.5px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#B8860B;background:#FFF8E1;border-radius:6px;padding:4px 10px}
+  .prose p{margin:10px 0;font-size:15px;line-height:1.85;color:#334155}
+  .prose-list{margin:10px 0 16px;padding-left:22px;list-style:disc}
+  .prose-list li{margin:6px 0;font-size:15px;line-height:1.75;color:#334155}
+  .table-wrap{overflow-x:auto;margin:16px 0}
+  .mod-table{width:100%;border-collapse:collapse;font-size:13.5px;min-width:480px}
+  .mod-table th,.mod-table td{border:1px solid rgba(11,27,52,.12);padding:9px 12px;text-align:left;vertical-align:top}
+  .mod-table th{background:#0B1B34;color:#fff;font-weight:700}
+  .mod-table tr:nth-child(even) td{background:#F8F5EE}
+</style>
+</head>
+<body>
+
+<input type="checkbox" id="nav-toggle" class="nav-toggle">
+<div class="hidden bg-navy-950 text-white lg:block">
+  <div class="container-wide flex h-9 items-center justify-between text-[12px]">
+    <p class="flex min-w-0 items-center gap-2 truncate font-semibold text-navy-100/80"><svg viewBox="0 0 24 24" class="h-3.5 w-3.5 shrink-0 icon-gold" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1"/></svg><span class="truncate">Target December 2026 Exam — Paper-I Batch Started 16 August 2026</span></p>
+    <div class="flex shrink-0 items-center gap-5 font-semibold">
+      <a href="tel:+919266511505" class="flex items-center gap-1.5 hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-3.5 w-3.5" fill="currentColor" stroke="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3h3.5l1.6 4-2 1.4a12 12 0 0 0 5.5 5.5l1.4-2 4 1.6V19a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 3 5.2 2 2 0 0 1 5 3Z"/></svg> +91 9266511505</a>
+      <a href="tel:+919810845327" class="flex items-center gap-1.5 hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-3.5 w-3.5" fill="currentColor" stroke="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3h3.5l1.6 4-2 1.4a12 12 0 0 0 5.5 5.5l1.4-2 4 1.6V19a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 3 5.2 2 2 0 0 1 5 3Z"/></svg> +91 9810845327</a>
+      <a href="mailto:gsnetacademy@gmail.com" class="flex items-center gap-1.5 hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="m3.5 6.5 8.5 6 8.5-6"/></svg> gsnetacademy@gmail.com</a>
+      <a href="https://api.whatsapp.com/send/?phone=919810845327&text=Hello%2C+can+I+get+more+info+about+joining+the+mentorship+batch+and+classes+for+UGC+NET+JRF+Paper+1%3F&type=phone_number&app_absent=0" target="_blank" rel="noreferrer noopener" class="flex items-center gap-1.5 rounded-md bg-white/10 px-2.5 py-1 transition hover:bg-emerald-500/25 hover:text-white"><svg viewBox="0 0 24 24" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.2 20.8 4.6 16A8.4 8.4 0 1 1 8 19.4l-4.8 1.4Z"/><path d="M9 8.4c.3-.7.6-.7.9-.7h.6c.2 0 .5 0 .7.6l.8 1.9c.1.2.1.4 0 .6l-.5.7c-.1.2-.2.4 0 .7a7 7 0 0 0 3 2.6c.3.1.5.1.7-.1l.7-.8c.2-.2.4-.2.6-.1l1.8.9c.3.1.5.3.5.5v.6c0 .4-.2.9-.9 1.2-.6.3-1.5.4-2.5.1a10 10 0 0 1-6.5-6.2c-.3-1-.1-1.9.1-2.5Z"/></svg> chat us</a>
+    </div>
+  </div>
+</div>
+<header class="sticky top-0 z-50 border-b border-navy-900/8 bg-white/95 backdrop-blur-md">
+  <nav class="container-wide flex h-[76px] items-center gap-4" aria-label="Main">
+    <a href="../index.html" class="flex shrink-0 items-center gap-3" aria-label="Home">
+      <span class="inline-flex shrink-0 items-center justify-center overflow-hidden rounded-lg bg-navy-950 ring-1 ring-navy-900/10">
+        <img src="../assets/images/logo.png" alt="GS Net Academy" class="h-11 w-auto" width="120" height="44">
+      </span>
+      <img src="../assets/images/tagline.png" alt="#1 A Premier institute for UGC NET Paper-1" class=" h-11 hidden w-auto lg:block">
+    </a>
+    <ul class="mx-auto hidden items-center gap-5 xl:flex">
+      <li><a href="../courses.html" class="relative block whitespace-nowrap rounded-lg px-3 py-2 text-[13.5px] font-bold transition-colors text-navy-700/75 hover:text-navy-900">UGC NET Paper-I</a></li>
+      <li><a href="../tutorials.html" class="relative block whitespace-nowrap rounded-lg px-3 py-2 text-[13.5px] font-bold transition-colors text-navy-900">Tutorials</a></li>
+      <li><a href="../notes.html" class="relative block whitespace-nowrap rounded-lg px-3 py-2 text-[13.5px] font-bold transition-colors text-navy-700/75 hover:text-navy-900">Notes</a></li>
+      <li><a href="../blog.html" class="relative block whitespace-nowrap rounded-lg px-3 py-2 text-[13.5px] font-bold transition-colors text-navy-700/75 hover:text-navy-900">Blog</a></li>
+      <li><a href="../about.html" class="relative block whitespace-nowrap rounded-lg px-3 py-2 text-[13.5px] font-bold transition-colors text-navy-700/75 hover:text-navy-900">About</a></li>
+      <li><a href="../contact.html" class="relative block whitespace-nowrap rounded-lg px-3 py-2 text-[13.5px] font-bold transition-colors text-navy-700/75 hover:text-navy-900">Contact</a></li>
+    </ul>
+    <div class="ml-auto flex items-center gap-2 xl:ml-0">
+      <a href="../index.html#free-demo" class="btn-outline btn-sm hidden 2xl:inline-flex">Demo</a>
+      <a href="../enroll.html" class="btn-primary btn-sm hidden sm:inline-flex">Join Now</a>
+      <label for="nav-toggle" class="cursor-pointer rounded-lg border border-navy-900/12 p-2 text-navy-800 xl:hidden" aria-label="Menu"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></label>
+    </div>
+  </nav>
+</header>
+<div class="drawer xl:hidden">
+  <label for="nav-toggle" class="drawer-scrim" aria-hidden="true"></label>
+  <div class="drawer-panel">
+    <div class="flex h-[72px] shrink-0 items-center justify-between border-b border-navy-900/10 px-5">
+      <img src="../assets/images/logo.png" alt="GS Net Academy" class="h-9 w-auto rounded-lg bg-navy-950">
+      <label for="nav-toggle" class="cursor-pointer p-2 text-navy-800" aria-label="Close"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></label>
+    </div>
+    <div class="flex-1 overflow-y-auto p-5">
+      <ul class="flex flex-col gap-1">
+      <li><a href="../index.html" class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold text-navy-700">Home</a></li>
+      <li><a href="../courses.html" class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold text-navy-700">UGC NET Paper-I</a></li>
+      <li><a href="../tutorials.html" class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold bg-navy-50 text-navy-900">Tutorials</a></li>
+      <li><a href="../notes.html" class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold text-navy-700">Notes</a></li>
+      </ul>
+      <div class="mt-5 grid gap-2.5">
+        <a href="../enroll.html" class="btn-primary w-full">✓ JOIN BATCH @ ₹500</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<main id="main">
+<section class="bg-navy-950 text-white">
+  <div class="grid-paper absolute inset-0 opacity-50" aria-hidden="true"></div>
+  <div class="container-x relative py-8 lg:py-10">
+    <nav aria-label="Breadcrumb" class="mb-4">
+      <ol class="flex flex-wrap items-center gap-1.5 text-[12px] font-semibold text-navy-100/70">
+        <li><a href="../index.html" class="hover:text-gold-300">Home</a></li>
+        <li aria-hidden="true">/</li>
+        <li><a href="../tutorials.html" class="hover:text-gold-300">Tutorials</a></li>
+        <li aria-hidden="true">/</li>
+        <li><a href="unit-1.html" class="hover:text-gold-300">Unit 1 · Teaching Aptitude</a></li>
+        <li aria-hidden="true">/</li>
+        <li class="text-gold-300" aria-current="page">Module 5</li>
+      </ol>
+    </nav>
+    <span class="eyebrow"><svg viewBox="0 0 24 24" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5 13.8 9l5.5 1.8-5.5 1.8L12 18.1l-1.8-5.5L4.7 10.8 10.2 9 12 3.5Z"/></svg> Unit 1 · Module 5 of 8</span>
+    <h1 class="h-display mt-4 text-[28px] sm:text-[38px] lg:text-[44px] max-w-3xl">Teaching Support System</h1>
+    <p class="mt-2 text-[15px] text-navy-100/75">शिक्षण सहायता प्रणाली</p>
+  </div>
+</section>
+
+<section class="bg-cream py-10 lg:py-12"><div class="container-x">
+  <div class="grid gap-8 lg:grid-cols-[1fr_270px]">
+    <article class="card prose p-6 sm:p-8">
+<h2 class="mod-h2">Teaching Support System</h2>
+<h3 class="mod-h3">Traditional, Modern and ICT-Based Teaching Support</h3>
+<p class="mod-strong">UGC NET/JRF &amp; Assistant Professor Paper-1 — December 2026</p>
+<p>Teaching Support System से आशय उन resources, materials, technologies, personnel और institutional arrangements से है जो teaching-learning process को अधिक clear, engaging, accessible और effective बनाते हैं।</p>
+<p class="mod-strong">Teaching Support System = Human Resources + Learning Materials + Technology + Infrastructure + Academic Support</p>
+<h2 class="mod-h2">1. Concept Explanation</h2>
+<h3 class="mod-h3">शिक्षण सहायता प्रणाली का अर्थ</h3>
+<p>Teaching support system teacher का replacement नहीं है। यह teacher और learner को learning objectives प्राप्त करने में सहायता करता है।</p>
+<p>इसमें शामिल हो सकते हैं:</p>
+<ul class="prose-list"><li>Blackboard/whiteboard</li><li>Textbook और reference books</li><li>Charts, maps और models</li><li>Laboratory और library</li><li>Projector और smartboard</li><li>Computer और Internet</li><li>Learning Management System</li><li>Digital library</li><li>Virtual laboratory</li><li>SWAYAM और MOOCs</li><li>Academic counselling</li><li>Technical support</li><li>Peer और institutional support</li></ul>
+<h3 class="mod-h3">Master Classification</h3>
+<p class="mod-strong">Teaching Support System = Traditional + Modern + ICT-Based + Human/Institutional Support</p>
+<h2 class="mod-h2">2. Objectives of Teaching Support System</h2>
+<h3 class="mod-h3">प्रमुख उद्देश्य</h3>
+<ul class="prose-list"><li>Abstract concepts को concrete बनाना</li><li>Learner attention और interest बढ़ाना</li><li>Multiple senses को involve करना</li><li>Individual differences को address करना</li><li>Learning को interactive बनाना</li><li>Difficult concepts की visualisation करना</li><li>Immediate feedback उपलब्ध कराना</li><li>Large और diverse groups तक content पहुँचाना</li><li>Self-paced learning को support करना</li><li>Inclusive और accessible learning उपलब्ध कराना</li><li>Assessment तथा learner progress track करना</li><li>Teacher के समय और effort का effective use करना</li></ul>
+<h2 class="mod-h2">3. Traditional Teaching Support System</h2>
+<h3 class="mod-h3">पारम्परिक शिक्षण सहायता प्रणाली</h3>
+<p>Traditional teaching support system में comparatively simple, physical और non-digital resources का प्रयोग होता है।</p>
+<h3 class="mod-h3">प्रमुख Examples</h3>
+<p class="mod-tag">Printed Materials</p>
+<ul class="prose-list"><li>Textbooks</li><li>Reference books</li><li>Handouts</li><li>Worksheets</li><li>Newspapers</li><li>Journals</li><li>Question banks</li><li>Study guides</li></ul>
+<p class="mod-tag">Display Materials</p>
+<ul class="prose-list"><li>Blackboard</li><li>Green board</li><li>Whiteboard</li><li>Bulletin board</li><li>Flannel board</li><li>Charts</li><li>Posters</li><li>Maps</li><li>Graphs</li><li>Flashcards</li></ul>
+<p class="mod-tag">Three-Dimensional Materials</p>
+<ul class="prose-list"><li>Models</li><li>Specimens</li><li>Globes</li><li>Dioramas</li><li>Real objects</li><li>Mock-ups</li></ul>
+<p class="mod-tag">Institutional Support</p>
+<ul class="prose-list"><li>Library</li><li>Laboratory</li><li>Tutorial</li><li>Seminar</li><li>Workshop</li><li>Field visit</li><li>Academic counselling</li></ul>
+<h3 class="mod-h3">Core Formula</h3>
+<p class="mod-strong">Traditional Support = Talk and Chalk + Print + Physical Objects + Face-to-Face Interaction</p>
+<h2 class="mod-h2">4. Blackboard/Chalkboard</h2>
+<p>Blackboard सबसे widely used traditional teaching aid है।</p>
+<h3 class="mod-h3">Effective Blackboard Use</h3>
+<p>Teacher को:</p>
+<ul class="prose-list"><li>साफ और readable लिखना चाहिए।</li><li>उचित font/letter size रखना चाहिए।</li><li>Content को headings और subheadings में organise करना चाहिए।</li><li>Board को overcrowd नहीं करना चाहिए।</li><li>Important points underline या highlight करने चाहिए।</li><li>बोलते समय लगातार board की ओर नहीं देखना चाहिए।</li><li>Diagrams को simple और labelled रखना चाहिए।</li></ul>
+<h3 class="mod-h3">Advantages</h3>
+<ul class="prose-list"><li>Economical</li><li>Easily available</li><li>Flexible</li><li>Immediate explanation</li><li>Learner के सामने step-by-step development</li><li>Electricity की आवश्यकता नहीं</li><li>Mathematical derivation के लिए उपयोगी</li></ul>
+<h3 class="mod-h3">Limitations</h3>
+<ul class="prose-list"><li>Large classroom में visibility problem</li><li>Content permanent नहीं</li><li>Teacher का समय writing में जाता है</li><li>Complex animation और multimedia सम्भव नहीं</li><li>Poor handwriting learning को प्रभावित कर सकती है</li></ul>
+<h2 class="mod-h2">5. Printed Teaching Materials</h2>
+<p>Printed materials organised और permanent academic support उपलब्ध कराते हैं।</p>
+<h3 class="mod-h3">अच्छे Printed Material की विशेषताएँ</h3>
+<ul class="prose-list"><li>Clear language</li><li>Logical sequence</li><li>Appropriate examples</li><li>Readable typography</li><li>Learning objectives</li><li>Self-check questions</li><li>Summary</li><li>References</li><li>Adequate white space</li><li>Inclusive and unbiased content</li></ul>
+<h3 class="mod-h3">Exam Point</h3>
+<p>Textbook और teacher समान concepts नहीं हैं।</p>
+<p>Textbook एक learning resource है; teacher content को contextualise, explain और adapt करता है।</p>
+<h2 class="mod-h2">6. Teaching Aids का Classification</h2>
+<h3 class="mod-h3">6.1 Audio Aids</h3>
+<p>मुख्यतः hearing sense पर आधारित:</p>
+<ul class="prose-list"><li>Radio</li><li>Podcast</li><li>Audio recording</li><li>Language laboratory</li><li>Recorded speech</li></ul>
+<h3 class="mod-h3">6.2 Visual Aids</h3>
+<p>मुख्यतः sight पर आधारित:</p>
+<ul class="prose-list"><li>Chart</li><li>Map</li><li>Diagram</li><li>Graph</li><li>Flashcard</li><li>Poster</li><li>Model</li><li>Blackboard</li></ul>
+<h3 class="mod-h3">6.3 Audio-Visual Aids</h3>
+<p>Sight और hearing दोनों का प्रयोग:</p>
+<ul class="prose-list"><li>Television</li><li>Educational video</li><li>Film</li><li>Video lecture</li><li>Multimedia presentation</li><li>Interactive video</li></ul>
+<h2 class="mod-h2">7. Projected and Non-Projected Aids</h2>
+<h3 class="mod-h3">Non-Projected Aids</h3>
+<p>जिनके display के लिए projector की आवश्यकता नहीं होती।</p>
+<p class="mod-tag">Examples</p>
+<ul class="prose-list"><li>Blackboard</li><li>Chart</li><li>Map</li><li>Poster</li><li>Flashcard</li><li>Model</li><li>Specimen</li><li>Globe</li><li>Diorama</li><li>Real object</li><li>Bulletin board</li></ul>
+<h3 class="mod-h3">Projected Aids</h3>
+<p>जिन्हें display करने के लिए projection equipment की आवश्यकता होती है।</p>
+<p class="mod-tag">Examples</p>
+<ul class="prose-list"><li>Overhead projector</li><li>Slide projector</li><li>Filmstrip projector</li><li>Epidiascope</li><li>Opaque projector</li><li>LCD/Digital projector</li></ul>
+<h3 class="mod-h3">Exam Formula</h3>
+<p class="mod-strong">Chart, Model, Map, Diorama → Non-Projected
+OHP, Slide, Filmstrip, Epidiascope → Projected</p>
+<h2 class="mod-h2">8. Hardware and Software Approach</h2>
+<h3 class="mod-h3">शैक्षिक प्रौद्योगिकी के दो दृष्टिकोण</h3>
+<h3 class="mod-h3">8.1 Hardware Approach</h3>
+<p class="mod-tag">Technology in Education</p>
+<p>Physical machines और electronic devices का educational use।</p>
+<p class="mod-tag">Examples</p>
+<ul class="prose-list"><li>Radio</li><li>Television</li><li>Computer</li><li>Projector</li><li>Smartboard</li><li>Camera</li><li>Language laboratory</li><li>Tablet</li><li>Interactive display</li></ul>
+<p class="mod-tag">Hardware Approach = Machines and Devices</p>
+<h3 class="mod-h3">8.2 Software Approach</h3>
+<p class="mod-tag">Technology of Education</p>
+<p>Learning psychology, instructional design, teaching strategies और behavioural principles का systematic application।</p>
+<p class="mod-tag">Examples</p>
+<ul class="prose-list"><li>Programmed learning</li><li>Lesson planning</li><li>Reinforcement</li><li>Task analysis</li><li>Instructional design</li><li>Teaching models</li><li>Microteaching</li><li>Formative feedback</li></ul>
+<p class="mod-strong">Software Approach = Principles, Processes and Instructional Strategies</p>
+<h3 class="mod-h3">Exam Trap</h3>
+<p>“Software approach” का अर्थ केवल computer software नहीं है। Educational technology में इसका अर्थ learning theories और instructional principles का application भी है।</p>
+<h2 class="mod-h2">9. Modern Teaching Support System</h2>
+<h3 class="mod-h3">आधुनिक शिक्षण सहायता प्रणाली</h3>
+<p>Modern teaching support traditional resources की तुलना में अधिक interactive, multimedia-based और learner-responsive हो सकता है।</p>
+<h3 class="mod-h3">प्रमुख Examples</h3>
+<ul class="prose-list"><li>Smart classroom</li><li>Interactive whiteboard</li><li>Multimedia projector</li><li>Document camera</li><li>Digital presentation</li><li>Simulation</li><li>Language laboratory</li><li>Virtual laboratory</li><li>Multimedia laboratory</li><li>Video conferencing</li><li>Digital library</li><li>E-books</li><li>Assistive technology</li><li>Audience-response system</li><li>Blended learning environment</li></ul>
+<h2 class="mod-h2">10. Smart Classroom</h2>
+<p>Smart classroom में digital और interactive tools को classroom pedagogy के साथ integrate किया जाता है।</p>
+<h3 class="mod-h3">Components</h3>
+<ul class="prose-list"><li>Computer/laptop</li><li>Internet</li><li>Projector</li><li>Interactive board</li><li>Speakers</li><li>Digital content</li><li>Document camera</li><li>LMS integration</li><li>Recording tools</li><li>Response system</li></ul>
+<h3 class="mod-h3">Advantages</h3>
+<ul class="prose-list"><li>Multimedia explanation</li><li>Better visualisation</li><li>Interactive learning</li><li>Recorded resources</li><li>Immediate assessment</li><li>Wider range of examples</li><li>Learner engagement</li></ul>
+<h3 class="mod-h3">Limitations</h3>
+<ul class="prose-list"><li>Cost</li><li>Technical failure</li><li>Training requirement</li><li>Maintenance</li><li>Digital distraction</li><li>Overdependence on presentations</li><li>Unequal accessibility</li></ul>
+<h3 class="mod-h3">Exam Trap</h3>
+<p>Smartboard का presence classroom को automatically “smart” नहीं बनाता।</p>
+<p>Technology तभी meaningful है जब वह learning objective, interaction और feedback को support करे।</p>
+<h2 class="mod-h2">11. Multimedia Learning</h2>
+<p>Multimedia में text, audio, image, animation और video का integrated use होता है।</p>
+<p class="mod-strong">Multimedia = Text + Visual + Audio + Animation/Video + Interaction</p>
+<h3 class="mod-h3">उपयोग</h3>
+<ul class="prose-list"><li>Complex processes का visualisation</li><li>Virtual demonstration</li><li>Language learning</li><li>Scientific simulation</li><li>Historical reconstruction</li><li>Self-paced learning</li></ul>
+<h3 class="mod-h3">Cognitive Load Principle</h3>
+<p>बहुत अधिक text, animation, sound और decorative elements learner की working memory को overload कर सकते हैं।</p>
+<p>इसलिए:</p>
+<ul class="prose-list"><li>Relevant content रखें।</li><li>Unnecessary decoration कम करें।</li><li>Information को छोटे segments में बाँटें।</li><li>Visual और narration को coordinate करें।</li><li>Learner को processing time दें।</li></ul>
+<h3 class="mod-h3">Exam Trap</h3>
+<p>More multimedia does not necessarily mean more learning.</p>
+<h2 class="mod-h2">12. ICT-Based Teaching Support System</h2>
+<h3 class="mod-h3">सूचना एवं संचार प्रौद्योगिकी आधारित सहायता</h3>
+<p>ICT का अर्थ है:</p>
+<p class="mod-tag">Information and Communication Technology</p>
+<p>ICT-based teaching support information के creation, storage, processing, communication और sharing के लिए digital technologies का प्रयोग करता है।</p>
+<h3 class="mod-h3">Core Formula</h3>
+<p class="mod-strong">ICT Support = Device + Connectivity + Digital Content + Interaction + Assessment + Data</p>
+<h3 class="mod-h3">प्रमुख Components</h3>
+<ul class="prose-list"><li>Computer and mobile devices</li><li>Internet and Wi-Fi</li><li>LMS</li><li>E-content</li><li>Digital library</li><li>MOOCs</li><li>Virtual classroom</li><li>Video conferencing</li><li>Online assessment</li><li>Discussion forum</li><li>Cloud storage</li><li>Learning analytics</li><li>AI-supported tools</li><li>Assistive technologies</li></ul>
+<h2 class="mod-h2">13. Computer-Assisted Instruction</h2>
+<p>Computer-Assisted Instruction—CAI में computer learning material प्रस्तुत करता है तथा practice या feedback उपलब्ध कराता है।</p>
+<h3 class="mod-h3">मुख्य Forms</h3>
+<p class="mod-tag">13.1 Drill and Practice</p>
+<p>Repeated practice और immediate feedback।</p>
+<p class="mod-tag">13.2 Tutorial</p>
+<p>Concept step-by-step explain किया जाता है।</p>
+<p class="mod-tag">13.3 Simulation</p>
+<p>Real situation का digital model प्रस्तुत किया जाता है।</p>
+<p class="mod-tag">13.4 Educational Game</p>
+<p>Learning objectives को rules, challenges और rewards के साथ combine किया जाता है।</p>
+<p class="mod-tag">13.5 Problem-Solving</p>
+<p>Learner problems solve करने के लिए digital tools का प्रयोग करता है।</p>
+<h3 class="mod-h3">Exam Trap</h3>
+<p>CAI teacher का पूर्ण replacement नहीं है। Teacher learning objectives, context, feedback और learner support में महत्वपूर्ण रहता है।</p>
+<h2 class="mod-h2">14. Learning Management System</h2>
+<h3 class="mod-h3">LMS</h3>
+<p>Learning Management System एक software platform है जिसका उपयोग courses और learning activities को organise, deliver, track और assess करने के लिए किया जाता है।</p>
+<h3 class="mod-h3">LMS Functions</h3>
+<ul class="prose-list"><li>Course content upload</li><li>Learner enrolment</li><li>Assignment submission</li><li>Online quiz</li><li>Discussion forum</li><li>Attendance</li><li>Gradebook</li><li>Progress tracking</li><li>Feedback</li><li>Communication</li><li>Learning analytics</li></ul>
+<h3 class="mod-h3">LMS Examples</h3>
+<ul class="prose-list"><li>Moodle</li><li>Canvas</li><li>Blackboard Learn</li><li>Google Classroom</li><li>Schoology</li></ul>
+<h3 class="mod-h3">Important Distinction</h3>
+<h3 class="mod-h3">Exam Point</h3>
+<p>Moodle और Canvas LMS हैं।
+Mentimeter मुख्यतः interactive presentation, polling और survey tool है।
+Canva graphic-design tool है, LMS नहीं।</p>
+<p>Official UGC NET PYQs have treated LMS as a virtual environment that can support both online and blended learning. Verified LMS question</p>
+<h2 class="mod-h2">15. Digital Library and E-Resources</h2>
+<p>Digital library electronic information resources को organise और provide करती है।</p>
+<h3 class="mod-h3">Resources</h3>
+<ul class="prose-list"><li>E-books</li><li>E-journals</li><li>Databases</li><li>Theses and dissertations</li><li>Institutional repositories</li><li>Audio-video archives</li><li>Open educational resources</li></ul>
+<h3 class="mod-h3">Benefits</h3>
+<ul class="prose-list"><li>Remote access</li><li>Keyword search</li><li>Simultaneous access</li><li>Updated resources</li><li>Storage efficiency</li><li>Research support</li></ul>
+<h3 class="mod-h3">Limitations</h3>
+<ul class="prose-list"><li>Subscription cost</li><li>Copyright restrictions</li><li>Digital literacy</li><li>Screen fatigue</li><li>Connectivity</li><li>Information overload</li></ul>
+<h2 class="mod-h2">16. Open Educational Resources</h2>
+<h3 class="mod-h3">OER</h3>
+<p>OER ऐसे teaching-learning-research resources हैं जो open licence के अंतर्गत उपलब्ध होते हैं और licence की conditions के अनुसार reuse या adaptation की अनुमति दे सकते हैं।</p>
+<h3 class="mod-h3">5R Activities</h3>
+<p class="mod-strong">Retain → Reuse → Revise → Remix → Redistribute</p>
+<p class="mod-tag">Important Trap</p>
+<p>Internet पर free दिखाई देने वाला प्रत्येक resource OER नहीं है।</p>
+<p>OER के लिए appropriate open licence आवश्यक है।</p>
+<h2 class="mod-h2">17. Virtual Classroom</h2>
+<p>Virtual classroom online environment है जिसमें teacher और learners technology के माध्यम से interact करते हैं।</p>
+<h3 class="mod-h3">Synchronous Virtual Classroom</h3>
+<ul class="prose-list"><li>Live Google Meet/Zoom session</li><li>Real-time chat</li><li>Live poll</li><li>Immediate feedback</li></ul>
+<h3 class="mod-h3">Asynchronous Virtual Support</h3>
+<ul class="prose-list"><li>Recorded lecture</li><li>Discussion forum</li><li>E-mail</li><li>LMS assignment</li><li>Downloadable notes</li></ul>
+<h3 class="mod-h3">Exam Trap</h3>
+<p>Virtual classroom केवल video conferencing नहीं है। इसमें content, communication, activities, assessment और feedback भी शामिल हो सकते हैं।</p>
+<h2 class="mod-h2">18. Virtual Laboratory and Simulation</h2>
+<p>Virtual laboratory digital environment में experiments या practical situations simulate करती है।</p>
+<h3 class="mod-h3">Applications</h3>
+<ul class="prose-list"><li>Dangerous experiments</li><li>Expensive equipment</li><li>Repeated practice</li><li>Remote learning</li><li>Pre-lab preparation</li><li>Abstract scientific processes</li></ul>
+<h3 class="mod-h3">Limitations</h3>
+<ul class="prose-list"><li>Tactile और real equipment experience सीमित</li><li>Simulation real world की simplification होती है।</li><li>Technical access आवश्यक</li><li>सभी practical competencies digitally assess नहीं की जा सकतीं।</li></ul>
+<h2 class="mod-h2">19. ICT-Based Assessment</h2>
+<p>ICT का प्रयोग evaluation में किया जा सकता है:</p>
+<ul class="prose-list"><li>Online quizzes</li><li>Automatic scoring</li><li>Immediate feedback</li><li>Item banks</li><li>Randomisation</li><li>Adaptive testing</li><li>E-portfolios</li><li>Progress tracking</li><li>Learning analytics</li><li>Online proctoring</li><li>Digital rubrics</li></ul>
+<h3 class="mod-h3">Exam Trap</h3>
+<p>AI या automated assessment सभी human judgement को completely replace नहीं कर सकता। Complex performance, ethical judgement और subjective responses में human oversight आवश्यक है।</p>
+<h2 class="mod-h2">20. Assistive Technology and Inclusion</h2>
+<p>ICT learners with disabilities के लिए accessibility बढ़ा सकता है।</p>
+<h3 class="mod-h3">Examples</h3>
+<ul class="prose-list"><li>Screen reader</li><li>Text-to-speech</li><li>Speech-to-text</li><li>Closed captions</li><li>Sign-language video</li><li>Keyboard navigation</li><li>Magnification</li><li>Alternative text</li><li>Accessible documents</li><li>Adjustable playback speed</li></ul>
+<p>भारत की PM e-VIDYA information में visually impaired learners के लिए audiobooks और hearing-impaired learners के लिए Indian Sign Language resources का उल्लेख किया गया है। PM e-VIDYA accessibility information</p>
+<h3 class="mod-h3">Exam Principle</h3>
+<p>Same content देना equality हो सकता है; accessible format देना equity और inclusion को support करता है।</p>
+<h2 class="mod-h2">21. Traditional vs Modern vs ICT-Based</h2>
+<h2 class="mod-h2">22. Teaching Support and Blended Learning</h2>
+<p>Blended learning traditional face-to-face teaching और digital support का planned integration है।</p>
+<p class="mod-tag">Example</p>
+<ul class="prose-list"><li>LMS पर video और reading material</li><li>Classroom में discussion</li><li>Online quiz</li><li>Face-to-face feedback</li><li>E-portfolio submission</li></ul>
+<p class="mod-strong">Blended Learning = Face-to-Face Strength + Online Flexibility</p>
+<h3 class="mod-h3">Exam Formula</h3>
+<ul class="prose-list"><li>Talk and chalk + printed notes → Traditional</li><li>Projector-based presentation → ICT-supported</li><li>Case-study discussion → Modern/learner-oriented</li><li>LMS video + face-to-face discussion → Blended/Hybrid</li></ul>
+<p>एक UGC NET-pattern matching question में LMS video plus face-to-face discussion को hybrid/blended, talk-and-chalk को traditional, case discussion को modern और projector presentation को ICT-based support से match किया गया है. Question source</p>
+<h2 class="mod-h2">23. Principles for Selecting Teaching Support</h2>
+<h3 class="mod-h3">23.1 Relevance</h3>
+<p>Aid learning objective और content से संबंधित होना चाहिए।</p>
+<h3 class="mod-h3">23.2 Learner Appropriateness</h3>
+<p>Age, prior knowledge, language, disability और digital literacy को ध्यान में रखें।</p>
+<h3 class="mod-h3">23.3 Simplicity</h3>
+<p>Aid स्वयं confusion का कारण नहीं बनना चाहिए।</p>
+<h3 class="mod-h3">23.4 Accuracy</h3>
+<p>Content factually और conceptually correct होना चाहिए।</p>
+<h3 class="mod-h3">23.5 Visibility and Audibility</h3>
+<p>सभी learners material देख या सुन सकें।</p>
+<h3 class="mod-h3">23.6 Accessibility</h3>
+<p>Captions, alternative text, readable font और accessible format उपलब्ध हों।</p>
+<h3 class="mod-h3">23.7 Interactivity</h3>
+<p>जहाँ appropriate हो, learner केवल देखने के बजाय respond, practise और create कर सके।</p>
+<h3 class="mod-h3">23.8 Cost-Effectiveness</h3>
+<p>Learning benefit उपलब्ध cost और resources के अनुपात में उचित हो।</p>
+<h3 class="mod-h3">23.9 Reliability</h3>
+<p>Technology के लिए backup और technical support होना चाहिए।</p>
+<h3 class="mod-h3">23.10 Evaluation</h3>
+<p>Teacher को जाँचना चाहिए कि support system ने learning में वास्तविक सुधार किया या नहीं।</p>
+<h2 class="mod-h2">24. Dale’s Cone of Experience</h2>
+<p>Edgar Dale का Cone of Experience learning experiences को comparatively concrete से abstract रूप में समझाता है।</p>
+<p class="mod-tag">Concrete Side</p>
+<ul class="prose-list"><li>Direct purposeful experiences</li><li>Contrived experiences</li><li>Demonstrations</li><li>Field trips</li></ul>
+<p class="mod-tag">Intermediate</p>
+<ul class="prose-list"><li>Exhibits</li><li>Television</li><li>Motion pictures</li><li>Recordings and photographs</li></ul>
+<p class="mod-tag">Abstract Side</p>
+<ul class="prose-list"><li>Visual symbols</li><li>Verbal symbols</li></ul>
+<h3 class="mod-h3">Important Exam Trap</h3>
+<p>Dale’s original Cone को fixed retention percentages—जैसे “हम 10% पढ़ने से और 90% करने से याद रखते हैं”—के साथ जोड़ना academically उचित नहीं है।</p>
+<p>Cone अनुभव की concreteness–abstraction दर्शाता है; universal retention formula नहीं।</p>
+<h2 class="mod-h2">25. Applications in Education and Research</h2>
+<h3 class="mod-h3">Education</h3>
+<ul class="prose-list"><li>Complex content visualisation</li><li>Differentiated instruction</li><li>Self-paced learning</li><li>Formative assessment</li><li>Flipped classroom</li><li>Inclusive education</li><li>Remote access</li><li>Collaborative learning</li><li>Practical simulation</li><li>Course management</li></ul>
+<h3 class="mod-h3">Research</h3>
+<ul class="prose-list"><li>Digital literature search</li><li>Reference management</li><li>Online surveys</li><li>Statistical analysis</li><li>Data visualisation</li><li>Plagiarism checking</li><li>Research collaboration</li><li>Institutional repositories</li><li>Webinar and conference</li><li>Research-data management</li></ul>
+<h3 class="mod-h3">Research Trap</h3>
+<p>Technology research को faster बना सकती है, लेकिन validity, ethics, sampling quality और researcher judgement को automatically ensure नहीं करती।</p>
+<h2 class="mod-h2">26. Important Exam Points</h2>
+<ul class="prose-list"><li>Teaching support system teacher का replacement नहीं है।</li><li>Blackboard, charts और models traditional/non-projected aids हैं।</li><li>OHP, slide projector और epidiascope projected aids हैं।</li><li>Hardware approach machines और devices से जुड़ा है।</li><li>Software approach instructional principles और processes से जुड़ा है।</li><li>Smartboard modern teaching support का example है।</li><li>ICT = Information and Communication Technology.</li><li>LMS course delivery, communication, assessment और tracking में उपयोगी है।</li><li>Moodle और Canvas LMS हैं।</li><li>Canva LMS नहीं है।</li><li>Mentimeter interactive polling/presentation tool है।</li><li>Virtual lab real laboratory का complete replacement नहीं है।</li><li>OER के लिए open licence महत्वपूर्ण है।</li><li>Internet पर free material automatically OER नहीं है।</li><li>Multimedia overload learning को कम कर सकता है।</li><li>Blended learning face-to-face और online methods का planned integration है।</li><li>Assistive technology inclusive education को support करती है।</li><li>ICT-based assessment में human oversight की आवश्यकता समाप्त नहीं होती।</li><li>Technology selection learning objective के आधार पर होनी चाहिए।</li><li>Teaching aid की effectiveness उसके उपयोग पर निर्भर करती है, केवल modernity पर नहीं।</li></ul>
+<h2 class="mod-h2">27. Common Exam Traps</h2>
+<h2 class="mod-h2">28. Verified Previous Year Questions</h2>
+<h3 class="mod-h3">PYQ 1: UGC NET, 13 October 2022, Shift 2</h3>
+<p>Statement I: LMS teachers और students के लिए virtual environment उपलब्ध कराता है।
+Statement II: LMS blended तथा online learning दोनों में उपयोग किया जा सकता है।</p>
+<p>Answer: दोनों statements सही हैं।
+Verified PYQ</p>
+<h3 class="mod-h3">PYQ 2: UGC NET, 20 October 2022, Shift 2</h3>
+<p>Online content, assessment तथा teacher–learner virtual interaction के लिए किसका प्रयोग किया जाना चाहिए?</p>
+<p>A. WhatsApp
+B. Content Management System
+C. Learning Management System
+D. Facebook</p>
+<p class="mod-strong">Answer: C. Learning Management System
+Verified PYQ</p>
+<h3 class="mod-h3">PYQ 3: UGC NET, 1 October 2022, Shift 2</h3>
+<p>LMS के बारे में statements दिए गए:</p>
+<ul class="prose-list"><li>LMS एक software है।</li><li>Virtual teacher-student groups के लिए उपयोगी है।</li><li>Online quizzes conduct कर सकता है।</li><li>LMS hardware है।</li></ul>
+<p>Correct approach: LMS software है; virtual groups और online quizzes support कर सकता है। यह hardware नहीं है।
+Verified PYQ</p>
+<h3 class="mod-h3">PYQ 4: UGC NET, 14 June 2023, Shift 1</h3>
+<p>Statement I: Moodle एक Learning Management System है।
+Statement II: Mentimeter online surveys/polls के लिए उपयोग किया जा सकता है।</p>
+<p>Answer: दोनों statements सही हैं।
+Verified PYQ</p>
+<h3 class="mod-h3">PYQ 5: UGC NET, 19 June 2023, Shift 1</h3>
+<p>LMS examples पहचानने थे:</p>
+<ul class="prose-list"><li>Kahoot</li><li>Canvas</li><li>Canva</li><li>Moodle</li><li>Padlet</li></ul>
+<p class="mod-tag">Answer: Canvas और Moodle</p>
+<p>Kahoot quiz/game-based platform, Canva design tool तथा Padlet collaborative board है।
+Verified PYQ</p>
+<h3 class="mod-h3">PYQ 6: UGC NET, 14 March 2023, Shift 1</h3>
+<p>Statement I: Canvas online teaching-learning को support करने वाला LMS है।
+Statement II: Canvas केवल paid LMS है।</p>
+<p>Answer: Statement I सही, Statement II गलत माना गया।
+Verified PYQ</p>
+<h2 class="mod-h2">29. PYQ Trend Analysis</h2>
+<h3 class="mod-h3">Trend Interpretation</h3>
+<p>Recent Paper-1 questions में केवल definitions की अपेक्षा निम्न areas महत्वपूर्ण हो रहे हैं:</p>
+<ul class="prose-list"><li>Tool और function matching</li><li>LMS vs other digital tools</li><li>ICT integration in assessment</li><li>Blended learning scenarios</li><li>AI-assisted education</li><li>Accessibility and inclusion</li><li>Multiple-statement questions</li><li>Misleading absolute statements</li></ul>
+<h2 class="mod-h2">30. Predicted Questions for December 2026</h2>
+<h3 class="mod-h3">Question 1</h3>
+<p>Teacher LMS पर video देता है और classroom में discussion कराता है। यह है:</p>
+<p>A. Traditional teaching
+B. Blended learning
+C. केवल asynchronous learning
+D. Programmed instruction</p>
+<p class="mod-tag">Answer: B. Blended Learning</p>
+<h3 class="mod-h3">Question 2</h3>
+<p>निम्न में से non-projected aid कौन-सा है?</p>
+<p>A. Epidiascope
+B. OHP
+C. Diorama
+D. LCD projector</p>
+<p class="mod-tag">Answer: C. Diorama</p>
+<h3 class="mod-h3">Question 3</h3>
+<p>निम्न में सही LMS combination कौन-सा है?</p>
+<p>A. Moodle और Canvas
+B. Canva और Mentimeter
+C. Kahoot और projector
+D. Google Meet और television</p>
+<p class="mod-tag">Answer: A. Moodle और Canvas</p>
+<h3 class="mod-h3">Question 4</h3>
+<p>Instructional design और reinforcement principles किस approach से संबंधित हैं?</p>
+<p>A. Hardware approach
+B. Software approach
+C. Mechanical approach
+D. Broadcast approach</p>
+<p class="mod-tag">Answer: B. Software Approach</p>
+<h3 class="mod-h3">Question 5</h3>
+<p>एक teacher presentation में बहुत अधिक animations, text और background music जोड़ देता है, जिससे learners main concept नहीं समझ पाते। यह किस समस्या का उदाहरण है?</p>
+<p class="mod-tag">Answer: Cognitive Overload</p>
+<h3 class="mod-h3">Question 6: Assertion–Reason</h3>
+<p>Assertion: ICT-based teaching necessarily learner-centred नहीं होती।
+Reason: Digital projector से दिया गया one-way lecture teacher-centred रह सकता है।</p>
+<p>Answer: दोनों सही हैं और Reason सही explanation है।</p>
+<h3 class="mod-h3">Question 7</h3>
+<p>कौन-सा OER की आवश्यक characteristic है?</p>
+<p>A. केवल online availability
+B. Open licence
+C. High subscription fee
+D. Printed format</p>
+<p class="mod-tag">Answer: B. Open Licence</p>
+<h3 class="mod-h3">Question 8</h3>
+<p>Closed captions सबसे सीधे किस learner group के लिए accessibility support प्रदान करते हैं?</p>
+<p>Answer: Deaf या hard-of-hearing learners.</p>
+<h3 class="mod-h3">Question 9</h3>
+<p>AI-based assessment के बारे में incorrect statement चुनिए:</p>
+<p>A. It may support feedback.
+B. It may help analyse responses.
+C. It eliminates the need for validity and human oversight.
+D. It may support large-scale assessment.</p>
+<p class="mod-tag">Answer: C</p>
+<h3 class="mod-h3">Question 10</h3>
+<p>कौन-सा sequence appropriate है?</p>
+<p>Objective identification → Tool selection → Implementation → Feedback → Evaluation</p>
+<p>Answer: यह teaching support integration का logical sequence है।</p>
+<h2 class="mod-h2">31. One-Page Revision</h2>
+<p class="mod-strong">Traditional → Board + Book + Chart + Model</p>
+<p class="mod-strong">Modern → Smartboard + Multimedia + Simulation</p>
+<p class="mod-strong">ICT-Based → Internet + LMS + MOOC + Analytics</p>
+<p class="mod-tag">Hardware Approach → Devices and Machines</p>
+<p class="mod-strong">Software Approach → Learning Principles and Instructional Design</p>
+<p class="mod-strong">Non-Projected → Chart, Map, Model, Diorama</p>
+<p class="mod-strong">Projected → OHP, Slide Projector, Epidiascope</p>
+<p class="mod-strong">LMS → Deliver + Communicate + Assess + Track</p>
+<p class="mod-tag">LMS Examples → Moodle + Canvas</p>
+<p class="mod-tag">OER → Open Licence + 5R</p>
+<p class="mod-strong">Blended → Face-to-Face + Online Integration</p>
+<p class="mod-strong">Multimedia Rule → Relevance, Simplicity and Cognitive Balance</p>
+<p class="mod-strong">Best Teaching Support = Appropriate Tool, not the Most Expensive Tool</p>
+<h3 class="mod-h3">Final Exam Formula</h3>
+<p class="mod-strong">Learning Objective पहले निर्धारित करें—Technology और Teaching Aid बाद में चुनें।</p>
+<div class="table-wrap"><table class="mod-table"><tr><th>Tool</th><th>Primary Purpose</th></tr><tr><td>LMS</td><td>Course delivery and management</td></tr><tr><td>CMS</td><td>Content creation/management</td></tr><tr><td>Video-conferencing tool</td><td>Live communication</td></tr><tr><td>Survey tool</td><td>Responses and polls</td></tr><tr><td>Digital repository</td><td>Storage and access</td></tr><tr><td>Social media</td><td>Social communication/networking</td></tr></table></div>
+<div class="table-wrap"><table class="mod-table"><tr><th>Basis</th><th>Traditional</th><th>Modern</th><th>ICT-Based</th></tr><tr><td>Main resources</td><td>Board, books, charts, models</td><td>Smartboard, multimedia, simulation</td><td>Internet, LMS, MOOCs, analytics</td></tr><tr><td>Communication</td><td>Mainly face-to-face</td><td>Interactive/multimedia</td><td>Synchronous/asynchronous</td></tr><tr><td>Content</td><td>Print/physical</td><td>Audio-visual and digital</td><td>Networked and interactive</td></tr><tr><td>Learner reach</td><td>Local classroom</td><td>Classroom plus digital support</td><td>Potentially global</td></tr><tr><td>Pace</td><td>Mostly teacher-controlled</td><td>More flexible</td><td>Self-paced possibilities</td></tr><tr><td>Feedback</td><td>Oral/written</td><td>Interactive tools</td><td>Automated and data-supported</td></tr><tr><td>Accessibility</td><td>Physical presence</td><td>Depends on equipment</td><td>Flexible but affected by digital divide</td></tr><tr><td>Assessment</td><td>Written/oral tests</td><td>Multimedia tasks</td><td>Online tests, e-portfolio and analytics</td></tr><tr><td>Cost</td><td>Often comparatively low</td><td>Equipment cost</td><td>Devices, connectivity and maintenance</td></tr><tr><td>Example</td><td>Talk and chalk</td><td>Smart classroom</td><td>LMS-based course</td></tr></table></div>
+<div class="table-wrap"><table class="mod-table"><tr><th>Trap</th><th>Correct Understanding</th></tr><tr><td>Traditional aids are always ineffective.</td><td>Appropriate context में अत्यंत effective हो सकते हैं।</td></tr><tr><td>Modern equipment guarantees learning.</td><td>Pedagogy और learner engagement आवश्यक हैं।</td></tr><tr><td>Software approach means computer applications only.</td><td>इसमें instructional design और learning principles भी शामिल हैं।</td></tr><tr><td>Every visual aid is projected.</td><td>Charts, maps और models non-projected हैं।</td></tr><tr><td>LMS is hardware.</td><td>LMS software platform है।</td></tr><tr><td>Projector is itself an LMS.</td><td>Projector display hardware है।</td></tr><tr><td>Google Meet is a complete LMS.</td><td>यह primarily video-conferencing tool है।</td></tr><tr><td>Every free web resource is OER.</td><td>Open licence आवश्यक है।</td></tr><tr><td>Virtual lab completely replaces real lab.</td><td>दोनों complementary हो सकते हैं।</td></tr><tr><td>More multimedia means better learning.</td><td>Excessive media cognitive overload पैदा कर सकता है।</td></tr><tr><td>ICT removes the teacher’s role.</td><td>Teacher का role facilitator और instructional designer बनता है।</td></tr><tr><td>AI can replace every assessment decision.</td><td>Human validation और oversight आवश्यक हैं।</td></tr></table></div>
+<div class="table-wrap"><table class="mod-table"><tr><th>Tested Area</th><th>Question Pattern</th></tr><tr><td>Traditional–Modern–ICT classification</td><td>Match the following</td></tr><tr><td>LMS concept</td><td>Statement-based questions</td></tr><tr><td>LMS examples</td><td>Multiple selection</td></tr><tr><td>Hardware vs software</td><td>Conceptual distinction</td></tr><tr><td>Teaching aids</td><td>Projected/non-projected</td></tr><tr><td>Digital tools</td><td>Tool–function matching</td></tr><tr><td>Blended learning</td><td>Classroom scenario</td></tr><tr><td>ICT evaluation</td><td>Correct/incorrect uses</td></tr><tr><td>Multimedia</td><td>Assertion–Reason</td></tr><tr><td>Inclusive ICT</td><td>Application-based question</td></tr></table></div>
+    </article>
+    <aside class="lg:sticky lg:top-24 lg:self-start">
+      <div class="card p-5">
+        <p class="text-[10.5px] font-extrabold uppercase tracking-[0.16em] text-gold-600">Unit 1 · Teaching Aptitude</p>
+        <ul class="mt-3 grid gap-1.5 text-[13.5px] font-semibold text-navy-700">
+          <li><a href="module-1.html" class="block rounded-lg px-2.5 py-2 hover:bg-navy-50">1. Teaching: Objective, Levels &amp; Basic Concepts</a></li>
+          <li><a href="module-2.html" class="block rounded-lg px-2.5 py-2 hover:bg-navy-50">2. Learner's Characteristics</a></li>
+          <li><a href="module-3.html" class="block rounded-lg px-2.5 py-2 hover:bg-navy-50">3. Factors Affecting Teaching</a></li>
+          <li><a href="module-4.html" class="block rounded-lg px-2.5 py-2 hover:bg-navy-50">4. Methods of Teaching in Higher Institutions</a></li>
+          <li><a href="module-5.html" class="block rounded-lg px-2.5 py-2 hover:bg-navy-50">5. Teaching Support System</a></li>
+          <li><a href="module-6.html" class="block rounded-lg px-2.5 py-2 hover:bg-navy-50">6. Evaluation System</a></li>
+          <li><a href="module-7.html" class="block rounded-lg px-2.5 py-2 hover:bg-navy-50">7. Important Educational Thinkers &amp; Theories</a></li>
+          <li><a href="module-8.html" class="block rounded-lg px-2.5 py-2 hover:bg-navy-50">8. Educational Philosophy &amp; Thinking</a></li>
+        </ul>
+        <a href="../enroll.html" class="btn-primary mt-4 w-full">✓ JOIN BATCH @ ₹500</a>
+      </div>
+    </aside>
+  </div>
+  <div class="mt-8 flex flex-wrap items-center justify-between gap-3">
+    <a href="module-4.html" class="btn-outline btn-sm">← Module 4</a>
+    <a href="unit-1.html" class="btn-outline btn-sm">All Unit 1 Modules</a>
+    <a href="module-6.html" class="btn-dark btn-sm">Module 6 →</a>
+  </div>
+</div></section>
+
+<section class="bg-cream py-12 lg:py-14"><div class="container-x">
+  <div class="relative overflow-hidden rounded-2xl bg-navy-950 p-8 text-white sm:p-10">
+    <div class="grid-paper absolute inset-0 opacity-50" aria-hidden="true"></div>
+    <div class="absolute -right-16 -top-16 h-56 w-56 rounded-full bg-gold-500/20 blur-3xl" aria-hidden="true"></div>
+    <div class="relative flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
+      <div>
+        <h2 class="h-display text-[28px] sm:text-[34px]">Join the Paper-1 Batch</h2>
+        <p class="mt-2 max-w-lg text-[14.5px] text-navy-100/80">Course fee FREE — ₹500 registration &amp; academic/logistics contribution. Classes daily at 6:30 PM.</p>
+      </div>
+      <a href="../enroll.html" class="btn-primary shrink-0">✓ JOIN BATCH @ ₹500</a>
+    </div>
+  </div>
+</div></section>
+</main>
+
+<footer class="relative overflow-hidden bg-navy-950 text-white">
+  <div class="grid-paper absolute inset-0 opacity-50" aria-hidden="true"></div>
+  <div class="container-x relative py-12 lg:py-14">
+    <div class="grid grid-cols-2 gap-10 lg:grid-cols-4">
+
+      <div>
+        <div class="flex items-center gap-3">
+          <img src="assets/images/logo.png" alt="GS Net Academy" class="h-11 w-auto rounded-lg bg-white p-1" width="120" height="44">
+          <img src="assets/images/tagline.png" alt="" class="h-11 w-auto brightness-0 invert" aria-hidden="true">
+        </div>
+        <p class="mt-5 text-[14px] leading-relaxed text-navy-100/75">UGC NET Paper-I | JRF Preparation | Mentorship</p>
+        <span class="eyebrow mt-5"><svg viewBox="0 0 24 24" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1"/></svg> JRF @ ₹500 Mission 2026</span>
+
+        <p class="mt-6 text-[11px] font-extrabold uppercase tracking-[0.18em] text-gold-400">Follow Us</p>
+        <ul class="mt-3 flex flex-wrap gap-2">
+          <li><a href="https://www.youtube.com/@gsnetacademy" target="_blank" rel="noreferrer noopener" aria-label="YouTube" title="YouTube" class="grid h-10 w-10 place-items-center rounded-xl border border-white/12 bg-white/[0.06] text-navy-100/80 transition hover:border-gold-400/50 hover:bg-white/[0.12] hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor" aria-hidden="true"><path d="M21.6 7.2a2.5 2.5 0 0 0-1.8-1.8C18.2 5 12 5 12 5s-6.2 0-7.8.4A2.5 2.5 0 0 0 2.4 7.2 26 26 0 0 0 2 12a26 26 0 0 0 .4 4.8 2.5 2.5 0 0 0 1.8 1.8C5.8 19 12 19 12 19s6.2 0 7.8-.4a2.5 2.5 0 0 0 1.8-1.8A26 26 0 0 0 22 12a26 26 0 0 0-.4-4.8ZM10 15V9l5.2 3L10 15Z"/></svg></a></li>
+          <li><a href="https://www.instagram.com/gsnetacademy" target="_blank" rel="noreferrer noopener" aria-label="Instagram" title="Instagram" class="grid h-10 w-10 place-items-center rounded-xl border border-white/12 bg-white/[0.06] text-navy-100/80 transition hover:border-gold-400/50 hover:bg-white/[0.12] hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg></a></li>
+          <li><a href="https://www.facebook.com/gsnetacademy" target="_blank" rel="noreferrer noopener" aria-label="Facebook" title="Facebook" class="grid h-10 w-10 place-items-center rounded-xl border border-white/12 bg-white/[0.06] text-navy-100/80 transition hover:border-gold-400/50 hover:bg-white/[0.12] hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.25-1.5 1.55-1.5H16.7V3.6c-.3 0-1.3-.13-2.47-.13-2.44 0-4.11 1.49-4.11 4.23V9.9H7.4V13h2.72v8h3.38Z"/></svg></a></li>
+          <li><a href="https://t.me/gsnetacademy" target="_blank" rel="noreferrer noopener" aria-label="Telegram" title="Telegram" class="grid h-10 w-10 place-items-center rounded-xl border border-white/12 bg-white/[0.06] text-navy-100/80 transition hover:border-gold-400/50 hover:bg-white/[0.12] hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor" aria-hidden="true"><path d="M21.3 4.3 2.9 11.4c-.9.35-.9 1.62.02 1.93l4.6 1.53 1.75 5.3c.25.75 1.2.95 1.73.37l2.5-2.72 4.6 3.38c.63.46 1.53.12 1.7-.65l3.1-14.9c.2-.9-.7-1.65-1.6-1.31ZM9.6 14.1l8.5-5.6-6.9 6.5-.3 3.3-1.3-4.2Z"/></svg></a></li>
+          <li><a href="https://chat.whatsapp.com/KeaQUhOFz0UGAKtLmsM7oU" target="_blank" rel="noreferrer noopener" aria-label="WhatsApp Group" title="WhatsApp Group" class="grid h-10 w-10 place-items-center rounded-xl border border-white/12 bg-white/[0.06] text-navy-100/80 transition hover:border-emerald-400/50 hover:bg-emerald-500/15 hover:text-emerald-300"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.2 20.8 4.6 16A8.4 8.4 0 1 1 8 19.4l-4.8 1.4Z"/><path d="M9 8.4c.3-.7.6-.7.9-.7h.6c.2 0 .5 0 .7.6l.8 1.9c.1.2.1.4 0 .6l-.5.7c-.1.2-.2.4 0 .7a7 7 0 0 0 3 2.6c.3.1.5.1.7-.1l.7-.8c.2-.2.4-.2.6-.1l1.8.9c.3.1.5.3.5.5v.6c0 .4-.2.9-.9 1.2-.6.3-1.5.4-2.5.1a10 10 0 0 1-6.5-6.2c-.3-1-.1-1.9.1-2.5Z"/></svg></a></li>
+          <li><a href="https://x.com/gsnetacademy" target="_blank" rel="noreferrer noopener" aria-label="X (Twitter)" title="X (Twitter)" class="grid h-10 w-10 place-items-center rounded-xl border border-white/12 bg-white/[0.06] text-navy-100/80 transition hover:border-gold-400/50 hover:bg-white/[0.12] hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-4.5 w-4.5" fill="currentColor" aria-hidden="true"><path d="M17.5 3h3.1l-6.8 7.8L21.8 21h-6.2l-4.9-6.4L5.1 21H2l7.3-8.3L2.5 3h6.4l4.4 5.8L17.5 3Zm-1.1 16.2h1.7L7.7 4.7H5.9l10.5 14.5Z"/></svg></a></li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="text-[11px] font-extrabold uppercase tracking-[0.18em] text-gold-400">Quick Links</p>
+        <ul class="mt-4 grid gap-2.5">
+          <li><a href="/" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Home</a></li>
+          <li><a href="courses.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">UGC NET Paper-I</a></li>
+          <li><a href="results.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Our Results</a></li>
+          <li><a href="tutorials.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Tutorials</a></li>
+          <li><a href="blog.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Blog</a></li>
+          <li><a href="about.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">About</a></li>
+          <li><a href="contact.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="text-[11px] font-extrabold uppercase tracking-[0.18em] text-gold-400">Resources</p>
+        <ul class="mt-4 grid gap-2.5">
+          <li><a href="notes.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Notes</a></li>
+          <li><a href="enroll.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Register for ₹500</a></li>
+          <li><a href="/#free-demo" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Free Demo Classes</a></li>
+          <li><a href="https://chat.whatsapp.com/KeaQUhOFz0UGAKtLmsM7oU" target="_blank" rel="noreferrer noopener" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Student Community</a></li>
+        </ul>
+        <p class="mt-6 text-[11px] font-extrabold uppercase tracking-[0.18em] text-gold-400">Legal</p>
+        <ul class="mt-4 grid gap-2.5">
+          <li><a href="privacy-policy.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Privacy Policy</a></li>
+          <li><a href="refund-policy.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Refund &amp; Cancellation</a></li>
+          <li><a href="terms-of-enrollment.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Terms of Enrollment</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="text-[11px] font-extrabold uppercase tracking-[0.18em] text-gold-400">Contact</p>
+        <ul class="mt-4 grid gap-2.5 text-[14px] text-navy-100/75">
+          <li><a href="tel:+919266511505" class="flex items-center gap-2 hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-4 w-4 icon-gold" fill="currentColor" aria-hidden="true"><path d="M5 3h3.5l1.6 4-2 1.4a12 12 0 0 0 5.5 5.5l1.4-2 4 1.6V19a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 3 5.2 2 2 0 0 1 5 3Z"/></svg> +91 9266511505</a></li>
+          <li><a href="tel:+919810845327" class="flex items-center gap-2 hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-4 w-4 icon-gold" fill="currentColor" aria-hidden="true"><path d="M5 3h3.5l1.6 4-2 1.4a12 12 0 0 0 5.5 5.5l1.4-2 4 1.6V19a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 3 5.2 2 2 0 0 1 5 3Z"/></svg> +91 9810845327</a></li>
+          <li><a href="mailto:gsnetacademy@gmail.com" class="flex items-center gap-2 break-all hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-4 w-4 icon-gold" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="m3.5 6.5 8.5 6 8.5-6"/></svg> gsnetacademy@gmail.com</a></li>
+          <li><a href="https://chat.whatsapp.com/KeaQUhOFz0UGAKtLmsM7oU" target="_blank" rel="noreferrer noopener" class="flex items-center gap-2 hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-4 w-4 icon-gold" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.2 20.8 4.6 16A8.4 8.4 0 1 1 8 19.4l-4.8 1.4Z"/><path d="M9 8.4c.3-.7.6-.7.9-.7h.6c.2 0 .5 0 .7.6l.8 1.9c.1.2.1.4 0 .6l-.5.7c-.1.2-.2.4 0 .7a7 7 0 0 0 3 2.6c.3.1.5.1.7-.1l.7-.8c.2-.2.4-.2.6-.1l1.8.9c.3.1.5.3.5.5v.6c0 .4-.2.9-.9 1.2-.6.3-1.5.4-2.5.1a10 10 0 0 1-6.5-6.2c-.3-1-.1-1.9.1-2.5Z"/></svg> WhatsApp Group</a></li>
+        </ul>
+        <a href="enroll.html" class="btn-primary mt-6 w-full">Join for ₹500</a>
+        <p class="text-[14px] mt-3 text-navy-100/75 transition hover:text-gold-300">Address: B 14-15, Udhyog Marg, Block B, Sector 1, Noida, Uttar Pradesh 201301</p>
+      </div>
+    </div>
+
+    <div class="mt-10 border-t border-white/10 pt-6">
+      <ul class="flex flex-wrap items-center gap-x-5 gap-y-2 text-[13px]">
+        <li><a href="privacy-policy.html" class="text-navy-100/70 transition hover:text-gold-300">Privacy Policy</a></li>
+        <li aria-hidden="true" class="text-navy-100/25">|</li>
+        <li><a href="refund-policy.html" class="text-navy-100/70 transition hover:text-gold-300">Refund &amp; Cancellation</a></li>
+        <li aria-hidden="true" class="text-navy-100/25">|</li>
+        <li><a href="terms-of-enrollment.html" class="text-navy-100/70 transition hover:text-gold-300">Terms of Enrollment</a></li>
+      </ul>
+      <div class="mt-4 flex flex-col gap-2 text-[13px] text-navy-100/60 sm:flex-row sm:items-center sm:justify-between">
+        <p>© 2026 GS Net Academy. All Rights Reserved.</p>
+        <p>A Premier institute for UGC NET Paper-1</p>
+      </div>
+      <p class="mt-4 text-[12px] leading-relaxed text-navy-100/45">Disclaimer: GS Net Academy किसी भी exam में selection, rank या score की guarantee नहीं देता। हम quality teaching, study material, practice और academic mentorship प्रदान करते हैं। UGC, NTA या किसी अन्य government body से हमारा कोई affiliation नहीं है।</p>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/testimonial.js"></script>
+</body>
+</html>

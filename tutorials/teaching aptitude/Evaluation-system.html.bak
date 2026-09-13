@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Evaluation Systems – Full Notes | UGC NET Paper-1</title>
+  <meta name="description" content="Complete evaluation systems tutorial: meaning, types (placement, diagnostic, formative, summative), NRT vs CRT, CBCS, CBT, innovations, PYQs for UGC NET Paper-1.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; }
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background: #f8f5ee;
+      color: #101a3d;
+    }
+    .h-display { font-family: 'Poppins', sans-serif; font-weight: 800; letter-spacing: -0.01em; }
+    .container { max-width: 1360px; margin: 0 auto; padding: 0 20px; }
+
+    .hero {
+      background: #0b1330;
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+      padding: 28px 0 22px;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      right: -80px;
+      top: -100px;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(232,183,75,0.2), transparent 70%);
+    }
+    .hero-inner { position: relative; }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      padding: 6px 16px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+      color: #e8b74b;
+    }
+    .hero h1 {
+      font-size: clamp(28px, 4.2vw, 44px);
+      margin: 12px 0 6px;
+    }
+    .hero p {
+      color: rgba(255,255,255,0.78);
+      max-width: 680px;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 28px;
+      padding: 28px 0 50px;
+      align-items: start;
+    }
+    @media (max-width: 980px) {
+      .layout { grid-template-columns: 1fr; }
+    }
+
+    .sidebar {
+      position: sticky;
+      top: 16px;
+      max-height: calc(100vh - 40px);
+      overflow-y: auto;
+      background: #fff;
+      border: 1px solid rgba(16,26,61,0.08);
+      border-radius: 16px;
+      padding: 16px 12px;
+      box-shadow: 0 6px 24px rgba(16,26,61,0.05);
+    }
+    .sidebar::-webkit-scrollbar { width: 5px; }
+    .sidebar::-webkit-scrollbar-thumb { background: #dde2ef; border-radius: 8px; }
+    .sidebar-title {
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: #b9852a;
+      padding: 4px 10px 14px;
+    }
+    .nav-link {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 10px;
+      border-radius: 10px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #33406b;
+      line-height: 1.3;
+      transition: 0.1s;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .nav-link:hover { background: #f4f6fc; color: #0b1330; }
+    .nav-link.active {
+      background: #fdf6e7;
+      color: #0b1330;
+    }
+    .nav-num {
+      flex: none;
+      width: 22px;
+      height: 22px;
+      border-radius: 7px;
+      background: #e7eaf5;
+      color: #5b6690;
+      font-size: 11px;
+      font-weight: 800;
+      display: grid;
+      place-items: center;
+    }
+    .nav-link.active .nav-num {
+      background: #e8b74b;
+      color: #0b1330;
+    }
+
+    #sidebar-toggle { display: none; }
+    .mobile-bar { display: none; }
+    @media (max-width: 980px) {
+      .mobile-bar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: #fff;
+        border: 1px solid rgba(16,26,61,0.1);
+        border-radius: 12px;
+        padding: 12px 16px;
+        margin-bottom: 8px;
+        font-weight: 800;
+        font-size: 13.5px;
+        color: #0b1330;
+      }
+      .sidebar { display: none; position: static; max-height: none; }
+      #sidebar-toggle:checked ~ .layout .sidebar { display: block; }
+    }
+
+    .content { min-width: 0; }
+    .topic-card {
+      background: #fff;
+      border: 1px solid rgba(16,26,61,0.08);
+      border-radius: 16px;
+      padding: 20px 20px 16px;
+      margin-bottom: 18px;
+      scroll-margin-top: 20px;
+      display: block;
+    }
+    .topic-card.hidden { display: none; }
+    .sec-head {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+    .sec-num {
+      flex: none;
+      width: 34px;
+      height: 34px;
+      border-radius: 10px;
+      background: #0b1330;
+      color: #e8b74b;
+      font-weight: 800;
+      font-size: 14px;
+      display: grid;
+      place-items: center;
+    }
+    .sec-head h2 {
+      margin: 0;
+      font-size: 19px;
+      font-weight: 800;
+      color: #0b1330;
+    }
+    .topic-card p {
+      font-size: 14.5px;
+      line-height: 1.75;
+      color: #1a254a;
+      margin: 6px 0;
+    }
+    .bullet-list {
+      margin: 8px 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 5px;
+    }
+    .bullet-list li {
+      position: relative;
+      padding-left: 20px;
+      font-size: 14px;
+      line-height: 1.6;
+      color: #1a254a;
+    }
+    .bullet-list li::before {
+      content: "";
+      position: absolute;
+      left: 2px;
+      top: 9px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #d9a53a;
+    }
+    .formula-box {
+      background: #0b1330;
+      color: #fdeec2;
+      font-weight: 700;
+      font-size: 13.6px;
+      padding: 10px 16px;
+      border-radius: 10px;
+      margin: 10px 0;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 12px 0;
+      font-size: 13.6px;
+      display: block;
+      overflow-x: auto;
+    }
+    .data-table th, .data-table td {
+      border: 1px solid #e7eaf5;
+      padding: 8px 12px;
+      text-align: left;
+      color: #1a254a;
+      white-space: normal;
+    }
+    .data-table th {
+      background: #f4f6fc;
+      color: #0b1330;
+      font-weight: 800;
+    }
+    .pyq-tag {
+      display: inline-block;
+      background: #fdf6e7;
+      color: #b9852a;
+      font-weight: 800;
+      font-size: 12px;
+      padding: 4px 12px;
+      border-radius: 8px;
+      margin: 12px 0 6px;
+    }
+    .answer-box {
+      background: #eefaf2;
+      border: 1px solid #bfe8cc;
+      color: #1a7a4c;
+      font-weight: 700;
+      font-size: 13.6px;
+      padding: 6px 14px;
+      border-radius: 9px;
+      margin: 6px 0;
+    }
+    .explain {
+      background: #f4f6fc;
+      border-radius: 9px;
+      padding: 6px 14px;
+      font-size: 13.6px;
+      color: #1a254a;
+    }
+    .subtopic {
+      padding: 14px 0 6px;
+      border-top: 1px dashed #e7eaf5;
+    }
+    .subtopic:first-of-type { border-top: none; padding-top: 2px; }
+    .subhead {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 6px;
+    }
+    .sub-num {
+      flex: none;
+      width: 26px;
+      height: 26px;
+      border-radius: 8px;
+      background: #fdf6e7;
+      color: #b9852a;
+      font-weight: 800;
+      font-size: 12px;
+      display: grid;
+      place-items: center;
+    }
+    .subhead h3 {
+      margin: 0;
+      font-size: 15.5px;
+      font-weight: 800;
+      color: #0b1330;
+    }
+    .enroll-cta {
+      background: #0b1330;
+      color: #fff;
+      border-radius: 16px;
+      padding: 24px 24px;
+      margin-top: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+      overflow: hidden;
+    }
+    .enroll-cta::before {
+      content: "";
+      position: absolute;
+      right: -40px;
+      top: -40px;
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(232,183,75,0.2), transparent 70%);
+    }
+    .enroll-cta h3 { margin: 0 0 4px; font-size: 20px; }
+    .enroll-cta p { margin: 0; color: rgba(255,255,255,0.75); font-size: 13.5px; max-width: 480px; }
+    .btn-gold {
+      background: #e8b74b;
+      color: #0b1330;
+      font-weight: 800;
+      padding: 10px 22px;
+      border-radius: 10px;
+      font-size: 13.5px;
+      white-space: nowrap;
+      text-decoration: none;
+    }
+  </style>
+
+  <link rel="stylesheet" href="/css/tailwind.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <style>.hero h1 { font-weight: 800 !important; color: #fff !important; line-height: 1.2 !important; font-family: 'Poppins', sans-serif !important; }</style>
+
+  <link rel="icon" href="/assets/images/logo.png">
+</head>
+<body>
+
+<header class="sticky top-0 z-50 border-b border-navy-900/8 bg-white/95 backdrop-blur-md">
+  <nav class="container-wide flex h-[76px] items-center gap-4" aria-label="Main">
+    <a href="/" class="flex shrink-0 items-center gap-3" aria-label="Home">
+      <span class="inline-flex shrink-0 items-center justify-center overflow-hidden rounded-lg bg-navy-950 ring-1 ring-navy-900/10">
+        <img src="assets/images/logo.png" alt="GS Net Academy" class="h-11 w-auto" width="120" height="44">
+      </span>
+      <img src="assets/images/tagline.png" alt="#1 A Premier institute for UGC NET Paper-1" class="h-11 hidden w-auto lg:block">
+    </a>
+    <ul class="mx-auto hidden items-center gap-5 xl:flex">
+      <li><a href="courses.html" class="relative block whitespace-nowrap rounded-lg px-3 py-2 text-[13.5px] font-bold transition-colors text-navy-700/75 hover:text-navy-900">UGC NET Paper-I</a></li>
+      <li><a href="results.html" class="relative block whitespace-nowrap rounded-lg px-3 py-2 text-[13.5px] font-bold transition-colors text-navy-700/75 hover:text-navy-900">Results</a></li>
+      <li><a href="tutorial.html" class="relative block whitespace-nowrap rounded-lg px-3 py-2 text-[13.5px] font-bold transition-colors text-navy-700/75 hover:text-navy-900">Tutorials</a></li>
+      <li><a href="notes.html" class="relative block whitespace-nowrap rounded-lg px-3 py-2 text-[13.5px] font-bold transition-colors text-navy-700/75 hover:text-navy-900">Notes</a></li>
+      <li><a href="blog.html" class="relative block whitespace-nowrap rounded-lg px-3 py-2 text-[13.5px] font-bold transition-colors text-navy-700/75 hover:text-navy-900">Blog</a></li>
+      <li><a href="about.html" class="relative block whitespace-nowrap rounded-lg px-3 py-2 text-[13.5px] font-bold transition-colors text-navy-700/75 hover:text-navy-900">About</a></li>
+      <li><a href="contact.html" class="relative block whitespace-nowrap rounded-lg px-3 py-2 text-[13.5px] font-bold transition-colors text-navy-700/75 hover:text-navy-900">Contact</a></li>
+    </ul>
+    <div class="ml-auto flex items-center gap-2 xl:ml-0">
+      <span title="Coming soon" class="hidden items-center gap-1.5 whitespace-nowrap rounded-lg border border-navy-900/12 px-3 py-2 text-[13px] font-bold text-navy-700 lg:inline-flex"><svg viewBox="0 0 24 24" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="4.5" width="14" height="16" rx="2.5"/><path d="M9 4.5a3 3 0 0 1 6 0"/><path d="M9 11h6M9 15h4"/></svg> <a href="https://mock-test.gsnetacademy.com/" class="cursor-pointer">Exam Portal</a></span>
+      <a href="/#free-demo" class="btn-outline btn-sm hidden 2xl:inline-flex">Demo</a>
+      <a href="enroll.html" class="btn-primary btn-sm hidden sm:inline-flex">Join Now</a>
+      <label for="nav-toggle" class="cursor-pointer rounded-lg border border-navy-900/12 p-2 text-navy-800 xl:hidden" aria-label="Menu"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></label>
+    </div>
+  </nav>
+</header>
+
+<div class="drawer xl:hidden">
+  <label for="nav-toggle" class="drawer-scrim" aria-hidden="true"></label>
+  <div class="drawer-panel">
+    <div class="flex h-[72px] shrink-0 items-center justify-between border-b border-navy-900/10 px-5">
+      <img src="assets/images/logo.png" alt="GS Net Academy" class="h-9 w-auto rounded-lg bg-navy-950">
+      <label for="nav-toggle" class="cursor-pointer p-2 text-navy-800" aria-label="Close"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></label>
+    </div>
+    <div class="flex-1 overflow-y-auto p-5">
+      <ul class="flex flex-col gap-1">
+      <li><a href="/" class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold bg-navy-50 text-navy-900">Home</a></li>
+      <li><a href="courses.html" class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold text-navy-700">UGC NET Paper-I</a></li>
+      <li><a href="results.html" class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold text-navy-700">Our Results</a></li>
+      <li><span class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold text-navy-400">UG / PG (Paper-2)<span class="rounded-md bg-navy-50 px-2 py-0.5 text-[10.5px] font-extrabold uppercase tracking-wider">Coming soon</span></span></li>
+      <li><a href="tutorial.html" class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold text-navy-700">Tutorials</a></li>
+      <li><a href="notes.html" class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold text-navy-700">Notes</a></li>
+      <li><a href="blog.html" class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold text-navy-700">Blog</a></li>
+      <li><a href="about.html" class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold text-navy-700">About</a></li>
+      <li><a href="contact.html" class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold text-navy-700">Contact</a></li>
+      </ul>
+      <p class="mt-3 rounded-xl bg-gold-50 px-4 py-3 text-[12.5px] font-extrabold uppercase tracking-wider text-gold-700">AI-Powered Career Guidance — Coming soon</p>
+      <div class="mt-5 grid gap-2.5">
+        <a href="enroll.html" class="btn-primary w-full">✓ JOIN BATCH @ ₹500</a>
+        <a href="/#free-demo" class="btn-outline w-full">▶ WATCH FREE DEMO</a>
+        <a href="https://chat.whatsapp.com/KeaQUhOFz0UGAKtLmsM7oU" target="_blank" rel="noreferrer noopener" class="btn-outline w-full"><svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.2 20.8 4.6 16A8.4 8.4 0 1 1 8 19.4l-4.8 1.4Z"/><path d="M9 8.4c.3-.7.6-.7.9-.7h.6c.2 0 .5 0 .7.6l.8 1.9c.1.2.1.4 0 .6l-.5.7c-.1.2-.2.4 0 .7a7 7 0 0 0 3 2.6c.3.1.5.1.7-.1l.7-.8c.2-.2.4-.2.6-.1l1.8.9c.3.1.5.3.5.5v.6c0 .4-.2.9-.9 1.2-.6.3-1.5.4-2.5.1a10 10 0 0 1-6.5-6.2c-.3-1-.1-1.9.1-2.5Z"/></svg> WhatsApp Group</a>
+        <a href="tel:+919266511505" class="btn-dark w-full"><svg viewBox="0 0 24 24" class="h-4 w-4" fill="currentColor" stroke="none" aria-hidden="true"><path d="M5 3h3.5l1.6 4-2 1.4a12 12 0 0 0 5.5 5.5l1.4-2 4 1.6V19a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 3 5.2 2 2 0 0 1 5 3Z"/></svg> Call 9266511505</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<section class="hero">
+  <div class="container hero-inner">
+    <span class="eyebrow">★ UGC NET Paper-I · Teaching Aptitude</span>
+    <h1 class="h-display">Evaluation Systems: Meaning, Types, CBCS, CBT & Innovations</h1>
+    <p>Complete tutorial: evaluation meaning, measurement vs assessment, placement/diagnostic/formative/summative, NRT vs CRT, CBCS, SGPA, CBT, innovations, PYQs & more.</p>
+  </div>
+</section>
+
+<main class="container">
+  <input type="checkbox" id="sidebar-toggle">
+  <label for="sidebar-toggle" class="mobile-bar">
+    <span>📑 On this page</span>
+    <span>☰ Menu</span>
+  </label>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebarNav">
+      <p class="sidebar-title">On this page</p>
+      <nav>
+        <a href="/tutorials/teaching-aptitude/evaluation-system/meaning-evaluation" class="nav-link active"><span class="nav-num">1</span>Meaning of Evaluation</a>
+        <a href="/tutorials/teaching-aptitude/evaluation-system/measurement-assessment-evaluation" class="nav-link"><span class="nav-num">2</span>Measurement, Assessment & Evaluation</a>
+        <a href="/tutorials/teaching-aptitude/evaluation-system/elements-evaluation" class="nav-link"><span class="nav-num">3</span>Elements of Evaluation</a>
+        <a href="/tutorials/teaching-aptitude/evaluation-system/principles-evaluation" class="nav-link"><span class="nav-num">4</span>Principles of Good Evaluation</a>
+        <a href="/tutorials/teaching-aptitude/evaluation-system/types-evaluation" class="nav-link"><span class="nav-num">5</span>Types of Evaluation</a>
+        <a href="/tutorials/teaching-aptitude/evaluation-system/placement-evaluation" class="nav-link"><span class="nav-num">6</span>Placement Evaluation</a>
+        <a href="/tutorials/teaching-aptitude/evaluation-system/diagnostic-evaluation" class="nav-link"><span class="nav-num">7</span>Diagnostic Evaluation</a>
+        <a href="/tutorials/teaching-aptitude/evaluation-system/formative-evaluation" class="nav-link"><span class="nav-num">8</span>Formative Evaluation</a>
+        <a href="/tutorials/teaching-aptitude/evaluation-system/summative-evaluation" class="nav-link"><span class="nav-num">9</span>Summative Evaluation</a>
+        <a href="/tutorials/teaching-aptitude/evaluation-system/formative-vs-summative" class="nav-link"><span class="nav-num">10</span>Formative vs Summative</a>
+        <a href="/tutorials/teaching-aptitude/evaluation-system/assessment-for-as-of" class="nav-link"><span class="nav-num">11</span>Assessment FOR, AS & OF</a>
+        <a href="/tutorials/teaching-aptitude/evaluation-system/norm-referenced" class="nav-link"><span class="nav-num">12</span>Norm-Referenced Evaluation</a>
+        <a href="/tutorials/teaching-aptitude/evaluation-system/criterion-referenced" class="nav-link"><span class="nav-num">13</span>Criterion-Referenced Evaluation</a>
+        <a href="/tutorials/teaching-aptitude/evaluation-system/nrt-vs-crt" class="nav-link"><span class="nav-num">14</span>NRT vs CRT</a>
+        <a href="/tutorials/teaching-aptitude/evaluation-system/internal-external" class="nav-link"><span class="nav-num">15</span>Internal & External Evaluation</a>
+        <a href="/tutorials/teaching-aptitude/evaluation-system/quantitative-qualitative" class="nav-link"><span class="nav-num">16</span>Quantitative & Qualitative</a>
+        <a href="/tutorials/teaching-aptitude/evaluation-system/tools-techniques" class="nav-link"><span class="nav-num">17</span>Tools & Techniques</a>
+        <a href="/tutorials/teaching-aptitude/evaluation-system/rubric" class="nav-link"><span class="nav-num">18</span>Rubric</a>
+        <a href="/tutorials/teaching-aptitude/evaluation-system/portfolio" class="nav-link"><span class="nav-num">19</span>Portfolio Assessment</a>
+        <a href="/tutorials/teaching-aptitude/evaluation-system/cbcs" class="nav-link"><span class="nav-num">20</span>Evaluation in CBCS</a>
+        <a href="/tutorials/teaching-aptitude/evaluation-system/cbcs-concepts" class="nav-link"><span class="nav-num">21</span>CBCS Concepts</a>
+        <a href="/tutorials/teaching-aptitude/evaluation-system/sgpa-calculation" class="nav-link"><span class="nav-num">22</span>SGPA Calculation</a>
+        <a href="/tutorials/teaching-aptitude/evaluation-system/cbcs-advantages" class="nav-link"><span class="nav-num">23</span>Advantages of CBCS</a>
+        <a href="/tutorials/teaching-aptitude/evaluation-system/cbcs-limitations" class="nav-link"><span class="nav-num">24</span>Limitations of CBCS</a>
+        <a href="/tutorials/teaching-aptitude/evaluation-system/computer-based-testing" class="nav-link"><span class="nav-num">25</span>Computer-Based Testing</a>
+        <a href="/tutorials/teaching-aptitude/evaluation-system/cbt-features" class="nav-link"><span class="nav-num">26</span>Features of CBT</a>
+        <a href="/tutorials/teaching-aptitude/evaluation-system/cbt-advantages" class="nav-link"><span class="nav-num">27</span>Advantages of CBT</a>
+        <a href="/tutorials/teaching-aptitude/evaluation-system/cbt-limitations" class="nav-link"><span class="nav-num">28</span>Limitations of CBT</a>
+        <a href="/tutorials/teaching-aptitude/evaluation-system/cbt-vs-cat" class="nav-link"><span class="nav-num">29</span>CBT vs CAT</a>
+        <a href="/tutorials/teaching-aptitude/evaluation-system/item-bank" class="nav-link"><span class="nav-num">30</span>Item Bank</a>
+        <a href="/tutorials/teaching-aptitude/evaluation-system/innovations" class="nav-link"><span class="nav-num">31</span>Innovations in Evaluation</a>
+        <a href="/tutorials/teaching-aptitude/evaluation-system/thinkers-frameworks" class="nav-link"><span class="nav-num">32</span>Thinkers & Frameworks</a>
+        <a href="/tutorials/teaching-aptitude/evaluation-system/cipp-model" class="nav-link"><span class="nav-num">33</span>CIPP Model</a>
+        <a href="/tutorials/teaching-aptitude/evaluation-system/kirkpatrick" class="nav-link"><span class="nav-num">34</span>Kirkpatrick Model</a>
+        <a href="/tutorials/teaching-aptitude/evaluation-system/verified-pyqs" class="nav-link"><span class="nav-num">35</span>Verified PYQs</a>
+        <a href="/tutorials/teaching-aptitude/evaluation-system/pyq-trend-analysis" class="nav-link"><span class="nav-num">36</span>PYQ Trend Analysis</a>
+        <a href="/tutorials/teaching-aptitude/evaluation-system/expected-mcqs" class="nav-link"><span class="nav-num">37</span>Expected MCQs</a>
+        <a href="/tutorials/teaching-aptitude/evaluation-system/one-page-revision" class="nav-link"><span class="nav-num">38</span>One-Page Revision</a>
+      </nav>
+    </aside>
+
+    <div class="content" id="contentArea">
+      <!-- ===== CARDS ===== -->
+      <div id="meaning-evaluation" class="topic-card"><div class="sec-head"><span class="sec-num">1</span><h2>Meaning of Evaluation</h2></div><p><strong>Evaluation</strong> एक systematic process है जिसमें learner के learning outcomes से संबंधित evidence collect किया जाता है, उसकी interpretation की जाती है और निर्धारित objectives या standards के आधार पर value judgement तथा decision लिया जाता है।</p><div class="formula-box">Evaluation = Evidence Collection + Interpretation + Value Judgement + Decision</div></div>
+
+      <div id="measurement-assessment-evaluation" class="topic-card"><div class="sec-head"><span class="sec-num">2</span><h2>Measurement, Assessment and Evaluation</h2></div><table class="data-table"><tr><th>Concept</th><th>Meaning</th><th>Example</th></tr><tr><td><strong>Measurement — मापन</strong></td><td>Numerical value to performance</td><td>40/50 marks</td></tr><tr><td><strong>Assessment — आकलन</strong></td><td>Collect and interpret learning evidence</td><td>Quiz, assignment, observation</td></tr><tr><td><strong>Evaluation — मूल्यांकन</strong></td><td>Judgement and decision based on evidence</td><td>Pass/fail, grade, remediation</td></tr><tr><td><strong>Examination — परीक्षा</strong></td><td>Formal test at scheduled time</td><td>Semester examination</td></tr><tr><td><strong>Testing — परीक्षण</strong></td><td>Measure specific ability/achievement</td><td>Aptitude test</td></tr></table><div class="formula-box">Measurement: How much? | Assessment: What and how learned? | Evaluation: How good and what decision?</div></div>
+
+      <div id="elements-evaluation" class="topic-card"><div class="sec-head"><span class="sec-num">3</span><h2>Elements of Evaluation</h2></div><ul class="bullet-list"><li>Learning Objectives</li><li>Learning Experiences</li><li>Tools and Techniques</li><li>Criteria and Standards</li><li>Evidence Collection</li><li>Interpretation</li><li>Value Judgement</li><li>Feedback and Decision</li></ul></div>
+
+      <div id="principles-evaluation" class="topic-card"><div class="sec-head"><span class="sec-num">4</span><h2>Principles of Good Evaluation</h2></div><ul class="bullet-list"><li><strong>Validity — वैधता:</strong> Measures what it intends to measure</li><li><strong>Reliability — विश्वसनीयता:</strong> Consistency of results</li><li><strong>Objectivity — वस्तुनिष्ठता:</strong> Minimal scorer bias</li><li><strong>Practicability — व्यावहारिकता:</strong> Economical, easy, time-efficient</li><li><strong>Comprehensiveness — व्यापकता:</strong> Covers cognitive, affective, psychomotor</li><li><strong>Continuity — निरन्तरता:</strong> Throughout the learning process</li><li><strong>Fairness — निष्पक्षता:</strong> Clear, accessible, transparent criteria</li><li><strong>Diagnostic Value:</strong> Identifies errors and learning difficulties</li></ul><div class="formula-box">Reliability is necessary but not sufficient for validity.</div></div>
+
+      <div id="types-evaluation" class="topic-card"><div class="sec-head"><span class="sec-num">5</span><h2>Types of Evaluation</h2></div><div class="formula-box">Placement → Diagnostic → Formative → Summative</div><div class="formula-box">P–D–F–S = Place → Diagnose → Form/Improve → Sum/Certify</div></div>
+
+      <div id="placement-evaluation" class="topic-card"><div class="sec-head"><span class="sec-num">6</span><h2>Placement Evaluation</h2></div><p>Before instruction begins — determines entry behaviour, readiness and appropriate learning level.</p><ul class="bullet-list"><li>Determine entry level</li><li>Know prior knowledge</li><li>Place in suitable course/group</li><li>Check prerequisites</li><li>Determine instructional starting point</li></ul><p><strong>Example:</strong> Entry test to place learners in Basic/Intermediate/Advanced groups.</p></div>
+
+      <div id="diagnostic-evaluation" class="topic-card"><div class="sec-head"><span class="sec-num">7</span><h2>Diagnostic Evaluation</h2></div><p>Identifies specific learning difficulty and its possible cause.</p><div class="formula-box">Diagnostic Evaluation = Specific Weakness + Probable Cause</div><ul class="bullet-list"><li>Identify difficulty</li><li>Detailed error analysis</li><li>Identify cause</li><li>Remedial teaching</li><li>Re-assessment</li></ul></div>
+
+      <div id="formative-evaluation" class="topic-card"><div class="sec-head"><span class="sec-num">8</span><h2>Formative Evaluation</h2></div><p>During teaching-learning process — monitors progress and provides feedback for improvement.</p><div class="formula-box">Formative = During Learning + Feedback + Improvement</div><ul class="bullet-list"><li>Identify learning gaps</li><li>Immediate feedback</li><li>Modify teaching method</li><li>Remedial support</li><li>Learner motivation</li></ul></div>
+
+      <div id="summative-evaluation" class="topic-card"><div class="sec-head"><span class="sec-num">9</span><h2>Summative Evaluation</h2></div><p>At the end of course/unit/semester — judges overall achievement.</p><div class="formula-box">Summative = End Point + Grading + Certification + Judgement</div><ul class="bullet-list"><li>Grading</li><li>Promotion</li><li>Certification</li><li>Selection</li><li>Overall achievement</li></ul></div>
+
+      <div id="formative-vs-summative" class="topic-card"><div class="sec-head"><span class="sec-num">10</span><h2>Formative vs Summative Evaluation</h2></div><table class="data-table"><tr><th>Basis</th><th>Formative</th><th>Summative</th></tr><tr><td>Timing</td><td>During learning</td><td>End of learning period</td></tr><tr><td>Main purpose</td><td>Improvement</td><td>Judgement/certification</td></tr><tr><td>Feedback</td><td>Continuous and developmental</td><td>Terminal/overall</td></tr><tr><td>Nature</td><td>Diagnostic and remedial orientation</td><td>Grading and certification</td></tr><tr><td>Stakes</td><td>Generally low</td><td>Generally high</td></tr><tr><td>Teacher action</td><td>Modify teaching</td><td>Report achievement</td></tr><tr><td>Assessment concept</td><td>Assessment FOR Learning</td><td>Assessment OF Learning</td></tr></table></div>
+
+      <div id="assessment-for-as-of" class="topic-card"><div class="sec-head"><span class="sec-num">11</span><h2>Assessment FOR, AS and OF Learning</h2></div><ul class="bullet-list"><li><strong>Assessment FOR Learning:</strong> Improve learning — teacher feedback, teaching adjustment — Formative</li><li><strong>Assessment AS Learning:</strong> Learner monitors own learning — self-assessment, peer assessment, reflection, metacognition</li><li><strong>Assessment OF Learning:</strong> Judge achievement after completion — Summative, grade, certification</li></ul><div class="formula-box">FOR = Teacher improves learning | AS = Learner monitors learning | OF = Institution judges learning</div></div>
+
+      <div id="norm-referenced" class="topic-card"><div class="sec-head"><span class="sec-num">12</span><h2>Norm-Referenced Evaluation</h2></div><p>Performance compared to other learners or norm group.</p><div class="formula-box">NRT = Learner vs Other Learners</div><ul class="bullet-list"><li>Ranking</li><li>Selection</li><li>Relative position</li><li>Percentile</li><li>Competitive examination</li></ul></div>
+
+      <div id="criterion-referenced" class="topic-card"><div class="sec-head"><span class="sec-num">13</span><h2>Criterion-Referenced Evaluation</h2></div><p>Performance compared to predetermined criterion, competency or mastery standard.</p><div class="formula-box">CRT = Learner vs Fixed Standard</div><ul class="bullet-list"><li>Mastery</li><li>Competency</li><li>Diagnosis</li><li>Learning outcomes</li><li>Certification against standards</li></ul></div>
+
+      <div id="nrt-vs-crt" class="topic-card"><div class="sec-head"><span class="sec-num">14</span><h2>NRT vs CRT</h2></div><table class="data-table"><tr><th>Basis</th><th>Norm-Referenced</th><th>Criterion-Referenced</th></tr><tr><td>Comparison</td><td>Other learners/group</td><td>Fixed standard</td></tr><tr><td>Nature</td><td>Relative</td><td>Absolute/domain-based</td></tr><tr><td>Purpose</td><td>Ranking and selection</td><td>Mastery and diagnosis</td></tr><tr><td>Result</td><td>Rank/percentile</td><td>Mastered/not mastered</td></tr><tr><td>Question</td><td>Who performed better?</td><td>What can the learner do?</td></tr></table></div>
+
+      <div id="internal-external" class="topic-card"><div class="sec-head"><span class="sec-num">15</span><h2>Internal and External Evaluation</h2></div><ul class="bullet-list"><li><strong>Internal:</strong> Institution/course teacher conducted — internal assignment, class test, presentation, project</li><li><strong>External:</strong> Outside examiner/university/external agency — university exam, external viva, national eligibility test</li></ul></div>
+
+      <div id="quantitative-qualitative" class="topic-card"><div class="sec-head"><span class="sec-num">16</span><h2>Quantitative and Qualitative Evaluation</h2></div><ul class="bullet-list"><li><strong>Quantitative:</strong> Numerical — marks, score, grade point, percentile, frequency</li><li><strong>Qualitative:</strong> Descriptive — observation report, narrative feedback, interview, reflective journal, portfolio commentary</li></ul></div>
+
+      <div id="tools-techniques" class="topic-card"><div class="sec-head"><span class="sec-num">17</span><h2>Tools and Techniques of Evaluation</h2></div><table class="data-table"><tr><th>Tool/Technique</th><th>Best suited for</th></tr><tr><td>Written test</td><td>Knowledge and written expression</td></tr><tr><td>Oral test</td><td>Verbal understanding and expression</td></tr><tr><td>Observation</td><td>Behaviour and performance</td></tr><tr><td>Interview</td><td>Attitude, experience and reasoning</td></tr><tr><td>Checklist</td><td>Presence or absence of behaviour</td></tr><tr><td>Rating scale</td><td>Degree or quality of performance</td></tr><tr><td>Rubric</td><td>Criteria-based performance levels</td></tr><tr><td>Portfolio</td><td>Growth over time</td></tr><tr><td>Project</td><td>Application and integration</td></tr></table></div>
+
+      <div id="rubric" class="topic-card"><div class="sec-head"><span class="sec-num">18</span><h2>Rubric</h2></div><div class="formula-box">Rubric = Criteria + Levels + Descriptors</div><ul class="bullet-list"><li><strong>Analytic Rubric:</strong> Each criterion scored separately</li><li><strong>Holistic Rubric:</strong> Overall performance score/level</li><li><strong>Rubric vs Checklist:</strong> Rubric shows quality/level; Checklist shows presence/absence</li></ul></div>
+
+      <div id="portfolio" class="topic-card"><div class="sec-head"><span class="sec-num">19</span><h2>Portfolio Assessment</h2></div><p>Systematic collection of learner's work showing learning, effort, achievement and growth.</p><ul class="bullet-list"><li>Drafts, final assignments, projects, reflection, teacher feedback, self-assessment, progress evidence</li></ul></div>
+
+      <div id="cbcs" class="topic-card"><div class="sec-head"><span class="sec-num">20</span><h2>Evaluation in CBCS</h2></div><p><strong>Choice Based Credit System</strong> — Flexibility to choose core, elective/minor and skill-based courses within prescribed framework.</p><p>UGC guidelines connect CBCS to student-centric choice, interdisciplinary learning, grading and learner mobility.</p></div>
+
+      <div id="cbcs-concepts" class="topic-card"><div class="sec-head"><span class="sec-num">21</span><h2>CBCS Concepts</h2></div><ul class="bullet-list"><li><strong>Core Course:</strong> Compulsory foundation course</li><li><strong>Elective Course:</strong> Selected from approved basket</li><li><strong>Skill-Based Course:</strong> Practical/professional competencies</li><li><strong>Credit:</strong> Academic workload or learning volume</li><li><strong>Grade:</strong> Performance category (O, A+, A, B+, B, etc.)</li><li><strong>Grade Point:</strong> Numerical value assigned to letter grade</li></ul><div class="formula-box">Credit Point = Course Credit × Grade Point</div></div>
+
+      <div id="sgpa-calculation" class="topic-card"><div class="sec-head"><span class="sec-num">22</span><h2>SGPA Calculation</h2></div><div class="formula-box">SGPA = Σ(Course Credit × Grade Point) ÷ Σ Credits</div><p>CGPA is the cumulative SGPA across semesters.</p><p><strong>Example:</strong> Course A: Credit 4, Grade Point 8 → Credit Point 32; Course B: Credit 3, Grade Point 7 → 21; Total Credit Points = 53; Total Credits = 7; SGPA = 53/7 = 7.57</p></div>
+
+      <div id="cbcs-advantages" class="topic-card"><div class="sec-head"><span class="sec-num">23</span><h2>Advantages of CBCS</h2></div><ul class="bullet-list"><li>Learner choice</li><li>Academic flexibility</li><li>Interdisciplinary learning</li><li>Skill-based courses</li><li>Credit accumulation</li><li>Credit transfer</li><li>Learner mobility</li><li>Student-centred education</li><li>Grading system</li></ul></div>
+
+      <div id="cbcs-limitations" class="topic-card"><div class="sec-head"><span class="sec-num">24</span><h2>Limitations of CBCS</h2></div><ul class="bullet-list"><li>Timetable complexity</li><li>Course availability issues</li><li>Faculty workload</li><li>Infrastructure requirements</li><li>Advising needed</li><li>Institutional standards variation</li><li>Actual choice may be limited</li><li>Internal assessment variation</li></ul><p><strong>Exam Trap:</strong> CBCS does NOT mean unlimited freedom. Choice is within prescribed course baskets, prerequisites and institutional rules.</p></div>
+
+      <div id="computer-based-testing" class="topic-card"><div class="sec-head"><span class="sec-num">25</span><h2>Computer-Based Testing (CBT)</h2></div><div class="formula-box">CBT = Digital Test Delivery + Response Capture + Scoring/Processing</div><p>UGC-NET has been conducted in CBT mode by NTA since December 2018.</p></div>
+
+      <div id="cbt-features" class="topic-card"><div class="sec-head"><span class="sec-num">26</span><h2>Features of CBT</h2></div><ul class="bullet-list"><li>Digital question display</li><li>On-screen timer</li><li>Question palette</li><li>Save and next</li><li>Mark for review</li><li>Response modification</li><li>Item randomisation</li><li>Automated scoring</li><li>Item bank</li><li>Audit trail</li><li>Result processing</li><li>Response analytics</li></ul></div>
+
+      <div id="cbt-advantages" class="topic-card"><div class="sec-head"><span class="sec-num">27</span><h2>Advantages of CBT</h2></div><ul class="bullet-list"><li>Rapid result processing</li><li>Standardised administration</li><li>Large-scale testing</li><li>Reduced paper handling</li><li>Randomisation</li><li>Multimedia questions</li><li>Automated scoring</li><li>Response-time analysis</li><li>Accessible display options</li><li>Efficient data management</li></ul></div>
+
+      <div id="cbt-limitations" class="topic-card"><div class="sec-head"><span class="sec-num">28</span><h2>Limitations of CBT</h2></div><ul class="bullet-list"><li>Digital divide</li><li>Computer anxiety</li><li>Technical failures</li><li>Electricity and network problems</li><li>Cybersecurity concerns</li><li>Data privacy</li><li>Identity verification</li><li>Technical support needed</li><li>Complex subjective answer scoring</li><li>Accessibility issues</li></ul></div>
+
+      <div id="cbt-vs-cat" class="topic-card"><div class="sec-head"><span class="sec-num">29</span><h2>CBT vs CAT</h2></div><ul class="bullet-list"><li><strong>Computer-Based Test (CBT):</strong> Computer delivers test; may be fixed</li><li><strong>Internet-Based/Online Test:</strong> Delivered via Internet</li><li><strong>Remote-Proctored Test:</strong> Exam from remote location with monitoring</li><li><strong>Computerized Adaptive Test (CAT):</strong> Next question selected based on previous responses or estimated ability</li></ul><div class="formula-box">Every adaptive test is computer-based, but every CBT is not adaptive.</div><p><strong>Exam Trap:</strong> Random questions ≠ Adaptive testing. CBT ≠ testing from home.</p></div>
+
+      <div id="item-bank" class="topic-card"><div class="sec-head"><span class="sec-num">30</span><h2>Item Bank</h2></div><p>Organised digital collection of validated questions with metadata:</p><ul class="bullet-list"><li>Subject, Unit, Difficulty level, Cognitive level, Correct answer, Discrimination index, Time required</li></ul><p><strong>Exam Trap:</strong> Large question bank ≠ automatically valid item bank. Quality, syllabus mapping and psychometric properties are essential.</p></div>
+
+      <div id="innovations" class="topic-card"><div class="sec-head"><span class="sec-num">31</span><h2>Innovations in Evaluation Systems</h2></div><ul class="bullet-list"><li><strong>Continuous and Comprehensive Evaluation:</strong> Throughout learning, multiple outcomes</li><li><strong>Outcome-Based Assessment:</strong> Evidence mapped to Course/Programme Outcomes</li><li><strong>Authentic Assessment:</strong> Realistic and meaningful tasks</li><li><strong>Performance-Based Assessment:</strong> Demonstrate skill/performance</li><li><strong>Open-Book Examination:</strong> Focus on application, analysis, evaluation, problem-solving</li><li><strong>Self-Assessment:</strong> Learner judges own performance</li><li><strong>Peer Assessment:</strong> Learners give feedback to peers</li><li><strong>E-Portfolio:</strong> Digital evidence of progress</li><li><strong>Learning Analytics:</strong> Analyse learner data for patterns, at-risk identification, personalised feedback</li><li><strong>AI-Assisted Evaluation:</strong> Item drafting, automated feedback, response classification, adaptive testing (with ethical concerns: bias, privacy, transparency, human accountability)</li></ul><div class="formula-box">AI should support professional judgement, not eliminate accountability.</div></div>
+
+      <div id="thinkers-frameworks" class="topic-card"><div class="sec-head"><span class="sec-num">32</span><h2>Important Thinkers and Frameworks</h2></div><table class="data-table"><tr><th>Thinker/Framework</th><th>Association</th></tr><tr><td><strong>Ralph Tyler</strong></td><td>Objective-oriented evaluation</td></tr><tr><td><strong>Michael Scriven</strong></td><td>Formative and Summative Evaluation</td></tr><tr><td><strong>Daniel Stufflebeam</strong></td><td>CIPP Model</td></tr><tr><td><strong>Benjamin Bloom</strong></td><td>Taxonomy and mastery-learning orientation</td></tr><tr><td><strong>Kirkpatrick</strong></td><td>Training Evaluation Model</td></tr></table></div>
+
+      <div id="cipp-model" class="topic-card"><div class="sec-head"><span class="sec-num">33</span><h2>CIPP Model</h2></div><div class="formula-box">CIPP = Context + Input + Process + Product</div><ul class="bullet-list"><li><strong>Context:</strong> Needs, problems, objectives — What should be done?</li><li><strong>Input:</strong> Resources, strategies, alternatives — How should it be done?</li><li><strong>Process:</strong> Programme implementation monitoring — Is it being done as planned?</li><li><strong>Product:</strong> Outcomes and impact evaluation — Did it succeed?</li></ul></div>
+
+      <div id="kirkpatrick" class="topic-card"><div class="sec-head"><span class="sec-num">34</span><h2>Kirkpatrick's Four-Level Model</h2></div><ul class="bullet-list"><li><strong>Reaction:</strong> How did participants feel about the training?</li><li><strong>Learning:</strong> What did they learn?</li><li><strong>Behaviour:</strong> What change occurred in workplace behaviour?</li><li><strong>Results:</strong> What impact on the organisation?</li></ul></div>
+
+      <div id="verified-pyqs" class="topic-card"><div class="sec-head"><span class="sec-num">35</span><h2>Verified PYQs</h2></div><div class="pyq-tag">PYQ 1: UGC NET, 4 Dec 2019, Shift 1</div><p><strong>Question:</strong> Which assessment is conducted periodically with an eye on standards?<br><strong>Answer:</strong> Summative Assessment</p>
+      <div class="pyq-tag">PYQ 2: UGC NET, 2 Dec 2019, Shift 1</div><p><strong>Match:</strong> Formative → Improvement scope; Summative → Judging standards; Norm-referenced → Comparing with others; Criterion-referenced → Mastery standards</p>
+      <div class="pyq-tag">PYQ 3: UGC NET, 22 Oct 2022, Shift 1</div><p><strong>Assertion:</strong> Formative assessments provide feedback for improvement.<br><strong>Reason:</strong> Formative assessments improve teaching-learning process.<br><strong>Answer:</strong> Both true, Reason explains Assertion.</p>
+      <div class="pyq-tag">PYQ 4: UGC NET, Dec 2018</div><p><strong>Question:</strong> Goal of Formative Assessment?<br><strong>Answer:</strong> Monitor learning to provide ongoing feedback.</p></div>
+
+      <div id="pyq-trend-analysis" class="topic-card"><div class="sec-head"><span class="sec-num">36</span><h2>PYQ Trend Analysis</h2></div><table class="data-table"><tr><th>Tested Area</th><th>Common Format</th></tr><tr><td>Formative vs Summative</td><td>Direct MCQ/Assertion–Reason</td></tr><tr><td>Placement vs Diagnostic</td><td>Classroom situation</td></tr><tr><td>NRT vs CRT</td><td>Match the Following</td></tr><tr><td>Validity and Reliability</td><td>Statement-based</td></tr><tr><td>Assessment FOR/AS/OF</td><td>Concept matching</td></tr><tr><td>CBCS terms</td><td>Match/incorrect statement</td></tr><tr><td>SGPA/CGPA</td><td>Numerical question</td></tr><tr><td>CBT</td><td>Feature and advantage</td></tr><tr><td>CBT vs CAT</td><td>Conceptual distinction</td></tr><tr><td>Innovation</td><td>Scenario-based</td></tr><tr><td>Rubric and portfolio</td><td>Tool identification</td></tr><tr><td>AI evaluation</td><td>Ethics-based statements</td></tr></table></div>
+
+      <div id="expected-mcqs" class="topic-card"><div class="sec-head"><span class="sec-num">37</span><h2>Expected MCQs (Dec 2026)</h2></div><div class="pyq-tag">Q1</div><p>Teacher quizzes, identifies misconceptions, reteaches → <strong>Formative Evaluation</strong></p>
+      <div class="pyq-tag">Q2</div><p>Focused test to find why learner repeatedly makes a particular error → <strong>Diagnostic Evaluation</strong></p>
+      <div class="pyq-tag">Q3</div><p>Candidate at 92nd percentile → <strong>Norm-Referenced Interpretation</strong></p>
+      <div class="pyq-tag">Q4</div><p>Learner needs 80% competencies for certification → <strong>Criterion-Referenced Evaluation</strong></p>
+      <div class="pyq-tag">Q5</div><p>Incorrect statement: Credit and marks are the same → <strong>False (Credit is workload; marks are performance)</strong></p>
+      <div class="pyq-tag">Q6</div><p>Computer selects next item based on previous response → <strong>Computerized Adaptive Testing (CAT)</strong></p>
+      <div class="pyq-tag">Q7</div><p>Criteria + Levels + Descriptors → <strong>Rubric</strong></p>
+      <div class="pyq-tag">Q8</div><p>Learner checks own answer with rubric and changes strategy → <strong>Assessment AS Learning</strong></p>
+      <div class="pyq-tag">Q9 Assertion-Reason</div><p>Assertion: Reliable test may not be valid. Reason: Consistent measurement can be of the wrong construct. → <strong>Both true, Reason explains Assertion</strong></p>
+      <div class="pyq-tag">Q10</div><p>CIPP — Programme implementation evaluation component → <strong>Process Evaluation</strong></p>
+      <div class="pyq-tag">Q11</div><p>Real-world task competency assessment → <strong>Authentic Assessment</strong></p>
+      <div class="pyq-tag">Q12</div><p>AI scoring safeguard → <strong>Validation, bias audit, transparency, meaningful human oversight</strong></p></div>
+
+      <div id="one-page-revision" class="topic-card"><div class="sec-head"><span class="sec-num">38</span><h2>One-Page Revision</h2></div><div class="formula-box">Evaluation = Evidence + Interpretation + Judgement + Decision</div>
+      <div class="formula-box">Placement = Entry Level | Diagnostic = Specific Gap and Cause | Formative = During + Feedback + Improvement | Summative = End + Grade + Certification</div>
+      <div class="formula-box">FOR = Improve Learning | AS = Self-Monitoring | OF = Final Judgement</div>
+      <div class="formula-box">NRT = Learner vs Group | CRT = Learner vs Standard</div>
+      <div class="formula-box">Validity = Right Measurement | Reliability = Consistent Measurement | Objectivity = Minimum Scorer Bias</div>
+      <div class="formula-box">Credit = Workload | Grade Point = Performance Value | SGPA = Σ(Credit × Grade Point) ÷ ΣCredits</div>
+      <div class="formula-box">CBT = Computer-Delivered Test | CAT = Ability-Based Item Selection</div>
+      <div class="formula-box">Rubric = Criteria + Levels + Descriptors | Portfolio = Growth Over Time</div>
+      <div class="formula-box">CIPP = Context + Input + Process + Product | Kirkpatrick = Reaction + Learning + Behaviour + Results</div>
+      <p><strong>Final Exam Approach:</strong> For any evaluation question, identify: (1) When is it happening? (2) Compared to what? (3) What decision will the evidence support?</p></div>
+
+      <div class="enroll-cta"><div><h3 class="h-display">Join the Paper-1 Batch</h3><p>Course fee FREE — ₹500 registration & academic/logistics contribution. Classes daily at 6:30 PM.</p></div><a href="/enroll.html" class="btn-gold">✓ JOIN BATCH @ ₹500</a></div>
+    </div>
+  </div>
+</main>
+
+<footer class="relative overflow-hidden bg-navy-950 text-white">
+  <div class="grid-paper absolute inset-0 opacity-50" aria-hidden="true"></div>
+  <div class="container-x relative py-12 lg:py-14">
+    <div class="grid grid-cols-2 gap-10 lg:grid-cols-4">
+
+      <div>
+        <div class="flex items-center gap-3">
+          <img src="/assets/images/logo.png" alt="GS Net Academy" class="h-11 w-auto rounded-lg bg-white p-1" width="120" height="44">
+          <img src="/assets/images/tagline.png" alt="" class="h-11 w-auto brightness-0 invert" aria-hidden="true">
+        </div>
+        <p class="mt-5 text-[14px] leading-relaxed text-navy-100/75">UGC NET Paper-I | JRF Preparation | Mentorship</p>
+        <span class="eyebrow mt-5"><svg viewBox="0 0 24 24" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1"/></svg> JRF @ ₹500 Mission 2026</span>
+
+        <p class="mt-6 text-[11px] font-extrabold uppercase tracking-[0.18em] text-gold-400">Follow Us</p>
+        <ul class="mt-3 flex flex-wrap gap-2">
+          <li><a href="https://www.youtube.com/@gsnetacademy" target="_blank" rel="noreferrer noopener" aria-label="YouTube" title="YouTube" class="grid h-10 w-10 place-items-center rounded-xl border border-white/12 bg-white/[0.06] text-navy-100/80 transition hover:border-gold-400/50 hover:bg-white/[0.12] hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor" aria-hidden="true"><path d="M21.6 7.2a2.5 2.5 0 0 0-1.8-1.8C18.2 5 12 5 12 5s-6.2 0-7.8.4A2.5 2.5 0 0 0 2.4 7.2 26 26 0 0 0 2 12a26 26 0 0 0 .4 4.8 2.5 2.5 0 0 0 1.8 1.8C5.8 19 12 19 12 19s6.2 0 7.8-.4a2.5 2.5 0 0 0 1.8-1.8A26 26 0 0 0 22 12a26 26 0 0 0-.4-4.8ZM10 15V9l5.2 3L10 15Z"/></svg></a></li>
+          <li><a href="https://www.instagram.com/gsnetacademy" target="_blank" rel="noreferrer noopener" aria-label="Instagram" title="Instagram" class="grid h-10 w-10 place-items-center rounded-xl border border-white/12 bg-white/[0.06] text-navy-100/80 transition hover:border-gold-400/50 hover:bg-white/[0.12] hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg></a></li>
+          <li><a href="https://www.facebook.com/gsnetacademy" target="_blank" rel="noreferrer noopener" aria-label="Facebook" title="Facebook" class="grid h-10 w-10 place-items-center rounded-xl border border-white/12 bg-white/[0.06] text-navy-100/80 transition hover:border-gold-400/50 hover:bg-white/[0.12] hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.25-1.5 1.55-1.5H16.7V3.6c-.3 0-1.3-.13-2.47-.13-2.44 0-4.11 1.49-4.11 4.23V9.9H7.4V13h2.72v8h3.38Z"/></svg></a></li>
+          <li><a href="https://t.me/gsnetacademy" target="_blank" rel="noreferrer noopener" aria-label="Telegram" title="Telegram" class="grid h-10 w-10 place-items-center rounded-xl border border-white/12 bg-white/[0.06] text-navy-100/80 transition hover:border-gold-400/50 hover:bg-white/[0.12] hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor" aria-hidden="true"><path d="M21.3 4.3 2.9 11.4c-.9.35-.9 1.62.02 1.93l4.6 1.53 1.75 5.3c.25.75 1.2.95 1.73.37l2.5-2.72 4.6 3.38c.63.46 1.53.12 1.7-.65l3.1-14.9c.2-.9-.7-1.65-1.6-1.31ZM9.6 14.1l8.5-5.6-6.9 6.5-.3 3.3-1.3-4.2Z"/></svg></a></li>
+          <li><a href="https://chat.whatsapp.com/KeaQUhOFz0UGAKtLmsM7oU" target="_blank" rel="noreferrer noopener" aria-label="WhatsApp Group" title="WhatsApp Group" class="grid h-10 w-10 place-items-center rounded-xl border border-white/12 bg-white/[0.06] text-navy-100/80 transition hover:border-emerald-400/50 hover:bg-emerald-500/15 hover:text-emerald-300"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.2 20.8 4.6 16A8.4 8.4 0 1 1 8 19.4l-4.8 1.4Z"/><path d="M9 8.4c.3-.7.6-.7.9-.7h.6c.2 0 .5 0 .7.6l.8 1.9c.1.2.1.4 0 .6l-.5.7c-.1.2-.2.4 0 .7a7 7 0 0 0 3 2.6c.3.1.5.1.7-.1l.7-.8c.2-.2.4-.2.6-.1l1.8.9c.3.1.5.3.5.5v.6c0 .4-.2.9-.9 1.2-.6.3-1.5.4-2.5.1a10 10 0 0 1-6.5-6.2c-.3-1-.1-1.9.1-2.5Z"/></svg></a></li>
+          <li><a href="https://x.com/gsnetacademy" target="_blank" rel="noreferrer noopener" aria-label="X (Twitter)" title="X (Twitter)" class="grid h-10 w-10 place-items-center rounded-xl border border-white/12 bg-white/[0.06] text-navy-100/80 transition hover:border-gold-400/50 hover:bg-white/[0.12] hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-4.5 w-4.5" fill="currentColor" aria-hidden="true"><path d="M17.5 3h3.1l-6.8 7.8L21.8 21h-6.2l-4.9-6.4L5.1 21H2l7.3-8.3L2.5 3h6.4l4.4 5.8L17.5 3Zm-1.1 16.2h1.7L7.7 4.7H5.9l10.5 14.5Z"/></svg></a></li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="text-[11px] font-extrabold uppercase tracking-[0.18em] text-gold-400">Quick Links</p>
+        <ul class="mt-4 grid gap-2.5">
+          <li><a href="/index.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Home</a></li>
+          <li><a href="/courses.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">UGC NET Paper-I</a></li>
+          <li><a href="/results.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Our Results</a></li>
+          <li><a href="/tutorials.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Tutorials</a></li>
+          <li><a href="/blog.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Blog</a></li>
+          <li><a href="/about.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">About</a></li>
+          <li><a href="/contact.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="text-[11px] font-extrabold uppercase tracking-[0.18em] text-gold-400">Resources</p>
+        <ul class="mt-4 grid gap-2.5">
+          <li><a href="/notes.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Notes</a></li>
+          <li><a href="/enroll.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Register for ₹500</a></li>
+          <li><a href="/index.html#free-demo" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Free Demo Classes</a></li>
+          <li><a href="https://chat.whatsapp.com/KeaQUhOFz0UGAKtLmsM7oU" target="_blank" rel="noreferrer noopener" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Student Community</a></li>
+        </ul>
+        <p class="mt-6 text-[11px] font-extrabold uppercase tracking-[0.18em] text-gold-400">Legal</p>
+        <ul class="mt-4 grid gap-2.5">
+          <li><a href="/privacy-policy.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Privacy Policy</a></li>
+          <li><a href="/refund-policy.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Refund &amp; Cancellation</a></li>
+          <li><a href="/terms-of-enrollment.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Terms of Enrollment</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="text-[11px] font-extrabold uppercase tracking-[0.18em] text-gold-400">Contact</p>
+        <ul class="mt-4 grid gap-2.5 text-[14px] text-navy-100/75">
+          <li><a href="tel:+919266511505" class="flex items-center gap-2 hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-4 w-4 icon-gold" fill="currentColor" aria-hidden="true"><path d="M5 3h3.5l1.6 4-2 1.4a12 12 0 0 0 5.5 5.5l1.4-2 4 1.6V19a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 3 5.2 2 2 0 0 1 5 3Z"/></svg> +91 9266511505</a></li>
+          <li><a href="tel:+919810845327" class="flex items-center gap-2 hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-4 w-4 icon-gold" fill="currentColor" aria-hidden="true"><path d="M5 3h3.5l1.6 4-2 1.4a12 12 0 0 0 5.5 5.5l1.4-2 4 1.6V19a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 3 5.2 2 2 0 0 1 5 3Z"/></svg> +91 9810845327</a></li>
+          <li><a href="mailto:gsnetacademy@gmail.com" class="flex items-center gap-2 break-all hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-4 w-4 icon-gold" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="m3.5 6.5 8.5 6 8.5-6"/></svg> gsnetacademy@gmail.com</a></li>
+          <li><a href="https://chat.whatsapp.com/KeaQUhOFz0UGAKtLmsM7oU" target="_blank" rel="noreferrer noopener" class="flex items-center gap-2 hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-4 w-4 icon-gold" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.2 20.8 4.6 16A8.4 8.4 0 1 1 8 19.4l-4.8 1.4Z"/><path d="M9 8.4c.3-.7.6-.7.9-.7h.6c.2 0 .5 0 .7.6l.8 1.9c.1.2.1.4 0 .6l-.5.7c-.1.2-.2.4 0 .7a7 7 0 0 0 3 2.6c.3.1.5.1.7-.1l.7-.8c.2-.2.4-.2.6-.1l1.8.9c.3.1.5.3.5.5v.6c0 .4-.2.9-.9 1.2-.6.3-1.5.4-2.5.1a10 10 0 0 1-6.5-6.2c-.3-1-.1-1.9.1-2.5Z"/></svg> WhatsApp Group</a></li>
+        </ul>
+        <a href="/enroll.html" class="btn-primary mt-6 w-full">Join for ₹500</a>
+        <p class="text-[14px] mt-3 text-navy-100/75 transition hover:text-gold-300">Address: B 14-15, Udhyog Marg, Block B, Sector 1, Noida, Uttar Pradesh 201301</p>
+      </div>
+    </div>
+
+    <div class="mt-10 border-t border-white/10 pt-6">
+      <ul class="flex flex-wrap items-center gap-x-5 gap-y-2 text-[13px]">
+        <li><a href="/privacy-policy.html" class="text-navy-100/70 transition hover:text-gold-300">Privacy Policy</a></li>
+        <li aria-hidden="true" class="text-navy-100/25">|</li>
+        <li><a href="/refund-policy.html" class="text-navy-100/70 transition hover:text-gold-300">Refund &amp; Cancellation</a></li>
+        <li aria-hidden="true" class="text-navy-100/25">|</li>
+        <li><a href="/terms-of-enrollment.html" class="text-navy-100/70 transition hover:text-gold-300">Terms of Enrollment</a></li>
+      </ul>
+      <div class="mt-4 flex flex-col gap-2 text-[13px] text-navy-100/60 sm:flex-row sm:items-center sm:justify-between">
+        <p>© 2026 GS Net Academy. All Rights Reserved.</p>
+        <p>A Premier institute for UGC NET Paper-1</p>
+      </div>
+      <p class="mt-4 text-[12px] leading-relaxed text-navy-100/45">Disclaimer: GS Net Academy किसी भी exam में selection, rank या score की guarantee नहीं देता। हम quality teaching, study material, practice और academic mentorship प्रदान करते हैं। UGC, NTA या किसी अन्य government body से हमारा कोई affiliation नहीं है।</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  (function () {
+    const BASE_PATH = "/tutorials/teaching-aptitude/evaluation-system";
+
+    const links = document.querySelectorAll(".nav-link");
+    const cards = document.querySelectorAll(".topic-card");
+    const content = document.getElementById("contentArea");
+    const sidebarToggle = document.getElementById("sidebar-toggle");
+
+    // URL se topic slug nikalna
+    function getSlugFromPath() {
+      let path = window.location.pathname;
+
+      // Ending slash remove
+      path = path.replace(/\/+$/, "");
+
+      // Example:
+      // /tutorials/teaching-aptitude/evaluation-system/meaning-evaluation
+      // => meaning-evaluation
+      if (path.startsWith(BASE_PATH + "/")) {
+        return path
+          .slice((BASE_PATH + "/").length)
+          .split("/")[0];
+      }
+
+      return null;
+    }
+
+    // URL update
+    function updateUrl(slug, replace = false) {
+      const newPath = BASE_PATH + "/" + slug;
+
+      if (window.location.pathname !== newPath) {
+        if (replace) {
+          history.replaceState(null, "", newPath);
+        } else {
+          history.pushState(null, "", newPath);
+        }
+      }
+    }
+
+    // Active sidebar link
+    function updateActiveLink(slug) {
+      links.forEach(function (link) {
+        const href = link.getAttribute("href");
+
+        link.classList.toggle(
+          "active",
+          href === BASE_PATH + "/" + slug
+        );
+      });
+    }
+
+    // Card show
+    function showCard(slug, updateHistory = true) {
+      cards.forEach(function (card) {
+        card.classList.add("hidden");
+      });
+
+      const target = document.getElementById(slug);
+
+      if (target) {
+        target.classList.remove("hidden");
+
+        updateActiveLink(slug);
+
+        if (updateHistory) {
+          updateUrl(slug);
+        }
+      } else {
+        // Agar slug nahi mila to first card
+        const first = cards[0];
+
+        if (first) {
+          first.classList.remove("hidden");
+
+          const firstSlug = first.id;
+
+          updateActiveLink(firstSlug);
+          updateUrl(firstSlug, true);
+        }
+      }
+
+      // Mobile sidebar close
+      if (sidebarToggle) {
+        sidebarToggle.checked = false;
+      }
+    }
+
+    // Sidebar links
+    links.forEach(function (link) {
+      link.addEventListener("click", function (e) {
+        e.preventDefault();
+
+        const href = this.getAttribute("href");
+
+        if (!href) return;
+
+        // Example:
+        // /tutorials/teaching-aptitude/evaluation-system/meaning-evaluation
+        const slug = href
+          .replace(BASE_PATH + "/", "")
+          .split("/")[0];
+
+        if (!slug) return;
+
+        showCard(slug, true);
+
+        // Scroll to content
+        if (content) {
+          const top =
+            content.getBoundingClientRect().top +
+            window.pageYOffset -
+            10;
+
+          window.scrollTo({
+            top: top,
+            behavior: "smooth"
+          });
+        }
+      });
+    });
+
+    // Page load hone par URL check
+    function initFromPath() {
+      let slug = getSlugFromPath();
+
+      // Agar URL mein valid slug nahi hai
+      if (!slug || !document.getElementById(slug)) {
+        slug = cards[0]?.id || "meaning-evaluation";
+      }
+
+      // Card show karo
+      showCard(slug, false);
+
+      // Correct URL set karo
+      const expectedPath = BASE_PATH + "/" + slug;
+
+      if (window.location.pathname !== expectedPath) {
+        history.replaceState(null, "", expectedPath);
+      }
+    }
+
+    initFromPath();
+
+    // Browser Back / Forward
+    window.addEventListener("popstate", function () {
+      const slug = getSlugFromPath();
+
+      if (slug && document.getElementById(slug)) {
+        showCard(slug, false);
+      } else {
+        const firstSlug =
+          cards[0]?.id || "meaning-evaluation";
+
+        showCard(firstSlug, false);
+      }
+    });
+  })();
+</script>
+</body>
+</html>

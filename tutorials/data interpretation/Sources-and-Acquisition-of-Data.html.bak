@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sources and Acquisition of Data – Full Notes | UGC NET Paper-1</title>
+  <meta name="description" content="Complete tutorial: Sources and Acquisition of Data, Primary Data, Secondary Data, Census, Sampling & Data Acquisition for UGC NET Paper-1 Data Interpretation.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; }
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background: #f8f5ee;
+      color: #101a3d;
+    }
+    .h-display { font-family: 'Poppins', sans-serif; font-weight: 800; letter-spacing: -0.01em; }
+    .container { max-width: 1360px; margin: 0 auto; padding: 0 20px; }
+
+    .hero {
+      background: #0b1330;
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+      padding: 28px 0 22px;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      right: -80px;
+      top: -100px;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(232,183,75,0.2), transparent 70%);
+    }
+    .hero-inner { position: relative; }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      padding: 6px 16px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+      color: #e8b74b;
+    }
+    .hero h1 {
+      font-size: clamp(28px, 4.2vw, 44px);
+      margin: 12px 0 6px;
+    }
+    .hero p {
+      color: rgba(255,255,255,0.78);
+      max-width: 680px;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 28px;
+      padding: 28px 0 50px;
+      align-items: start;
+    }
+    @media (max-width: 980px) {
+      .layout { grid-template-columns: 1fr; }
+    }
+
+    .sidebar {
+      position: sticky;
+      top: 16px;
+      max-height: calc(100vh - 40px);
+      overflow-y: auto;
+      background: #fff;
+      border: 1px solid rgba(16,26,61,0.08);
+      border-radius: 16px;
+      padding: 16px 12px;
+      box-shadow: 0 6px 24px rgba(16,26,61,0.05);
+    }
+    .sidebar::-webkit-scrollbar { width: 5px; }
+    .sidebar::-webkit-scrollbar-thumb { background: #dde2ef; border-radius: 8px; }
+    .sidebar-title {
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: #b9852a;
+      padding: 4px 10px 14px;
+    }
+    .nav-link {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 10px;
+      border-radius: 10px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #33406b;
+      line-height: 1.3;
+      transition: 0.1s;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .nav-link:hover { background: #f4f6fc; color: #0b1330; }
+    .nav-link.active {
+      background: #fdf6e7;
+      color: #0b1330;
+    }
+    .nav-num {
+      flex: none;
+      width: 22px;
+      height: 22px;
+      border-radius: 7px;
+      background: #e7eaf5;
+      color: #5b6690;
+      font-size: 11px;
+      font-weight: 800;
+      display: grid;
+      place-items: center;
+    }
+    .nav-link.active .nav-num {
+      background: #e8b74b;
+      color: #0b1330;
+    }
+
+    #sidebar-toggle { display: none; }
+    .mobile-bar { display: none; }
+    @media (max-width: 980px) {
+      .mobile-bar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: #fff;
+        border: 1px solid rgba(16,26,61,0.1);
+        border-radius: 12px;
+        padding: 12px 16px;
+        margin-bottom: 8px;
+        font-weight: 800;
+        font-size: 13.5px;
+        color: #0b1330;
+      }
+      .sidebar { display: none; position: static; max-height: none; }
+      #sidebar-toggle:checked ~ .layout .sidebar { display: block; }
+    }
+
+    .content { min-width: 0; }
+    .topic-card {
+      background: #fff;
+      border: 1px solid rgba(16,26,61,0.08);
+      border-radius: 16px;
+      padding: 20px 20px 16px;
+      margin-bottom: 18px;
+      scroll-margin-top: 20px;
+      display: block;
+    }
+    .topic-card.hidden { display: none; }
+    .sec-head {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+    .sec-num {
+      flex: none;
+      width: 34px;
+      height: 34px;
+      border-radius: 10px;
+      background: #0b1330;
+      color: #e8b74b;
+      font-weight: 800;
+      font-size: 14px;
+      display: grid;
+      place-items: center;
+    }
+    .sec-head h2 {
+      margin: 0;
+      font-size: 19px;
+      font-weight: 800;
+      color: #0b1330;
+    }
+    .topic-card p {
+      font-size: 14.5px;
+      line-height: 1.75;
+      color: #1a254a;
+      margin: 6px 0;
+    }
+    .bullet-list {
+      margin: 8px 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 5px;
+    }
+    .bullet-list li {
+      position: relative;
+      padding-left: 20px;
+      font-size: 14px;
+      line-height: 1.6;
+      color: #1a254a;
+    }
+    .bullet-list li::before {
+      content: "";
+      position: absolute;
+      left: 2px;
+      top: 9px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #d9a53a;
+    }
+    .formula-box {
+      background: #0b1330;
+      color: #fdeec2;
+      font-weight: 700;
+      font-size: 13.6px;
+      padding: 10px 16px;
+      border-radius: 10px;
+      margin: 10px 0;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 12px 0;
+      font-size: 13.6px;
+      display: block;
+      overflow-x: auto;
+    }
+    .data-table th, .data-table td {
+      border: 1px solid #e7eaf5;
+      padding: 8px 12px;
+      text-align: left;
+      color: #1a254a;
+      white-space: normal;
+    }
+    .data-table th {
+      background: #f4f6fc;
+      color: #0b1330;
+      font-weight: 800;
+    }
+    .pyq-tag {
+      display: inline-block;
+      background: #fdf6e7;
+      color: #b9852a;
+      font-weight: 800;
+      font-size: 12px;
+      padding: 4px 12px;
+      border-radius: 8px;
+      margin: 12px 0 6px;
+    }
+    .answer-box {
+      background: #eefaf2;
+      border: 1px solid #bfe8cc;
+      color: #1a7a4c;
+      font-weight: 700;
+      font-size: 13.6px;
+      padding: 6px 14px;
+      border-radius: 9px;
+      margin: 6px 0;
+    }
+    .explain {
+      background: #f4f6fc;
+      border-radius: 9px;
+      padding: 6px 14px;
+      font-size: 13.6px;
+      color: #1a254a;
+    }
+    .subtopic {
+      padding: 14px 0 6px;
+      border-top: 1px dashed #e7eaf5;
+    }
+    .subtopic:first-of-type { border-top: none; padding-top: 2px; }
+    .subhead {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 6px;
+    }
+    .sub-num {
+      flex: none;
+      width: 26px;
+      height: 26px;
+      border-radius: 8px;
+      background: #fdf6e7;
+      color: #b9852a;
+      font-weight: 800;
+      font-size: 12px;
+      display: grid;
+      place-items: center;
+    }
+    .subhead h3 {
+      margin: 0;
+      font-size: 15.5px;
+      font-weight: 800;
+      color: #0b1330;
+    }
+    .enroll-cta {
+      background: #0b1330;
+      color: #fff;
+      border-radius: 16px;
+      padding: 24px 24px;
+      margin-top: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+      overflow: hidden;
+    }
+    .enroll-cta::before {
+      content: "";
+      position: absolute;
+      right: -40px;
+      top: -40px;
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(232,183,75,0.2), transparent 70%);
+    }
+    .enroll-cta h3 { margin: 0 0 4px; font-size: 20px; }
+    .enroll-cta p { margin: 0; color: rgba(255,255,255,0.75); font-size: 13.5px; max-width: 480px; }
+    .btn-gold {
+      background: #e8b74b;
+      color: #0b1330;
+      font-weight: 800;
+      padding: 10px 22px;
+      border-radius: 10px;
+      font-size: 13.5px;
+      white-space: nowrap;
+      text-decoration: none;
+    }
+  </style>
+
+  <link rel="stylesheet" href="/css/tailwind.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <style>.hero h1 { font-weight: 800 !important; color: #fff !important; line-height: 1.2 !important; font-family: 'Poppins', sans-serif !important; }</style>
+
+  <link rel="icon" href="/assets/images/logo.png">
+</head>
+<body>
+
+<header class="sticky top-0 z-50 border-b border-navy-900/8 bg-white/95 backdrop-blur-md">
+  <nav class="container-wide flex h-[76px] items-center gap-4" aria-label="Main">
+    <a href="/" class="flex shrink-0 items-center gap-3" aria-label="Home">
+      <span class="inline-flex shrink-0 items-center justify-center overflow-hidden rounded-lg bg-navy-950 ring-1 ring-navy-900/10">
+        <img src="assets/images/logo.png" alt="GS Net Academy" class="h-11 w-auto" width="120" height="44">
+      </span>
+      <img src="assets/images/tagline.png" alt="#1 A Premier institute for UGC NET Paper-1" class="h-11 hidden w-auto lg:block">
+    </a>
+    <ul class="mx-auto hidden items-center gap-5 xl:flex">
+      <li><a href="courses.html" class="relative block whitespace-nowrap rounded-lg px-3 py-2 text-[13.5px] font-bold transition-colors text-navy-700/75 hover:text-navy-900">UGC NET Paper-I</a></li>
+      <li><a href="results.html" class="relative block whitespace-nowrap rounded-lg px-3 py-2 text-[13.5px] font-bold transition-colors text-navy-700/75 hover:text-navy-900">Results</a></li>
+      <li><a href="tutorial.html" class="relative block whitespace-nowrap rounded-lg px-3 py-2 text-[13.5px] font-bold transition-colors text-navy-700/75 hover:text-navy-900">Tutorials</a></li>
+      <li><a href="notes.html" class="relative block whitespace-nowrap rounded-lg px-3 py-2 text-[13.5px] font-bold transition-colors text-navy-700/75 hover:text-navy-900">Notes</a></li>
+      <li><a href="blog.html" class="relative block whitespace-nowrap rounded-lg px-3 py-2 text-[13.5px] font-bold transition-colors text-navy-700/75 hover:text-navy-900">Blog</a></li>
+      <li><a href="about.html" class="relative block whitespace-nowrap rounded-lg px-3 py-2 text-[13.5px] font-bold transition-colors text-navy-700/75 hover:text-navy-900">About</a></li>
+      <li><a href="contact.html" class="relative block whitespace-nowrap rounded-lg px-3 py-2 text-[13.5px] font-bold transition-colors text-navy-700/75 hover:text-navy-900">Contact</a></li>
+    </ul>
+    <div class="ml-auto flex items-center gap-2 xl:ml-0">
+      <span title="Coming soon" class="hidden items-center gap-1.5 whitespace-nowrap rounded-lg border border-navy-900/12 px-3 py-2 text-[13px] font-bold text-navy-700 lg:inline-flex"><svg viewBox="0 0 24 24" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="4.5" width="14" height="16" rx="2.5"/><path d="M9 4.5a3 3 0 0 1 6 0"/><path d="M9 11h6M9 15h4"/></svg> <a href="https://mock-test.gsnetacademy.com/" class="cursor-pointer">Exam Portal</a></span>
+      <a href="/#free-demo" class="btn-outline btn-sm hidden 2xl:inline-flex">Demo</a>
+      <a href="enroll.html" class="btn-primary btn-sm hidden sm:inline-flex">Join Now</a>
+      <label for="nav-toggle" class="cursor-pointer rounded-lg border border-navy-900/12 p-2 text-navy-800 xl:hidden" aria-label="Menu"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></label>
+    </div>
+  </nav>
+</header>
+
+<div class="drawer xl:hidden">
+  <label for="nav-toggle" class="drawer-scrim" aria-hidden="true"></label>
+  <div class="drawer-panel">
+    <div class="flex h-[72px] shrink-0 items-center justify-between border-b border-navy-900/10 px-5">
+      <img src="assets/images/logo.png" alt="GS Net Academy" class="h-9 w-auto rounded-lg bg-navy-950">
+      <label for="nav-toggle" class="cursor-pointer p-2 text-navy-800" aria-label="Close"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></label>
+    </div>
+    <div class="flex-1 overflow-y-auto p-5">
+      <ul class="flex flex-col gap-1">
+      <li><a href="/" class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold bg-navy-50 text-navy-900">Home</a></li>
+      <li><a href="courses.html" class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold text-navy-700">UGC NET Paper-I</a></li>
+      <li><a href="results.html" class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold text-navy-700">Our Results</a></li>
+      <li><span class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold text-navy-400">UG / PG (Paper-2)<span class="rounded-md bg-navy-50 px-2 py-0.5 text-[10.5px] font-extrabold uppercase tracking-wider">Coming soon</span></span></li>
+      <li><a href="tutorial.html" class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold text-navy-700">Tutorials</a></li>
+      <li><a href="notes.html" class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold text-navy-700">Notes</a></li>
+      <li><a href="blog.html" class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold text-navy-700">Blog</a></li>
+      <li><a href="about.html" class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold text-navy-700">About</a></li>
+      <li><a href="contact.html" class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold text-navy-700">Contact</a></li>
+      </ul>
+      <p class="mt-3 rounded-xl bg-gold-50 px-4 py-3 text-[12.5px] font-extrabold uppercase tracking-wider text-gold-700">AI-Powered Career Guidance — Coming soon</p>
+      <div class="mt-5 grid gap-2.5">
+        <a href="enroll.html" class="btn-primary w-full">✓ JOIN BATCH @ ₹500</a>
+        <a href="/#free-demo" class="btn-outline w-full">▶ WATCH FREE DEMO</a>
+        <a href="https://chat.whatsapp.com/KeaQUhOFz0UGAKtLmsM7oU" target="_blank" rel="noreferrer noopener" class="btn-outline w-full"><svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.2 20.8 4.6 16A8.4 8.4 0 1 1 8 19.4l-4.8 1.4Z"/><path d="M9 8.4c.3-.7.6-.7.9-.7h.6c.2 0 .5 0 .7.6l.8 1.9c.1.2.1.4 0 .6l-.5.7c-.1.2-.2.4 0 .7a7 7 0 0 0 3 2.6c.3.1.5.1.7-.1l.7-.8c.2-.2.4-.2.6-.1l1.8.9c.3.1.5.3.5.5v.6c0 .4-.2.9-.9 1.2-.6.3-1.5.4-2.5.1a10 10 0 0 1-6.5-6.2c-.3-1-.1-1.9.1-2.5Z"/></svg> WhatsApp Group</a>
+        <a href="tel:+919266511505" class="btn-dark w-full"><svg viewBox="0 0 24 24" class="h-4 w-4" fill="currentColor" stroke="none" aria-hidden="true"><path d="M5 3h3.5l1.6 4-2 1.4a12 12 0 0 0 5.5 5.5l1.4-2 4 1.6V19a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 3 5.2 2 2 0 0 1 5 3Z"/></svg> Call 9266511505</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<section class="hero">
+  <div class="container hero-inner">
+    <span class="eyebrow">★ UGC NET Paper-I · Data Interpretation</span>
+    <h1 class="h-display">Sources and Acquisition of Data</h1>
+    <p>Complete tutorial: Primary Data, Secondary Data, Census, Sampling & Data Acquisition for UGC NET Paper-1 Data Interpretation.</p>
+  </div>
+</section>
+
+<main class="container">
+  <input type="checkbox" id="sidebar-toggle">
+  <label for="sidebar-toggle" class="mobile-bar">
+    <span>📑 On this page</span>
+    <span>☰ Menu</span>
+  </label>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebarNav">
+      <p class="sidebar-title">On this page</p>
+      <nav>
+       <a href="/tutorials/data-interpretation/sources-and-acquisition-of-data/data-meaning" class="nav-link active">
+  <span class="nav-num">1</span>Meaning of Data
+</a>
+<a href="/tutorials/data-interpretation/sources-and-acquisition-of-data/data-acquisition" class="nav-link">
+  <span class="nav-num">2</span>Data Acquisition
+</a>
+<a href="/tutorials/data-interpretation/sources-and-acquisition-of-data/primary-data" class="nav-link">
+  <span class="nav-num">3</span>Primary Data
+</a>
+<a href="/tutorials/data-interpretation/sources-and-acquisition-of-data/secondary-data" class="nav-link">
+  <span class="nav-num">4</span>Secondary Data
+</a>
+<a href="/tutorials/data-interpretation/sources-and-acquisition-of-data/primary-vs-secondary" class="nav-link">
+  <span class="nav-num">5</span>Primary vs Secondary
+</a>
+<a href="/tutorials/data-interpretation/sources-and-acquisition-of-data/census-method" class="nav-link">
+  <span class="nav-num">6</span>Census Method
+</a>
+<a href="/tutorials/data-interpretation/sources-and-acquisition-of-data/sampling-method" class="nav-link">
+  <span class="nav-num">7</span>Sampling Method
+</a>
+<a href="/tutorials/data-interpretation/sources-and-acquisition-of-data/census-vs-sampling" class="nav-link">
+  <span class="nav-num">8</span>Census vs Sampling
+</a>
+<a href="/tutorials/data-interpretation/sources-and-acquisition-of-data/sampling-types" class="nav-link">
+  <span class="nav-num">9</span>Types of Sampling
+</a>
+<a href="/tutorials/data-interpretation/sources-and-acquisition-of-data/probability-sampling" class="nav-link">
+  <span class="nav-num">10</span>Probability Sampling
+</a>
+<a href="/tutorials/data-interpretation/sources-and-acquisition-of-data/non-probability-sampling" class="nav-link">
+  <span class="nav-num">11</span>Non-Probability Sampling
+</a>
+<a href="/tutorials/data-interpretation/sources-and-acquisition-of-data/data-collection-methods" class="nav-link">
+  <span class="nav-num">12</span>Data Collection Methods
+</a>
+<a href="/tutorials/data-interpretation/sources-and-acquisition-of-data/data-sources-examples" class="nav-link">
+  <span class="nav-num">13</span>Data Sources Examples
+</a>
+<a href="/tutorials/data-interpretation/sources-and-acquisition-of-data/exam-traps" class="nav-link">
+  <span class="nav-num">14</span>Common Exam Traps
+</a>
+<a href="/tutorials/data-interpretation/sources-and-acquisition-of-data/practice-questions" class="nav-link">
+  <span class="nav-num">15</span>Practice Questions
+</a>
+<a href="/tutorials/data-interpretation/sources-and-acquisition-of-data/one-page-revision" class="nav-link">
+  <span class="nav-num">16</span>One-Page Revision
+</a>
+      </nav>
+    </aside>
+
+    <div class="content" id="contentArea">
+      <!-- ===== CARDS ===== -->
+      <div id="data-meaning" class="topic-card"><div class="sec-head"><span class="sec-num">1</span><h2>Meaning of Data — डेटा का अर्थ</h2></div><p><strong>Data</strong> raw facts, figures, observations, symbols or responses हैं जिनका analysis करके meaningful conclusions निकाले जाते हैं।</p><div class="formula-box">Data = Raw Facts + Observations + Responses</div><p><strong>Key Point:</strong> Data स्वयं information नहीं है; processing के बाद यह information और knowledge में बदलता है।</p><p><strong>Data Classification:</strong></p><ul class="bullet-list"><li><strong>By Source:</strong> Primary Data, Secondary Data</li><li><strong>By Nature:</strong> Quantitative (numerical), Qualitative (categorical)</li><li><strong>By Collection Method:</strong> Census, Sample</li><li><strong>By Time:</strong> Cross-sectional (one time), Time-series (over time)</li></ul></div>
+
+      <div id="data-acquisition" class="topic-card"><div class="sec-head"><span class="sec-num">2</span><h2>Data Acquisition — डेटा अधिग्रहण</h2></div><p><strong>Data Acquisition</strong> विभिन्न sources से data को systematically obtain करने की process है।</p><div class="formula-box">Data Acquisition = Objective → Source → Collection → Validation → Storage → Processing → Analysis</div><p><strong>Steps in Data Acquisition:</strong></p><ul class="bullet-list"><li><strong>Define Objective:</strong> What data is needed and why</li><li><strong>Identify Sources:</strong> Primary or secondary</li><li><strong>Choose Collection Method:</strong> Survey, observation, experiment, etc.</li><li><strong>Collect Data:</strong> Census or sampling</li><li><strong>Validate Data:</strong> Check accuracy, completeness, consistency</li><li><strong>Store Data:</strong> Organised for analysis</li><li><strong>Process and Analyse:</strong> Convert raw data to information</li></ul></div>
+
+      <div id="primary-data" class="topic-card"><div class="sec-head"><span class="sec-num">3</span><h2>Primary Data — प्राथमिक डेटा</h2></div><p><strong>Primary Data</strong> researcher द्वारा <strong>first-hand</strong> किसी specific research purpose के लिए <strong>directly collected</strong> किया गया data है।</p><div class="formula-box">Primary Data = First-hand + Original + Collected by Researcher</div><p><strong>Methods of Collection:</strong></p><ul class="bullet-list"><li><strong>Observation:</strong> Directly observing behaviour/events</li><li><strong>Interview:</strong> Face-to-face or telephonic conversation</li><li><strong>Questionnaire/Survey:</strong> Structured questions</li><li><strong>Experiment:</strong> Controlled research setting</li><li><strong>Focus Group Discussion:</strong> Group interaction</li><li><strong>Field Survey:</strong> Direct data collection from population</li></ul><p><strong>Advantages:</strong></p><ul class="bullet-list"><li>Purpose-specific and relevant</li><li>Researcher controls methodology</li><li>Current and original</li><li>Detailed information possible</li></ul><p><strong>Disadvantages:</strong></p><ul class="bullet-list"><li>Time-consuming</li><li>Expensive</li><li>Training required</li><li>Non-response and bias possible</li></ul></div>
+
+      <div id="secondary-data" class="topic-card"><div class="sec-head"><span class="sec-num">4</span><h2>Secondary Data — द्वितीयक डेटा</h2></div><p><strong>Secondary Data</strong> वह data है जो <strong>already collected</strong> किया जा चुका है और researcher उसे अपने study के लिए <strong>reuse</strong> करता है।</p><div class="formula-box">Secondary Data = Already Collected + Reused + Existing Sources</div><p><strong>Sources:</strong></p><ul class="bullet-list"><li><strong>Government Publications:</strong> Census, NSSO reports, RBI reports</li><li><strong>Institutional Records:</strong> UGC/AISHE reports, university records</li><li><strong>Research Publications:</strong> Journals, books, theses</li><li><strong>Databases:</strong> Shodhganga, JSTOR, Scopus, Google Scholar</li><li><strong>Organisational Data:</strong> Company reports, NGO surveys</li><li><strong>Historical Records:</strong> Archives, government documents</li></ul><p><strong>Advantages:</strong></p><ul class="bullet-list"><li>Economical and time-saving</li><li>Large geographical/historical coverage</li><li>Comparative and trend analysis possible</li></ul><p><strong>Disadvantages:</strong></p><ul class="bullet-list"><li>May be outdated</li><li>Definitions may differ</li><li>Quality/accuracy questionable</li><li>May not fit research objectives perfectly</li></ul></div>
+
+      <div id="primary-vs-secondary" class="topic-card"><div class="sec-head"><span class="sec-num">5</span><h2>Primary vs Secondary Data — प्राथमिक vs द्वितीयक डेटा</h2></div><table class="data-table"><tr><th>Basis</th><th>Primary Data</th><th>Secondary Data</th></tr><tr><td>Definition</td><td>First-hand, original data</td><td>Already collected data</td></tr><tr><td>Collection</td><td>By researcher</td><td>By someone else</td></tr><tr><td>Purpose</td><td>Specific research objective</td><td>May have been for different purpose</td></tr><tr><td>Time</td><td>Current/real-time</td><td>May be historical/outdated</td></tr><tr><td>Cost</td><td>Expensive</td><td>Economical</td></tr><tr><td>Time</td><td>Time-consuming</td><td>Quick to obtain</td></tr><tr><td>Control</td><td>Researcher has full control</td><td>Limited control</td></tr><tr><td>Accuracy</td><td>Can be ensured</td><td>Cannot always be verified</td></tr><tr><td>Example</td><td>Student survey</td><td>Census data</td></tr></table><p><strong>Exam Trap:</strong> Data का primary/secondary distinction उसके स्वरूप पर नहीं, बल्कि <strong>किसने और किस उद्देश्य से</strong> एकत्र किया है — इस पर निर्भर करता है।</p></div>
+
+      <div id="census-method" class="topic-card"><div class="sec-head"><span class="sec-num">6</span><h2>Census Method — जनगणना विधि</h2></div><p><strong>Census</strong> population की <strong>every unit</strong> से data collect करने की method है।</p><div class="formula-box">Census = Complete Enumeration = Every Unit Covered</div><p><strong>Characteristics:</strong></p><ul class="bullet-list"><li>All units of population are included</li><li>Complete and comprehensive</li><li>No sampling error</li><li>Highly reliable (if done properly)</li><li>Time-consuming and expensive</li></ul><p><strong>Examples:</strong></p><ul class="bullet-list"><li>Indian Census (conducted every 10 years)</li><li>Population count of a university</li><li>Annual student enrolment data</li></ul><p><strong>When to Use:</strong></p><ul class="bullet-list"><li>Small population</li><li>When high accuracy is required</li><li>Legal/administrative requirements</li><li>When resources are available</li></ul></div>
+
+      <div id="sampling-method" class="topic-card"><div class="sec-head"><span class="sec-num">7</span><h2>Sampling Method — प्रतिदर्श विधि</h2></div><p><strong>Sampling</strong> population के <strong>representative subset</strong> (sample) से data collect करने की method है।</p><div class="formula-box">Sampling = Selecting a Representative Part = Studying the Whole through the Part</div><p><strong>Characteristics:</strong></p><ul class="bullet-list"><li>Only selected units are included</li><li>Less time and cost</li><li>Sampling error possible</li><li>Results can be generalised</li><li>Practical for large populations</li></ul><p><strong>Examples:</strong></p><ul class="bullet-list"><li>Survey of 500 students from a university</li><li>Polling for election predictions</li><li>Quality checking of manufactured goods</li></ul><p><strong>When to Use:</strong></p><ul class="bullet-list"><li>Large population</li><li>Limited time/resources</li><li>When detailed study of every unit is impractical</li><li>When destructive testing is involved</li></ul></div>
+
+      <div id="census-vs-sampling" class="topic-card"><div class="sec-head"><span class="sec-num">8</span><h2>Census vs Sampling — जनगणना vs प्रतिदर्श</h2></div><table class="data-table"><tr><th>Basis</th><th>Census</th><th>Sampling</th></tr><tr><td>Coverage</td><td>All units</td><td>Selected units</td></tr><tr><td>Time</td><td>More time</td><td>Less time</td></tr><tr><td>Cost</td><td>Expensive</td><td>Economical</td></tr><tr><td>Accuracy</td><td>More accurate</td><td>Sampling error possible</td></tr><tr><td>Suitability</td><td>Small population</td><td>Large population</td></tr><tr><td>Administration</td><td>More effort</td><td>Easier</td></tr><tr><td>Errors</td><td>Non-sampling errors only</td><td>Sampling + non-sampling errors</td></tr><tr><td>Generalisation</td><td>Direct</td><td>Through estimation</td></tr></table></div>
+
+      <div id="sampling-types" class="topic-card"><div class="sec-head"><span class="sec-num">9</span><h2>Types of Sampling — प्रतिदर्श के प्रकार</h2></div><ul class="bullet-list"><li><strong>Probability Sampling — प्रायिकता प्रतिदर्श:</strong> Every unit has a known probability of selection.</li><li><strong>Non-Probability Sampling — अप्रायिकता प्रतिदर्श:</strong> Selection probability is not known.</li></ul></div>
+
+      <div id="probability-sampling" class="topic-card"><div class="sec-head"><span class="sec-num">10</span><h2>Probability Sampling — प्रायिकता प्रतिदर्श</h2></div><ul class="bullet-list"><li><strong>Simple Random Sampling:</strong> Every unit has equal chance of selection. Lottery method or random number table.</li><li><strong>Systematic Sampling:</strong> Selecting every kth unit from a list. (k = N/n)</li><li><strong>Stratified Sampling:</strong> Population divided into strata (groups), then random sampling from each.</li><li><strong>Cluster Sampling:</strong> Population divided into clusters, random selection of clusters, then all units in selected clusters.</li><li><strong>Multistage Sampling:</strong> Multiple stages of sampling (e.g., state → district → village → household).</li><li><strong>Multiphase Sampling:</strong> Different phases of data collection on different units.</li></ul></div>
+
+      <div id="non-probability-sampling" class="topic-card"><div class="sec-head"><span class="sec-num">11</span><h2>Non-Probability Sampling — अप्रायिकता प्रतिदर्श</h2></div><ul class="bullet-list"><li><strong>Convenience Sampling:</strong> Selecting units that are easily available. (e.g., nearby respondents)</li><li><strong>Purposive/Judgement Sampling:</strong> Researcher selects units based on judgement/purpose.</li><li><strong>Quota Sampling:</strong> Population divided into quotas, then convenient selection within each quota.</li><li><strong>Snowball Sampling:</strong> Initial respondents refer other respondents. Used in hard-to-reach populations.</li><li><strong>Voluntary Sampling:</strong> Self-selection by respondents (e.g., online polls).</li></ul></div>
+
+      <div id="data-collection-methods" class="topic-card"><div class="sec-head"><span class="sec-num">12</span><h2>Data Collection Methods — डेटा संग्रहण विधियाँ</h2></div><ul class="bullet-list"><li><strong>Questionnaire:</strong> Structured set of questions. Self-administered or online (Google Forms).</li><li><strong>Interview Schedule:</strong> Face-to-face or telephonic interview with structured/unstructured questions.</li><li><strong>Observation:</strong> Directly watching and recording behaviour/events.</li><li><strong>Experiment:</strong> Controlled setting to study cause-effect relationships.</li><li><strong>Focus Group Discussion:</strong> Group of people discussing a topic with a moderator.</li><li><strong>Case Study:</strong> In-depth study of a single unit/individual.</li><li><strong>Document Analysis:</strong> Analysis of existing documents and records.</li></ul></div>
+
+      <div id="data-sources-examples" class="topic-card"><div class="sec-head"><span class="sec-num">13</span><h2>Data Sources Examples — डेटा स्रोतों के उदाहरण</h2></div><ul class="bullet-list"><li><strong>Census Data:</strong> Indian Census (2011, 2021), NSSO surveys</li><li><strong>Government Reports:</strong> RBI, UGC/AISHE, Ministry of Education</li><li><strong>International Sources:</strong> UNESCO, WHO, World Bank, IMF</li><li><strong>Research Repositories:</strong> Shodhganga (theses), Google Scholar, JSTOR</li><li><strong>Institutional Data:</strong> Admission records, exam results, attendance</li><li><strong>Public Data:</strong> Open Government Data platform (data.gov.in)</li></ul></div>
+
+      <div id="exam-traps" class="topic-card"><div class="sec-head"><span class="sec-num">14</span><h2>Common Exam Traps — सामान्य परीक्षा जाल</h2></div><ul class="bullet-list"><li><strong>Trap 1:</strong> Primary data = always accurate → ❌ Accuracy depends on methodology and execution.</li><li><strong>Trap 2:</strong> Secondary data = always unreliable → ❌ Many secondary sources are highly reliable (Census, RBI).</li><li><strong>Trap 3:</strong> Census = always better than sampling → ❌ Sampling is often more practical and cost-effective.</li><li><strong>Trap 4:</strong> Sample = always representative → ❌ Representative depends on sampling method and sample size.</li><li><strong>Trap 5:</strong> Probability sampling = no errors → ❌ Sampling errors still exist.</li><li><strong>Trap 6:</strong> Convenience sampling = most reliable → ❌ It is the least reliable due to bias.</li><li><strong>Trap 7:</strong> Data source = data type → ❌ Source and type are different concepts.</li></ul></div>
+
+      <div id="practice-questions" class="topic-card"><div class="sec-head"><span class="sec-num">15</span><h2>Practice Questions — अभ्यास प्रश्न</h2></div>
+      <div class="pyq-tag">Question 1</div>
+      <p>A researcher collects data directly from students using a questionnaire. This is an example of:</p>
+      <ul class="bullet-list"><li>A. Secondary data</li><li>B. Primary data</li><li>C. Census data</li><li>D. Published data</li></ul>
+      <div class="answer-box">Answer: B. Primary data</div>
+      <p class="explain">Explanation: The researcher collected first-hand data for a specific purpose — this is primary data.</p>
+
+      <div class="pyq-tag">Question 2</div>
+      <p>Using Census 2011 data for a research study is an example of:</p>
+      <ul class="bullet-list"><li>A. Primary data</li><li>B. Secondary data</li><li>C. Experimental data</li><li>D. Survey data</li></ul>
+      <div class="answer-box">Answer: B. Secondary data</div>
+      <p class="explain">Explanation: Census data was already collected by the government — researcher is reusing it (secondary data).</p>
+
+      <div class="pyq-tag">Question 3</div>
+      <p>Which sampling method ensures that every unit has an equal chance of selection?</p>
+      <ul class="bullet-list"><li>A. Convenience sampling</li><li>B. Purposive sampling</li><li>C. Simple random sampling</li><li>D. Quota sampling</li></ul>
+      <div class="answer-box">Answer: C. Simple random sampling</div>
+      <p class="explain">Explanation: In simple random sampling, every unit has an equal and independent chance of selection.</p>
+
+      <div class="pyq-tag">Question 4</div>
+      <p>What is the main limitation of census method?</p>
+      <ul class="bullet-list"><li>A. Sampling error</li><li>B. Time and cost</li><li>C. Bias</li><li>D. Lack of accuracy</li></ul>
+      <div class="answer-box">Answer: B. Time and cost</div>
+      <p class="explain">Explanation: Census covers all units, which makes it time-consuming and expensive.</p>
+
+      <div class="pyq-tag">Question 5</div>
+      <p>Which type of sampling is most appropriate for a large, geographically dispersed population?</p>
+      <ul class="bullet-list"><li>A. Simple random sampling</li><li>B. Convenience sampling</li><li>C. Cluster sampling</li><li>D. Purposive sampling</li></ul>
+      <div class="answer-box">Answer: C. Cluster sampling</div>
+      <p class="explain">Explanation: Cluster sampling is cost-effective for large, dispersed populations by sampling clusters (e.g., villages, districts).</p></div>
+
+      <div id="one-page-revision" class="topic-card"><div class="sec-head"><span class="sec-num">16</span><h2>One-Page Revision — एक पेज में पुनरावृत्ति</h2></div>
+      <div class="formula-box">Data = Raw Facts | Primary = First-hand | Secondary = Already collected</div>
+      <div class="formula-box">Census = All Units | Sampling = Selected Units</div>
+
+      <p><strong>Primary Data:</strong> First-hand, original, collected by researcher</p>
+      <ul class="bullet-list"><li>Methods: Observation, Interview, Questionnaire, Experiment</li></ul>
+
+      <p><strong>Secondary Data:</strong> Already collected, reused by researcher</p>
+      <ul class="bullet-list"><li>Sources: Government reports, Research publications, Databases</li></ul>
+
+      <p><strong>Census Method:</strong></p>
+      <ul class="bullet-list"><li>All units, accurate, time-consuming, expensive</li></ul>
+
+      <p><strong>Sampling Method:</strong></p>
+      <ul class="bullet-list"><li>Selected units, economical, sampling error possible</li></ul>
+
+      <p><strong>Probability Sampling:</strong></p>
+      <ul class="bullet-list"><li>Simple Random, Systematic, Stratified, Cluster, Multistage</li></ul>
+
+      <p><strong>Non-Probability Sampling:</strong></p>
+      <ul class="bullet-list"><li>Convenience, Purposive, Quota, Snowball</li></ul>
+
+      <p><strong>Exam Formula:</strong></p>
+      <div class="formula-box">Source + Method + Type + Purpose = Data Acquisition Strategy</div>
+      <p><em>UGC NET में Sources and Acquisition of Data के questions primary/secondary classification, census vs sampling, और sampling types पर based होते हैं।</em></p></div>
+
+      <div class="enroll-cta"><div><h3 class="h-display">Join the Paper-1 Batch</h3><p>Course fee FREE — ₹500 registration & academic/logistics contribution. Classes daily at 6:30 PM.</p></div><a href="/enroll.html" class="btn-gold">✓ JOIN BATCH @ ₹500</a></div>
+    </div>
+  </div>
+</main>
+
+<footer class="relative overflow-hidden bg-navy-950 text-white">
+  <div class="grid-paper absolute inset-0 opacity-50" aria-hidden="true"></div>
+  <div class="container-x relative py-12 lg:py-14">
+    <div class="grid grid-cols-2 gap-10 lg:grid-cols-4">
+
+      <div>
+        <div class="flex items-center gap-3">
+          <img src="/assets/images/logo.png" alt="GS Net Academy" class="h-11 w-auto rounded-lg bg-white p-1" width="120" height="44">
+          <img src="/assets/images/tagline.png" alt="" class="h-11 w-auto brightness-0 invert" aria-hidden="true">
+        </div>
+        <p class="mt-5 text-[14px] leading-relaxed text-navy-100/75">UGC NET Paper-I | JRF Preparation | Mentorship</p>
+        <span class="eyebrow mt-5"><svg viewBox="0 0 24 24" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1"/></svg> JRF @ ₹500 Mission 2026</span>
+
+        <p class="mt-6 text-[11px] font-extrabold uppercase tracking-[0.18em] text-gold-400">Follow Us</p>
+        <ul class="mt-3 flex flex-wrap gap-2">
+          <li><a href="https://www.youtube.com/@gsnetacademy" target="_blank" rel="noreferrer noopener" aria-label="YouTube" title="YouTube" class="grid h-10 w-10 place-items-center rounded-xl border border-white/12 bg-white/[0.06] text-navy-100/80 transition hover:border-gold-400/50 hover:bg-white/[0.12] hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor" aria-hidden="true"><path d="M21.6 7.2a2.5 2.5 0 0 0-1.8-1.8C18.2 5 12 5 12 5s-6.2 0-7.8.4A2.5 2.5 0 0 0 2.4 7.2 26 26 0 0 0 2 12a26 26 0 0 0 .4 4.8 2.5 2.5 0 0 0 1.8 1.8C5.8 19 12 19 12 19s6.2 0 7.8-.4a2.5 2.5 0 0 0 1.8-1.8A26 26 0 0 0 22 12a26 26 0 0 0-.4-4.8ZM10 15V9l5.2 3L10 15Z"/></svg></a></li>
+          <li><a href="https://www.instagram.com/gsnetacademy" target="_blank" rel="noreferrer noopener" aria-label="Instagram" title="Instagram" class="grid h-10 w-10 place-items-center rounded-xl border border-white/12 bg-white/[0.06] text-navy-100/80 transition hover:border-gold-400/50 hover:bg-white/[0.12] hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg></a></li>
+          <li><a href="https://www.facebook.com/gsnetacademy" target="_blank" rel="noreferrer noopener" aria-label="Facebook" title="Facebook" class="grid h-10 w-10 place-items-center rounded-xl border border-white/12 bg-white/[0.06] text-navy-100/80 transition hover:border-gold-400/50 hover:bg-white/[0.12] hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.25-1.5 1.55-1.5H16.7V3.6c-.3 0-1.3-.13-2.47-.13-2.44 0-4.11 1.49-4.11 4.23V9.9H7.4V13h2.72v8h3.38Z"/></svg></a></li>
+          <li><a href="https://t.me/gsnetacademy" target="_blank" rel="noreferrer noopener" aria-label="Telegram" title="Telegram" class="grid h-10 w-10 place-items-center rounded-xl border border-white/12 bg-white/[0.06] text-navy-100/80 transition hover:border-gold-400/50 hover:bg-white/[0.12] hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor" aria-hidden="true"><path d="M21.3 4.3 2.9 11.4c-.9.35-.9 1.62.02 1.93l4.6 1.53 1.75 5.3c.25.75 1.2.95 1.73.37l2.5-2.72 4.6 3.38c.63.46 1.53.12 1.7-.65l3.1-14.9c.2-.9-.7-1.65-1.6-1.31ZM9.6 14.1l8.5-5.6-6.9 6.5-.3 3.3-1.3-4.2Z"/></svg></a></li>
+          <li><a href="https://chat.whatsapp.com/KeaQUhOFz0UGAKtLmsM7oU" target="_blank" rel="noreferrer noopener" aria-label="WhatsApp Group" title="WhatsApp Group" class="grid h-10 w-10 place-items-center rounded-xl border border-white/12 bg-white/[0.06] text-navy-100/80 transition hover:border-emerald-400/50 hover:bg-emerald-500/15 hover:text-emerald-300"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.2 20.8 4.6 16A8.4 8.4 0 1 1 8 19.4l-4.8 1.4Z"/><path d="M9 8.4c.3-.7.6-.7.9-.7h.6c.2 0 .5 0 .7.6l.8 1.9c.1.2.1.4 0 .6l-.5.7c-.1.2-.2.4 0 .7a7 7 0 0 0 3 2.6c.3.1.5.1.7-.1l.7-.8c.2-.2.4-.2.6-.1l1.8.9c.3.1.5.3.5.5v.6c0 .4-.2.9-.9 1.2-.6.3-1.5.4-2.5.1a10 10 0 0 1-6.5-6.2c-.3-1-.1-1.9.1-2.5Z"/></svg></a></li>
+          <li><a href="https://x.com/gsnetacademy" target="_blank" rel="noreferrer noopener" aria-label="X (Twitter)" title="X (Twitter)" class="grid h-10 w-10 place-items-center rounded-xl border border-white/12 bg-white/[0.06] text-navy-100/80 transition hover:border-gold-400/50 hover:bg-white/[0.12] hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-4.5 w-4.5" fill="currentColor" aria-hidden="true"><path d="M17.5 3h3.1l-6.8 7.8L21.8 21h-6.2l-4.9-6.4L5.1 21H2l7.3-8.3L2.5 3h6.4l4.4 5.8L17.5 3Zm-1.1 16.2h1.7L7.7 4.7H5.9l10.5 14.5Z"/></svg></a></li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="text-[11px] font-extrabold uppercase tracking-[0.18em] text-gold-400">Quick Links</p>
+        <ul class="mt-4 grid gap-2.5">
+          <li><a href="/index.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Home</a></li>
+          <li><a href="/courses.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">UGC NET Paper-I</a></li>
+          <li><a href="/results.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Our Results</a></li>
+          <li><a href="/tutorials.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Tutorials</a></li>
+          <li><a href="/blog.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Blog</a></li>
+          <li><a href="/about.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">About</a></li>
+          <li><a href="/contact.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="text-[11px] font-extrabold uppercase tracking-[0.18em] text-gold-400">Resources</p>
+        <ul class="mt-4 grid gap-2.5">
+          <li><a href="/notes.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Notes</a></li>
+          <li><a href="/enroll.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Register for ₹500</a></li>
+          <li><a href="/index.html#free-demo" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Free Demo Classes</a></li>
+          <li><a href="https://chat.whatsapp.com/KeaQUhOFz0UGAKtLmsM7oU" target="_blank" rel="noreferrer noopener" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Student Community</a></li>
+        </ul>
+        <p class="mt-6 text-[11px] font-extrabold uppercase tracking-[0.18em] text-gold-400">Legal</p>
+        <ul class="mt-4 grid gap-2.5">
+          <li><a href="/privacy-policy.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Privacy Policy</a></li>
+          <li><a href="/refund-policy.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Refund &amp; Cancellation</a></li>
+          <li><a href="/terms-of-enrollment.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Terms of Enrollment</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="text-[11px] font-extrabold uppercase tracking-[0.18em] text-gold-400">Contact</p>
+        <ul class="mt-4 grid gap-2.5 text-[14px] text-navy-100/75">
+          <li><a href="tel:+919266511505" class="flex items-center gap-2 hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-4 w-4 icon-gold" fill="currentColor" aria-hidden="true"><path d="M5 3h3.5l1.6 4-2 1.4a12 12 0 0 0 5.5 5.5l1.4-2 4 1.6V19a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 3 5.2 2 2 0 0 1 5 3Z"/></svg> +91 9266511505</a></li>
+          <li><a href="tel:+919810845327" class="flex items-center gap-2 hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-4 w-4 icon-gold" fill="currentColor" aria-hidden="true"><path d="M5 3h3.5l1.6 4-2 1.4a12 12 0 0 0 5.5 5.5l1.4-2 4 1.6V19a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 3 5.2 2 2 0 0 1 5 3Z"/></svg> +91 9810845327</a></li>
+          <li><a href="mailto:gsnetacademy@gmail.com" class="flex items-center gap-2 break-all hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-4 w-4 icon-gold" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="m3.5 6.5 8.5 6 8.5-6"/></svg> gsnetacademy@gmail.com</a></li>
+          <li><a href="https://chat.whatsapp.com/KeaQUhOFz0UGAKtLmsM7oU" target="_blank" rel="noreferrer noopener" class="flex items-center gap-2 hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-4 w-4 icon-gold" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.2 20.8 4.6 16A8.4 8.4 0 1 1 8 19.4l-4.8 1.4Z"/><path d="M9 8.4c.3-.7.6-.7.9-.7h.6c.2 0 .5 0 .7.6l.8 1.9c.1.2.1.4 0 .6l-.5.7c-.1.2-.2.4 0 .7a7 7 0 0 0 3 2.6c.3.1.5.1.7-.1l.7-.8c.2-.2.4-.2.6-.1l1.8.9c.3.1.5.3.5.5v.6c0 .4-.2.9-.9 1.2-.6.3-1.5.4-2.5.1a10 10 0 0 1-6.5-6.2c-.3-1-.1-1.9.1-2.5Z"/></svg> WhatsApp Group</a></li>
+        </ul>
+        <a href="/enroll.html" class="btn-primary mt-6 w-full">Join for ₹500</a>
+        <p class="text-[14px] mt-3 text-navy-100/75 transition hover:text-gold-300">Address: B 14-15, Udhyog Marg, Block B, Sector 1, Noida, Uttar Pradesh 201301</p>
+      </div>
+    </div>
+
+    <div class="mt-10 border-t border-white/10 pt-6">
+      <ul class="flex flex-wrap items-center gap-x-5 gap-y-2 text-[13px]">
+        <li><a href="/privacy-policy.html" class="text-navy-100/70 transition hover:text-gold-300">Privacy Policy</a></li>
+        <li aria-hidden="true" class="text-navy-100/25">|</li>
+        <li><a href="/refund-policy.html" class="text-navy-100/70 transition hover:text-gold-300">Refund &amp; Cancellation</a></li>
+        <li aria-hidden="true" class="text-navy-100/25">|</li>
+        <li><a href="/terms-of-enrollment.html" class="text-navy-100/70 transition hover:text-gold-300">Terms of Enrollment</a></li>
+      </ul>
+      <div class="mt-4 flex flex-col gap-2 text-[13px] text-navy-100/60 sm:flex-row sm:items-center sm:justify-between">
+        <p>© 2026 GS Net Academy. All Rights Reserved.</p>
+        <p>A Premier institute for UGC NET Paper-1</p>
+      </div>
+      <p class="mt-4 text-[12px] leading-relaxed text-navy-100/45">Disclaimer: GS Net Academy किसी भी exam में selection, rank या score की guarantee नहीं देता। हम quality teaching, study material, practice और academic mentorship प्रदान करते हैं। UGC, NTA या किसी अन्य government body से हमारा कोई affiliation नहीं है।</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  (function() {
+
+    const BASE_PATH =
+      "/tutorials/data-interpretation/sources-and-acquisition-of-data";
+
+    const links = document.querySelectorAll(".nav-link");
+    const cards = document.querySelectorAll(".topic-card");
+    const content = document.getElementById("contentArea");
+    const sidebarToggle = document.getElementById("sidebar-toggle");
+
+
+    // Get topic slug from current URL
+    function getSlugFromPath() {
+
+      const path = window.location.pathname
+        .replace(/\/+$/, "");
+
+      if (path.startsWith(BASE_PATH + "/")) {
+
+        return path
+          .substring((BASE_PATH + "/").length)
+          .split("/")[0];
+
+      }
+
+      return null;
+    }
+
+
+    // Update browser URL
+    function updateUrl(slug, replace = false) {
+
+      const newPath =
+        BASE_PATH + "/" + slug;
+
+      if (window.location.pathname !== newPath) {
+
+        if (replace) {
+
+          history.replaceState(
+            null,
+            "",
+            newPath
+          );
+
+        } else {
+
+          history.pushState(
+            null,
+            "",
+            newPath
+          );
+
+        }
+
+      }
+    }
+
+
+    // Update active sidebar link
+    function updateActiveLink(slug) {
+
+      links.forEach(function(link) {
+
+        const href =
+          link.getAttribute("href");
+
+        if (!href) return;
+
+        const linkSlug =
+          href
+            .split("/")
+            .filter(Boolean)
+            .pop();
+
+        link.classList.toggle(
+          "active",
+          linkSlug === slug
+        );
+
+      });
+
+    }
+
+
+    // Show selected topic card
+    function showCard(
+      slug,
+      updateHistory = true
+    ) {
+
+      cards.forEach(function(card) {
+
+        card.classList.add("hidden");
+
+      });
+
+
+      const target =
+        document.getElementById(slug);
+
+
+      if (!target) {
+
+        const first = cards[0];
+
+        if (first) {
+
+          first.classList.remove("hidden");
+
+          const firstSlug =
+            first.id;
+
+          updateActiveLink(firstSlug);
+
+          updateUrl(
+            firstSlug,
+            true
+          );
+
+        }
+
+        return;
+      }
+
+
+      target.classList.remove("hidden");
+
+      updateActiveLink(slug);
+
+
+      if (updateHistory) {
+
+        updateUrl(
+          slug,
+          false
+        );
+
+      }
+
+
+      if (sidebarToggle) {
+
+        sidebarToggle.checked = false;
+
+      }
+
+
+      if (content) {
+
+        const top =
+          content.getBoundingClientRect().top +
+          window.pageYOffset -
+          10;
+
+        window.scrollTo({
+
+          top: top,
+
+          behavior: "smooth"
+
+        });
+
+      }
+
+    }
+
+
+    // Sidebar link click
+    links.forEach(function(link) {
+
+      link.addEventListener(
+        "click",
+        function(e) {
+
+          e.preventDefault();
+
+
+          const href =
+            this.getAttribute("href");
+
+          if (!href) return;
+
+
+          const slug =
+            href
+              .split("/")
+              .filter(Boolean)
+              .pop();
+
+
+          if (!slug) return;
+
+
+          console.log(
+            "Clicked topic:",
+            slug
+          );
+
+
+          showCard(
+            slug,
+            true
+          );
+
+        }
+      );
+
+    });
+
+
+    // Initial page load
+    function initFromPath() {
+
+      let slug =
+        getSlugFromPath();
+
+
+      if (
+        !slug ||
+        !document.getElementById(slug)
+      ) {
+
+        slug =
+          cards[0]?.id ||
+          "data-meaning";
+
+      }
+
+
+      showCard(
+        slug,
+        false
+      );
+
+
+      updateUrl(
+        slug,
+        true
+      );
+
+    }
+
+
+    initFromPath();
+
+
+    // Browser Back / Forward
+    window.addEventListener(
+      "popstate",
+      function() {
+
+        const slug =
+          getSlugFromPath();
+
+
+        if (
+          slug &&
+          document.getElementById(slug)
+        ) {
+
+          showCard(
+            slug,
+            false
+          );
+
+        } else {
+
+          const firstSlug =
+            cards[0]?.id ||
+            "data-meaning";
+
+          showCard(
+            firstSlug,
+            false
+          );
+
+        }
+
+      }
+    );
+
+
+  })();
+</script>
+</body>
+</html>

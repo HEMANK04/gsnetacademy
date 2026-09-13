@@ -1,0 +1,1098 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Module 1: Research — Meaning, Types, Characteristics, Positivism &amp; Post-Positivism | GS Net Academy</title>
+<meta name="description" content="Complete Unit 2 Module 1 notes: meaning, objectives, characteristics of research, types of research, positivism, post-positivism &amp; verified PYQs.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@700;800&display=swap" rel="stylesheet">
+<style>
+:root{--navy-950:#0b1330;--navy-900:#101a3d;--navy-700:#33406b;--navy-500:#5b6690;--navy-100:#e7eaf5;--navy-50:#f4f6fc;--gold-400:#e8b74b;--gold-500:#d9a53a;--gold-600:#b9852a;--gold-50:#fdf6e7;--cream:#f8f5ee;--green:#1a7a4c;--orange:#c65b1f;}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{margin:0;font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:var(--cream);color:var(--navy-900);}
+.h-display{font-family:'Poppins',system-ui,sans-serif;font-weight:800;letter-spacing:-.01em;}
+a{text-decoration:none;color:inherit;}
+.container-x{max-width:1360px;margin:0 auto;padding:0 20px;}
+
+.topbar{background:var(--navy-950);color:#fff;padding:9px 0;font-size:12.5px;}
+.topbar .container-x{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;}
+.topbar .target{color:var(--gold-400);font-weight:700;}
+.topbar .right{display:flex;gap:20px;flex-wrap:wrap;color:rgba(255,255,255,.85);}
+
+.mainnav{background:var(--cream);padding:14px 0;border-bottom:1px solid rgba(16,26,61,.08);}
+.mainnav .container-x{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;}
+.brand{display:flex;align-items:center;gap:10px;}
+.brand-badge{width:42px;height:42px;border-radius:9px;background:var(--navy-950);color:var(--gold-400);display:flex;align-items:center;justify-content:center;font-family:'Poppins';font-weight:800;font-size:11px;text-align:center;line-height:1.1;}
+.brand-text .rank{color:var(--gold-600);font-weight:800;font-size:14px;}
+.brand-text .line{font-size:12.5px;color:var(--navy-500);}
+.nav-links{display:flex;gap:26px;font-size:14.5px;font-weight:600;color:var(--navy-900);flex-wrap:wrap;}
+.nav-cta{display:flex;gap:10px;align-items:center;}
+.btn{padding:9px 16px;border-radius:9px;font-size:13.5px;font-weight:700;border:1px solid rgba(16,26,61,.15);}
+.btn.demo{background:#fff;}
+.btn.join{background:var(--gold-400);color:var(--navy-950);border:none;}
+
+.hero{position:relative;background:var(--navy-950);color:#fff;overflow:hidden;}
+.hero:before{content:"";position:absolute;right:-120px;top:-140px;width:380px;height:380px;border-radius:50%;background:radial-gradient(circle,rgba(232,183,75,.25),transparent 70%);}
+.hero-inner{position:relative;padding:42px 0 34px;}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);padding:6px 14px;border-radius:999px;font-size:12.5px;font-weight:700;color:var(--gold-400);}
+.hero h1{font-size:clamp(26px,4vw,42px);margin:16px 0 8px;line-height:1.2;}
+.hero p{color:rgba(255,255,255,.78);max-width:700px;font-size:15px;line-height:1.6;margin:0;}
+.hero-tags{display:flex;gap:12px;margin-top:20px;flex-wrap:wrap;}
+.tag{border:1px solid rgba(255,255,255,.18);border-radius:9px;padding:8px 15px;font-size:12.8px;font-weight:700;color:#cdd2e3;display:flex;gap:7px;align-items:center;}
+.tag b{color:var(--gold-400);}
+
+.layout{display:grid;grid-template-columns:290px 1fr;gap:28px;padding:28px 0 60px;align-items:start;}
+@media (max-width:980px){.layout{grid-template-columns:1fr;}}
+
+.sidebar{position:sticky;top:16px;max-height:calc(100vh - 32px);overflow-y:auto;background:#fff;border:1px solid rgba(16,26,61,.08);border-radius:16px;padding:18px 14px;box-shadow:0 6px 24px rgba(16,26,61,.05);}
+.sidebar::-webkit-scrollbar{width:6px;}
+.sidebar::-webkit-scrollbar-thumb{background:#e2e6f2;border-radius:6px;}
+.sidebar-title{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.14em;color:var(--gold-600);padding:6px 10px 12px;}
+.nav-link{display:flex;align-items:flex-start;gap:10px;padding:9px 10px;border-radius:10px;font-size:13.3px;font-weight:600;color:var(--navy-700);line-height:1.35;cursor:pointer;border:none;background:none;width:100%;text-align:left;}
+.nav-link:hover{background:var(--navy-50);color:var(--navy-900);}
+.nav-link.active{background:var(--gold-50);color:var(--navy-900);}
+.nav-num{flex:none;width:22px;height:22px;border-radius:7px;background:var(--navy-50);color:var(--navy-500);font-size:11px;font-weight:800;display:grid;place-items:center;}
+.nav-link.active .nav-num{background:var(--gold-400);color:var(--navy-950);}
+
+.sb-divider{height:1px;background:rgba(16,26,61,.08);margin:14px 6px;}
+.sb-module{display:flex;align-items:center;gap:10px;padding:9px 10px;border-radius:10px;font-size:13px;color:var(--navy-500);margin-bottom:2px;}
+.sb-module.current{color:var(--gold-600);font-weight:700;background:var(--gold-50);}
+.sb-module .dot{width:6px;height:6px;border-radius:50%;background:var(--navy-100);flex:none;}
+.sb-module.current .dot{background:var(--gold-500);}
+
+#sidebar-toggle{display:none;}
+.mobile-bar{display:none;}
+@media (max-width:980px){
+  .mobile-bar{display:flex;align-items:center;justify-content:space-between;gap:10px;background:#fff;border:1px solid rgba(16,26,61,.1);border-radius:12px;padding:12px 14px;margin-bottom:6px;font-weight:800;font-size:13.5px;color:var(--navy-900);}
+  .sidebar{position:static;max-height:none;display:none;}
+  #sidebar-toggle:checked ~ .layout .sidebar{display:block;}
+}
+
+.content{min-width:0;}
+.topic-section{background:#fff;border:1px solid rgba(16,26,61,.08);border-radius:16px;padding:22px 22px 20px;margin-bottom:18px;scroll-margin-top:18px;}
+.sec-head{display:flex;align-items:center;gap:12px;margin-bottom:12px;}
+.sec-num{flex:none;width:34px;height:34px;border-radius:10px;background:var(--navy-950);color:var(--gold-400);font-weight:800;font-size:14px;display:grid;place-items:center;}
+.sec-head h2{margin:0;font-size:19px;font-weight:800;color:var(--navy-900);}
+.sec-head .hi{font-size:13px;color:var(--navy-500);font-weight:600;margin-left:4px;}
+.topic-section p{font-size:14.5px;line-height:1.75;color:var(--navy-700);margin:6px 0;}
+.topic-section h3{font-size:15.5px;font-weight:800;color:var(--navy-900);margin:16px 0 6px;}
+.bullet-list{margin:8px 0;padding:0;list-style:none;display:grid;gap:6px;}
+.bullet-list li{position:relative;padding-left:20px;font-size:14.3px;line-height:1.6;color:var(--navy-700);}
+.bullet-list li:before{content:"";position:absolute;left:2px;top:9px;width:6px;height:6px;border-radius:50%;background:var(--gold-500);}
+.formula{background:var(--navy-950);color:#fdeec2;font-weight:700;font-size:13.6px;padding:12px 16px;border-radius:10px;margin:10px 0;line-height:1.7;}
+.pyq-tag{display:inline-block;background:var(--gold-50);color:var(--gold-600);font-weight:800;font-size:12px;letter-spacing:.03em;padding:6px 12px;border-radius:8px;margin:14px 0 6px;}
+.answer-box{background:#eefaf2;border:1px solid #bfe8cc;color:var(--green);font-weight:700;font-size:13.6px;padding:8px 14px;border-radius:9px;margin:6px 0;}
+.explain{background:var(--navy-50);border-radius:9px;padding:8px 14px;font-size:13.6px;color:var(--navy-700);}
+.example{background:#fff;border:1px dashed var(--gold-500);border-radius:9px;padding:10px 14px;font-size:13.8px;color:var(--navy-700);margin:8px 0;}
+.example .lbl{color:var(--gold-600);font-weight:800;font-size:11.5px;text-transform:uppercase;letter-spacing:.05em;margin-bottom:4px;display:block;}
+.trap{background:#fdf0e4;border-left:4px solid var(--orange);border-radius:9px;padding:10px 14px;font-size:13.8px;color:#6b3a17;margin:8px 0;}
+.trap .lbl{color:var(--orange);font-weight:800;font-size:11.5px;text-transform:uppercase;letter-spacing:.05em;margin-bottom:4px;display:block;}
+.mini-table{width:100%;border-collapse:collapse;margin:10px 0;font-size:13.3px;}
+.mini-table th{background:var(--navy-950);color:var(--gold-400);text-align:left;padding:8px 12px;font-weight:700;}
+.mini-table td{padding:8px 12px;border-bottom:1px solid var(--navy-100);color:var(--navy-700);}
+.mini-table tr:nth-child(even) td{background:var(--navy-50);}
+
+.enroll-cta{position:relative;overflow:hidden;background:var(--navy-950);color:#fff;border-radius:16px;padding:26px 26px;margin-top:20px;display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between;}
+.enroll-cta:before{content:"";position:absolute;right:-60px;top:-60px;width:200px;height:200px;border-radius:50%;background:radial-gradient(circle,rgba(232,183,75,.25),transparent 70%);}
+.enroll-cta h3{margin:0 0 4px;font-size:20px;}
+.enroll-cta p{margin:0;color:rgba(255,255,255,.75);font-size:13.5px;max-width:480px;}
+.btn-gold{position:relative;background:var(--gold-400);color:var(--navy-950);font-weight:800;padding:11px 22px;border-radius:10px;font-size:13.5px;white-space:nowrap;}
+.footer-note{text-align:center;color:var(--navy-500);font-size:13px;margin-top:20px;}
+</style>
+
+  <link rel="stylesheet" href="/css/tailwind.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <style>.hero h1 { font-weight: 800 !important; color: #fff !important; line-height: 1.2 !important; font-family: 'Poppins', sans-serif !important; }</style>
+
+  <link rel="icon" href="/assets/images/logo.png">
+</head>
+<body>
+
+<header class="sticky top-0 z-50 border-b border-navy-900/8 bg-white/95 backdrop-blur-md">
+  <nav class="container-wide flex h-[76px] items-center gap-4" aria-label="Main">
+    <a href="/" class="flex shrink-0 items-center gap-3" aria-label="Home">
+      <span class="inline-flex shrink-0 items-center justify-center overflow-hidden rounded-lg bg-navy-950 ring-1 ring-navy-900/10">
+        <img src="assets/images/logo.png" alt="GS Net Academy" class="h-11 w-auto" width="120" height="44">
+      </span>
+      <img src="assets/images/tagline.png" alt="#1 A Premier institute for UGC NET Paper-1" class="h-11 hidden w-auto lg:block">
+    </a>
+    <ul class="mx-auto hidden items-center gap-5 xl:flex">
+      <li><a href="courses.html" class="relative block whitespace-nowrap rounded-lg px-3 py-2 text-[13.5px] font-bold transition-colors text-navy-700/75 hover:text-navy-900">UGC NET Paper-I</a></li>
+      <li><a href="results.html" class="relative block whitespace-nowrap rounded-lg px-3 py-2 text-[13.5px] font-bold transition-colors text-navy-700/75 hover:text-navy-900">Results</a></li>
+      <li><a href="tutorial.html" class="relative block whitespace-nowrap rounded-lg px-3 py-2 text-[13.5px] font-bold transition-colors text-navy-700/75 hover:text-navy-900">Tutorials</a></li>
+      <li><a href="notes.html" class="relative block whitespace-nowrap rounded-lg px-3 py-2 text-[13.5px] font-bold transition-colors text-navy-700/75 hover:text-navy-900">Notes</a></li>
+      <li><a href="blog.html" class="relative block whitespace-nowrap rounded-lg px-3 py-2 text-[13.5px] font-bold transition-colors text-navy-700/75 hover:text-navy-900">Blog</a></li>
+      <li><a href="about.html" class="relative block whitespace-nowrap rounded-lg px-3 py-2 text-[13.5px] font-bold transition-colors text-navy-700/75 hover:text-navy-900">About</a></li>
+      <li><a href="contact.html" class="relative block whitespace-nowrap rounded-lg px-3 py-2 text-[13.5px] font-bold transition-colors text-navy-700/75 hover:text-navy-900">Contact</a></li>
+    </ul>
+    <div class="ml-auto flex items-center gap-2 xl:ml-0">
+      <span title="Coming soon" class="hidden items-center gap-1.5 whitespace-nowrap rounded-lg border border-navy-900/12 px-3 py-2 text-[13px] font-bold text-navy-700 lg:inline-flex"><svg viewBox="0 0 24 24" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="4.5" width="14" height="16" rx="2.5"/><path d="M9 4.5a3 3 0 0 1 6 0"/><path d="M9 11h6M9 15h4"/></svg> <a href="https://mock-test.gsnetacademy.com/" class="cursor-pointer">Exam Portal</a></span>
+      <a href="/#free-demo" class="btn-outline btn-sm hidden 2xl:inline-flex">Demo</a>
+      <a href="enroll.html" class="btn-primary btn-sm hidden sm:inline-flex">Join Now</a>
+      <label for="nav-toggle" class="cursor-pointer rounded-lg border border-navy-900/12 p-2 text-navy-800 xl:hidden" aria-label="Menu"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></label>
+    </div>
+  </nav>
+</header>
+
+<div class="drawer xl:hidden">
+  <label for="nav-toggle" class="drawer-scrim" aria-hidden="true"></label>
+  <div class="drawer-panel">
+    <div class="flex h-[72px] shrink-0 items-center justify-between border-b border-navy-900/10 px-5">
+      <img src="assets/images/logo.png" alt="GS Net Academy" class="h-9 w-auto rounded-lg bg-navy-950">
+      <label for="nav-toggle" class="cursor-pointer p-2 text-navy-800" aria-label="Close"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></label>
+    </div>
+    <div class="flex-1 overflow-y-auto p-5">
+      <ul class="flex flex-col gap-1">
+      <li><a href="/" class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold bg-navy-50 text-navy-900">Home</a></li>
+      <li><a href="courses.html" class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold text-navy-700">UGC NET Paper-I</a></li>
+      <li><a href="results.html" class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold text-navy-700">Our Results</a></li>
+      <li><span class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold text-navy-400">UG / PG (Paper-2)<span class="rounded-md bg-navy-50 px-2 py-0.5 text-[10.5px] font-extrabold uppercase tracking-wider">Coming soon</span></span></li>
+      <li><a href="tutorial.html" class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold text-navy-700">Tutorials</a></li>
+      <li><a href="notes.html" class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold text-navy-700">Notes</a></li>
+      <li><a href="blog.html" class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold text-navy-700">Blog</a></li>
+      <li><a href="about.html" class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold text-navy-700">About</a></li>
+      <li><a href="contact.html" class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold text-navy-700">Contact</a></li>
+      </ul>
+      <p class="mt-3 rounded-xl bg-gold-50 px-4 py-3 text-[12.5px] font-extrabold uppercase tracking-wider text-gold-700">AI-Powered Career Guidance — Coming soon</p>
+      <div class="mt-5 grid gap-2.5">
+        <a href="enroll.html" class="btn-primary w-full">✓ JOIN BATCH @ ₹500</a>
+        <a href="/#free-demo" class="btn-outline w-full">▶ WATCH FREE DEMO</a>
+        <a href="https://chat.whatsapp.com/KeaQUhOFz0UGAKtLmsM7oU" target="_blank" rel="noreferrer noopener" class="btn-outline w-full"><svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.2 20.8 4.6 16A8.4 8.4 0 1 1 8 19.4l-4.8 1.4Z"/><path d="M9 8.4c.3-.7.6-.7.9-.7h.6c.2 0 .5 0 .7.6l.8 1.9c.1.2.1.4 0 .6l-.5.7c-.1.2-.2.4 0 .7a7 7 0 0 0 3 2.6c.3.1.5.1.7-.1l.7-.8c.2-.2.4-.2.6-.1l1.8.9c.3.1.5.3.5.5v.6c0 .4-.2.9-.9 1.2-.6.3-1.5.4-2.5.1a10 10 0 0 1-6.5-6.2c-.3-1-.1-1.9.1-2.5Z"/></svg> WhatsApp Group</a>
+        <a href="tel:+919266511505" class="btn-dark w-full"><svg viewBox="0 0 24 24" class="h-4 w-4" fill="currentColor" stroke="none" aria-hidden="true"><path d="M5 3h3.5l1.6 4-2 1.4a12 12 0 0 0 5.5 5.5l1.4-2 4 1.6V19a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 3 5.2 2 2 0 0 1 5 3Z"/></svg> Call 9266511505</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="topbar">
+  <div class="container-x">
+    <span class="target">◎ Target December 2026 Exam — Paper-I Batch Started 16 August 2026</span>
+    <div class="right">
+      <span>📞 +91 9266511505</span>
+      <span>📞 +91 9810845327</span>
+      <span>✉ gsnetacademy@gmail.com</span>
+      <span>💬 chat us</span>
+    </div>
+  </div>
+</div>
+
+<nav class="mainnav">
+  <div class="container-x">
+    <div class="brand">
+      <div class="brand-badge">GS<br>Net</div>
+      <div class="brand-text">
+        <div class="rank">#1 A Premier institute for</div>
+        <div class="line">UGC NET Paper-1.</div>
+      </div>
+    </div>
+    <div class="nav-links">
+      <a href="#">UGC NET Paper-I</a>
+      <a href="#">Tutorials</a>
+      <a href="#">Notes</a>
+      <a href="#">Blog</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </div>
+    <div class="nav-cta">
+      <a class="btn demo" href="#">🔒 Exam Portal</a>
+      <a class="btn demo" href="#">Demo</a>
+      <a class="btn join" href="#">Join Now</a>
+    </div>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="container-x hero-inner">
+    <span class="eyebrow">✦ Module 1 · Unit 2 · Research Aptitude</span>
+    <h1 class="h-display">Research: Meaning, Types, Characteristics, Positivism &amp; Post-Positivism</h1>
+    <p>UGC NET/JRF &amp; Assistant Professor Paper-1 — December 2026. The foundational topic of Research Aptitude — definitions, objectives, characteristics, classification and paradigms.</p>
+    <div class="hero-tags">
+      <div class="tag">📘 <b>14</b> Sections</div>
+      <div class="tag">📝 <b>6</b> Verified PYQs</div>
+      <div class="tag">🎯 <b>12</b> Expected MCQs</div>
+    </div>
+  </div>
+</section>
+
+<main class="container-x">
+  <input type="checkbox" id="sidebar-toggle">
+  <label for="sidebar-toggle" class="mobile-bar">
+    <span>📑 On this page</span>
+    <span>☰ Menu</span>
+  </label>
+
+  <div class="layout">
+    <aside class="sidebar">
+      <p class="sidebar-title">On this page</p>
+      <nav class="nav-list">
+        <a href="/tutorials/research-aptitude/research-meaning-characteristics/introduction" class="nav-link">
+  <span class="nav-num">1</span>Introduction
+</a>
+      <nav>
+  <a href="/tutorials/research-aptitude/research-meaning-characteristics/meaning-of-research" class="nav-link">
+    <span class="nav-num">2</span>Meaning of Research
+  </a>
+
+  <a href="/tutorials/research-aptitude/research-meaning-characteristics/objectives-of-research" class="nav-link">
+    <span class="nav-num">3</span>Objectives of Research
+  </a>
+
+  <a href="/tutorials/research-aptitude/research-meaning-characteristics/characteristics-of-good-research" class="nav-link">
+    <span class="nav-num">4</span>Characteristics of Good Research
+  </a>
+
+  <a href="/tutorials/research-aptitude/research-meaning-characteristics/what-research-is-not" class="nav-link">
+    <span class="nav-num">5</span>What Research Is Not
+  </a>
+
+  <a href="/tutorials/research-aptitude/research-meaning-characteristics/types-of-research" class="nav-link">
+    <span class="nav-num">6</span>Types of Research
+  </a>
+
+  <a href="/tutorials/research-aptitude/research-meaning-characteristics/research-paradigm" class="nav-link">
+    <span class="nav-num">7</span>Research Paradigm
+  </a>
+
+  <a href="/tutorials/research-aptitude/research-meaning-characteristics/positivism" class="nav-link">
+    <span class="nav-num">8</span>Positivism
+  </a>
+
+  <a href="/tutorials/research-aptitude/research-meaning-characteristics/post-positivism" class="nav-link">
+    <span class="nav-num">9</span>Post Positivism
+  </a>
+
+  <a href="/tutorials/research-aptitude/research-meaning-characteristics/important-exam-traps" class="nav-link">
+    <span class="nav-num">10</span>Important Exam Traps
+  </a>
+
+  <a href="/tutorials/research-aptitude/research-meaning-characteristics/verified-previous-year-questions" class="nav-link">
+    <span class="nav-num">11</span>Verified Previous Year Questions
+  </a>
+
+  <a href="/tutorials/research-aptitude/research-meaning-characteristics/pyq-trend-analysis" class="nav-link">
+    <span class="nav-num">12</span>PYQ Trend Analysis
+  </a>
+
+  <a href="/tutorials/research-aptitude/research-meaning-characteristics/december-2026-expected-mcqs" class="nav-link">
+    <span class="nav-num">13</span>December 2026 Expected MCQs
+  </a>
+
+  <a href="/tutorials/research-aptitude/research-meaning-characteristics/one-page-revision" class="nav-link">
+    <span class="nav-num">14</span>One Page Revision
+  </a>
+</nav>
+
+      <div class="sb-divider"></div>
+      <p class="sidebar-title">Unit 2 Modules</p>
+      <div class="sb-module current"><span class="dot"></span> 01 · Meaning, Types &amp; Characteristics</div>
+      <div class="sb-module"><span class="dot"></span> 02 · Research Methods &amp; Steps</div>
+      <div class="sb-module"><span class="dot"></span> 03 · Thesis, Article Writing &amp; References</div>
+      <div class="sb-module"><span class="dot"></span> 04 · Research Ethics &amp; ICT</div>
+    </aside>
+
+    <div class="content">
+
+      <section id="s1" class="topic-section">
+        <div class="sec-head"><span class="sec-num">1</span><h2>Introduction</h2></div>
+        <p>यह Research Aptitude का foundational topic है। इससे मुख्यतः निम्न forms में प्रश्न पूछे जाते हैं:</p>
+        <ul class="bullet-list">
+          <li>Research की सही definition</li>
+          <li>Characteristics of scientific research</li>
+          <li>Basic, Applied, Action और Evaluation Research</li>
+          <li>Quantitative–Qualitative distinction</li>
+          <li>Experimental, Ex-post Facto और Descriptive Research</li>
+          <li>Positivism–Post-positivism comparison</li>
+          <li>Research type की classroom situation से पहचान</li>
+          <li>Match the Following और statement-based MCQs</li>
+        </ul>
+        <div class="formula">Research = Systematic Inquiry + Evidence + Analysis + Interpretation + Conclusion</div>
+      </section>
+
+      <section id="s2" class="topic-section">
+        <div class="sec-head"><span class="sec-num">2</span><h2>Research का अर्थ <span class="hi">Meaning of Research</span></h2></div>
+        <p><b>Research</b> किसी question, problem या phenomenon की systematic, objective, logical और evidence-based investigation है, जिसका उद्देश्य new knowledge विकसित करना, existing knowledge verify करना या किसी problem का credible solution प्राप्त करना है।</p>
+        <div class="formula">Research = Re-search नहीं, बल्कि Systematic Search for Meaning and Evidence</div>
+        <p>Research में researcher:</p>
+        <ul class="bullet-list">
+          <li>Problem identify करता है।</li>
+          <li>Relevant literature पढ़ता है।</li>
+          <li>Research questions या hypothesis बनाता है।</li>
+          <li>Appropriate method चुनता है।</li>
+          <li>Data collect करता है।</li>
+          <li>Data analyse और interpret करता है।</li>
+          <li>Evidence-based conclusion प्रस्तुत करता है।</li>
+        </ul>
+
+        <h3>Exam-Oriented Definition</h3>
+        <p>Research को केवल "बार-बार search करना" या "hypothesis को prove करना" नहीं कहा जा सकता।</p>
+        <div class="example"><span class="lbl">Definition</span>Research is a systematic and critical investigation undertaken to answer a question, understand a phenomenon, verify knowledge or provide a credible solution to a problem.</div>
+
+        <h3>सरल उदाहरण</h3>
+        <div class="example"><span class="lbl">Example</span>GS Net Academy यह जानना चाहती है कि "क्या weekly active-recall quizzes से UGC NET learners की retention improve होती है?" इसके लिए दो learner groups बनाए गए — एक को weekly quizzes, दूसरे को conventional revision कराया गया, और pre-test/post-test scores compare किए गए। यह systematic research है।</div>
+
+        <h3>Research और सामान्य Inquiry में अंतर</h3>
+        <table class="mini-table">
+          <tr><th>Ordinary Inquiry</th><th>Scientific Research</th></tr>
+          <tr><td>Personal experience पर आधारित हो सकती है</td><td>Systematic evidence पर आधारित</td></tr>
+          <tr><td>Procedure स्पष्ट होना आवश्यक नहीं</td><td>Planned methodology</td></tr>
+          <tr><td>Bias अधिक हो सकता है</td><td>Bias control का प्रयास</td></tr>
+          <tr><td>Verification कठिन</td><td>Verifiable and open to scrutiny</td></tr>
+          <tr><td>Conclusion intuitive हो सकता है</td><td>Evidence-based conclusion</td></tr>
+          <tr><td>Replication आवश्यक नहीं</td><td>Replication सम्भव होनी चाहिए</td></tr>
+        </table>
+      </section>
+
+      <section id="s3" class="topic-section">
+        <div class="sec-head"><span class="sec-num">3</span><h2>Objectives of Research <span class="hi">शोध के उद्देश्य</span></h2></div>
+
+        <h3>Exploration — अन्वेषण</h3>
+        <p>कम understood problem के बारे में preliminary understanding विकसित करना।</p>
+        <div class="example"><span class="lbl">Example</span>Adult learners MOOCs बीच में क्यों छोड़ते हैं?</div>
+
+        <h3>Description — वर्णन</h3>
+        <p>किसी population, event या phenomenon की characteristics describe करना।</p>
+        <div class="example"><span class="lbl">Example</span>UGC NET aspirants के study habits का survey।</div>
+
+        <h3>Explanation — व्याख्या</h3>
+        <p>Variables के बीच relationship या कारण समझना।</p>
+        <div class="example"><span class="lbl">Example</span>Motivation और mock-test performance के बीच relationship।</div>
+
+        <h3>Prediction — पूर्वानुमान</h3>
+        <p>Available evidence के आधार पर future outcome का अनुमान लगाना।</p>
+        <div class="example"><span class="lbl">Example</span>Study hours और previous scores से examination success predict करना।</div>
+
+        <h3>Control</h3>
+        <p>Experimental situations में relevant variables control करके causal relationship examine करना।</p>
+
+        <h3>Theory Building</h3>
+        <p>Concepts और relationships को integrate करके theoretical explanation विकसित करना।</p>
+
+        <h3>Problem-Solving</h3>
+        <p>Practical या immediate problem का solution विकसित करना।</p>
+      </section>
+
+      <section id="s4" class="topic-section">
+        <div class="sec-head"><span class="sec-num">4</span><h2>Characteristics of Good Research <span class="hi">अच्छे शोध की विशेषताएँ</span></h2></div>
+
+        <h3>Systematic — व्यवस्थित</h3>
+        <p>Research predefined logical process follow करती है।</p>
+        <div class="formula">Problem → Literature → Questions/Hypothesis → Method → Data → Analysis → Conclusion</div>
+
+        <h3>Logical — तार्किक</h3>
+        <p>Reasoning clear और internally consistent होनी चाहिए। Research में दोनों reasoning processes उपयोगी हैं:</p>
+        <ul class="bullet-list">
+          <li><b>Deductive Reasoning:</b> Theory → Hypothesis → Data → Testing</li>
+          <li><b>Inductive Reasoning:</b> Observations → Patterns → Concepts → Theory</li>
+        </ul>
+
+        <h3>Empirical — अनुभवजन्य</h3>
+        <p>Research observable evidence या systematically collected data पर आधारित होती है। Empirical data हो सकता है: Numerical scores, Interviews, Observations, Documents, Behaviour, Images, Field notes।</p>
+        <div class="trap"><span class="lbl">Exam Trap</span>Empirical का अर्थ केवल quantitative data नहीं है। Qualitative observation भी empirical evidence हो सकती है।</div>
+
+        <h3>Objective — वस्तुनिष्ठ</h3>
+        <p>Researcher personal preference और bias का प्रभाव कम करने का प्रयास करता है। Objectivity improve करने के methods: Clear operational definitions, Standardised tools, Transparent procedures, Multiple researchers, Blind assessment, Triangulation, Reflexivity।</p>
+
+        <h3>Verifiable — सत्यापन योग्य</h3>
+        <p>दूसरे scholars research procedure और evidence examine कर सकें।</p>
+
+        <h3>Replicable — पुनरावृत्ति योग्य</h3>
+        <p>Method sufficiently clear हो ताकि study को comparable conditions में repeat किया जा सके।</p>
+        <div class="trap"><span class="lbl">Exam Trap</span>Replication का अर्थ हर बार identical result आना आवश्यक नहीं है। Context, sample और random variation के कारण differences सम्भव हैं।</div>
+
+        <h3>Controlled — नियंत्रित</h3>
+        <p>विशेषकर experimental research में extraneous variables के प्रभाव को कम किया जाता है।</p>
+
+        <h3>Critical</h3>
+        <p>Researcher assumptions, evidence, limitations और alternative explanations को critically examine करता है।</p>
+
+        <h3>Ethical</h3>
+        <p>Good research में आवश्यक हैं: Informed consent, Voluntary participation, Privacy, Confidentiality, No unnecessary harm, Honest reporting, Proper acknowledgement, Right to withdraw।</p>
+
+        <h3>Cumulative</h3>
+        <p>New research existing knowledge पर build करती है।</p>
+        <div class="formula">Research starts from existing knowledge and contributes back to knowledge.</div>
+
+        <h3>Generalisable or Transferable</h3>
+        <p>Quantitative research context-free generalisation का प्रयास कर सकती है। Qualitative research अक्सर context-specific understanding और transferability पर emphasis करती है।</p>
+
+        <h3>Parsimonious</h3>
+        <p>Explanation unnecessarily complex नहीं होनी चाहिए।</p>
+        <div class="formula">Parsimony = Adequate Explanation with Minimum Unnecessary Complexity</div>
+      </section>
+
+      <section id="s5" class="topic-section">
+        <div class="sec-head"><span class="sec-num">5</span><h2>What Research Is Not <span class="hi">शोध क्या नहीं है?</span></h2></div>
+        <p>Research केवल यह नहीं है:</p>
+        <ul class="bullet-list">
+          <li>Information collect करना</li>
+          <li>Internet search करना</li>
+          <li>पहले से निश्चित belief को prove करना</li>
+          <li>बिना method के opinion देना</li>
+          <li>Sample select करना</li>
+          <li>Data का mechanical presentation</li>
+          <li>दूसरे की material copy करना</li>
+          <li>केवल hypothesis को सही सिद्ध करना</li>
+        </ul>
+        <div class="trap"><span class="lbl">Important Principle</span>Researcher का उद्देश्य hypothesis को "prove" करना नहीं, बल्कि evidence के आधार पर उसे test करना है। Result hypothesis को Support, Not support, Modify या Reject कर सकता है।</div>
+      </section>
+
+      <section id="s6" class="topic-section">
+        <div class="sec-head"><span class="sec-num">6</span><h2>Types of Research <span class="hi">शोध के प्रकार</span></h2></div>
+        <p>Research को एक ही आधार पर classify नहीं किया जाता। एक study simultaneously Applied, Quantitative, Experimental, Longitudinal हो सकती है। इसलिए पहले classification का <b>basis</b> पहचानें।</p>
+
+        <h3>Basic / Fundamental / Pure Research — मौलिक शोध</h3>
+        <p>Basic research का उद्देश्य knowledge, concepts, principles या theory को expand करना है। Immediate practical application आवश्यक नहीं है।</p>
+        <div class="formula">Basic Research = Knowledge and Theory Building</div>
+        <p><b>Characteristics:</b> Curiosity-driven, Theory-oriented, General principles, Long-term contribution, Immediate field solution आवश्यक नहीं।</p>
+        <div class="example"><span class="lbl">Example</span>Human memory में retrieval cues किस प्रकार काम करते हैं?</div>
+        <p><b>Exam Keywords:</b> Knowledge for knowledge's sake, Theory building, Basic principles, Generalisation, No immediate application।</p>
+
+        <h3>Applied Research — अनुप्रयुक्त शोध</h3>
+        <p>Applied research existing knowledge या theory का use करके specific practical problem solve करती है।</p>
+        <div class="formula">Applied Research = Theory Applied to Practical Problem</div>
+        <div class="example"><span class="lbl">Example</span>कौन-सी spaced-revision strategy UGC NET aspirants की retention सबसे अधिक improve करती है?</div>
+        <p><b>Characteristics:</b> Practical problem, Field application, Existing theory का use, Larger applicability की सम्भावना, Solution-oriented।</p>
+
+        <table class="mini-table">
+          <tr><th>Basic Research</th><th>Applied Research</th></tr>
+          <tr><td>Theory development</td><td>Practical application</td></tr>
+          <tr><td>General knowledge</td><td>Specific problem-solving</td></tr>
+          <tr><td>Immediate use आवश्यक नहीं</td><td>Direct field relevance</td></tr>
+          <tr><td>"Why does it happen?"</td><td>"How can it be used?"</td></tr>
+          <tr><td>Foundation तैयार करती है</td><td>Foundation का application करती है</td></tr>
+        </table>
+        <div class="trap"><span class="lbl">Exam Trap</span>Applied research non-scientific नहीं है। यह भी systematic और empirical हो सकती है।</div>
+
+        <h3>Action Research — क्रियात्मक शोध</h3>
+        <p>Action Research practitioner द्वारा अपने immediate local problem को solve करने और practice improve करने के लिए की जाती है।</p>
+        <div class="formula">Action Research = Local Problem + Practitioner + Immediate Improvement + Cyclical Reflection</div>
+        <p><b>Associated Thinkers:</b> Kurt Lewin — Action Research concept और cyclical approach; Stephen M. Corey — Education में Action Research का प्रमुख association।</p>
+        <div class="formula">Plan → Act → Observe → Reflect → Re-plan</div>
+        <div class="example"><span class="lbl">Example</span>एक teacher देखता है कि students Research Aptitude में Positivism और Post-positivism confuse करते हैं। वह problem analyse करता है, comparison chart introduce करता है, classroom intervention लागू करता है, test results observe करता है, और strategy पर reflection करके सुधार करता है। यह Action Research है।</div>
+        <p><b>Characteristics:</b> Small/local sample, Immediate problem, Practitioner as researcher, Improvement of practice, Flexible and cyclical, Context-specific, Collaborative हो सकती है, Universal generalisation primary objective नहीं।</p>
+        <div class="formula">Teacher improving own classroom practice → Action Research</div>
+
+        <h3>Applied vs Action Research</h3>
+        <table class="mini-table">
+          <tr><th>Applied Research</th><th>Action Research</th></tr>
+          <tr><td>Practical problem solve करती है</td><td>Immediate local practice improve करती है</td></tr>
+          <tr><td>Research specialist कर सकता है</td><td>Practitioner स्वयं करता है</td></tr>
+          <tr><td>Larger sample सम्भव</td><td>Usually small/local group</td></tr>
+          <tr><td>Broader generalisation सम्भव</td><td>Context-specific findings</td></tr>
+          <tr><td>More formal design</td><td>Flexible cyclical design</td></tr>
+          <tr><td>Application of theory</td><td>Action and reflection</td></tr>
+        </table>
+        <div class="trap"><span class="lbl">Exam Trap</span>हर practical research Action Research नहीं होती। यदि teacher अपने classroom की immediate problem पर iterative intervention करता है, तो Action Research होगी।</div>
+
+        <h3>Evaluation Research — मूल्यांकन शोध</h3>
+        <p>Evaluation Research किसी programme, policy, practice या intervention की Merit, Worth, Effectiveness, Efficiency और Impact का systematic assessment करती है।</p>
+        <div class="formula">Evaluation Research = Judging the Worth of a Programme or Practice</div>
+        <div class="example"><span class="lbl">Example</span>Government-sponsored online mentorship programme ने rural learners की NET qualification rate कितना improve किया?</div>
+        <p><b>Types:</b> Formative Evaluation (programme के दौरान improvement के लिए), Summative Evaluation (programme complete होने के बाद overall worth/impact judge करने के लिए)।</p>
+        <p><b>Exam Keywords:</b> Programme evaluation, Merit and worth, Effectiveness, Impact, Cost-effectiveness, Goal attainment।</p>
+
+        <h3>Exploratory Research — अन्वेषणात्मक शोध</h3>
+        <p>जब problem के बारे में knowledge limited हो, exploratory research preliminary understanding विकसित करती है।</p>
+        <p><b>Methods:</b> Literature review, Expert interview, Focus group, Case study, Pilot study।</p>
+        <div class="example"><span class="lbl">Example</span>First-generation learners AI-based education को किस प्रकार अनुभव करते हैं?</div>
+        <div class="formula">Exploratory = What is happening? What may be important?</div>
+
+        <h3>Descriptive Research — वर्णनात्मक शोध</h3>
+        <p>Descriptive research existing phenomenon की characteristics को systematically describe करती है।</p>
+        <div class="example"><span class="lbl">Example</span>UGC NET learners द्वारा प्रतिदिन उपयोग किए जाने वाले digital learning resources का survey।</div>
+        <p><b>Characteristics:</b> "What exists?" पर emphasis, Manipulation आवश्यक नहीं, Survey और observation common, Frequency, percentage और trends।</p>
+        <div class="trap"><span class="lbl">Exam Trap</span>Descriptive research cause-and-effect automatically establish नहीं करती।</div>
+
+        <h3>Analytical Research — विश्लेषणात्मक शोध</h3>
+        <p>Available facts, data या documents का critical analysis करके relationships और explanations विकसित करना।</p>
+        <div class="example"><span class="lbl">Example</span>पिछले दस वर्षों के UGC NET results का subject-wise trend analysis।</div>
+
+        <h3>Explanatory Research — व्याख्यात्मक शोध</h3>
+        <p>Variables के बीच relationship या कारण को explain करने का प्रयास।</p>
+        <div class="example"><span class="lbl">Example</span>क्यों regular mock-test analysis JRF performance improve करता है?</div>
+
+        <h3>Quantitative Research — मात्रात्मक शोध</h3>
+        <p>Quantitative Research numerical measurement, structured data और statistical analysis पर आधारित होती है।</p>
+        <div class="formula">Quantitative Research = Numbers + Measurement + Hypothesis Testing + Statistics</div>
+        <p><b>Characteristics:</b> Objective measurement, Predefined variables, Structured tools, Larger samples, Statistical analysis, Deductive orientation, Hypothesis testing, Generalisation का प्रयास, Fixed/structured design।</p>
+        <p><b>Data-Collection Tools:</b> Structured questionnaire, Achievement test, Scale, Experiment, Structured observation, Secondary numerical data।</p>
+        <div class="example"><span class="lbl">Example</span>500 learners के mock-test scores और final NET scores के correlation का study।</div>
+
+        <h3>Qualitative Research — गुणात्मक शोध</h3>
+        <p>Qualitative Research meanings, experiences, perceptions, processes और social context की detailed understanding विकसित करती है।</p>
+        <div class="formula">Qualitative Research = Meaning + Experience + Context + Words</div>
+        <p><b>Characteristics:</b> Natural setting, Researcher as key instrument, Words/narratives/images, Small purposive samples, Flexible/emergent design, Inductive analysis, Context-specific understanding, Participant perspectives, Detailed/thick description, Reflexivity।</p>
+        <p><b>Methods:</b> Interview, Focus group, Participant observation, Case study, Ethnography, Phenomenology, Narrative inquiry, Grounded theory।</p>
+        <div class="example"><span class="lbl">Example</span>JRF-qualified learners के preparation experiences की in-depth interviews द्वारा study।</div>
+
+        <h3>Quantitative vs Qualitative Research</h3>
+        <table class="mini-table">
+          <tr><th>Basis</th><th>Quantitative</th><th>Qualitative</th></tr>
+          <tr><td>Data</td><td>Numbers</td><td>Words, narratives, images</td></tr>
+          <tr><td>Purpose</td><td>Measure, test, predict</td><td>Understand meaning and experience</td></tr>
+          <tr><td>Logic</td><td>Mostly deductive</td><td>Mostly inductive</td></tr>
+          <tr><td>Design</td><td>Structured/fixed</td><td>Flexible/emergent</td></tr>
+          <tr><td>Sample</td><td>Usually larger</td><td>Usually smaller/purposive</td></tr>
+          <tr><td>Setting</td><td>Controlled हो सकती है</td><td>Natural setting</td></tr>
+          <tr><td>Tool</td><td>Instrument is central</td><td>Researcher is key instrument</td></tr>
+          <tr><td>Analysis</td><td>Statistical</td><td>Thematic/interpretive</td></tr>
+          <tr><td>Output</td><td>General patterns</td><td>Context-rich understanding</td></tr>
+          <tr><td>Quality terms</td><td>Validity, reliability</td><td>Credibility, dependability, transferability</td></tr>
+        </table>
+        <div class="trap"><span class="lbl">Exam Trap</span>Qualitative Research केवल subjective opinion नहीं है। Quantitative Research automatically completely objective नहीं होती। दोनों systematic और empirical हो सकती हैं।</div>
+
+        <h3>Mixed-Methods Research — मिश्रित शोध</h3>
+        <p>Mixed Methods quantitative और qualitative approaches को purposeful manner में integrate करती है।</p>
+        <div class="formula">Mixed Methods = Numerical Breadth + Qualitative Depth</div>
+        <div class="example"><span class="lbl">Example</span>पहले 1,000 learners का motivation survey करना और फिर selected learners के interviews लेकर results का deeper explanation प्राप्त करना।</div>
+        <div class="trap"><span class="lbl">Exam Trap</span>केवल दो अलग methods use करना पर्याप्त नहीं; meaningful integration आवश्यक है।</div>
+
+        <h3>Experimental Research — प्रयोगात्मक शोध</h3>
+        <p>Experimental Research cause-and-effect relationship examine करती है।</p>
+        <p><b>Essential Elements:</b> Independent variable manipulation, Dependent variable measurement, Control group, Experimental group, Random assignment जहाँ possible, Extraneous-variable control।</p>
+        <div class="example"><span class="lbl">Example</span>नई teaching strategy का test-score पर effect examine करना।</div>
+        <div class="formula">Manipulation + Control + Randomisation = True Experiment</div>
+
+        <h3>Quasi-Experimental Research</h3>
+        <p>Quasi-experimental study में intervention या comparison होता है, लेकिन random assignment या complete control absent हो सकता है।</p>
+        <div class="example"><span class="lbl">Example</span>दो existing university classes में different teaching methods compare करना।</div>
+        <div class="trap"><span class="lbl">Exam Trap</span>Quasi-experimental का अर्थ weak या non-scientific research नहीं है; causal inference true experiment की तुलना में अधिक cautious होगी।</div>
+
+        <h3>Ex-post Facto Research — कार्योत्तर शोध</h3>
+        <p>Ex-post facto research में independent variable पहले ही occur हो चुकी होती है; researcher उसे manipulate नहीं करता।</p>
+        <div class="formula">Ex-post Facto = Effect Already Occurred → Probable Cause Traced</div>
+        <div class="example"><span class="lbl">Example</span>यह examine करना कि अलग school backgrounds से आने वाले learners की research aptitude में difference है या नहीं।</div>
+
+        <table class="mini-table">
+          <tr><th>Experimental</th><th>Ex-post Facto</th></tr>
+          <tr><td>Independent variable manipulated</td><td>No manipulation</td></tr>
+          <tr><td>Researcher control अधिक</td><td>Control limited</td></tr>
+          <tr><td>Prospective design हो सकता है</td><td>Event already occurred</td></tr>
+          <tr><td>Stronger causal inference</td><td>Causation cautiously inferred</td></tr>
+        </table>
+
+        <h3>Survey Research</h3>
+        <p>Survey population के attitudes, opinions, behaviour या characteristics से संबंधित data collect करती है।</p>
+        <p><b>Cross-Sectional Survey:</b> एक point in time पर data। <b>Longitudinal Survey:</b> Time के different points पर repeated data।</p>
+
+        <h3>Conceptual and Empirical Research</h3>
+        <p><b>Conceptual Research:</b> Concepts, theories और abstract ideas पर आधारित। उदाहरण: Academic freedom की theoretical conceptualisation।</p>
+        <p><b>Empirical Research:</b> Observation या systematically collected evidence पर आधारित। उदाहरण: University teachers की perceived academic freedom का survey।</p>
+
+        <h3>Historical Research</h3>
+        <p>Past events, documents और records का systematic study।</p>
+        <p><b>Primary Sources:</b> Original letters, Diaries, Official records, Speeches, Contemporary documents। <b>Secondary Sources:</b> Later books, Review articles, Interpretations।</p>
+      </section>
+
+      <section id="s7" class="topic-section">
+        <div class="sec-head"><span class="sec-num">7</span><h2>Research Paradigm <span class="hi">का अर्थ</span></h2></div>
+        <p><b>Research Paradigm</b> reality, knowledge और research method के बारे में basic philosophical assumptions का framework है।</p>
+        <p><b>Three Core Questions:</b></p>
+        <ul class="bullet-list">
+          <li><b>Ontology:</b> Reality की nature क्या है?</li>
+          <li><b>Epistemology:</b> Knowledge कैसे प्राप्त की जा सकती है?</li>
+          <li><b>Methodology:</b> Reality और knowledge का अध्ययन किस method से किया जाए?</li>
+        </ul>
+        <div class="formula">Paradigm = View of Reality + View of Knowledge + Research Approach</div>
+      </section>
+
+      <section id="s8" class="topic-section">
+        <div class="sec-head"><span class="sec-num">8</span><h2>Positivism <span class="hi">प्रत्यक्षवाद</span></h2></div>
+        <p>Positivism का प्रमुख association <b>Auguste Comte</b> से है।</p>
+        <div class="formula">Auguste Comte → Positivism</div>
+        <p>Positivism मानता है कि reliable knowledge observable, measurable और empirically verifiable evidence पर आधारित होनी चाहिए।</p>
+        <div class="formula">Positivism = Objective Reality + Observation + Measurement + Hypothesis Testing + Generalisation</div>
+        <p><b>Assumptions:</b></p>
+        <ul class="bullet-list">
+          <li><b>Ontology:</b> एक objective reality researcher से independent exist करती है।</li>
+          <li><b>Epistemology:</b> Reality को observation और measurement द्वारा जाना जा सकता है।</li>
+          <li><b>Researcher's Role:</b> Researcher को detached, neutral और value-free रहने का प्रयास करना चाहिए।</li>
+        </ul>
+        <p><b>Methodology:</b> Quantitative methods, Experiment, Survey, Measurement, Statistical analysis, Hypothesis testing, Deductive reasoning।</p>
+        <div class="formula">Theory → Hypothesis → Operationalisation → Data Collection → Statistical Test → Confirmation/Rejection</div>
+        <div class="example"><span class="lbl">Example</span>Weekly practice-test frequency और NET score के relationship को 2,000 learners के data से statistically test करना।</div>
+        <p><b>Key Terms:</b> Objectivity, Measurement, Quantification, Verification, Prediction, Control, General laws, Cause and effect, Value neutrality।</p>
+
+        <h3>Limitations of Positivism</h3>
+        <ul class="bullet-list">
+          <li>Human experience को numbers तक reduce करने का risk</li>
+          <li>Context और meaning की उपेक्षा</li>
+          <li>Complete value neutrality difficult</li>
+          <li>Researcher और instrument influence सम्भव</li>
+          <li>Social reality complex और changing हो सकती है</li>
+          <li>Observation theory-free नहीं होती</li>
+          <li>A single method पूरी reality capture नहीं कर सकता</li>
+        </ul>
+      </section>
+
+      <section id="s9" class="topic-section">
+        <div class="sec-head"><span class="sec-num">9</span><h2>Post-Positivism <span class="hi">उत्तर-प्रत्यक्षवाद</span></h2></div>
+        <p>Post-positivism Positivism को पूरी तरह reject नहीं करती; वह उसकी limitations स्वीकार करके उसे revise करती है।</p>
+        <div class="formula">Post-Positivism = Reality Exists, but Our Knowledge of It Is Partial and Fallible</div>
+        <p><b>Main Association:</b> Critical Realism, Karl Popper — Falsification और conjectures/refutations, Fallibilism, Theory revision, Triangulation, Probabilistic conclusions।</p>
+        <p><b>Assumptions:</b></p>
+        <ul class="bullet-list">
+          <li><b>Ontology:</b> Reality exist करती है, लेकिन उसे perfectly apprehend करना कठिन है।</li>
+          <li><b>Epistemology:</b> Observation researcher की theories, assumptions और limitations से प्रभावित हो सकती है।</li>
+          <li><b>Researcher's Role:</b> Complete objectivity सम्भव नहीं, लेकिन rigorous methods से bias कम किया जा सकता है।</li>
+        </ul>
+        <p><b>Methodology:</b> Hypothesis testing, Critical testing, Falsification, Multiple methods, Triangulation, Quantitative तथा qualitative evidence, Probabilistic conclusions, Replication और peer criticism।</p>
+        <div class="formula">Theory → Tentative Hypothesis → Critical Test → Evidence → Revision → Further Testing</div>
+
+        <h3>Falsification</h3>
+        <p>Karl Popper के अनुसार scientific theory को केवल confirming evidence से final truth नहीं माना जा सकता। Theory ऐसी होनी चाहिए जिसे evidence द्वारा गलत सिद्ध करने की possibility हो।</p>
+        <div class="formula">Scientific Claim = Testable + Falsifiable</div>
+        <div class="example"><span class="lbl">Example</span>Claim: "Weekly quizzes सभी learners के scores improve करती हैं।" "सभी" वाला claim evidence द्वारा false सिद्ध किया जा सकता है। इसलिए testable/falsifiable है।</div>
+
+        <table class="mini-table">
+          <tr><th>Verification</th><th>Falsification</th></tr>
+          <tr><td>Supporting evidence खोजना</td><td>Disconfirming evidence खोजने का प्रयास</td></tr>
+          <tr><td>Positivist tendency</td><td>Popper/post-positivist association</td></tr>
+          <tr><td>Confirmation</td><td>Critical testing</td></tr>
+          <tr><td>Final certainty का risk</td><td>Tentative knowledge</td></tr>
+        </table>
+
+        <h3>Triangulation</h3>
+        <p>एक phenomenon को multiple methods, sources, researchers या theories से study करना।</p>
+        <p><b>Types:</b> Data triangulation, Method triangulation, Investigator triangulation, Theory triangulation।</p>
+        <div class="example"><span class="lbl">Example</span>Online-learning engagement को LMS data, Survey, Interviews और Classroom observation से study करना।</div>
+        <div class="formula">Triangulation does not guarantee truth; it strengthens credibility through multiple perspectives.</div>
+
+        <h3>Positivism vs Post-Positivism</h3>
+        <table class="mini-table">
+          <tr><th>Basis</th><th>Positivism</th><th>Post-Positivism</th></tr>
+          <tr><td>Reality</td><td>Objective and knowable</td><td>Exists but imperfectly knowable</td></tr>
+          <tr><td>Knowledge</td><td>Observable and measurable facts</td><td>Tentative, fallible and probabilistic</td></tr>
+          <tr><td>Objectivity</td><td>Researcher neutrality emphasised</td><td>Complete neutrality impossible; bias controlled</td></tr>
+          <tr><td>Theory</td><td>Tested/verified</td><td>Critically tested and revised</td></tr>
+          <tr><td>Method</td><td>Primarily quantitative</td><td>Multiple methods possible</td></tr>
+          <tr><td>Reasoning</td><td>Deductive</td><td>Deductive plus critical revision</td></tr>
+          <tr><td>Researcher</td><td>Detached observer</td><td>Acknowledges limitations/reflexivity</td></tr>
+          <tr><td>Conclusion</td><td>General laws</td><td>Provisional explanation</td></tr>
+          <tr><td>Quality control</td><td>Measurement and replication</td><td>Triangulation, criticism, replication</td></tr>
+          <tr><td>Thinker</td><td>Auguste Comte</td><td>Karl Popper / Critical Realism</td></tr>
+        </table>
+        <div class="formula">Positivism: Reality can be objectively measured.<br>Post-Positivism: Measurement is possible, but never perfect or completely free from error and perspective.</div>
+
+        <h3>Post-Positivism vs Interpretivism</h3>
+        <p>इन दोनों को identical नहीं समझना चाहिए।</p>
+        <table class="mini-table">
+          <tr><th>Post-Positivism</th><th>Interpretivism</th></tr>
+          <tr><td>Reality exists but imperfectly known</td><td>Social reality meanings से constructed</td></tr>
+          <tr><td>Critical realism</td><td>Relativist/constructivist tendencies</td></tr>
+          <tr><td>Theory testing सम्भव</td><td>Meaning interpretation प्रमुख</td></tr>
+          <tr><td>Quantitative और mixed methods सम्भव</td><td>Mostly qualitative</td></tr>
+          <tr><td>Bias reduce करने का प्रयास</td><td>Researcher–participant interaction acknowledged</td></tr>
+          <tr><td>Probabilistic explanation</td><td>Contextual understanding</td></tr>
+        </table>
+        <div class="trap"><span class="lbl">UGC NET Exam Caution</span>कुछ older UGC NET questions phenomenology और ethnography को broad "post-positivistic approach" के अंतर्गत रखते हैं। Contemporary research-methodology literature इन्हें प्रायः interpretivist/constructivist traditions से जोड़ती है। इसलिए actual PYQ solve करते समय official question convention follow करें, और conceptual answer में post-positivism और interpretivism को identical न लिखें।</div>
+      </section>
+
+      <section id="s10" class="topic-section">
+        <div class="sec-head"><span class="sec-num">10</span><h2>Important Exam Traps</h2></div>
+        <ul class="bullet-list">
+          <li>Research का उद्देश्य hypothesis को हर condition में prove करना नहीं है।</li>
+          <li>Basic Research theory; Applied Research practical application से जुड़ी है।</li>
+          <li>Action Research local, immediate और cyclical होती है।</li>
+          <li>Evaluation Research programme की worth/effectiveness judge करती है।</li>
+          <li>Descriptive Research cause establish नहीं करती।</li>
+          <li>Ex-post Facto में independent variable manipulate नहीं होती।</li>
+          <li>Qualitative data भी empirical हो सकती है।</li>
+          <li>Quantitative Research automatically bias-free नहीं होती।</li>
+          <li>Mixed Methods केवल data के दो forms नहीं, उनका integration है।</li>
+          <li>Positivism objective measurement और quantification पर emphasis देती है।</li>
+          <li>Post-positivism reality को reject नहीं करती; perfect knowledge के claim को reject करती है।</li>
+          <li>Popper verification की तुलना में falsification पर emphasis देते हैं।</li>
+          <li>Complete objectivity post-positivism में ideal है, guaranteed achievement नहीं।</li>
+          <li>Ethnography प्रायः interpretivist tradition से जुड़ी है, लेकिन पुराने NET questions में broad post-positivist label के अंतर्गत पूछी गई है।</li>
+          <li>Action Research findings की universal generalisation primary objective नहीं है।</li>
+        </ul>
+      </section>
+
+      <section id="s11" class="topic-section">
+        <div class="sec-head"><span class="sec-num">11</span><h2>Verified Previous Year Questions</h2></div>
+        <p>पूर्ण प्रश्न, सभी Options, Answer और Explanation।</p>
+
+        <div class="pyq-tag">PYQ 1: UGC NET, 18 December 2018, Shift 1</div>
+        <p><b>Question:</b> Which of the following statements offer a suitable definition of research?</p>
+        <p>1. Research means a repeated search. 2. Research is basically an answer to a question. 3. Research provides an authentic solution to a problem. 4. Research is an endeavour to prove one's hypothesis. 5. Research is a meaning-giving process. 6. Research means drawing a sample from a defined population.</p>
+        <p>A. (1),(2),(3) only &nbsp; B. (2),(3),(6) only &nbsp; C. (1),(4),(6) only &nbsp; D. (2),(3),(5) only</p>
+        <div class="answer-box">Answer: D. (2), (3) and (5) only</div>
+        <p class="explain">Research questions के answers खोजती है, problems के credible solutions देती है, और data/evidence को meaning देती है। Hypothesis is tested, not compulsorily proved.</p>
+
+        <div class="pyq-tag">PYQ 2: UGC NET, 25 June 2019, Shift 2</div>
+        <p><b>Question:</b> Which research type has the potential for enhancing teaching competencies?</p>
+        <p>A. Fundamental Research &nbsp; B. Applied Research &nbsp; C. Impact Assessment Research &nbsp; D. Action Research</p>
+        <div class="answer-box">Answer: D. Action Research</div>
+        <p class="explain">Teacher अपने classroom की immediate problem identify करके intervention करता, result observe करता और practice improve करता है।</p>
+
+        <div class="pyq-tag">PYQ 3: UGC NET, 3 December 2019, Shift 1</div>
+        <p><b>Question:</b> In the post-positivistic approach to research, which research types were emphasised?</p>
+        <p>1. Experimental Research 2. Phenomenological Research 3. Ethnographic Research 4. Ex-post Facto Research 5. Action Research</p>
+        <p>A. (1),(2),(3) only &nbsp; B. (2),(3),(4) only &nbsp; C. (2),(3),(5) only &nbsp; D. (3),(4),(5) only</p>
+        <div class="answer-box">Answer: C. (2), (3) and (5) only</div>
+        <p class="explain">Official exam convention में Phenomenology, Ethnography और Action Research को post-positivistic approach से associated माना गया।</p>
+
+        <div class="pyq-tag">PYQ 4: UGC NET, 24 September 2020, Shift 1</div>
+        <p><b>Question:</b> Which research procedure will figure under the post-positivistic approach?</p>
+        <p>A. Normative Survey &nbsp; B. Experimental Study &nbsp; C. Ethnographic Study &nbsp; D. Ex-post Facto Study</p>
+        <div class="answer-box">Answer: C. Ethnographic Study</div>
+        <p class="explain">Ethnographic study natural setting, culture और participants के perspectives की contextual understanding विकसित करती है।</p>
+
+        <div class="pyq-tag">PYQ 5: UGC NET, 9 October 2020, Shift 1</div>
+        <p><b>Question:</b> Which research form primarily aims at putting theoretical advances to use while exploring their potential for generalisability?</p>
+        <p>A. Fundamental Research &nbsp; B. Evaluative Research &nbsp; C. Action Research &nbsp; D. Applied Research</p>
+        <div class="answer-box">Answer: D. Applied Research</div>
+        <p class="explain">Applied Research existing theory या fundamental knowledge को real-world problem पर apply करती है, broader applicability के साथ।</p>
+
+        <div class="pyq-tag">PYQ 6: UGC NET, 1 October 2022, Shift 1</div>
+        <p><b>Question:</b> Which of the following are included in the Positivist paradigm of research?</p>
+        <p>1. Quantification 2. Construction of hypotheses 3. Use of objective measures 4. Subjective analysis 5. Rejection of theories</p>
+        <p>A. (1),(2),(3) only &nbsp; B. (2),(3),(4) only &nbsp; C. (3),(4),(5) only &nbsp; D. (1),(4),(5) only</p>
+        <div class="answer-box">Answer: A. (1), (2) and (3) only</div>
+        <p class="explain">Positivism quantification, hypothesis construction/testing और objective measurement पर emphasis देता है। Subjective analysis इसकी central feature नहीं है।</p>
+      </section>
+
+      <section id="s12" class="topic-section">
+        <div class="sec-head"><span class="sec-num">12</span><h2>PYQ Trend Analysis</h2></div>
+        <table class="mini-table">
+          <tr><th>Frequently Tested Area</th><th>Common Question Form</th></tr>
+          <tr><td>Meaning of Research</td><td>Correct-definition combination</td></tr>
+          <tr><td>Basic vs Applied</td><td>Direct distinction</td></tr>
+          <tr><td>Action Research</td><td>Classroom situation</td></tr>
+          <tr><td>Evaluation Research</td><td>Programme-worth question</td></tr>
+          <tr><td>Quantitative vs Qualitative</td><td>Characteristics matching</td></tr>
+          <tr><td>Experimental vs Ex-post Facto</td><td>Manipulation/control distinction</td></tr>
+          <tr><td>Positivism</td><td>Multiple statements</td></tr>
+          <tr><td>Post-positivism</td><td>Procedure identification</td></tr>
+          <tr><td>Research characteristics</td><td>Correct/incorrect combination</td></tr>
+          <tr><td>Inductive vs Deductive</td><td>Sequence question</td></tr>
+        </table>
+
+        <h3>December 2026 High-Priority Areas</h3>
+        <ul class="bullet-list">
+          <li>Basic–Applied–Action–Evaluation comparison</li>
+          <li>Action Research cycle</li>
+          <li>Experimental vs Ex-post Facto</li>
+          <li>Quantitative vs Qualitative characteristics</li>
+          <li>Positivism vs Post-positivism</li>
+          <li>Comte और Popper associations</li>
+          <li>Objectivity, empirical evidence और replication</li>
+          <li>Falsification और theory revision</li>
+          <li>Triangulation</li>
+          <li>Classroom-scenario research identification</li>
+        </ul>
+      </section>
+
+      <section id="s13" class="topic-section">
+        <div class="sec-head"><span class="sec-num">13</span><h2>December 2026 Expected MCQs</h2></div>
+        <p>निम्न questions prediction-based practice हैं, actual PYQs नहीं।</p>
+
+        <div class="pyq-tag">Question 1</div>
+        <p>A researcher develops a theory explaining how retrieval practice affects long-term memory, without seeking an immediate classroom application. This is:</p>
+        <p>A. Applied Research &nbsp; B. Basic Research &nbsp; C. Action Research &nbsp; D. Evaluation Research</p>
+        <div class="answer-box">Answer: B. Basic Research</div>
+        <p class="explain">Primary purpose theory और knowledge expansion है; immediate practical solution नहीं।</p>
+
+        <div class="pyq-tag">Question 2</div>
+        <p>A teacher introduces weekly quizzes, observes results and modifies the strategy to improve the performance of the same class. This is:</p>
+        <p>A. Historical Research &nbsp; B. Fundamental Research &nbsp; C. Action Research &nbsp; D. Normative Survey</p>
+        <div class="answer-box">Answer: C. Action Research</div>
+        <p class="explain">Practitioner अपने local problem पर Plan–Act–Observe–Reflect cycle follow कर रहा है।</p>
+
+        <div class="pyq-tag">Question 3</div>
+        <p>A study assesses whether a government mentorship programme achieved its objectives and provided value for the resources spent. This is:</p>
+        <p>A. Basic Research &nbsp; B. Evaluation Research &nbsp; C. Phenomenological Research &nbsp; D. Historical Research</p>
+        <div class="answer-box">Answer: B. Evaluation Research</div>
+        <p class="explain">Programme की effectiveness, merit, worth और resource use judge किया जा रहा है।</p>
+
+        <div class="pyq-tag">Question 4</div>
+        <p>Which research type studies an effect after the presumed causal variable has already occurred?</p>
+        <p>A. True Experimental Research &nbsp; B. Ex-post Facto Research &nbsp; C. Action Research &nbsp; D. Ethnographic Research</p>
+        <div class="answer-box">Answer: B. Ex-post Facto Research</div>
+        <p class="explain">Independent variable already occur हो चुकी होती है; researcher उसे manipulate नहीं करता।</p>
+
+        <div class="pyq-tag">Question 5</div>
+        <p>Which combination is most characteristic of Positivism?</p>
+        <p>A. Lived experience, subjectivity and multiple meanings &nbsp; B. Measurement, objectivity and hypothesis testing &nbsp; C. Personal narrative, reflexivity and cultural immersion &nbsp; D. Complete rejection of empirical evidence</p>
+        <div class="answer-box">Answer: B. Measurement, objectivity and hypothesis testing</div>
+
+        <div class="pyq-tag">Question 6</div>
+        <p>Post-positivism primarily maintains that:</p>
+        <p>A. Reality does not exist outside language. &nbsp; B. Reality exists and can be known with complete certainty. &nbsp; C. Reality exists, but knowledge of it remains partial and fallible. &nbsp; D. Scientific testing has no role in research.</p>
+        <div class="answer-box">Answer: C. Reality exists, but knowledge of it remains partial and fallible.</div>
+        <p class="explain">Post-positivism Critical Realism और fallibilism से जुड़ी है।</p>
+
+        <div class="pyq-tag">Question 7</div>
+        <p>Which thinker is most closely associated with falsification?</p>
+        <p>A. Auguste Comte &nbsp; B. Karl Popper &nbsp; C. Kurt Lewin &nbsp; D. Stephen Corey</p>
+        <div class="answer-box">Answer: B. Karl Popper</div>
+        <p class="explain">Popper के अनुसार scientific propositions को critical tests के माध्यम से falsify करने योग्य होना चाहिए।</p>
+
+        <div class="pyq-tag">Question 8</div>
+        <p>Which sequence correctly represents Action Research?</p>
+        <p>A. Theory → Verification → Universal Law → Publication &nbsp; B. Plan → Act → Observe → Reflect &nbsp; C. Sample → Patent → Profit → Theory &nbsp; D. Observe → Punish → Control → Certify</p>
+        <div class="answer-box">Answer: B. Plan → Act → Observe → Reflect</div>
+
+        <div class="pyq-tag">Question 9</div>
+        <p>A researcher conducts interviews to understand the lived experiences of first-generation university learners. This is primarily:</p>
+        <p>A. Quantitative Experimental Research &nbsp; B. Qualitative Phenomenological Research &nbsp; C. Normative Survey &nbsp; D. Ex-post Facto Research</p>
+        <div class="answer-box">Answer: B. Qualitative Phenomenological Research</div>
+        <p class="explain">Phenomenology किसी phenomenon के lived experience का meaning समझती है।</p>
+
+        <div class="pyq-tag">Question 10</div>
+        <p>Which statement is incorrect?</p>
+        <p>A. Quantitative research may use statistical analysis. &nbsp; B. Qualitative research may use natural settings. &nbsp; C. Empirical evidence is necessarily numerical. &nbsp; D. Mixed Methods integrates quantitative and qualitative evidence.</p>
+        <div class="answer-box">Answer: C. Empirical evidence is necessarily numerical.</div>
+        <p class="explain">Interviews, observations और documents से प्राप्त qualitative evidence भी empirical हो सकती है।</p>
+
+        <div class="pyq-tag">Question 11 (Assertion–Reason)</div>
+        <p>Assertion: Post-positivists use triangulation to strengthen research conclusions. Reason: A single method may provide only a partial view of complex reality.</p>
+        <p>A. Both true, Reason correctly explains Assertion &nbsp; B. Both true, Reason does not explain Assertion &nbsp; C. Assertion true, Reason false &nbsp; D. Assertion false, Reason true</p>
+        <div class="answer-box">Answer: A. Both true, and Reason correctly explains Assertion</div>
+
+        <div class="pyq-tag">Question 12</div>
+        <p>A researcher uses theory to formulate a hypothesis and then collects data to test it. This reasoning is primarily:</p>
+        <p>A. Inductive &nbsp; B. Deductive &nbsp; C. Intuitive &nbsp; D. Circular</p>
+        <div class="answer-box">Answer: B. Deductive Reasoning</div>
+        <p class="explain">Theory → Hypothesis → Data is a deductive sequence.</p>
+      </section>
+
+      <section id="s14" class="topic-section">
+        <div class="sec-head"><span class="sec-num">14</span><h2>One-Page Revision</h2></div>
+        <div class="formula">
+          Research = Systematic + Logical + Empirical + Ethical Inquiry<br>
+          Basic = Theory and Knowledge &nbsp;|&nbsp; Applied = Practical Application<br>
+          Action = Immediate Local Improvement &nbsp;|&nbsp; Evaluation = Merit, Worth and Effectiveness<br>
+          Exploratory = Preliminary Understanding &nbsp;|&nbsp; Descriptive = What Exists<br>
+          Explanatory = Why It Happens &nbsp;|&nbsp; Experimental = Manipulation + Control<br>
+          Ex-post Facto = Variable Already Occurred<br>
+          Quantitative = Numbers + Measurement + Deduction<br>
+          Qualitative = Meaning + Context + Induction<br>
+          Mixed Methods = Breadth + Depth + Integration<br>
+          Positivism = Comte + Objectivity + Measurement + Verification<br>
+          Post-Positivism = Popper + Critical Realism + Fallibility + Falsification<br>
+          Action Research = Kurt Lewin + Plan–Act–Observe–Reflect<br>
+          Educational Action Research = Stephen Corey
+        </div>
+
+        <h3>Final Identification Formula</h3>
+        <p>किसी research question में पहले पूछें:</p>
+        <ul class="bullet-list">
+          <li>Theory बनानी है? → <b>Basic Research</b></li>
+          <li>Practical problem solve करना है? → <b>Applied Research</b></li>
+          <li>Practitioner अपनी local practice सुधार रहा है? → <b>Action Research</b></li>
+          <li>Programme की worth judge करनी है? → <b>Evaluation Research</b></li>
+          <li>Variable manipulate हुई है? → <b>Experimental Research</b></li>
+          <li>Event पहले ही हो चुका है? → <b>Ex-post Facto Research</b></li>
+          <li>Numbers और statistics हैं? → <b>Quantitative Research</b></li>
+          <li>Meaning और lived experience है? → <b>Qualitative Research</b></li>
+        </ul>
+      </section>
+
+      <div class="enroll-cta">
+        <div>
+          <h3 class="h-display">Join the Paper-1 Batch</h3>
+          <p>Course fee FREE — ₹500 registration &amp; academic/logistics contribution. Classes daily at 6:30 PM.</p>
+        </div>
+        <a href="/enroll.html" class="btn-gold">✓ JOIN BATCH @ ₹500</a>
+      </div>
+
+      <p class="footer-note">GS Net Academy · Research Aptitude · Unit 2 · Target December 2026 Exam</p>
+    </div>
+  </div>
+</main>
+
+<footer class="relative overflow-hidden bg-navy-950 text-white">
+  <div class="grid-paper absolute inset-0 opacity-50" aria-hidden="true"></div>
+  <div class="container-x relative py-12 lg:py-14">
+    <div class="grid grid-cols-2 gap-10 lg:grid-cols-4">
+
+      <div>
+        <div class="flex items-center gap-3">
+          <img src="/assets/images/logo.png" alt="GS Net Academy" class="h-11 w-auto rounded-lg bg-white p-1" width="120" height="44">
+          <img src="/assets/images/tagline.png" alt="" class="h-11 w-auto brightness-0 invert" aria-hidden="true">
+        </div>
+        <p class="mt-5 text-[14px] leading-relaxed text-navy-100/75">UGC NET Paper-I | JRF Preparation | Mentorship</p>
+        <span class="eyebrow mt-5"><svg viewBox="0 0 24 24" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1"/></svg> JRF @ ₹500 Mission 2026</span>
+
+        <p class="mt-6 text-[11px] font-extrabold uppercase tracking-[0.18em] text-gold-400">Follow Us</p>
+        <ul class="mt-3 flex flex-wrap gap-2">
+          <li><a href="https://www.youtube.com/@gsnetacademy" target="_blank" rel="noreferrer noopener" aria-label="YouTube" title="YouTube" class="grid h-10 w-10 place-items-center rounded-xl border border-white/12 bg-white/[0.06] text-navy-100/80 transition hover:border-gold-400/50 hover:bg-white/[0.12] hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor" aria-hidden="true"><path d="M21.6 7.2a2.5 2.5 0 0 0-1.8-1.8C18.2 5 12 5 12 5s-6.2 0-7.8.4A2.5 2.5 0 0 0 2.4 7.2 26 26 0 0 0 2 12a26 26 0 0 0 .4 4.8 2.5 2.5 0 0 0 1.8 1.8C5.8 19 12 19 12 19s6.2 0 7.8-.4a2.5 2.5 0 0 0 1.8-1.8A26 26 0 0 0 22 12a26 26 0 0 0-.4-4.8ZM10 15V9l5.2 3L10 15Z"/></svg></a></li>
+          <li><a href="https://www.instagram.com/gsnetacademy" target="_blank" rel="noreferrer noopener" aria-label="Instagram" title="Instagram" class="grid h-10 w-10 place-items-center rounded-xl border border-white/12 bg-white/[0.06] text-navy-100/80 transition hover:border-gold-400/50 hover:bg-white/[0.12] hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg></a></li>
+          <li><a href="https://www.facebook.com/gsnetacademy" target="_blank" rel="noreferrer noopener" aria-label="Facebook" title="Facebook" class="grid h-10 w-10 place-items-center rounded-xl border border-white/12 bg-white/[0.06] text-navy-100/80 transition hover:border-gold-400/50 hover:bg-white/[0.12] hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.25-1.5 1.55-1.5H16.7V3.6c-.3 0-1.3-.13-2.47-.13-2.44 0-4.11 1.49-4.11 4.23V9.9H7.4V13h2.72v8h3.38Z"/></svg></a></li>
+          <li><a href="https://t.me/gsnetacademy" target="_blank" rel="noreferrer noopener" aria-label="Telegram" title="Telegram" class="grid h-10 w-10 place-items-center rounded-xl border border-white/12 bg-white/[0.06] text-navy-100/80 transition hover:border-gold-400/50 hover:bg-white/[0.12] hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor" aria-hidden="true"><path d="M21.3 4.3 2.9 11.4c-.9.35-.9 1.62.02 1.93l4.6 1.53 1.75 5.3c.25.75 1.2.95 1.73.37l2.5-2.72 4.6 3.38c.63.46 1.53.12 1.7-.65l3.1-14.9c.2-.9-.7-1.65-1.6-1.31ZM9.6 14.1l8.5-5.6-6.9 6.5-.3 3.3-1.3-4.2Z"/></svg></a></li>
+          <li><a href="https://chat.whatsapp.com/KeaQUhOFz0UGAKtLmsM7oU" target="_blank" rel="noreferrer noopener" aria-label="WhatsApp Group" title="WhatsApp Group" class="grid h-10 w-10 place-items-center rounded-xl border border-white/12 bg-white/[0.06] text-navy-100/80 transition hover:border-emerald-400/50 hover:bg-emerald-500/15 hover:text-emerald-300"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.2 20.8 4.6 16A8.4 8.4 0 1 1 8 19.4l-4.8 1.4Z"/><path d="M9 8.4c.3-.7.6-.7.9-.7h.6c.2 0 .5 0 .7.6l.8 1.9c.1.2.1.4 0 .6l-.5.7c-.1.2-.2.4 0 .7a7 7 0 0 0 3 2.6c.3.1.5.1.7-.1l.7-.8c.2-.2.4-.2.6-.1l1.8.9c.3.1.5.3.5.5v.6c0 .4-.2.9-.9 1.2-.6.3-1.5.4-2.5.1a10 10 0 0 1-6.5-6.2c-.3-1-.1-1.9.1-2.5Z"/></svg></a></li>
+          <li><a href="https://x.com/gsnetacademy" target="_blank" rel="noreferrer noopener" aria-label="X (Twitter)" title="X (Twitter)" class="grid h-10 w-10 place-items-center rounded-xl border border-white/12 bg-white/[0.06] text-navy-100/80 transition hover:border-gold-400/50 hover:bg-white/[0.12] hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-4.5 w-4.5" fill="currentColor" aria-hidden="true"><path d="M17.5 3h3.1l-6.8 7.8L21.8 21h-6.2l-4.9-6.4L5.1 21H2l7.3-8.3L2.5 3h6.4l4.4 5.8L17.5 3Zm-1.1 16.2h1.7L7.7 4.7H5.9l10.5 14.5Z"/></svg></a></li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="text-[11px] font-extrabold uppercase tracking-[0.18em] text-gold-400">Quick Links</p>
+        <ul class="mt-4 grid gap-2.5">
+          <li><a href="/index.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Home</a></li>
+          <li><a href="/courses.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">UGC NET Paper-I</a></li>
+          <li><a href="/results.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Our Results</a></li>
+          <li><a href="/tutorials.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Tutorials</a></li>
+          <li><a href="/blog.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Blog</a></li>
+          <li><a href="/about.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">About</a></li>
+          <li><a href="/contact.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="text-[11px] font-extrabold uppercase tracking-[0.18em] text-gold-400">Resources</p>
+        <ul class="mt-4 grid gap-2.5">
+          <li><a href="/notes.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Notes</a></li>
+          <li><a href="/enroll.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Register for ₹500</a></li>
+          <li><a href="/index.html#free-demo" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Free Demo Classes</a></li>
+          <li><a href="https://chat.whatsapp.com/KeaQUhOFz0UGAKtLmsM7oU" target="_blank" rel="noreferrer noopener" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Student Community</a></li>
+        </ul>
+        <p class="mt-6 text-[11px] font-extrabold uppercase tracking-[0.18em] text-gold-400">Legal</p>
+        <ul class="mt-4 grid gap-2.5">
+          <li><a href="/privacy-policy.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Privacy Policy</a></li>
+          <li><a href="/refund-policy.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Refund &amp; Cancellation</a></li>
+          <li><a href="/terms-of-enrollment.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Terms of Enrollment</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="text-[11px] font-extrabold uppercase tracking-[0.18em] text-gold-400">Contact</p>
+        <ul class="mt-4 grid gap-2.5 text-[14px] text-navy-100/75">
+          <li><a href="tel:+919266511505" class="flex items-center gap-2 hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-4 w-4 icon-gold" fill="currentColor" aria-hidden="true"><path d="M5 3h3.5l1.6 4-2 1.4a12 12 0 0 0 5.5 5.5l1.4-2 4 1.6V19a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 3 5.2 2 2 0 0 1 5 3Z"/></svg> +91 9266511505</a></li>
+          <li><a href="tel:+919810845327" class="flex items-center gap-2 hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-4 w-4 icon-gold" fill="currentColor" aria-hidden="true"><path d="M5 3h3.5l1.6 4-2 1.4a12 12 0 0 0 5.5 5.5l1.4-2 4 1.6V19a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 3 5.2 2 2 0 0 1 5 3Z"/></svg> +91 9810845327</a></li>
+          <li><a href="mailto:gsnetacademy@gmail.com" class="flex items-center gap-2 break-all hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-4 w-4 icon-gold" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="m3.5 6.5 8.5 6 8.5-6"/></svg> gsnetacademy@gmail.com</a></li>
+          <li><a href="https://chat.whatsapp.com/KeaQUhOFz0UGAKtLmsM7oU" target="_blank" rel="noreferrer noopener" class="flex items-center gap-2 hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-4 w-4 icon-gold" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.2 20.8 4.6 16A8.4 8.4 0 1 1 8 19.4l-4.8 1.4Z"/><path d="M9 8.4c.3-.7.6-.7.9-.7h.6c.2 0 .5 0 .7.6l.8 1.9c.1.2.1.4 0 .6l-.5.7c-.1.2-.2.4 0 .7a7 7 0 0 0 3 2.6c.3.1.5.1.7-.1l.7-.8c.2-.2.4-.2.6-.1l1.8.9c.3.1.5.3.5.5v.6c0 .4-.2.9-.9 1.2-.6.3-1.5.4-2.5.1a10 10 0 0 1-6.5-6.2c-.3-1-.1-1.9.1-2.5Z"/></svg> WhatsApp Group</a></li>
+        </ul>
+        <a href="/enroll.html" class="btn-primary mt-6 w-full">Join for ₹500</a>
+        <p class="text-[14px] mt-3 text-navy-100/75 transition hover:text-gold-300">Address: B 14-15, Udhyog Marg, Block B, Sector 1, Noida, Uttar Pradesh 201301</p>
+      </div>
+    </div>
+
+    <div class="mt-10 border-t border-white/10 pt-6">
+      <ul class="flex flex-wrap items-center gap-x-5 gap-y-2 text-[13px]">
+        <li><a href="/privacy-policy.html" class="text-navy-100/70 transition hover:text-gold-300">Privacy Policy</a></li>
+        <li aria-hidden="true" class="text-navy-100/25">|</li>
+        <li><a href="/refund-policy.html" class="text-navy-100/70 transition hover:text-gold-300">Refund &amp; Cancellation</a></li>
+        <li aria-hidden="true" class="text-navy-100/25">|</li>
+        <li><a href="/terms-of-enrollment.html" class="text-navy-100/70 transition hover:text-gold-300">Terms of Enrollment</a></li>
+      </ul>
+      <div class="mt-4 flex flex-col gap-2 text-[13px] text-navy-100/60 sm:flex-row sm:items-center sm:justify-between">
+        <p>© 2026 GS Net Academy. All Rights Reserved.</p>
+        <p>A Premier institute for UGC NET Paper-1</p>
+      </div>
+      <p class="mt-4 text-[12px] leading-relaxed text-navy-100/45">Disclaimer: GS Net Academy किसी भी exam में selection, rank या score की guarantee नहीं देता। हम quality teaching, study material, practice और academic mentorship प्रदान करते हैं। UGC, NTA या किसी अन्य government body से हमारा कोई affiliation नहीं है।</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function () {
+
+  const BASE_PATH =
+    "/tutorials/research-aptitude/research-meaning-characteristics";
+
+  // slug (jo href me hai) -> actual section id (jo HTML me hai: s1, s2...)
+  const SLUG_TO_ID = {
+    "introduction": "s1",
+    "meaning-of-research": "s2",
+    "objectives-of-research": "s3",
+    "characteristics-of-good-research": "s4",
+    "what-research-is-not": "s5",
+    "types-of-research": "s6",
+    "research-paradigm": "s7",
+    "positivism": "s8",
+    "post-positivism": "s9",
+    "important-exam-traps": "s10",
+    "verified-previous-year-questions": "s11",
+    "pyq-trend-analysis": "s12",
+    "december-2026-expected-mcqs": "s13",
+    "one-page-revision": "s14"
+  };
+
+  const links = document.querySelectorAll(".nav-link");
+  const sidebarToggle = document.getElementById("sidebar-toggle");
+
+
+  links.forEach(function (link) {
+
+    link.addEventListener("click", function (e) {
+
+      e.preventDefault();
+
+      const href = link.getAttribute("href");
+
+      if (!href) return;
+
+
+      // URL ka last part nikalo
+      const parts = href.split("/");
+      const slug = parts[parts.length - 1];
+
+      // slug ko actual section id me convert karo
+      const sectionId = SLUG_TO_ID[slug];
+
+
+      // Topic section
+      const target = sectionId ? document.getElementById(sectionId) : null;
+
+
+      console.log("CLICK:", slug, "-> ID:", sectionId);
+      console.log("TARGET:", target);
+
+
+      if (!target) {
+        console.log("Topic not found:", slug);
+        return;
+      }
+
+
+      // Active button
+      links.forEach(function (item) {
+        item.classList.remove("active");
+      });
+
+      link.classList.add("active");
+
+
+      // URL change
+      history.pushState(
+        null,
+        "",
+        BASE_PATH + "/" + slug
+      );
+
+
+      // Scroll
+      const offset = 90;
+
+      const position =
+        target.getBoundingClientRect().top +
+        window.pageYOffset -
+        offset;
+
+
+      window.scrollTo({
+        top: position,
+        behavior: "smooth"
+      });
+
+
+      // Mobile sidebar close
+      if (sidebarToggle) {
+        sidebarToggle.checked = false;
+      }
+
+    });
+
+  });
+
+
+})();
+</script>
+</body>
+</html>

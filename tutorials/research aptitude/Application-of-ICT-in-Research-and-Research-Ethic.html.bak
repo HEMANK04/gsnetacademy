@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ICT in Research & Research Ethics – Full Notes | UGC NET Paper-1</title>
+  <meta name="description" content="Complete tutorial: Application of ICT in research, digital databases, online data collection, reference management, plagiarism detection, research ethics, informed consent, FFP, authorship, publication ethics, PYQs for UGC NET Paper-1.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; }
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background: #f8f5ee;
+      color: #101a3d;
+    }
+    .h-display { font-family: 'Poppins', sans-serif; font-weight: 800; letter-spacing: -0.01em; }
+    .container { max-width: 1360px; margin: 0 auto; padding: 0 20px; }
+
+    .hero {
+      background: #0b1330;
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+      padding: 28px 0 22px;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      right: -80px;
+      top: -100px;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(232,183,75,0.2), transparent 70%);
+    }
+    .hero-inner { position: relative; }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      padding: 6px 16px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+      color: #e8b74b;
+    }
+    .hero h1 {
+      font-size: clamp(28px, 4.2vw, 44px);
+      margin: 12px 0 6px;
+    }
+    .hero p {
+      color: rgba(255,255,255,0.78);
+      max-width: 680px;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 28px;
+      padding: 28px 0 50px;
+      align-items: start;
+    }
+    @media (max-width: 980px) {
+      .layout { grid-template-columns: 1fr; }
+    }
+
+    .sidebar {
+      position: sticky;
+      top: 16px;
+      max-height: calc(100vh - 40px);
+      overflow-y: auto;
+      background: #fff;
+      border: 1px solid rgba(16,26,61,0.08);
+      border-radius: 16px;
+      padding: 16px 12px;
+      box-shadow: 0 6px 24px rgba(16,26,61,0.05);
+    }
+    .sidebar::-webkit-scrollbar { width: 5px; }
+    .sidebar::-webkit-scrollbar-thumb { background: #dde2ef; border-radius: 8px; }
+    .sidebar-title {
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: #b9852a;
+      padding: 4px 10px 14px;
+    }
+    .nav-link {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 10px;
+      border-radius: 10px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #33406b;
+      line-height: 1.3;
+      transition: 0.1s;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .nav-link:hover { background: #f4f6fc; color: #0b1330; }
+    .nav-link.active {
+      background: #fdf6e7;
+      color: #0b1330;
+    }
+    .nav-num {
+      flex: none;
+      width: 22px;
+      height: 22px;
+      border-radius: 7px;
+      background: #e7eaf5;
+      color: #5b6690;
+      font-size: 11px;
+      font-weight: 800;
+      display: grid;
+      place-items: center;
+    }
+    .nav-link.active .nav-num {
+      background: #e8b74b;
+      color: #0b1330;
+    }
+
+    #sidebar-toggle { display: none; }
+    .mobile-bar { display: none; }
+    @media (max-width: 980px) {
+      .mobile-bar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: #fff;
+        border: 1px solid rgba(16,26,61,0.1);
+        border-radius: 12px;
+        padding: 12px 16px;
+        margin-bottom: 8px;
+        font-weight: 800;
+        font-size: 13.5px;
+        color: #0b1330;
+      }
+      .sidebar { display: none; position: static; max-height: none; }
+      #sidebar-toggle:checked ~ .layout .sidebar { display: block; }
+    }
+
+    .content { min-width: 0; }
+    .topic-card {
+      background: #fff;
+      border: 1px solid rgba(16,26,61,0.08);
+      border-radius: 16px;
+      padding: 20px 20px 16px;
+      margin-bottom: 18px;
+      scroll-margin-top: 20px;
+      display: block;
+    }
+    .topic-card.hidden { display: none; }
+    .sec-head {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+    .sec-num {
+      flex: none;
+      width: 34px;
+      height: 34px;
+      border-radius: 10px;
+      background: #0b1330;
+      color: #e8b74b;
+      font-weight: 800;
+      font-size: 14px;
+      display: grid;
+      place-items: center;
+    }
+    .sec-head h2 {
+      margin: 0;
+      font-size: 19px;
+      font-weight: 800;
+      color: #0b1330;
+    }
+    .topic-card p {
+      font-size: 14.5px;
+      line-height: 1.75;
+      color: #1a254a;
+      margin: 6px 0;
+    }
+    .bullet-list {
+      margin: 8px 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 5px;
+    }
+    .bullet-list li {
+      position: relative;
+      padding-left: 20px;
+      font-size: 14px;
+      line-height: 1.6;
+      color: #1a254a;
+    }
+    .bullet-list li::before {
+      content: "";
+      position: absolute;
+      left: 2px;
+      top: 9px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #d9a53a;
+    }
+    .formula-box {
+      background: #0b1330;
+      color: #fdeec2;
+      font-weight: 700;
+      font-size: 13.6px;
+      padding: 10px 16px;
+      border-radius: 10px;
+      margin: 10px 0;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 12px 0;
+      font-size: 13.6px;
+      display: block;
+      overflow-x: auto;
+    }
+    .data-table th, .data-table td {
+      border: 1px solid #e7eaf5;
+      padding: 8px 12px;
+      text-align: left;
+      color: #1a254a;
+      white-space: normal;
+    }
+    .data-table th {
+      background: #f4f6fc;
+      color: #0b1330;
+      font-weight: 800;
+    }
+    .pyq-tag {
+      display: inline-block;
+      background: #fdf6e7;
+      color: #b9852a;
+      font-weight: 800;
+      font-size: 12px;
+      padding: 4px 12px;
+      border-radius: 8px;
+      margin: 12px 0 6px;
+    }
+    .answer-box {
+      background: #eefaf2;
+      border: 1px solid #bfe8cc;
+      color: #1a7a4c;
+      font-weight: 700;
+      font-size: 13.6px;
+      padding: 6px 14px;
+      border-radius: 9px;
+      margin: 6px 0;
+    }
+    .explain {
+      background: #f4f6fc;
+      border-radius: 9px;
+      padding: 6px 14px;
+      font-size: 13.6px;
+      color: #1a254a;
+    }
+    .subtopic {
+      padding: 14px 0 6px;
+      border-top: 1px dashed #e7eaf5;
+    }
+    .subtopic:first-of-type { border-top: none; padding-top: 2px; }
+    .subhead {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 6px;
+    }
+    .sub-num {
+      flex: none;
+      width: 26px;
+      height: 26px;
+      border-radius: 8px;
+      background: #fdf6e7;
+      color: #b9852a;
+      font-weight: 800;
+      font-size: 12px;
+      display: grid;
+      place-items: center;
+    }
+    .subhead h3 {
+      margin: 0;
+      font-size: 15.5px;
+      font-weight: 800;
+      color: #0b1330;
+    }
+    .enroll-cta {
+      background: #0b1330;
+      color: #fff;
+      border-radius: 16px;
+      padding: 24px 24px;
+      margin-top: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+      overflow: hidden;
+    }
+    .enroll-cta::before {
+      content: "";
+      position: absolute;
+      right: -40px;
+      top: -40px;
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(232,183,75,0.2), transparent 70%);
+    }
+    .enroll-cta h3 { margin: 0 0 4px; font-size: 20px; }
+    .enroll-cta p { margin: 0; color: rgba(255,255,255,0.75); font-size: 13.5px; max-width: 480px; }
+    .btn-gold {
+      background: #e8b74b;
+      color: #0b1330;
+      font-weight: 800;
+      padding: 10px 22px;
+      border-radius: 10px;
+      font-size: 13.5px;
+      white-space: nowrap;
+      text-decoration: none;
+    }
+  </style>
+
+  <link rel="stylesheet" href="/css/tailwind.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <style>.hero h1 { font-weight: 800 !important; color: #fff !important; line-height: 1.2 !important; font-family: 'Poppins', sans-serif !important; }</style>
+
+  <link rel="icon" href="/assets/images/logo.png">
+</head>
+<body>
+
+<header class="sticky top-0 z-50 border-b border-navy-900/8 bg-white/95 backdrop-blur-md">
+  <nav class="container-wide flex h-[76px] items-center gap-4" aria-label="Main">
+    <a href="/" class="flex shrink-0 items-center gap-3" aria-label="Home">
+      <span class="inline-flex shrink-0 items-center justify-center overflow-hidden rounded-lg bg-navy-950 ring-1 ring-navy-900/10">
+        <img src="assets/images/logo.png" alt="GS Net Academy" class="h-11 w-auto" width="120" height="44">
+      </span>
+      <img src="assets/images/tagline.png" alt="#1 A Premier institute for UGC NET Paper-1" class="h-11 hidden w-auto lg:block">
+    </a>
+    <ul class="mx-auto hidden items-center gap-5 xl:flex">
+      <li><a href="courses.html" class="relative block whitespace-nowrap rounded-lg px-3 py-2 text-[13.5px] font-bold transition-colors text-navy-700/75 hover:text-navy-900">UGC NET Paper-I</a></li>
+      <li><a href="results.html" class="relative block whitespace-nowrap rounded-lg px-3 py-2 text-[13.5px] font-bold transition-colors text-navy-700/75 hover:text-navy-900">Results</a></li>
+      <li><a href="tutorial.html" class="relative block whitespace-nowrap rounded-lg px-3 py-2 text-[13.5px] font-bold transition-colors text-navy-700/75 hover:text-navy-900">Tutorials</a></li>
+      <li><a href="notes.html" class="relative block whitespace-nowrap rounded-lg px-3 py-2 text-[13.5px] font-bold transition-colors text-navy-700/75 hover:text-navy-900">Notes</a></li>
+      <li><a href="blog.html" class="relative block whitespace-nowrap rounded-lg px-3 py-2 text-[13.5px] font-bold transition-colors text-navy-700/75 hover:text-navy-900">Blog</a></li>
+      <li><a href="about.html" class="relative block whitespace-nowrap rounded-lg px-3 py-2 text-[13.5px] font-bold transition-colors text-navy-700/75 hover:text-navy-900">About</a></li>
+      <li><a href="contact.html" class="relative block whitespace-nowrap rounded-lg px-3 py-2 text-[13.5px] font-bold transition-colors text-navy-700/75 hover:text-navy-900">Contact</a></li>
+    </ul>
+    <div class="ml-auto flex items-center gap-2 xl:ml-0">
+      <span title="Coming soon" class="hidden items-center gap-1.5 whitespace-nowrap rounded-lg border border-navy-900/12 px-3 py-2 text-[13px] font-bold text-navy-700 lg:inline-flex"><svg viewBox="0 0 24 24" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="4.5" width="14" height="16" rx="2.5"/><path d="M9 4.5a3 3 0 0 1 6 0"/><path d="M9 11h6M9 15h4"/></svg> <a href="https://mock-test.gsnetacademy.com/" class="cursor-pointer">Exam Portal</a></span>
+      <a href="/#free-demo" class="btn-outline btn-sm hidden 2xl:inline-flex">Demo</a>
+      <a href="enroll.html" class="btn-primary btn-sm hidden sm:inline-flex">Join Now</a>
+      <label for="nav-toggle" class="cursor-pointer rounded-lg border border-navy-900/12 p-2 text-navy-800 xl:hidden" aria-label="Menu"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></label>
+    </div>
+  </nav>
+</header>
+
+<div class="drawer xl:hidden">
+  <label for="nav-toggle" class="drawer-scrim" aria-hidden="true"></label>
+  <div class="drawer-panel">
+    <div class="flex h-[72px] shrink-0 items-center justify-between border-b border-navy-900/10 px-5">
+      <img src="assets/images/logo.png" alt="GS Net Academy" class="h-9 w-auto rounded-lg bg-navy-950">
+      <label for="nav-toggle" class="cursor-pointer p-2 text-navy-800" aria-label="Close"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></label>
+    </div>
+    <div class="flex-1 overflow-y-auto p-5">
+      <ul class="flex flex-col gap-1">
+      <li><a href="/" class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold bg-navy-50 text-navy-900">Home</a></li>
+      <li><a href="courses.html" class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold text-navy-700">UGC NET Paper-I</a></li>
+      <li><a href="results.html" class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold text-navy-700">Our Results</a></li>
+      <li><span class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold text-navy-400">UG / PG (Paper-2)<span class="rounded-md bg-navy-50 px-2 py-0.5 text-[10.5px] font-extrabold uppercase tracking-wider">Coming soon</span></span></li>
+      <li><a href="tutorial.html" class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold text-navy-700">Tutorials</a></li>
+      <li><a href="notes.html" class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold text-navy-700">Notes</a></li>
+      <li><a href="blog.html" class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold text-navy-700">Blog</a></li>
+      <li><a href="about.html" class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold text-navy-700">About</a></li>
+      <li><a href="contact.html" class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold text-navy-700">Contact</a></li>
+      </ul>
+      <p class="mt-3 rounded-xl bg-gold-50 px-4 py-3 text-[12.5px] font-extrabold uppercase tracking-wider text-gold-700">AI-Powered Career Guidance — Coming soon</p>
+      <div class="mt-5 grid gap-2.5">
+        <a href="enroll.html" class="btn-primary w-full">✓ JOIN BATCH @ ₹500</a>
+        <a href="/#free-demo" class="btn-outline w-full">▶ WATCH FREE DEMO</a>
+        <a href="https://chat.whatsapp.com/KeaQUhOFz0UGAKtLmsM7oU" target="_blank" rel="noreferrer noopener" class="btn-outline w-full"><svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.2 20.8 4.6 16A8.4 8.4 0 1 1 8 19.4l-4.8 1.4Z"/><path d="M9 8.4c.3-.7.6-.7.9-.7h.6c.2 0 .5 0 .7.6l.8 1.9c.1.2.1.4 0 .6l-.5.7c-.1.2-.2.4 0 .7a7 7 0 0 0 3 2.6c.3.1.5.1.7-.1l.7-.8c.2-.2.4-.2.6-.1l1.8.9c.3.1.5.3.5.5v.6c0 .4-.2.9-.9 1.2-.6.3-1.5.4-2.5.1a10 10 0 0 1-6.5-6.2c-.3-1-.1-1.9.1-2.5Z"/></svg> WhatsApp Group</a>
+        <a href="tel:+919266511505" class="btn-dark w-full"><svg viewBox="0 0 24 24" class="h-4 w-4" fill="currentColor" stroke="none" aria-hidden="true"><path d="M5 3h3.5l1.6 4-2 1.4a12 12 0 0 0 5.5 5.5l1.4-2 4 1.6V19a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 3 5.2 2 2 0 0 1 5 3Z"/></svg> Call 9266511505</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<section class="hero">
+  <div class="container hero-inner">
+    <span class="eyebrow">★ UGC NET Paper-I · Research Aptitude</span>
+    <h1 class="h-display">Application of ICT in Research & Research Ethics</h1>
+    <p>Complete tutorial: ICT in research stages, digital databases, online data collection, reference management, plagiarism detection, research ethics, informed consent, FFP, authorship, publication ethics, PYQs & more.</p>
+  </div>
+</section>
+
+<main class="container">
+  <input type="checkbox" id="sidebar-toggle">
+  <label for="sidebar-toggle" class="mobile-bar">
+    <span>📑 On this page</span>
+    <span>☰ Menu</span>
+  </label>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebarNav">
+      <p class="sidebar-title">On this page</p>
+      <nav>
+        <a href="/tutorials/research-aptitude/application-of-ICT-in-research-and-research-ethic/ict-meaning" class="nav-link active"><span class="nav-num">1</span>Meaning of ICT</a>
+        <a href="/tutorials/research-aptitude/application-of-ICT-in-research-and-research-ethic/ict-research-stages" class="nav-link"><span class="nav-num">2</span>ICT in Research Stages</a>
+        <a href="/tutorials/research-aptitude/application-of-ICT-in-research-and-research-ethic/problem-identification" class="nav-link"><span class="nav-num">3</span>Problem Identification</a>
+        <a href="/tutorials/research-aptitude/application-of-ICT-in-research-and-research-ethic/literature-review-ict" class="nav-link"><span class="nav-num">4</span>Literature Review</a>
+        <a href="/tutorials/research-aptitude/application-of-ICT-in-research-and-research-ethic/digital-libraries" class="nav-link"><span class="nav-num">5</span>Digital Libraries & Repositories</a>
+        <a href="/tutorials/research-aptitude/application-of-ICT-in-research-and-research-ethic/online-data-collection" class="nav-link"><span class="nav-num">6</span>Online Data Collection</a>
+        <a href="/tutorials/research-aptitude/application-of-ICT-in-research-and-research-ethic/data-storage" class="nav-link"><span class="nav-num">7</span>Data Storage & Management</a>
+        <a href="/tutorials/research-aptitude/application-of-ICT-in-research-and-research-ethic/quantitative-analysis" class="nav-link"><span class="nav-num">8</span>Quantitative Analysis</a>
+        <a href="/tutorials/research-aptitude/application-of-ICT-in-research-and-research-ethic/qualitative-analysis" class="nav-link"><span class="nav-num">9</span>Qualitative Analysis</a>
+        <a href="/tutorials/research-aptitude/application-of-ICT-in-research-and-research-ethic/reference-management" class="nav-link"><span class="nav-num">10</span>Reference Management</a>
+        <a href="/tutorials/research-aptitude/application-of-ICT-in-research-and-research-ethic/writing-ict" class="nav-link"><span class="nav-num">11</span>Thesis & Article Writing</a>
+        <a href="/tutorials/research-aptitude/application-of-ICT-in-research-and-research-ethic/communication-collaboration" class="nav-link"><span class="nav-num">12</span>Research Communication</a>
+        <a href="/tutorials/research-aptitude/application-of-ICT-in-research-and-research-ethic/publication-dissemination" class="nav-link"><span class="nav-num">13</span>Publication & Dissemination</a>
+        <a href="/tutorials/research-aptitude/application-of-ICT-in-research-and-research-ethic/ict-limitations" class="nav-link"><span class="nav-num">14</span>Limitations of ICT</a>
+        <a href="/tutorials/research-aptitude/application-of-ICT-in-research-and-research-ethic/research-ethics-meaning" class="nav-link"><span class="nav-num">15</span>Research Ethics</a>
+        <a href="/tutorials/research-aptitude/application-of-ICT-in-research-and-research-ethic/core-principles" class="nav-link"><span class="nav-num">16</span>Core Principles</a>
+        <a href="/tutorials/research-aptitude/application-of-ICT-in-research-and-research-ethic/informed-consent" class="nav-link"><span class="nav-num">17</span>Informed Consent</a>
+        <a href="/tutorials/research-aptitude/application-of-ICT-in-research-and-research-ethic/privacy-anonymity" class="nav-link"><span class="nav-num">18</span>Privacy, Anonymity & Confidentiality</a>
+        <a href="/tutorials/research-aptitude/application-of-ICT-in-research-and-research-ethic/ffp-misconduct" class="nav-link"><span class="nav-num">19</span>Research Misconduct: FFP</a>
+        <a href="/tutorials/research-aptitude/application-of-ICT-in-research-and-research-ethic/plagiarism-types" class="nav-link"><span class="nav-num">20</span>Plagiarism Types</a>
+        <a href="/tutorials/research-aptitude/application-of-ICT-in-research-and-research-ethic/authorship-ethics" class="nav-link"><span class="nav-num">21</span>Authorship Ethics</a>
+        <a href="/tutorials/research-aptitude/application-of-ICT-in-research-and-research-ethic/publication-ethics" class="nav-link"><span class="nav-num">22</span>Publication Ethics</a>
+        <a href="/tutorials/research-aptitude/application-of-ICT-in-research-and-research-ethic/ethics-committee" class="nav-link"><span class="nav-num">23</span>Ethical Review Committee</a>
+        <a href="/tutorials/research-aptitude/application-of-ICT-in-research-and-research-ethic/deception-research" class="nav-link"><span class="nav-num">24</span>Deception in Research</a>
+        <a href="/tutorials/research-aptitude/application-of-ICT-in-research-and-research-ethic/digital-ethics" class="nav-link"><span class="nav-num">25</span>Digital Research Ethics</a>
+        <a href="/tutorials/research-aptitude/application-of-ICT-in-research-and-research-ethic/ai-ethics" class="nav-link"><span class="nav-num">26</span>AI in Research</a>
+        <a href="/tutorials/research-aptitude/application-of-ICT-in-research-and-research-ethic/benefit-risk" class="nav-link"><span class="nav-num">27</span>Benefit vs Ethical Risk</a>
+        <a href="/tutorials/research-aptitude/application-of-ICT-in-research-and-research-ethic/verified-pyqs" class="nav-link"><span class="nav-num">28</span>Verified PYQs</a>
+        <a href="/tutorials/research-aptitude/application-of-ICT-in-research-and-research-ethic/pyq-trend-analysis" class="nav-link"><span class="nav-num">29</span>PYQ Trend Analysis</a>
+        <a href="/tutorials/research-aptitude/application-of-ICT-in-research-and-research-ethic/expected-mcqs" class="nav-link"><span class="nav-num">30</span>Expected MCQs</a>
+        <a href="/tutorials/research-aptitude/application-of-ICT-in-research-and-research-ethic/one-page-revision" class="nav-link"><span class="nav-num">31</span>One-Page Revision</a>
+      </nav>
+    </aside>
+
+    <div class="content" id="contentArea">
+      <!-- ===== CARDS ===== -->
+      <div id="ict-meaning" class="topic-card"><div class="sec-head"><span class="sec-num">1</span><h2>ICT का अर्थ</h2></div><p><strong>ICT — Information and Communication Technology</strong> से आशय उन digital technologies से है जिनका उपयोग information को: Collect, Store, Process, Analyse, Retrieve, Communicate, Disseminate करने के लिए किया जाता है।</p><div class="formula-box">ICT in Research = Search + Collect + Store + Analyse + Communicate + Disseminate</div><p>ICT किसी एक research stage तक सीमित नहीं है। इसका उपयोग research problem की पहचान से लेकर findings के publication और preservation तक किया जा सकता है।</p></div>
+
+      <div id="ict-research-stages" class="topic-card"><div class="sec-head"><span class="sec-num">2</span><h2>Research के विभिन्न चरणों में ICT</h2></div><table class="data-table"><tr><th>Research Stage</th><th>ICT Application</th></tr><tr><td>Problem identification</td><td>Emerging topics, reports, research gaps</td></tr><tr><td>Literature review</td><td>E-databases, e-journals, repositories</td></tr><tr><td>Research design</td><td>Online planning, sample-size calculation</td></tr><tr><td>Tool development</td><td>Digital questionnaire, online scales</td></tr><tr><td>Data collection</td><td>Google Forms, online interviews, sensors</td></tr><tr><td>Data storage</td><td>Cloud storage, databases, spreadsheets</td></tr><tr><td>Data analysis</td><td>SPSS, R, Python, NVivo</td></tr><tr><td>Referencing</td><td>Zotero, Mendeley, EndNote</td></tr><tr><td>Writing</td><td>Word processor, LaTeX, collaborative tools</td></tr><tr><td>Plagiarism checking</td><td>Turnitin, iThenticate</td></tr><tr><td>Publication</td><td>Online journal submission systems</td></tr><tr><td>Dissemination</td><td>Repositories, conferences, academic networks</td></tr></table><p><strong>Most Important Exam Point:</strong> ICT is useful at almost all stages of research. यह केवल data analysis या thesis typing तक सीमित नहीं है।</p></div>
+
+      <div id="problem-identification" class="topic-card"><div class="sec-head"><span class="sec-num">3</span><h2>Research Problem की पहचान में ICT</h2></div><ul class="bullet-list"><li>Emerging research topics खोज सकता है</li><li>Government reports और policy documents देख सकता है</li><li>Research gaps पहचान सकता है</li><li>नवीनतम journal articles access कर सकता है</li><li>International research trends का analysis कर सकता है</li><li>Relevant experts और research groups खोज सकता है</li></ul><p><strong>Example:</strong> Researcher "Artificial Intelligence in Higher Education" पर काम करना चाहता है। वह academic databases में recent studies search करके यह पहचानता है कि rural learners पर empirical research सीमित है — यह research gap identification में ICT का उपयोग है।</p></div>
+
+      <div id="literature-review-ict" class="topic-card"><div class="sec-head"><span class="sec-num">4</span><h2>Literature Review में ICT</h2></div><ul class="bullet-list"><li><strong>Digital Sources:</strong> Google Scholar, Scopus, Web of Science, ERIC, PubMed, JSTOR, Shodhganga, INFLIBNET, Institutional repositories, E-journals, E-books, Government databases</li></ul><p><strong>Boolean Operators:</strong></p><table class="data-table"><tr><th>Operator</th><th>Function</th><th>Example</th></tr><tr><td>AND</td><td>Both terms required</td><td>ICT AND research</td></tr><tr><td>OR</td><td>Either term</td><td>adolescent OR teenager</td></tr><tr><td>NOT</td><td>Exclude term</td><td>technology NOT medicine</td></tr><tr><td>" "</td><td>Exact phrase</td><td>"research ethics"</td></tr><tr><td>*</td><td>Word variations</td><td>educat*</td></tr></table><p><strong>Exam Trap:</strong> AND search narrows; OR search broadens. Internet search result स्वयं credible evidence नहीं है — source की quality evaluate करनी होती है।</p></div>
+
+      <div id="digital-libraries" class="topic-card"><div class="sec-head"><span class="sec-num">5</span><h2>Digital Libraries and Repositories</h2></div><ul class="bullet-list"><li><strong>Digital Library:</strong> Organised digital collection of e-books, articles, theses, reports, multimedia</li><li><strong>Institutional Repository:</strong> Digital archive of institution's scholarly output</li><li><strong>Shodhganga:</strong> Indian universities' theses and dissertations digital repository (maintained by INFLIBNET Centre)</li><li><strong>Shodhgangotri:</strong> Approved research synopses/research-in-progress repository</li></ul><p><strong>Exam Trap:</strong> Repository में उपलब्ध thesis को बिना citation उपयोग करना plagiarism हो सकता है। Open access का अर्थ copyright-free या attribution-free नहीं होता।</p></div>
+
+      <div id="online-data-collection" class="topic-card"><div class="sec-head"><span class="sec-num">6</span><h2>Online Data Collection</h2></div><ul class="bullet-list"><li>Google Forms/Microsoft Forms, Online questionnaires, Email surveys, Mobile applications, Online interviews, Video conferencing, Digital focus groups, Online experiments, Social-media data, Sensors and wearable devices, LMS logs</li></ul><p><strong>Advantages:</strong> Wider coverage, automatic data entry, cost saving, real-time responses, remote participants, skip logic, multimedia questions</p><p><strong>Limitations:</strong> Digital divide, Internet access inequality, self-selection bias, representativeness issues, multiple/false responses, low response rate, privacy/data-security risk, identity verification difficult, informed consent neglect</p><p><strong>Exam Point:</strong> Online survey का बड़ा sample अपने-आप representative sample नहीं होता।</p></div>
+
+      <div id="data-storage" class="topic-card"><div class="sec-head"><span class="sec-num">7</span><h2>Data Storage and Management</h2></div><ul class="bullet-list"><li><strong>Means:</strong> Spreadsheets, Relational databases, Encrypted drives, Institutional servers, Cloud storage, Data repositories</li><li><strong>Good Practices:</strong> Password protection, Encryption, Regular backup, Version control, File-naming convention, Access control, Data dictionary, De-identification, Retention & deletion policy</li></ul><div class="formula-box">Original Data + Secure Backup + Controlled Access</div><p><strong>Exam Trap:</strong> Cloud पर data upload करना ही security की guarantee नहीं है। Encryption, permissions और applicable policy आवश्यक हैं।</p></div>
+
+      <div id="quantitative-analysis" class="topic-card"><div class="sec-head"><span class="sec-num">8</span><h2>Quantitative Data Analysis में ICT</h2></div><ul class="bullet-list"><li><strong>Tools:</strong> Microsoft Excel, SPSS, R, Python, SAS, Stata, Jamovi, PSPP</li><li><strong>Applications:</strong> Data cleaning, Coding, Frequency/percentage, Mean/median/mode, Standard deviation, Correlation, t-test, ANOVA, Chi-square, Regression, Graphs/visualisation</li></ul><p><strong>Important Caution:</strong> Software statistical test कर सकता है, लेकिन appropriate test चुनने और result interpret करने की responsibility researcher की होती है।</p><div class="formula-box">Garbage In → Garbage Out</div></div>
+
+      <div id="qualitative-analysis" class="topic-card"><div class="sec-head"><span class="sec-num">9</span><h2>Qualitative Data Analysis में ICT</h2></div><ul class="bullet-list"><li><strong>Tools:</strong> NVivo, ATLAS.ti, MAXQDA, QDA Miner</li><li><strong>Uses:</strong> Interview transcription organisation, Coding, Categories, Theme identification, Text searching, Memos, Audio-video data management, Relationship visualisation</li></ul><p><strong>Exam Point:</strong> Qualitative software researcher की interpretation को replace नहीं करता; वह data organisation और analysis को support करता है।</p></div>
+
+      <div id="reference-management" class="topic-card"><div class="sec-head"><span class="sec-num">10</span><h2>Reference Management</h2></div><ul class="bullet-list"><li><strong>Tools:</strong> Zotero, Mendeley, EndNote, RefWorks</li><li><strong>Functions:</strong> References import/store, PDFs organise, Notes/tags, In-text citations, Bibliography generate, APA/MLA/Chicago style change, Duplicate identification, Collaborative library</li></ul><table class="data-table"><tr><th>Tool Type</th><th>Examples</th><th>Main Function</th></tr><tr><td>Reference manager</td><td>Zotero, Mendeley, EndNote</td><td>Citations and bibliography</td></tr><tr><td>Plagiarism checker</td><td>Turnitin, iThenticate</td><td>Textual similarity</td></tr><tr><td>Statistical software</td><td>SPSS, R, Stata</td><td>Quantitative analysis</td></tr><tr><td>Qualitative software</td><td>NVivo, ATLAS.ti</td><td>Coding and thematic analysis</td></tr></table><p><strong>Exam Trap:</strong> EndNote reference-management software है; Turnitin plagiarism/similarity-detection system है।</p></div>
+
+      <div id="writing-ict" class="topic-card"><div class="sec-head"><span class="sec-num">11</span><h2>Thesis and Article Writing में ICT</h2></div><ul class="bullet-list"><li>Word processing, Spell/grammar checking, Tables/figures, Automatic table of contents, Citation insertion, Collaborative editing, Track changes, Cloud-based version management, LaTeX typesetting, Journal templates, Similarity checking</li><li><strong>Common Tools:</strong> Microsoft Word, Google Docs, LibreOffice Writer, LaTeX/Overleaf, Grammarly, Reference managers</li></ul><p><strong>Caution:</strong> Language tool द्वारा suggested correction को बिना जाँच स्वीकार नहीं करना चाहिए — वह technical meaning बदल सकता है।</p></div>
+
+      <div id="communication-collaboration" class="topic-card"><div class="sec-head"><span class="sec-num">12</span><h2>Research Communication and Collaboration</h2></div><ul class="bullet-list"><li>Email communication, Video conferencing, Shared documents, International collaboration, Virtual seminars/webinars, Online conferences, Collaborative datasets, Preprints/repositories, Research profiles</li><li><strong>Academic Visibility Platforms:</strong> ORCID, Google Scholar Profile, Institutional profile, Research repositories</li></ul><div class="formula-box">DOI → Digital scholarly object identification | ORCID → Researcher identification</div></div>
+
+      <div id="publication-dissemination" class="topic-card"><div class="sec-head"><span class="sec-num">13</span><h2>Publication and Dissemination में ICT</h2></div><ul class="bullet-list"><li>Online journal submission, Manuscript tracking, Electronic peer review, E-journal publication, Institutional repository deposit, Open-access dissemination, Citation tracking, Altmetrics, Online conference presentation</li></ul><p><strong>Open Access:</strong> Research output को readers के लिए online accessible बनाने की publication approach।</p><p><strong>Important Trap:</strong> Open access का अर्थ यह नहीं कि material को बिना citation copy किया जा सकता है।</p></div>
+
+      <div id="ict-limitations" class="topic-card"><div class="sec-head"><span class="sec-num">14</span><h2>ICT की प्रमुख सीमाएँ</h2></div><ul class="bullet-list"><li>Digital divide</li><li>Unequal access</li><li>Information overload</li><li>Predatory journals</li><li>Fake or unreliable information</li><li>Privacy breach</li><li>Cybersecurity risks</li><li>Software dependence</li><li>Algorithmic bias</li><li>Data manipulation की सुविधा</li><li>Plagiarism और contract cheating</li><li>AI-generated misinformation</li><li>Copyright violation</li><li>Long-term digital preservation की समस्या</li></ul></div>
+
+      <div id="research-ethics-meaning" class="topic-card"><div class="sec-head"><span class="sec-num">15</span><h2>Research Ethics का अर्थ</h2></div><p><strong>Research Ethics</strong> वे moral principles, professional standards और guidelines हैं जो research की planning, conduct, data handling, reporting और publication को regulate करते हैं।</p><div class="formula-box">Research Ethics = Honesty + Objectivity + Respect + Responsibility + Transparency</div><ul class="bullet-list"><li>Participants के rights और welfare की रक्षा</li><li>Research findings की credibility बनाए रखना</li><li>Academic integrity सुनिश्चित करना</li><li>Society और scientific community का trust बनाए रखना</li></ul></div>
+
+      <div id="core-principles" class="topic-card"><div class="sec-head"><span class="sec-num">16</span><h2>Core Principles of Research Ethics</h2></div><ul class="bullet-list"><li><strong>Respect for Persons/Autonomy:</strong> Participant का voluntary decision right</li><li><strong>Beneficence:</strong> Possible benefits maximised</li><li><strong>Non-maleficence:</strong> Do no harm — physical, psychological, social, economic, reputational harm minimised</li><li><strong>Justice:</strong> Fair distribution of burden and benefit</li><li><strong>Honesty:</strong> Truthful reporting of data, method, findings</li><li><strong>Objectivity:</strong> Control/disclose personal bias and conflict of interest</li><li><strong>Integrity:</strong> Consistency and ethical commitment</li><li><strong>Accountability:</strong> Responsible for decisions, data, reporting</li><li><strong>Transparency:</strong> Clear method, limitations, funding, conflict of interest</li><li><strong>Confidentiality and Privacy:</strong> Protect participant information</li></ul></div>
+
+      <div id="informed-consent" class="topic-card"><div class="sec-head"><span class="sec-num">17</span><h2>Informed Consent</h2></div><div class="formula-box">Informed Consent = Information + Understanding + Voluntariness + Agreement</div><ul class="bullet-list"><li><strong>To be told:</strong> Purpose, Procedures, Duration, Risks, Benefits, Confidentiality, Voluntary participation, Withdrawal right, Contact details, Data use</li><li><strong>Invalid when:</strong> Incomplete information, Coercion/undue pressure, Language not understood, Participant not legally capable, Only formal signature without real understanding</li><li><strong>Vulnerable Participants:</strong> Children, Limited decision-making capacity, Prisoners, Economically dependent, Researcher's own students/employees, Seriously ill — additional safeguards needed</li></ul></div>
+
+      <div id="privacy-anonymity" class="topic-card"><div class="sec-head"><span class="sec-num">18</span><h2>Privacy, Anonymity and Confidentiality</h2></div><table class="data-table"><tr><th>Concept</th><th>Meaning</th></tr><tr><td><strong>Privacy</strong></td><td>Personal information पर participant का control</td></tr><tr><td><strong>Anonymity</strong></td><td>Identity linked/known नहीं</td></tr><tr><td><strong>Confidentiality</strong></td><td>Identity ज्ञात, पर protected</td></tr><tr><td><strong>De-identification</strong></td><td>Identifiers को remove या code करना</td></tr></table><p><strong>Exam Trap:</strong> Anonymity और confidentiality समान नहीं हैं। यदि researcher names जानता है लेकिन उन्हें disclose नहीं करता, तो यह confidentiality है, complete anonymity नहीं।</p></div>
+
+      <div id="ffp-misconduct" class="topic-card"><div class="sec-head"><span class="sec-num">19</span><h2>Research Misconduct: FFP</h2></div><div class="formula-box">FFP = Fabrication + Falsification + Plagiarism</div><ul class="bullet-list"><li><strong>Fabrication:</strong> Making up data that was not actually collected. Example: Reporting 200 responses when only 120 collected, creating remaining responses.</li><li><strong>Falsification:</strong> Manipulating, altering or omitting existing data/process. Example: Deleting inconvenient observations to support hypothesis.</li><li><strong>Plagiarism:</strong> Using others' words, ideas, data or work without proper credit.</li></ul></div>
+
+      <div id="plagiarism-types" class="topic-card"><div class="sec-head"><span class="sec-num">20</span><h2>Plagiarism के प्रकार</h2></div><ul class="bullet-list"><li>Direct plagiarism</li><li>Mosaic/patchwork plagiarism</li><li>Inadequate paraphrasing</li><li>Idea plagiarism</li><li>Data/image plagiarism</li><li>Source plagiarism</li><li>Accidental plagiarism</li><li>Self-plagiarism — अपने previously published text/data को बिना disclosure/citation नए work के रूप में प्रस्तुत करना</li></ul><p><strong>Prevention:</strong> Proper citation, Quotation marks, Genuine paraphrasing with citation, Reference list, Original notes, Figures/tables source, Similarity report careful interpretation</p><p><strong>Exam Trap:</strong> Similarity और plagiarism समान नहीं हैं। Similarity software matching text दिखाता है; Plagiarism ethical judgement है — context, attribution और intent पर depend करता है। Zero similarity academic quality की guarantee नहीं है।</p></div>
+
+      <div id="authorship-ethics" class="topic-card"><div class="sec-head"><span class="sec-num">21</span><h2>Authorship Ethics</h2></div><p>किसी व्यक्ति को author तभी बनाया जाना चाहिए जब उसका research में substantial intellectual contribution हो।</p><ul class="bullet-list"><li><strong>Legitimate Contribution:</strong> Conception/design, Data analysis/interpretation, Drafting/critical revision, Final approval, Accountability</li><li><strong>Unethical Authorship:</strong> Gift/Honorary (influential person without contribution), Ghost (contributor removed), Guest (prestige addition), Order based on power/position not contribution</li></ul><p><strong>Exam Point:</strong> केवल departmental head या supervisor होना automatic authorship का पर्याप्त आधार नहीं है।</p></div>
+
+      <div id="publication-ethics" class="topic-card"><div class="sec-head"><span class="sec-num">22</span><h2>Publication Ethics</h2></div><ul class="bullet-list"><li><strong>Duplicate Publication:</strong> Same research substantially same form in multiple journals</li><li><strong>Simultaneous Submission:</strong> Same manuscript to multiple journals at once</li><li><strong>Salami Slicing:</strong> Unnecessarily dividing one integrated study into small papers</li><li><strong>Selective Reporting:</strong> Only favourable/significant results reported</li><li><strong>Citation Manipulation:</strong> Adding irrelevant citations to increase count</li><li><strong>Conflict of Interest:</strong> Personal/professional/financial interest affecting research judgement — must be disclosed and managed, not hidden</li></ul></div>
+
+      <div id="ethics-committee" class="topic-card"><div class="sec-head"><span class="sec-num">23</span><h2>Ethical Review Committee</h2></div><ul class="bullet-list"><li>Human participants studies generally require appropriate ethics committee/IEC/IRB approval</li><li><strong>Committee checks:</strong> Risk–benefit balance, Informed consent process, Participant selection, Privacy/confidentiality, Vulnerable groups protection, Data management plan, Compensation and withdrawal rights</li></ul><p><strong>Exam Trap:</strong> Ethics approval प्राप्त करना researcher की continuing ethical responsibility समाप्त नहीं करता।</p></div>
+
+      <div id="deception-research" class="topic-card"><div class="sec-head"><span class="sec-num">24</span><h2>Research में Deception</h2></div><ul class="bullet-list"><li>Limited deception may be justified only when: Scientific justification, Minimal risk, No suitable alternative, Ethics approval obtained, Debriefing provided, Participant has data withdrawal opportunity</li></ul><p>Deception सामान्य rule नहीं, exceptional procedure है।</p></div>
+
+      <div id="digital-ethics" class="topic-card"><div class="sec-head"><span class="sec-num">25</span><h2>ICT and Digital Research Ethics</h2></div><ul class="bullet-list"><li>Online informed consent</li><li>Social-media data privacy</li><li>Data ownership</li><li>Cybersecurity</li><li>Cloud storage jurisdiction</li><li>Facial/biometric data</li><li>Re-identification risk</li><li>Algorithmic bias</li><li>Digital surveillance</li><li>Copyright/licensing</li><li>Terms of service</li><li>Digital divide</li><li>Automated decision-making</li></ul><p><strong>Publicly Available Data Trap:</strong> Social media पर data publicly visible होने का अर्थ हमेशा यह नहीं कि उसे बिना ethical consideration research में उपयोग किया जा सकता है। Context, sensitivity, user expectation, consent, anonymisation और potential harm देखना आवश्यक है।</p></div>
+
+      <div id="ai-ethics" class="topic-card"><div class="sec-head"><span class="sec-num">26</span><h2>Artificial Intelligence in Research</h2></div><ul class="bullet-list"><li><strong>AI can assist:</strong> Keyword generation, Literature discovery, Language improvement, Coding suggestions, Data visualisation, Transcription, Programming assistance, Preliminary summaries</li><li><strong>Ethical Risks:</strong> False/hallucinated references, Biased output, Confidential data leakage, Undisclosed AI-generated text, Fabricated interpretation, Copyright concerns, Overdependence, Lack of accountability</li></ul><p><strong>Right Approach:</strong> Verify AI output, Read and cite original sources, Do NOT upload confidential/unpublished participant data to public AI systems, Follow journal/institution AI-disclosure policy, Do NOT treat AI as author, Avoid fabricated citations/data.</p><div class="formula-box">AI may assist research; it cannot replace researcher accountability.</div></div>
+
+      <div id="benefit-risk" class="topic-card"><div class="sec-head"><span class="sec-num">27</span><h2>ICT: Benefit और Ethical Risk</h2></div><table class="data-table"><tr><th>ICT Application</th><th>Benefit</th><th>Ethical/Methodological Risk</th></tr><tr><td>Online survey</td><td>Wider reach</td><td>Biased sample, privacy</td></tr><tr><td>Cloud storage</td><td>Easy access</td><td>Data breach</td></tr><tr><td>Statistical software</td><td>Fast analysis</td><td>Wrong test/interpretation</td></tr><tr><td>Plagiarism checker</td><td>Similarity detection</td><td>False assumption that similarity equals plagiarism</td></tr><tr><td>AI tool</td><td>Speed and assistance</td><td>Hallucination, bias, data leakage</td></tr><tr><td>Social-media data</td><td>Large natural dataset</td><td>Consent and contextual privacy</td></tr><tr><td>Reference manager</td><td>Accurate formatting</td><td>Imported metadata errors</td></tr><tr><td>Online publication</td><td>Wider dissemination</td><td>Predatory journals</td></tr></table></div>
+
+      <div id="verified-pyqs" class="topic-card"><div class="sec-head"><span class="sec-num">28</span><h2>Verified PYQs</h2></div><div class="pyq-tag">PYQ 1: UGC NET, 12 Nov 2020, Shift 1</div><p><strong>ICT application in research stages:</strong> Literature survey, Data analysis, Reference indexing (as per given options — conceptually ICT applies to almost all stages including field data collection and thesis writing).</p>
+      <div class="pyq-tag">PYQ 2: UGC NET, 3 Dec 2019, Shift 2</div><p><strong>ICT ensuring wider coverage and accessibility:</strong> WAN (Wide Area Network)</p>
+      <div class="pyq-tag">PYQ 3: UGC NET, 13 Nov 2020, Shift 1</div><p><strong>Most useful reason for ICT in research:</strong> Increasing scope of accessibility of research data</p>
+      <div class="pyq-tag">PYQ 4: UGC NET, 23 Feb 2023, Shift 2</div><p>Informing participants about nature and risks → <strong>Informed consent</strong></p>
+      <div class="pyq-tag">PYQ 5: UGC NET, 5 Dec 2021, Shift 2</div><p><strong>Research ethics components:</strong> Informed consent, Plagiarism avoidance, Proper referencing</p>
+      <div class="pyq-tag">PYQ 6: UGC NET, 21 June 2019, Shift 1</div><p>Plagiarism → <strong>Dishonest copying and its use</strong></p>
+      <div class="pyq-tag">PYQ 7: UGC NET, 21 June 2023, Shift 2</div><p>Covert ethnographic research primarily involves → <strong>Ethical issues</strong></p>
+      <div class="pyq-tag">PYQ 8: UGC NET, 29 June 2025, Shift 1</div><p>Not maintaining research ethics → <strong>Sharing confidential information with others</strong></p></div>
+
+      <div id="pyq-trend-analysis" class="topic-card"><div class="sec-head"><span class="sec-num">29</span><h2>PYQ Trend Analysis</h2></div><table class="data-table"><tr><th>Tested Area</th><th>Common Question Type</th></tr><tr><td>ICT across research stages</td><td>Correct combination</td></tr><tr><td>Information accessibility</td><td>Direct MCQ</td></tr><tr><td>Online research</td><td>Advantages/disadvantages</td></tr><tr><td>Reference software</td><td>Tool identification</td></tr><tr><td>Informed consent</td><td>Scenario-based</td></tr><tr><td>Privacy/confidentiality</td><td>Concept distinction</td></tr><tr><td>Plagiarism</td><td>Definition/application</td></tr><tr><td>Fabrication vs falsification</td><td>Matching</td></tr><tr><td>Covert research</td><td>Ethical scenario</td></tr><tr><td>Publication ethics</td><td>Statement-based</td></tr><tr><td>Digital data</td><td>Privacy/security scenario</td></tr></table></div>
+
+      <div id="expected-mcqs" class="topic-card"><div class="sec-head"><span class="sec-num">30</span><h2>Expected MCQs (Dec 2026)</h2></div><div class="pyq-tag">Q1</div><p>Interview transcripts to coding and themes → <strong>Qualitative data-analysis software</strong></p>
+      <div class="pyq-tag">Q2</div><p>100 responses received, 25 imaginary added → <strong>Fabrication</strong></p>
+      <div class="pyq-tag">Q3</div><p>Deleting observations against hypothesis → <strong>Falsification</strong></p>
+      <div class="pyq-tag">Q4</div><p>Researcher knows names but doesn't disclose → <strong>Confidentiality</strong></p>
+      <div class="pyq-tag">Q5</div><p>Correctly matched pair → <strong>Turnitin — Textual similarity detection</strong></p>
+      <div class="pyq-tag">Q6 Assertion-Reason</div><p>Assertion: ICT increases efficiency but doesn't guarantee ethical research. Reason: Ethical outcome depends on researcher decisions, data practices, institutional safeguards. → <strong>Both true, Reason explains Assertion</strong></p>
+      <div class="pyq-tag">Q7</div><p>Online consent only "I Agree" button without purpose/risks → <strong>Consent not adequately informed</strong></p>
+      <div class="pyq-tag">Q8</div><p>Confidential transcripts uploaded to public AI service → <strong>Confidentiality and data-security breach</strong></p>
+      <div class="pyq-tag">Q9</div><p>Professor made author without contribution → <strong>Gift/Honorary authorship</strong></p>
+      <div class="pyq-tag">Q10</div><p>Similarity report 18% → <strong>Contextual review of matched passages, quotations, citations required</strong></p></div>
+
+      <div id="one-page-revision" class="topic-card"><div class="sec-head"><span class="sec-num">31</span><h2>One-Page Revision</h2></div><div class="formula-box">ICT in research → Almost all research stages</div>
+      <div class="formula-box">Boolean AND → Search narrows | Boolean OR → Search broadens</div>
+      <div class="formula-box">Zotero/Mendeley/EndNote → Reference management</div>
+      <div class="formula-box">Turnitin/iThenticate → Similarity detection</div>
+      <div class="formula-box">SPSS/R/Stata → Quantitative analysis</div>
+      <div class="formula-box">NVivo/ATLAS.ti → Qualitative analysis</div>
+      <div class="formula-box">Informed consent → Information + voluntary agreement</div>
+      <div class="formula-box">Privacy → Personal information control | Anonymity → Identity not linked | Confidentiality → Identity known but protected</div>
+      <div class="formula-box">Fabrication → Making up data | Falsification → Altering/hiding data | Plagiarism → Taking without credit</div>
+      <div class="formula-box">Gift authorship → Without contribution | Ghost authorship → Contributor omitted</div>
+      <div class="formula-box">Duplicate publication → Same work republished | Salami slicing → Unnecessarily dividing study</div>
+      <div class="formula-box">AI in research → Assistance, not accountability</div>
+      <div class="formula-box">Digital data → Consent + encryption + controlled access</div>
+      <p><strong>Master Formula:</strong> Ethical Digital Research = Valid Method + Informed Consent + Secure Data + Honest Analysis + Proper Credit + Transparent Reporting</p>
+      <p><strong>Research Misconduct = Fabrication + Falsification + Plagiarism (FFP)</strong></p></div>
+
+      <div class="enroll-cta"><div><h3 class="h-display">Join the Paper-1 Batch</h3><p>Course fee FREE — ₹500 registration & academic/logistics contribution. Classes daily at 6:30 PM.</p></div><a href="/enroll.html" class="btn-gold">✓ JOIN BATCH @ ₹500</a></div>
+    </div>
+  </div>
+</main>
+
+<footer class="relative overflow-hidden bg-navy-950 text-white">
+  <div class="grid-paper absolute inset-0 opacity-50" aria-hidden="true"></div>
+  <div class="container-x relative py-12 lg:py-14">
+    <div class="grid grid-cols-2 gap-10 lg:grid-cols-4">
+
+      <div>
+        <div class="flex items-center gap-3">
+          <img src="/assets/images/logo.png" alt="GS Net Academy" class="h-11 w-auto rounded-lg bg-white p-1" width="120" height="44">
+          <img src="/assets/images/tagline.png" alt="" class="h-11 w-auto brightness-0 invert" aria-hidden="true">
+        </div>
+        <p class="mt-5 text-[14px] leading-relaxed text-navy-100/75">UGC NET Paper-I | JRF Preparation | Mentorship</p>
+        <span class="eyebrow mt-5"><svg viewBox="0 0 24 24" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1"/></svg> JRF @ ₹500 Mission 2026</span>
+
+        <p class="mt-6 text-[11px] font-extrabold uppercase tracking-[0.18em] text-gold-400">Follow Us</p>
+        <ul class="mt-3 flex flex-wrap gap-2">
+          <li><a href="https://www.youtube.com/@gsnetacademy" target="_blank" rel="noreferrer noopener" aria-label="YouTube" title="YouTube" class="grid h-10 w-10 place-items-center rounded-xl border border-white/12 bg-white/[0.06] text-navy-100/80 transition hover:border-gold-400/50 hover:bg-white/[0.12] hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor" aria-hidden="true"><path d="M21.6 7.2a2.5 2.5 0 0 0-1.8-1.8C18.2 5 12 5 12 5s-6.2 0-7.8.4A2.5 2.5 0 0 0 2.4 7.2 26 26 0 0 0 2 12a26 26 0 0 0 .4 4.8 2.5 2.5 0 0 0 1.8 1.8C5.8 19 12 19 12 19s6.2 0 7.8-.4a2.5 2.5 0 0 0 1.8-1.8A26 26 0 0 0 22 12a26 26 0 0 0-.4-4.8ZM10 15V9l5.2 3L10 15Z"/></svg></a></li>
+          <li><a href="https://www.instagram.com/gsnetacademy" target="_blank" rel="noreferrer noopener" aria-label="Instagram" title="Instagram" class="grid h-10 w-10 place-items-center rounded-xl border border-white/12 bg-white/[0.06] text-navy-100/80 transition hover:border-gold-400/50 hover:bg-white/[0.12] hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg></a></li>
+          <li><a href="https://www.facebook.com/gsnetacademy" target="_blank" rel="noreferrer noopener" aria-label="Facebook" title="Facebook" class="grid h-10 w-10 place-items-center rounded-xl border border-white/12 bg-white/[0.06] text-navy-100/80 transition hover:border-gold-400/50 hover:bg-white/[0.12] hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.25-1.5 1.55-1.5H16.7V3.6c-.3 0-1.3-.13-2.47-.13-2.44 0-4.11 1.49-4.11 4.23V9.9H7.4V13h2.72v8h3.38Z"/></svg></a></li>
+          <li><a href="https://t.me/gsnetacademy" target="_blank" rel="noreferrer noopener" aria-label="Telegram" title="Telegram" class="grid h-10 w-10 place-items-center rounded-xl border border-white/12 bg-white/[0.06] text-navy-100/80 transition hover:border-gold-400/50 hover:bg-white/[0.12] hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor" aria-hidden="true"><path d="M21.3 4.3 2.9 11.4c-.9.35-.9 1.62.02 1.93l4.6 1.53 1.75 5.3c.25.75 1.2.95 1.73.37l2.5-2.72 4.6 3.38c.63.46 1.53.12 1.7-.65l3.1-14.9c.2-.9-.7-1.65-1.6-1.31ZM9.6 14.1l8.5-5.6-6.9 6.5-.3 3.3-1.3-4.2Z"/></svg></a></li>
+          <li><a href="https://chat.whatsapp.com/KeaQUhOFz0UGAKtLmsM7oU" target="_blank" rel="noreferrer noopener" aria-label="WhatsApp Group" title="WhatsApp Group" class="grid h-10 w-10 place-items-center rounded-xl border border-white/12 bg-white/[0.06] text-navy-100/80 transition hover:border-emerald-400/50 hover:bg-emerald-500/15 hover:text-emerald-300"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.2 20.8 4.6 16A8.4 8.4 0 1 1 8 19.4l-4.8 1.4Z"/><path d="M9 8.4c.3-.7.6-.7.9-.7h.6c.2 0 .5 0 .7.6l.8 1.9c.1.2.1.4 0 .6l-.5.7c-.1.2-.2.4 0 .7a7 7 0 0 0 3 2.6c.3.1.5.1.7-.1l.7-.8c.2-.2.4-.2.6-.1l1.8.9c.3.1.5.3.5.5v.6c0 .4-.2.9-.9 1.2-.6.3-1.5.4-2.5.1a10 10 0 0 1-6.5-6.2c-.3-1-.1-1.9.1-2.5Z"/></svg></a></li>
+          <li><a href="https://x.com/gsnetacademy" target="_blank" rel="noreferrer noopener" aria-label="X (Twitter)" title="X (Twitter)" class="grid h-10 w-10 place-items-center rounded-xl border border-white/12 bg-white/[0.06] text-navy-100/80 transition hover:border-gold-400/50 hover:bg-white/[0.12] hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-4.5 w-4.5" fill="currentColor" aria-hidden="true"><path d="M17.5 3h3.1l-6.8 7.8L21.8 21h-6.2l-4.9-6.4L5.1 21H2l7.3-8.3L2.5 3h6.4l4.4 5.8L17.5 3Zm-1.1 16.2h1.7L7.7 4.7H5.9l10.5 14.5Z"/></svg></a></li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="text-[11px] font-extrabold uppercase tracking-[0.18em] text-gold-400">Quick Links</p>
+        <ul class="mt-4 grid gap-2.5">
+          <li><a href="/index.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Home</a></li>
+          <li><a href="/courses.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">UGC NET Paper-I</a></li>
+          <li><a href="/results.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Our Results</a></li>
+          <li><a href="/tutorials.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Tutorials</a></li>
+          <li><a href="/blog.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Blog</a></li>
+          <li><a href="/about.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">About</a></li>
+          <li><a href="/contact.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="text-[11px] font-extrabold uppercase tracking-[0.18em] text-gold-400">Resources</p>
+        <ul class="mt-4 grid gap-2.5">
+          <li><a href="/notes.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Notes</a></li>
+          <li><a href="/enroll.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Register for ₹500</a></li>
+          <li><a href="/index.html#free-demo" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Free Demo Classes</a></li>
+          <li><a href="https://chat.whatsapp.com/KeaQUhOFz0UGAKtLmsM7oU" target="_blank" rel="noreferrer noopener" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Student Community</a></li>
+        </ul>
+        <p class="mt-6 text-[11px] font-extrabold uppercase tracking-[0.18em] text-gold-400">Legal</p>
+        <ul class="mt-4 grid gap-2.5">
+          <li><a href="/privacy-policy.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Privacy Policy</a></li>
+          <li><a href="/refund-policy.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Refund &amp; Cancellation</a></li>
+          <li><a href="/terms-of-enrollment.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Terms of Enrollment</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="text-[11px] font-extrabold uppercase tracking-[0.18em] text-gold-400">Contact</p>
+        <ul class="mt-4 grid gap-2.5 text-[14px] text-navy-100/75">
+          <li><a href="tel:+919266511505" class="flex items-center gap-2 hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-4 w-4 icon-gold" fill="currentColor" aria-hidden="true"><path d="M5 3h3.5l1.6 4-2 1.4a12 12 0 0 0 5.5 5.5l1.4-2 4 1.6V19a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 3 5.2 2 2 0 0 1 5 3Z"/></svg> +91 9266511505</a></li>
+          <li><a href="tel:+919810845327" class="flex items-center gap-2 hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-4 w-4 icon-gold" fill="currentColor" aria-hidden="true"><path d="M5 3h3.5l1.6 4-2 1.4a12 12 0 0 0 5.5 5.5l1.4-2 4 1.6V19a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 3 5.2 2 2 0 0 1 5 3Z"/></svg> +91 9810845327</a></li>
+          <li><a href="mailto:gsnetacademy@gmail.com" class="flex items-center gap-2 break-all hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-4 w-4 icon-gold" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="m3.5 6.5 8.5 6 8.5-6"/></svg> gsnetacademy@gmail.com</a></li>
+          <li><a href="https://chat.whatsapp.com/KeaQUhOFz0UGAKtLmsM7oU" target="_blank" rel="noreferrer noopener" class="flex items-center gap-2 hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-4 w-4 icon-gold" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.2 20.8 4.6 16A8.4 8.4 0 1 1 8 19.4l-4.8 1.4Z"/><path d="M9 8.4c.3-.7.6-.7.9-.7h.6c.2 0 .5 0 .7.6l.8 1.9c.1.2.1.4 0 .6l-.5.7c-.1.2-.2.4 0 .7a7 7 0 0 0 3 2.6c.3.1.5.1.7-.1l.7-.8c.2-.2.4-.2.6-.1l1.8.9c.3.1.5.3.5.5v.6c0 .4-.2.9-.9 1.2-.6.3-1.5.4-2.5.1a10 10 0 0 1-6.5-6.2c-.3-1-.1-1.9.1-2.5Z"/></svg> WhatsApp Group</a></li>
+        </ul>
+        <a href="/enroll.html" class="btn-primary mt-6 w-full">Join for ₹500</a>
+        <p class="text-[14px] mt-3 text-navy-100/75 transition hover:text-gold-300">Address: B 14-15, Udhyog Marg, Block B, Sector 1, Noida, Uttar Pradesh 201301</p>
+      </div>
+    </div>
+
+    <div class="mt-10 border-t border-white/10 pt-6">
+      <ul class="flex flex-wrap items-center gap-x-5 gap-y-2 text-[13px]">
+        <li><a href="/privacy-policy.html" class="text-navy-100/70 transition hover:text-gold-300">Privacy Policy</a></li>
+        <li aria-hidden="true" class="text-navy-100/25">|</li>
+        <li><a href="/refund-policy.html" class="text-navy-100/70 transition hover:text-gold-300">Refund &amp; Cancellation</a></li>
+        <li aria-hidden="true" class="text-navy-100/25">|</li>
+        <li><a href="/terms-of-enrollment.html" class="text-navy-100/70 transition hover:text-gold-300">Terms of Enrollment</a></li>
+      </ul>
+      <div class="mt-4 flex flex-col gap-2 text-[13px] text-navy-100/60 sm:flex-row sm:items-center sm:justify-between">
+        <p>© 2026 GS Net Academy. All Rights Reserved.</p>
+        <p>A Premier institute for UGC NET Paper-1</p>
+      </div>
+      <p class="mt-4 text-[12px] leading-relaxed text-navy-100/45">Disclaimer: GS Net Academy किसी भी exam में selection, rank या score की guarantee नहीं देता। हम quality teaching, study material, practice और academic mentorship प्रदान करते हैं। UGC, NTA या किसी अन्य government body से हमारा कोई affiliation नहीं है।</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function() {
+
+  const BASE_PATH =
+    "/tutorials/research-aptitude/application-of-ICT-in-research-and-research-ethic";
+
+  const links = document.querySelectorAll(".nav-link");
+  const cards = document.querySelectorAll(".topic-card");
+  const content = document.getElementById("contentArea");
+  const sidebarToggle = document.getElementById("sidebar-toggle");
+
+
+  // Get topic slug from current URL
+  function getSlugFromPath() {
+
+    const path = window.location.pathname
+      .replace(/\/+$/, "");
+
+    if (path.startsWith(BASE_PATH + "/")) {
+
+      return path
+        .substring((BASE_PATH + "/").length)
+        .split("/")[0];
+
+    }
+
+    return null;
+  }
+
+
+  // Update browser URL
+  function updateUrl(slug, replace = false) {
+
+    const newPath =
+      BASE_PATH + "/" + slug;
+
+    if (window.location.pathname !== newPath) {
+
+      if (replace) {
+
+        history.replaceState(null, "", newPath);
+
+      } else {
+
+        history.pushState(null, "", newPath);
+
+      }
+
+    }
+  }
+
+
+  // Update active sidebar link
+  function updateActiveLink(slug) {
+
+    links.forEach(function(link) {
+
+      const href =
+        link.getAttribute("href");
+
+      if (!href) return;
+
+      const linkSlug =
+        href.split("/")
+          .filter(Boolean)
+          .pop();
+
+      link.classList.toggle(
+        "active",
+        linkSlug === slug
+      );
+
+    });
+  }
+
+
+  // Show selected topic
+  function showCard(slug, updateHistory = true) {
+
+    cards.forEach(function(card) {
+
+      card.classList.add("hidden");
+
+    });
+
+
+    const target =
+      document.getElementById(slug);
+
+
+    if (!target) {
+
+      const first = cards[0];
+
+      if (first) {
+
+        first.classList.remove("hidden");
+
+        const firstSlug = first.id;
+
+        updateActiveLink(firstSlug);
+
+        updateUrl(firstSlug, true);
+
+      }
+
+      return;
+    }
+
+
+    target.classList.remove("hidden");
+
+    updateActiveLink(slug);
+
+
+    if (updateHistory) {
+
+      updateUrl(slug);
+
+    }
+
+
+    if (sidebarToggle) {
+
+      sidebarToggle.checked = false;
+
+    }
+
+
+    // Scroll to content
+    if (content) {
+
+      const top =
+        content.getBoundingClientRect().top +
+        window.pageYOffset -
+        10;
+
+      window.scrollTo({
+
+        top: top,
+
+        behavior: "smooth"
+
+      });
+
+    }
+
+  }
+
+
+  // Sidebar link click
+  links.forEach(function(link) {
+
+    link.addEventListener("click", function(e) {
+
+      e.preventDefault();
+
+      const href =
+        this.getAttribute("href");
+
+      if (!href) return;
+
+
+      const slug =
+        href.split("/")
+          .filter(Boolean)
+          .pop();
+
+
+      if (!slug) return;
+
+
+      console.log(
+        "Clicked topic:",
+        slug
+      );
+
+
+      showCard(slug, true);
+
+    });
+
+  });
+
+
+  // Initial page load
+  function initFromPath() {
+
+    let slug =
+      getSlugFromPath();
+
+
+    if (
+      !slug ||
+      !document.getElementById(slug)
+    ) {
+
+      slug =
+        cards[0]?.id ||
+        "ict-meaning";
+
+    }
+
+
+    showCard(slug, false);
+
+
+    // Set correct URL without adding history
+    updateUrl(slug, true);
+
+  }
+
+
+  initFromPath();
+
+
+  // Browser Back / Forward
+  window.addEventListener(
+    "popstate",
+    function() {
+
+      const slug =
+        getSlugFromPath();
+
+
+      if (
+        slug &&
+        document.getElementById(slug)
+      ) {
+
+        showCard(slug, false);
+
+      } else {
+
+        const firstSlug =
+          cards[0]?.id ||
+          "ict-meaning";
+
+        showCard(firstSlug, false);
+
+      }
+
+    }
+  );
+
+
+})();
+</script>
+</body>
+</html>

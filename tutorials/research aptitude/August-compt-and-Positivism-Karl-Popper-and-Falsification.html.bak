@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comte, Positivism & Post-Positivism – Full Notes | UGC NET Paper-1</title>
+  <meta name="description" content="Complete tutorial: Auguste Comte, Positivism, Law of Three Stages, Karl Popper, Falsification, Post-Positivism, verification, triangulation for UGC NET Paper-1.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; }
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background: #f8f5ee;
+      color: #101a3d;
+    }
+    .h-display { font-family: 'Poppins', sans-serif; font-weight: 800; letter-spacing: -0.01em; }
+    .container { max-width: 1360px; margin: 0 auto; padding: 0 20px; }
+
+    .hero {
+      background: #0b1330;
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+      padding: 28px 0 22px;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      right: -80px;
+      top: -100px;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(232,183,75,0.2), transparent 70%);
+    }
+    .hero-inner { position: relative; }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      padding: 6px 16px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+      color: #e8b74b;
+    }
+    .hero h1 {
+      font-size: clamp(28px, 4.2vw, 44px);
+      margin: 12px 0 6px;
+    }
+    .hero p {
+      color: rgba(255,255,255,0.78);
+      max-width: 680px;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 28px;
+      padding: 28px 0 50px;
+      align-items: start;
+    }
+    @media (max-width: 980px) {
+      .layout { grid-template-columns: 1fr; }
+    }
+
+    .sidebar {
+      position: sticky;
+      top: 16px;
+      max-height: calc(100vh - 40px);
+      overflow-y: auto;
+      background: #fff;
+      border: 1px solid rgba(16,26,61,0.08);
+      border-radius: 16px;
+      padding: 16px 12px;
+      box-shadow: 0 6px 24px rgba(16,26,61,0.05);
+    }
+    .sidebar::-webkit-scrollbar { width: 5px; }
+    .sidebar::-webkit-scrollbar-thumb { background: #dde2ef; border-radius: 8px; }
+    .sidebar-title {
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: #b9852a;
+      padding: 4px 10px 14px;
+    }
+    .nav-link {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 10px;
+      border-radius: 10px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #33406b;
+      line-height: 1.3;
+      transition: 0.1s;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .nav-link:hover { background: #f4f6fc; color: #0b1330; }
+    .nav-link.active {
+      background: #fdf6e7;
+      color: #0b1330;
+    }
+    .nav-num {
+      flex: none;
+      width: 22px;
+      height: 22px;
+      border-radius: 7px;
+      background: #e7eaf5;
+      color: #5b6690;
+      font-size: 11px;
+      font-weight: 800;
+      display: grid;
+      place-items: center;
+    }
+    .nav-link.active .nav-num {
+      background: #e8b74b;
+      color: #0b1330;
+    }
+
+    #sidebar-toggle { display: none; }
+    .mobile-bar { display: none; }
+    @media (max-width: 980px) {
+      .mobile-bar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: #fff;
+        border: 1px solid rgba(16,26,61,0.1);
+        border-radius: 12px;
+        padding: 12px 16px;
+        margin-bottom: 8px;
+        font-weight: 800;
+        font-size: 13.5px;
+        color: #0b1330;
+      }
+      .sidebar { display: none; position: static; max-height: none; }
+      #sidebar-toggle:checked ~ .layout .sidebar { display: block; }
+    }
+
+    .content { min-width: 0; }
+    .topic-card {
+      background: #fff;
+      border: 1px solid rgba(16,26,61,0.08);
+      border-radius: 16px;
+      padding: 20px 20px 16px;
+      margin-bottom: 18px;
+      scroll-margin-top: 20px;
+      display: block;
+    }
+    .topic-card.hidden { display: none; }
+    .sec-head {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+    .sec-num {
+      flex: none;
+      width: 34px;
+      height: 34px;
+      border-radius: 10px;
+      background: #0b1330;
+      color: #e8b74b;
+      font-weight: 800;
+      font-size: 14px;
+      display: grid;
+      place-items: center;
+    }
+    .sec-head h2 {
+      margin: 0;
+      font-size: 19px;
+      font-weight: 800;
+      color: #0b1330;
+    }
+    .topic-card p {
+      font-size: 14.5px;
+      line-height: 1.75;
+      color: #1a254a;
+      margin: 6px 0;
+    }
+    .bullet-list {
+      margin: 8px 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 5px;
+    }
+    .bullet-list li {
+      position: relative;
+      padding-left: 20px;
+      font-size: 14px;
+      line-height: 1.6;
+      color: #1a254a;
+    }
+    .bullet-list li::before {
+      content: "";
+      position: absolute;
+      left: 2px;
+      top: 9px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #d9a53a;
+    }
+    .formula-box {
+      background: #0b1330;
+      color: #fdeec2;
+      font-weight: 700;
+      font-size: 13.6px;
+      padding: 10px 16px;
+      border-radius: 10px;
+      margin: 10px 0;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 12px 0;
+      font-size: 13.6px;
+      display: block;
+      overflow-x: auto;
+    }
+    .data-table th, .data-table td {
+      border: 1px solid #e7eaf5;
+      padding: 8px 12px;
+      text-align: left;
+      color: #1a254a;
+      white-space: normal;
+    }
+    .data-table th {
+      background: #f4f6fc;
+      color: #0b1330;
+      font-weight: 800;
+    }
+    .pyq-tag {
+      display: inline-block;
+      background: #fdf6e7;
+      color: #b9852a;
+      font-weight: 800;
+      font-size: 12px;
+      padding: 4px 12px;
+      border-radius: 8px;
+      margin: 12px 0 6px;
+    }
+    .answer-box {
+      background: #eefaf2;
+      border: 1px solid #bfe8cc;
+      color: #1a7a4c;
+      font-weight: 700;
+      font-size: 13.6px;
+      padding: 6px 14px;
+      border-radius: 9px;
+      margin: 6px 0;
+    }
+    .explain {
+      background: #f4f6fc;
+      border-radius: 9px;
+      padding: 6px 14px;
+      font-size: 13.6px;
+      color: #1a254a;
+    }
+    .subtopic {
+      padding: 14px 0 6px;
+      border-top: 1px dashed #e7eaf5;
+    }
+    .subtopic:first-of-type { border-top: none; padding-top: 2px; }
+    .subhead {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 6px;
+    }
+    .sub-num {
+      flex: none;
+      width: 26px;
+      height: 26px;
+      border-radius: 8px;
+      background: #fdf6e7;
+      color: #b9852a;
+      font-weight: 800;
+      font-size: 12px;
+      display: grid;
+      place-items: center;
+    }
+    .subhead h3 {
+      margin: 0;
+      font-size: 15.5px;
+      font-weight: 800;
+      color: #0b1330;
+    }
+    .enroll-cta {
+      background: #0b1330;
+      color: #fff;
+      border-radius: 16px;
+      padding: 24px 24px;
+      margin-top: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+      overflow: hidden;
+    }
+    .enroll-cta::before {
+      content: "";
+      position: absolute;
+      right: -40px;
+      top: -40px;
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(232,183,75,0.2), transparent 70%);
+    }
+    .enroll-cta h3 { margin: 0 0 4px; font-size: 20px; }
+    .enroll-cta p { margin: 0; color: rgba(255,255,255,0.75); font-size: 13.5px; max-width: 480px; }
+    .btn-gold {
+      background: #e8b74b;
+      color: #0b1330;
+      font-weight: 800;
+      padding: 10px 22px;
+      border-radius: 10px;
+      font-size: 13.5px;
+      white-space: nowrap;
+      text-decoration: none;
+    }
+  </style>
+
+  <link rel="stylesheet" href="/css/tailwind.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <style>.hero h1 { font-weight: 800 !important; color: #fff !important; line-height: 1.2 !important; font-family: 'Poppins', sans-serif !important; }</style>
+
+  <link rel="icon" href="/assets/images/logo.png">
+</head>
+<body>
+
+<header class="sticky top-0 z-50 border-b border-navy-900/8 bg-white/95 backdrop-blur-md">
+  <nav class="container-wide flex h-[76px] items-center gap-4" aria-label="Main">
+    <a href="/" class="flex shrink-0 items-center gap-3" aria-label="Home">
+      <span class="inline-flex shrink-0 items-center justify-center overflow-hidden rounded-lg bg-navy-950 ring-1 ring-navy-900/10">
+        <img src="assets/images/logo.png" alt="GS Net Academy" class="h-11 w-auto" width="120" height="44">
+      </span>
+      <img src="assets/images/tagline.png" alt="#1 A Premier institute for UGC NET Paper-1" class="h-11 hidden w-auto lg:block">
+    </a>
+    <ul class="mx-auto hidden items-center gap-5 xl:flex">
+      <li><a href="courses.html" class="relative block whitespace-nowrap rounded-lg px-3 py-2 text-[13.5px] font-bold transition-colors text-navy-700/75 hover:text-navy-900">UGC NET Paper-I</a></li>
+      <li><a href="results.html" class="relative block whitespace-nowrap rounded-lg px-3 py-2 text-[13.5px] font-bold transition-colors text-navy-700/75 hover:text-navy-900">Results</a></li>
+      <li><a href="tutorial.html" class="relative block whitespace-nowrap rounded-lg px-3 py-2 text-[13.5px] font-bold transition-colors text-navy-700/75 hover:text-navy-900">Tutorials</a></li>
+      <li><a href="notes.html" class="relative block whitespace-nowrap rounded-lg px-3 py-2 text-[13.5px] font-bold transition-colors text-navy-700/75 hover:text-navy-900">Notes</a></li>
+      <li><a href="blog.html" class="relative block whitespace-nowrap rounded-lg px-3 py-2 text-[13.5px] font-bold transition-colors text-navy-700/75 hover:text-navy-900">Blog</a></li>
+      <li><a href="about.html" class="relative block whitespace-nowrap rounded-lg px-3 py-2 text-[13.5px] font-bold transition-colors text-navy-700/75 hover:text-navy-900">About</a></li>
+      <li><a href="contact.html" class="relative block whitespace-nowrap rounded-lg px-3 py-2 text-[13.5px] font-bold transition-colors text-navy-700/75 hover:text-navy-900">Contact</a></li>
+    </ul>
+    <div class="ml-auto flex items-center gap-2 xl:ml-0">
+      <span title="Coming soon" class="hidden items-center gap-1.5 whitespace-nowrap rounded-lg border border-navy-900/12 px-3 py-2 text-[13px] font-bold text-navy-700 lg:inline-flex"><svg viewBox="0 0 24 24" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="4.5" width="14" height="16" rx="2.5"/><path d="M9 4.5a3 3 0 0 1 6 0"/><path d="M9 11h6M9 15h4"/></svg> <a href="https://mock-test.gsnetacademy.com/" class="cursor-pointer">Exam Portal</a></span>
+      <a href="/#free-demo" class="btn-outline btn-sm hidden 2xl:inline-flex">Demo</a>
+      <a href="enroll.html" class="btn-primary btn-sm hidden sm:inline-flex">Join Now</a>
+      <label for="nav-toggle" class="cursor-pointer rounded-lg border border-navy-900/12 p-2 text-navy-800 xl:hidden" aria-label="Menu"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></label>
+    </div>
+  </nav>
+</header>
+
+<div class="drawer xl:hidden">
+  <label for="nav-toggle" class="drawer-scrim" aria-hidden="true"></label>
+  <div class="drawer-panel">
+    <div class="flex h-[72px] shrink-0 items-center justify-between border-b border-navy-900/10 px-5">
+      <img src="assets/images/logo.png" alt="GS Net Academy" class="h-9 w-auto rounded-lg bg-navy-950">
+      <label for="nav-toggle" class="cursor-pointer p-2 text-navy-800" aria-label="Close"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></label>
+    </div>
+    <div class="flex-1 overflow-y-auto p-5">
+      <ul class="flex flex-col gap-1">
+      <li><a href="/" class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold bg-navy-50 text-navy-900">Home</a></li>
+      <li><a href="courses.html" class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold text-navy-700">UGC NET Paper-I</a></li>
+      <li><a href="results.html" class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold text-navy-700">Our Results</a></li>
+      <li><span class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold text-navy-400">UG / PG (Paper-2)<span class="rounded-md bg-navy-50 px-2 py-0.5 text-[10.5px] font-extrabold uppercase tracking-wider">Coming soon</span></span></li>
+      <li><a href="tutorial.html" class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold text-navy-700">Tutorials</a></li>
+      <li><a href="notes.html" class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold text-navy-700">Notes</a></li>
+      <li><a href="blog.html" class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold text-navy-700">Blog</a></li>
+      <li><a href="about.html" class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold text-navy-700">About</a></li>
+      <li><a href="contact.html" class="flex items-center justify-between rounded-xl px-4 py-3.5 text-[15px] font-bold text-navy-700">Contact</a></li>
+      </ul>
+      <p class="mt-3 rounded-xl bg-gold-50 px-4 py-3 text-[12.5px] font-extrabold uppercase tracking-wider text-gold-700">AI-Powered Career Guidance — Coming soon</p>
+      <div class="mt-5 grid gap-2.5">
+        <a href="enroll.html" class="btn-primary w-full">✓ JOIN BATCH @ ₹500</a>
+        <a href="/#free-demo" class="btn-outline w-full">▶ WATCH FREE DEMO</a>
+        <a href="https://chat.whatsapp.com/KeaQUhOFz0UGAKtLmsM7oU" target="_blank" rel="noreferrer noopener" class="btn-outline w-full"><svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.2 20.8 4.6 16A8.4 8.4 0 1 1 8 19.4l-4.8 1.4Z"/><path d="M9 8.4c.3-.7.6-.7.9-.7h.6c.2 0 .5 0 .7.6l.8 1.9c.1.2.1.4 0 .6l-.5.7c-.1.2-.2.4 0 .7a7 7 0 0 0 3 2.6c.3.1.5.1.7-.1l.7-.8c.2-.2.4-.2.6-.1l1.8.9c.3.1.5.3.5.5v.6c0 .4-.2.9-.9 1.2-.6.3-1.5.4-2.5.1a10 10 0 0 1-6.5-6.2c-.3-1-.1-1.9.1-2.5Z"/></svg> WhatsApp Group</a>
+        <a href="tel:+919266511505" class="btn-dark w-full"><svg viewBox="0 0 24 24" class="h-4 w-4" fill="currentColor" stroke="none" aria-hidden="true"><path d="M5 3h3.5l1.6 4-2 1.4a12 12 0 0 0 5.5 5.5l1.4-2 4 1.6V19a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 3 5.2 2 2 0 0 1 5 3Z"/></svg> Call 9266511505</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<section class="hero">
+  <div class="container hero-inner">
+    <span class="eyebrow">★ UGC NET Paper-I · Research Aptitude</span>
+    <h1 class="h-display">Auguste Comte, Positivism & Post-Positivism (Karl Popper & Falsification)</h1>
+    <p>Complete tutorial: Auguste Comte, Positivism, Law of Three Stages, Hierarchy of Sciences, Karl Popper, Falsification, Verification, Triangulation, PYQs & more.</p>
+  </div>
+</section>
+
+<main class="container">
+  <input type="checkbox" id="sidebar-toggle">
+  <label for="sidebar-toggle" class="mobile-bar">
+    <span>📑 On this page</span>
+    <span>☰ Menu</span>
+  </label>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebarNav">
+      <p class="sidebar-title">On this page</p>
+      <nav>
+        <a href="/tutorials/research-aptitude/august-compt-and-positivism-karl-popper-and-calsification/master-association" class="nav-link active"><span class="nav-num">1</span>Master Association</a>
+        <a href="/tutorials/research-aptitude/august-compt-and-positivism-karl-popper-and-calsification/auguste-comte" class="nav-link"><span class="nav-num">2</span>Auguste Comte</a>
+        <a href="/tutorials/research-aptitude/august-compt-and-positivism-karl-popper-and-calsification/positivism-meaning" class="nav-link"><span class="nav-num">3</span>Meaning of Positivism</a>
+        <a href="/tutorials/research-aptitude/august-compt-and-positivism-karl-popper-and-calsification/law-three-stages" class="nav-link"><span class="nav-num">4</span>Law of Three Stages</a>
+        <a href="/tutorials/research-aptitude/august-compt-and-positivism-karl-popper-and-calsification/hierarchy-sciences" class="nav-link"><span class="nav-num">5</span>Hierarchy of Sciences</a>
+        <a href="/tutorials/research-aptitude/august-compt-and-positivism-karl-popper-and-calsification/positivist-assumptions" class="nav-link"><span class="nav-num">6</span>Positivist Assumptions</a>
+        <a href="/tutorials/research-aptitude/august-compt-and-positivism-karl-popper-and-calsification/positivist-process" class="nav-link"><span class="nav-num">7</span>Positivist Research Process</a>
+        <a href="/tutorials/research-aptitude/august-compt-and-positivism-karl-popper-and-calsification/characteristics-positivism" class="nav-link"><span class="nav-num">8</span>Characteristics of Positivism</a>
+        <a href="/tutorials/research-aptitude/august-compt-and-positivism-karl-popper-and-calsification/positivism-quantitative" class="nav-link"><span class="nav-num">9</span>Positivism & Quantitative Research</a>
+        <a href="/tutorials/research-aptitude/august-compt-and-positivism-karl-popper-and-calsification/verification" class="nav-link"><span class="nav-num">10</span>Verification Principle</a>
+        <a href="/tutorials/research-aptitude/august-compt-and-positivism-karl-popper-and-calsification/limitations-positivism" class="nav-link"><span class="nav-num">11</span>Limitations of Positivism</a>
+        <a href="/tutorials/research-aptitude/august-compt-and-positivism-karl-popper-and-calsification/post-positivism" class="nav-link"><span class="nav-num">12</span>Post-Positivism</a>
+        <a href="/tutorials/research-aptitude/august-compt-and-positivism-karl-popper-and-calsification/critical-realism" class="nav-link"><span class="nav-num">13</span>Critical Realism</a>
+        <a href="/tutorials/research-aptitude/august-compt-and-positivism-karl-popper-and-calsification/fallibilism" class="nav-link"><span class="nav-num">14</span>Fallibilism</a>
+        <a href="/tutorials/research-aptitude/august-compt-and-positivism-karl-popper-and-calsification/popper-falsification" class="nav-link"><span class="nav-num">15</span>Karl Popper & Falsification</a>
+        <a href="/tutorials/research-aptitude/august-compt-and-positivism-karl-popper-and-calsification/verification-vs-falsification" class="nav-link"><span class="nav-num">16</span>Verification vs Falsification</a>
+        <a href="/tutorials/research-aptitude/august-compt-and-positivism-karl-popper-and-calsification/post-positivist-process" class="nav-link"><span class="nav-num">17</span>Post-Positivist Process</a>
+        <a href="/tutorials/research-aptitude/august-compt-and-positivism-karl-popper-and-calsification/objectivity-postpositivism" class="nav-link"><span class="nav-num">18</span>Objectivity in Post-Positivism</a>
+        <a href="/tutorials/research-aptitude/august-compt-and-positivism-karl-popper-and-calsification/triangulation" class="nav-link"><span class="nav-num">19</span>Triangulation</a>
+        <a href="/tutorials/research-aptitude/august-compt-and-positivism-karl-popper-and-calsification/postpositivism-methods" class="nav-link"><span class="nav-num">20</span>Post-Positivism & Methods</a>
+        <a href="/tutorials/research-aptitude/august-compt-and-positivism-karl-popper-and-calsification/positivism-vs-postpositivism" class="nav-link"><span class="nav-num">21</span>Positivism vs Post-Positivism</a>
+        <a href="/tutorials/research-aptitude/august-compt-and-positivism-karl-popper-and-calsification/positivism-vs-interpretivism" class="nav-link"><span class="nav-num">22</span>Positivism vs Interpretivism</a>
+        <a href="/tutorials/research-aptitude/august-compt-and-positivism-karl-popper-and-calsification/verified-pyqs" class="nav-link"><span class="nav-num">23</span>Verified PYQs</a>
+        <a href="/tutorials/research-aptitude/august-compt-and-positivism-karl-popper-and-calsification/exam-traps" class="nav-link"><span class="nav-num">24</span>Important Exam Traps</a>
+        <a href="/tutorials/research-aptitude/august-compt-and-positivism-karl-popper-and-calsification/expected-mcqs" class="nav-link"><span class="nav-num">25</span>Expected MCQs</a>
+        <a href="/tutorials/research-aptitude/august-compt-and-positivism-karl-popper-and-calsification/one-page-revision" class="nav-link"><span class="nav-num">26</span>One-Page Revision</a>
+      </nav>
+    </aside>
+
+    <div class="content" id="contentArea">
+      <!-- ===== CARDS ===== -->
+      <div id="master-association" class="topic-card"><div class="sec-head"><span class="sec-num">1</span><h2>Master Association</h2></div><div class="formula-box">Auguste Comte → Positivism → Observation → Measurement → Scientific Method</div><div class="formula-box">Karl Popper → Post-Positivism → Falsification → Critical Testing → Tentative Knowledge</div></div>
+
+      <div id="auguste-comte" class="topic-card"><div class="sec-head"><span class="sec-num">2</span><h2>Auguste Comte</h2></div><p><strong>Auguste Comte (1798–1857)</strong> — French philosopher, known as <strong>Father of Positivism</strong> and <strong>Father of Sociology</strong>.</p><div class="formula-box">Comte = Sociology + Positivism + Scientific Study of Society + Law of Three Stages</div><p>Reliable knowledge should be based on observation, comparison, classification, experiment and scientific reasoning — not theological speculation or abstract metaphysics.</p></div>
+
+      <div id="positivism-meaning" class="topic-card"><div class="sec-head"><span class="sec-num">3</span><h2>Meaning of Positivism</h2></div><div class="formula-box">Positivism = Observation + Measurement + Objectivity + Verification + Generalisation</div><p><strong>Positivism:</strong> Philosophical and research approach where authentic knowledge is based on observable, measurable and empirically verifiable facts. Emphasises using natural science methods for studying social phenomena.</p></div>
+
+      <div id="law-three-stages" class="topic-card"><div class="sec-head"><span class="sec-num">4</span><h2>Law of Three Stages</h2></div><div class="formula-box">Theological → Metaphysical → Positive</div><ul class="bullet-list"><li><strong>Theological Stage:</strong> Phenomena explained by supernatural powers, gods, divine will. (Fetishism → Polytheism → Monotheism)</li><li><strong>Metaphysical Stage:</strong> Phenomena explained by abstract forces, essences, speculative concepts (transitional stage).</li><li><strong>Positive/Scientific Stage:</strong> Phenomena explained through observation, evidence, classification and scientific laws.</li></ul><div class="formula-box">Theological = Supernatural Cause | Metaphysical = Abstract Cause | Positive = Scientific Evidence</div></div>
+
+      <div id="hierarchy-sciences" class="topic-card"><div class="sec-head"><span class="sec-num">5</span><h2>Hierarchy of Sciences</h2></div><div class="formula-box">Mathematics → Astronomy → Physics → Chemistry → Biology → Sociology</div><ul class="bullet-list"><li>Mathematics is most general and comparatively simple</li><li>Sociology is most complex (study of human society)</li><li>Later sciences partly depend on earlier sciences' principles</li></ul><p><strong>Exam Trap:</strong> Comte's original hierarchy did NOT give Psychology a prominent place as an independent science.</p></div>
+
+      <div id="positivist-assumptions" class="topic-card"><div class="sec-head"><span class="sec-num">6</span><h2>Positivist Research Assumptions</h2></div><ul class="bullet-list"><li><strong>Ontology:</strong> Objective reality exists independently of the researcher.</li><li><strong>Epistemology:</strong> Knowledge comes from sensory observation, measurement and empirical evidence.</li><li><strong>Researcher Role:</strong> Detached, neutral, objective, value-free.</li><li><strong>Methodology:</strong> Experiment, survey, structured observation, quantitative measurement, statistical analysis, hypothesis testing, deductive reasoning.</li></ul></div>
+
+      <div id="positivist-process" class="topic-card"><div class="sec-head"><span class="sec-num">7</span><h2>Positivist Research Process</h2></div><div class="formula-box">Theory → Hypothesis → Operationalisation → Data Collection → Statistical Testing → Conclusion</div><ul class="bullet-list"><li><strong>Theory:</strong> Expected relationship from existing theory</li><li><strong>Hypothesis:</strong> Testable relationship between variables</li><li><strong>Operationalisation:</strong> Abstract concepts → measurable indicators</li><li><strong>Data Collection:</strong> Numerical data with structured tools</li><li><strong>Statistical Testing:</strong> Hypothesis testing with appropriate statistics</li><li><strong>Generalisation:</strong> Applying sample findings to larger population</li></ul></div>
+
+      <div id="characteristics-positivism" class="topic-card"><div class="sec-head"><span class="sec-num">8</span><h2>Characteristics of Positivism</h2></div><ul class="bullet-list"><li>Objective reality</li><li>Empirical observation</li><li>Measurement and quantification</li><li>Hypothesis construction</li><li>Deductive reasoning</li><li>Cause–effect relationships</li><li>Prediction and control</li><li>Researcher neutrality</li><li>Value-free inquiry</li><li>Replication</li><li>Verification</li><li>General laws</li><li>Statistical analysis</li><li>Context-free generalisation</li></ul><div class="formula-box">Positivism = Facts + Numbers + Objectivity + Law-like Explanation</div></div>
+
+      <div id="positivism-quantitative" class="topic-card"><div class="sec-head"><span class="sec-num">9</span><h2>Positivism and Quantitative Research</h2></div><table class="data-table"><tr><th>Positivist Principle</th><th>Quantitative Application</th></tr><tr><td>Objective reality</td><td>Standardised measurement</td></tr><tr><td>Observation</td><td>Empirical data</td></tr><tr><td>Quantification</td><td>Numerical scores</td></tr><tr><td>Hypothesis testing</td><td>Statistical tests</td></tr><tr><td>Generalisation</td><td>Representative sample</td></tr><tr><td>Replication</td><td>Standardised procedure</td></tr></table><p><strong>Exam Trap:</strong> Not every quantitative study is philosophically pure positivist. Post-positivists also use quantitative methods.</p></div>
+
+      <div id="verification" class="topic-card"><div class="sec-head"><span class="sec-num">10</span><h2>Verification Principle</h2></div><div class="formula-box">Verification = Supporting a claim through observable evidence</div><p>In traditional positivist orientation, proposition's meaning and scientific value are linked to empirical observation/verification.</p><p><strong>Limitation:</strong> Many observations supporting a theory do NOT prove it permanently and universally true. This limitation was important in the development of Post-Positivism and Popper's falsification approach.</p></div>
+
+      <div id="limitations-positivism" class="topic-card"><div class="sec-head"><span class="sec-num">11</span><h2>Limitations of Positivism</h2></div><ul class="bullet-list"><li>Complete objectivity is difficult</li><li>Neglects human meaning (intention, emotion, culture, identity, experience)</li><li>Under-emphasises context</li><li>Measurement error exists</li><li>Observation is theory-laden</li><li>Universal laws are difficult in social reality</li></ul></div>
+
+      <div id="post-positivism" class="topic-card"><div class="sec-head"><span class="sec-num">12</span><h2>Post-Positivism</h2></div><div class="formula-box">Post-Positivism = Reality Exists, but Our Knowledge Is Partial, Fallible and Revisable</div><ul class="bullet-list"><li>Does not completely reject Positivism</li><li>Accepts scientific inquiry but modifies claims of complete certainty, perfect objectivity and final truth</li><li><strong>Main Associations:</strong> Karl Popper, Critical Realism, Falsification, Fallibilism, Probabilistic knowledge, Theory revision, Triangulation, Critical examination</li></ul></div>
+
+      <div id="critical-realism" class="topic-card"><div class="sec-head"><span class="sec-num">13</span><h2>Critical Realism</h2></div><ul class="bullet-list"><li>Reality exists independently of the researcher</li><li>Reality cannot be perfectly known</li><li>Observation and measurement may contain error</li><li>Knowledge is tentative and revisable</li><li>Multiple methods can improve understanding</li></ul><div class="formula-box">Reality is real, but our access to it is imperfect.</div></div>
+
+      <div id="fallibilism" class="topic-card"><div class="sec-head"><span class="sec-num">14</span><h2>Fallibilism</h2></div><div class="formula-box">Any scientific conclusion may be revised in light of better evidence.</div><p>Post-positivist researcher presents conclusions as:</p><ul class="bullet-list"><li>Best available explanation</li><li>Tentative conclusion</li><li>Probabilistic statement</li></ul></div>
+
+      <div id="popper-falsification" class="topic-card"><div class="sec-head"><span class="sec-num">15</span><h2>Karl Popper and Falsification</h2></div><div class="formula-box">Scientific Claim = Testable + Falsifiable</div><p>A scientific theory should be capable of being proven false by evidence.</p><div class="formula-box">Conjecture → Critical Test → Refutation/Support → Theory Revision</div><p><strong>Exam Trap:</strong> Falsification does NOT mean the researcher deliberately creates false data. It means subjecting the theory to severe critical tests.</p></div>
+
+      <div id="verification-vs-falsification" class="topic-card"><div class="sec-head"><span class="sec-num">16</span><h2>Verification vs Falsification</h2></div><table class="data-table"><tr><th>Verification</th><th>Falsification</th></tr><tr><td>Seeks supporting evidence</td><td>Seeks disconfirming evidence</td></tr><tr><td>Emphasis on confirmation</td><td>Emphasis on critical testing</td></tr><tr><td>Positivist tendency</td><td>Popper/Post-positivist tendency</td></tr><tr><td>Supports the theory</td><td>Tests theory's weaknesses</td></tr><tr><td>Risk of final certainty</td><td>Accepts tentative knowledge</td></tr></table><div class="formula-box">A universal claim cannot be conclusively verified by observing all possible cases, but one clear contradictory case can falsify it.</div></div>
+
+      <div id="post-positivist-process" class="topic-card"><div class="sec-head"><span class="sec-num">17</span><h2>Post-Positivist Research Process</h2></div><div class="formula-box">Theory → Tentative Hypothesis → Rigorous Test → Evidence → Critical Interpretation → Revision → Retesting</div><ul class="bullet-list"><li>Examines alternative explanations</li><li>Acknowledges measurement error</li><li>Attempts to reduce bias</li><li>Presents findings in probabilistic language</li><li>Remains open to theory revision</li></ul></div>
+
+      <div id="objectivity-postpositivism" class="topic-card"><div class="sec-head"><span class="sec-num">18</span><h2>Objectivity in Post-Positivism</h2></div><div class="formula-box">Objectivity is an ideal to be approached, not a guaranteed state.</div><ul class="bullet-list"><li>Standardised procedures</li><li>Peer review</li><li>Replication</li><li>Reflexivity</li><li>Bias disclosure</li><li>Multiple researchers</li><li>Triangulation</li><li>Transparent data analysis</li><li>Alternative hypotheses</li></ul></div>
+
+      <div id="triangulation" class="topic-card"><div class="sec-head"><span class="sec-num">19</span><h2>Triangulation</h2></div><p>Studying a phenomenon using multiple methods, sources, researchers or theories.</p><ul class="bullet-list"><li><strong>Data Triangulation:</strong> Different participants, times, settings</li><li><strong>Method Triangulation:</strong> Survey + Interview + Observation</li><li><strong>Investigator Triangulation:</strong> Multiple researchers analysing</li><li><strong>Theory Triangulation:</strong> Different theoretical perspectives</li></ul><p><strong>Exam Trap:</strong> Triangulation does NOT guarantee complete truth; it improves credibility and completeness.</p></div>
+
+      <div id="postpositivism-methods" class="topic-card"><div class="sec-head"><span class="sec-num">20</span><h2>Post-Positivism and Methods</h2></div><p>Post-positivism should NOT be equated only with qualitative research.</p><ul class="bullet-list"><li>Quantitative methods</li><li>Qualitative methods</li><li>Mixed methods</li><li>Experiments, surveys, interviews</li><li>Triangulation</li><li>Multiple measurements</li></ul><p>The main issue is NOT the method, but the philosophical position about knowledge.</p></div>
+
+      <div id="positivism-vs-postpositivism" class="topic-card"><div class="sec-head"><span class="sec-num">21</span><h2>Positivism vs Post-Positivism</h2></div><table class="data-table"><tr><th>Basis</th><th>Positivism</th><th>Post-Positivism</th></tr><tr><td>Reality</td><td>Objective and directly knowable</td><td>Exists but imperfectly knowable</td></tr><tr><td>Knowledge</td><td>Observable, measurable facts</td><td>Tentative and fallible</td></tr><tr><td>Objectivity</td><td>Complete neutrality ideal</td><td>Bias possible; control and disclosure</td></tr><tr><td>Theory</td><td>Verification/support</td><td>Critical testing and revision</td></tr><tr><td>Method</td><td>Primarily quantitative</td><td>Quantitative, qualitative or mixed</td></tr><tr><td>Researcher</td><td>Detached observer</td><td>Recognises limitations</td></tr><tr><td>Conclusion</td><td>General laws</td><td>Probabilistic explanation</td></tr><tr><td>Error</td><td>Minimise/ignore ideal</td><td>Explicitly acknowledged</td></tr><tr><td>Quality strategy</td><td>Measurement and replication</td><td>Triangulation, criticism and replication</td></tr><tr><td>Main thinker</td><td>Auguste Comte</td><td>Karl Popper</td></tr><tr><td>Keyword</td><td>Verification</td><td>Falsification</td></tr></table></div>
+
+      <div id="positivism-vs-interpretivism" class="topic-card"><div class="sec-head"><span class="sec-num">22</span><h2>Positivism vs Interpretivism</h2></div><table class="data-table"><tr><th>Positivism</th><th>Interpretivism</th></tr><tr><td>Objective reality</td><td>Multiple socially constructed realities</td></tr><tr><td>Measurement</td><td>Meaning and understanding</td></tr><tr><td>Quantitative orientation</td><td>Qualitative orientation</td></tr><tr><td>Researcher detached</td><td>Researcher–participant interaction</td></tr><tr><td>Generalisation</td><td>Context-specific interpretation</td></tr><tr><td>Explanation/prediction</td><td>Lived experience and meaning</td></tr></table><p><strong>Exam Caution:</strong> In older UGC NET questions, phenomenology, ethnography and action research were placed under "post-positivistic approach." In contemporary methodology, they are more commonly associated with interpretivist/constructivist traditions. Follow the official PYQ classification for exam answers.</p></div>
+
+      <div id="verified-pyqs" class="topic-card"><div class="sec-head"><span class="sec-num">23</span><h2>Verified PYQs</h2></div><div class="pyq-tag">PYQ 1: UGC NET, 3 Dec 2019, Shift 1</div><p><strong>Post-positivistic approach emphasised:</strong> Phenomenological Research, Ethnographic Research, Action Research.</p>
+      <div class="pyq-tag">PYQ 2: UGC NET, 24 Sep 2020, Shift 1</div><p><strong>Research procedure under post-positivistic approach:</strong> Ethnographic Study</p>
+      <div class="pyq-tag">PYQ 3: UGC NET, 1 Oct 2022, Shift 1</div><p><strong>Positivist paradigm includes:</strong> Quantification, Construction of hypotheses, Use of objective measures</p></div>
+
+      <div id="exam-traps" class="topic-card"><div class="sec-head"><span class="sec-num">24</span><h2>Important Exam Traps</h2></div><ul class="bullet-list"><li>Correct spelling: <strong>Auguste Comte</strong> (NOT "August Compt")</li><li>Comte → Father of Positivism AND Father of Sociology</li><li>Positive Stage = Scientific Stage (NOT "optimistic thinking")</li><li>Positivism = observation, measurement, objectivity</li><li>Post-positivism does NOT reject reality</li><li>Post-positivism rejects claims of perfect knowledge and complete objectivity</li><li>Popper → Falsification (NOT verification)</li><li>Verification and Falsification are NOT the same</li><li>Post-positivism is NOT only qualitative</li><li>Triangulation does NOT guarantee truth; it improves credibility</li><li>Observation is NOT always completely theory-free</li><li>Post-positivist conclusions = tentative/probabilistic (NOT final truth)</li><li>PYQ classification vs contemporary classification may differ for phenomenology/ethnography</li></ul></div>
+
+      <div id="expected-mcqs" class="topic-card"><div class="sec-head"><span class="sec-num">25</span><h2>Expected MCQs (Dec 2026)</h2></div><div class="pyq-tag">Q1</div><p>Father of Positivism → <strong>Auguste Comte</strong></p>
+      <div class="pyq-tag">Q2</div><p>Correct sequence of Comte's Law of Three Stages → <strong>Theological → Metaphysical → Positive</strong></p>
+      <div class="pyq-tag">Q3</div><p>Most characteristic of Positivism → <strong>Objective measurement and hypothesis testing</strong></p>
+      <div class="pyq-tag">Q4</div><p>Best represents Post-Positivism → <strong>Reality exists, but knowledge is imperfect and revisable</strong></p>
+      <div class="pyq-tag">Q5</div><p>Thinker associated with Falsification → <strong>Karl Popper</strong></p>
+      <div class="pyq-tag">Q6</div><p>Surveys + interviews + observations for same phenomenon → <strong>Triangulation</strong></p>
+      <div class="pyq-tag">Q7 Assertion-Reason</div><p>Assertion: Post-positivism does not abandon scientific inquiry. Reason: Observations may contain error; theories must be open to revision. → <strong>Both true, Reason explains Assertion</strong></p>
+      <div class="pyq-tag">Q8</div><p>Correctly matched pair → <strong>Comte — Positivism</strong></p></div>
+
+      <div id="one-page-revision" class="topic-card"><div class="sec-head"><span class="sec-num">26</span><h2>One-Page Revision</h2></div><div class="formula-box">Auguste Comte = Positivism + Sociology + Law of Three Stages</div>
+      <div class="formula-box">Three Stages = Theological → Metaphysical → Positive</div>
+      <div class="formula-box">Positive Stage = Observation + Evidence + Science</div>
+      <div class="formula-box">Positivism = Objective Reality + Measurement + Verification</div>
+      <div class="formula-box">Research Process = Theory → Hypothesis → Data → Statistical Test</div>
+      <div class="formula-box">Post-Positivism = Critical Realism + Fallibility + Theory Revision</div>
+      <div class="formula-box">Karl Popper = Falsification</div>
+      <div class="formula-box">Falsification = Search for Evidence that Can Refute a Claim</div>
+      <div class="formula-box">Triangulation = Multiple Methods/Sources/Perspectives</div>
+      <div class="formula-box">Positivism seeks certainty; Post-Positivism accepts provisional knowledge.</div>
+      <p><strong>Final Exam Formula:</strong> Comte → Positivism + Sociology + Three Stages | Popper → Falsification + Critical Testing + Tentative Knowledge</p></div>
+
+      <div class="enroll-cta"><div><h3 class="h-display">Join the Paper-1 Batch</h3><p>Course fee FREE — ₹500 registration & academic/logistics contribution. Classes daily at 6:30 PM.</p></div><a href="/enroll.html" class="btn-gold">✓ JOIN BATCH @ ₹500</a></div>
+    </div>
+  </div>
+</main>
+
+<footer class="relative overflow-hidden bg-navy-950 text-white">
+  <div class="grid-paper absolute inset-0 opacity-50" aria-hidden="true"></div>
+  <div class="container-x relative py-12 lg:py-14">
+    <div class="grid grid-cols-2 gap-10 lg:grid-cols-4">
+
+      <div>
+        <div class="flex items-center gap-3">
+          <img src="/assets/images/logo.png" alt="GS Net Academy" class="h-11 w-auto rounded-lg bg-white p-1" width="120" height="44">
+          <img src="/assets/images/tagline.png" alt="" class="h-11 w-auto brightness-0 invert" aria-hidden="true">
+        </div>
+        <p class="mt-5 text-[14px] leading-relaxed text-navy-100/75">UGC NET Paper-I | JRF Preparation | Mentorship</p>
+        <span class="eyebrow mt-5"><svg viewBox="0 0 24 24" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1"/></svg> JRF @ ₹500 Mission 2026</span>
+
+        <p class="mt-6 text-[11px] font-extrabold uppercase tracking-[0.18em] text-gold-400">Follow Us</p>
+        <ul class="mt-3 flex flex-wrap gap-2">
+          <li><a href="https://www.youtube.com/@gsnetacademy" target="_blank" rel="noreferrer noopener" aria-label="YouTube" title="YouTube" class="grid h-10 w-10 place-items-center rounded-xl border border-white/12 bg-white/[0.06] text-navy-100/80 transition hover:border-gold-400/50 hover:bg-white/[0.12] hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor" aria-hidden="true"><path d="M21.6 7.2a2.5 2.5 0 0 0-1.8-1.8C18.2 5 12 5 12 5s-6.2 0-7.8.4A2.5 2.5 0 0 0 2.4 7.2 26 26 0 0 0 2 12a26 26 0 0 0 .4 4.8 2.5 2.5 0 0 0 1.8 1.8C5.8 19 12 19 12 19s6.2 0 7.8-.4a2.5 2.5 0 0 0 1.8-1.8A26 26 0 0 0 22 12a26 26 0 0 0-.4-4.8ZM10 15V9l5.2 3L10 15Z"/></svg></a></li>
+          <li><a href="https://www.instagram.com/gsnetacademy" target="_blank" rel="noreferrer noopener" aria-label="Instagram" title="Instagram" class="grid h-10 w-10 place-items-center rounded-xl border border-white/12 bg-white/[0.06] text-navy-100/80 transition hover:border-gold-400/50 hover:bg-white/[0.12] hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg></a></li>
+          <li><a href="https://www.facebook.com/gsnetacademy" target="_blank" rel="noreferrer noopener" aria-label="Facebook" title="Facebook" class="grid h-10 w-10 place-items-center rounded-xl border border-white/12 bg-white/[0.06] text-navy-100/80 transition hover:border-gold-400/50 hover:bg-white/[0.12] hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.25-1.5 1.55-1.5H16.7V3.6c-.3 0-1.3-.13-2.47-.13-2.44 0-4.11 1.49-4.11 4.23V9.9H7.4V13h2.72v8h3.38Z"/></svg></a></li>
+          <li><a href="https://t.me/gsnetacademy" target="_blank" rel="noreferrer noopener" aria-label="Telegram" title="Telegram" class="grid h-10 w-10 place-items-center rounded-xl border border-white/12 bg-white/[0.06] text-navy-100/80 transition hover:border-gold-400/50 hover:bg-white/[0.12] hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor" aria-hidden="true"><path d="M21.3 4.3 2.9 11.4c-.9.35-.9 1.62.02 1.93l4.6 1.53 1.75 5.3c.25.75 1.2.95 1.73.37l2.5-2.72 4.6 3.38c.63.46 1.53.12 1.7-.65l3.1-14.9c.2-.9-.7-1.65-1.6-1.31ZM9.6 14.1l8.5-5.6-6.9 6.5-.3 3.3-1.3-4.2Z"/></svg></a></li>
+          <li><a href="https://chat.whatsapp.com/KeaQUhOFz0UGAKtLmsM7oU" target="_blank" rel="noreferrer noopener" aria-label="WhatsApp Group" title="WhatsApp Group" class="grid h-10 w-10 place-items-center rounded-xl border border-white/12 bg-white/[0.06] text-navy-100/80 transition hover:border-emerald-400/50 hover:bg-emerald-500/15 hover:text-emerald-300"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.2 20.8 4.6 16A8.4 8.4 0 1 1 8 19.4l-4.8 1.4Z"/><path d="M9 8.4c.3-.7.6-.7.9-.7h.6c.2 0 .5 0 .7.6l.8 1.9c.1.2.1.4 0 .6l-.5.7c-.1.2-.2.4 0 .7a7 7 0 0 0 3 2.6c.3.1.5.1.7-.1l.7-.8c.2-.2.4-.2.6-.1l1.8.9c.3.1.5.3.5.5v.6c0 .4-.2.9-.9 1.2-.6.3-1.5.4-2.5.1a10 10 0 0 1-6.5-6.2c-.3-1-.1-1.9.1-2.5Z"/></svg></a></li>
+          <li><a href="https://x.com/gsnetacademy" target="_blank" rel="noreferrer noopener" aria-label="X (Twitter)" title="X (Twitter)" class="grid h-10 w-10 place-items-center rounded-xl border border-white/12 bg-white/[0.06] text-navy-100/80 transition hover:border-gold-400/50 hover:bg-white/[0.12] hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-4.5 w-4.5" fill="currentColor" aria-hidden="true"><path d="M17.5 3h3.1l-6.8 7.8L21.8 21h-6.2l-4.9-6.4L5.1 21H2l7.3-8.3L2.5 3h6.4l4.4 5.8L17.5 3Zm-1.1 16.2h1.7L7.7 4.7H5.9l10.5 14.5Z"/></svg></a></li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="text-[11px] font-extrabold uppercase tracking-[0.18em] text-gold-400">Quick Links</p>
+        <ul class="mt-4 grid gap-2.5">
+          <li><a href="/index.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Home</a></li>
+          <li><a href="/courses.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">UGC NET Paper-I</a></li>
+          <li><a href="/results.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Our Results</a></li>
+          <li><a href="/tutorials.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Tutorials</a></li>
+          <li><a href="/blog.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Blog</a></li>
+          <li><a href="/about.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">About</a></li>
+          <li><a href="/contact.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="text-[11px] font-extrabold uppercase tracking-[0.18em] text-gold-400">Resources</p>
+        <ul class="mt-4 grid gap-2.5">
+          <li><a href="/notes.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Notes</a></li>
+          <li><a href="/enroll.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Register for ₹500</a></li>
+          <li><a href="/index.html#free-demo" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Free Demo Classes</a></li>
+          <li><a href="https://chat.whatsapp.com/KeaQUhOFz0UGAKtLmsM7oU" target="_blank" rel="noreferrer noopener" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Student Community</a></li>
+        </ul>
+        <p class="mt-6 text-[11px] font-extrabold uppercase tracking-[0.18em] text-gold-400">Legal</p>
+        <ul class="mt-4 grid gap-2.5">
+          <li><a href="/privacy-policy.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Privacy Policy</a></li>
+          <li><a href="/refund-policy.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Refund &amp; Cancellation</a></li>
+          <li><a href="/terms-of-enrollment.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Terms of Enrollment</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="text-[11px] font-extrabold uppercase tracking-[0.18em] text-gold-400">Contact</p>
+        <ul class="mt-4 grid gap-2.5 text-[14px] text-navy-100/75">
+          <li><a href="tel:+919266511505" class="flex items-center gap-2 hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-4 w-4 icon-gold" fill="currentColor" aria-hidden="true"><path d="M5 3h3.5l1.6 4-2 1.4a12 12 0 0 0 5.5 5.5l1.4-2 4 1.6V19a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 3 5.2 2 2 0 0 1 5 3Z"/></svg> +91 9266511505</a></li>
+          <li><a href="tel:+919810845327" class="flex items-center gap-2 hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-4 w-4 icon-gold" fill="currentColor" aria-hidden="true"><path d="M5 3h3.5l1.6 4-2 1.4a12 12 0 0 0 5.5 5.5l1.4-2 4 1.6V19a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 3 5.2 2 2 0 0 1 5 3Z"/></svg> +91 9810845327</a></li>
+          <li><a href="mailto:gsnetacademy@gmail.com" class="flex items-center gap-2 break-all hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-4 w-4 icon-gold" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="m3.5 6.5 8.5 6 8.5-6"/></svg> gsnetacademy@gmail.com</a></li>
+          <li><a href="https://chat.whatsapp.com/KeaQUhOFz0UGAKtLmsM7oU" target="_blank" rel="noreferrer noopener" class="flex items-center gap-2 hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-4 w-4 icon-gold" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.2 20.8 4.6 16A8.4 8.4 0 1 1 8 19.4l-4.8 1.4Z"/><path d="M9 8.4c.3-.7.6-.7.9-.7h.6c.2 0 .5 0 .7.6l.8 1.9c.1.2.1.4 0 .6l-.5.7c-.1.2-.2.4 0 .7a7 7 0 0 0 3 2.6c.3.1.5.1.7-.1l.7-.8c.2-.2.4-.2.6-.1l1.8.9c.3.1.5.3.5.5v.6c0 .4-.2.9-.9 1.2-.6.3-1.5.4-2.5.1a10 10 0 0 1-6.5-6.2c-.3-1-.1-1.9.1-2.5Z"/></svg> WhatsApp Group</a></li>
+        </ul>
+        <a href="/enroll.html" class="btn-primary mt-6 w-full">Join for ₹500</a>
+        <p class="text-[14px] mt-3 text-navy-100/75 transition hover:text-gold-300">Address: B 14-15, Udhyog Marg, Block B, Sector 1, Noida, Uttar Pradesh 201301</p>
+      </div>
+    </div>
+
+    <div class="mt-10 border-t border-white/10 pt-6">
+      <ul class="flex flex-wrap items-center gap-x-5 gap-y-2 text-[13px]">
+        <li><a href="/privacy-policy.html" class="text-navy-100/70 transition hover:text-gold-300">Privacy Policy</a></li>
+        <li aria-hidden="true" class="text-navy-100/25">|</li>
+        <li><a href="/refund-policy.html" class="text-navy-100/70 transition hover:text-gold-300">Refund &amp; Cancellation</a></li>
+        <li aria-hidden="true" class="text-navy-100/25">|</li>
+        <li><a href="/terms-of-enrollment.html" class="text-navy-100/70 transition hover:text-gold-300">Terms of Enrollment</a></li>
+      </ul>
+      <div class="mt-4 flex flex-col gap-2 text-[13px] text-navy-100/60 sm:flex-row sm:items-center sm:justify-between">
+        <p>© 2026 GS Net Academy. All Rights Reserved.</p>
+        <p>A Premier institute for UGC NET Paper-1</p>
+      </div>
+      <p class="mt-4 text-[12px] leading-relaxed text-navy-100/45">Disclaimer: GS Net Academy किसी भी exam में selection, rank या score की guarantee नहीं देता। हम quality teaching, study material, practice और academic mentorship प्रदान करते हैं। UGC, NTA या किसी अन्य government body से हमारा कोई affiliation नहीं है।</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function() {
+
+  const BASE_PATH =
+    "/tutorials/research-aptitude/august-compt-and-positivism-karl-popper-and-calsification";
+
+  const links = document.querySelectorAll(".nav-link");
+  const cards = document.querySelectorAll(".topic-card");
+  const content = document.getElementById("contentArea");
+  const sidebarToggle = document.getElementById("sidebar-toggle");
+
+
+  // Get slug from current URL
+  function getSlugFromPath() {
+
+    const path = window.location.pathname
+      .replace(/\/+$/, "");
+
+    if (path.startsWith(BASE_PATH + "/")) {
+
+      return path
+        .substring((BASE_PATH + "/").length)
+        .split("/")[0];
+
+    }
+
+    return null;
+  }
+
+
+  // Update URL
+  function updateUrl(slug, replace = false) {
+
+    const newPath =
+      BASE_PATH + "/" + slug;
+
+    if (window.location.pathname !== newPath) {
+
+      if (replace) {
+
+        history.replaceState(null, "", newPath);
+
+      } else {
+
+        history.pushState(null, "", newPath);
+
+      }
+
+    }
+  }
+
+
+  // Update active sidebar link
+  function updateActiveLink(slug) {
+
+    links.forEach(function(link) {
+
+      const href =
+        link.getAttribute("href");
+
+      if (!href) return;
+
+      const linkSlug =
+        href.split("/")
+          .filter(Boolean)
+          .pop();
+
+      link.classList.toggle(
+        "active",
+        linkSlug === slug
+      );
+
+    });
+  }
+
+
+  // Show selected card
+  function showCard(slug, updateHistory = true) {
+
+    cards.forEach(function(card) {
+
+      card.classList.add("hidden");
+
+    });
+
+
+    const target =
+      document.getElementById(slug);
+
+
+    if (!target) {
+
+      const first = cards[0];
+
+      if (first) {
+
+        first.classList.remove("hidden");
+
+        const firstSlug = first.id;
+
+        updateActiveLink(firstSlug);
+
+        updateUrl(firstSlug, true);
+
+      }
+
+      return;
+    }
+
+
+    target.classList.remove("hidden");
+
+    updateActiveLink(slug);
+
+
+    if (updateHistory) {
+
+      updateUrl(slug);
+
+    }
+
+
+    if (sidebarToggle) {
+
+      sidebarToggle.checked = false;
+
+    }
+
+
+    // Scroll to content
+    if (content) {
+
+      const top =
+        content.getBoundingClientRect().top +
+        window.pageYOffset -
+        10;
+
+      window.scrollTo({
+
+        top: top,
+
+        behavior: "smooth"
+
+      });
+
+    }
+
+  }
+
+
+  // Sidebar link click
+  links.forEach(function(link) {
+
+    link.addEventListener("click", function(e) {
+
+      e.preventDefault();
+
+      const href =
+        this.getAttribute("href");
+
+      if (!href) return;
+
+
+      const slug =
+        href.split("/")
+          .filter(Boolean)
+          .pop();
+
+
+      if (!slug) return;
+
+
+      console.log(
+        "Clicked topic:",
+        slug
+      );
+
+
+      showCard(slug, true);
+
+    });
+
+  });
+
+
+  // Initial page load
+  function initFromPath() {
+
+    let slug =
+      getSlugFromPath();
+
+
+    if (
+      !slug ||
+      !document.getElementById(slug)
+    ) {
+
+      slug =
+        cards[0]?.id ||
+        "master-association";
+
+    }
+
+
+    showCard(slug, false);
+
+
+    // Correct URL without adding history
+    updateUrl(slug, true);
+
+  }
+
+
+  initFromPath();
+
+
+  // Browser Back / Forward
+  window.addEventListener(
+    "popstate",
+    function() {
+
+      const slug =
+        getSlugFromPath();
+
+
+      if (
+        slug &&
+        document.getElementById(slug)
+      ) {
+
+        showCard(slug, false);
+
+      } else {
+
+        const firstSlug =
+          cards[0]?.id ||
+          "master-association";
+
+        showCard(firstSlug, false);
+
+      }
+
+    }
+  );
+
+
+})();
+</script>
+</body>
+</html>
