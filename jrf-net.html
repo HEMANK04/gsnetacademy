@@ -29,6 +29,51 @@
   <link rel="stylesheet" href="css/style.css">
 
   <style>
+
+.social-sticky {
+    position: fixed;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 200;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .social-sticky a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    color: #fff;
+    transition: width .2s ease, filter .2s ease;
+  }
+
+  .social-sticky a:hover {
+    width: 48px;
+    filter: brightness(1.08);
+  }
+
+  .social-sticky svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .social-sticky .sx      { background: #000000; }
+  .social-sticky .sfb     { background: #1877F2; }
+  .social-sticky .sli     { background: #0A66C2; }
+  .social-sticky .sig     { background: linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888); }
+  .social-sticky .syt     { background: #FF0000; }
+  .social-sticky .swa     { background: #25D366; }
+
+  @media (max-width: 640px) {
+    .social-sticky a { width: 36px; height: 36px; }
+    .social-sticky svg { width: 15px; height: 15px; }
+  }
+
+
     /* ---- Demo category tabs (self-contained, style.css par depend nahi karta) ---- */
     .demo-tabs .dt-radio {
       position: absolute;
@@ -83,6 +128,10 @@
       outline: 2px solid #F5C518;
       outline-offset: 2px
     }
+
+    .h-14{
+      height: 4.8rem !important
+    }
   </style>
 </head>
 
@@ -91,8 +140,8 @@
   <header class="sticky top-0 z-50 border-b border-navy-900/8 bg-white/95 backdrop-blur-md">
   <nav class="container-wide flex h-[76px] items-center gap-4" aria-label="Main">
     <a href="index.html" class="flex shrink-0 items-center gap-3" aria-label="Home">
-      <span class="inline-flex shrink-0 items-center justify-center overflow-hidden rounded-lg bg-navy-950 ring-1 ring-navy-900/10">
-        <img src="assets/images/logo.png" alt="GS Net Academy" class="h-11 w-auto" width="120" height="44">
+      <span   ">
+        <img src="assets/gs-net-academy.png" alt="GS Net Academy" class="h-14 w-auto bg-white" width="120" height="44">
       </span>
       <img src="assets/images/tagline.png" alt="#1 A Premier institute for UGC NET Paper-1" class="h-11 hidden w-auto lg:block">
     </a>
@@ -846,6 +895,36 @@
         </div>
       </div>
     </section>
+
+
+ <!-- START: SIDE STICKY SOCIAL MEEDIA STRIP -->
+<div class="social-sticky" aria-label="Social media links">
+  <a href="https://twitter.com/yourpage" target="_blank" rel="noopener" class="sx" aria-label="X (Twitter)">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 3h3.1l-6.8 7.8L21.8 21h-6.2l-4.9-6.4L5.1 21H2l7.3-8.3L2.5 3h6.4l4.4 5.8L17.5 3Zm-1.1 16.2h1.7L7.7 4.7H5.9l10.5 14.5Z"/></svg>
+  </a>
+  <a href="https://facebook.com/yourpage" target="_blank" rel="noopener" class="sfb" aria-label="Facebook">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.25-1.5 1.55-1.5H16.7V3.6c-.3 0-1.3-.13-2.47-.13-2.44 0-4.11 1.49-4.11 4.23V9.9H7.4V13h2.72v8h3.38Z"/></svg>
+  </a>
+  <a href="https://linkedin.com/company/yourpage" target="_blank" rel="noopener" class="sli" aria-label="LinkedIn">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M100.3 448H7.4V148.9h92.9zM53.8 108.1C24.1 108.1 0 83.5 0 53.8a53.8 53.8 0 0 1 107.6 0c0 29.7-24.1 54.3-53.8 54.3zM447.9 448H355V302.4c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7V448h-92.8V148.9h89.1v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3z" transform="scale(0.043)"/></svg>
+  </a>
+  <a href="https://instagram.com/yourpage" target="_blank" rel="noopener" class="sig" aria-label="Instagram">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/>
+    </svg>
+  </a>
+  <a href="https://www.youtube.com/@gsnetacademy-ul6mx" target="_blank" rel="noopener" class="syt" aria-label="YouTube">
+  <svg viewBox="0 0 576 512" fill="currentColor">
+    <path d="M549.7 124.1c-6.3-23.7-24.8-42.3-48.3-48.6C458.8 64 288 64 288 64S117.2 64 74.6 75.5c-23.5 6.3-42 24.9-48.3 48.6C14.9 167 14.9 256.4 14.9 256.4s0 89.4 11.4 132.3c6.3 23.6 24.8 41.5 48.3 47.8C117.2 448 288 448 288 448s170.8 0 213.4-11.5c23.5-6.3 42-24.2 48.3-47.8 11.4-42.9 11.4-132.3 11.4-132.3s0-89.4-11.4-132.3zM232.1 337.6V175.2l142.7 81.2z"/>
+  </svg>
+</a>
+  <a href="https://wa.me/919810845327" target="_blank" rel="noopener" class="swa" aria-label="WhatsApp">
+    <svg viewBox="0 0 448 512" fill="currentColor"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
+  </a>
+</div>
+<!-- END: SIDE STICKY SOCIAL MEEDIA STRIP -->
+
+
 
     <!-- ========================= WHY NOW ========================= -->
     <section class="bg-cream py-14 lg:py-16">
@@ -1993,8 +2072,8 @@
 
       <div>
         <div class="flex items-center gap-3">
-          <img src="assets/images/logo.png" alt="GS Net Academy" class="h-11 w-auto rounded-lg bg-white p-1" width="120" height="44">
-          <img src="assets/images/tagline.png" alt="" class="h-11 w-auto brightness-0 invert" aria-hidden="true">
+          <img src="/assets/images/logo.png" alt="GS Net Academy" class="h-11 w-auto rounded-lg bg-white p-1" width="120" height="44">
+          <img src="/assets/images/tagline.png" alt="" class="h-11 w-auto brightness-0 invert" aria-hidden="true">
         </div>
         <p class="mt-5 text-[14px] leading-relaxed text-navy-100/75">UGC NET Paper-I | JRF Preparation | Mentorship</p>
         <span class="eyebrow mt-5"><svg viewBox="0 0 24 24" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1"/></svg> JRF @ ₹500 Mission 2026</span>
@@ -2013,29 +2092,29 @@
       <div>
         <p class="text-[11px] font-extrabold uppercase tracking-[0.18em] text-gold-400">Quick Links</p>
         <ul class="mt-4 grid gap-2.5">
-          <li><a href="index.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Home</a></li>
-          <li><a href="courses.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">UGC NET Paper-I</a></li>
-          <li><a href="results.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Our Results</a></li>
-          <li><a href="tutorial.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Tutorials</a></li>
-          <li><a href="blog.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Blog</a></li>
-          <li><a href="about.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">About</a></li>
-          <li><a href="contact.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Contact</a></li>
+          <li><a href="/" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Home</a></li>
+          <li><a href="/courses.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">UGC NET Paper-I</a></li>
+          <li><a href="/results.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Our Results</a></li>
+          <li><a href="/tutorial.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Tutorials</a></li>
+          <li><a href="/blog.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Blog</a></li>
+          <li><a href="/about.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">About</a></li>
+          <li><a href="/contact.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Contact</a></li>
         </ul>
       </div>
 
       <div>
         <p class="text-[11px] font-extrabold uppercase tracking-[0.18em] text-gold-400">Resources</p>
         <ul class="mt-4 grid gap-2.5">
-          <li><a href="notes.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Notes</a></li>
-          <li><a href="enroll.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Register for ₹500</a></li>
-          <li><a href="#free-demo" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Free Demo Classes</a></li>
+          <li><a href="/notes.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Notes</a></li>
+          <li><a href="/enroll.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Register for ₹500</a></li>
+          <li><a href="/#free-demo" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Free Demo Classes</a></li>
           <li><a href="https://chat.whatsapp.com/KeaQUhOFz0UGAKtLmsM7oU" target="_blank" rel="noreferrer noopener" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Student Community</a></li>
         </ul>
         <p class="mt-6 text-[11px] font-extrabold uppercase tracking-[0.18em] text-gold-400">Legal</p>
         <ul class="mt-4 grid gap-2.5">
-          <li><a href="privacy-policy.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Privacy Policy</a></li>
-          <li><a href="refund-policy.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Refund &amp; Cancellation</a></li>
-          <li><a href="terms-of-enrollment.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Terms of Enrollment</a></li>
+          <li><a href="/privacy-policy.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Privacy Policy</a></li>
+          <li><a href="/refund-policy.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Refund &amp; Cancellation</a></li>
+          <li><a href="/terms-of-enrollment.html" class="text-[14px] text-navy-100/75 transition hover:text-gold-300">Terms of Enrollment</a></li>
         </ul>
       </div>
 
@@ -2047,18 +2126,18 @@
           <li><a href="mailto:gsnetacademy@gmail.com" class="flex items-center gap-2 break-all hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-4 w-4 icon-gold" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="m3.5 6.5 8.5 6 8.5-6"/></svg> gsnetacademy@gmail.com</a></li>
           <li><a href="https://chat.whatsapp.com/KeaQUhOFz0UGAKtLmsM7oU" target="_blank" rel="noreferrer noopener" class="flex items-center gap-2 hover:text-gold-300"><svg viewBox="0 0 24 24" class="h-4 w-4 icon-gold" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.2 20.8 4.6 16A8.4 8.4 0 1 1 8 19.4l-4.8 1.4Z"/><path d="M9 8.4c.3-.7.6-.7.9-.7h.6c.2 0 .5 0 .7.6l.8 1.9c.1.2.1.4 0 .6l-.5.7c-.1.2-.2.4 0 .7a7 7 0 0 0 3 2.6c.3.1.5.1.7-.1l.7-.8c.2-.2.4-.2.6-.1l1.8.9c.3.1.5.3.5.5v.6c0 .4-.2.9-.9 1.2-.6.3-1.5.4-2.5.1a10 10 0 0 1-6.5-6.2c-.3-1-.1-1.9.1-2.5Z"/></svg> WhatsApp Group</a></li>
         </ul>
-        <a href="enroll.html" class="btn-primary mt-6 w-full">Join for ₹500</a>
+        <a href="/enroll.html" class="btn-primary mt-6 w-full">Join for ₹500</a>
         <p class="text-[14px] mt-3 text-navy-100/75 transition hover:text-gold-300">Address: B 14-15, Udhyog Marg, Block B, Sector 1, Noida, Uttar Pradesh 201301</p>
       </div>
     </div>
 
     <div class="mt-10 border-t border-white/10 pt-6">
       <ul class="flex flex-wrap items-center gap-x-5 gap-y-2 text-[13px]">
-        <li><a href="privacy-policy.html" class="text-navy-100/70 transition hover:text-gold-300">Privacy Policy</a></li>
+        <li><a href="/privacy-policy.html" class="text-navy-100/70 transition hover:text-gold-300">Privacy Policy</a></li>
         <li aria-hidden="true" class="text-navy-100/25">|</li>
-        <li><a href="refund-policy.html" class="text-navy-100/70 transition hover:text-gold-300">Refund &amp; Cancellation</a></li>
+        <li><a href="/refund-policy.html" class="text-navy-100/70 transition hover:text-gold-300">Refund &amp; Cancellation</a></li>
         <li aria-hidden="true" class="text-navy-100/25">|</li>
-        <li><a href="terms-of-enrollment.html" class="text-navy-100/70 transition hover:text-gold-300">Terms of Enrollment</a></li>
+        <li><a href="/terms-of-enrollment.html" class="text-navy-100/70 transition hover:text-gold-300">Terms of Enrollment</a></li>
       </ul>
       <div class="mt-4 flex flex-col gap-2 text-[13px] text-navy-100/60 sm:flex-row sm:items-center sm:justify-between">
         <p>© 2026 GS Net Academy. All Rights Reserved.</p>

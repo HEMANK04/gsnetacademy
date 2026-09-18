@@ -25,6 +25,50 @@
     <link rel="stylesheet" href="css/style.css">
 
     <style>
+
+.social-sticky {
+    position: fixed;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 200;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .social-sticky a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    color: #fff;
+    transition: width .2s ease, filter .2s ease;
+  }
+
+  .social-sticky a:hover {
+    width: 48px;
+    filter: brightness(1.08);
+  }
+
+  .social-sticky svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .social-sticky .sx      { background: #000000; }
+  .social-sticky .sfb     { background: #1877F2; }
+  .social-sticky .sli     { background: #0A66C2; }
+  .social-sticky .sig     { background: linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888); }
+  .social-sticky .syt     { background: #FF0000; }
+  .social-sticky .swa     { background: #25D366; }
+
+  @media (max-width: 640px) {
+    .social-sticky a { width: 36px; height: 36px; }
+    .social-sticky svg { width: 15px; height: 15px; }
+  }
+
         .demo-tabs .dt-radio {
             position: absolute;
             width: 1px;
@@ -112,6 +156,10 @@
             font-weight: 700;
             color: rgba(255, 255, 255, .85)
         }
+
+        .h-14{
+            height: 5rem !important;
+        }
     </style>
 </head>
 
@@ -122,13 +170,13 @@
     <header class="sticky top-0 z-50 border-b border-navy-900/8 bg-white/95 backdrop-blur-md">
   <nav class="container-wide flex h-[76px] items-center gap-4" aria-label="Main">
     <a href="index.html" class="flex shrink-0 items-center gap-3" aria-label="Home">
-      <span class="inline-flex shrink-0 items-center justify-center overflow-hidden rounded-lg bg-navy-950 ring-1 ring-navy-900/10">
-        <img src="assets/images/logo.png" alt="GS Net Academy" class="h-11 w-auto" width="120" height="44">
+      <span class="inline-flex shrink-0 items-center justify-center overflow-hidden">
+        <img src="assets/gs-net-academy.png" alt="GS Net Academy" class="h-14 w-auto" width="120" height="44">
       </span>
       <img src="assets/images/tagline.png" alt="#1 A Premier institute for UGC NET Paper-1" class="h-11 hidden w-auto lg:block">
     </a>
     <ul class="mx-auto hidden items-center gap-5 xl:flex">
-      <li><a href="courses.html" class="relative block whitespace-nowrap rounded-lg px-3 py-2 text-[13.5px] font-bold transition-colors text-navy-700/75 hover:text-navy-900">UGC NET Paper-I</a></li>
+      <li><a href="courses.html" class="relative block whitespace-nowrap rounded-lg px-3 py-2 text-[13.5px] font-bold transition-colors text-navy-700/75 hover:text-navy-900">UPESSC Ass. Prof.</a></li>
       <li><a href="results.html" class="relative block whitespace-nowrap rounded-lg px-3 py-2 text-[13.5px] font-bold transition-colors text-navy-700/75 hover:text-navy-900">Results</a></li>
       <li><a href="tutorial.html" class="relative block whitespace-nowrap rounded-lg px-3 py-2 text-[13.5px] font-bold transition-colors text-navy-700/75 hover:text-navy-900">Tutorials</a></li>
       <li><a href="notes.html" class="relative block whitespace-nowrap rounded-lg px-3 py-2 text-[13.5px] font-bold transition-colors text-navy-700/75 hover:text-navy-900">Notes</a></li>
@@ -319,11 +367,11 @@
                                 </svg>
                                 In the Mentorship of JNU & DU Expert Faculty
                             </p>
-                            <div class="relative pl-4 py-2 border-l-2 border-brand-mint bg-slate-900/40 rounded-r-lg">
-                                <p class="text-sm sm:text-base text-slate-300 italic font-medium leading-relaxed">“अब
+                            <!-- <div class="relative pl-4 py-2 border-l-2 border-brand-mint bg-slate-900/40 rounded-r-lg"> -->
+                                <!-- <p class="text-sm sm:text-base text-slate-300 italic font-medium leading-relaxed">“अब
                                     पैसे और सही guidance की कमी UP Assistant Professor selection के लिए barrier नहीं
-                                    बनेगी।”</p>
-                            </div>
+                                    बनेगी।”</p> -->
+                            <!-- </div> -->
                         </div>
                         <!-- Quick Info Grid (3x2 Desktop Layout) -->
                         <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-1" data-purpose="course-details-matrix">
@@ -374,7 +422,7 @@
                                     </svg>
                                     <span>Class Time</span>
                                 </div>
-                                <div class="font-display font-extrabold text-lg text-white">6:30 PM</div>
+                                <div class="font-display font-extrabold text-lg text-white">6:30 PM &amp; 8:00 PM</div>
                                 <span class="text-[11px] text-slate-400 mt-0.5">Daily Live Evening Batch</span>
                             </div>
                             <!-- Card 4: Platform -->
@@ -609,9 +657,32 @@
 
 
 
-
-
-
+ <!-- START: SIDE STICKY SOCIAL MEEDIA STRIP -->
+<div class="social-sticky" aria-label="Social media links">
+  <a href="https://twitter.com/yourpage" target="_blank" rel="noopener" class="sx" aria-label="X (Twitter)">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 3h3.1l-6.8 7.8L21.8 21h-6.2l-4.9-6.4L5.1 21H2l7.3-8.3L2.5 3h6.4l4.4 5.8L17.5 3Zm-1.1 16.2h1.7L7.7 4.7H5.9l10.5 14.5Z"/></svg>
+  </a>
+  <a href="https://facebook.com/yourpage" target="_blank" rel="noopener" class="sfb" aria-label="Facebook">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.25-1.5 1.55-1.5H16.7V3.6c-.3 0-1.3-.13-2.47-.13-2.44 0-4.11 1.49-4.11 4.23V9.9H7.4V13h2.72v8h3.38Z"/></svg>
+  </a>
+  <a href="https://linkedin.com/company/yourpage" target="_blank" rel="noopener" class="sli" aria-label="LinkedIn">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M100.3 448H7.4V148.9h92.9zM53.8 108.1C24.1 108.1 0 83.5 0 53.8a53.8 53.8 0 0 1 107.6 0c0 29.7-24.1 54.3-53.8 54.3zM447.9 448H355V302.4c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7V448h-92.8V148.9h89.1v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3z" transform="scale(0.043)"/></svg>
+  </a>
+  <a href="https://instagram.com/yourpage" target="_blank" rel="noopener" class="sig" aria-label="Instagram">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/>
+    </svg>
+  </a>
+  <a href="https://www.youtube.com/@gsnetacademy-ul6mx" target="_blank" rel="noopener" class="syt" aria-label="YouTube">
+  <svg viewBox="0 0 576 512" fill="currentColor">
+    <path d="M549.7 124.1c-6.3-23.7-24.8-42.3-48.3-48.6C458.8 64 288 64 288 64S117.2 64 74.6 75.5c-23.5 6.3-42 24.9-48.3 48.6C14.9 167 14.9 256.4 14.9 256.4s0 89.4 11.4 132.3c6.3 23.6 24.8 41.5 48.3 47.8C117.2 448 288 448 288 448s170.8 0 213.4-11.5c23.5-6.3 42-24.2 48.3-47.8 11.4-42.9 11.4-132.3 11.4-132.3s0-89.4-11.4-132.3zM232.1 337.6V175.2l142.7 81.2z"/>
+  </svg>
+</a>
+  <a href="https://wa.me/919810845327" target="_blank" rel="noopener" class="swa" aria-label="WhatsApp">
+    <svg viewBox="0 0 448 512" fill="currentColor"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
+  </a>
+</div>
+<!-- END: SIDE STICKY SOCIAL MEEDIA STRIP -->
 
 
 
@@ -620,91 +691,150 @@
 
 
             <section class="bg-white py-14 lg:py-16">
-                <div class="container-x grid gap-8 lg:grid-cols-[.8fr_1.2fr] lg:items-center">
+    <div class="container-x grid gap-8 lg:grid-cols-[.8fr_1.2fr] lg:items-center">
 
-                    <div class="relative overflow-hidden rounded-2xl shadow-lift aspect-[4/5] w-full bg-navy-950">
-                        <img src="assets/images/faculty.jpg"
-                            alt="Dr. Shardool Sir — UGC NET Paper-1 Faculty, GS Net Academy"
-                            class="h-full w-full object-cover">
-                        <span
-                            class="absolute left-3 top-3 rounded-lg bg-gold-400 px-2.5 py-1 text-[10.5px] font-extrabold uppercase tracking-wider text-navy-950">Faculty</span>
-                        <div
-                            class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent px-4 py-3">
-                            <p class="text-[20px] font-extrabold text-white leading-none">14+ Yrs</p>
-                            <p class="text-[12px] font-semibold text-white/85">Teaching &amp; Research Experience</p>
-                        </div>
-                    </div>
+        <!-- LEFT SIDE — SAME AS BEFORE, NO CHANGE -->
+        <div class="relative overflow-hidden rounded-2xl shadow-lift aspect-[4/5] w-full bg-navy-950">
+            <img src="assets/images/faculty.jpg"
+                alt="Dr. Shardool Sir — UGC NET Paper-1 Faculty, GS Net Academy"
+                class="h-full w-full object-cover">
+            <span
+                class="absolute left-3 top-3 rounded-lg bg-gold-400 px-2.5 py-1 text-[10.5px] font-extrabold uppercase tracking-wider text-navy-950">Faculty</span>
+            <div
+                class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent px-4 py-3">
+                <p class="text-[20px] font-extrabold text-white leading-none">14+ Yrs</p>
+                <p class="text-[12px] font-semibold text-white/85">Teaching &amp; Research Experience</p>
+            </div>
+        </div>
 
-                    <div>
-                        <span class="eyebrow">
-                            <svg viewBox="0 0 24 24" class="h-3.5 w-3.5" fill="none" stroke="currentColor"
-                                stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                                <path d="M12 4 2.5 8.6 12 13.2l9.5-4.6L12 4Z"></path>
-                                <path d="M6.4 10.6V16c0 1.4 2.5 2.8 5.6 2.8s5.6-1.4 5.6-2.8v-5.4"></path>
-                                <path d="M21.5 8.6v5"></path>
-                            </svg> Faculty
-                        </span>
-                        <h2 class="h-display mt-4 text-[30px] sm:text-[38px]">Why Learn with Dr. Shardool Sir?</h2>
-                        <div class="rule-gold mt-4"></div>
-                        <ul class="mt-6 grid gap-2.5 sm:grid-cols-2">
-                            <li class="flex items-start gap-2.5 text-[14px] text-navy-800">
-                                <svg viewBox="0 0 24 24" class="mt-0.5 h-4 w-4 shrink-0 text-gold-600" fill="none"
-                                    stroke="currentColor" stroke-width="1.7" stroke-linecap="round"
-                                    stroke-linejoin="round" aria-hidden="true">
-                                    <path d="m5 12.5 4.5 4.5L19 7"></path>
-                                </svg>
-                                Strong academic background from JNU &amp; University of Delhi
-                            </li>
-                            <li class="flex items-start gap-2.5 text-[14px] text-navy-800">
-                                <svg viewBox="0 0 24 24" class="mt-0.5 h-4 w-4 shrink-0 text-gold-600" fill="none"
-                                    stroke="currentColor" stroke-width="1.7" stroke-linecap="round"
-                                    stroke-linejoin="round" aria-hidden="true">
-                                    <path d="m5 12.5 4.5 4.5L19 7"></path>
-                                </svg>
-                                Teaching + research-oriented conceptual approach
-                            </li>
-                            <li class="flex items-start gap-2.5 text-[14px] text-navy-800">
-                                <svg viewBox="0 0 24 24" class="mt-0.5 h-4 w-4 shrink-0 text-gold-600" fill="none"
-                                    stroke="currentColor" stroke-width="1.7" stroke-linecap="round"
-                                    stroke-linejoin="round" aria-hidden="true">
-                                    <path d="m5 12.5 4.5 4.5L19 7"></path>
-                                </svg>
-                                UP Assistant Professor GK focused mentoring
-                            </li>
-                            <li class="flex items-start gap-2.5 text-[14px] text-navy-800">
-                                <svg viewBox="0 0 24 24" class="mt-0.5 h-4 w-4 shrink-0 text-gold-600" fill="none"
-                                    stroke="currentColor" stroke-width="1.7" stroke-linecap="round"
-                                    stroke-linejoin="round" aria-hidden="true">
-                                    <path d="m5 12.5 4.5 4.5L19 7"></path>
-                                </svg>
-                                Exam-oriented bilingual teaching
-                            </li>
-                            <li class="flex items-start gap-2.5 text-[14px] text-navy-800">
-                                <svg viewBox="0 0 24 24" class="mt-0.5 h-4 w-4 shrink-0 text-gold-600" fill="none"
-                                    stroke="currentColor" stroke-width="1.7" stroke-linecap="round"
-                                    stroke-linejoin="round" aria-hidden="true">
-                                    <path d="m5 12.5 4.5 4.5L19 7"></path>
-                                </svg>
-                                Concept clarity + PYQ analysis + practice + revision
-                            </li>
-                            <li class="flex items-start gap-2.5 text-[14px] text-navy-800">
-                                <svg viewBox="0 0 24 24" class="mt-0.5 h-4 w-4 shrink-0 text-gold-600" fill="none"
-                                    stroke="currentColor" stroke-width="1.7" stroke-linecap="round"
-                                    stroke-linejoin="round" aria-hidden="true">
-                                    <path d="m5 12.5 4.5 4.5L19 7"></path>
-                                </svg>
-                                Personal guidance for UPSESSC Assistant Professor aspirants
-                            </li>
-                        </ul>
-                        <p
-                            class="hind mt-6 rounded-xl border-l-4 border-gold-400 bg-gold-50 px-5 py-4 text-[14.5px] font-semibold leading-relaxed text-navy-900">
-                            हम आपको केवल syllabus complete नहीं कराते—हम आपकी GK Paper preparation को systematically
-                            build करते हैं।
-                        </p>
-                    </div>
+        <!-- RIGHT SIDE -->
+        <div>
+            <span class="eyebrow">
+                <svg viewBox="0 0 24 24" class="h-3.5 w-3.5" fill="none" stroke="currentColor"
+                    stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M12 4 2.5 8.6 12 13.2l9.5-4.6L12 4Z"></path>
+                    <path d="M6.4 10.6V16c0 1.4 2.5 2.8 5.6 2.8s5.6-1.4 5.6-2.8v-5.4"></path>
+                    <path d="M21.5 8.6v5"></path>
+                </svg> Faculty
+            </span>
+            <h2 class="h-display mt-4 text-[30px] sm:text-[38px]">Why Learn with Dr. Shardool Sir?</h2>
+            <div class="rule-gold mt-4"></div>
 
-                </div>
-            </section>
+            <!-- NEW: Founder & MD credentials block -->
+            <div class="mt-6 rounded-2xl border border-navy-900/10 bg-mist px-5 py-5">
+                <p class="text-[16px] font-extrabold text-navy-900">Founder &amp; MD</p>
+                <p class="mt-0.5 text-[13px] font-bold text-gold-600">14+ Year Experience</p>
+                <ul class="mt-3 grid gap-1.5 sm:grid-cols-2">
+                    <li class="flex items-start gap-2 text-[13.5px] font-semibold text-navy-800">
+                        <svg viewBox="0 0 24 24" class="mt-0.5 h-3.5 w-3.5 shrink-0 text-gold-600" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" aria-hidden="true">
+                            <path d="m5 12.5 4.5 4.5L19 7"></path>
+                        </svg>
+                        Ex-Employee MOSJ&amp;E, Govt of India
+                    </li>
+                    <li class="flex items-start gap-2 text-[13.5px] font-semibold text-navy-800">
+                        <svg viewBox="0 0 24 24" class="mt-0.5 h-3.5 w-3.5 shrink-0 text-gold-600" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" aria-hidden="true">
+                            <path d="m5 12.5 4.5 4.5L19 7"></path>
+                        </svg>
+                        M.Phil &amp; Ph.D — Delhi University
+                    </li>
+                    <li class="flex items-start gap-2 text-[13.5px] font-semibold text-navy-800">
+                        <svg viewBox="0 0 24 24" class="mt-0.5 h-3.5 w-3.5 shrink-0 text-gold-600" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" aria-hidden="true">
+                            <path d="m5 12.5 4.5 4.5L19 7"></path>
+                        </svg>
+                        M.A — JNU (JNUEE AIR-1)
+                    </li>
+                    <li class="flex items-start gap-2 text-[13.5px] font-semibold text-navy-800">
+                        <svg viewBox="0 0 24 24" class="mt-0.5 h-3.5 w-3.5 shrink-0 text-gold-600" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" aria-hidden="true">
+                            <path d="m5 12.5 4.5 4.5L19 7"></path>
+                        </svg>
+                        UGC NET JRF Qualified
+                    </li>
+                    <li class="flex items-start gap-2 text-[13.5px] font-semibold text-navy-800">
+                        <svg viewBox="0 0 24 24" class="mt-0.5 h-3.5 w-3.5 shrink-0 text-gold-600" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" aria-hidden="true">
+                            <path d="m5 12.5 4.5 4.5L19 7"></path>
+                        </svg>
+                        UPSC / SSC / IBPS Expert
+                    </li>
+                    <li class="flex items-start gap-2 text-[13.5px] font-semibold text-navy-800">
+                        <svg viewBox="0 0 24 24" class="mt-0.5 h-3.5 w-3.5 shrink-0 text-gold-600" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" aria-hidden="true">
+                            <path d="m5 12.5 4.5 4.5L19 7"></path>
+                        </svg>
+                        Various Govt. Exams &amp; Assistant Professor
+                    </li>
+                </ul>
+            </div>
+
+            <ul class="mt-6 grid gap-2.5 sm:grid-cols-2">
+                <li class="flex items-start gap-2.5 text-[14px] text-navy-800">
+                    <svg viewBox="0 0 24 24" class="mt-0.5 h-4 w-4 shrink-0 text-gold-600" fill="none"
+                        stroke="currentColor" stroke-width="1.7" stroke-linecap="round"
+                        stroke-linejoin="round" aria-hidden="true">
+                        <path d="m5 12.5 4.5 4.5L19 7"></path>
+                    </svg>
+                    Strong academic background from JNU &amp; University of Delhi
+                </li>
+                <li class="flex items-start gap-2.5 text-[14px] text-navy-800">
+                    <svg viewBox="0 0 24 24" class="mt-0.5 h-4 w-4 shrink-0 text-gold-600" fill="none"
+                        stroke="currentColor" stroke-width="1.7" stroke-linecap="round"
+                        stroke-linejoin="round" aria-hidden="true">
+                        <path d="m5 12.5 4.5 4.5L19 7"></path>
+                    </svg>
+                    Teaching + research-oriented conceptual approach
+                </li>
+                <li class="flex items-start gap-2.5 text-[14px] text-navy-800">
+                    <svg viewBox="0 0 24 24" class="mt-0.5 h-4 w-4 shrink-0 text-gold-600" fill="none"
+                        stroke="currentColor" stroke-width="1.7" stroke-linecap="round"
+                        stroke-linejoin="round" aria-hidden="true">
+                        <path d="m5 12.5 4.5 4.5L19 7"></path>
+                    </svg>
+                    UP Assistant Professor GK focused mentoring
+                </li>
+                <li class="flex items-start gap-2.5 text-[14px] text-navy-800">
+                    <svg viewBox="0 0 24 24" class="mt-0.5 h-4 w-4 shrink-0 text-gold-600" fill="none"
+                        stroke="currentColor" stroke-width="1.7" stroke-linecap="round"
+                        stroke-linejoin="round" aria-hidden="true">
+                        <path d="m5 12.5 4.5 4.5L19 7"></path>
+                    </svg>
+                    Exam-oriented bilingual teaching
+                </li>
+                <li class="flex items-start gap-2.5 text-[14px] text-navy-800">
+                    <svg viewBox="0 0 24 24" class="mt-0.5 h-4 w-4 shrink-0 text-gold-600" fill="none"
+                        stroke="currentColor" stroke-width="1.7" stroke-linecap="round"
+                        stroke-linejoin="round" aria-hidden="true">
+                        <path d="m5 12.5 4.5 4.5L19 7"></path>
+                    </svg>
+                    Concept clarity + PYQ analysis + practice + revision
+                </li>
+                <li class="flex items-start gap-2.5 text-[14px] text-navy-800">
+                    <svg viewBox="0 0 24 24" class="mt-0.5 h-4 w-4 shrink-0 text-gold-600" fill="none"
+                        stroke="currentColor" stroke-width="1.7" stroke-linecap="round"
+                        stroke-linejoin="round" aria-hidden="true">
+                        <path d="m5 12.5 4.5 4.5L19 7"></path>
+                    </svg>
+                    Personal guidance for UPSESSC Assistant Professor aspirants
+                </li>
+            </ul>
+            <p
+                class="hind mt-6 rounded-xl border-l-4 border-gold-400 bg-gold-50 px-5 py-4 text-[14.5px] font-semibold leading-relaxed text-navy-900">
+                हम आपको केवल syllabus complete नहीं कराते—हम आपकी GK Paper preparation को systematically
+                build करते हैं।
+            </p>
+        </div>
+
+    </div>
+</section>
 
 
 
@@ -2171,7 +2301,7 @@
                         <div>
                             <span class="eyebrow"><span class="h-1.5 w-1.5 rounded-full bg-brick"></span> Batch
                                 Status</span>
-                            <p class="hind mt-4 text-[15px] leading-relaxed text-navy-800">Classes 16 August 2026 से
+                            <p class="hind mt-4 text-[15px] leading-relaxed text-navy-800">Classes 13 September 2026 से
                                 शुरू हो चुकी हैं। यदि आपने शुरुआत miss कर दी है, तो preparation postpone करने की जरूरत
                                 नहीं है। Program में Live + Recorded Learning Support रखा गया है ताकि नए students
                                 current batch के साथ systematically जुड़ सकें।</p>
